@@ -44,6 +44,8 @@ jobs:
           
           Copy-Item -Path "pt-source/doc\*" -Destination "." -Recurse -Force
 
+          Remove-Item -Path "pt-source" -Recurse -Force
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
