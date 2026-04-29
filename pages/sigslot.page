@@ -1,0 +1,13 @@
+/** \page sigslot Signals and Delegates
+
+@copydetails sigslot
+
+@section sigslot_Signals Signals
+
+@copydetails Pt::Signal
+
+@section sigslot_Delegates Delegates
+
+@copydetails Pt::Delegate
+
+*/

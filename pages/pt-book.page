@@ -1,0 +1,133 @@
+/** \page pt_contents The Platinum C++ Framework
+
+@section pt_core Core Library
+
+<ul>
+    <li> @ref basictypes </li>
+    <ul>
+        <li> @ref basictypes_FixedInt </li>
+        <li> @ref basictypes_DateTime </li>
+        <li> @ref basictypes_Any </li>
+    </ul>
+
+    <li> @ref allocators </li>
+    <ul>
+        <li> @ref allocators_Interface </li>
+        <li> @ref allocators_Pool </li>
+        <li> @ref allocators_Page </li>
+    </ul>
+
+    <li> @ref sigslot </li>
+    <ul>
+        <li> @ref sigslot_Signals </li>
+        <li> @ref sigslot_Delegates </li>
+    </ul>
+    
+    <li> @ref text </li>
+    <ul>
+        <li> @ref text_Encodings </li>
+        <li> @ref text_Characters </li>
+        <li> @ref text_TextStreams </li>
+        <li> @ref text_Regex </li>
+        <li> @ref text_Base64 </li>
+    </ul>
+
+    <li> @ref serialization </li>
+    <ul>
+        <li> @ref serialization_ValueTypes </li>
+        <li> @ref serialization_Pointers </li>
+        <li> @ref serialization_Containers </li>
+    </ul>
+
+    <li> @ref utilities </li>
+
+    <ul>
+        <li> @ref utilities_StringConv </li>
+        <li> @ref utilities_NumConv </li>
+        <li> @ref utilities_ByteOrder </li>
+        <li> @ref utilities_Arg </li>
+        <li> @ref utilities_Settings </li>
+        <li> @ref utilities_SourceInfo </li>
+        <li> @ref utilities_TypeInfo </li>
+    </ul>
+</ul>
+
+@section pt_system System Programming
+
+<ul>
+    <li> @ref filesystem </li>
+    <ul>
+        <li> @ref filesystem_FileInfo </li>
+        <li> @ref filesystem_Directory </li>
+        <li> @ref filesystem_FileIO </li>
+    </ul>
+
+    <li> @ref concurrency </li>
+
+    <li> @ref logging </li>
+    <ul>
+        <li> @ref logging_Approach </li>
+        <li> @ref logging_Configuration </li>
+        <li> @ref logging_Usage </li>
+    </ul>
+
+    <li> @ref plugins </li>
+
+    <ul>
+        <li> @ref plugins_Libraries </li>
+        <li> @ref plugins_Implementation </li>
+        <li> @ref plugins_LoadingPlugins </li>
+    </ul>
+</ul>
+
+@section pt_http HTTP Clients and Servers
+
+<ul>
+    <li> @ref http_client </li>
+    <ul>
+        <li> @ref http_client_send </li>
+        <li> @ref http_client_pipelining </li>
+        <li> @ref http_client_chunked </li>
+        <li> @ref http_client_ssl </li>
+        <li> @ref http_client_auth </li>
+    </ul>
+
+    <li> @ref http_server </li>
+
+    <ul>
+        <li> @ref http_server_service </li>
+        <li> @ref http_server_servlet </li>
+        <li> @ref http_server_ssl </li>
+        <li> @ref http_server_auth </li>
+    </ul>
+</ul>
+
+@section pt_ssl Secure Communication
+
+<ul>
+    <li> @ref ssl_CertStore </li>
+    <li> @ref ssl_Context </li>
+    <li> @ref ssl_Connection </li>
+    <li> @ref ssl_ReadWrite </li>
+    <li> @ref ssl_Shutdown </li>
+</ul>
+
+@section pt_xmlrpc XML-RPC Communication
+
+<ul>
+    <li> @ref xmlrpc_Service </li>
+    <li> @ref xmlrpc_AsyncProcedures </li>
+    <li> @ref xmlrpc_Client </li>
+    <li> @ref xmlrpc_Protocol </li>
+</ul>
+
+@section pt_unit Unit Testing
+
+<ul>
+    <li> @ref unittest_SimpleTests </li>
+    <li> @ref unittest_BuildSystemIntegration </li>
+    <li> @ref unittest_DataDrivenTesting </li>
+    <li> @ref unittest_ProtocolDrivenTesting </li>
+    <li> @ref unittest_RunningTests </li>
+</ul>
+*/
