@@ -5,18 +5,19 @@ on:
 
 jobs:
   build-and-deploy:
+    name: "Build and Deploy Website"
     runs-on: windows-2022
     permissions:
       contents: write
     
     steps:
       - name: Checkout Pt-Framework
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Wichtig für Push-Berechtigungen
 
       - name: Checkout Pt
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Pt-Framework/Pt
           path: pt-source
