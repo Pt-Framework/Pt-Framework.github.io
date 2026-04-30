@@ -192,12 +192,12 @@
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            ++_generation;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">const</span> Gfx::ColorF&amp; accentColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; accentColor()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> _accentColor;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> setAccentColor(<span class="keyword">const</span> Gfx::ColorF&amp; color)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> setAccentColor(<span class="keyword">const</span> Gfx::Color&amp; color)</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            _accentColor = color;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            ++_generation;</div>
@@ -214,12 +214,12 @@
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            ++_generation;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">const</span> Gfx::ColorF&amp; highlightColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; highlightColor()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> _highlightColor;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">void</span> setHighlightColor(<span class="keyword">const</span> Gfx::ColorF&amp; c)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">void</span> setHighlightColor(<span class="keyword">const</span> Gfx::Color&amp; c)</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            _highlightColor = c;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            ++_generation;</div>
@@ -236,23 +236,23 @@
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            ++_generation;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">const</span> Gfx::ColorF&amp; textColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; textColor()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">return</span> _textColor;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> setTextColor(<span class="keyword">const</span> Gfx::ColorF&amp; c)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> setTextColor(<span class="keyword">const</span> Gfx::Color&amp; c)</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        {</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            _textColor = c;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            ++_generation;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">const</span> Gfx::ColorF&amp; highlightedTextColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; highlightedTextColor()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> _highlightedTextColor;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">void</span> setHighlightedTextColor(<span class="keyword">const</span> Gfx::ColorF&amp; c)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">void</span> setHighlightedTextColor(<span class="keyword">const</span> Gfx::Color&amp; c)</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        {</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            _highlightedTextColor = c;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            ++_generation;</div>
@@ -278,12 +278,12 @@
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      Gfx::Brush _background;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      Gfx::Brush _foreground;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      Gfx::Pen   _contour;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      Gfx::ColorF _accentColor;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      Gfx::Color _accentColor;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      Gfx::Brush _viewBackground;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      Gfx::ColorF _highlightColor;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      Gfx::Color _highlightColor;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      Gfx::Brush _textBackground;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      Gfx::ColorF _textColor;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      Gfx::ColorF _highlightedTextColor;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      Gfx::Color _textColor;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      Gfx::Color _highlightedTextColor;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      Gfx::Font  _font;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      std::size_t _generation;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;};</div>
@@ -297,7 +297,7 @@
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
-	<div style="float:left;">Copyright &copy; 2003-2014 The Pt Development Team</div>
+	<div style="float:left;">Copyright &copy; 2026 The Pt Development Team</div>
 </div>
 </div>
 </body>

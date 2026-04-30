@@ -13134,22 +13134,22 @@
       <type></type>
       <name>Pen</name>
       <anchorfile>classPt_1_1Gfx_1_1Pen.html</anchorfile>
-      <anchor>a222e72bf2e953d47ed48891a4cd0e1e0</anchor>
-      <arglist>(const ColorF &amp;color)</arglist>
+      <anchor>a658447c74edc7f8a82a10d96f419f78a</anchor>
+      <arglist>(const Color &amp;color)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Pen</name>
       <anchorfile>classPt_1_1Gfx_1_1Pen.html</anchorfile>
-      <anchor>aaf535553422a81b3440be51ca4c3ccce</anchor>
-      <arglist>(const ColorF &amp;color, std::size_t width, Style style=Solid, CapStyle cap=FlatCap, JoinStyle join=BevelJoin)</arglist>
+      <anchor>a89e137749734818fafaf75427b896bec</anchor>
+      <arglist>(const Color &amp;color, std::size_t width, Style style=Solid, CapStyle cap=FlatCap, JoinStyle join=BevelJoin)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Pen</name>
       <anchorfile>classPt_1_1Gfx_1_1Pen.html</anchorfile>
-      <anchor>adcc45aa299e09c1a6cc41279efd23f95</anchor>
-      <arglist>(const ColorF &amp;color, std::size_t width, const std::vector&lt; Pt::uint8_t &gt; &amp;dashPattern, CapStyle cap=FlatCap, JoinStyle join=BevelJoin)</arglist>
+      <anchor>a4047be109a810646399dac6f960fb74f</anchor>
+      <arglist>(const Color &amp;color, std::size_t width, const std::vector&lt; Pt::uint8_t &gt; &amp;dashPattern, CapStyle cap=FlatCap, JoinStyle join=BevelJoin)</arglist>
     </member>
     <member kind="function">
       <type>CapStyle</type>
@@ -13159,10 +13159,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const ColorF &amp;</type>
+      <type>const Color &amp;</type>
       <name>color</name>
       <anchorfile>classPt_1_1Gfx_1_1Pen.html</anchorfile>
-      <anchor>aeb5d0fb5e5c296d7626fe265baf86b59</anchor>
+      <anchor>ac293f6cb83f4c951b68859bd83782d08</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -13204,8 +13204,8 @@
       <type>void</type>
       <name>setColor</name>
       <anchorfile>classPt_1_1Gfx_1_1Pen.html</anchorfile>
-      <anchor>a1a1e3b3a2c079f4f2f7a88f715eb77a6</anchor>
-      <arglist>(const ColorF &amp;color)</arglist>
+      <anchor>a518eaa08866d5abe9e686d1ccf476eec</anchor>
+      <arglist>(const Color &amp;color)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
