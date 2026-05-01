@@ -1,5 +1,251 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
+  <compound kind="page">
+    <name>allocators</name>
+    <title>Allocators</title>
+    <filename>allocators</filename>
+    <docanchor file="allocators" title="The Allocator Interface">allocators_Interface</docanchor>
+    <docanchor file="allocators" title="Pool Allocation">allocators_Pool</docanchor>
+    <docanchor file="allocators" title="Page Allocation">allocators_Page</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>basictypes</name>
+    <title>Basic Types</title>
+    <filename>basictypes</filename>
+    <docanchor file="basictypes" title="Fixed Size Integers">basictypes_FixedInt</docanchor>
+    <docanchor file="basictypes" title="Dates and Times">basictypes_DateTime</docanchor>
+    <docanchor file="basictypes" title="The Any Class">basictypes_Any</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>building</name>
+    <title>Building with Jam</title>
+    <filename>building</filename>
+    <docanchor file="building" title="Overview">overview</docanchor>
+    <docanchor file="building" title="Starting the build process">starting</docanchor>
+    <docanchor file="building" title="Building specific targets">specific</docanchor>
+    <docanchor file="building" title="Rebuilding targets">rebuild</docanchor>
+    <docanchor file="building" title="Cleaning the project">clean</docanchor>
+    <docanchor file="installing" title="Build Verification Tests">testing</docanchor>
+    <docanchor file="building" title="Common Build Options">options</docanchor>
+    <docanchor file="building" title="Compiling for Linux/Unix/Mac OS-X">build_unix</docanchor>
+    <docanchor file="building" title="Compiling for Windows NT/XP with Visual Studio 7/8">build_win32</docanchor>
+    <docanchor file="building" title="Compiling Windows CE targets">build_wince</docanchor>
+    <docanchor file="building" title="Compiling QNX targets">build_qnx</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>concurrency</name>
+    <title>Concurrency</title>
+    <filename>concurrency</filename>
+  </compound>
+  <compound kind="page">
+    <name>faq</name>
+    <title>Frequently Asked Questions</title>
+    <filename>faq</filename>
+  </compound>
+  <compound kind="page">
+    <name>filesystem</name>
+    <title>File System Access</title>
+    <filename>filesystem</filename>
+    <docanchor file="filesystem" title="File Information">filesystem_FileInfo</docanchor>
+    <docanchor file="filesystem" title="Directory Contents">filesystem_Directory</docanchor>
+    <docanchor file="filesystem" title="File I/O">filesystem_FileIO</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>http_client</name>
+    <title>HTTP Clients</title>
+    <filename>http_client</filename>
+    <docanchor file="http_client" title="Making HTTP Requests">http_client_send</docanchor>
+    <docanchor file="http_client" title="Request Pipelining">http_client_pipelining</docanchor>
+    <docanchor file="http_client" title="Chunked Encoding">http_client_chunked</docanchor>
+    <docanchor file="http_client" title="Secure Connections">http_client_ssl</docanchor>
+    <docanchor file="http_client" title="Authentication">http_client_auth</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>http_server</name>
+    <title>HTTP Server and Services</title>
+    <filename>http_server</filename>
+    <docanchor file="http_server" title="Implementing Services">http_server_service</docanchor>
+    <docanchor file="http_server" title="Servlets and Request Dispatch">http_server_servlet</docanchor>
+    <docanchor file="http_server" title="Secure Connections">http_server_ssl</docanchor>
+    <docanchor file="http_server" title="Authorization">http_server_auth</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>images</name>
+    <title>Images</title>
+    <filename>images</filename>
+  </compound>
+  <compound kind="page">
+    <name>installing</name>
+    <title>Installing from Source</title>
+    <filename>installing</filename>
+    <docanchor file="installing" title="Configuring the Build">configuring</docanchor>
+    <docanchor file="installing" title="Building">building</docanchor>
+    <docanchor file="installing" title="Installation">installation</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>jam-getting</name>
+    <title>Getting Jam</title>
+    <filename>jam-getting</filename>
+  </compound>
+  <compound kind="page">
+    <name>jam-intro</name>
+    <title>Introduction to Jam</title>
+    <filename>jam-intro</filename>
+  </compound>
+  <compound kind="page">
+    <name>jam-jambase</name>
+    <title>Jambase Reference</title>
+    <filename>jam-jambase</filename>
+  </compound>
+  <compound kind="page">
+    <name>jam-jamfile</name>
+    <title>Using the Jambase</title>
+    <filename>jam-jamfile</filename>
+  </compound>
+  <compound kind="page">
+    <name>jam-language</name>
+    <title>Jam Language Features</title>
+    <filename>jam-language</filename>
+  </compound>
+  <compound kind="page">
+    <name>jam-usage</name>
+    <title>Basic Jam Usage</title>
+    <filename>jam-usage</filename>
+  </compound>
+  <compound kind="page">
+    <name>license</name>
+    <title>License</title>
+    <filename>license</filename>
+  </compound>
+  <compound kind="page">
+    <name>logging</name>
+    <title>Logging</title>
+    <filename>logging</filename>
+    <docanchor file="logging" title="Goals and Approach">logging_Approach</docanchor>
+    <docanchor file="logging" title="Logger Configuration">logging_Configuration</docanchor>
+    <docanchor file="logging" title="Logging From Programs">logging_Usage</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>platforms</name>
+    <title>Supported Platforms</title>
+    <filename>platforms</filename>
+  </compound>
+  <compound kind="page">
+    <name>plugins</name>
+    <title>Dynamic Libraries and Plugins</title>
+    <filename>plugins</filename>
+    <docanchor file="plugins" title="Loading Libraries">plugins_Libraries</docanchor>
+    <docanchor file="plugins" title="Writing Plugins">plugins_Implementation</docanchor>
+    <docanchor file="plugins" title="Loading Plugins">plugins_LoadingPlugins</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>pt_contents</name>
+    <title>The Platinum C++ Framework</title>
+    <filename>pt_contents</filename>
+    <docanchor file="pt_contents" title="Core Library">pt_core</docanchor>
+    <docanchor file="pt_contents" title="System Programming">pt_system</docanchor>
+    <docanchor file="pt_contents" title="HTTP Clients and Servers">pt_http</docanchor>
+    <docanchor file="pt_contents" title="Secure Communication">pt_ssl</docanchor>
+    <docanchor file="pt_contents" title="XML-RPC Communication">pt_xmlrpc</docanchor>
+    <docanchor file="pt_contents" title="Unit Testing">pt_unit</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>reading</name>
+    <title>Recommended Reading</title>
+    <filename>reading</filename>
+  </compound>
+  <compound kind="page">
+    <name>requirements</name>
+    <title>Requirements</title>
+    <filename>requirements</filename>
+    <docanchor file="requirements" title="C++ Language Requirements">requirements_cpplang</docanchor>
+    <docanchor file="requirements" title="Standard Template Library and IOStreams">requirements_std</docanchor>
+    <docanchor file="requirements" title="Templates">requirements_templates</docanchor>
+    <docanchor file="requirements" title="Exceptions">requirements_exceptions</docanchor>
+    <docanchor file="requirements" title="Runtime Type Information">requirements_rtti</docanchor>
+    <docanchor file="requirements" title="Library Specific Requirements">requirements_libraries</docanchor>
+    <docanchor file="requirements" title="OpenSSL">requirements_openssl</docanchor>
+    <docanchor file="requirements" title="Freetype">requirements_freetype</docanchor>
+    <docanchor file="requirements" title="Required Tools">requirements_tools</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>serialization</name>
+    <title>Serialization</title>
+    <filename>serialization</filename>
+    <docanchor file="serialization" title="Serialization of Value Types">serialization_ValueTypes</docanchor>
+    <docanchor file="serialization" title="Serialization of Pointers">serialization_Pointers</docanchor>
+    <docanchor file="serialization" title="Serialization of Containers">serialization_Containers</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>sigslot</name>
+    <title>Signals and Delegates</title>
+    <filename>sigslot</filename>
+    <docanchor file="sigslot" title="Signals">sigslot_Signals</docanchor>
+    <docanchor file="sigslot" title="Delegates">sigslot_Delegates</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>ssl</name>
+    <title>Secure Communication</title>
+    <filename>ssl</filename>
+    <docanchor file="ssl" title="Certificate Management">ssl_CertStore</docanchor>
+    <docanchor file="ssl" title="Context Initialization">ssl_Context</docanchor>
+    <docanchor file="ssl" title="Opening a Connection">ssl_Connection</docanchor>
+    <docanchor file="ssl" title="Reading and Writing Data">ssl_ReadWrite</docanchor>
+    <docanchor file="ssl" title="Connection Shutdown">ssl_Shutdown</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>text</name>
+    <title>Text Processing</title>
+    <filename>text</filename>
+    <docanchor file="text" title="Character Encodings">text_Encodings</docanchor>
+    <docanchor file="text" title="Characters and Strings">text_Characters</docanchor>
+    <docanchor file="text" title="Text Streams and Codecs">text_TextStreams</docanchor>
+    <docanchor file="text" title="Regular Expressions">text_Regex</docanchor>
+    <docanchor file="text" title="Base-64 Encoding">text_Base64</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial</name>
+    <title>Jam Tutorial</title>
+    <filename>tutorial</filename>
+    <docanchor file="tutorial" title="Adding Jam Support">JamTutorialJambase</docanchor>
+    <docanchor file="tutorial" title="Building Programs">JamTutorialBuildPrograms</docanchor>
+    <docanchor file="tutorial" title="Cleaning the Build">JamTutorialClean</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>unittest</name>
+    <title>Unit Testing</title>
+    <filename>unittest</filename>
+    <docanchor file="unittest" title="A Simple Test Case">unittest_SimpleTests</docanchor>
+    <docanchor file="unittest" title="Build System Integration">unittest_BuildSystemIntegration</docanchor>
+    <docanchor file="unittest" title="Data Driven Testing">unittest_DataDrivenTesting</docanchor>
+    <docanchor file="unittest" title="Protocol Driven Testing">unittest_ProtocolDrivenTesting</docanchor>
+    <docanchor file="unittest" title="Running Tests">unittest_RunningTests</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>utilities</name>
+    <title>Utilities</title>
+    <filename>utilities</filename>
+    <docanchor file="utilities" title="String Conversions">utilities_StringConv</docanchor>
+    <docanchor file="utilities" title="Numeric Conversions">utilities_NumConv</docanchor>
+    <docanchor file="utilities" title="Byte Order Conversion">utilities_ByteOrder</docanchor>
+    <docanchor file="utilities" title="Command Line Arguments">utilities_Arg</docanchor>
+    <docanchor file="utilities" title="Application Settings">utilities_Settings</docanchor>
+    <docanchor file="utilities" title="Source Information">utilities_SourceInfo</docanchor>
+    <docanchor file="utilities" title="Type Information">utilities_TypeInfo</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>xmlrpc</name>
+    <title>XML-RPC Communication</title>
+    <filename>xmlrpc</filename>
+    <docanchor file="xmlrpc" title="XML-RPC Services">xmlrpc_Service</docanchor>
+    <docanchor file="xmlrpc" title="Asynchronous XML-RPC Service Procedures">xmlrpc_AsyncProcedures</docanchor>
+    <docanchor file="xmlrpc" title="XML-RPC Clients">xmlrpc_Client</docanchor>
+    <docanchor file="xmlrpc" title="Protocol Details">xmlrpc_Protocol</docanchor>
+    <docanchor file="xmlrpc" title="Request Example">xmlrpc_Request_Example</docanchor>
+    <docanchor file="xmlrpc" title="Response Example">xmlrpc_Response_Example</docanchor>
+    <docanchor file="xmlrpc" title="Fault Example">xmlrpc_Fault_Example</docanchor>
+    <docanchor file="xmlrpc" title="Copyright and Disclaimer">xmlrpc_Copyright</docanchor>
+  </compound>
   <compound kind="group">
     <name>Allocator</name>
     <title>Allocators</title>
@@ -153,9 +399,7 @@
     <title>Utilities</title>
     <filename>group__Utilities.html</filename>
     <class kind="class">Pt::Arg</class>
-    <class kind="class">Pt::Settings::ConstEntry</class>
     <class kind="class">Pt::ConversionError</class>
-    <class kind="class">Pt::Settings::Entry</class>
     <class kind="class">Pt::NonCopyable</class>
     <class kind="class">Pt::Settings</class>
     <class kind="class">Pt::SettingsError</class>
@@ -381,167 +625,6 @@
     <class kind="class">Pt::SerializationError</class>
     <class kind="class">Pt::SerializationInfo</class>
     <class kind="class">Pt::Serializer</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>Type</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>ga1d1cfd8ffb84e947f82999c682b666a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Void</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a8ce14d8b0fc90289ee23848f6de11c47</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Context</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a1f1c77c8a266dba0af92df48f3691801</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Reference</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ac20c28eca40559019b136fa240da4610</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Boolean</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a3e74f2723415f1cc3cc2f3883f68add8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Char</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7adf35c44092249df12865ec3ca08eb000</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Str</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a428fed7a45d8c7a1c6c08355e23c60de</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Int8</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a93530acbf64032cfdb6524858e742892</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Int16</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a150558aeaa819431aeb9729d26b2ac9f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Int32</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a788a72ddbf1bd572b3fcd7a5e7ec8cff</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Int64</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ada475947399b8ab4d13d40fea50f950c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>UInt8</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a07694f307856c02a0bb2e7e0bd4c6ca4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>UInt16</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a96f43adf26a8ad3211210261b7bf65fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>UInt32</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a57352c749ab6266701ed87613213e299</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>UInt64</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a0389a3fa2d3f7cb04de69cca4e9b1d95</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Float</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ad67b0ee7230dcecb610254e4e5e589cd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Double</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7afb7825ebed9ad96348ee8588d84db633</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>LongDouble</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ac301f6354c3bd23a55be344298e29fa1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Binary</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ae27b0860dfa490c46dd387b06d21a04b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Struct</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a763a932e166ac85a6d2d1606e8649993</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Sequence</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a16fc0d03fb7ae5b1e8408b4716576cd4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Dict</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a5e34fe31e96be750e17c9e6565bfd5a6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DictElement</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7aa19181b88ce6df6b03bf0959a9b68a05</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>void</type>
       <name>fixup</name>
@@ -660,41 +743,6 @@
     <class kind="class">Pt::System::FileDevice</class>
     <class kind="class">Pt::System::FileInfo</class>
     <class kind="class">Pt::System::Path</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>Type</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>ga1d1cfd8ffb84e947f82999c682b666a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Invalid</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Directory</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a020739f6b88f409cc7099aca290236f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>File</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>Link</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ad288cb65204ac772551b27769451efc2</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>Plugins</name>
@@ -4316,8 +4364,8 @@
   <compound kind="class">
     <name>Pt::Delegate</name>
     <filename>classPt_1_1Delegate.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
+    <templarg>R</templarg>
+    <templarg>ARGUMENTS</templarg>
     <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
@@ -4603,7 +4651,7 @@
   <compound kind="class">
     <name>Pt::ExternalRefCounted</name>
     <filename>classPt_1_1ExternalRefCounted.html</filename>
-    <templarg>T</templarg>
+    <templarg></templarg>
     <member kind="function">
       <type>int</type>
       <name>refs</name>
@@ -6406,162 +6454,162 @@
     <member kind="enumeration">
       <type></type>
       <name>Type</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>ga1d1cfd8ffb84e947f82999c682b666a7</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Void</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a8ce14d8b0fc90289ee23848f6de11c47</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a8ce14d8b0fc90289ee23848f6de11c47</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Context</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a1f1c77c8a266dba0af92df48f3691801</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a1f1c77c8a266dba0af92df48f3691801</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Reference</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ac20c28eca40559019b136fa240da4610</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ac20c28eca40559019b136fa240da4610</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Boolean</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a3e74f2723415f1cc3cc2f3883f68add8</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a3e74f2723415f1cc3cc2f3883f68add8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Char</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7adf35c44092249df12865ec3ca08eb000</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7adf35c44092249df12865ec3ca08eb000</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Str</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a428fed7a45d8c7a1c6c08355e23c60de</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a428fed7a45d8c7a1c6c08355e23c60de</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Int8</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a93530acbf64032cfdb6524858e742892</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a93530acbf64032cfdb6524858e742892</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Int16</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a150558aeaa819431aeb9729d26b2ac9f</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a150558aeaa819431aeb9729d26b2ac9f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Int32</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a788a72ddbf1bd572b3fcd7a5e7ec8cff</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a788a72ddbf1bd572b3fcd7a5e7ec8cff</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Int64</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ada475947399b8ab4d13d40fea50f950c</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ada475947399b8ab4d13d40fea50f950c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>UInt8</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a07694f307856c02a0bb2e7e0bd4c6ca4</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a07694f307856c02a0bb2e7e0bd4c6ca4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>UInt16</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a96f43adf26a8ad3211210261b7bf65fa</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a96f43adf26a8ad3211210261b7bf65fa</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>UInt32</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a57352c749ab6266701ed87613213e299</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a57352c749ab6266701ed87613213e299</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>UInt64</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a0389a3fa2d3f7cb04de69cca4e9b1d95</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a0389a3fa2d3f7cb04de69cca4e9b1d95</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Float</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ad67b0ee7230dcecb610254e4e5e589cd</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ad67b0ee7230dcecb610254e4e5e589cd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Double</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7afb7825ebed9ad96348ee8588d84db633</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7afb7825ebed9ad96348ee8588d84db633</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>LongDouble</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ac301f6354c3bd23a55be344298e29fa1</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ac301f6354c3bd23a55be344298e29fa1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Binary</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ae27b0860dfa490c46dd387b06d21a04b</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ae27b0860dfa490c46dd387b06d21a04b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Struct</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a763a932e166ac85a6d2d1606e8649993</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a763a932e166ac85a6d2d1606e8649993</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Sequence</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a16fc0d03fb7ae5b1e8408b4716576cd4</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a16fc0d03fb7ae5b1e8408b4716576cd4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Dict</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a5e34fe31e96be750e17c9e6565bfd5a6</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a5e34fe31e96be750e17c9e6565bfd5a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>DictElement</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7aa19181b88ce6df6b03bf0959a9b68a05</anchor>
+      <anchorfile>classPt_1_1SerializationInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7aa19181b88ce6df6b03bf0959a9b68a05</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -12479,110 +12527,110 @@
   </compound>
   <compound kind="class">
     <name>Pt::Gfx::BasicConstImage</name>
-    <filename>singletonPt_1_1Gfx_1_1BasicConstImage.html</filename>
+    <filename>classPt_1_1Gfx_1_1BasicConstImage.html</filename>
     <templarg></templarg>
     <templarg></templarg>
     <member kind="function">
       <type>void</type>
       <name>reset</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicConstImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicConstImage.html</anchorfile>
       <anchor>a2ce0d14ffd37093563d6956f8df80fc1</anchor>
       <arglist>(const Pt::uint8_t *data, Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding, const Format &amp;format)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicConstImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicConstImage.html</anchorfile>
       <anchor>a25ac44668ab454e7a750953af3fe635f</anchor>
       <arglist>(const Pt::uint8_t *data, Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Pt::Gfx::BasicImage</name>
-    <filename>singletonPt_1_1Gfx_1_1BasicImage.html</filename>
+    <filename>classPt_1_1Gfx_1_1BasicImage.html</filename>
     <templarg></templarg>
     <templarg></templarg>
     <member kind="function">
       <type></type>
       <name>BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>a4ee90beb849dfaf345331aafd2723f65</anchor>
       <arglist>(const Format &amp;format=FormatT::get())</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>a365620553228529a1fe50e58923eb3ac</anchor>
       <arglist>(Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding, const Format &amp;format=FormatT::get())</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>ae8624ae309b8975912f31cecda48bab8</anchor>
       <arglist>(Pt::ssize_t width, Pt::ssize_t height, const Format &amp;format=FormatT::get())</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>af47e3d0ed5e4de9dad55319b7b8a1a32</anchor>
       <arglist>(Pt::uint8_t *data, Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding, const Format &amp;format=FormatT::get())</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>aadd45ea69589caca9a42c6c477f1af0f</anchor>
       <arglist>(Pt::uint8_t *data, Pt::ssize_t width, Pt::ssize_t height, const Format &amp;format=FormatT::get())</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>af568f2c6c0a3ae79ced003a1fa14ac2c</anchor>
       <arglist>(const BasicImage &amp;image)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~BasicImage</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>ae26cd686d56cb3f979d84d4da08d2fc9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>clear</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>ac8bb3912a3ce86b15842e79d0b421204</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>a0863f3ef8b2b7faad7655cfd845e78e3</anchor>
       <arglist>(Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding, const Format &amp;format)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>aaf2c078a98eb633cf817ad267a5698b4</anchor>
       <arglist>(Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>a8792a4f8992da79b574d7fcf560857cd</anchor>
       <arglist>(Pt::uint8_t *data, Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding, const Format &amp;format)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset</name>
-      <anchorfile>singletonPt_1_1Gfx_1_1BasicImage.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1BasicImage.html</anchorfile>
       <anchor>a39c42a14ac7e5be1d4a1f945e8574af3</anchor>
       <arglist>(Pt::uint8_t *data, Pt::ssize_t width, Pt::ssize_t height, Pt::ssize_t padding)</arglist>
     </member>
@@ -19890,8 +19938,8 @@
   <compound kind="class">
     <name>Pt::System::BasicPlugin</name>
     <filename>classPt_1_1System_1_1BasicPlugin.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
+    <templarg>Class</templarg>
+    <templarg>Iface</templarg>
     <base>Pt::System::Plugin</base>
     <member kind="function">
       <type></type>
@@ -20423,36 +20471,36 @@
     <member kind="enumeration">
       <type></type>
       <name>Type</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>ga1d1cfd8ffb84e947f82999c682b666a7</anchor>
+      <anchorfile>classPt_1_1System_1_1FileInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Invalid</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474</anchor>
+      <anchorfile>classPt_1_1System_1_1FileInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Directory</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a020739f6b88f409cc7099aca290236f0</anchor>
+      <anchorfile>classPt_1_1System_1_1FileInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a020739f6b88f409cc7099aca290236f0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>File</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f</anchor>
+      <anchorfile>classPt_1_1System_1_1FileInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>Link</name>
-      <anchorfile>group__FileSystem.html</anchorfile>
-      <anchor>gga1d1cfd8ffb84e947f82999c682b666a7ad288cb65204ac772551b27769451efc2</anchor>
+      <anchorfile>classPt_1_1System_1_1FileInfo.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ad288cb65204ac772551b27769451efc2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -22074,7 +22122,7 @@
   <compound kind="class">
     <name>Pt::System::PluginManager</name>
     <filename>classPt_1_1System_1_1PluginManager.html</filename>
-    <templarg></templarg>
+    <templarg>IfaceT</templarg>
     <templarg></templarg>
     <class kind="class">Pt::System::PluginManager::Iterator</class>
     <member kind="function">
