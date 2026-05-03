@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">PaintContext Class Reference</div>  </div>
+<div class="title">PaintContext Class Reference<div class="ingroups"><a class="el" href="group__Drawing.html">Graphics Drawing System</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Gfx_2PaintContext_8h_source.html">Pt/Gfx/PaintContext.h</a>&gt;</code></p>
 
-<p><a class="el" href="classPt_1_1Gfx_1_1Paint.html" title="Paint context.">Paint</a> context.  
-</p>
+<p>Active painting session for a surface.  
+ <a href="classPt_1_1Gfx_1_1PaintContext.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 
@@ -117,7 +117,7 @@ const <a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">Gfx::ImageFormat</
 <tr class="separator:a9c2b28be331792e260c7d7836de328d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233b273485dc5fb1f169bd068358d08f"><td class="memItemLeft" align="right" valign="top"><a id="a233b273485dc5fb1f169bd068358d08f"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Canvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a233b273485dc5fb1f169bd068358d08f">getCanvas</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Canvas</a> *canvas)</td></tr>
-<tr class="memdesc:a233b273485dc5fb1f169bd068358d08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Paint context.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a233b273485dc5fb1f169bd068358d08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a canvas for backend drawing. <br /></td></tr>
 <tr class="separator:a233b273485dc5fb1f169bd068358d08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7892fd68463d0846bcd72f0580a5cdbb"><td class="memItemLeft" align="right" valign="top"><a id="a7892fd68463d0846bcd72f0580a5cdbb"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a7892fd68463d0846bcd72f0580a5cdbb">scaling</a> () const</td></tr>
@@ -129,17 +129,19 @@ const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;&#160
 <tr class="separator:a445bb5b5c4018463ef3a4604a8d69b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55f80ed3cd8b6c4f247763b747016af"><td class="memItemLeft" align="right" valign="top"><a id="ad55f80ed3cd8b6c4f247763b747016af"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#ad55f80ed3cd8b6c4f247763b747016af">sync</a> ()</td></tr>
-<tr class="memdesc:ad55f80ed3cd8b6c4f247763b747016af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syncs the paint surface. <br /></td></tr>
+<tr class="memdesc:ad55f80ed3cd8b6c4f247763b747016af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronizes pending drawing operations. <br /></td></tr>
 <tr class="separator:ad55f80ed3cd8b6c4f247763b747016af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa9e8bcd14842f44267c7e82d0eb05e98"><td class="memItemLeft" align="right" valign="top"><a id="aa9e8bcd14842f44267c7e82d0eb05e98"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#aa9e8bcd14842f44267c7e82d0eb05e98">onDetachSurface</a> (<a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
-<tr class="memdesc:aa9e8bcd14842f44267c7e82d0eb05e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the surface is detached. <br /></td></tr>
+<tr class="memdesc:aa9e8bcd14842f44267c7e82d0eb05e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles detachment from the surface. <br /></td></tr>
 <tr class="separator:aa9e8bcd14842f44267c7e82d0eb05e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>PaintContext represents a prepared drawing session on a PaintSurface. It exposes target properties, provides access to a backend canvas and keeps painter and surface lifetime in sync while painting is active. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

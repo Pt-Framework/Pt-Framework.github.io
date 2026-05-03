@@ -83,23 +83,141 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Transform Class Reference</div>  </div>
+<div class="title">Transform Class Reference<div class="ingroups"><a class="el" href="group__Drawing.html">Graphics Drawing System</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Transform_8h_source.html">Pt/Gfx/Transform.h</a>&gt;</code></p>
 
-<p>2D transformation matrix.  
-</p>
+<p>Affine transform for drawing coordinates.  
+ <a href="classPt_1_1Gfx_1_1Transform.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9de68ec1c9b7809129814a3233ae4655"><td class="memItemLeft" align="right" valign="top"><a id="a9de68ec1c9b7809129814a3233ae4655"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a9de68ec1c9b7809129814a3233ae4655">Transform</a> ()</td></tr>
+<tr class="memdesc:a9de68ec1c9b7809129814a3233ae4655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the identity transform. <br /></td></tr>
+<tr class="separator:a9de68ec1c9b7809129814a3233ae4655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cd96f3487fb5c12226d67b9c0fb4ed"><td class="memItemLeft" align="right" valign="top"><a id="a91cd96f3487fb5c12226d67b9c0fb4ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a91cd96f3487fb5c12226d67b9c0fb4ed">Transform</a> (double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac242bb7bd3f1dd554e61ef03260d4a5c">m11</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a7209f8ecf20fb1680c0c0c7de885aa1c">m12</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a4fa7f30d4c3e2cc29fb3e7476fefb8d2">m21</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#adbf92d1b369b6dbb8c5924b6b87b401f">m22</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a6d3cce16a37a386df6f7f100f36e02dc">dx</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1f355fd23f22040fb553a21164da37e0">dy</a>)</td></tr>
+<tr class="memdesc:a91cd96f3487fb5c12226d67b9c0fb4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transform from explicit matrix components. <br /></td></tr>
+<tr class="separator:a91cd96f3487fb5c12226d67b9c0fb4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e627263611a76aad02c9e0b89287c68"><td class="memItemLeft" align="right" valign="top"><a id="a8e627263611a76aad02c9e0b89287c68"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a8e627263611a76aad02c9e0b89287c68">~Transform</a> ()</td></tr>
+<tr class="memdesc:a8e627263611a76aad02c9e0b89287c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the transform. <br /></td></tr>
+<tr class="separator:a8e627263611a76aad02c9e0b89287c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567226bdd8fe4db0026d42aae75540ec"><td class="memItemLeft" align="right" valign="top"><a id="a567226bdd8fe4db0026d42aae75540ec"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a567226bdd8fe4db0026d42aae75540ec">determinant</a> () const</td></tr>
+<tr class="memdesc:a567226bdd8fe4db0026d42aae75540ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix determinant. <br /></td></tr>
+<tr class="separator:a567226bdd8fe4db0026d42aae75540ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3cce16a37a386df6f7f100f36e02dc"><td class="memItemLeft" align="right" valign="top"><a id="a6d3cce16a37a386df6f7f100f36e02dc"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a6d3cce16a37a386df6f7f100f36e02dc">dx</a> () const</td></tr>
+<tr class="memdesc:a6d3cce16a37a386df6f7f100f36e02dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the horizontal translation. <br /></td></tr>
+<tr class="separator:a6d3cce16a37a386df6f7f100f36e02dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f355fd23f22040fb553a21164da37e0"><td class="memItemLeft" align="right" valign="top"><a id="a1f355fd23f22040fb553a21164da37e0"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1f355fd23f22040fb553a21164da37e0">dy</a> () const</td></tr>
+<tr class="memdesc:a1f355fd23f22040fb553a21164da37e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertical translation. <br /></td></tr>
+<tr class="separator:a1f355fd23f22040fb553a21164da37e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccdf96ea6ed3e1c8661f615c5d8316a"><td class="memItemLeft" align="right" valign="top"><a id="acccdf96ea6ed3e1c8661f615c5d8316a"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#acccdf96ea6ed3e1c8661f615c5d8316a">inverted</a> () const</td></tr>
+<tr class="memdesc:acccdf96ea6ed3e1c8661f615c5d8316a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inverse transform. <br /></td></tr>
+<tr class="separator:acccdf96ea6ed3e1c8661f615c5d8316a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c722ad515e5131a4c2ea6db32fd1bc8"><td class="memItemLeft" align="right" valign="top"><a id="a4c722ad515e5131a4c2ea6db32fd1bc8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a4c722ad515e5131a4c2ea6db32fd1bc8">isAffine</a> () const</td></tr>
+<tr class="memdesc:a4c722ad515e5131a4c2ea6db32fd1bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the transform is affine. <br /></td></tr>
+<tr class="separator:a4c722ad515e5131a4c2ea6db32fd1bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d05bd7bb4e214a6253fb3df2ebfb91"><td class="memItemLeft" align="right" valign="top"><a id="ac7d05bd7bb4e214a6253fb3df2ebfb91"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac7d05bd7bb4e214a6253fb3df2ebfb91">isIdentity</a> () const</td></tr>
+<tr class="memdesc:ac7d05bd7bb4e214a6253fb3df2ebfb91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the transform is the identity matrix. <br /></td></tr>
+<tr class="separator:ac7d05bd7bb4e214a6253fb3df2ebfb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f6140e47d28ca9a0f3fad0848f149c"><td class="memItemLeft" align="right" valign="top"><a id="a99f6140e47d28ca9a0f3fad0848f149c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a99f6140e47d28ca9a0f3fad0848f149c">isInvertible</a> () const</td></tr>
+<tr class="memdesc:a99f6140e47d28ca9a0f3fad0848f149c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the transform can be inverted. <br /></td></tr>
+<tr class="separator:a99f6140e47d28ca9a0f3fad0848f149c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15029b17f5e40b4658668c6195918ae0"><td class="memItemLeft" align="right" valign="top"><a id="a15029b17f5e40b4658668c6195918ae0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a15029b17f5e40b4658668c6195918ae0">isSimple</a> () const</td></tr>
 <tr class="memdesc:a15029b17f5e40b4658668c6195918ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the matrix is only translating and scaling. <br /></td></tr>
 <tr class="separator:a15029b17f5e40b4658668c6195918ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac242bb7bd3f1dd554e61ef03260d4a5c"><td class="memItemLeft" align="right" valign="top"><a id="ac242bb7bd3f1dd554e61ef03260d4a5c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac242bb7bd3f1dd554e61ef03260d4a5c">m11</a> () const</td></tr>
+<tr class="memdesc:ac242bb7bd3f1dd554e61ef03260d4a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first row, first column coefficient. <br /></td></tr>
+<tr class="separator:ac242bb7bd3f1dd554e61ef03260d4a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7209f8ecf20fb1680c0c0c7de885aa1c"><td class="memItemLeft" align="right" valign="top"><a id="a7209f8ecf20fb1680c0c0c7de885aa1c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a7209f8ecf20fb1680c0c0c7de885aa1c">m12</a> () const</td></tr>
+<tr class="memdesc:a7209f8ecf20fb1680c0c0c7de885aa1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first row, second column coefficient. <br /></td></tr>
+<tr class="separator:a7209f8ecf20fb1680c0c0c7de885aa1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa7f30d4c3e2cc29fb3e7476fefb8d2"><td class="memItemLeft" align="right" valign="top"><a id="a4fa7f30d4c3e2cc29fb3e7476fefb8d2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a4fa7f30d4c3e2cc29fb3e7476fefb8d2">m21</a> () const</td></tr>
+<tr class="memdesc:a4fa7f30d4c3e2cc29fb3e7476fefb8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the second row, first column coefficient. <br /></td></tr>
+<tr class="separator:a4fa7f30d4c3e2cc29fb3e7476fefb8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf92d1b369b6dbb8c5924b6b87b401f"><td class="memItemLeft" align="right" valign="top"><a id="adbf92d1b369b6dbb8c5924b6b87b401f"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#adbf92d1b369b6dbb8c5924b6b87b401f">m22</a> () const</td></tr>
+<tr class="memdesc:adbf92d1b369b6dbb8c5924b6b87b401f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the second row, second column coefficient. <br /></td></tr>
+<tr class="separator:adbf92d1b369b6dbb8c5924b6b87b401f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951516a1d2fd97add3876d2593357728"><td class="memItemLeft" align="right" valign="top"><a id="a951516a1d2fd97add3876d2593357728"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a951516a1d2fd97add3876d2593357728">operator!=</a> (const <a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a> &amp;t) const</td></tr>
+<tr class="memdesc:a951516a1d2fd97add3876d2593357728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if both transforms are different. <br /></td></tr>
+<tr class="separator:a951516a1d2fd97add3876d2593357728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac317590e57062cbc89b4c45e7387ae69"><td class="memItemLeft" align="right" valign="top"><a id="ac317590e57062cbc89b4c45e7387ae69"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac317590e57062cbc89b4c45e7387ae69">operator*</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a> &amp;p) const</td></tr>
+<tr class="memdesc:ac317590e57062cbc89b4c45e7387ae69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a point. <br /></td></tr>
+<tr class="separator:ac317590e57062cbc89b4c45e7387ae69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf96f609692eae2fef72de1e9a0a5b5"><td class="memItemLeft" align="right" valign="top"><a id="abdf96f609692eae2fef72de1e9a0a5b5"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Size.html">SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#abdf96f609692eae2fef72de1e9a0a5b5">operator*</a> (const <a class="el" href="classPt_1_1Gfx_1_1Size.html">SizeF</a> &amp;p) const</td></tr>
+<tr class="memdesc:abdf96f609692eae2fef72de1e9a0a5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a size. <br /></td></tr>
+<tr class="separator:abdf96f609692eae2fef72de1e9a0a5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bae581b78b4b75255ec1384c494631c"><td class="memItemLeft" align="right" valign="top"><a id="a2bae581b78b4b75255ec1384c494631c"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2bae581b78b4b75255ec1384c494631c">operator*</a> (const <a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a> &amp;t) const</td></tr>
+<tr class="memdesc:a2bae581b78b4b75255ec1384c494631c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the composition of two transforms. <br /></td></tr>
+<tr class="separator:a2bae581b78b4b75255ec1384c494631c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ca0285068d389db0eea506e2151956"><td class="memItemLeft" align="right" valign="top"><a id="a80ca0285068d389db0eea506e2151956"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a80ca0285068d389db0eea506e2151956">operator*=</a> (const <a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a> &amp;t)</td></tr>
+<tr class="memdesc:a80ca0285068d389db0eea506e2151956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends another transform in place. <br /></td></tr>
+<tr class="separator:a80ca0285068d389db0eea506e2151956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7822f18c096ce6715da18ae21aa09c7"><td class="memItemLeft" align="right" valign="top"><a id="af7822f18c096ce6715da18ae21aa09c7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#af7822f18c096ce6715da18ae21aa09c7">operator==</a> (const <a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a> &amp;t) const</td></tr>
+<tr class="memdesc:af7822f18c096ce6715da18ae21aa09c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if both transforms are equal. <br /></td></tr>
+<tr class="separator:af7822f18c096ce6715da18ae21aa09c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft" align="right" valign="top"><a id="ad20897c5c8bd47f5d4005989bead0e55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
+<tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the transform to identity. <br /></td></tr>
+<tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68dd380aaccb2b323477c91f4ee4c5e2"><td class="memItemLeft" align="right" valign="top"><a id="a68dd380aaccb2b323477c91f4ee4c5e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a68dd380aaccb2b323477c91f4ee4c5e2">rotateDeg</a> (double angle)</td></tr>
+<tr class="memdesc:a68dd380aaccb2b323477c91f4ee4c5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a rotation specified in degrees. <br /></td></tr>
+<tr class="separator:a68dd380aaccb2b323477c91f4ee4c5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5172c978cf6b3ce527b0995601493115"><td class="memItemLeft" align="right" valign="top"><a id="a5172c978cf6b3ce527b0995601493115"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a5172c978cf6b3ce527b0995601493115">rotateRad</a> (double angle)</td></tr>
+<tr class="memdesc:a5172c978cf6b3ce527b0995601493115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a rotation specified in radians. <br /></td></tr>
+<tr class="separator:a5172c978cf6b3ce527b0995601493115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81aeabaf232f6a1859f262a71c1b85b3"><td class="memItemLeft" align="right" valign="top"><a id="a81aeabaf232f6a1859f262a71c1b85b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a81aeabaf232f6a1859f262a71c1b85b3">scale</a> (double x, double y)</td></tr>
+<tr class="memdesc:a81aeabaf232f6a1859f262a71c1b85b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a scaling. <br /></td></tr>
+<tr class="separator:a81aeabaf232f6a1859f262a71c1b85b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f447cd2635e4c811fbeb5a6da690e0"><td class="memItemLeft" align="right" valign="top"><a id="ae7f447cd2635e4c811fbeb5a6da690e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#ae7f447cd2635e4c811fbeb5a6da690e0">set</a> (double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac242bb7bd3f1dd554e61ef03260d4a5c">m11</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a7209f8ecf20fb1680c0c0c7de885aa1c">m12</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a4fa7f30d4c3e2cc29fb3e7476fefb8d2">m21</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#adbf92d1b369b6dbb8c5924b6b87b401f">m22</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a6d3cce16a37a386df6f7f100f36e02dc">dx</a>, double <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1f355fd23f22040fb553a21164da37e0">dy</a>)</td></tr>
+<tr class="memdesc:ae7f447cd2635e4c811fbeb5a6da690e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the matrix coefficients. <br /></td></tr>
+<tr class="separator:ae7f447cd2635e4c811fbeb5a6da690e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca0c7d663386885827b30e4cc62f9eb"><td class="memItemLeft" align="right" valign="top"><a id="a1ca0c7d663386885827b30e4cc62f9eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1ca0c7d663386885827b30e4cc62f9eb">shear</a> (double sh, double sv)</td></tr>
+<tr class="memdesc:a1ca0c7d663386885827b30e4cc62f9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends horizontal and vertical shearing. <br /></td></tr>
+<tr class="separator:a1ca0c7d663386885827b30e4cc62f9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3215900143ee4cba88f79e41af6282"><td class="memItemLeft" align="right" valign="top"><a id="a2e3215900143ee4cba88f79e41af6282"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2e3215900143ee4cba88f79e41af6282">shearX</a> (double sh)</td></tr>
+<tr class="memdesc:a2e3215900143ee4cba88f79e41af6282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends horizontal shearing. <br /></td></tr>
+<tr class="separator:a2e3215900143ee4cba88f79e41af6282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9478586dc551bdd6d4d86af951717c"><td class="memItemLeft" align="right" valign="top"><a id="a1e9478586dc551bdd6d4d86af951717c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1e9478586dc551bdd6d4d86af951717c">shearY</a> (double sh)</td></tr>
+<tr class="memdesc:a1e9478586dc551bdd6d4d86af951717c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends vertical shearing. <br /></td></tr>
+<tr class="separator:a1e9478586dc551bdd6d4d86af951717c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34bb82fbe517542fed56f90cf125d36"><td class="memItemLeft" align="right" valign="top"><a id="ae34bb82fbe517542fed56f90cf125d36"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html#ae34bb82fbe517542fed56f90cf125d36">translate</a> (double x, double y)</td></tr>
+<tr class="memdesc:ae34bb82fbe517542fed56f90cf125d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a translation. <br /></td></tr>
+<tr class="separator:ae34bb82fbe517542fed56f90cf125d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classPt_1_1Gfx_1_1Transform.html" title="Affine transform for drawing coordinates.">Transform</a> stores the matrix used to map logical drawing coordinates to the coordinate system of the target. It can be composed from translation, scaling, rotation and shear operations and is used by painters, paths and text drawing. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

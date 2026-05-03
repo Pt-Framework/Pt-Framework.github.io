@@ -85,10 +85,20 @@
 , <a class="el" href="classPt_1_1Settings.html#a08b872fed10cbd46d49135ea6957c87b">Settings</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a864322394e1dc4663c0f126ec8824a49">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 </li>
+<li>scale()
+: <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a81aeabaf232f6a1859f262a71c1b85b3">Transform</a>
+</li>
+<li>scaleFactor()
+: <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">Scaling</a>
+</li>
 <li>scaling()
-: <a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a7892fd68463d0846bcd72f0580a5cdbb">PaintContext</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a7892fd68463d0846bcd72f0580a5cdbb">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a7892fd68463d0846bcd72f0580a5cdbb">PaintContext</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a7892fd68463d0846bcd72f0580a5cdbb">PainterBase</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a7892fd68463d0846bcd72f0580a5cdbb">PaintSurface</a>
+</li>
+<li>Scaling()
+: <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#aa60e182ed4a40883d43591248ffc5a49">Scaling</a>
 </li>
 <li>second()
 : <a class="el" href="classPt_1_1DateTime.html#a48e9ba1096b933927acac1f97d57f97c">DateTime</a>
@@ -130,7 +140,7 @@
 : <a class="el" href="classPt_1_1SerializationContext.html#a8bc1aa5e75abf85324543cebe9b508b8">SerializationContext</a>
 </li>
 <li>SerializationError()
-: <a class="el" href="classPt_1_1SerializationError.html#a6275e99fcc8465a42ad200da45540471">SerializationError</a>
+: <a class="el" href="classPt_1_1SerializationError.html#adf929950bb0c5d61009c14e514078418">SerializationError</a>
 </li>
 <li>SerializationInfo()
 : <a class="el" href="classPt_1_1SerializationInfo.html#abef8ef302b3d670f50c695c4bbc4f50f">SerializationInfo</a>
@@ -163,6 +173,7 @@
 : <a class="el" href="classPt_1_1Arg.html#af69e2981879122192481bb9cbb2e9db3">Arg&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a46cd67f0be3aec050289432c137d706a">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#af7af6b18bd15a9eaf6881b4b780afcf0">DateTime</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#ae7f447cd2635e4c811fbeb5a6da690e0">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1Credential.html#a195d645b439ab2f682cc3690391afc1b">Credential</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader.html#a56310f41fbfc8604788c97d15adf21b0">MessageHeader</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#ac492aea31d0904792242257fdcb1e197">Settings::Entry</a>
@@ -216,7 +227,8 @@
 : <a class="el" href="classPt_1_1Net_1_1UdpSocketOptions.html#afc852764fad4f645329f7f66197154d9">UdpSocketOptions</a>
 </li>
 <li>setBrush()
-: <a class="el" href="classPt_1_1Gfx_1_1Paint.html#a911b1ab96ec7508d36aaf2cb305608db">Paint</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a911b1ab96ec7508d36aaf2cb305608db">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Paint.html#a911b1ab96ec7508d36aaf2cb305608db">Paint</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a911b1ab96ec7508d36aaf2cb305608db">PainterBase</a>
 </li>
 <li>setBuffer()
@@ -252,7 +264,8 @@
 , <a class="el" href="classPt_1_1Xml_1_1XmlReader.html#ad4e815e5369f34c81c34fa1125490e4d">XmlReader</a>
 </li>
 <li>setClip()
-: <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a21fc57e50baf2900fcf7928f96d3a27c">PainterBase</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a21fc57e50baf2900fcf7928f96d3a27c">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a21fc57e50baf2900fcf7928f96d3a27c">PainterBase</a>
 </li>
 <li>setCodec()
 : <a class="el" href="classPt_1_1BasicTextBuffer.html#a177f4f8214867d39737e6976d5fc9157">BasicTextBuffer&lt; CharT, ByteT &gt;</a>
@@ -261,10 +274,12 @@
 , <a class="el" href="classPt_1_1BasicTextStream.html#a177f4f8214867d39737e6976d5fc9157">BasicTextStream&lt; CharT, ByteT &gt;</a>
 </li>
 <li>setColor()
-: <a class="el" href="classPt_1_1Gfx_1_1Pen.html#a518eaa08866d5abe9e686d1ccf476eec">Pen</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Brush.html#a518eaa08866d5abe9e686d1ccf476eec">Brush</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Pen.html#a518eaa08866d5abe9e686d1ccf476eec">Pen</a>
 </li>
 <li>setCompositionMode()
-: <a class="el" href="classPt_1_1Gfx_1_1Paint.html#a98a9ff991de2eebbdc289175ebc98b21">Paint</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#af1372af06f27316bf1d408baddde9df1">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Paint.html#a98a9ff991de2eebbdc289175ebc98b21">Paint</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a98a9ff991de2eebbdc289175ebc98b21">PainterBase</a>
 </li>
 <li>setContent()
@@ -282,6 +297,9 @@
 </li>
 <li>setDate()
 : <a class="el" href="classPt_1_1DateTime.html#a5bcb7cddd159ca0441163374f2f4d098">DateTime</a>
+</li>
+<li>setDefaultFont()
+: <a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ac0c51aeea99025176ca7648427313d74">Bitmap</a>
 </li>
 <li>setDefaultNamespace()
 : <a class="el" href="classPt_1_1Xml_1_1XmlWriter.html#ac9f1bc77e6cfa99293d29ac24e744c8e">XmlWriter</a>
@@ -328,7 +346,8 @@
 : <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a4d24b87d5934b82440e4322d471e8053">SerialDevice</a>
 </li>
 <li>setFont()
-: <a class="el" href="classPt_1_1Gfx_1_1Paint.html#ad56c22d0881053fd0d628fa139b1748b">Paint</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#ac77626da8a7306cd079b1dd18558c9eb">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Paint.html#ad56c22d0881053fd0d628fa139b1748b">Paint</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ad56c22d0881053fd0d628fa139b1748b">PainterBase</a>
 </li>
 <li>setFormatter()
@@ -455,7 +474,8 @@
 : <a class="el" href="classPt_1_1System_1_1SerialDevice.html#aab188d22d1ad30028ff5f4f0152f1f73">SerialDevice</a>
 </li>
 <li>setPath()
-: <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a401a9f98190516b9479a1acaf02d0ea8">PainterBase</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a401a9f98190516b9479a1acaf02d0ea8">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a401a9f98190516b9479a1acaf02d0ea8">PainterBase</a>
 </li>
 <li>setPattern()
 : <a class="el" href="classPt_1_1System_1_1Logger.html#ac9a4851294627de4e9cf4cd99a95c84a">Logger</a>
@@ -467,7 +487,8 @@
 , <a class="el" href="classPt_1_1XmlRpc_1_1HttpClient.html#aeca6698a6ec4c085e45ab44641a89a7a">HttpClient</a>
 </li>
 <li>setPen()
-: <a class="el" href="classPt_1_1Gfx_1_1Paint.html#ac6b5a734fdfc27f6963a7e735ed14767">Paint</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#ac6b5a734fdfc27f6963a7e735ed14767">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Paint.html#ac6b5a734fdfc27f6963a7e735ed14767">Paint</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ac6b5a734fdfc27f6963a7e735ed14767">PainterBase</a>
 </li>
 <li>setPrefix()
@@ -500,7 +521,17 @@
 </li>
 <li>setReference()
 : <a class="el" href="classPt_1_1Composer.html#ad967ace7b06827364fd3a639c38b1a0e">Composer</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#ad967ace7b06827364fd3a639c38b1a0e">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a30546ba8e0491cb824f0fc174044510e">SerializationInfo</a>
+</li>
+<li>setRegion()
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a936c6f644070cd97e410a86775424e6a">Canvas</a>
+</li>
+<li>setScaleFactor()
+: <a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a47fa840828180a2252b7fb80e07b1a15">Bitmap</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a47fa840828180a2252b7fb80e07b1a15">Scaling</a>
+</li>
+<li>setScaling()
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#aba8b1d282ab7bde1207d3b2c41589199">Canvas</a>
 </li>
 <li>setSecure()
 : <a class="el" href="classPt_1_1Http_1_1Client.html#a08968935c2f4dee47a3c29134bc7bee4">Client</a>
@@ -524,7 +555,7 @@
 , <a class="el" href="classPt_1_1Xml_1_1XmlDeclaration.html#aeeab33be1065c8f3f95adc4d79aade5e">XmlDeclaration</a>
 </li>
 <li>setStatus()
-: <a class="el" href="classPt_1_1Http_1_1Reply.html#a4f206e4247ca17f4e192b6e3954bd8f2">Reply</a>
+: <a class="el" href="classPt_1_1Http_1_1Reply.html#ae9d4f18af6bc6a03c06e48a9b91fb7ae">Reply</a>
 </li>
 <li>setStdError()
 : <a class="el" href="classPt_1_1System_1_1ProcessInfo.html#a182eb4bfeea0cc19fa4cca0bf2236687">ProcessInfo</a>
@@ -546,7 +577,7 @@
 </li>
 <li>setString()
 : <a class="el" href="classPt_1_1Composer.html#a18e118ab4da73a2c2bb0c1167a9eff29">Composer</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a772c4deef8d86196b698bc3bf999e8e8">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a822b6973f3d9689a6c23bc5dd465c85d">SerializationInfo</a>
 </li>
 <li>setStruct()
 : <a class="el" href="classPt_1_1SerializationInfo.html#a26f0f9fec623b08ad8e88cfcdb599432">SerializationInfo</a>
@@ -560,10 +591,13 @@
 , <a class="el" href="classPt_1_1Xml_1_1Notation.html#a3cd2f4e01ff5d7d11937075bec19212f">Notation</a>
 </li>
 <li>setTarget()
-: <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#adbd9b00b6019c1e781887106cebe9494">UdpSocket</a>
+: <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">UdpSocket</a>
 , <a class="el" href="classPt_1_1Soap_1_1HttpClient.html#a28a3ae409dc63dc51452526d3817e345">HttpClient</a>
 , <a class="el" href="classPt_1_1Xml_1_1ProcessingInstruction.html#a99d07c4b61a18faa7d738a8b69a82901">ProcessingInstruction</a>
 , <a class="el" href="classPt_1_1XmlRpc_1_1HttpClient.html#a28a3ae409dc63dc51452526d3817e345">HttpClient</a>
+</li>
+<li>setTexture()
+: <a class="el" href="classPt_1_1Gfx_1_1Brush.html#a0eeb62a0f9d0fda743bf2b4fe4fc1652">Brush</a>
 </li>
 <li>setTime()
 : <a class="el" href="classPt_1_1DateTime.html#ac62f67a8c218fe777dc243058fc933ff">DateTime</a>
@@ -585,11 +619,12 @@
 : <a class="el" href="classPt_1_1Time.html#ac86519c65853835eef292cbf1af49446">Time</a>
 </li>
 <li>setTransform()
-: <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ac89ef0116bcafbe68197f5ac304a17e3">PainterBase</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a6185568190cd0f68af40e26cfe79557b">Canvas</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ac89ef0116bcafbe68197f5ac304a17e3">PainterBase</a>
 </li>
 <li>setTypeName()
 : <a class="el" href="classPt_1_1Composer.html#a3d659d211bc3061ce95fbcacf5fc5b7b">Composer</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a3d659d211bc3061ce95fbcacf5fc5b7b">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#ad704da99c3ea7f7169be23a2520a6302">SerializationInfo</a>
 </li>
 <li>setUInt()
 : <a class="el" href="classPt_1_1Composer.html#aa961f25d7bf21594fcb1e87d7e3d5d02">Composer</a>
@@ -621,7 +656,7 @@
 , <a class="el" href="classPt_1_1Unit_1_1TestSuite.html#a7e11a8ae92c046f17559db9a40055941">TestSuite</a>
 </li>
 <li>setUrl()
-: <a class="el" href="classPt_1_1Http_1_1Request.html#a4db25e46537d49db296a9889d0f1b3bc">Request</a>
+: <a class="el" href="classPt_1_1Http_1_1Request.html#a21df58633e186bee3ed552299b3bf3db">Request</a>
 </li>
 <li>setUser()
 : <a class="el" href="classPt_1_1Http_1_1BasicUserListAuthorizer.html#ab347708932b48cc4c11c51b8bf1bf9db">BasicUserListAuthorizer</a>
@@ -649,6 +684,15 @@
 <li>setXHeight()
 : <a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html#ab209555466f96c2bce2b0ad4bc9e48e6">FontMetrics</a>
 </li>
+<li>shear()
+: <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1ca0c7d663386885827b30e4cc62f9eb">Transform</a>
+</li>
+<li>shearX()
+: <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2e3215900143ee4cba88f79e41af6282">Transform</a>
+</li>
+<li>shearY()
+: <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a1e9478586dc551bdd6d4d86af951717c">Transform</a>
+</li>
 <li>showfull()
 : <a class="el" href="classPt_1_1BasicStreamBuffer.html#a5d4baca65e539138ca8fd821779d1484">BasicStreamBuffer&lt; CharT, TraitsT &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1StreamBuffer.html#a5d4baca65e539138ca8fd821779d1484">StreamBuffer</a>
@@ -673,8 +717,12 @@
 : <a class="el" href="classPt_1_1Singleton.html#a04783ca27b0280a844368faf849c8ddb">Singleton&lt; T &gt;</a>
 </li>
 <li>size()
-: <a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a445bb5b5c4018463ef3a4604a8d69b7a">PaintContext</a>
+: <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html#ade1601ccf1fa3bcf050867f0852ca4e5">ColorStops</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Font.html#ade1601ccf1fa3bcf050867f0852ca4e5">Font</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a445bb5b5c4018463ef3a4604a8d69b7a">PaintContext</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a445bb5b5c4018463ef3a4604a8d69b7a">PaintSurface</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Path.html#ade1601ccf1fa3bcf050867f0852ca4e5">Path</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathElement.html#ade1601ccf1fa3bcf050867f0852ca4e5">PathElement</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Pen.html#ade1601ccf1fa3bcf050867f0852ca4e5">Pen</a>
 , <a class="el" href="classPt_1_1RegexSMatch.html#ade1601ccf1fa3bcf050867f0852ca4e5">RegexSMatch</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore.html#ade1601ccf1fa3bcf050867f0852ca4e5">CertificateStore</a>
@@ -684,6 +732,12 @@
 , <a class="el" href="classPt_1_1Xml_1_1AttributeList.html#ade1601ccf1fa3bcf050867f0852ca4e5">AttributeList</a>
 , <a class="el" href="classPt_1_1Xml_1_1QName.html#ade1601ccf1fa3bcf050867f0852ca4e5">QName</a>
 </li>
+<li>slant()
+: <a class="el" href="classPt_1_1Gfx_1_1Font.html#a3de4a01596d27fdd274f52eb0dcba50b">Font</a>
+</li>
+<li>Slant
+: <a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Font</a>
+</li>
 <li>sleep()
 : <a class="el" href="classPt_1_1System_1_1Thread.html#a3cfabfe1ccc5086cc5753eb45afc4658">Thread</a>
 </li>
@@ -692,7 +746,10 @@
 , <a class="el" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">Slot</a>
 </li>
 <li>SmartPtr()
-: <a class="el" href="classPt_1_1SmartPtr.html#a3d8b399291b7e62c1ed348073d82d189">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
+: <a class="el" href="classPt_1_1SmartPtr.html#a4cdda752372f2ead55799f773af635dc">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
+</li>
+<li>SourceCopy
+: <a class="el" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911aad6cc46708aa1be116319b87837f129f">CompositionMode</a>
 </li>
 <li>SourceInfo()
 : <a class="el" href="classPt_1_1SourceInfo.html#ab9b8c306f9888f6e4b75472f3c980b09">SourceInfo</a>
@@ -700,6 +757,9 @@
 <li>sourceInfo()
 : <a class="el" href="classPt_1_1System_1_1LogRecord.html#a052afc64df1888be8cc363733a1530db">LogRecord</a>
 , <a class="el" href="classPt_1_1Unit_1_1Assertion.html#a052afc64df1888be8cc363733a1530db">Assertion</a>
+</li>
+<li>SourceOver
+: <a class="el" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911a27b37c23c11b7c8079b31811373818a2">CompositionMode</a>
 </li>
 <li>speekn()
 : <a class="el" href="classPt_1_1BasicStreamBuffer.html#a531fcfa8ed2b86c94f54fe219291129d">BasicStreamBuffer&lt; CharT, TraitsT &gt;</a>
@@ -720,7 +780,7 @@
 : <a class="el" href="classPt_1_1System_1_1Clock.html#a60de64d75454385b23995437f1d72669">Clock</a>
 , <a class="el" href="classPt_1_1System_1_1Process.html#a60de64d75454385b23995437f1d72669">Process</a>
 , <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669">Thread</a>
-, <a class="el" href="classPt_1_1System_1_1Timer.html#a84dfa917d34f43228ab9472a2a5d0455">Timer</a>
+, <a class="el" href="classPt_1_1System_1_1Timer.html#ae140707e36291fc9732711b6a6ec6637">Timer</a>
 </li>
 <li>StartArray()
 : <a class="el" href="classPt_1_1Json_1_1StartArray.html#a0218fa1009e993c381751504781868d4">StartArray</a>
@@ -769,11 +829,11 @@
 : <a class="el" href="classPt_1_1System_1_1Clock.html#a03b06381d280ecbf6cf9712ba85cd957">Clock</a>
 , <a class="el" href="classPt_1_1System_1_1Timer.html#a8c528baf37154d347366083f0f816846">Timer</a>
 </li>
-<li>stopBits()
-: <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a47d4ff7a4707d5850cd8be6841153278">SerialDevice</a>
-</li>
 <li>StopBits
 : <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a2e4c31ec0a94db405865b7c241717fbe">SerialDevice</a>
+</li>
+<li>stopBits()
+: <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a47d4ff7a4707d5850cd8be6841153278">SerialDevice</a>
 </li>
 <li>str()
 : <a class="el" href="classPt_1_1RegexSMatch.html#a49fcd5cf828f06dfe0aa8abdcd440952">RegexSMatch</a>
@@ -788,6 +848,12 @@
 : <a class="el" href="classPt_1_1BasicTextIStream.html#a33ef99cb236aa83646a4dcf873e6c9c0">BasicTextIStream&lt; CharT, ByteT &gt;</a>
 , <a class="el" href="classPt_1_1BasicTextOStream.html#a0d97425d4e2693c81d6f3c1ea44a1cfb">BasicTextOStream&lt; CharT, ByteT &gt;</a>
 , <a class="el" href="classPt_1_1BasicTextStream.html#afd04badbaa8637f4b19694435914e18c">BasicTextStream&lt; CharT, ByteT &gt;</a>
+</li>
+<li>Stretch
+: <a class="el" href="classPt_1_1Gfx_1_1Font.html#ab37b6a07f628df1a004786fc6998bdff">Font</a>
+</li>
+<li>stretch()
+: <a class="el" href="classPt_1_1Gfx_1_1Font.html#af74d4474d3a1dd60582dd38554579ff1">Font</a>
 </li>
 <li>strikeoutPos()
 : <a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html#abda0777ed3ac1691c7041a9bc3e2b9b6">FontMetrics</a>
@@ -810,6 +876,9 @@
 <li>Style
 : <a class="el" href="classPt_1_1Gfx_1_1Pen.html#addb2fa415e015ee482fa2cd9eba96af7">Pen</a>
 </li>
+<li>styleName()
+: <a class="el" href="classPt_1_1Gfx_1_1Font.html#ab056a76458a1e317c77e153978402a43">Font</a>
+</li>
 <li>subject()
 : <a class="el" href="classPt_1_1Ssl_1_1Certificate.html#a828b19a7f783474c26f7535bbe652c5d">Certificate</a>
 </li>
@@ -824,13 +893,13 @@
 </li>
 <li>swap()
 : <a class="el" href="classPt_1_1Any.html#af7ac9944249a8e88b4d9f35b3d7ddade">Any</a>
-, <a class="el" href="classPt_1_1String.html#a01f7753cd3adcd74d05dc9fe6a42ae59">String</a>
+, <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51">String</a>
 </li>
 <li>sym()
 : <a class="el" href="classPt_1_1System_1_1Symbol.html#a81a6471e3c174037a1cab289405ba861">Symbol</a>
 </li>
 <li>Symbol()
-: <a class="el" href="classPt_1_1System_1_1Symbol.html#aa8a3d981cc6f00d7a923d4936cae610d">Symbol</a>
+: <a class="el" href="classPt_1_1System_1_1Symbol.html#afaf9653be94bfb44073cfbd021b7da41">Symbol</a>
 </li>
 <li>symbol()
 : <a class="el" href="classPt_1_1System_1_1SymbolNotFound.html#a51305a642d50f452351fd1651f1fcef3">SymbolNotFound</a>

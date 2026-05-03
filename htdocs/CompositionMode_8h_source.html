@@ -123,42 +123,49 @@
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>Gfx {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span>CompositionMode</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">enum</span> Mode</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            SourceCopy = 0, </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            SourceOver = 1  </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        };</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        CompositionMode(Mode m = SourceCopy)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        : _mode(m)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        CompositionMode&amp; operator=(Mode m)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            _mode = m;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">operator</span> <a class="code" href="group__BasicTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> _mode;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        Mode _mode;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html">CompositionMode</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911">   51</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911aad6cc46708aa1be116319b87837f129f">   55</a></span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911aad6cc46708aa1be116319b87837f129f">SourceCopy</a> = 0,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911a27b37c23c11b7c8079b31811373818a2">SourceOver</a> = 1</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911a27b37c23c11b7c8079b31811373818a2">   60</a></span>&#160;        };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html#a6bb726642533a304ff96cea004e3432e">   64</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a6bb726642533a304ff96cea004e3432e">CompositionMode</a>(<a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> m = <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911aad6cc46708aa1be116319b87837f129f">SourceCopy</a>)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        : _mode(m)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html#ac47ceec276fe8932559ce538cc5c91d3">   70</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html">CompositionMode</a>&amp; <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#ac47ceec276fe8932559ce538cc5c91d3">operator=</a>(<a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> m)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            _mode = m;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1CompositionMode.html#a0c3248d2f634b6c404e30d18578ccbf0">   78</a></span>&#160;        <span class="keyword">operator</span> <a class="code" href="group__BasicTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> _mode;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> _mode;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Callable.h:2</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1CompositionMode_html_a46c8a310cf4c094f8c80e1cb8dc1f911aad6cc46708aa1be116319b87837f129f"><div class="ttname"><a href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911aad6cc46708aa1be116319b87837f129f">Pt::Gfx::CompositionMode::SourceCopy</a></div><div class="ttdeci">@ SourceCopy</div><div class="ttdoc">Copies source pixels without blending.</div><div class="ttdef"><b>Definition:</b> CompositionMode.h:55</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1CompositionMode_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1CompositionMode.html">Pt::Gfx::CompositionMode</a></div><div class="ttdoc">Blend mode used for drawing operations.</div><div class="ttdef"><b>Definition:</b> CompositionMode.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1CompositionMode_html_ac47ceec276fe8932559ce538cc5c91d3"><div class="ttname"><a href="classPt_1_1Gfx_1_1CompositionMode.html#ac47ceec276fe8932559ce538cc5c91d3">Pt::Gfx::CompositionMode::operator=</a></div><div class="ttdeci">CompositionMode &amp; operator=(Mode m)</div><div class="ttdoc">Assigns a new composition operator.</div><div class="ttdef"><b>Definition:</b> CompositionMode.h:70</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1CompositionMode_html_a6bb726642533a304ff96cea004e3432e"><div class="ttname"><a href="classPt_1_1Gfx_1_1CompositionMode.html#a6bb726642533a304ff96cea004e3432e">Pt::Gfx::CompositionMode::CompositionMode</a></div><div class="ttdeci">CompositionMode(Mode m=SourceCopy)</div><div class="ttdoc">Constructs a composition mode.</div><div class="ttdef"><b>Definition:</b> CompositionMode.h:64</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1CompositionMode_html_a46c8a310cf4c094f8c80e1cb8dc1f911a27b37c23c11b7c8079b31811373818a2"><div class="ttname"><a href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911a27b37c23c11b7c8079b31811373818a2">Pt::Gfx::CompositionMode::SourceOver</a></div><div class="ttdeci">@ SourceOver</div><div class="ttdoc">Blends source pixels over the destination using source alpha.</div><div class="ttdef"><b>Definition:</b> CompositionMode.h:59</div></div>
 <div class="ttc" id="agroup__BasicTypes_html_ga435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="group__BasicTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a></div><div class="ttdeci">uint_type uint32_t</div><div class="ttdoc">Unsigned 32-bit integer type.</div><div class="ttdef"><b>Definition:</b> Types.h:42</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1CompositionMode_html_a46c8a310cf4c094f8c80e1cb8dc1f911"><div class="ttname"><a href="classPt_1_1Gfx_1_1CompositionMode.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Pt::Gfx::CompositionMode::Mode</a></div><div class="ttdeci">Mode</div><div class="ttdoc">Supported composition operators.</div><div class="ttdef"><b>Definition:</b> CompositionMode.h:52</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

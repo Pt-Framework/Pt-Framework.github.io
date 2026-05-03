@@ -124,162 +124,179 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>Gfx {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator ==(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator &lt;(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>(<span class="keywordtype">double</span> scaleFactor = 1.0)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        : _scaleFactor(scaleFactor)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        { }</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator ==(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator &lt;(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp;);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">double</span> scaleFactor()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> _scaleFactor;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> setScaleFactor(<span class="keywordtype">double</span> scaleFactor)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            _scaleFactor = scaleFactor;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">double</span> toPhysical(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> n * scaleFactor();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> toPhysical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> p * scaleFactor();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#aa60e182ed4a40883d43591248ffc5a49">   56</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa60e182ed4a40883d43591248ffc5a49">Scaling</a>(<span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a> = 1.0)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        : _scaleFactor(<a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        { }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">   62</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> _scaleFactor;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a47fa840828180a2252b7fb80e07b1a15">   69</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a47fa840828180a2252b7fb80e07b1a15">setScaleFactor</a>(<span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            _scaleFactor = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> toPhysical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> s * scaleFactor();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> toPhysical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; r)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> p = toPhysical( r.topLeft() );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> s = toPhysical( r.size() );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>(p, s);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">double</span> toLogical(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> n / scaleFactor();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> toLogical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">   77</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> n * <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a3c5edbc66cc461b6e7f10b393c8a0039">   84</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a3c5edbc66cc461b6e7f10b393c8a0039">toPhysical</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> p * <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a5502b57114c84a57ca09dbc01851ed88">   91</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a5502b57114c84a57ca09dbc01851ed88">toPhysical</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; s)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> p / scaleFactor();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> s * <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> toLogical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">return</span> s / scaleFactor();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> toLogical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; r)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> p = toLogical( r.topLeft() );</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> s = toLogical( r.size() );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>(p, s);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">double</span> align(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">// better name: alignGrid()</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">double</span> p = toPhysical(n);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            p = <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(p);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> toLogical(p);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">double</span> alignPixel(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordtype">double</span> p = toPhysical(n);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            p = <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(p + 0.5) - 0.5;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> toLogical(p);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">double</span> alignContour(<span class="keywordtype">size_t</span> n)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="comment">// keep contour size when downscaling</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span> (_scaleFactor &lt; 1.0)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">return</span> toLogical( <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n) );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordtype">double</span> p = toPhysical( <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n) );</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordtype">size_t</span> s = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(p);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> toLogical( <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(s) );</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> align(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> pos = toPhysical(p);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            pos.setX(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.x()));</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            pos.setY(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.y()));</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">return</span> toLogical(pos);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> align(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> size = toPhysical(s);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            size.setWidth(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.width()));</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            size.setHeight(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.height()));</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">return</span> toLogical(size);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> align(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> pos = toPhysical(rect.topLeft());</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            pos.setX(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.x()));</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            pos.setY(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.y()));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> size = toPhysical(rect.size());</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            size.setWidth(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.width()));</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            size.setHeight(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.height()));</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> toLogical(<a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>(pos, size));</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">double</span> _scaleFactor;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a0df7b79dc56707b6b5e103b571790434">   98</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0df7b79dc56707b6b5e103b571790434">toPhysical</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; r)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> p = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>( r.topLeft() );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> s = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>( r.size() );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>(p, s);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">  107</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> n / <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a868f1f4b35a8aa28a5e3aad5fbfbdf60">  114</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a868f1f4b35a8aa28a5e3aad5fbfbdf60">toLogical</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span> p / <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#af7893abbf8ec54b87d00c02a04349f05">  121</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#af7893abbf8ec54b87d00c02a04349f05">toLogical</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> s / <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">scaleFactor</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#ae3774f400185ba92ebbcc716950406b9">  128</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#ae3774f400185ba92ebbcc716950406b9">toLogical</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; r)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> p = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>( r.topLeft() );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> s = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>( r.size() );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>(p, s);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#ae4150f620c978f86956290ead30b2d85">  138</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#ae4150f620c978f86956290ead30b2d85">align</a>(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="comment">// better name: alignGrid()</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordtype">double</span> p = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(n);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            p = <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(p);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>(p);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a1655dd06dae0b39ecba9ef02fc326243">  149</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a1655dd06dae0b39ecba9ef02fc326243">alignPixel</a>(<span class="keywordtype">double</span> n)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordtype">double</span> p = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(n);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            p = <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(p + 0.5) - 0.5;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>(p);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a8d5bf0568f1ad9ace2f9599cc24670a6">  158</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a8d5bf0568f1ad9ace2f9599cc24670a6">alignContour</a>(<span class="keywordtype">size_t</span> n)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="comment">// keep contour size when downscaling</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">if</span> (_scaleFactor &lt; 1.0)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>( <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n) );</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordtype">double</span> p = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>( <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n) );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordtype">size_t</span> s = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(p);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>( <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(s) );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; b)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> a._scaleFactor == b._scaleFactor;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> Scaling&amp; a, <span class="keyword">const</span> Scaling&amp; b)</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">return</span> ! (a == b);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> Scaling&amp; a, <span class="keyword">const</span> Scaling&amp; b)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">return</span> a._scaleFactor &lt; b._scaleFactor;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a87ee8b5a332b7899e11bc63ff31d2373">  171</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a87ee8b5a332b7899e11bc63ff31d2373">align</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> pos = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(p);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            pos.setX(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.x()));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            pos.setY(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.y()));</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>(pos);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a803c415dd97b2348c4b9da2f5ecf396f">  181</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a803c415dd97b2348c4b9da2f5ecf396f">align</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> size = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(s);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            size.setWidth(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.width()));</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            size.setHeight(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.height()));</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>(size);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#ab5db2314bbd300ddbebd24de542095c7">  191</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#ab5db2314bbd300ddbebd24de542095c7">align</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> pos = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(rect.topLeft());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            pos.setX(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.x()));</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            pos.setY(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(pos.y()));</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> size = <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">toPhysical</a>(rect.size());</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            size.setWidth(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.width()));</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            size.setHeight(<a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(size.height()));</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">toLogical</a>(<a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>(pos, size));</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordtype">double</span> _scaleFactor;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#ab5bc856036437981537b32c5a799f91b">  212</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; b)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> a._scaleFactor == b._scaleFactor;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a14fb26835843d68067a52344eee7f5d9">  221</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; b)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> ! (a == b);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1Scaling.html#a68757a602b586b16e632a51d8e61395f">  230</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a>&amp; b)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> a._scaleFactor &lt; b._scaleFactor;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a803c415dd97b2348c4b9da2f5ecf396f"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a803c415dd97b2348c4b9da2f5ecf396f">Pt::Gfx::Scaling::align</a></div><div class="ttdeci">Gfx::SizeF align(const Gfx::SizeF &amp;s) const</div><div class="ttdoc">Aligns a size to physical pixels.</div><div class="ttdef"><b>Definition:</b> Scaling.h:181</div></div>
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Callable.h:2</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html">Pt::Gfx::Scaling</a></div><div class="ttdoc">Surface scaling.</div><div class="ttdef"><b>Definition:</b> Scaling.h:44</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a8d5bf0568f1ad9ace2f9599cc24670a6"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a8d5bf0568f1ad9ace2f9599cc24670a6">Pt::Gfx::Scaling::alignContour</a></div><div class="ttdeci">double alignContour(size_t n) const</div><div class="ttdoc">Aligns a contour width while preserving visible thickness.</div><div class="ttdef"><b>Definition:</b> Scaling.h:158</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a0df7b79dc56707b6b5e103b571790434"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a0df7b79dc56707b6b5e103b571790434">Pt::Gfx::Scaling::toPhysical</a></div><div class="ttdeci">Gfx::RectF toPhysical(const Gfx::RectF &amp;r) const</div><div class="ttdoc">Converts a rectangle to physical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:98</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a80911303cedbfba0aa20e9d811edf445"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a80911303cedbfba0aa20e9d811edf445">Pt::Gfx::Scaling::scaleFactor</a></div><div class="ttdeci">double scaleFactor() const</div><div class="ttdoc">Returns the scale factor.</div><div class="ttdef"><b>Definition:</b> Scaling.h:62</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html">Pt::Gfx::Scaling</a></div><div class="ttdoc">Logical-to-physical unit conversion.</div><div class="ttdef"><b>Definition:</b> Scaling.h:49</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:45</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Point with floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:45</div></div>
 <div class="ttc" id="anamespacePt_html_ac19ed701e0d38ec08f5284c07932ae34"><div class="ttname"><a href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">Pt::lround</a></div><div class="ttdeci">Pt::int32_t lround(float x)</div><div class="ttdoc">Rounds to nearest integer value.</div><div class="ttdef"><b>Definition:</b> Math.h:289</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a87ee8b5a332b7899e11bc63ff31d2373"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a87ee8b5a332b7899e11bc63ff31d2373">Pt::Gfx::Scaling::align</a></div><div class="ttdeci">Gfx::PointF align(const Gfx::PointF &amp;p) const</div><div class="ttdoc">Aligns a point to physical pixels.</div><div class="ttdef"><b>Definition:</b> Scaling.h:171</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_ae4150f620c978f86956290ead30b2d85"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#ae4150f620c978f86956290ead30b2d85">Pt::Gfx::Scaling::align</a></div><div class="ttdeci">double align(double n) const</div><div class="ttdoc">Aligns a scalar value to the nearest physical pixel.</div><div class="ttdef"><b>Definition:</b> Scaling.h:138</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a47fa840828180a2252b7fb80e07b1a15"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a47fa840828180a2252b7fb80e07b1a15">Pt::Gfx::Scaling::setScaleFactor</a></div><div class="ttdeci">void setScaleFactor(double scaleFactor)</div><div class="ttdoc">Sets the scale factor.</div><div class="ttdef"><b>Definition:</b> Scaling.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_aa9094b73959672d18b8865c667f909e9"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#aa9094b73959672d18b8865c667f909e9">Pt::Gfx::Scaling::toPhysical</a></div><div class="ttdeci">double toPhysical(double n) const</div><div class="ttdoc">Converts a scalar value to physical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:77</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a868f1f4b35a8aa28a5e3aad5fbfbdf60"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a868f1f4b35a8aa28a5e3aad5fbfbdf60">Pt::Gfx::Scaling::toLogical</a></div><div class="ttdeci">Gfx::PointF toLogical(const Gfx::PointF &amp;p) const</div><div class="ttdoc">Converts a point to logical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:114</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_aa60e182ed4a40883d43591248ffc5a49"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#aa60e182ed4a40883d43591248ffc5a49">Pt::Gfx::Scaling::Scaling</a></div><div class="ttdeci">Scaling(double scaleFactor=1.0)</div><div class="ttdoc">Constructs a scaling with the given factor.</div><div class="ttdef"><b>Definition:</b> Scaling.h:56</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_af7893abbf8ec54b87d00c02a04349f05"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#af7893abbf8ec54b87d00c02a04349f05">Pt::Gfx::Scaling::toLogical</a></div><div class="ttdeci">Gfx::SizeF toLogical(const Gfx::SizeF &amp;s) const</div><div class="ttdoc">Converts a size to logical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:121</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a0b4ee58e413e8ffca89466072bf549b6"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a0b4ee58e413e8ffca89466072bf549b6">Pt::Gfx::Scaling::toLogical</a></div><div class="ttdeci">double toLogical(double n) const</div><div class="ttdoc">Converts a scalar value to logical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:107</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_ae3774f400185ba92ebbcc716950406b9"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#ae3774f400185ba92ebbcc716950406b9">Pt::Gfx::Scaling::toLogical</a></div><div class="ttdeci">Gfx::RectF toLogical(const Gfx::RectF &amp;r) const</div><div class="ttdoc">Converts a rectangle to logical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:128</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a3c5edbc66cc461b6e7f10b393c8a0039"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a3c5edbc66cc461b6e7f10b393c8a0039">Pt::Gfx::Scaling::toPhysical</a></div><div class="ttdeci">Gfx::PointF toPhysical(const Gfx::PointF &amp;p) const</div><div class="ttdoc">Converts a point to physical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:84</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:45</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_ab5db2314bbd300ddbebd24de542095c7"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#ab5db2314bbd300ddbebd24de542095c7">Pt::Gfx::Scaling::align</a></div><div class="ttdeci">Gfx::RectF align(const Gfx::RectF &amp;rect) const</div><div class="ttdoc">Aligns a rectangle to physical pixels.</div><div class="ttdef"><b>Definition:</b> Scaling.h:191</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a1655dd06dae0b39ecba9ef02fc326243"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a1655dd06dae0b39ecba9ef02fc326243">Pt::Gfx::Scaling::alignPixel</a></div><div class="ttdeci">double alignPixel(double n) const</div><div class="ttdoc">Aligns a scalar value to a pixel center.</div><div class="ttdef"><b>Definition:</b> Scaling.h:149</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Scaling_html_a5502b57114c84a57ca09dbc01851ed88"><div class="ttname"><a href="classPt_1_1Gfx_1_1Scaling.html#a5502b57114c84a57ca09dbc01851ed88">Pt::Gfx::Scaling::toPhysical</a></div><div class="ttdeci">Gfx::SizeF toPhysical(const Gfx::SizeF &amp;s) const</div><div class="ttdoc">Converts a size to physical units.</div><div class="ttdef"><b>Definition:</b> Scaling.h:91</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

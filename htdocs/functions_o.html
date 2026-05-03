@@ -90,6 +90,12 @@
 , <a class="el" href="classPt_1_1BasicTextStream.html#a0546ced26c664d6b393412e51208ee33">BasicTextStream&lt; CharT, ByteT &gt;</a>
 , <a class="el" href="classPt_1_1StringBuffer.html#a0546ced26c664d6b393412e51208ee33">StringBuffer</a>
 </li>
+<li>offsetX()
+: <a class="el" href="classPt_1_1Gfx_1_1Brush.html#ad6036c7875ec42ee504ecf98bad82c03">Brush</a>
+</li>
+<li>offsetY()
+: <a class="el" href="classPt_1_1Gfx_1_1Brush.html#a1980e71fc7d2886b5eb6562185927d77">Brush</a>
+</li>
 <li>OK
 : <a class="el" href="classPt_1_1Http_1_1Reply.html#ae98a46f4ea1a43ca48acaf15d2eb7113a2bc49ec37d6a5715dd23e85f1ff5bb59">Reply</a>
 </li>
@@ -632,6 +638,9 @@
 <li>operator const void *()
 : <a class="el" href="classPt_1_1System_1_1Library.html#a3ad9b0d9419e9d3cf8ba1bc409b207af">Library</a>
 </li>
+<li>operator Pt::uint32_t()
+: <a class="el" href="classPt_1_1Gfx_1_1CompositionMode.html#a0c3248d2f634b6c404e30d18578ccbf0">CompositionMode</a>
+</li>
 <li>operator uint32_t()
 : <a class="el" href="structPt_1_1Char.html#aa5b4a78975082f121bd1c84d1a20c34e">Char</a>
 </li>
@@ -653,6 +662,10 @@
 : <a class="el" href="classPt_1_1AutoPtr.html#a029ad275f7da4acf1af855a23922236a">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#afd179446ef2a78265104038e26b5174b">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a3887764124eb590ec7c7bd63263b5dcc">DateTime</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Font.html#abc1cf90c3fce9365a10d128914a3a545">Font</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a70dfea38469dce06fc90b0c93584dcfa">PathIterator</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a14fb26835843d68067a52344eee7f5d9">Scaling</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a951516a1d2fd97add3876d2593357728">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a9f0a2ff4590762fcf080eb0bc76e80bb">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#ac8a2dae148e4e3f8bcd4dae78145e059">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a3fab3c5dd427525c7a77a2ddc8c6d954">Document::Element</a>
@@ -661,7 +674,7 @@
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a3bc110f3fb313325cd475cc343587320">Settings::Entry</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#adaa85e621f6c353c8bafaec69bb501fc">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#aa0fda25b21fca117e9a802bea1a8f16b">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#aa22a02c5ba0a3dc097578a33799fd570">String</a>
+, <a class="el" href="classPt_1_1String.html#a13c3094153d55b90f19fc8819fa0173f">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#a3b6557beff44362dabf5d36ba5d3f7d1">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#a4b48fdd23b53bfdeae50d5722a2f1296">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#aa85838da392f4e4b53d15df6095ac712">Path</a>
@@ -683,6 +696,8 @@
 </li>
 <li>operator*()
 : <a class="el" href="classPt_1_1AutoPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">AutoPtr&lt; T, Destroy &gt;</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#ab90825cd285e28cbdb2c6323747fc32a">PathIterator</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2bae581b78b4b75255ec1384c494631c">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a9598d34b024cd6dfe9ef65656439af81">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#ab8668a0afd4e98308473f5d8a96dbd8f">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a25602f5d8391df8b352dfe6f3dba3922">Document::Element</a>
@@ -697,16 +712,20 @@
 , <a class="el" href="classPt_1_1Utf8Iterator.html#af1a398c9abf6c2f9ac8a0693fefbe66f">Utf8Iterator</a>
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#a7e33bea6ccde6792db9b3d8522b639a4">InputIterator</a>
 </li>
+<li>operator*=()
+: <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a80ca0285068d389db0eea506e2151956">Transform</a>
+</li>
 <li>operator+()
 : <a class="el" href="classPt_1_1Date.html#a8e148dce315438d02f0ea92a687fa5d0">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a289a53eb21b6e9b31ee9f7d7c792d35a">DateTime</a>
-, <a class="el" href="classPt_1_1SourceInfo.html#a3802216ce44990ddd945a5add5a5d30c">SourceInfo</a>
+, <a class="el" href="classPt_1_1SourceInfo.html#a4959aef9dae40704ad9970866ee07453">SourceInfo</a>
 , <a class="el" href="classPt_1_1String.html#a7ffff62a361379fc3f6cfb1524a5b88f">String</a>
 , <a class="el" href="classPt_1_1Time.html#a9bf26b37f981815c6faf1fb88188fcb2">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ab827785c810b8b244d78f707674a6c09">Timespan</a>
 </li>
 <li>operator++()
 : <a class="el" href="classPt_1_1Date.html#ae6a991aa97305857a8f1f3ce86e56a8e">Date</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a5da1c1ca09b4089e9f8250b2ee8abefe">PathIterator</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a858a8f58b67c9fc79d628f5ebef436b3">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#a6cc9e26cb15598521f807c872456d60c">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#ae03db7e3bab6887d136b9df289793e61">Document::Element</a>
@@ -726,7 +745,7 @@
 , <a class="el" href="classPt_1_1Delegate.html#a3c377f2e4b2d00cf5697a5ec603334be">Delegate&lt; R, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Signal.html#a43246b1c783f6fa258b6b05a77a0e1dd">Signal&lt; ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1String.html#a7b02033067050cf3e13fe17696fa3c13">String</a>
-, <a class="el" href="classPt_1_1System_1_1Path.html#a551477cc4faee150c67bfd4369ac8c37">Path</a>
+, <a class="el" href="classPt_1_1System_1_1Path.html#a25264554aa6a7c6ebe796e0b957b8f08">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a35690e01f94ba7fcf0302860cfa7217a">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ad08a656c69fe27b00a6154439444bd81">Timespan</a>
 </li>
@@ -748,6 +767,7 @@
 </li>
 <li>operator-&gt;()
 : <a class="el" href="classPt_1_1AutoPtr.html#a5c1735ebb61cb9b40f6d0ed30be8a288">AutoPtr&lt; T, Destroy &gt;</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a687b5df99081dde600d946302eaa4d9a">PathIterator</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#ad08f7477c747a72b70486d9033f1a9eb">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#a50006173fa1e049495ffef73aea37cde">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a47b03715f8d0d9e1c7ea82b1ea40b51f">Document::Element</a>
@@ -761,16 +781,19 @@
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#abbcb321fe8fcb32d38edf18d5e049862">InputIterator</a>
 </li>
 <li>operator/()
-: <a class="el" href="classPt_1_1System_1_1Path.html#af2f9868ecbef1b906d553d86cb4a11dd">Path</a>
+: <a class="el" href="classPt_1_1System_1_1Path.html#a7721c90bb9da4aef0a482dd06ebd53e3">Path</a>
 </li>
 <li>operator/=()
-: <a class="el" href="classPt_1_1System_1_1Path.html#a72d0ab6904981ddb7eab45d04a43f66a">Path</a>
+: <a class="el" href="classPt_1_1System_1_1Path.html#ab8fc246d149e3c9ac34094f72bfd27d1">Path</a>
 </li>
 <li>operator&lt;()
 : <a class="el" href="classPt_1_1AutoPtr.html#a0b0ce333ca0dfafcceb3a05f9f29d811">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a900297f0a1d5018e0c30d2e8fa6a99c6">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#aaec41bb6ed721384b089c34fd87e0085">DateTime</a>
-, <a class="el" href="classPt_1_1SmartPtr.html#ac3a00e770145fe57ece2ba4763b0bef3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Font.html#a615d88be94e2b0f9c24a6981e2927f8e">Font</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a934dfb3d1c9065c4abb878991a01cdc0">PathIterator</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a68757a602b586b16e632a51d8e61395f">Scaling</a>
+, <a class="el" href="classPt_1_1SmartPtr.html#a8c4c53901ac7e8392dfdba49553ecd9b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1String.html#a28e768169cb2e0f9d8384f7d84275ad9">String</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#abc4f1649f9430830c2ebf74b2294327c">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#aff5f32a3ecb7cc733ed9c59779c1c55e">Path</a>
@@ -782,31 +805,33 @@
 <li>operator&lt;&lt;()
 : <a class="el" href="classPt_1_1Arg.html#a4bf8e8df7e0ce9b07dd95a06b2a5480d">Arg&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1String.html#a54e7c59a4c450a81fe60ee7753d91444">String</a>
-, <a class="el" href="classPt_1_1System_1_1LogMessage.html#a9f029c2a40b5465e01e90bf673481b88">LogMessage</a>
-, <a class="el" href="classPt_1_1System_1_1LogRecord.html#ac50c0767605e11b459c6845c1da55cf0">LogRecord</a>
+, <a class="el" href="classPt_1_1System_1_1LogMessage.html#a7ace7e3495f61900e0af56b4f92aabb7">LogMessage</a>
+, <a class="el" href="classPt_1_1System_1_1LogRecord.html#a0c0f7ecd3612e4f474d3d90d6e95f012">LogRecord</a>
 </li>
 <li>operator&lt;&lt;=()
 : <a class="el" href="classPt_1_1Date.html#abb486a3a4ba29e5e1425f37dad28ff79">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#ad6ec544ced0e04e69a7427c6404bb0b7">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a743cb14ef7834a696f250cbbe5fcbe88">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#aa7665263679aeb8fb019cf60cce8116c">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a06b41188437d96b459699fcbd69ba6b7">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#ab220dae46e89b7286c6dfd93b1a22aa8">Time</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="classPt_1_1Date.html#a54e8d7e0bf2a62a64edbf0163b916964">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#abf9627c22b617dd531e214056bc67f92">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#a6462a0589a4a2326dbc6beeca63f6401">String</a>
+, <a class="el" href="classPt_1_1String.html#ae11048dfde3ca389fb8fd8f155419c61">String</a>
 , <a class="el" href="classPt_1_1Time.html#a6a0cd3c0e9278655b3751210ee91ab22">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#a22b73b37156a4f6beed7dacbb4e80964">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#ae6865e5a731ebd557b801c5b10948edb">TypeInfo</a>
 </li>
 <li>operator=()
-: <a class="el" href="classPt_1_1Any.html#ab4d44217ed9be67418872968ca366e94">Any</a>
+: <a class="el" href="classPt_1_1Any.html#aff84600274cc918767b3fe358172083a">Any</a>
 , <a class="el" href="classPt_1_1AutoPtr.html#a7e432e9cab07c3bd710fd8da4c71aee1">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Connectable.html#abcf9a8b573a667282e80d5182f7f0c46">Connectable</a>
 , <a class="el" href="classPt_1_1Connection.html#a860bddd3a410500f868051e4d97af3e7">Connection</a>
 , <a class="el" href="classPt_1_1Date.html#a8a58ec4c1a43410f8b7fb190daa75c1e">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#acfea4e1a851c970ebd7dbfa4c66c8bb5">DateTime</a>
+, <a class="el" href="classPt_1_1Gfx_1_1CompositionMode.html#ac47ceec276fe8932559ce538cc5c91d3">CompositionMode</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Path.html#a90267ac729a7254004ba17b949abb8e5">Path</a>
 , <a class="el" href="classPt_1_1Json_1_1InputIterator.html#a75426e8cb2f5ef29ad0a59df52104455">InputIterator</a>
 , <a class="el" href="classPt_1_1Net_1_1Endpoint.html#a1578a73090f0759b80f23ce9c78abd23">Endpoint</a>
 , <a class="el" href="classPt_1_1Net_1_1TcpServerOptions.html#a0fa9117eb0b5109f8a7b25b295954997">TcpServerOptions</a>
@@ -816,10 +841,10 @@
 , <a class="el" href="classPt_1_1RegexSMatch.html#a5f597404a86f77f4365f61c8d495fa05">RegexSMatch</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a9c76d25b309e5012ca135e6768ef25c3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a098521b7d40674cefdc71c327bf95f61">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#af5ae22e3977258b21be07d312bc53f37">String</a>
+, <a class="el" href="classPt_1_1String.html#a633e96a20536ed4f71ef953c872da842">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#ad4fbf13550fdca8eae388e8f40daa391">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a1e476f19923f26dd9fe90e8ce3e8eaba">Library</a>
-, <a class="el" href="classPt_1_1System_1_1Path.html#aabdad23ab07a625023972a679a40f4e4">Path</a>
+, <a class="el" href="classPt_1_1System_1_1Path.html#a94de7a6556038eaba998a927e959ed60">Path</a>
 , <a class="el" href="classPt_1_1Time.html#acb9b42de1a5b9b7dbb7b013dfc372ada">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#aec03ed9fcb9723e8e81506cadbd74c85">Timespan</a>
 , <a class="el" href="classPt_1_1Utf8Appender.html#a9697fcb43030fa1478e9038762709774">Utf8Appender</a>
@@ -827,11 +852,15 @@
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#a75426e8cb2f5ef29ad0a59df52104455">InputIterator</a>
 </li>
 <li>operator==()
-: <a class="el" href="classPt_1_1AutoPtr.html#aadf5d4a0b6e47fe277b62d40ac36cafa">AutoPtr&lt; T, Destroy &gt;</a>
+: <a class="el" href="classPt_1_1AutoPtr.html#a8362c744dadb40fbed1027cdfeb7f632">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1ConstMethod.html#a50ef12195e3994e0762e375081097ed0">ConstMethod&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a9cfaaa2dd5867578b32c02fd8bc16339">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a15ab62ed982a1d04015c4e94597e225e">DateTime</a>
 , <a class="el" href="classPt_1_1Function.html#a4a66cc4485a7cca3b6ae74b8ab9c680e">Function&lt; R, ARGUMENTS &gt;</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Font.html#a5601005540bac55803f58ed7d1b802cd">Font</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#aaae28f6f2a88c6d472f7837099105dba">PathIterator</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#ab5bc856036437981537b32c5a799f91b">Scaling</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#af7822f18c096ce6715da18ae21aa09c7">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a090ced061a6552f79fa0b06c77c011b5">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#ad4db9b515a478e5d19643af2258a5f69">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a32c47c1c4c852e1b21b5fabc7ba0ceb1">Document::Element</a>
@@ -839,9 +868,9 @@
 , <a class="el" href="classPt_1_1Method.html#a53aeddfc0f514343efcab651ac7f9912">Method&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#a2812064fabad1a5209c433e18a60be55">Settings::ConstEntry</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a5dc3af8dc225a06f0159b9d15693ca68">Settings::Entry</a>
-, <a class="el" href="classPt_1_1SmartPtr.html#a4b50a58375f69e6824a9cf89f7978ebc">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
+, <a class="el" href="classPt_1_1SmartPtr.html#acee5bd0aef8a58e85792205bc6225b83">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a19e4c4bfe35c5d933d7b25f7bfb243eb">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#ab5de51f3e75febd76327894edb3d253d">String</a>
+, <a class="el" href="classPt_1_1String.html#afe45c931830c0a43b42dbeb47f81f5db">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#a782fd50847dd704b91ddae9f0132a0c7">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#ae38434c56f5619be818100c28957c5de">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#a30c93fb5000eed1d3da891f5a7dcb519">Path</a>
@@ -864,7 +893,7 @@
 <li>operator&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a97555d84e3c89d8d27146e61a875a7f6">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a5a1cc8417dca4698082acedf1edb07cf">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#a5c251b173d0def0932547b5af16eec1d">String</a>
+, <a class="el" href="classPt_1_1String.html#a3ec3bc4940d1de076f23d467de60710d">String</a>
 , <a class="el" href="classPt_1_1Time.html#a4c81c1c1150b34a04ec6951f24e830ae">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#afa53e8488c0c139e4864d7040bc1700b">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#afb1695e93b8783aa5af661cb7f44ee7c">TypeInfo</a>
@@ -872,26 +901,30 @@
 <li>operator&gt;&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a808244de45ec52b6fa77e3d8a17854b5">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#afc1517c44d2c4427905054c505be94b5">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a6ec63d08603911fe3059f06ac5807509">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a10dd0dd4664e899afab72909c4ea5660">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a5086a18d7e6423ff5647f7defab8ea6b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#aefa2b547256e14ed0cb125c60b88ccd1">Time</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#aaad18846f5f2e539f58fb51bdde5d139">Document::ConstElement</a>
+: <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html#aeef1b0103701898b7d3dd1b58b06ca4b">ColorStops</a>
+, <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#aaad18846f5f2e539f58fb51bdde5d139">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a38ddf700deb69da473dfda2705d7a027">Document::Element</a>
-, <a class="el" href="classPt_1_1Json_1_1Document.html#a666b0f026e9d3fbe3d574bd7b747a48d">Document</a>
+, <a class="el" href="classPt_1_1Json_1_1Document.html#aaad18846f5f2e539f58fb51bdde5d139">Document</a>
 , <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#afa69993ac24702fbc591d47cfec3cb3e">Settings::ConstEntry</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a0f33e887f8ae68ab0d8ce39d07a3b7fe">Settings::Entry</a>
-, <a class="el" href="classPt_1_1Settings.html#adab603e669e28108db4ef6cf5386f8ec">Settings</a>
-, <a class="el" href="classPt_1_1String.html#ab91aea6636bccee368f5d405f9940aaf">String</a>
+, <a class="el" href="classPt_1_1Settings.html#afa69993ac24702fbc591d47cfec3cb3e">Settings</a>
+, <a class="el" href="classPt_1_1String.html#ab2dcd7f3085e06f35ff2ba6f05f6a469">String</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a0f0624726fef324c78e32f87fd1dd4be">Library</a>
 </li>
+<li>origin()
+: <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a8bf64196b5980b3787c2b3bc1d25ea83">Canvas</a>
+</li>
 <li>OStream()
-: <a class="el" href="classPt_1_1System_1_1OStream.html#acf781b0015f15fa09b4a8e3b4ad19d38">OStream</a>
+: <a class="el" href="classPt_1_1System_1_1OStream.html#a852447bc0e5e3e1c469e4fa453870090">OStream</a>
 </li>
 <li>out()
 : <a class="el" href="classPt_1_1SaveInfo.html#a7833bee8ef27bf29a78d7b1b3553902c">SaveInfo</a>
-, <a class="el" href="classPt_1_1System_1_1Pipe.html#a1adb2b6d97e3db01e1ee4f13b14d480f">Pipe</a>
+, <a class="el" href="classPt_1_1System_1_1Pipe.html#a6f0c1f4665770de0f8c039f0664a53d9">Pipe</a>
 , <a class="el" href="classPt_1_1TextCodec.html#a9f16d2fa95465dcfe471de1132df3a53">TextCodec&lt; CharT, ByteT &gt;</a>
 </li>
 <li>out_avail()

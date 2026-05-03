@@ -82,21 +82,42 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Bitmap Class Reference</div>  </div>
+<div class="title">Bitmap Class Reference<div class="ingroups"><a class="el" href="group__Drawing.html">Graphics Drawing System</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Bitmap_8h_source.html">Pt/Gfx/Bitmap.h</a>&gt;</code></p>
 
-<p>Image drawing surface.  
-</p>
+<p>Off-screen drawing surface backed by an image.  
+ <a href="classPt_1_1Gfx_1_1Bitmap.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">PaintSurface</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af3ac0122871b379c617761af1332442e"><td class="memItemLeft" align="right" valign="top"><a id="af3ac0122871b379c617761af1332442e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#af3ac0122871b379c617761af1332442e">Bitmap</a> ()</td></tr>
+<tr class="memdesc:af3ac0122871b379c617761af1332442e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty bitmap. <br /></td></tr>
+<tr class="separator:af3ac0122871b379c617761af1332442e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d6b3dfac1c219baf417b7fc46caa00"><td class="memItemLeft" align="right" valign="top"><a id="a54d6b3dfac1c219baf417b7fc46caa00"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a54d6b3dfac1c219baf417b7fc46caa00">Bitmap</a> (const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a>, std::size_t stride=0)</td></tr>
+<tr class="memdesc:a54d6b3dfac1c219baf417b7fc46caa00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a bitmap with the given size and optional stride. <br /></td></tr>
+<tr class="separator:a54d6b3dfac1c219baf417b7fc46caa00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e77e4646c410978bf8a1cd7fd39a341"><td class="memItemLeft" align="right" valign="top"><a id="a8e77e4646c410978bf8a1cd7fd39a341"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a8e77e4646c410978bf8a1cd7fd39a341">~Bitmap</a> ()</td></tr>
+<tr class="memdesc:a8e77e4646c410978bf8a1cd7fd39a341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the bitmap. <br /></td></tr>
+<tr class="separator:a8e77e4646c410978bf8a1cd7fd39a341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c9248747f629aa21b1bf80d7cc2916"><td class="memItemLeft" align="right" valign="top"><a id="a04c9248747f629aa21b1bf80d7cc2916"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a04c9248747f629aa21b1bf80d7cc2916">drawBitmap</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::PointF</a> &amp;to, const <a class="el" href="classPt_1_1Gfx_1_1Bitmap.html">Bitmap</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ac2d903b8475cef29fa4e84d132c6d479">image</a>, const <a class="el" href="classPt_1_1Gfx_1_1Paint.html">Gfx::Paint</a> &amp;paint, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> *rect=0)</td></tr>
+<tr class="memdesc:a04c9248747f629aa21b1bf80d7cc2916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws another bitmap into this bitmap. <br /></td></tr>
+<tr class="separator:a04c9248747f629aa21b1bf80d7cc2916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top"><a id="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
+<tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if no image data is available. <br /></td></tr>
+<tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memItemLeft" align="right" valign="top"><a id="a6dfe1abe0d1eb3ddc1ca081de98b5342"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a6dfe1abe0d1eb3ddc1ca081de98b5342">finish</a> ()</td></tr>
 <tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finishes painting to the surface. <br /></td></tr>
@@ -107,24 +128,32 @@ const <a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">Gfx::ImageFormat</
 <tr class="separator:a9c2b28be331792e260c7d7836de328d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233b273485dc5fb1f169bd068358d08f"><td class="memItemLeft" align="right" valign="top"><a id="a233b273485dc5fb1f169bd068358d08f"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Canvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a233b273485dc5fb1f169bd068358d08f">getCanvas</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Canvas</a> *canvas)</td></tr>
-<tr class="memdesc:a233b273485dc5fb1f169bd068358d08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Paint context.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a233b273485dc5fb1f169bd068358d08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a canvas for backend drawing. <br /></td></tr>
 <tr class="separator:a233b273485dc5fb1f169bd068358d08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d903b8475cef29fa4e84d132c6d479"><td class="memItemLeft" align="right" valign="top"><a id="ac2d903b8475cef29fa4e84d132c6d479"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Gfx::Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ac2d903b8475cef29fa4e84d132c6d479">image</a> () const</td></tr>
+<tr class="memdesc:ac2d903b8475cef29fa4e84d132c6d479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying image. <br /></td></tr>
+<tr class="separator:ac2d903b8475cef29fa4e84d132c6d479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft" align="right" valign="top"><a id="ad20897c5c8bd47f5d4005989bead0e55"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
 <tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets to empty state. <br /></td></tr>
 <tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac6de6f31b1397264686afcc0e0b358"><td class="memItemLeft" align="right" valign="top"><a id="a1ac6de6f31b1397264686afcc0e0b358"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a1ac6de6f31b1397264686afcc0e0b358">reset</a> (const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Gfx::Image</a> &amp;image)</td></tr>
-<tr class="memdesc:a1ac6de6f31b1397264686afcc0e0b358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets to an image. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a1ac6de6f31b1397264686afcc0e0b358">reset</a> (const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Gfx::Image</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ac2d903b8475cef29fa4e84d132c6d479">image</a>)</td></tr>
+<tr class="memdesc:a1ac6de6f31b1397264686afcc0e0b358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the bitmap with an existing image. <br /></td></tr>
 <tr class="separator:a1ac6de6f31b1397264686afcc0e0b358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d1fc6e3bfc596d4fe23abfdb127eac2"><td class="memItemLeft" align="right" valign="top"><a id="a0d1fc6e3bfc596d4fe23abfdb127eac2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a0d1fc6e3bfc596d4fe23abfdb127eac2">reset</a> (const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;, std::size_t stride=0)</td></tr>
-<tr class="memdesc:a0d1fc6e3bfc596d4fe23abfdb127eac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes to a size in physical pixels. <br /></td></tr>
+<tr class="memdesc:a0d1fc6e3bfc596d4fe23abfdb127eac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the bitmap to a new size in physical pixels. <br /></td></tr>
 <tr class="separator:a0d1fc6e3bfc596d4fe23abfdb127eac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7892fd68463d0846bcd72f0580a5cdbb"><td class="memItemLeft" align="right" valign="top"><a id="a7892fd68463d0846bcd72f0580a5cdbb"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a7892fd68463d0846bcd72f0580a5cdbb">scaling</a> () const</td></tr>
 <tr class="memdesc:a7892fd68463d0846bcd72f0580a5cdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scaling from logical to physical pixels. <br /></td></tr>
 <tr class="separator:a7892fd68463d0846bcd72f0580a5cdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47fa840828180a2252b7fb80e07b1a15"><td class="memItemLeft" align="right" valign="top"><a id="a47fa840828180a2252b7fb80e07b1a15"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a47fa840828180a2252b7fb80e07b1a15">setScaleFactor</a> (double scaleFactor)</td></tr>
+<tr class="memdesc:a47fa840828180a2252b7fb80e07b1a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the target scale factor. <br /></td></tr>
+<tr class="separator:a47fa840828180a2252b7fb80e07b1a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a445bb5b5c4018463ef3a4604a8d69b7a"><td class="memItemLeft" align="right" valign="top"><a id="a445bb5b5c4018463ef3a4604a8d69b7a"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a> () const</td></tr>
 <tr class="memdesc:a445bb5b5c4018463ef3a4604a8d69b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in physical pixels. <br /></td></tr>
@@ -134,6 +163,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ad55f80ed3cd8b6c4f247763b747016af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronizes pending operations to the surface. <br /></td></tr>
 <tr class="separator:ad55f80ed3cd8b6c4f247763b747016af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e06201d822a1fef6933b36891cd0d13"><td class="memItemLeft" align="right" valign="top"><a id="a8e06201d822a1fef6933b36891cd0d13"></a>
+static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a8e06201d822a1fef6933b36891cd0d13">defaultFont</a> ()</td></tr>
+<tr class="memdesc:a8e06201d822a1fef6933b36891cd0d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default font family used by the backend. <br /></td></tr>
+<tr class="separator:a8e06201d822a1fef6933b36891cd0d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30b440fe5968af81df24e30d239f64f"><td class="memItemLeft" align="right" valign="top"><a id="ae30b440fe5968af81df24e30d239f64f"></a>
+static std::vector&lt; FontFace &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ae30b440fe5968af81df24e30d239f64f">fontFaces</a> (const std::string &amp;family)</td></tr>
+<tr class="memdesc:ae30b440fe5968af81df24e30d239f64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the font faces of a family. <br /></td></tr>
+<tr class="separator:ae30b440fe5968af81df24e30d239f64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7926a39e42f6e3e5093e5a992f8f9ad7"><td class="memItemLeft" align="right" valign="top"><a id="a7926a39e42f6e3e5093e5a992f8f9ad7"></a>
+static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a7926a39e42f6e3e5093e5a992f8f9ad7">fontFamilies</a> ()</td></tr>
+<tr class="memdesc:a7926a39e42f6e3e5093e5a992f8f9ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the available font families. <br /></td></tr>
+<tr class="separator:a7926a39e42f6e3e5093e5a992f8f9ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c51aeea99025176ca7648427313d74"><td class="memItemLeft" align="right" valign="top"><a id="ac0c51aeea99025176ca7648427313d74"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ac0c51aeea99025176ca7648427313d74">setDefaultFont</a> (const std::string &amp;family)</td></tr>
+<tr class="memdesc:ac0c51aeea99025176ca7648427313d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default font family used by the backend. <br /></td></tr>
+<tr class="separator:ac0c51aeea99025176ca7648427313d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a893f1101c650c08c98612515c2b1a89c"><td class="memItemLeft" align="right" valign="top"><a id="a893f1101c650c08c98612515c2b1a89c"></a>
@@ -142,7 +190,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a893f1101c650c08c98612515c2b1a89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a711f27fc65cf35a3facc32d878c4b117"><td class="memItemLeft" align="right" valign="top"><a id="a711f27fc65cf35a3facc32d878c4b117"></a>
 virtual <a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a711f27fc65cf35a3facc32d878c4b117">onCreateCanvas</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *reuse) override</td></tr>
-<tr class="memdesc:a711f27fc65cf35a3facc32d878c4b117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Paint context.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a711f27fc65cf35a3facc32d878c4b117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Backend canvas for drawing commands.">Canvas</a>. <br /></td></tr>
 <tr class="separator:a711f27fc65cf35a3facc32d878c4b117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43442be33d6d5ff35d6f76436ff6c0da"><td class="memItemLeft" align="right" valign="top"><a id="a43442be33d6d5ff35d6f76436ff6c0da"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a43442be33d6d5ff35d6f76436ff6c0da">onFinish</a> () override</td></tr>
@@ -150,7 +198,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a43442be33d6d5ff35d6f76436ff6c0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67aa55c887285040a03580dd6051798d"><td class="memItemLeft" align="right" valign="top"><a id="a67aa55c887285040a03580dd6051798d"></a>
 virtual <a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a67aa55c887285040a03580dd6051798d">onGetCanvas</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *reuse)</td></tr>
-<tr class="memdesc:a67aa55c887285040a03580dd6051798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Paint context.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a67aa55c887285040a03580dd6051798d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reusable canvas instance. <br /></td></tr>
 <tr class="separator:a67aa55c887285040a03580dd6051798d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3719c4a153e2e6458623e66559f71f9e"><td class="memItemLeft" align="right" valign="top"><a id="a3719c4a153e2e6458623e66559f71f9e"></a>
 virtual const <a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">Gfx::ImageFormat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a3719c4a153e2e6458623e66559f71f9e">onGetFormat</a> () const</td></tr>
@@ -166,14 +214,16 @@ virtual const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &a
 <tr class="separator:a5ccdd0d009cfcd4a627248b01f2702d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06657acb77d7ffff47af8ad5b27c0703"><td class="memItemLeft" align="right" valign="top"><a id="a06657acb77d7ffff47af8ad5b27c0703"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a06657acb77d7ffff47af8ad5b27c0703">onReleaseCanvas</a> () override</td></tr>
-<tr class="memdesc:a06657acb77d7ffff47af8ad5b27c0703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the current <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Paint context.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a06657acb77d7ffff47af8ad5b27c0703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the current <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Backend canvas for drawing commands.">Canvas</a>. <br /></td></tr>
 <tr class="separator:a06657acb77d7ffff47af8ad5b27c0703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7580150c69f4be6985f30ae001960379"><td class="memItemLeft" align="right" valign="top"><a id="a7580150c69f4be6985f30ae001960379"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a7580150c69f4be6985f30ae001960379">onSync</a> () override</td></tr>
 <tr class="memdesc:a7580150c69f4be6985f30ae001960379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronizes pending operations to the surface. <br /></td></tr>
 <tr class="separator:a7580150c69f4be6985f30ae001960379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Bitmap is the standard in-memory PaintSurface implementation. It can be used as a rendering target for Painter and also exposes the rendered image so that drawing results can be copied, inspected or reused by image APIs. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

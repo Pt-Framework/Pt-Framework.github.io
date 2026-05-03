@@ -127,19 +127,23 @@ const Brush &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="separator:a642324f95d7bede04c6f0a410472615e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb3156c1870a1ca631baf8b4f263292"><td class="memItemLeft" align="right" valign="top"><a id="aabb3156c1870a1ca631baf8b4f263292"></a>
 const RectF *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aabb3156c1870a1ca631baf8b4f263292">clip</a> () const</td></tr>
-<tr class="memdesc:aabb3156c1870a1ca631baf8b4f263292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the clipping rect or null if none. <br /></td></tr>
+<tr class="memdesc:aabb3156c1870a1ca631baf8b4f263292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current clip rectangle or null if clipping is disabled. <br /></td></tr>
 <tr class="separator:aabb3156c1870a1ca631baf8b4f263292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e2cb35722757f3d42c03ff73512658"><td class="memItemLeft" align="right" valign="top"><a id="ac3e2cb35722757f3d42c03ff73512658"></a>
 const CompositionMode &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ac3e2cb35722757f3d42c03ff73512658">compositionMode</a> () const</td></tr>
 <tr class="memdesc:ac3e2cb35722757f3d42c03ff73512658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current composition mode. <br /></td></tr>
 <tr class="separator:ac3e2cb35722757f3d42c03ff73512658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50dc69a5dd5c451827f2bc60f37579f"><td class="memItemLeft" align="right" valign="top"><a id="ae50dc69a5dd5c451827f2bc60f37579f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ae50dc69a5dd5c451827f2bc60f37579f">drawArc</a> (const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</td></tr>
+<tr class="memdesc:ae50dc69a5dd5c451827f2bc60f37579f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an arc on an ellipse. <br /></td></tr>
+<tr class="separator:ae50dc69a5dd5c451827f2bc60f37579f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b84a67f1ef9df1a49d9262f2e5cd0d5"><td class="memItemLeft" align="right" valign="top"><a id="a4b84a67f1ef9df1a49d9262f2e5cd0d5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a4b84a67f1ef9df1a49d9262f2e5cd0d5">drawBitmap</a> (const PointF &amp;to, const Bitmap &amp;bm)</td></tr>
 <tr class="memdesc:a4b84a67f1ef9df1a49d9262f2e5cd0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a bitmap. <br /></td></tr>
 <tr class="separator:a4b84a67f1ef9df1a49d9262f2e5cd0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca0a07a640a7f583e29e2f1d7e30dc5"><td class="memItemLeft" align="right" valign="top"><a id="a6ca0a07a640a7f583e29e2f1d7e30dc5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a6ca0a07a640a7f583e29e2f1d7e30dc5">drawBitmap</a> (const PointF &amp;to, const Bitmap &amp;bm, const RectF &amp;rect)</td></tr>
-<tr class="memdesc:a6ca0a07a640a7f583e29e2f1d7e30dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a part of a bitmap. <br /></td></tr>
+<tr class="memdesc:a6ca0a07a640a7f583e29e2f1d7e30dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rectangular part of a bitmap. <br /></td></tr>
 <tr class="separator:a6ca0a07a640a7f583e29e2f1d7e30dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafeb0223b17caab6985abd0f02495a3f"><td class="memItemLeft" align="right" valign="top"><a id="aafeb0223b17caab6985abd0f02495a3f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aafeb0223b17caab6985abd0f02495a3f">drawCircle</a> (const PointF &amp;topLeft, double diameter)</td></tr>
@@ -155,7 +159,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aaef5c4b858b32b3bf51d8910c15eec57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9396c7dafe44a26e3756f668bc50ac0c"><td class="memItemLeft" align="right" valign="top"><a id="a9396c7dafe44a26e3756f668bc50ac0c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a9396c7dafe44a26e3756f668bc50ac0c">drawImage</a> (const PointF &amp;to, const Image &amp;im, const RectF &amp;rect)</td></tr>
-<tr class="memdesc:a9396c7dafe44a26e3756f668bc50ac0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a part of an image. <br /></td></tr>
+<tr class="memdesc:a9396c7dafe44a26e3756f668bc50ac0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rectangular part of an image. <br /></td></tr>
 <tr class="separator:a9396c7dafe44a26e3756f668bc50ac0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89cb90d8412e7329b6a0284de1a29d00"><td class="memItemLeft" align="right" valign="top"><a id="a89cb90d8412e7329b6a0284de1a29d00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a89cb90d8412e7329b6a0284de1a29d00">drawLine</a> (const PointF &amp;from, const PointF &amp;to)</td></tr>
@@ -179,7 +183,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ac8586817d4b8b327eb4f7547febdb992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ba5f7e551dd8adfc309bbf3044ef55f"><td class="memItemLeft" align="right" valign="top"><a id="a8ba5f7e551dd8adfc309bbf3044ef55f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a8ba5f7e551dd8adfc309bbf3044ef55f">drawPolyline</a> (const PointF *points, const size_t pointCount)</td></tr>
-<tr class="memdesc:a8ba5f7e551dd8adfc309bbf3044ef55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a polyline. <br /></td></tr>
+<tr class="memdesc:a8ba5f7e551dd8adfc309bbf3044ef55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a connected sequence of line segments. <br /></td></tr>
 <tr class="separator:a8ba5f7e551dd8adfc309bbf3044ef55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948ecb06eaccb519176a8c852693ef08"><td class="memItemLeft" align="right" valign="top"><a id="a948ecb06eaccb519176a8c852693ef08"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a948ecb06eaccb519176a8c852693ef08">drawRect</a> (const RectF &amp;rect)</td></tr>
@@ -187,12 +191,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a948ecb06eaccb519176a8c852693ef08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bbbadfd6ef5bf1e12a18ec8dcef000c"><td class="memItemLeft" align="right" valign="top"><a id="a1bbbadfd6ef5bf1e12a18ec8dcef000c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a1bbbadfd6ef5bf1e12a18ec8dcef000c">drawText</a> (const PointF &amp;to, const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;text)</td></tr>
-<tr class="memdesc:a1bbbadfd6ef5bf1e12a18ec8dcef000c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a line of text. <br /></td></tr>
+<tr class="memdesc:a1bbbadfd6ef5bf1e12a18ec8dcef000c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a line of text at the given position. <br /></td></tr>
 <tr class="separator:a1bbbadfd6ef5bf1e12a18ec8dcef000c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba008b710c10fcb3bca24396249afc04"><td class="memItemLeft" align="right" valign="top"><a id="aba008b710c10fcb3bca24396249afc04"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aba008b710c10fcb3bca24396249afc04">drawText</a> (const PointF &amp;to, const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;text, const Transform &amp;t)</td></tr>
-<tr class="memdesc:aba008b710c10fcb3bca24396249afc04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a line of text. <br /></td></tr>
+<tr class="memdesc:aba008b710c10fcb3bca24396249afc04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a line of text using an additional text transform. <br /></td></tr>
 <tr class="separator:aba008b710c10fcb3bca24396249afc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94355c1b61619a68d29d23108b249852"><td class="memItemLeft" align="right" valign="top"><a id="a94355c1b61619a68d29d23108b249852"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a94355c1b61619a68d29d23108b249852">fillChord</a> (const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</td></tr>
+<tr class="memdesc:a94355c1b61619a68d29d23108b249852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a chord on an ellipse. <br /></td></tr>
+<tr class="separator:a94355c1b61619a68d29d23108b249852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac96a5f5e479db3917a7805e51ab983b6"><td class="memItemLeft" align="right" valign="top"><a id="ac96a5f5e479db3917a7805e51ab983b6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ac96a5f5e479db3917a7805e51ab983b6">fillCircle</a> (const PointF &amp;topLeft, double diameter)</td></tr>
 <tr class="memdesc:ac96a5f5e479db3917a7805e51ab983b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a circular area. <br /></td></tr>
@@ -209,9 +217,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ab9187387d85661828e6c71ff7693a69c">fillPath</a> (const Path &amp;<a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a5401f004fef3fd1b447363e193a890f9">path</a>)</td></tr>
 <tr class="memdesc:ab9187387d85661828e6c71ff7693a69c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the given path. <br /></td></tr>
 <tr class="separator:ab9187387d85661828e6c71ff7693a69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f56a85a4d07e7d418d0358d02a67a6"><td class="memItemLeft" align="right" valign="top"><a id="a92f56a85a4d07e7d418d0358d02a67a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a92f56a85a4d07e7d418d0358d02a67a6">fillPie</a> (const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</td></tr>
+<tr class="memdesc:a92f56a85a4d07e7d418d0358d02a67a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a pie segment on an ellipse. <br /></td></tr>
+<tr class="separator:a92f56a85a4d07e7d418d0358d02a67a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad94393826eaceee3d83484155d61983"><td class="memItemLeft" align="right" valign="top"><a id="aad94393826eaceee3d83484155d61983"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aad94393826eaceee3d83484155d61983">fillPolygon</a> (const PointF *points, const size_t pointCount)</td></tr>
-<tr class="memdesc:aad94393826eaceee3d83484155d61983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a polygon. <br /></td></tr>
+<tr class="memdesc:aad94393826eaceee3d83484155d61983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a polygon defined by the given points. <br /></td></tr>
 <tr class="separator:aad94393826eaceee3d83484155d61983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefef5e3751726f3704b617d8622af735"><td class="memItemLeft" align="right" valign="top"><a id="aefef5e3751726f3704b617d8622af735"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aefef5e3751726f3704b617d8622af735">fillRect</a> (const RectF &amp;rect)</td></tr>
@@ -219,7 +231,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aefef5e3751726f3704b617d8622af735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memItemLeft" align="right" valign="top"><a id="a6dfe1abe0d1eb3ddc1ca081de98b5342"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a6dfe1abe0d1eb3ddc1ca081de98b5342">finish</a> ()</td></tr>
-<tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends painting. <br /></td></tr>
+<tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the current painting operation. <br /></td></tr>
 <tr class="separator:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03bfd66884ecd3f481d0db37a7f51fba"><td class="memItemLeft" align="right" valign="top"><a id="a03bfd66884ecd3f481d0db37a7f51fba"></a>
 const Font &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a03bfd66884ecd3f481d0db37a7f51fba">font</a> () const</td></tr>
@@ -231,10 +243,10 @@ const FontMetrics &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="separator:aa4a14c77d6563b278c93a5976f7dfa7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98349696edd180c15a0be5129b7d610b"><td class="memItemLeft" align="right" valign="top"><a id="a98349696edd180c15a0be5129b7d610b"></a>
 const ImageFormat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a98349696edd180c15a0be5129b7d610b">format</a> () const</td></tr>
-<tr class="memdesc:a98349696edd180c15a0be5129b7d610b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the image format. <br /></td></tr>
+<tr class="memdesc:a98349696edd180c15a0be5129b7d610b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pixel format of the current target. <br /></td></tr>
 <tr class="separator:a98349696edd180c15a0be5129b7d610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5401f004fef3fd1b447363e193a890f9"><td class="memItemLeft" align="right" valign="top"><a id="a5401f004fef3fd1b447363e193a890f9"></a>
-const Gfx::Path &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a5401f004fef3fd1b447363e193a890f9">path</a> () const</td></tr>
+const <a class="el" href="classPt_1_1Gfx_1_1Path.html">Gfx::Path</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a5401f004fef3fd1b447363e193a890f9">path</a> () const</td></tr>
 <tr class="memdesc:a5401f004fef3fd1b447363e193a890f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current path. <br /></td></tr>
 <tr class="separator:a5401f004fef3fd1b447363e193a890f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4fded169224f3f94c8bbf9b4105a32f"><td class="memItemLeft" align="right" valign="top"><a id="ad4fded169224f3f94c8bbf9b4105a32f"></a>
@@ -251,7 +263,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a6022a1fd1e5dcd2fd5585e5a36aa3f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7892fd68463d0846bcd72f0580a5cdbb"><td class="memItemLeft" align="right" valign="top"><a id="a7892fd68463d0846bcd72f0580a5cdbb"></a>
 const Scaling &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a7892fd68463d0846bcd72f0580a5cdbb">scaling</a> () const</td></tr>
-<tr class="memdesc:a7892fd68463d0846bcd72f0580a5cdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the paint scaling. <br /></td></tr>
+<tr class="memdesc:a7892fd68463d0846bcd72f0580a5cdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the logical-to-physical scaling of the target. <br /></td></tr>
 <tr class="separator:a7892fd68463d0846bcd72f0580a5cdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a911b1ab96ec7508d36aaf2cb305608db"><td class="memItemLeft" align="right" valign="top"><a id="a911b1ab96ec7508d36aaf2cb305608db"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a911b1ab96ec7508d36aaf2cb305608db">setBrush</a> (const Brush &amp;<a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a642324f95d7bede04c6f0a410472615e">brush</a>)</td></tr>
@@ -283,7 +295,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ac89ef0116bcafbe68197f5ac304a17e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaa1b376fd78a13cd18072ec560ab30f"><td class="memItemLeft" align="right" valign="top"><a id="aeaa1b376fd78a13cd18072ec560ab30f"></a>
 TextMetrics&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aeaa1b376fd78a13cd18072ec560ab30f">textMetrics</a> (const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;text) const</td></tr>
-<tr class="memdesc:aeaa1b376fd78a13cd18072ec560ab30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the metrics of a line of text. <br /></td></tr>
+<tr class="memdesc:aeaa1b376fd78a13cd18072ec560ab30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures a line of text using the current font. <br /></td></tr>
 <tr class="separator:aeaa1b376fd78a13cd18072ec560ab30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51fab737c87cb087ed1d01864c989641"><td class="memItemLeft" align="right" valign="top"><a id="a51fab737c87cb087ed1d01864c989641"></a>
 const Transform &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#a51fab737c87cb087ed1d01864c989641">transform</a> () const</td></tr>
