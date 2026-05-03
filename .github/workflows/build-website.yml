@@ -35,14 +35,13 @@ jobs:
         run: |
           cd pt-source/doc
           doxygen Doxyfile
-          New-Item -Path ".nojekyll" -ItemType File -Force
 
       - name: Deploy Website
         shell: pwsh
         run: |
           Get-ChildItem -Exclude ".git", "CNAME", ".github", "pt-source" | Remove-Item -Recurse -Force
           
-          Copy-Item -Path "pt-source/doc\*" -Destination "." -Recurse -Force
+          Copy-Item -Path "pt-source/doc/website\*" -Destination "." -Recurse -Force
 
           Remove-Item -Path "pt-source" -Recurse -Force
 
