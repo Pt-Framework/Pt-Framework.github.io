@@ -239,9 +239,9 @@
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessLayout(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasure(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasure(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a>&amp; ctx, <span class="keyword">const</span> SizePolicy&amp; policy);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a>&amp; ctx, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// Widget</span></div>
@@ -290,7 +290,7 @@
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessPaintEvent(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaintEvent(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a>&amp; context, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">// scaling</span></div>
@@ -431,6 +431,7 @@
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
 <div class="ttc" id="classPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Window base class. </div><div class="ttdef"><b>Definition:</b> Window.h:65</div></div>
+<div class="ttc" id="classPt_1_1Forms_1_1PaintContext_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a></div><div class="ttdoc">Paint context. </div><div class="ttdef"><b>Definition:</b> PaintContext.h:44</div></div>
 <div class="ttc" id="classPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates. </div><div class="ttdef"><b>Definition:</b> Rect.h:44</div></div>
 <div class="ttc" id="classPt_1_1Gfx_1_1BasicImage_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1BasicImage.html">Pt::Gfx::BasicImage</a></div><div class="ttdoc">Basic image. </div><div class="ttdef"><b>Definition:</b> Api.h:81</div></div>
 <div class="ttc" id="classPt_1_1Event_html"><div class="ttname"><a href="classPt_1_1Event.html">Pt::Event</a></div><div class="ttdoc">Base class for all event types. </div><div class="ttdef"><b>Definition:</b> Event.h:49</div></div>

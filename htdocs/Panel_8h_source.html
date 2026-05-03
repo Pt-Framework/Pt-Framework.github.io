@@ -165,13 +165,13 @@
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onInvalidate();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(PaintContext&amp; ctx, <span class="keyword">const</span> SizePolicy&amp; policy);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(PaintContext&amp; ctx, <span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintSurface&amp; surface, <span class="keyword">const</span> Gfx::RectF&amp; updateRect);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintContext&amp; context, <span class="keyword">const</span> Gfx::RectF&amp; updateRect);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaintContent(PaintSurface&amp; surface, Painter&amp; painter);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaintContent(PaintContext&amp; context, Painter&amp; painter);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        Control*                 _content;</div>

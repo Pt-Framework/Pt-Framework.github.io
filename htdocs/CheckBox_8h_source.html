@@ -174,7 +174,7 @@
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> setRenderer(CheckBoxRenderer* renderer);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(PaintContext&amp; ctx, <span class="keyword">const</span> SizePolicy&amp; policy);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onInvalidate();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
@@ -185,7 +185,7 @@
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onCanceled();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">protected</span>:       </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintSurface&amp; surface, <span class="keyword">const</span> Gfx::RectF&amp; updateRect);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintContext&amp; context, <span class="keyword">const</span> Gfx::RectF&amp; updateRect);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        Gfx::Font getFont() <span class="keyword">const</span>;</div>

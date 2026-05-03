@@ -247,6 +247,27 @@
     <docanchor file="xmlrpc" title="Copyright and Disclaimer">xmlrpc_Copyright</docanchor>
   </compound>
   <compound kind="group">
+    <name>sigslot</name>
+    <title>Signals and Delegates</title>
+    <filename>group__sigslot.html</filename>
+    <class kind="class">Pt::BasicSlot</class>
+    <class kind="class">Pt::Callable</class>
+    <class kind="class">Pt::Connectable</class>
+    <class kind="class">Pt::Connection</class>
+    <class kind="class">Pt::ConstMethod</class>
+    <class kind="class">Pt::ConstMethodSlot</class>
+    <class kind="class">Pt::Delegate</class>
+    <class kind="class">Pt::DelegateSlot</class>
+    <class kind="class">Pt::Function</class>
+    <class kind="class">Pt::FunctionSlot</class>
+    <class kind="class">Pt::Invokable</class>
+    <class kind="class">Pt::Method</class>
+    <class kind="class">Pt::MethodSlot</class>
+    <class kind="class">Pt::Signal</class>
+    <class kind="class">Pt::SignalSlot</class>
+    <class kind="class">Pt::Slot</class>
+  </compound>
+  <compound kind="group">
     <name>Allocator</name>
     <title>Allocators</title>
     <filename>group__Allocator.html</filename>
@@ -653,27 +674,6 @@
       <anchor>ga5edd65df57aaf2830f7d1c862ed4ad29</anchor>
       <arglist>(SaveInfo &amp;si, const T &amp;type)</arglist>
     </member>
-  </compound>
-  <compound kind="group">
-    <name>sigslot</name>
-    <title>Signals and Delegates</title>
-    <filename>group__sigslot.html</filename>
-    <class kind="class">Pt::BasicSlot</class>
-    <class kind="class">Pt::Callable</class>
-    <class kind="class">Pt::Connectable</class>
-    <class kind="class">Pt::Connection</class>
-    <class kind="class">Pt::ConstMethod</class>
-    <class kind="class">Pt::ConstMethodSlot</class>
-    <class kind="class">Pt::Delegate</class>
-    <class kind="class">Pt::DelegateSlot</class>
-    <class kind="class">Pt::Function</class>
-    <class kind="class">Pt::FunctionSlot</class>
-    <class kind="class">Pt::Invokable</class>
-    <class kind="class">Pt::Method</class>
-    <class kind="class">Pt::MethodSlot</class>
-    <class kind="class">Pt::Signal</class>
-    <class kind="class">Pt::SignalSlot</class>
-    <class kind="class">Pt::Slot</class>
   </compound>
   <compound kind="group">
     <name>Logging</name>
@@ -11436,6 +11436,13 @@
     <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
     <base>Pt::Gfx::PaintContext</base>
     <member kind="function">
+      <type></type>
+      <name>~PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>finish</name>
       <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
@@ -11476,6 +11483,13 @@
       <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
+      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13012,12 +13026,19 @@
       <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
       <arglist>(PaintSurface &amp;surface)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
       <name>~PaintContext</name>
       <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
+      <anchor>a9b8f05980acc359e07413062f2070881</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
     </member>
   </compound>
   <compound kind="class">
