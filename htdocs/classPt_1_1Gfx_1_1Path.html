@@ -188,6 +188,9 @@ const <a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a> &amp;&#160;</
 <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html#a62469461ed7c932afba3808f4da0fe3d">end</a> () const</td></tr>
 <tr class="memdesc:a62469461ed7c932afba3808f4da0fe3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator past the last element. <br /></td></tr>
 <tr class="separator:a62469461ed7c932afba3808f4da0fe3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26d5f94f2f799affbd635fd139d0383"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1PathIterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html#ab26d5f94f2f799affbd635fd139d0383">getPolygon</a> (<a class="el" href="classPt_1_1Gfx_1_1PathIterator.html">Iterator</a> it, Polygon &amp;polygon, float tolerance=0.25f) const</td></tr>
+<tr class="memdesc:ab26d5f94f2f799affbd635fd139d0383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flattens one subpath into <em>polygon</em> starting at <em>it</em>.  <a href="classPt_1_1Gfx_1_1Path.html#ab26d5f94f2f799affbd635fd139d0383">More...</a><br /></td></tr>
+<tr class="separator:ab26d5f94f2f799affbd635fd139d0383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9214b6db27653259af1bd678f35c80b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html#a9214b6db27653259af1bd678f35c80b7">intersects</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">RectF</a> &amp;rect, <a class="el" href="group__Drawing.html#ga9a534b0377c9ca41983d53b0dae0d5a4">FillRule</a> rule=FillRule::NonZero) const</td></tr>
 <tr class="memdesc:a9214b6db27653259af1bd678f35c80b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the filled area of the path overlaps <em>rect</em>.  <a href="classPt_1_1Gfx_1_1Path.html#a9214b6db27653259af1bd678f35c80b7">More...</a><br /></td></tr>
 <tr class="separator:a9214b6db27653259af1bd678f35c80b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,10 +218,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html#ade1601ccf1fa3bcf050867f0852ca4e5">size</a> () const</td></tr>
 <tr class="memdesc:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of path elements. <br /></td></tr>
 <tr class="separator:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a845f8784d6a6093e74f2e21a3695e610"><td class="memItemLeft" align="right" valign="top"><a id="a845f8784d6a6093e74f2e21a3695e610"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html#a845f8784d6a6093e74f2e21a3695e610">toPolygons</a> (std::vector&lt; Polygon &gt; &amp;polygons, float tolerance=0.25f) const</td></tr>
-<tr class="memdesc:a845f8784d6a6093e74f2e21a3695e610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flattens the path into polygons. <br /></td></tr>
-<tr class="separator:a845f8784d6a6093e74f2e21a3695e610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8471773f5e95a2ea2bff3bb6ace89c4e"><td class="memItemLeft" align="right" valign="top"><a id="a8471773f5e95a2ea2bff3bb6ace89c4e"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html#a8471773f5e95a2ea2bff3bb6ace89c4e">toTransformed</a> (const <a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1Path.html#aa023782d9cf59942db4e044b912b953e">transform</a>) const</td></tr>
 <tr class="memdesc:a8471773f5e95a2ea2bff3bb6ace89c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the path with the transform applied. <br /></td></tr>
@@ -432,6 +431,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 <p>Starts a new subpath at the arc start point. Angle and sweep-direction semantics are identical to arcTo(). </p>
+
+</div>
+</div>
+<a id="ab26d5f94f2f799affbd635fd139d0383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab26d5f94f2f799affbd635fd139d0383">&#9670;&nbsp;</a></span>getPolygon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1PathIterator.html">Iterator</a> getPolygon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1PathIterator.html">Iterator</a>&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Polygon &amp;&#160;</td>
+          <td class="paramname"><em>polygon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code>0.25f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Skips a leading MoveTo, then flattens elements into <em>polygon</em> until a Close command, the next MoveTo, or <a class="el" href="classPt_1_1Gfx_1_1Path.html#a62469461ed7c932afba3808f4da0fe3d" title="Returns an iterator past the last element.">end()</a> is reached. No closing point is appended. The caller must clear <em>polygon</em> before each call.</p>
+<dl class="section return"><dt>Returns</dt><dd>iterator to the start of the next subpath, or <a class="el" href="classPt_1_1Gfx_1_1Path.html#a62469461ed7c932afba3808f4da0fe3d" title="Returns an iterator past the last element.">end()</a>. </dd></dl>
 
 </div>
 </div>

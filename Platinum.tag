@@ -29257,6 +29257,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>Iterator</type>
+      <name>getPolygon</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab26d5f94f2f799affbd635fd139d0383</anchor>
+      <arglist>(Iterator it, Polygon &amp;polygon, float tolerance=0.25f) const</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>intersects</name>
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
@@ -29304,13 +29311,6 @@
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
       <anchor>ade1601ccf1fa3bcf050867f0852ca4e5</anchor>
       <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>toPolygons</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a845f8784d6a6093e74f2e21a3695e610</anchor>
-      <arglist>(std::vector&lt; Polygon &gt; &amp;polygons, float tolerance=0.25f) const</arglist>
     </member>
     <member kind="function">
       <type>Path</type>
