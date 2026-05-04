@@ -108,19 +108,27 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
 <tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all content of the record. <br /></td></tr>
 <tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0627ce9d4496345ea0233aa48e179aa5"><td class="memItemLeft" align="right" valign="top"><a id="a0627ce9d4496345ea0233aa48e179aa5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a0627ce9d4496345ea0233aa48e179aa5">text</a> () const</td></tr>
+<tr class="memdesc:a0627ce9d4496345ea0233aa48e179aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the textual of the record. <br /></td></tr>
+<tr class="separator:a0627ce9d4496345ea0233aa48e179aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a311f57f5055cd8321929870e404e6852"><td class="memItemLeft" align="right" valign="top"><a id="a311f57f5055cd8321929870e404e6852"></a>
 <a class="el" href="group__Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a311f57f5055cd8321929870e404e6852">logLevel</a> () const</td></tr>
 <tr class="memdesc:a311f57f5055cd8321929870e404e6852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the severity level. <br /></td></tr>
 <tr class="separator:a311f57f5055cd8321929870e404e6852"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac50c0767605e11b459c6845c1da55cf0"><td class="memItemLeft" align="right" valign="top"><a id="ac50c0767605e11b459c6845c1da55cf0"></a>
-<a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#ac50c0767605e11b459c6845c1da55cf0">operator&lt;&lt;</a> (const <a class="el" href="classPt_1_1SourceInfo.html">Pt::SourceInfo</a> &amp;si)</td></tr>
-<tr class="memdesc:ac50c0767605e11b459c6845c1da55cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the source location of the log record. <br /></td></tr>
-<tr class="separator:ac50c0767605e11b459c6845c1da55cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052afc64df1888be8cc363733a1530db"><td class="memItemLeft" align="right" valign="top"><a id="a052afc64df1888be8cc363733a1530db"></a>
+const <a class="el" href="classPt_1_1SourceInfo.html">Pt::SourceInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a052afc64df1888be8cc363733a1530db">sourceInfo</a> () const</td></tr>
+<tr class="memdesc:a052afc64df1888be8cc363733a1530db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the location in the source where the record was generated. <br /></td></tr>
+<tr class="separator:a052afc64df1888be8cc363733a1530db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae6ac9a0084925facd1dc0d847698c3"><td class="memTemplParams" colspan="2"><a id="acae6ac9a0084925facd1dc0d847698c3"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acae6ac9a0084925facd1dc0d847698c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#acae6ac9a0084925facd1dc0d847698c3">operator&lt;&lt;</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:acae6ac9a0084925facd1dc0d847698c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends <em>value</em> to the log record's text. <br /></td></tr>
 <tr class="separator:acae6ac9a0084925facd1dc0d847698c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d5f1f280759a7a03dde5ed3fcf4ee9"><td class="memItemLeft" align="right" valign="top"><a id="a26d5f1f280759a7a03dde5ed3fcf4ee9"></a>
+<a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a26d5f1f280759a7a03dde5ed3fcf4ee9">operator&lt;&lt;</a> (std::ostream &amp;(*op)(std::ostream &amp;))</td></tr>
+<tr class="memdesc:a26d5f1f280759a7a03dde5ed3fcf4ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record's text. <br /></td></tr>
+<tr class="separator:a26d5f1f280759a7a03dde5ed3fcf4ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93bc02be6523f1f7349676a0c1a34659"><td class="memItemLeft" align="right" valign="top"><a id="a93bc02be6523f1f7349676a0c1a34659"></a>
 <a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a93bc02be6523f1f7349676a0c1a34659">operator&lt;&lt;</a> (std::ios &amp;(*op)(std::ios &amp;))</td></tr>
 <tr class="memdesc:a93bc02be6523f1f7349676a0c1a34659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record's text. <br /></td></tr>
@@ -129,18 +137,10 @@ template&lt;typename T &gt; </td></tr>
 <a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a0c0f7ecd3612e4f474d3d90d6e95f012">operator&lt;&lt;</a> (std::ios_base &amp;(*op)(std::ios_base &amp;))</td></tr>
 <tr class="memdesc:a0c0f7ecd3612e4f474d3d90d6e95f012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record's text. <br /></td></tr>
 <tr class="separator:a0c0f7ecd3612e4f474d3d90d6e95f012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26d5f1f280759a7a03dde5ed3fcf4ee9"><td class="memItemLeft" align="right" valign="top"><a id="a26d5f1f280759a7a03dde5ed3fcf4ee9"></a>
-<a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a26d5f1f280759a7a03dde5ed3fcf4ee9">operator&lt;&lt;</a> (std::ostream &amp;(*op)(std::ostream &amp;))</td></tr>
-<tr class="memdesc:a26d5f1f280759a7a03dde5ed3fcf4ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record's text. <br /></td></tr>
-<tr class="separator:a26d5f1f280759a7a03dde5ed3fcf4ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a052afc64df1888be8cc363733a1530db"><td class="memItemLeft" align="right" valign="top"><a id="a052afc64df1888be8cc363733a1530db"></a>
-const <a class="el" href="classPt_1_1SourceInfo.html">Pt::SourceInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a052afc64df1888be8cc363733a1530db">sourceInfo</a> () const</td></tr>
-<tr class="memdesc:a052afc64df1888be8cc363733a1530db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the location in the source where the record was generated. <br /></td></tr>
-<tr class="separator:a052afc64df1888be8cc363733a1530db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0627ce9d4496345ea0233aa48e179aa5"><td class="memItemLeft" align="right" valign="top"><a id="a0627ce9d4496345ea0233aa48e179aa5"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a0627ce9d4496345ea0233aa48e179aa5">text</a> () const</td></tr>
-<tr class="memdesc:a0627ce9d4496345ea0233aa48e179aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the textual of the record. <br /></td></tr>
-<tr class="separator:a0627ce9d4496345ea0233aa48e179aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50c0767605e11b459c6845c1da55cf0"><td class="memItemLeft" align="right" valign="top"><a id="ac50c0767605e11b459c6845c1da55cf0"></a>
+<a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#ac50c0767605e11b459c6845c1da55cf0">operator&lt;&lt;</a> (const <a class="el" href="classPt_1_1SourceInfo.html">Pt::SourceInfo</a> &amp;si)</td></tr>
+<tr class="memdesc:ac50c0767605e11b459c6845c1da55cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the source location of the log record. <br /></td></tr>
+<tr class="separator:ac50c0767605e11b459c6845c1da55cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Log records represent the text entries that can be added to log. Each log record has a log level, which indicates it's severity. The text of a log record can be formatted with the stream operator, just like writing to std::cout. All stream output operators defined for std::ostream can be used including the manipulators.</p>

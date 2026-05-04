@@ -103,18 +103,39 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a9081fb76c435427816f374b174d87c35">~Test</a> ()</td></tr>
 <tr class="memdesc:a9081fb76c435427816f374b174d87c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a9081fb76c435427816f374b174d87c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c51182d4b502f53df2ec6e2d89316a8"><td class="memItemLeft" align="right" valign="top"><a id="a3c51182d4b502f53df2ec6e2d89316a8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a3c51182d4b502f53df2ec6e2d89316a8">attachReporter</a> (<a class="el" href="classPt_1_1Unit_1_1Reporter.html">Reporter</a> &amp;r)</td></tr>
-<tr class="memdesc:a3c51182d4b502f53df2ec6e2d89316a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add reporter for test events. <br /></td></tr>
-<tr class="separator:a3c51182d4b502f53df2ec6e2d89316a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0cb5da97453e67203c5b9e60f572c97"><td class="memItemLeft" align="right" valign="top"><a id="ac0cb5da97453e67203c5b9e60f572c97"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ac0cb5da97453e67203c5b9e60f572c97">detachReporter</a> (<a class="el" href="classPt_1_1Unit_1_1Reporter.html">Reporter</a> &amp;r)</td></tr>
-<tr class="memdesc:ac0cb5da97453e67203c5b9e60f572c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a reporter. <br /></td></tr>
-<tr class="separator:ac0cb5da97453e67203c5b9e60f572c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18954417d3124a8095783ea13dc6d00b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a18954417d3124a8095783ea13dc6d00b">run</a> ()=0</td></tr>
+<tr class="memdesc:a18954417d3124a8095783ea13dc6d00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the test.  <a href="classPt_1_1Unit_1_1Test.html#a18954417d3124a8095783ea13dc6d00b">More...</a><br /></td></tr>
+<tr class="separator:a18954417d3124a8095783ea13dc6d00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top"><a id="ad8227ba86a01f26e4f173cd5e219d5d1"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the test. <br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55ea7eb792386a27e7e0c504587e5c8"><td class="memItemLeft" align="right" valign="top"><a id="ae55ea7eb792386a27e7e0c504587e5c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ae55ea7eb792386a27e7e0c504587e5c8">reportStart</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:ae55ea7eb792386a27e7e0c504587e5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the start of a test. <br /></td></tr>
+<tr class="separator:ae55ea7eb792386a27e7e0c504587e5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af727cecfb6b861efcca6a9698d0a3966"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#af727cecfb6b861efcca6a9698d0a3966">reportFinish</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:af727cecfb6b861efcca6a9698d0a3966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finished notification.  <a href="classPt_1_1Unit_1_1Test.html#af727cecfb6b861efcca6a9698d0a3966">More...</a><br /></td></tr>
+<tr class="separator:af727cecfb6b861efcca6a9698d0a3966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb80804f5214e4af30a75a30cba49cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#aeb80804f5214e4af30a75a30cba49cb0">reportSuccess</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:aeb80804f5214e4af30a75a30cba49cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Success notification.  <a href="classPt_1_1Unit_1_1Test.html#aeb80804f5214e4af30a75a30cba49cb0">More...</a><br /></td></tr>
+<tr class="separator:aeb80804f5214e4af30a75a30cba49cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafb6d418a57e0f4e3d075c6d329c9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#acafb6d418a57e0f4e3d075c6d329c9c0">reportAssertion</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx, const <a class="el" href="classPt_1_1Unit_1_1Assertion.html">Assertion</a> &amp;ass)</td></tr>
+<tr class="memdesc:acafb6d418a57e0f4e3d075c6d329c9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Unit_1_1Assertion.html" title="Test Assertion exception">Assertion</a> notification.  <a href="classPt_1_1Unit_1_1Test.html#acafb6d418a57e0f4e3d075c6d329c9c0">More...</a><br /></td></tr>
+<tr class="separator:acafb6d418a57e0f4e3d075c6d329c9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2029314078b684d24e45cea96319b6a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a2029314078b684d24e45cea96319b6a8">reportException</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx, const std::exception &amp;ex)</td></tr>
+<tr class="memdesc:a2029314078b684d24e45cea96319b6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception notification.  <a href="classPt_1_1Unit_1_1Test.html#a2029314078b684d24e45cea96319b6a8">More...</a><br /></td></tr>
+<tr class="separator:a2029314078b684d24e45cea96319b6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a899de573c5db7e47e0430338f3073c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a9a899de573c5db7e47e0430338f3073c">reportError</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:a9a899de573c5db7e47e0430338f3073c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error notification.  <a href="classPt_1_1Unit_1_1Test.html#a9a899de573c5db7e47e0430338f3073c">More...</a><br /></td></tr>
+<tr class="separator:a9a899de573c5db7e47e0430338f3073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5018d1341eb0900101f1006683cd162"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ae5018d1341eb0900101f1006683cd162">reportMessage</a> (const std::string &amp;msg)</td></tr>
+<tr class="memdesc:ae5018d1341eb0900101f1006683cd162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message notification.  <a href="classPt_1_1Unit_1_1Test.html#ae5018d1341eb0900101f1006683cd162">More...</a><br /></td></tr>
+<tr class="separator:ae5018d1341eb0900101f1006683cd162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7b34497f686c8796ab1386d6ce2463"><td class="memItemLeft" align="right" valign="top"><a id="aee7b34497f686c8796ab1386d6ce2463"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#aee7b34497f686c8796ab1386d6ce2463">setParent</a> (<a class="el" href="classPt_1_1Unit_1_1Test.html">Test</a> *test)</td></tr>
+<tr class="memdesc:aee7b34497f686c8796ab1386d6ce2463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent test. <br /></td></tr>
+<tr class="separator:aee7b34497f686c8796ab1386d6ce2463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4288f7e9f6301541edb2d1609ca079b8"><td class="memItemLeft" align="right" valign="top"><a id="a4288f7e9f6301541edb2d1609ca079b8"></a>
 <a class="el" href="classPt_1_1Unit_1_1Test.html">Test</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a4288f7e9f6301541edb2d1609ca079b8">parent</a> ()</td></tr>
 <tr class="memdesc:a4288f7e9f6301541edb2d1609ca079b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parent test. <br /></td></tr>
@@ -123,35 +144,14 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 const <a class="el" href="classPt_1_1Unit_1_1Test.html">Test</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a8c94e73d90b3980d4f573b015436593f">parent</a> () const</td></tr>
 <tr class="memdesc:a8c94e73d90b3980d4f573b015436593f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parent test. <br /></td></tr>
 <tr class="separator:a8c94e73d90b3980d4f573b015436593f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acafb6d418a57e0f4e3d075c6d329c9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#acafb6d418a57e0f4e3d075c6d329c9c0">reportAssertion</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx, const <a class="el" href="classPt_1_1Unit_1_1Assertion.html">Assertion</a> &amp;ass)</td></tr>
-<tr class="memdesc:acafb6d418a57e0f4e3d075c6d329c9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Unit_1_1Assertion.html" title="Test Assertion exception">Assertion</a> notification.  <a href="classPt_1_1Unit_1_1Test.html#acafb6d418a57e0f4e3d075c6d329c9c0">More...</a><br /></td></tr>
-<tr class="separator:acafb6d418a57e0f4e3d075c6d329c9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a899de573c5db7e47e0430338f3073c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a9a899de573c5db7e47e0430338f3073c">reportError</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
-<tr class="memdesc:a9a899de573c5db7e47e0430338f3073c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error notification.  <a href="classPt_1_1Unit_1_1Test.html#a9a899de573c5db7e47e0430338f3073c">More...</a><br /></td></tr>
-<tr class="separator:a9a899de573c5db7e47e0430338f3073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2029314078b684d24e45cea96319b6a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a2029314078b684d24e45cea96319b6a8">reportException</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx, const std::exception &amp;ex)</td></tr>
-<tr class="memdesc:a2029314078b684d24e45cea96319b6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception notification.  <a href="classPt_1_1Unit_1_1Test.html#a2029314078b684d24e45cea96319b6a8">More...</a><br /></td></tr>
-<tr class="separator:a2029314078b684d24e45cea96319b6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af727cecfb6b861efcca6a9698d0a3966"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#af727cecfb6b861efcca6a9698d0a3966">reportFinish</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
-<tr class="memdesc:af727cecfb6b861efcca6a9698d0a3966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finished notification.  <a href="classPt_1_1Unit_1_1Test.html#af727cecfb6b861efcca6a9698d0a3966">More...</a><br /></td></tr>
-<tr class="separator:af727cecfb6b861efcca6a9698d0a3966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5018d1341eb0900101f1006683cd162"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ae5018d1341eb0900101f1006683cd162">reportMessage</a> (const std::string &amp;msg)</td></tr>
-<tr class="memdesc:ae5018d1341eb0900101f1006683cd162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message notification.  <a href="classPt_1_1Unit_1_1Test.html#ae5018d1341eb0900101f1006683cd162">More...</a><br /></td></tr>
-<tr class="separator:ae5018d1341eb0900101f1006683cd162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae55ea7eb792386a27e7e0c504587e5c8"><td class="memItemLeft" align="right" valign="top"><a id="ae55ea7eb792386a27e7e0c504587e5c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ae55ea7eb792386a27e7e0c504587e5c8">reportStart</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
-<tr class="memdesc:ae55ea7eb792386a27e7e0c504587e5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the start of a test. <br /></td></tr>
-<tr class="separator:ae55ea7eb792386a27e7e0c504587e5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb80804f5214e4af30a75a30cba49cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#aeb80804f5214e4af30a75a30cba49cb0">reportSuccess</a> (const <a class="el" href="classPt_1_1Unit_1_1TestContext.html">TestContext</a> &amp;ctx)</td></tr>
-<tr class="memdesc:aeb80804f5214e4af30a75a30cba49cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Success notification.  <a href="classPt_1_1Unit_1_1Test.html#aeb80804f5214e4af30a75a30cba49cb0">More...</a><br /></td></tr>
-<tr class="separator:aeb80804f5214e4af30a75a30cba49cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18954417d3124a8095783ea13dc6d00b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a18954417d3124a8095783ea13dc6d00b">run</a> ()=0</td></tr>
-<tr class="memdesc:a18954417d3124a8095783ea13dc6d00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the test.  <a href="classPt_1_1Unit_1_1Test.html#a18954417d3124a8095783ea13dc6d00b">More...</a><br /></td></tr>
-<tr class="separator:a18954417d3124a8095783ea13dc6d00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee7b34497f686c8796ab1386d6ce2463"><td class="memItemLeft" align="right" valign="top"><a id="aee7b34497f686c8796ab1386d6ce2463"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#aee7b34497f686c8796ab1386d6ce2463">setParent</a> (<a class="el" href="classPt_1_1Unit_1_1Test.html">Test</a> *test)</td></tr>
-<tr class="memdesc:aee7b34497f686c8796ab1386d6ce2463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent test. <br /></td></tr>
-<tr class="separator:aee7b34497f686c8796ab1386d6ce2463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c51182d4b502f53df2ec6e2d89316a8"><td class="memItemLeft" align="right" valign="top"><a id="a3c51182d4b502f53df2ec6e2d89316a8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#a3c51182d4b502f53df2ec6e2d89316a8">attachReporter</a> (<a class="el" href="classPt_1_1Unit_1_1Reporter.html">Reporter</a> &amp;r)</td></tr>
+<tr class="memdesc:a3c51182d4b502f53df2ec6e2d89316a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add reporter for test events. <br /></td></tr>
+<tr class="separator:a3c51182d4b502f53df2ec6e2d89316a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0cb5da97453e67203c5b9e60f572c97"><td class="memItemLeft" align="right" valign="top"><a id="ac0cb5da97453e67203c5b9e60f572c97"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Unit_1_1Test.html#ac0cb5da97453e67203c5b9e60f572c97">detachReporter</a> (<a class="el" href="classPt_1_1Unit_1_1Reporter.html">Reporter</a> &amp;r)</td></tr>
+<tr class="memdesc:ac0cb5da97453e67203c5b9e60f572c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a reporter. <br /></td></tr>
+<tr class="separator:ac0cb5da97453e67203c5b9e60f572c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

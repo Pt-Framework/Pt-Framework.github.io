@@ -104,14 +104,18 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#aeeabea83ed8b4e356d4d36ece0fcb1bf">~LogMessage</a> ()</td></tr>
 <tr class="memdesc:aeeabea83ed8b4e356d4d36ece0fcb1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:aeeabea83ed8b4e356d4d36ece0fcb1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5a8385102f8f8dd6c5957eac08b04c2"><td class="memItemLeft" align="right" valign="top"><a id="af5a8385102f8f8dd6c5957eac08b04c2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#af5a8385102f8f8dd6c5957eac08b04c2">enabled</a> () const</td></tr>
-<tr class="memdesc:af5a8385102f8f8dd6c5957eac08b04c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the record's log level is enabled for the target. <br /></td></tr>
-<tr class="separator:af5a8385102f8f8dd6c5957eac08b04c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aada07b6a64ecca06d97e4fbdaf32f8"><td class="memItemLeft" align="right" valign="top"><a id="a8aada07b6a64ecca06d97e4fbdaf32f8"></a>
+const <a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a8aada07b6a64ecca06d97e4fbdaf32f8">record</a> () const</td></tr>
+<tr class="memdesc:a8aada07b6a64ecca06d97e4fbdaf32f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying log record. <br /></td></tr>
+<tr class="separator:a8aada07b6a64ecca06d97e4fbdaf32f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5af53510557e77a03906c5016ebe66f"><td class="memItemLeft" align="right" valign="top"><a id="aa5af53510557e77a03906c5016ebe66f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#aa5af53510557e77a03906c5016ebe66f">log</a> ()</td></tr>
 <tr class="memdesc:aa5af53510557e77a03906c5016ebe66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the message's log record to the logger. <br /></td></tr>
 <tr class="separator:aa5af53510557e77a03906c5016ebe66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a8385102f8f8dd6c5957eac08b04c2"><td class="memItemLeft" align="right" valign="top"><a id="af5a8385102f8f8dd6c5957eac08b04c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#af5a8385102f8f8dd6c5957eac08b04c2">enabled</a> () const</td></tr>
+<tr class="memdesc:af5a8385102f8f8dd6c5957eac08b04c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the record's log level is enabled for the target. <br /></td></tr>
+<tr class="separator:af5a8385102f8f8dd6c5957eac08b04c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b76affb3b5d35fa419ac234144038b"><td class="memItemLeft" align="right" valign="top"><a id="a67b76affb3b5d35fa419ac234144038b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a67b76affb3b5d35fa419ac234144038b">operator bool</a> () const</td></tr>
 <tr class="memdesc:a67b76affb3b5d35fa419ac234144038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the record's log level is enabled for the target. <br /></td></tr>
@@ -125,10 +129,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9f029c2a40b5465e01e90bf673481b88"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a9f029c2a40b5465e01e90bf673481b88">operator&lt;&lt;</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:a9f029c2a40b5465e01e90bf673481b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends <em>value</em> to the log record. <br /></td></tr>
 <tr class="separator:a9f029c2a40b5465e01e90bf673481b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7100b2556ac5c17f6ac2c5ea7f274d50"><td class="memItemLeft" align="right" valign="top"><a id="a7100b2556ac5c17f6ac2c5ea7f274d50"></a>
-<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a7100b2556ac5c17f6ac2c5ea7f274d50">operator&lt;&lt;</a> (<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;(*pf)(<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;))</td></tr>
-<tr class="memdesc:a7100b2556ac5c17f6ac2c5ea7f274d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a manipulator to the log message. <br /></td></tr>
-<tr class="separator:a7100b2556ac5c17f6ac2c5ea7f274d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39c4a8b61f6a9e17a8937669fd1006a"><td class="memItemLeft" align="right" valign="top"><a id="ae39c4a8b61f6a9e17a8937669fd1006a"></a>
+<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#ae39c4a8b61f6a9e17a8937669fd1006a">operator&lt;&lt;</a> (std::ostream &amp;(*op)(std::ostream &amp;))</td></tr>
+<tr class="memdesc:ae39c4a8b61f6a9e17a8937669fd1006a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record. <br /></td></tr>
+<tr class="separator:ae39c4a8b61f6a9e17a8937669fd1006a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ace7e3495f61900e0af56b4f92aabb7"><td class="memItemLeft" align="right" valign="top"><a id="a7ace7e3495f61900e0af56b4f92aabb7"></a>
 <a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a7ace7e3495f61900e0af56b4f92aabb7">operator&lt;&lt;</a> (std::ios &amp;(*op)(std::ios &amp;))</td></tr>
 <tr class="memdesc:a7ace7e3495f61900e0af56b4f92aabb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record. <br /></td></tr>
@@ -137,14 +141,10 @@ template&lt;typename T &gt; </td></tr>
 <a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#aeb22a23ae6e03d3709e2fce649211287">operator&lt;&lt;</a> (std::ios_base &amp;(*op)(std::ios_base &amp;))</td></tr>
 <tr class="memdesc:aeb22a23ae6e03d3709e2fce649211287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record. <br /></td></tr>
 <tr class="separator:aeb22a23ae6e03d3709e2fce649211287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39c4a8b61f6a9e17a8937669fd1006a"><td class="memItemLeft" align="right" valign="top"><a id="ae39c4a8b61f6a9e17a8937669fd1006a"></a>
-<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#ae39c4a8b61f6a9e17a8937669fd1006a">operator&lt;&lt;</a> (std::ostream &amp;(*op)(std::ostream &amp;))</td></tr>
-<tr class="memdesc:ae39c4a8b61f6a9e17a8937669fd1006a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <em>op</em> to the log record. <br /></td></tr>
-<tr class="separator:ae39c4a8b61f6a9e17a8937669fd1006a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aada07b6a64ecca06d97e4fbdaf32f8"><td class="memItemLeft" align="right" valign="top"><a id="a8aada07b6a64ecca06d97e4fbdaf32f8"></a>
-const <a class="el" href="classPt_1_1System_1_1LogRecord.html">LogRecord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a8aada07b6a64ecca06d97e4fbdaf32f8">record</a> () const</td></tr>
-<tr class="memdesc:a8aada07b6a64ecca06d97e4fbdaf32f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying log record. <br /></td></tr>
-<tr class="separator:a8aada07b6a64ecca06d97e4fbdaf32f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7100b2556ac5c17f6ac2c5ea7f274d50"><td class="memItemLeft" align="right" valign="top"><a id="a7100b2556ac5c17f6ac2c5ea7f274d50"></a>
+<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogMessage.html#a7100b2556ac5c17f6ac2c5ea7f274d50">operator&lt;&lt;</a> (<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;(*pf)(<a class="el" href="classPt_1_1System_1_1LogMessage.html">LogMessage</a> &amp;))</td></tr>
+<tr class="memdesc:a7100b2556ac5c17f6ac2c5ea7f274d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a manipulator to the log message. <br /></td></tr>
+<tr class="separator:a7100b2556ac5c17f6ac2c5ea7f274d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>

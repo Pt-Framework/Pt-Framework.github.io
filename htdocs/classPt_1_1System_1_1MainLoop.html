@@ -109,18 +109,22 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1MainLoop.html#a22b971292d89d3590893cccb02789a7d">~MainLoop</a> ()</td></tr>
 <tr class="memdesc:a22b971292d89d3590893cccb02789a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a22b971292d89d3590893cccb02789a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c8ef93b92a3fb86475dca464fbacbc"><td class="memItemLeft" align="right" valign="top"><a id="a40c8ef93b92a3fb86475dca464fbacbc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html#a40c8ef93b92a3fb86475dca464fbacbc">commitEvent</a> (const <a class="el" href="classPt_1_1Event.html">Event</a> &amp;ev)</td></tr>
-<tr class="memdesc:a40c8ef93b92a3fb86475dca464fbacbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues an event and triggers event processing. <br /></td></tr>
-<tr class="separator:a40c8ef93b92a3fb86475dca464fbacbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a824db47f925f8e739fe313d20f4614e6"><td class="memItemLeft" align="right" valign="top"><a id="a824db47f925f8e739fe313d20f4614e6"></a>
-<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; const <a class="el" href="classPt_1_1Event.html">Event</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a824db47f925f8e739fe313d20f4614e6">eventReceived</a> ()</td></tr>
-<tr class="memdesc:a824db47f925f8e739fe313d20f4614e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports all events. <br /></td></tr>
-<tr class="separator:a824db47f925f8e739fe313d20f4614e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a43e6d814de94978c515cb084873b1"><td class="memItemLeft" align="right" valign="top"><a id="a13a43e6d814de94978c515cb084873b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a> ()</td></tr>
+<tr class="memdesc:a13a43e6d814de94978c515cb084873b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the loop. <br /></td></tr>
+<tr class="separator:a13a43e6d814de94978c515cb084873b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a358d2e2397ca11ccd17553e3c40e7901"><td class="memItemLeft" align="right" valign="top"><a id="a358d2e2397ca11ccd17553e3c40e7901"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">exit</a> ()</td></tr>
 <tr class="memdesc:a358d2e2397ca11ccd17553e3c40e7901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the loop. <br /></td></tr>
 <tr class="separator:a358d2e2397ca11ccd17553e3c40e7901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5473b44af17c41807bd98b6d1da298b"><td class="memItemLeft" align="right" valign="top"><a id="ad5473b44af17c41807bd98b6d1da298b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#ad5473b44af17c41807bd98b6d1da298b">processEvents</a> ()</td></tr>
+<tr class="memdesc:ad5473b44af17c41807bd98b6d1da298b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> all queued events. <br /></td></tr>
+<tr class="separator:ad5473b44af17c41807bd98b6d1da298b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824db47f925f8e739fe313d20f4614e6"><td class="memItemLeft" align="right" valign="top"><a id="a824db47f925f8e739fe313d20f4614e6"></a>
+<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; const <a class="el" href="classPt_1_1Event.html">Event</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a824db47f925f8e739fe313d20f4614e6">eventReceived</a> ()</td></tr>
+<tr class="memdesc:a824db47f925f8e739fe313d20f4614e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports all events. <br /></td></tr>
+<tr class="separator:a824db47f925f8e739fe313d20f4614e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1b39b81e3436334064918c805e97c56"><td class="memItemLeft" align="right" valign="top"><a id="af1b39b81e3436334064918c805e97c56"></a>
 <a class="el" href="classPt_1_1Signal.html">Signal</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#af1b39b81e3436334064918c805e97c56">exited</a> ()</td></tr>
 <tr class="memdesc:af1b39b81e3436334064918c805e97c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emited when the eventloop is exited. <br /></td></tr>
@@ -128,22 +132,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a6d3302e0356744a0461035a9aafa45cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a6d3302e0356744a0461035a9aafa45cc">post</a> (<a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a> &amp;s)</td></tr>
 <tr class="memdesc:a6d3302e0356744a0461035a9aafa45cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts the loop to run a selectable.  <a href="classPt_1_1System_1_1EventLoop.html#a6d3302e0356744a0461035a9aafa45cc">More...</a><br /></td></tr>
 <tr class="separator:a6d3302e0356744a0461035a9aafa45cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5473b44af17c41807bd98b6d1da298b"><td class="memItemLeft" align="right" valign="top"><a id="ad5473b44af17c41807bd98b6d1da298b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#ad5473b44af17c41807bd98b6d1da298b">processEvents</a> ()</td></tr>
-<tr class="memdesc:ad5473b44af17c41807bd98b6d1da298b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> all queued events. <br /></td></tr>
-<tr class="separator:ad5473b44af17c41807bd98b6d1da298b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8794d4e41fef851f88dd39f0dd39462a"><td class="memItemLeft" align="right" valign="top"><a id="a8794d4e41fef851f88dd39f0dd39462a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html#a8794d4e41fef851f88dd39f0dd39462a">queueEvent</a> (const <a class="el" href="classPt_1_1Event.html">Event</a> &amp;ev)</td></tr>
-<tr class="memdesc:a8794d4e41fef851f88dd39f0dd39462a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only queues an event. <br /></td></tr>
-<tr class="separator:a8794d4e41fef851f88dd39f0dd39462a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a43e6d814de94978c515cb084873b1"><td class="memItemLeft" align="right" valign="top"><a id="a13a43e6d814de94978c515cb084873b1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a> ()</td></tr>
-<tr class="memdesc:a13a43e6d814de94978c515cb084873b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the loop. <br /></td></tr>
-<tr class="separator:a13a43e6d814de94978c515cb084873b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="memItemLeft" align="right" valign="top"><a id="a6a05bf7a1187628b7a9b92bcc0284b35"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a6a05bf7a1187628b7a9b92bcc0284b35">setReady</a> (<a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a> &amp;s)</td></tr>
 <tr class="memdesc:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classPt_1_1System_1_1Selectable.html" title="Dispatches operations through an event loop.">Selectable</a> as ready without waking the loop. <br /></td></tr>
 <tr class="separator:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c8ef93b92a3fb86475dca464fbacbc"><td class="memItemLeft" align="right" valign="top"><a id="a40c8ef93b92a3fb86475dca464fbacbc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html#a40c8ef93b92a3fb86475dca464fbacbc">commitEvent</a> (const <a class="el" href="classPt_1_1Event.html">Event</a> &amp;ev)</td></tr>
+<tr class="memdesc:a40c8ef93b92a3fb86475dca464fbacbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues an event and triggers event processing. <br /></td></tr>
+<tr class="separator:a40c8ef93b92a3fb86475dca464fbacbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8794d4e41fef851f88dd39f0dd39462a"><td class="memItemLeft" align="right" valign="top"><a id="a8794d4e41fef851f88dd39f0dd39462a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html#a8794d4e41fef851f88dd39f0dd39462a">queueEvent</a> (const <a class="el" href="classPt_1_1Event.html">Event</a> &amp;ev)</td></tr>
+<tr class="memdesc:a8794d4e41fef851f88dd39f0dd39462a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only queues an event. <br /></td></tr>
+<tr class="separator:a8794d4e41fef851f88dd39f0dd39462a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a390b373c288df5bb2d7821e7ffa9c2"><td class="memItemLeft" align="right" valign="top"><a id="a9a390b373c288df5bb2d7821e7ffa9c2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html#a9a390b373c288df5bb2d7821e7ffa9c2">wake</a> ()</td></tr>
 <tr class="memdesc:a9a390b373c288df5bb2d7821e7ffa9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers event processing. <br /></td></tr>

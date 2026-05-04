@@ -105,18 +105,18 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1MapAny.html#ada17edf2d6ebf76d1d02b74689188b40">MapAny</a> (<a class="el" href="classPt_1_1Http_1_1Service.html">Service</a> &amp;s, <a class="el" href="classPt_1_1Http_1_1Authorizer.html">Authorizer</a> &amp;a)</td></tr>
 <tr class="memdesc:ada17edf2d6ebf76d1d02b74689188b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with service and authorizer. <br /></td></tr>
 <tr class="separator:ada17edf2d6ebf76d1d02b74689188b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a27dbdfeff26e303148521ba56a9e14"><td class="memItemLeft" align="right" valign="top"><a id="a3a27dbdfeff26e303148521ba56a9e14"></a>
-<a class="el" href="classPt_1_1Http_1_1Authorizer.html">Authorizer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#a3a27dbdfeff26e303148521ba56a9e14">authorizer</a> ()</td></tr>
-<tr class="memdesc:a3a27dbdfeff26e303148521ba56a9e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the authorizer. <br /></td></tr>
-<tr class="separator:a3a27dbdfeff26e303148521ba56a9e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac295bade8aee589f6718dfa79edc2a34"><td class="memItemLeft" align="right" valign="top"><a id="ac295bade8aee589f6718dfa79edc2a34"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#ac295bade8aee589f6718dfa79edc2a34">detach</a> ()</td></tr>
-<tr class="memdesc:ac295bade8aee589f6718dfa79edc2a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach from server. <br /></td></tr>
-<tr class="separator:ac295bade8aee589f6718dfa79edc2a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0162328fa404731d07ff5928fa393753"><td class="memItemLeft" align="right" valign="top"><a id="a0162328fa404731d07ff5928fa393753"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#a0162328fa404731d07ff5928fa393753">setShutdown</a> (bool shutdown=true)</td></tr>
+<tr class="memdesc:a0162328fa404731d07ff5928fa393753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shutdown flag. <br /></td></tr>
+<tr class="separator:a0162328fa404731d07ff5928fa393753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0a5df82161f69ca17641cbd43784e39"><td class="memItemLeft" align="right" valign="top"><a id="aa0a5df82161f69ca17641cbd43784e39"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#aa0a5df82161f69ca17641cbd43784e39">isIdle</a> ()</td></tr>
 <tr class="memdesc:aa0a5df82161f69ca17641cbd43784e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if not in use. <br /></td></tr>
 <tr class="separator:aa0a5df82161f69ca17641cbd43784e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac295bade8aee589f6718dfa79edc2a34"><td class="memItemLeft" align="right" valign="top"><a id="ac295bade8aee589f6718dfa79edc2a34"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#ac295bade8aee589f6718dfa79edc2a34">detach</a> ()</td></tr>
+<tr class="memdesc:ac295bade8aee589f6718dfa79edc2a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach from server. <br /></td></tr>
+<tr class="separator:ac295bade8aee589f6718dfa79edc2a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedf7a4fed2fb3a7eb922d95d885bed3"><td class="memItemLeft" align="right" valign="top"><a id="aaedf7a4fed2fb3a7eb922d95d885bed3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#aaedf7a4fed2fb3a7eb922d95d885bed3">isMapped</a> (const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request) const</td></tr>
 <tr class="memdesc:aaedf7a4fed2fb3a7eb922d95d885bed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if request is mapped to the service. <br /></td></tr>
@@ -125,10 +125,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1Http_1_1Service.html">Service</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#a6b491c3f9a5eadf43b63b192dcc33262">service</a> ()</td></tr>
 <tr class="memdesc:a6b491c3f9a5eadf43b63b192dcc33262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the service to map requests to. <br /></td></tr>
 <tr class="separator:a6b491c3f9a5eadf43b63b192dcc33262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0162328fa404731d07ff5928fa393753"><td class="memItemLeft" align="right" valign="top"><a id="a0162328fa404731d07ff5928fa393753"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#a0162328fa404731d07ff5928fa393753">setShutdown</a> (bool shutdown=true)</td></tr>
-<tr class="memdesc:a0162328fa404731d07ff5928fa393753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shutdown flag. <br /></td></tr>
-<tr class="separator:a0162328fa404731d07ff5928fa393753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a27dbdfeff26e303148521ba56a9e14"><td class="memItemLeft" align="right" valign="top"><a id="a3a27dbdfeff26e303148521ba56a9e14"></a>
+<a class="el" href="classPt_1_1Http_1_1Authorizer.html">Authorizer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Servlet.html#a3a27dbdfeff26e303148521ba56a9e14">authorizer</a> ()</td></tr>
+<tr class="memdesc:a3a27dbdfeff26e303148521ba56a9e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the authorizer. <br /></td></tr>
+<tr class="separator:a3a27dbdfeff26e303148521ba56a9e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

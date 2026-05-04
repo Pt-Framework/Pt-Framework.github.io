@@ -107,17 +107,21 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a441672d587b7f355d7308b08fa208633">~Responder</a> ()</td></tr>
 <tr class="memdesc:a441672d587b7f355d7308b08fa208633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a441672d587b7f355d7308b08fa208633"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5976caf10ac92119110db5dd4fafaf74"><td class="memItemLeft" align="right" valign="top"><a id="a5976caf10ac92119110db5dd4fafaf74"></a>
-const <a class="el" href="classPt_1_1Remoting_1_1ServiceProcedure.html">ServiceProcedure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a5976caf10ac92119110db5dd4fafaf74">activeProcedure</a> () const</td></tr>
-<tr class="memdesc:a5976caf10ac92119110db5dd4fafaf74"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently executing procedure. <br /></td></tr>
-<tr class="separator:a5976caf10ac92119110db5dd4fafaf74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft" align="right" valign="top"><a id="a02d5fa6b14e221f3012a794b905be166"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a02d5fa6b14e221f3012a794b905be166">cancel</a> ()</td></tr>
 <tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets to initial state. <br /></td></tr>
 <tr class="separator:a02d5fa6b14e221f3012a794b905be166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5976caf10ac92119110db5dd4fafaf74"><td class="memItemLeft" align="right" valign="top"><a id="a5976caf10ac92119110db5dd4fafaf74"></a>
+const <a class="el" href="classPt_1_1Remoting_1_1ServiceProcedure.html">ServiceProcedure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a5976caf10ac92119110db5dd4fafaf74">activeProcedure</a> () const</td></tr>
+<tr class="memdesc:a5976caf10ac92119110db5dd4fafaf74"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently executing procedure. <br /></td></tr>
+<tr class="separator:a5976caf10ac92119110db5dd4fafaf74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="memItemLeft" align="right" valign="top"><a id="ab51b6b1e9f0e9789e6387a20203d30a9"></a>
+<a class="el" href="classPt_1_1Composer.html">Pt::Composer</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#ab51b6b1e9f0e9789e6387a20203d30a9">setProcedure</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the service procedure. <br /></td></tr>
+<tr class="separator:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa96f8c157ef50d9d5448831c4bdc89"><td class="memItemLeft" align="right" valign="top"><a id="acaa96f8c157ef50d9d5448831c4bdc89"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#acaa96f8c157ef50d9d5448831c4bdc89">beginCall</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop)</td></tr>
 <tr class="memdesc:acaa96f8c157ef50d9d5448831c4bdc89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins the service procedure call. <br /></td></tr>
@@ -132,10 +136,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a83bc093f10b38b3429883892e9a72f87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a83bc093f10b38b3429883892e9a72f87">onReady</a> ()=0</td></tr>
 <tr class="memdesc:a83bc093f10b38b3429883892e9a72f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">The service procedure has finished.  <a href="classPt_1_1Remoting_1_1Responder.html#a83bc093f10b38b3429883892e9a72f87">More...</a><br /></td></tr>
 <tr class="separator:a83bc093f10b38b3429883892e9a72f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="memItemLeft" align="right" valign="top"><a id="ab51b6b1e9f0e9789e6387a20203d30a9"></a>
-<a class="el" href="classPt_1_1Composer.html">Pt::Composer</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#ab51b6b1e9f0e9789e6387a20203d30a9">setProcedure</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the service procedure. <br /></td></tr>
-<tr class="separator:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5c669ec9685e2b6d83321fe70c660156"></a>
