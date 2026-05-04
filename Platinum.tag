@@ -29153,6 +29153,20 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>addPolygon</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ae8478c8dcdcb54f15b9f07f5ae0f92d5</anchor>
+      <arglist>(const PointF *points, std::size_t count)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPolyline</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab86d7d3d857a4f540915bb735a24a23b</anchor>
+      <arglist>(const PointF *points, std::size_t count)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>addRect</name>
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
       <anchor>a074f4999bb62278489a7e6cd74a2ccf1</anchor>
@@ -29162,15 +29176,15 @@
       <type>void</type>
       <name>addRoundedRect</name>
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a415ac994476ab350b76f993b67a07540</anchor>
-      <arglist>(const RectF &amp;rect, float radius)</arglist>
+      <anchor>a9e72e7825b87f6b1b9a84d2bdf62d0d2</anchor>
+      <arglist>(const RectF &amp;rect, double radius)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>appendPath</name>
+      <name>addRoundedRect</name>
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a9057a71b521247a8e2f848bfec63468f</anchor>
-      <arglist>(const Path &amp;p)</arglist>
+      <anchor>ada2cfd84dcf831947e97ffb5dbc1948b</anchor>
+      <arglist>(const RectF &amp;rect, double rx, double ry)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -29208,6 +29222,20 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab0470e3a5ff00bf1df3ba1d8d28b3191</anchor>
+      <arglist>(const PointF &amp;point, FillRule rule=FillRule::NonZero) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>aeda2d86833d9f61923f16f3a266250b8</anchor>
+      <arglist>(const RectF &amp;rect, FillRule rule=FillRule::NonZero) const</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>cubicTo</name>
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
@@ -29227,6 +29255,13 @@
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
       <anchor>a62469461ed7c932afba3808f4da0fe3d</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>intersects</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a9214b6db27653259af1bd678f35c80b7</anchor>
+      <arglist>(const RectF &amp;rect, FillRule rule=FillRule::NonZero) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -29276,6 +29311,13 @@
       <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
       <anchor>a845f8784d6a6093e74f2e21a3695e610</anchor>
       <arglist>(std::vector&lt; Polygon &gt; &amp;polygons, float tolerance=0.25f) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>toTransformed</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a8471773f5e95a2ea2bff3bb6ace89c4e</anchor>
+      <arglist>(const Transform &amp;transform) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -47458,6 +47500,15 @@
       <anchor>a8fc6def832489b485c5349d48fcc4187</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FillRule</name>
+      <anchorfile>group__Drawing.html</anchorfile>
+      <anchor>ga9a534b0377c9ca41983d53b0dae0d5a4</anchor>
+      <arglist></arglist>
+      <enumvalue file="group__Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a3d0365a27a39c0af183445fc4d932a8a">NonZero</enumvalue>
+      <enumvalue file="group__Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a8e586e4bd2c45e86222301f2e6e0e390">EvenOdd</enumvalue>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>blockScale</name>
@@ -48105,6 +48156,15 @@
     <class kind="class">Pt::Gfx::Scaling</class>
     <class kind="class">Pt::Gfx::TextMetrics</class>
     <class kind="class">Pt::Gfx::Transform</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>FillRule</name>
+      <anchorfile>group__Drawing.html</anchorfile>
+      <anchor>ga9a534b0377c9ca41983d53b0dae0d5a4</anchor>
+      <arglist></arglist>
+      <enumvalue file="group__Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a3d0365a27a39c0af183445fc4d932a8a">NonZero</enumvalue>
+      <enumvalue file="group__Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a8e586e4bd2c45e86222301f2e6e0e390">EvenOdd</enumvalue>
+    </member>
   </compound>
   <compound kind="group">
     <name>Logging</name>
@@ -48457,22 +48517,6 @@
     <docanchor file="basictypes.html" title="The Any Class">basictypes_Any</docanchor>
   </compound>
   <compound kind="page">
-    <name>building</name>
-    <title>Building with Jam</title>
-    <filename>building.html</filename>
-    <docanchor file="building.html" title="Overview">overview</docanchor>
-    <docanchor file="building.html" title="Starting the build process">starting</docanchor>
-    <docanchor file="building.html" title="Building specific targets">specific</docanchor>
-    <docanchor file="building.html" title="Rebuilding targets">rebuild</docanchor>
-    <docanchor file="building.html" title="Cleaning the project">clean</docanchor>
-    <docanchor file="installing.html" title="Build Verification Tests">testing</docanchor>
-    <docanchor file="building.html" title="Common Build Options">options</docanchor>
-    <docanchor file="building.html" title="Compiling for Linux/Unix/Mac OS-X">build_unix</docanchor>
-    <docanchor file="building.html" title="Compiling for Windows NT/XP with Visual Studio 7/8">build_win32</docanchor>
-    <docanchor file="building.html" title="Compiling Windows CE targets">build_wince</docanchor>
-    <docanchor file="building.html" title="Compiling QNX targets">build_qnx</docanchor>
-  </compound>
-  <compound kind="page">
     <name>concurrency</name>
     <title>Concurrency</title>
     <filename>concurrency.html</filename>
@@ -48528,6 +48572,7 @@
     <filename>installing.html</filename>
     <docanchor file="installing.html" title="Configuring the Build">configuring</docanchor>
     <docanchor file="installing.html" title="Building">building</docanchor>
+    <docanchor file="installing.html" title="Build Verification">testing</docanchor>
     <docanchor file="installing.html" title="Installation">installation</docanchor>
   </compound>
   <compound kind="page">

@@ -124,7 +124,11 @@ Configuring the Build</h1>
 <div class="fragment"><div class="line">jam.bat configure -sTARGET_OS=wince -sTARGET_OSPLAT=arm</div>
 </div><!-- fragment --><p>QNX targets can be cross compiled on both, QNX and windows build hosts. In the first case, only the TARGET_OSPLAT option needs to be set, in the latter case the TARGET_OS also needs to be set. The following command can be used on a windows host to build for QNX on PowerPC CPUs:</p>
 <div class="fragment"><div class="line">jam.bat configure -sTARGET_OS=qnxnto -sTARGET_OSPLAT=ppc</div>
-</div><!-- fragment --><h1><a class="anchor" id="building"></a>
+</div><!-- fragment --><p>WebAssembly targets are built by cross-compiling with the Emscripten toolchain. Set TARGET_OS to 'emscripten' when configuring. The optional EMSDK variable can be used to point to the Emscripten SDK installation if it is not already set up in the environment:</p>
+<div class="fragment"><div class="line">./jam.sh configure -sTARGET_OS=emscripten -sEMSDK=path/to/emsdk</div>
+</div><!-- fragment --><p>After building, run the resulting program with <code>emrun</code>. Make sure the Emscripten environment is active first by sourcing <code>emsdk_env.sh</code> (or <code>emsdk_env.bat</code> on Windows) from the SDK directory.</p>
+<dl class="section note"><dt>Note</dt><dd>WebAssembly builds require all objects to be heap-allocated. SIDE modules and MAIN modules have separate stacks that are not properly synced, so objects must not be allocated on the stack across module boundaries. The Emscripten flags <code>-sASSERTIONS=2</code>, <code>-sSAFE_HEAP=1</code> and <code>-sSTACK_OVERFLOW_CHECK</code> are only supported with static linking.</dd></dl>
+<h1><a class="anchor" id="building"></a>
 Building</h1>
 <p>All artefacts that are created during the build process are refered to as 'targets'. A target can be a binary file, such as a executable, or a so-called pseudo-target, which usually references other targets. All targets form a dependency tree. If jam is invoked to build a target, all dependencies will be resolved automatically and be built first. If jam is invoked without any further options, all targets will be built:</p>
 <div class="fragment"><div class="line">./jam.sh</div>
@@ -136,7 +140,7 @@ Building</h1>
 <div class="fragment"><div class="line">./jam.sh clean</div>
 </div><!-- fragment --><p>Finally, two command line options can make the build more convenient. You can use the command line option '-jN' to specify how many actions should be executed in parallel, where N is the maximum number of parallel actions (e.g. -j2 to use up to two CPUs). The command line option '-q' will stop the build when the first error is encountered.</p>
 <h1><a class="anchor" id="testing"></a>
-Build Verification Tests</h1>
+Build Verification</h1>
 <p>The pseudo-target 'test' causes jam to build all unit-tests and execute them. This will not work for cross compiling for obvious reasons. If a unit-test fails the whole build will be reported to have failed. The target test is not a dependent of the target all, so unit-tests are not built and executed by default. The following example builds the whole projects and executes the unit-test.</p>
 <div class="fragment"><div class="line">./jam.sh test</div>
 </div><!-- fragment --><h1><a class="anchor" id="installation"></a>
