@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Application Class Reference</div>  </div>
+<div class="title">Application Class Reference<div class="ingroups"><a class="el" href="group__Pt-Unit.html">Unit Testing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -139,16 +139,27 @@ static <a class="el" href="classPt_1_1Unit_1_1Application.html">Application</a> 
 <tr class="separator:a44420bbed558b6fc56c932d145b8e317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The application class serves as an environment for a number of tests to be run. An application object is usually created in the main loop of a program and the return value of <a class="el" href="classPt_1_1Unit_1_1Application.html#ae3046e2660ba8449bfe29805ad210cfc" title="Run test by name.">Unit::Application::run</a> returned. A reporter can be set for the application to process test events. Reporters can be made to print information to the console or write XML logs. A typical example may look like this:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="textblock"><p>The Application class serves as the environment for running unit tests. Tests are registered at program start using Pt::Unit::RegisterTest. A Reporter can be attached to process test events such as printing results to the console or writing log files.</p>
+<p>The simplest way to provide a main() function is to include <a class="el" href="TestMain_8h_source.html">TestMain.h</a> in exactly one source file of the test executable. It creates an Application, attaches a BriefReporter for console output and supports the following command line arguments:</p>
+<ul>
+<li><code>-h</code> — prints a list of all registered tests.</li>
+<li><code>-t</code> <code>&lt;name&gt;</code> — runs only the test with the given name.</li>
+<li><code>-f</code> <code>&lt;file&gt;</code> — additionally writes test output to a log file.</li>
+</ul>
+<p>When executed without arguments, all registered tests are run. The exit code equals the number of errors, so a successful run returns 0.</p>
+<p>For more control over reporter setup or test execution, a custom main() function can be written instead of including <a class="el" href="TestMain_8h_source.html">TestMain.h</a>.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Pt/Unit/Application.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Pt/Unit/Reporter.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classPt_1_1Unit_1_1Reporter.html">Pt::Unit::Reporter</a> reporter;</div>
 <div class="line">    <a class="code" href="classPt_1_1Unit_1_1Application.html">Pt::Unit::Application</a> app;</div>
-<div class="line">    app.setReporter(reporter);</div>
-<div class="line">    <span class="keywordflow">return</span> app.<a class="code" href="classPt_1_1Unit_1_1Application.html#ae3046e2660ba8449bfe29805ad210cfc">run</a>();</div>
+<div class="line">    Pt::Unit::BriefReporter reporter;</div>
+<div class="line">    app.<a class="code" href="classPt_1_1Unit_1_1Application.html#a3c51182d4b502f53df2ec6e2d89316a8">attachReporter</a>(reporter);</div>
+<div class="line">    app.<a class="code" href="classPt_1_1Unit_1_1Application.html#ae3046e2660ba8449bfe29805ad210cfc">run</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> app.<a class="code" href="classPt_1_1Unit_1_1Application.html#a7ab8d2c8a9a0c3fdfb6cf948fd54866e">errors</a>() &gt; 0 ? 1 : 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>The <a class="el" href="TestMain_8h_source.html">TestMain.h</a> include already defines a main loop with an application for the common use case. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a78be0bb41423d87c64f1ba0f9dc6c3b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78be0bb41423d87c64f1ba0f9dc6c3b6">&#9670;&nbsp;</a></span>findTest()</h2>
 
@@ -315,9 +326,10 @@ static <a class="el" href="classPt_1_1Unit_1_1Application.html">Application</a> 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1Unit_1_1Reporter_html"><div class="ttname"><a href="classPt_1_1Unit_1_1Reporter.html">Pt::Unit::Reporter</a></div><div class="ttdoc">Test event reporter</div><div class="ttdef"><b>Definition:</b> Reporter.h:56</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1Application_html_a7ab8d2c8a9a0c3fdfb6cf948fd54866e"><div class="ttname"><a href="classPt_1_1Unit_1_1Application.html#a7ab8d2c8a9a0c3fdfb6cf948fd54866e">Pt::Unit::Application::errors</a></div><div class="ttdeci">unsigned errors() const</div><div class="ttdoc">Returns the number of errors which occured during a run.</div><div class="ttdef"><b>Definition:</b> Application.h:132</div></div>
 <div class="ttc" id="aclassPt_1_1Unit_1_1Application_html_ae3046e2660ba8449bfe29805ad210cfc"><div class="ttname"><a href="classPt_1_1Unit_1_1Application.html#ae3046e2660ba8449bfe29805ad210cfc">Pt::Unit::Application::run</a></div><div class="ttdeci">void run(const std::string &amp;testName)</div><div class="ttdoc">Run test by name.</div></div>
-<div class="ttc" id="aclassPt_1_1Unit_1_1Application_html"><div class="ttname"><a href="classPt_1_1Unit_1_1Application.html">Pt::Unit::Application</a></div><div class="ttdoc">Run registered tests.</div><div class="ttdef"><b>Definition:</b> Application.h:65</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1Application_html"><div class="ttname"><a href="classPt_1_1Unit_1_1Application.html">Pt::Unit::Application</a></div><div class="ttdoc">Run registered tests.</div><div class="ttdef"><b>Definition:</b> Application.h:81</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1Application_html_a3c51182d4b502f53df2ec6e2d89316a8"><div class="ttname"><a href="classPt_1_1Unit_1_1Application.html#a3c51182d4b502f53df2ec6e2d89316a8">Pt::Unit::Application::attachReporter</a></div><div class="ttdeci">void attachReporter(Reporter &amp;r)</div><div class="ttdoc">Add reporter for test events.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

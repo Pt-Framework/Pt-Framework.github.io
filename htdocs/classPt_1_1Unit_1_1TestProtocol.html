@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TestProtocol Class Reference</div>  </div>
+<div class="title">TestProtocol Class Reference<div class="ingroups"><a class="el" href="group__Pt-Unit.html">Unit Testing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -105,8 +105,36 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:ae78c39ca00150602f1efa6a145971a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the base class for protocols that can be used to run a test suite. The default implementation will simply run each registered test of the test suite without passing it any data. Implementors need to override the method <a class="el" href="classPt_1_1Unit_1_1TestProtocol.html#ae78c39ca00150602f1efa6a145971a34" title="Executes the protocol.">TestProtocol::run</a>. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>This is the base class for protocols that can be used to run a test suite. The default implementation will simply run each registered test of the test suite without passing it any data. Implementors need to override the method TestProtocol::run to control the order and frequency of test method execution. This is useful to repeat tests, interleave them with waits, or implement stress-test patterns.</p>
+<p>A protocol is assigned to a TestSuite through the constructor or via TestSuite::setProtocol().</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>RetryProtocol : <span class="keyword">public</span> <a class="code" href="classPt_1_1Unit_1_1TestProtocol.html">Pt::Unit::TestProtocol</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestProtocol.html#ae78c39ca00150602f1efa6a145971a34">run</a>(<a class="code" href="classPt_1_1Unit_1_1TestSuite.html">Pt::Unit::TestSuite</a>&amp; suite)</div>
+<div class="line">    {</div>
+<div class="line">        suite.<a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a64f8c1b406c4134f9ccbbcd129c08f0a">runTest</a>(<span class="stringliteral">&quot;Connect&quot;</span>);</div>
+<div class="line">        suite.<a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a64f8c1b406c4134f9ccbbcd129c08f0a">runTest</a>(<span class="stringliteral">&quot;Connect&quot;</span>);</div>
+<div class="line">        suite.<a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a64f8c1b406c4134f9ccbbcd129c08f0a">runTest</a>(<span class="stringliteral">&quot;Connect&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p><a class="el" href="classPt_1_1Unit_1_1Test.html" title="Test base class">Test</a> methods in a TestSuite can also take arguments for data-driven testing. The protocol calls TestSuite::runTest() with Pt::SerializationInfo objects to pass different data each time.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MathProtocol : <span class="keyword">public</span> <a class="code" href="classPt_1_1Unit_1_1TestProtocol.html">Pt::Unit::TestProtocol</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestProtocol.html#ae78c39ca00150602f1efa6a145971a34">run</a>(<a class="code" href="classPt_1_1Unit_1_1TestSuite.html">Pt::Unit::TestSuite</a>&amp; suite)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="classPt_1_1SerializationInfo.html">Pt::SerializationInfo</a> data[2];</div>
+<div class="line"> </div>
+<div class="line">        data[0] &lt;&lt;= 4;</div>
+<div class="line">        data[1] &lt;&lt;= 9;</div>
+<div class="line">        suite.<a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a64f8c1b406c4134f9ccbbcd129c08f0a">runTest</a>(<span class="stringliteral">&quot;MathTest::Addition&quot;</span>, data, 2);</div>
+<div class="line"> </div>
+<div class="line">        data[0] &lt;&lt;= 13;</div>
+<div class="line">        data[1] &lt;&lt;= 2;</div>
+<div class="line">        suite.<a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a64f8c1b406c4134f9ccbbcd129c08f0a">runTest</a>(<span class="stringliteral">&quot;MathTest::Addition&quot;</span>, data, 2);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae78c39ca00150602f1efa6a145971a34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae78c39ca00150602f1efa6a145971a34">&#9670;&nbsp;</a></span>run()</h2>
 
@@ -143,6 +171,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Unit_1_1TestProtocol_html_ae78c39ca00150602f1efa6a145971a34"><div class="ttname"><a href="classPt_1_1Unit_1_1TestProtocol.html#ae78c39ca00150602f1efa6a145971a34">Pt::Unit::TestProtocol::run</a></div><div class="ttdeci">virtual void run(TestSuite &amp;test)</div><div class="ttdoc">Executes the protocol.</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1TestProtocol_html"><div class="ttname"><a href="classPt_1_1Unit_1_1TestProtocol.html">Pt::Unit::TestProtocol</a></div><div class="ttdoc">Protocol for test suites.</div><div class="ttdef"><b>Definition:</b> TestProtocol.h:93</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1TestSuite_html"><div class="ttname"><a href="classPt_1_1Unit_1_1TestSuite.html">Pt::Unit::TestSuite</a></div><div class="ttdoc">Protocol and data driven testing.</div><div class="ttdef"><b>Definition:</b> TestSuite.h:84</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1TestSuite_html_a64f8c1b406c4134f9ccbbcd129c08f0a"><div class="ttname"><a href="classPt_1_1Unit_1_1TestSuite.html#a64f8c1b406c4134f9ccbbcd129c08f0a">Pt::Unit::TestSuite::runTest</a></div><div class="ttdeci">void runTest(const std::string &amp;name, const SerializationInfo *args=0, std::size_t argCount=0)</div><div class="ttdoc">Runs a registered test.</div></div>
+<div class="ttc" id="aclassPt_1_1SerializationInfo_html"><div class="ttname"><a href="classPt_1_1SerializationInfo.html">Pt::SerializationInfo</a></div><div class="ttdoc">Represents arbitrary types during serialization.</div><div class="ttdef"><b>Definition:</b> SerializationInfo.h:59</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Assertion Class Reference</div>  </div>
+<div class="title">Assertion Class Reference<div class="ingroups"><a class="el" href="group__Pt-Unit.html">Unit Testing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,11 +103,24 @@ const <a class="el" href="classPt_1_1SourceInfo.html">Pt::SourceInfo</a> &amp;&#
 <tr class="separator:a052afc64df1888be8cc363733a1530db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Assertions are modeled as an exception type, which is thrown by <a class="el" href="namespacePt_1_1Unit.html" title="Protocol and data driven Unit-testing.">Unit</a> tests when an assertion has failed. This class implements std::exception and overrides std::exception::what() to return an error message Besides the error message, Assertions can provide information where the exception was raised in the source code through a <a class="el" href="classPt_1_1SourceInfo.html" title="Source code info class.">SourceInfo</a> object. It is recommended to use the PT_UNIT_ASSERT for easy creation from a source info object.</p>
+<div class="textblock"><p>Assertions are modeled as an exception type, which is thrown by <a class="el" href="namespacePt_1_1Unit.html" title="Protocol and data driven unit testing framework.">Unit</a> tests when an assertion has failed. This class implements std::exception and overrides std::exception::what() to return an error message Besides the error message, Assertions can provide information where the exception was raised in the source code through a <a class="el" href="classPt_1_1SourceInfo.html" title="Source code info class.">SourceInfo</a> object. It is recommended to use the PT_UNIT_ASSERT for easy creation from a source info object.</p>
+<p>The following assertion macros are available:</p>
+<ul>
+<li><a class="el" href="group__Pt-Unit.html#gaa2a9f9a920fd54a49e1b8d8ec60cf8f5" title="Asserts that a condition is true.">PT_UNIT_ASSERT(cond)</a> — asserts that the condition is true.</li>
+<li><a class="el" href="group__Pt-Unit.html#ga139b236155a65e48217dfacbc4e4e7d0" title="Asserts that a condition is true with a custom message.">PT_UNIT_ASSERT_MSG(cond, msg)</a> — asserts with a custom message.</li>
+<li><a class="el" href="group__Pt-Unit.html#ga0ae0d5077c8653ab73af76bdc5243974" title="Asserts that two values are equal.">PT_UNIT_ASSERT_EQUAL(a, b)</a> — asserts that a == b, printing both values on failure.</li>
+<li><a class="el" href="group__Pt-Unit.html#gaf81fe90705f50213a1742d848ddfe8d5" title="Asserts that two floating-point values are approximately equal.">PT_UNIT_ASSERT_NEAR(a, b)</a> — asserts that two floating-point values are approximately equal within a relative tolerance.</li>
+<li><a class="el" href="group__Pt-Unit.html#ga15c791624c31d18ceaaa779aff252f13" title="Asserts that an expression throws a specific exception.">PT_UNIT_ASSERT_THROW(expr, ExType)</a> — asserts that expr throws an exception of type ExType.</li>
+<li><a class="el" href="group__Pt-Unit.html#gab5903d61d0e9a566b388df67efbc2874" title="Asserts that an expression does not throw.">PT_UNIT_ASSERT_NOTHROW(expr)</a> — asserts that expr does not throw.</li>
+<li><a class="el" href="group__Pt-Unit.html#ga256dfa99f9df715a8632f5000735ef98" title="Fails unconditionally with a message.">PT_UNIT_FAIL(msg)</a> — fails unconditionally with a message.</li>
+</ul>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> myTest()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordtype">int</span> ten = 5 + 5;</div>
-<div class="line">    PT_UNIT_ASSERT(ten == 10)</div>
+<div class="line">    <a class="code" href="group__Pt-Unit.html#gaa2a9f9a920fd54a49e1b8d8ec60cf8f5">PT_UNIT_ASSERT</a>(5 + 5 == 10);</div>
+<div class="line">    <a class="code" href="group__Pt-Unit.html#ga0ae0d5077c8653ab73af76bdc5243974">PT_UNIT_ASSERT_EQUAL</a>(std::stoi(<span class="stringliteral">&quot;42&quot;</span>), 42);</div>
+<div class="line">    <a class="code" href="group__Pt-Unit.html#gaf81fe90705f50213a1742d848ddfe8d5">PT_UNIT_ASSERT_NEAR</a>(1.0 / 3.0, 0.333333);</div>
+<div class="line">    <a class="code" href="group__Pt-Unit.html#ga15c791624c31d18ceaaa779aff252f13">PT_UNIT_ASSERT_THROW</a>(std::stoi(<span class="stringliteral">&quot;abc&quot;</span>), std::exception);</div>
+<div class="line">    <a class="code" href="group__Pt-Unit.html#gab5903d61d0e9a566b388df67efbc2874">PT_UNIT_ASSERT_NOTHROW</a>(std::stoi(<span class="stringliteral">&quot;7&quot;</span>));</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a77867f968eea0c3b2fe20934914d5587"></a>
@@ -147,6 +160,11 @@ const <a class="el" href="classPt_1_1SourceInfo.html">Pt::SourceInfo</a> &amp;&#
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="agroup__Pt-Unit_html_gaa2a9f9a920fd54a49e1b8d8ec60cf8f5"><div class="ttname"><a href="group__Pt-Unit.html#gaa2a9f9a920fd54a49e1b8d8ec60cf8f5">PT_UNIT_ASSERT</a></div><div class="ttdeci">#define PT_UNIT_ASSERT(cond)</div><div class="ttdoc">Asserts that a condition is true.</div><div class="ttdef"><b>Definition:</b> Assertion.h:118</div></div>
+<div class="ttc" id="agroup__Pt-Unit_html_gaf81fe90705f50213a1742d848ddfe8d5"><div class="ttname"><a href="group__Pt-Unit.html#gaf81fe90705f50213a1742d848ddfe8d5">PT_UNIT_ASSERT_NEAR</a></div><div class="ttdeci">#define PT_UNIT_ASSERT_NEAR(value1, value2)</div><div class="ttdoc">Asserts that two floating-point values are approximately equal.</div><div class="ttdef"><b>Definition:</b> Assertion.h:190</div></div>
+<div class="ttc" id="agroup__Pt-Unit_html_ga0ae0d5077c8653ab73af76bdc5243974"><div class="ttname"><a href="group__Pt-Unit.html#ga0ae0d5077c8653ab73af76bdc5243974">PT_UNIT_ASSERT_EQUAL</a></div><div class="ttdeci">#define PT_UNIT_ASSERT_EQUAL(value1, value2)</div><div class="ttdoc">Asserts that two values are equal.</div><div class="ttdef"><b>Definition:</b> Assertion.h:169</div></div>
+<div class="ttc" id="agroup__Pt-Unit_html_gab5903d61d0e9a566b388df67efbc2874"><div class="ttname"><a href="group__Pt-Unit.html#gab5903d61d0e9a566b388df67efbc2874">PT_UNIT_ASSERT_NOTHROW</a></div><div class="ttdeci">#define PT_UNIT_ASSERT_NOTHROW(cond)</div><div class="ttdoc">Asserts that an expression does not throw.</div><div class="ttdef"><b>Definition:</b> Assertion.h:245</div></div>
+<div class="ttc" id="agroup__Pt-Unit_html_ga15c791624c31d18ceaaa779aff252f13"><div class="ttname"><a href="group__Pt-Unit.html#ga15c791624c31d18ceaaa779aff252f13">PT_UNIT_ASSERT_THROW</a></div><div class="ttdeci">#define PT_UNIT_ASSERT_THROW(cond, EX)</div><div class="ttdoc">Asserts that an expression throws a specific exception.</div><div class="ttdef"><b>Definition:</b> Assertion.h:219</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

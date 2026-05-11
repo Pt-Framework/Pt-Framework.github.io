@@ -48654,6 +48654,77 @@
     <class kind="class">Pt::TextStream</class>
   </compound>
   <compound kind="group">
+    <name>Pt-Unit</name>
+    <title>Unit Testing</title>
+    <filename>group__Pt-Unit.html</filename>
+    <class kind="class">Pt::Unit::Application</class>
+    <class kind="class">Pt::Unit::Assertion</class>
+    <class kind="struct">Pt::Unit::RegisterTest</class>
+    <class kind="class">Pt::Unit::Reporter</class>
+    <class kind="class">Pt::Unit::Test</class>
+    <class kind="class">Pt::Unit::TestCase</class>
+    <class kind="class">Pt::Unit::TestContext</class>
+    <class kind="class">Pt::Unit::TestFixture</class>
+    <class kind="class">Pt::Unit::TestProtocol</class>
+    <class kind="class">Pt::Unit::TestSuite</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>gaa2a9f9a920fd54a49e1b8d8ec60cf8f5</anchor>
+      <arglist>(cond)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_MSG</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga139b236155a65e48217dfacbc4e4e7d0</anchor>
+      <arglist>(cond, what)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_EQUALS</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga2f193b97e6bcef318cc3dd063c810bcc</anchor>
+      <arglist>(value1, value2)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_EQUAL</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga0ae0d5077c8653ab73af76bdc5243974</anchor>
+      <arglist>(value1, value2)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_NEAR</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>gaf81fe90705f50213a1742d848ddfe8d5</anchor>
+      <arglist>(value1, value2)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_THROW</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga15c791624c31d18ceaaa779aff252f13</anchor>
+      <arglist>(cond, EX)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_NOTHROW</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>gab5903d61d0e9a566b388df67efbc2874</anchor>
+      <arglist>(cond)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_FAIL</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga256dfa99f9df715a8632f5000735ef98</anchor>
+      <arglist>(what)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
     <name>Utilities</name>
     <title>Utilities</title>
     <filename>group__Utilities.html</filename>
@@ -48979,6 +49050,18 @@
     <docanchor file="Pt-Gfx-Drawing-Page.html" title="Text and FontMetrics">Pt-Gfx-Drawing-Page-Text</docanchor>
   </compound>
   <compound kind="page">
+    <name>Pt-Unit-Page</name>
+    <title>Unit Testing</title>
+    <filename>Pt-Unit-Page.html</filename>
+    <docanchor file="Pt-Unit-Page.html" title="Simple Test Cases">Pt-Unit-Page-TestCase</docanchor>
+    <docanchor file="Pt-Unit-Page.html" title="Test Suites">Pt-Unit-Page-TestSuite</docanchor>
+    <docanchor file="Pt-Unit-Page.html" title="Assertion Macros">Pt-Unit-Page-Assertion</docanchor>
+    <docanchor file="Pt-Unit-Page.html" title="Protocol and Data-Driven Testing">Pt-Unit-Page-TestProtocol</docanchor>
+    <docanchor file="Pt-Unit-Page.html" title="Automatic Test Registration">Pt-Unit-Page-RegisterTest</docanchor>
+    <docanchor file="Pt-Unit-Page.html" title="Running Test Applications">Pt-Unit-Page-Application</docanchor>
+    <docanchor file="Pt-Unit-Page.html" title="Reporting Test Results">Pt-Unit-Page-Reporter</docanchor>
+  </compound>
+  <compound kind="page">
     <name>reading</name>
     <title>Recommended Reading</title>
     <filename>reading.html</filename>
@@ -49039,16 +49122,6 @@
     <docanchor file="tutorial.html" title="Adding Jam Support">JamTutorialJambase</docanchor>
     <docanchor file="tutorial.html" title="Building Programs">JamTutorialBuildPrograms</docanchor>
     <docanchor file="tutorial.html" title="Cleaning the Build">JamTutorialClean</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>unittest</name>
-    <title>Unit Testing</title>
-    <filename>unittest.html</filename>
-    <docanchor file="unittest.html" title="A Simple Test Case">unittest_SimpleTests</docanchor>
-    <docanchor file="unittest.html" title="Build System Integration">unittest_BuildSystemIntegration</docanchor>
-    <docanchor file="unittest.html" title="Data Driven Testing">unittest_DataDrivenTesting</docanchor>
-    <docanchor file="unittest.html" title="Protocol Driven Testing">unittest_ProtocolDrivenTesting</docanchor>
-    <docanchor file="unittest.html" title="Running Tests">unittest_RunningTests</docanchor>
   </compound>
   <compound kind="page">
     <name>utilities</name>

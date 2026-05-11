@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TestCase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">TestCase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Unit.html">Unit Testing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -166,29 +166,31 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A TestCase can be used for simple tests that require a initialization and deinitialization of resources. The implementor is supposed to implement the abstract method 'test' and the methods 'setUp' and 'tearDown' for resource management. When the test is run, 'setUp' will be called first, then 'test' and finally 'tearDown'.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>MyTest : <span class="keyword">public</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#a51a16e1c96f0b7782974011e65ddbf8c">TestCase</a></div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyTest : <span class="keyword">public</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html">Pt::Unit::TestCase</a></div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        MyTest()</div>
-<div class="line">        : <a class="code" href="classPt_1_1Unit_1_1TestCase.html#a51a16e1c96f0b7782974011e65ddbf8c">TestCase</a>(<span class="stringliteral">&quot;MyTest&quot;</span>)</div>
-<div class="line">        {}</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    MyTest()</div>
+<div class="line">    : <a class="code" href="namespacePt.html">Pt</a>::Unit::<a class="code" href="classPt_1_1Unit_1_1TestCase.html#a51a16e1c96f0b7782974011e65ddbf8c">TestCase</a>(<span class="stringliteral">&quot;MyTest&quot;</span>)</div>
+<div class="line">    {}</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#a7e11a8ae92c046f17559db9a40055941">setUp</a>()</div>
-<div class="line">        {</div>
-<div class="line">            <span class="comment">// init resource</span></div>
-<div class="line">        }</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#a7e11a8ae92c046f17559db9a40055941">setUp</a>()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// init resource</span></div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#ae409c34c6767ff70d1e29a46fe41dfff">tearDown</a>()</div>
-<div class="line">        {</div>
-<div class="line">            <span class="comment">// release resource</span></div>
-<div class="line">        }</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#ae409c34c6767ff70d1e29a46fe41dfff">tearDown</a>()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// release resource</span></div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#a7c0b34520ff7d3c0a9c821b2e21908be">test</a>()</div>
-<div class="line">        {</div>
-<div class="line">            <span class="comment">// test code using a resourc</span></div>
-<div class="line">        }</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Unit_1_1TestCase.html#a7c0b34520ff7d3c0a9c821b2e21908be">test</a>()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// test code using a resource</span></div>
+<div class="line">    }</div>
 <div class="line">};</div>
-</div><!-- fragment --><p>Once the test is written it can be registered to an application by using the <a class="el" href="structPt_1_1Unit_1_1RegisterTest.html" title="Registers tests to an application.">RegisterTest</a> class template. </p>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <a class="code" href="structPt_1_1Unit_1_1RegisterTest.html">Pt::Unit::RegisterTest&lt;MyTest&gt;</a> _reg;</div>
+</div><!-- fragment --><p>Once the test is written it can be registered to an application by using the RegisterTest class template. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51a16e1c96f0b7782974011e65ddbf8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51a16e1c96f0b7782974011e65ddbf8c">&#9670;&nbsp;</a></span>TestCase()</h2>
@@ -455,9 +457,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> pt-gfx-images.dox:16</div></div>
 <div class="ttc" id="aclassPt_1_1Unit_1_1TestCase_html_a7c0b34520ff7d3c0a9c821b2e21908be"><div class="ttname"><a href="classPt_1_1Unit_1_1TestCase.html#a7c0b34520ff7d3c0a9c821b2e21908be">Pt::Unit::TestCase::test</a></div><div class="ttdeci">virtual void test()=0</div><div class="ttdoc">Implements the actual test procedure When the test is run, this method will be called after setUp and...</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1TestCase_html"><div class="ttname"><a href="classPt_1_1Unit_1_1TestCase.html">Pt::Unit::TestCase</a></div><div class="ttdoc">Single test with setup and teardown.</div><div class="ttdef"><b>Definition:</b> TestCase.h:82</div></div>
 <div class="ttc" id="aclassPt_1_1Unit_1_1TestCase_html_a51a16e1c96f0b7782974011e65ddbf8c"><div class="ttname"><a href="classPt_1_1Unit_1_1TestCase.html#a51a16e1c96f0b7782974011e65ddbf8c">Pt::Unit::TestCase::TestCase</a></div><div class="ttdeci">TestCase(const std::string &amp;name)</div><div class="ttdoc">Construct by name.</div></div>
 <div class="ttc" id="aclassPt_1_1Unit_1_1TestCase_html_ae409c34c6767ff70d1e29a46fe41dfff"><div class="ttname"><a href="classPt_1_1Unit_1_1TestCase.html#ae409c34c6767ff70d1e29a46fe41dfff">Pt::Unit::TestCase::tearDown</a></div><div class="ttdeci">virtual void tearDown()</div><div class="ttdoc">Clean up after the test run.</div></div>
+<div class="ttc" id="astructPt_1_1Unit_1_1RegisterTest_html"><div class="ttname"><a href="structPt_1_1Unit_1_1RegisterTest.html">Pt::Unit::RegisterTest</a></div><div class="ttdoc">Registers tests to an application.</div><div class="ttdef"><b>Definition:</b> RegisterTest.h:59</div></div>
 <div class="ttc" id="aclassPt_1_1Unit_1_1TestCase_html_a7e11a8ae92c046f17559db9a40055941"><div class="ttname"><a href="classPt_1_1Unit_1_1TestCase.html#a7e11a8ae92c046f17559db9a40055941">Pt::Unit::TestCase::setUp</a></div><div class="ttdeci">virtual void setUp()</div><div class="ttdoc">Set up conText before running a test.</div></div>
 
 <div class="clear">&nbsp;</div>

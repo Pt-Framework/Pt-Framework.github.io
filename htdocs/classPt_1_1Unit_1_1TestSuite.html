@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TestSuite Class Reference</div>  </div>
+<div class="title">TestSuite Class Reference<div class="ingroups"><a class="el" href="group__Pt-Unit.html">Unit Testing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -172,19 +172,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The TestSuite is used to implement protocol and data driven tests. It inherits its ability to register methods and properties from Reflectable. The implementor is supposed to write and register the required test methods on construction.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>MyTest : <span class="keyword">public</span> <a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a4d21338d3d5c05c85fedfb7f3b13105c">TestSuite</a></div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyTest : <span class="keyword">public</span> <a class="code" href="classPt_1_1Unit_1_1TestSuite.html">Pt::Unit::TestSuite</a></div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        MyTest()</div>
-<div class="line">        : <a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a4d21338d3d5c05c85fedfb7f3b13105c">TestSuite</a>(<span class="stringliteral">&quot;MyTest&quot;</span>)</div>
-<div class="line">        {</div>
-<div class="line">            this-&gt;registerMethod(<span class="stringliteral">&quot;test1&quot;</span>, *<span class="keyword">this</span>, &amp;MyTest::test1);</div>
-<div class="line">        }</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    MyTest()</div>
+<div class="line">    : <a class="code" href="namespacePt.html">Pt</a>::Unit::<a class="code" href="classPt_1_1Unit_1_1TestSuite.html#a4d21338d3d5c05c85fedfb7f3b13105c">TestSuite</a>(<span class="stringliteral">&quot;MyTest&quot;</span>)</div>
+<div class="line">    {</div>
+<div class="line">        this-&gt;registerMethod(<span class="stringliteral">&quot;Run&quot;</span>, *<span class="keyword">this</span>, &amp;MyTest::Run);</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordtype">void</span> test1();</div>
+<div class="line">    <span class="keywordtype">void</span> Run()</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="group__Pt-Unit.html#gaa2a9f9a920fd54a49e1b8d8ec60cf8f5">PT_UNIT_ASSERT</a>(<span class="keyword">true</span>);</div>
+<div class="line">    }</div>
 <div class="line">};</div>
-</div><!-- fragment --><p>Once the test is written it can be registered to an application by using the <a class="el" href="structPt_1_1Unit_1_1RegisterTest.html" title="Registers tests to an application.">RegisterTest</a> class template.</p>
-<p>The default protocol will run each registered test method when the test is run. Before each test method setUp is called and tearDown after each test. The <a class="el" href="classPt_1_1Unit_1_1TestProtocol.html" title="Protocol for test suites.">TestProtocol</a> can be replaced with a customised one and reflection can be used to call any method multiple times with the required data. </p>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <a class="code" href="structPt_1_1Unit_1_1RegisterTest.html">Pt::Unit::RegisterTest&lt;MyTest&gt;</a> _reg;</div>
+</div><!-- fragment --><p>Once the test is written it can be registered to an application by using the RegisterTest class template. Include TestMain.h in exactly one source file to provide a main() function.</p>
+<p>The default protocol will run each registered test method when the test is run. Before each test method setUp() is called and tearDown() after each test. The TestProtocol can be replaced with a customised one and reflection can be used to call any method multiple times with the required data. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4d21338d3d5c05c85fedfb7f3b13105c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d21338d3d5c05c85fedfb7f3b13105c">&#9670;&nbsp;</a></span>TestSuite()</h2>
@@ -541,7 +546,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> pt-gfx-images.dox:16</div></div>
+<div class="ttc" id="agroup__Pt-Unit_html_gaa2a9f9a920fd54a49e1b8d8ec60cf8f5"><div class="ttname"><a href="group__Pt-Unit.html#gaa2a9f9a920fd54a49e1b8d8ec60cf8f5">PT_UNIT_ASSERT</a></div><div class="ttdeci">#define PT_UNIT_ASSERT(cond)</div><div class="ttdoc">Asserts that a condition is true.</div><div class="ttdef"><b>Definition:</b> Assertion.h:118</div></div>
+<div class="ttc" id="aclassPt_1_1Unit_1_1TestSuite_html"><div class="ttname"><a href="classPt_1_1Unit_1_1TestSuite.html">Pt::Unit::TestSuite</a></div><div class="ttdoc">Protocol and data driven testing.</div><div class="ttdef"><b>Definition:</b> TestSuite.h:84</div></div>
 <div class="ttc" id="aclassPt_1_1Unit_1_1TestSuite_html_a4d21338d3d5c05c85fedfb7f3b13105c"><div class="ttname"><a href="classPt_1_1Unit_1_1TestSuite.html#a4d21338d3d5c05c85fedfb7f3b13105c">Pt::Unit::TestSuite::TestSuite</a></div><div class="ttdeci">TestSuite(const std::string &amp;name, TestProtocol &amp;protocol=TestSuite::defaultProtocol)</div><div class="ttdoc">Construct by name and protocol.</div></div>
+<div class="ttc" id="astructPt_1_1Unit_1_1RegisterTest_html"><div class="ttname"><a href="structPt_1_1Unit_1_1RegisterTest.html">Pt::Unit::RegisterTest</a></div><div class="ttdoc">Registers tests to an application.</div><div class="ttdef"><b>Definition:</b> RegisterTest.h:59</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

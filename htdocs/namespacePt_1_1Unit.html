@@ -87,7 +87,7 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module provides a complete framework for effective Unit testing. Data-driven, as well as and protocol-driven testing is possible. Unit tests can easily be integrated into the build process and test results can be reported and logged. The output format for reports and logs is configurable. </p>
+<div class="textblock"><p>The Pt::Unit module provides a complete framework for effective unit testing. Simple tests are implemented by deriving from TestCase, multi-method suites by deriving from TestSuite. Setup and teardown of resources is provided by the TestFixture interface. <a class="el" href="classPt_1_1Unit_1_1Test.html" title="Test base class">Test</a> conditions are verified through the Assertion class and the PT_UNIT_ASSERT macros. Execution order and data-driven repetition are controlled by a TestProtocol. Tests are auto-registered with RegisterTest and run by the Application class, which reports results through Reporter. A ready-made main() function is available by including TestMain.h. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
