@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>ActiveProcedure&lt; R, ARGS &gt; Class Template Reference</title>
+  <title>ActiveProcedure&lt; R, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10 &gt; Class Template Reference</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -84,11 +84,11 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ActiveProcedure&lt; R, ARGS &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ActiveProcedure&lt; R, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10 &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="include_2Pt_2Remoting_2ActiveProcedure_8h_source.html">Pt/Remoting/ActiveProcedure.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ActiveProcedure_8h_source.html">Pt/Remoting/ActiveProcedure.h</a>&gt;</code></p>
 
 <p>Asynchronous service procedure.  
  <a href="classPt_1_1Remoting_1_1ActiveProcedure.html#details">More...</a></p>
@@ -122,11 +122,11 @@ virtual const R &amp;&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <tr class="separator:a3d5095afa6e9282e101e69c7fd3f6830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename R, typename... ARGS&gt;<br />
-class Pt::Remoting::ActiveProcedure&lt; R, ARGS &gt;</h3>
+<div class="textblock"><h3>template&lt;typename R, typename A1 = Pt::Void, typename A2 = Pt::Void, typename A3 = Pt::Void, typename A4 = Pt::Void, typename A5 = Pt::Void, typename A6 = Pt::Void, typename A7 = Pt::Void, typename A8 = Pt::Void, typename A9 = Pt::Void, typename A10 = Pt::Void&gt;<br />
+class Pt::Remoting::ActiveProcedure&lt; R, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10 &gt;</h3>
 
 <p>Instances derived from this class are returned by the asynchronous service procedures registered in a Service. The template parameters imply the signature of the procedure. The first tempate parameter is the return value type, followed by the argument types, if any. For example, a ActiveProcedure&lt;double, int, int&gt; is a service procedure which returns a double and takes two ints as arguments. A ActiveProcedure&lt;std::string&gt; is a service procedure without arguments, only returning a std::string.</p>
-<p>The two methods <a class="el" href="classPt_1_1Remoting_1_1ActiveProcedure.html#a003495e9b147d0e31515619d9148f5a9" title="Start an asynchronous procedure.">onInvoke()</a> and <a class="el" href="classPt_1_1Remoting_1_1ActiveProcedure.html#a3d5095afa6e9282e101e69c7fd3f6830" title="Return result of the asynchronous procedure.">onResult()</a> need to be implemented. When a RPC request was received and dispatched to an asynchronous procedure, <a class="el" href="classPt_1_1Remoting_1_1ActiveProcedure.html#a003495e9b147d0e31515619d9148f5a9" title="Start an asynchronous procedure.">onInvoke()</a> is called with the deserialized arguments and an EventLoop to execute further asynchronous operations such as I/O. It is the task of the implementer to advance progress of the procedure until a result is ready. By calling <a class="el" href="classPt_1_1Remoting_1_1ServiceProcedure.html#aa70e4661651376db02803dde8117e8e0" title="Indicates that the procedure has finished.">setReady()</a>, the <a class="el" href="classPt_1_1Remoting_1_1Responder.html" title="Dispatches requests to a service procedure.">Responder</a> will be notified of the completion and call <a class="el" href="classPt_1_1Remoting_1_1ActiveProcedure.html#a3d5095afa6e9282e101e69c7fd3f6830" title="Return result of the asynchronous procedure.">onResult()</a> to get the result and serialize it. Both methods may throw exceptions of type <a class="el" href="classPt_1_1Remoting_1_1Fault.html" title="Remoting fault exception.">Fault</a> to indicate failure. </p>
+<p>The two methods onInvoke() and onResult() need to be implemented. When a RPC request was received and dispatched to an asynchronous procedure, onInvoke() is called with the deserialized arguments and an EventLoop to execute further asynchronous operations such as I/O. It is the task of the implementer to advance progress of the procedure until a result is ready. By calling <a class="el" href="classPt_1_1Remoting_1_1ServiceProcedure.html#aa70e4661651376db02803dde8117e8e0" title="Indicates that the procedure has finished.">setReady()</a>, the <a class="el" href="classPt_1_1Remoting_1_1Responder.html" title="Dispatches requests to a service procedure.">Responder</a> will be notified of the completion and call onResult() to get the result and serialize it. Both methods may throw exceptions of type <a class="el" href="classPt_1_1Remoting_1_1Fault.html" title="Remoting fault exception.">Fault</a> to indicate failure. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

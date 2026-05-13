@@ -37,7 +37,16 @@
     <name>Pt::Remoting::ActiveProcedure</name>
     <filename>classPt_1_1Remoting_1_1ActiveProcedure.html</filename>
     <templarg></templarg>
-    <templarg>ARGS</templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
     <base>Pt::Remoting::ServiceProcedure</base>
     <member kind="function">
       <type></type>
@@ -2461,298 +2470,6 @@
       <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
       <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
       <arglist>(A1 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A10 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A10 &amp;type)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -5652,6 +5369,298 @@
       <type>Composer *</type>
       <name>onFinish</name>
       <anchorfile>classPt_1_1BasicComposer_3_01Pt_1_1SerializationInfo_01_4.html</anchorfile>
+      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>BasicComposer&lt; Pt::Void &gt;</name>
+    <filename>classPt_1_1BasicComposer.html</filename>
+    <base>Pt::Composer</base>
+    <member kind="function">
+      <type></type>
+      <name>BasicComposer</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
+      <arglist>(SerializationContext *context=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>begin</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
+      <arglist>(Pt::Void &amp;type)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setParent</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
+      <arglist>(Composer *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTypeName</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
+      <arglist>(const std::string &amp;type)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTypeName</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
+      <arglist>(const char *type, std::size_t len)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setId</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setId</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a376e73f9675db287534c20cce953f151</anchor>
+      <arglist>(const char *id, std::size_t len)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setString</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
+      <arglist>(const Pt::String &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setString</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
+      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBinary</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
+      <arglist>(const char *data, std::size_t length)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setChar</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
+      <arglist>(const Pt::Char &amp;ch)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBool</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
+      <arglist>(bool value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setInt</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
+      <arglist>(Pt::int64_t value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setUInt</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
+      <arglist>(Pt::int64_t value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFloat</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
+      <arglist>(long double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setReference</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setReference</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
+      <arglist>(const char *id, std::size_t len)</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>beginMember</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>beginMember</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>aa132348585e852db9bcd66923db66071</anchor>
+      <arglist>(const char *name, std::size_t len)</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>beginElement</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>beginDictElement</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>beginDictKey</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>beginDictValue</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Composer *</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Composer.html</anchorfile>
+      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetId</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
+      <arglist>(const char *id, std::size_t len)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetTypeName</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
+      <arglist>(const char *type, std::size_t len)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetString</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
+      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetBinary</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
+      <arglist>(const char *data, std::size_t length)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetChar</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
+      <arglist>(const Pt::Char &amp;ch)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetBool</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a280b308117328a522588b23e50b566b0</anchor>
+      <arglist>(bool value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetInt</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
+      <arglist>(Pt::int64_t value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetUInt</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
+      <arglist>(Pt::uint64_t value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetFloat</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
+      <arglist>(long double value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onSetReference</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
+      <arglist>(const char *id, std::size_t len)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Composer *</type>
+      <name>onBeginMember</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
+      <arglist>(const char *name, std::size_t len)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Composer *</type>
+      <name>onBeginElement</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Composer *</type>
+      <name>onBeginDictElement</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Composer *</type>
+      <name>onBeginDictKey</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Composer *</type>
+      <name>onBeginDictValue</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
+      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Composer *</type>
+      <name>onFinish</name>
+      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
       <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
       <arglist>()</arglist>
     </member>
@@ -19699,6 +19708,106 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::JsonRpc::Fault</name>
+    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
+    <base>Pt::Remoting::Fault</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorCodes</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
+      <arglist>(const std::string &amp;msg, int ec)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
+      <arglist>(const char *msg, int rc)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>code</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::XmlRpc::Fault</name>
     <filename>classPt_1_1XmlRpc_1_1Fault.html</filename>
     <base>Pt::Remoting::Fault</base>
@@ -19855,106 +19964,6 @@
       <name>rc</name>
       <anchorfile>classPt_1_1XmlRpc_1_1Fault.html</anchorfile>
       <anchor>ac66b30f37d7df8c9bccc0b913d90bf16</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::JsonRpc::Fault</name>
-    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
-    <base>Pt::Remoting::Fault</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>ErrorCodes</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
-      <arglist>(const std::string &amp;msg, int ec)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
-      <arglist>(const char *msg, int rc)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>code</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -27499,67 +27508,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PaintContext</name>
-    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
-    <base>Pt::Gfx::PaintContext</base>
-    <member kind="function">
-      <type></type>
-      <name>~PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::ImageFormat &amp;</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::SizeF &amp;</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Scaling &amp;</type>
-      <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Canvas *</type>
-      <name>getCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
-      <arglist>(Canvas *canvas)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetachSurface</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
-      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Gfx::PaintContext</name>
     <filename>classPt_1_1Gfx_1_1PaintContext.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -27625,6 +27573,67 @@
       <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
       <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::PaintContext</name>
+    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
+    <base>Pt::Gfx::PaintContext</base>
+    <member kind="function">
+      <type></type>
+      <name>~PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::ImageFormat &amp;</type>
+      <name>format</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Scaling &amp;</type>
+      <name>scaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Canvas *</type>
+      <name>getCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
+      <arglist>(Canvas *canvas)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
+      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31891,6 +31900,87 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Http::Responder</name>
+    <filename>classPt_1_1Http_1_1Responder.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Responder</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a63d50035309ce5e9d88850cc910d8255</anchor>
+      <arglist>(Service &amp;s)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Responder</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>readRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ac42e9083a591870e368f493985579698</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onWriteReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::XmlRpc::Responder</name>
     <filename>classPt_1_1XmlRpc_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
@@ -32164,87 +32254,6 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Http::Responder</name>
-    <filename>classPt_1_1Http_1_1Responder.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Responder</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a63d50035309ce5e9d88850cc910d8255</anchor>
-      <arglist>(Service &amp;s)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Responder</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Service &amp;</type>
-      <name>service</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Service &amp;</type>
-      <name>service</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>readRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>writeReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>ac42e9083a591870e368f493985579698</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onWriteReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38754,53 +38763,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::String</name>
-    <filename>classPt_1_1Json_1_1String.html</filename>
-    <base>Pt::Json::Node</base>
-    <member kind="function">
-      <type></type>
-      <name>String</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>a8db865e64c3c3f65ec6a0b6fd8c09a94</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
-      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>String *</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>a47531c63b26049e4d47184ef6c41585c</anchor>
-      <arglist>(Node *node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const String *</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>ac9504fb3a1d233ad20e7f7357df09e62</anchor>
-      <arglist>(const Node *node)</arglist>
-    </member>
-    <member kind="function">
-      <type>String &amp;</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>aa5529f10aa20b1cc104e618b5f58d3e8</anchor>
-      <arglist>(Node &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const String &amp;</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>ae1831e5810000c10a9c6346fb5080830</anchor>
-      <arglist>(const Node &amp;node)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::String</name>
     <filename>classPt_1_1String.html</filename>
     <member kind="function">
@@ -40002,6 +39964,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Json::String</name>
+    <filename>classPt_1_1Json_1_1String.html</filename>
+    <base>Pt::Json::Node</base>
+    <member kind="function">
+      <type></type>
+      <name>String</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>a8db865e64c3c3f65ec6a0b6fd8c09a94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Type</type>
+      <name>type</name>
+      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
+      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>String *</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>a47531c63b26049e4d47184ef6c41585c</anchor>
+      <arglist>(Node *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>const String *</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>ac9504fb3a1d233ad20e7f7357df09e62</anchor>
+      <arglist>(const Node *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>String &amp;</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>aa5529f10aa20b1cc104e618b5f58d3e8</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>const String &amp;</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>ae1831e5810000c10a9c6346fb5080830</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::StringBuffer</name>
     <filename>classPt_1_1StringBuffer.html</filename>
     <base>BasicStreamBuffer&lt; Char &gt;</base>
@@ -40256,39 +40265,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::SyntaxError</name>
-    <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
-    <base>Pt::Json::JsonError</base>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
-      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
-      <arglist>(const char *what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>line</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Xml::SyntaxError</name>
     <filename>classPt_1_1Xml_1_1SyntaxError.html</filename>
     <base>Pt::Xml::XmlError</base>
@@ -40317,6 +40293,39 @@
       <type>std::size_t</type>
       <name>line</name>
       <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
+      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Json::SyntaxError</name>
+    <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
+    <base>Pt::Json::JsonError</base>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
+      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
+      <arglist>(const char *what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>line</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
       <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
       <arglist>() const</arglist>
     </member>
