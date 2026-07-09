@@ -100,7 +100,7 @@ File Information</h1>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> tmp1(<span class="stringliteral">&quot;/tmp/tmpfile1&quot;</span>);</div>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> tmp2(<span class="stringliteral">&quot;/tmp/tmpfile2&quot;</span>);</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">// create a temporary file</span></div>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1FileInfo.html#a57a70d985c294c68ba8306a30128d071">Pt::System::FileInfo::createFile</a>(tmp1);</div>
 <div class="line"> </div>
@@ -126,7 +126,7 @@ Directory Contents</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span>( ; it != end; ++it)</div>
 <div class="line">    {</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;name : &quot;</span> &lt;&lt; it-&gt;<a class="code" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>().<a class="code" href="classPt_1_1System_1_1Path.html#a3ad37564bd9beaf86009056586572494">toLocal</a>() &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;name : &quot;</span> &lt;&lt; it-&gt;path().toLocal() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"><span class="keywordflow">catch</span>(<span class="keyword">const</span> <a class="code" href="classPt_1_1AccessFailed.html">Pt::System::AccessFailed</a>&amp; e)</div>
@@ -189,7 +189,6 @@ File I/O</h1>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html">Pt::System::FileInfo</a></div><div class="ttdoc">Provides information about a node in the file-system.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:104</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f">Pt::System::FileInfo::File</a></div><div class="ttdeci">@ File</div><div class="ttdoc">Regular file.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:111</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileDevice_html"><div class="ttname"><a href="classPt_1_1System_1_1FileDevice.html">Pt::System::FileDevice</a></div><div class="ttdoc">Read and write to files.</div><div class="ttdef"><b>Definition:</b> FileDevice.h:131</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_a09fd7c1a1f9e9a5c94fffa83bf1c99cf"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">Pt::System::FileInfo::path</a></div><div class="ttdeci">const Path &amp; path() const</div><div class="ttdoc">Returns the full path of node in the file-system.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:144</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_aee6cb622f8b2b5f552f99765d7375e42"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#aee6cb622f8b2b5f552f99765d7375e42">Pt::System::IODevice::outputReady</a></div><div class="ttdeci">Signal&lt; IODevice &amp; &gt; &amp; outputReady()</div><div class="ttdoc">Notifies when data can be written.</div><div class="ttdef"><b>Definition:</b> IODevice.h:167</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_ac8f45b5b51b6de820c32b05a7f9c31a5"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#ac8f45b5b51b6de820c32b05a7f9c31a5">Pt::System::FileInfo::move</a></div><div class="ttdeci">static void move(const Path &amp;path, const Path &amp;to)</div><div class="ttdoc">Moves a file or directory.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileDevice_html_a31733d5fb687a5778e4ff4571ba2051a"><div class="ttname"><a href="classPt_1_1System_1_1FileDevice.html#a31733d5fb687a5778e4ff4571ba2051a">Pt::System::FileDevice::beginOpen</a></div><div class="ttdeci">void beginOpen(const Path &amp;path, std::ios::openmode mode)</div><div class="ttdoc">Begin opening the file.</div></div>
@@ -202,7 +201,6 @@ File I/O</h1>
 <div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:67</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Selectable_html_a931676e60334ab733b848fa90dcb6dda"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">Pt::System::Selectable::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;parent)</div><div class="ttdoc">Sets the parent loop, so that operations can be run.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a5ec7d50df5d6301755f0f1580c75935b"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a5ec7d50df5d6301755f0f1580c75935b">Pt::System::IODevice::endWrite</a></div><div class="ttdeci">std::size_t endWrite()</div><div class="ttdoc">Ends writing data.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Path_html_a3ad37564bd9beaf86009056586572494"><div class="ttname"><a href="classPt_1_1System_1_1Path.html#a3ad37564bd9beaf86009056586572494">Pt::System::Path::toLocal</a></div><div class="ttdeci">std::string toLocal() const</div><div class="ttdoc">Returns the path name in local encoding.</div></div>
 <div class="ttc" id="aclassPt_1_1AccessFailed_html_aa289c12b935cbfd7fbd97d2622a6270b"><div class="ttname"><a href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">Pt::AccessFailed::resource</a></div><div class="ttdeci">const std::string &amp; resource() const</div><div class="ttdoc">Returns the ID of the inaccessible resource.</div><div class="ttdef"><b>Definition:</b> IOError.h:80</div></div>
 
 <div class="clear">&nbsp;</div>

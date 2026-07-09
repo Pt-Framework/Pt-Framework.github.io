@@ -109,6 +109,60 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">File-node type.  <a href="classPt_1_1System_1_1FileInfo.html#a1d1cfd8ffb84e947f82999c682b666a7">More...</a><br /></td></tr>
 <tr class="separator:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcfee5fc7879bcad411a3c93b6480b17"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Perms</a> { <br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17aae4c119c475ef7dc784921125bde3c3e">NoPerms</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17aa0102f90a144859f5e81dce52975e538">OwnerRead</a> = 0400, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17abb71a84eec237d275059bdf97e674003">OwnerWrite</a> = 0200, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a37ab089ec9d5ceb31ed8ac8a43e1ca6d">OwnerExec</a> = 0100, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a7b027bb2b565381e13fa5f2c573d3a08">OwnerAll</a> = 0700, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a52377b414591b4459d5049814ff51ddc">GroupRead</a> = 040, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17abd81c0a492dd78895d29f678a2d439a0">GroupWrite</a> = 020, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17abff3ecf7350826d88b20508eae999f42">GroupExec</a> = 010, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a612ad7b4c46cdf9ce86157379c5ffac6">GroupAll</a> = 070, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17ae84e09716952b8638b26363e408c8def">OthersRead</a> = 04, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a88b6688ce331286505f66aa7716a347d">OthersWrite</a> = 02, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a184e4aae1cb4d3e785bbb229fe7f988e">OthersExec</a> = 01, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17afb50b619d8c08ac9e73931a1675671cd">OthersAll</a> = 07, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a5a9227e4719f6313a5ee22a3bf29f4b9">AllPerms</a> = 0777, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a1119ca56292e6b32b358b1b54d3dc3eb">SetUid</a> = 04000, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a918eea81a5c1d7ae3c294cfc01da4977">SetGid</a> = 02000, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17ae04fb65a108117160fea10adaf59d635">StickyBit</a> = 01000, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17a2f19a6a24f173497f08606ced9d31af2">PermMask</a> = 07777, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17ab65599b1d88209c2a7f859a38f6ffdb5">UnknownPerms</a> = 0xFFFF
+<br />
+ }</td></tr>
+<tr class="memdesc:adcfee5fc7879bcad411a3c93b6480b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">File permission flags.  <a href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">More...</a><br /></td></tr>
+<tr class="separator:adcfee5fc7879bcad411a3c93b6480b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fd54596f1f60e43a52c8518f2dd75e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">PermOptions</a> { <br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75ea11d8cb4551564ba3f06e713a97ce633d">PermReplace</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75ea82b8145277f4de25c33e95e627bde8c4">PermAdd</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75eac31b86bded6cd77d34ed664621fc6636">PermRemove</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75ea97724c78c3ae773963186f277c77e036">PermNoFollow</a> = 8
+<br />
+ }</td></tr>
+<tr class="memdesc:a95fd54596f1f60e43a52c8518f2dd75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for modifying permissions.  <a href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">More...</a><br /></td></tr>
+<tr class="separator:a95fd54596f1f60e43a52c8518f2dd75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -147,6 +201,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1System_1_1FileInfo.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#adf4a6727c689e0038cf2cdd158d5ed2c">type</a> () const</td></tr>
 <tr class="memdesc:adf4a6727c689e0038cf2cdd158d5ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the file type. <br /></td></tr>
 <tr class="separator:adf4a6727c689e0038cf2cdd158d5ed2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0836f94851d2603e883e70279a4676"><td class="memItemLeft" align="right" valign="top"><a id="a4f0836f94851d2603e883e70279a4676"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Perms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a4f0836f94851d2603e883e70279a4676">permissions</a> () const</td></tr>
+<tr class="memdesc:a4f0836f94851d2603e883e70279a4676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the file permissions. <br /></td></tr>
+<tr class="separator:a4f0836f94851d2603e883e70279a4676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -162,6 +220,13 @@ static <a class="el" href="group__BasicTypes.html#gaa232ecf786a74ce5363c36c10798
 static <a class="el" href="classPt_1_1DateTime.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a27f86e39a50a19234eb3fcee495440dc">lastModified</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>)</td></tr>
 <tr class="memdesc:a27f86e39a50a19234eb3fcee495440dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time when last modified. <br /></td></tr>
 <tr class="separator:a27f86e39a50a19234eb3fcee495440dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bea5cc9475d45553379e6d6acc54f87"><td class="memItemLeft" align="right" valign="top"><a id="a0bea5cc9475d45553379e6d6acc54f87"></a>
+static <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Perms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a0bea5cc9475d45553379e6d6acc54f87">permissions</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>)</td></tr>
+<tr class="memdesc:a0bea5cc9475d45553379e6d6acc54f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the permissions of the file at the <em>path</em>. <br /></td></tr>
+<tr class="separator:a0bea5cc9475d45553379e6d6acc54f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15027f69323ea74281463b36c072598"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#aa15027f69323ea74281463b36c072598">permissions</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>, <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Perms</a> prms, <a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">PermOptions</a> opts=<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75ea11d8cb4551564ba3f06e713a97ce633d">PermReplace</a>)</td></tr>
+<tr class="memdesc:aa15027f69323ea74281463b36c072598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the permissions of the file at the <em>path</em>.  <a href="classPt_1_1System_1_1FileInfo.html#aa15027f69323ea74281463b36c072598">More...</a><br /></td></tr>
+<tr class="separator:aa15027f69323ea74281463b36c072598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae0ae3d400b2b3b280d9c1d23a84ae2"><td class="memItemLeft" align="right" valign="top"><a id="afae0ae3d400b2b3b280d9c1d23a84ae2"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#afae0ae3d400b2b3b280d9c1d23a84ae2">exists</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>)</td></tr>
 <tr class="memdesc:afae0ae3d400b2b3b280d9c1d23a84ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a file or directory exists at the <em>path</em>. <br /></td></tr>
@@ -170,6 +235,14 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a57a70d985c294c68ba8306a30128d071">createFile</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>)</td></tr>
 <tr class="memdesc:a57a70d985c294c68ba8306a30128d071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new file. <br /></td></tr>
 <tr class="separator:a57a70d985c294c68ba8306a30128d071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ee97b05e192ac9bf007f9a605a5fda"><td class="memItemLeft" align="right" valign="top"><a id="a94ee97b05e192ac9bf007f9a605a5fda"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a94ee97b05e192ac9bf007f9a605a5fda">createSymlink</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;target, const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;link)</td></tr>
+<tr class="memdesc:a94ee97b05e192ac9bf007f9a605a5fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a symbolic link at <em>link</em> pointing to <em>target</em>. <br /></td></tr>
+<tr class="separator:a94ee97b05e192ac9bf007f9a605a5fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec8243d875a0f80c2aa92a23b7c7b2b"><td class="memItemLeft" align="right" valign="top"><a id="a2ec8243d875a0f80c2aa92a23b7c7b2b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a2ec8243d875a0f80c2aa92a23b7c7b2b">createHardlink</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;target, const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;link)</td></tr>
+<tr class="memdesc:a2ec8243d875a0f80c2aa92a23b7c7b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a hard link at <em>link</em> pointing to <em>target</em>. <br /></td></tr>
+<tr class="separator:a2ec8243d875a0f80c2aa92a23b7c7b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349114e0f24cc41e331a33a740bba07d"><td class="memItemLeft" align="right" valign="top"><a id="a349114e0f24cc41e331a33a740bba07d"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a349114e0f24cc41e331a33a740bba07d">createDirectory</a> (const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;<a class="el" href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">path</a>)</td></tr>
 <tr class="memdesc:a349114e0f24cc41e331a33a740bba07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new directory. <br /></td></tr>
@@ -197,6 +270,34 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
+<tr class="memitem:abba573db61d1ee96386f1faca4d18dab"><td class="memItemLeft" align="right" valign="top"><a id="abba573db61d1ee96386f1faca4d18dab"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#abba573db61d1ee96386f1faca4d18dab">operator|</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> a, <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> b)</td></tr>
+<tr class="memdesc:abba573db61d1ee96386f1faca4d18dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise OR for FileInfo permission flags. <br /></td></tr>
+<tr class="separator:abba573db61d1ee96386f1faca4d18dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289730db3b347355941d793e2a6a064a"><td class="memItemLeft" align="right" valign="top"><a id="a289730db3b347355941d793e2a6a064a"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a289730db3b347355941d793e2a6a064a">operator&amp;</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> a, <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> b)</td></tr>
+<tr class="memdesc:a289730db3b347355941d793e2a6a064a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise AND for FileInfo permission flags. <br /></td></tr>
+<tr class="separator:a289730db3b347355941d793e2a6a064a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e650080dafc08fa69d112e130b7d83c"><td class="memItemLeft" align="right" valign="top"><a id="a6e650080dafc08fa69d112e130b7d83c"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a6e650080dafc08fa69d112e130b7d83c">operator^</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> a, <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> b)</td></tr>
+<tr class="memdesc:a6e650080dafc08fa69d112e130b7d83c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise XOR for FileInfo permission flags. <br /></td></tr>
+<tr class="separator:a6e650080dafc08fa69d112e130b7d83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd0af58d2793b71a17ad2dc6c035284d"><td class="memItemLeft" align="right" valign="top"><a id="abd0af58d2793b71a17ad2dc6c035284d"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#abd0af58d2793b71a17ad2dc6c035284d">operator~</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> a)</td></tr>
+<tr class="memdesc:abd0af58d2793b71a17ad2dc6c035284d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise NOT for FileInfo permission flags. <br /></td></tr>
+<tr class="separator:abd0af58d2793b71a17ad2dc6c035284d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3910d8b81004b254cee1b1e796133a"><td class="memItemLeft" align="right" valign="top"><a id="a9e3910d8b81004b254cee1b1e796133a"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a9e3910d8b81004b254cee1b1e796133a">operator|=</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> &amp;a, <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> b)</td></tr>
+<tr class="memdesc:a9e3910d8b81004b254cee1b1e796133a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise OR assignment for FileInfo permission flags. <br /></td></tr>
+<tr class="separator:a9e3910d8b81004b254cee1b1e796133a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82392213c563456cf514a12aef10e4ac"><td class="memItemLeft" align="right" valign="top"><a id="a82392213c563456cf514a12aef10e4ac"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a82392213c563456cf514a12aef10e4ac">operator&amp;=</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> &amp;a, <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">FileInfo::Perms</a> b)</td></tr>
+<tr class="memdesc:a82392213c563456cf514a12aef10e4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise AND assignment for FileInfo permission flags. <br /></td></tr>
+<tr class="separator:a82392213c563456cf514a12aef10e4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e166591c7704e91ff31ee66de2be658"><td class="memItemLeft" align="right" valign="top"><a id="a9e166591c7704e91ff31ee66de2be658"></a>
+<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">FileInfo::PermOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a9e166591c7704e91ff31ee66de2be658">operator|</a> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">FileInfo::PermOptions</a> a, <a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">FileInfo::PermOptions</a> b)</td></tr>
+<tr class="memdesc:a9e166591c7704e91ff31ee66de2be658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise OR for FileInfo permission options. <br /></td></tr>
+<tr class="separator:a9e166591c7704e91ff31ee66de2be658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4f1649f9430830c2ebf74b2294327c"><td class="memItemLeft" align="right" valign="top"><a id="abc4f1649f9430830c2ebf74b2294327c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileInfo.html#abc4f1649f9430830c2ebf74b2294327c">operator&lt;</a> (const <a class="el" href="classPt_1_1System_1_1FileInfo.html">FileInfo</a> &amp;a, const <a class="el" href="classPt_1_1System_1_1FileInfo.html">FileInfo</a> &amp;b)</td></tr>
 <tr class="memdesc:abc4f1649f9430830c2ebf74b2294327c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two FileInfo objects. <br /></td></tr>
@@ -228,7 +329,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> tmp1(<span class="stringliteral">&quot;/tmp/tmpfile1&quot;</span>);</div>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> tmp2(<span class="stringliteral">&quot;/tmp/tmpfile2&quot;</span>);</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">// create a temporary file</span></div>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1FileInfo.html#a57a70d985c294c68ba8306a30128d071">Pt::System::FileInfo::createFile</a>(tmp1);</div>
 <div class="line"> </div>
@@ -268,6 +369,84 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="adcfee5fc7879bcad411a3c93b6480b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcfee5fc7879bcad411a3c93b6480b17">&#9670;&nbsp;</a></span>Perms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Perms</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17aae4c119c475ef7dc784921125bde3c3e"></a>NoPerms&#160;</td><td class="fielddoc"><p>No permissions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17aa0102f90a144859f5e81dce52975e538"></a>OwnerRead&#160;</td><td class="fielddoc"><p>Owner read permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17abb71a84eec237d275059bdf97e674003"></a>OwnerWrite&#160;</td><td class="fielddoc"><p>Owner write permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a37ab089ec9d5ceb31ed8ac8a43e1ca6d"></a>OwnerExec&#160;</td><td class="fielddoc"><p>Owner execute permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a7b027bb2b565381e13fa5f2c573d3a08"></a>OwnerAll&#160;</td><td class="fielddoc"><p>All owner permissions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a52377b414591b4459d5049814ff51ddc"></a>GroupRead&#160;</td><td class="fielddoc"><p>Group read permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17abd81c0a492dd78895d29f678a2d439a0"></a>GroupWrite&#160;</td><td class="fielddoc"><p>Group write permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17abff3ecf7350826d88b20508eae999f42"></a>GroupExec&#160;</td><td class="fielddoc"><p>Group execute permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a612ad7b4c46cdf9ce86157379c5ffac6"></a>GroupAll&#160;</td><td class="fielddoc"><p>All group permissions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17ae84e09716952b8638b26363e408c8def"></a>OthersRead&#160;</td><td class="fielddoc"><p>Others read permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a88b6688ce331286505f66aa7716a347d"></a>OthersWrite&#160;</td><td class="fielddoc"><p>Others write permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a184e4aae1cb4d3e785bbb229fe7f988e"></a>OthersExec&#160;</td><td class="fielddoc"><p>Others execute permission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17afb50b619d8c08ac9e73931a1675671cd"></a>OthersAll&#160;</td><td class="fielddoc"><p>All others permissions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a5a9227e4719f6313a5ee22a3bf29f4b9"></a>AllPerms&#160;</td><td class="fielddoc"><p>All basic permissions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a1119ca56292e6b32b358b1b54d3dc3eb"></a>SetUid&#160;</td><td class="fielddoc"><p>Set-user-ID on execute. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a918eea81a5c1d7ae3c294cfc01da4977"></a>SetGid&#160;</td><td class="fielddoc"><p>Set-group-ID on execute. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17ae04fb65a108117160fea10adaf59d635"></a>StickyBit&#160;</td><td class="fielddoc"><p>Sticky bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17a2f19a6a24f173497f08606ced9d31af2"></a>PermMask&#160;</td><td class="fielddoc"><p>All valid permission bits. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adcfee5fc7879bcad411a3c93b6480b17ab65599b1d88209c2a7f859a38f6ffdb5"></a>UnknownPerms&#160;</td><td class="fielddoc"><p>Permissions not known. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a95fd54596f1f60e43a52c8518f2dd75e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fd54596f1f60e43a52c8518f2dd75e">&#9670;&nbsp;</a></span>PermOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">PermOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a95fd54596f1f60e43a52c8518f2dd75ea11d8cb4551564ba3f06e713a97ce633d"></a>PermReplace&#160;</td><td class="fielddoc"><p>Replace permissions entirely. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a95fd54596f1f60e43a52c8518f2dd75ea82b8145277f4de25c33e95e627bde8c4"></a>PermAdd&#160;</td><td class="fielddoc"><p>Add permission bits. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a95fd54596f1f60e43a52c8518f2dd75eac31b86bded6cd77d34ed664621fc6636"></a>PermRemove&#160;</td><td class="fielddoc"><p>Remove permission bits. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a95fd54596f1f60e43a52c8518f2dd75ea97724c78c3ae773963186f277c77e036"></a>PermNoFollow&#160;</td><td class="fielddoc"><p>Do not follow symbolic links. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a09fd7c1a1f9e9a5c94fffa83bf1c99cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">&#9670;&nbsp;</a></span>path()</h2>
@@ -287,11 +466,54 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="aa15027f69323ea74281463b36c072598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15027f69323ea74281463b36c072598">&#9670;&nbsp;</a></span>permissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void permissions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1System_1_1Path.html">Path</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Perms</a>&#160;</td>
+          <td class="paramname"><em>prms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75e">PermOptions</a>&#160;</td>
+          <td class="paramname"><em>opts</em> = <code><a class="el" href="classPt_1_1System_1_1FileInfo.html#a95fd54596f1f60e43a52c8518f2dd75ea11d8cb4551564ba3f06e713a97ce633d">PermReplace</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <em>opts</em> parameter controls how the permissions are applied. Use PermReplace to set permissions exactly, PermAdd to add bits, or PermRemove to remove bits. Combine with PermNoFollow using bitwise OR to act on the symbolic link itself. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_aec4796d65717479ce509b807d3a69573"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#aec4796d65717479ce509b807d3a69573">Pt::System::FileInfo::remove</a></div><div class="ttdeci">static void remove(const Path &amp;path)</div><div class="ttdoc">Removes a file or directory.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html">Pt::System::FileInfo</a></div><div class="ttdoc">Provides information about a node in the file-system.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:104</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f">Pt::System::FileInfo::File</a></div><div class="ttdeci">@ File</div><div class="ttdoc">Regular file.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:111</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_a09fd7c1a1f9e9a5c94fffa83bf1c99cf"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">Pt::System::FileInfo::path</a></div><div class="ttdeci">const Path &amp; path() const</div><div class="ttdoc">Returns the full path of node in the file-system.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:144</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_a09fd7c1a1f9e9a5c94fffa83bf1c99cf"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#a09fd7c1a1f9e9a5c94fffa83bf1c99cf">Pt::System::FileInfo::path</a></div><div class="ttdeci">const Path &amp; path() const</div><div class="ttdoc">Returns the full path of node in the file-system.</div><div class="ttdef"><b>Definition:</b> FileInfo.h:177</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_ac8f45b5b51b6de820c32b05a7f9c31a5"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#ac8f45b5b51b6de820c32b05a7f9c31a5">Pt::System::FileInfo::move</a></div><div class="ttdeci">static void move(const Path &amp;path, const Path &amp;to)</div><div class="ttdoc">Moves a file or directory.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Path_html"><div class="ttname"><a href="classPt_1_1System_1_1Path.html">Pt::System::Path</a></div><div class="ttdoc">Represents a path in the file-system.</div><div class="ttdef"><b>Definition:</b> Path.h:48</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1FileInfo_html_a57a70d985c294c68ba8306a30128d071"><div class="ttname"><a href="classPt_1_1System_1_1FileInfo.html#a57a70d985c294c68ba8306a30128d071">Pt::System::FileInfo::createFile</a></div><div class="ttdeci">static void createFile(const Path &amp;path)</div><div class="ttdoc">Creates a new file.</div></div>

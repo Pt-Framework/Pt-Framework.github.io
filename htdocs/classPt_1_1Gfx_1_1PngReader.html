@@ -118,15 +118,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngReader.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
 <tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to begin new decompression. <br /></td></tr>
 <tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa35a2127fa87ca1d758b499492d089"><td class="memItemLeft" align="right" valign="top"><a id="a4aa35a2127fa87ca1d758b499492d089"></a>
-<a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngReader.html#a4aa35a2127fa87ca1d758b499492d089">advance</a> ()</td></tr>
-<tr class="memdesc:a4aa35a2127fa87ca1d758b499492d089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads image data from the target stream. <br /></td></tr>
-<tr class="separator:a4aa35a2127fa87ca1d758b499492d089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5641c7abf48bceb0762e981a8e88e6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">advance</a> (std::streamsize importSize=0)</td></tr>
+<tr class="memdesc:ad5641c7abf48bceb0762e981a8e88e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads image data from the target stream.  <a href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">More...</a><br /></td></tr>
+<tr class="separator:ad5641c7abf48bceb0762e981a8e88e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed8e1a73e65e436c4abaeef9250a38e"><td class="memItemLeft" align="right" valign="top"><a id="a3ed8e1a73e65e436c4abaeef9250a38e"></a>
 <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngReader.html#a3ed8e1a73e65e436c4abaeef9250a38e">get</a> ()</td></tr>
 <tr class="memdesc:a3ed8e1a73e65e436c4abaeef9250a38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the whole image from the stream. <br /></td></tr>
 <tr class="separator:a3ed8e1a73e65e436c4abaeef9250a38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad5641c7abf48bceb0762e981a8e88e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5641c7abf48bceb0762e981a8e88e6a">&#9670;&nbsp;</a></span>advance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>* advance </td>
+          <td>(</td>
+          <td class="paramtype">std::streamsize&#160;</td>
+          <td class="paramname"><em>importSize</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Consumes bytes currently available in the stream buffer and feeds them to the PNG decoder.</p>
+<p>When <em>importSize</em> is 0 (default), only bytes already available via in_avail() are consumed (non-blocking, suitable for event-loop use). When <em>importSize</em> is greater than 0, up to that many bytes are read from the underlying stream via sgetn(), which may block until data arrives (suitable for file or thread use).</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the completed Image once all PNG data has been decoded, nullptr when more data is needed. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

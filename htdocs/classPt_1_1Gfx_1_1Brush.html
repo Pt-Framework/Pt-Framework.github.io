@@ -105,6 +105,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:aa6b9d577a1700f29923f49f7b77d165f"><td class="memItemLeft" align="right" valign="top"><a id="aa6b9d577a1700f29923f49f7b77d165f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#aa6b9d577a1700f29923f49f7b77d165f">GradientStyle</a> </td></tr>
 <tr class="memdesc:aa6b9d577a1700f29923f49f7b77d165f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies the gradient variant used by the brush. <br /></td></tr>
 <tr class="separator:aa6b9d577a1700f29923f49f7b77d165f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e2c5973b14c9a43a7acf8fc80b3edb"><td class="memItemLeft" align="right" valign="top"><a id="a54e2c5973b14c9a43a7acf8fc80b3edb"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a54e2c5973b14c9a43a7acf8fc80b3edb">TextureMode</a> </td></tr>
+<tr class="memdesc:a54e2c5973b14c9a43a7acf8fc80b3edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies how image texture coordinates are interpreted. <br /></td></tr>
+<tr class="separator:a54e2c5973b14c9a43a7acf8fc80b3edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -116,10 +119,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a14d766b12aaeee753533173aa03184db">Brush</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Color</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1Brush.html#af259776d5ce9e69a02adb4c43c811985">color</a>)</td></tr>
 <tr class="memdesc:a14d766b12aaeee753533173aa03184db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a solid brush. <br /></td></tr>
 <tr class="separator:a14d766b12aaeee753533173aa03184db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae866eb24af5b6187d11f976df04e8875"><td class="memItemLeft" align="right" valign="top"><a id="ae866eb24af5b6187d11f976df04e8875"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#ae866eb24af5b6187d11f976df04e8875">Brush</a> (const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1Brush.html#abb16aa211cf2e98a335d04001baea718">texture</a>, <a class="el" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> offX=0, <a class="el" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> offY=0)</td></tr>
-<tr class="memdesc:ae866eb24af5b6187d11f976df04e8875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a texture brush. <br /></td></tr>
-<tr class="separator:ae866eb24af5b6187d11f976df04e8875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e1a9665ee9db8f1559ce6f292e70c41"><td class="memItemLeft" align="right" valign="top"><a id="a4e1a9665ee9db8f1559ce6f292e70c41"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Brush.html#a93450c852ea0dc97ffc5168069ed1bc0">FillStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a4e1a9665ee9db8f1559ce6f292e70c41">fillStyle</a> () const</td></tr>
 <tr class="memdesc:a4e1a9665ee9db8f1559ce6f292e70c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the brushes fill style. <br /></td></tr>
@@ -164,22 +163,17 @@ const <a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a> &amp;&#160;</
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a95f9f462f1a041065e48dbc909deb62c">gradientEndRadius</a> () const</td></tr>
 <tr class="memdesc:a95f9f462f1a041065e48dbc909deb62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of a radial gradient end circle. <br /></td></tr>
 <tr class="separator:a95f9f462f1a041065e48dbc909deb62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eeb62a0f9d0fda743bf2b4fe4fc1652"><td class="memItemLeft" align="right" valign="top"><a id="a0eeb62a0f9d0fda743bf2b4fe4fc1652"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a0eeb62a0f9d0fda743bf2b4fe4fc1652">setTexture</a> (const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1Brush.html#abb16aa211cf2e98a335d04001baea718">texture</a>, <a class="el" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> offX=0, <a class="el" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> offY=0)</td></tr>
-<tr class="memdesc:a0eeb62a0f9d0fda743bf2b4fe4fc1652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the texture image and offset. <br /></td></tr>
-<tr class="separator:a0eeb62a0f9d0fda743bf2b4fe4fc1652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab40f8854e300a745d1bf31f6604f8f"><td class="memItemLeft" align="right" valign="top"><a id="a7ab40f8854e300a745d1bf31f6604f8f"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Brush.html#a54e2c5973b14c9a43a7acf8fc80b3edb">TextureMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a7ab40f8854e300a745d1bf31f6604f8f">textureMode</a> () const</td></tr>
+<tr class="memdesc:a7ab40f8854e300a745d1bf31f6604f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how the texture origin is interpreted. <br /></td></tr>
+<tr class="separator:a7ab40f8854e300a745d1bf31f6604f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb16aa211cf2e98a335d04001baea718"><td class="memItemLeft" align="right" valign="top"><a id="abb16aa211cf2e98a335d04001baea718"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#abb16aa211cf2e98a335d04001baea718">texture</a> () const</td></tr>
 <tr class="memdesc:abb16aa211cf2e98a335d04001baea718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the texture image. <br /></td></tr>
 <tr class="separator:abb16aa211cf2e98a335d04001baea718"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6036c7875ec42ee504ecf98bad82c03"><td class="memItemLeft" align="right" valign="top"><a id="ad6036c7875ec42ee504ecf98bad82c03"></a>
-<a class="el" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#ad6036c7875ec42ee504ecf98bad82c03">offsetX</a> () const</td></tr>
-<tr class="memdesc:ad6036c7875ec42ee504ecf98bad82c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the horizontal texture offset. <br /></td></tr>
-<tr class="separator:ad6036c7875ec42ee504ecf98bad82c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1980e71fc7d2886b5eb6562185927d77"><td class="memItemLeft" align="right" valign="top"><a id="a1980e71fc7d2886b5eb6562185927d77"></a>
-<a class="el" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a1980e71fc7d2886b5eb6562185927d77">offsetY</a> () const</td></tr>
-<tr class="memdesc:a1980e71fc7d2886b5eb6562185927d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertical texture offset. <br /></td></tr>
-<tr class="separator:a1980e71fc7d2886b5eb6562185927d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08fa97e89369511372291f09f537afe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#ae08fa97e89369511372291f09f537afe">textureOrigin</a> () const</td></tr>
+<tr class="memdesc:ae08fa97e89369511372291f09f537afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the texture pattern origin.  <a href="classPt_1_1Gfx_1_1Brush.html#ae08fa97e89369511372291f09f537afe">More...</a><br /></td></tr>
+<tr class="separator:ae08fa97e89369511372291f09f537afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6aebc618f06d884fb29b89cfec6ceb"><td class="memItemLeft" align="right" valign="top"><a id="a4c6aebc618f06d884fb29b89cfec6ceb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a4c6aebc618f06d884fb29b89cfec6ceb">isGradient</a> () const</td></tr>
 <tr class="memdesc:a4c6aebc618f06d884fb29b89cfec6ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the brush uses a gradient. <br /></td></tr>
@@ -195,6 +189,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac3553041f59bb62f90a80641b12a370c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Brush</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#ac3553041f59bb62f90a80641b12a370c">imageTexture</a> (const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> &amp;image, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;origin=<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>())</td></tr>
+<tr class="memdesc:ac3553041f59bb62f90a80641b12a370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an image texture brush.  <a href="classPt_1_1Gfx_1_1Brush.html#ac3553041f59bb62f90a80641b12a370c">More...</a><br /></td></tr>
+<tr class="separator:ac3553041f59bb62f90a80641b12a370c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54715d9997c483a9ae07c9268dcc5a9e"><td class="memItemLeft" align="right" valign="top"><a id="a54715d9997c483a9ae07c9268dcc5a9e"></a>
 static <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Brush</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a54715d9997c483a9ae07c9268dcc5a9e">verticalGradient</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Color</a> &amp;from, const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Color</a> &amp;to)</td></tr>
 <tr class="memdesc:a54715d9997c483a9ae07c9268dcc5a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a vertical gradient brush from two colors. <br /></td></tr>
@@ -230,7 +227,70 @@ static <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Brush</a>&#160;</td><td
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classPt_1_1Gfx_1_1Brush.html" title="Fill description for shapes and text.">Brush</a> describes how closed geometry is filled. It can represent solid colors, textures and gradients with absolute or relative coordinates so that painters can reuse the same fill definition across targets. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac3553041f59bb62f90a80641b12a370c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3553041f59bb62f90a80641b12a370c">&#9670;&nbsp;</a></span>imageTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Brush</a> imageTexture </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin</em> = <code><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The texture origin is expressed in source image pixel coordinates.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>The source image used as the repeating tile. </td></tr>
+    <tr><td class="paramname">origin</td><td>The texture pattern origin in source pixel coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae08fa97e89369511372291f09f537afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08fa97e89369511372291f09f537afe">&#9670;&nbsp;</a></span>textureOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a>&amp; textureOrigin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The coordinates are expressed in the space identified by Brush::textureMode(). </p>
+
+</div>
+</div>
+</div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

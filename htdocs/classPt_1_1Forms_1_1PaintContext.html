@@ -97,6 +97,14 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a1e9bfa9332f92b0f39cdc6212dbad2ee"><td class="memItemLeft" align="right" valign="top"><a id="a1e9bfa9332f92b0f39cdc6212dbad2ee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html#a1e9bfa9332f92b0f39cdc6212dbad2ee">PaintContext</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
+<tr class="memdesc:a1e9bfa9332f92b0f39cdc6212dbad2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a context using the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical User Interface.">Forms</a> paint surface. <br /></td></tr>
+<tr class="separator:a1e9bfa9332f92b0f39cdc6212dbad2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ef25f0fe03c52f23ff41005952571f"><td class="memItemLeft" align="right" valign="top"><a id="ab5ef25f0fe03c52f23ff41005952571f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html#ab5ef25f0fe03c52f23ff41005952571f">PaintContext</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;<a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#aabb3156c1870a1ca631baf8b4f263292">clip</a>)</td></tr>
+<tr class="memdesc:ab5ef25f0fe03c52f23ff41005952571f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a context using the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical User Interface.">Forms</a> paint surface and an initial clip rect. <br /></td></tr>
+<tr class="separator:ab5ef25f0fe03c52f23ff41005952571f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c27b28f59872acb4fa449db5197cce"><td class="memItemLeft" align="right" valign="top"><a id="a38c27b28f59872acb4fa449db5197cce"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html#a38c27b28f59872acb4fa449db5197cce">~PaintContext</a> ()</td></tr>
 <tr class="memdesc:a38c27b28f59872acb4fa449db5197cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -113,6 +121,18 @@ const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;&#160
 const Scaling &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a7892fd68463d0846bcd72f0580a5cdbb">scaling</a> () const</td></tr>
 <tr class="memdesc:a7892fd68463d0846bcd72f0580a5cdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scaling from logical to physical pixels. <br /></td></tr>
 <tr class="separator:a7892fd68463d0846bcd72f0580a5cdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb3156c1870a1ca631baf8b4f263292"><td class="memItemLeft" align="right" valign="top"><a id="aabb3156c1870a1ca631baf8b4f263292"></a>
+const RectF *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#aabb3156c1870a1ca631baf8b4f263292">clip</a> () const</td></tr>
+<tr class="memdesc:aabb3156c1870a1ca631baf8b4f263292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default clip rect or null if clipping is disabled. <br /></td></tr>
+<tr class="separator:aabb3156c1870a1ca631baf8b4f263292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fc57e50baf2900fcf7928f96d3a27c"><td class="memItemLeft" align="right" valign="top"><a id="a21fc57e50baf2900fcf7928f96d3a27c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a21fc57e50baf2900fcf7928f96d3a27c">setClip</a> (const RectF &amp;<a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#aabb3156c1870a1ca631baf8b4f263292">clip</a>)</td></tr>
+<tr class="memdesc:a21fc57e50baf2900fcf7928f96d3a27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default clip rect for painters on this context. <br /></td></tr>
+<tr class="separator:a21fc57e50baf2900fcf7928f96d3a27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa662021f2e504937de9ee14764f70253"><td class="memItemLeft" align="right" valign="top"><a id="aa662021f2e504937de9ee14764f70253"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#aa662021f2e504937de9ee14764f70253">resetClip</a> ()</td></tr>
+<tr class="memdesc:aa662021f2e504937de9ee14764f70253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the default clip rect. <br /></td></tr>
+<tr class="separator:aa662021f2e504937de9ee14764f70253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233b273485dc5fb1f169bd068358d08f"><td class="memItemLeft" align="right" valign="top"><a id="a233b273485dc5fb1f169bd068358d08f"></a>
 Canvas *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html#a233b273485dc5fb1f169bd068358d08f">getCanvas</a> (Canvas *canvas)</td></tr>
 <tr class="memdesc:a233b273485dc5fb1f169bd068358d08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a canvas for backend drawing. <br /></td></tr>

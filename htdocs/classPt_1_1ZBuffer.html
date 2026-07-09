@@ -81,6 +81,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
@@ -95,16 +96,27 @@
 
 <p>Inherits <a class="el" href="classPt_1_1BasicStreamBuffer.html">BasicStreamBuffer&lt; char &gt;</a>.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab4e88c89b3b7ea1735996cc4def22d58"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58">Format</a> { <br />
+&#160;&#160;<a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58ab9926f834ed2e69fa71021e2ad9ade3f">Zlib</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58ac542c66d1ad1b16f438a4ed1cb554767">Gzip</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab4e88c89b3b7ea1735996cc4def22d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression/decompression format.  <a href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58">More...</a><br /></td></tr>
+<tr class="separator:ab4e88c89b3b7ea1735996cc4def22d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9f3c0c21913cc15241184183af1d443"><td class="memItemLeft" align="right" valign="top"><a id="ad9f3c0c21913cc15241184183af1d443"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#ad9f3c0c21913cc15241184183af1d443">ZBuffer</a> ()</td></tr>
-<tr class="memdesc:ad9f3c0c21913cc15241184183af1d443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
-<tr class="separator:ad9f3c0c21913cc15241184183af1d443"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fb1ec2bf0644cb36eb460c2c1e4309c"><td class="memItemLeft" align="right" valign="top"><a id="a3fb1ec2bf0644cb36eb460c2c1e4309c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#a3fb1ec2bf0644cb36eb460c2c1e4309c">ZBuffer</a> (std::ios &amp;ios)</td></tr>
-<tr class="memdesc:a3fb1ec2bf0644cb36eb460c2c1e4309c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with target stream. <br /></td></tr>
-<tr class="separator:a3fb1ec2bf0644cb36eb460c2c1e4309c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16595fefaf5a2f063448dbc133b7a14"><td class="memItemLeft" align="right" valign="top"><a id="af16595fefaf5a2f063448dbc133b7a14"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#af16595fefaf5a2f063448dbc133b7a14">ZBuffer</a> (<a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58">Format</a> fmt=<a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58ab9926f834ed2e69fa71021e2ad9ade3f">Zlib</a>)</td></tr>
+<tr class="memdesc:af16595fefaf5a2f063448dbc133b7a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:af16595fefaf5a2f063448dbc133b7a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6945ceb89d1c62c6a79c179f104564"><td class="memItemLeft" align="right" valign="top"><a id="ace6945ceb89d1c62c6a79c179f104564"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#ace6945ceb89d1c62c6a79c179f104564">ZBuffer</a> (std::ios &amp;ios, <a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58">Format</a> fmt=<a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58ab9926f834ed2e69fa71021e2ad9ade3f">Zlib</a>)</td></tr>
+<tr class="memdesc:ace6945ceb89d1c62c6a79c179f104564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with target stream. <br /></td></tr>
+<tr class="separator:ace6945ceb89d1c62c6a79c179f104564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4204ca1a4352e10f847fc4621689dd6d"><td class="memItemLeft" align="right" valign="top"><a id="a4204ca1a4352e10f847fc4621689dd6d"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#a4204ca1a4352e10f847fc4621689dd6d">~ZBuffer</a> ()</td></tr>
 <tr class="memdesc:a4204ca1a4352e10f847fc4621689dd6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -133,6 +145,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#a6dfe1abe0d1eb3ddc1ca081de98b5342">finish</a> ()</td></tr>
 <tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish and flush remaining data to the target stream. <br /></td></tr>
 <tr class="separator:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd64502514846a4071c6ff7937e2d10"><td class="memItemLeft" align="right" valign="top"><a id="a9cd64502514846a4071c6ff7937e2d10"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#a9cd64502514846a4071c6ff7937e2d10">zcount</a> () const</td></tr>
+<tr class="memdesc:a9cd64502514846a4071c6ff7937e2d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of decompressed bytes produced so far. <br /></td></tr>
+<tr class="separator:a9cd64502514846a4071c6ff7937e2d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a893fad161e0bcb173591cae663514dbf"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#a893fad161e0bcb173591cae663514dbf">import</a> (std::streamsize maxImport=0)</td></tr>
 <tr class="memdesc:a893fad161e0bcb173591cae663514dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import data from the target stream.  <a href="classPt_1_1ZBuffer.html#a893fad161e0bcb173591cae663514dbf">More...</a><br /></td></tr>
 <tr class="separator:a893fad161e0bcb173591cae663514dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +168,27 @@ virtual std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a5d4baca65e539138ca8fd821779d1484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of characters buffered for output. <br /></td></tr>
 <tr class="separator:a5d4baca65e539138ca8fd821779d1484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ab4e88c89b3b7ea1735996cc4def22d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e88c89b3b7ea1735996cc4def22d58">&#9670;&nbsp;</a></span>Format</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58">Format</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4e88c89b3b7ea1735996cc4def22d58ab9926f834ed2e69fa71021e2ad9ade3f"></a>Zlib&#160;</td><td class="fielddoc"><p>zlib header/trailer with Adler-32 checksum. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4e88c89b3b7ea1735996cc4def22d58ac542c66d1ad1b16f438a4ed1cb554767"></a>Gzip&#160;</td><td class="fielddoc"><p>gzip header/trailer with CRC-32 checksum (RFC 1952). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a893fad161e0bcb173591cae663514dbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a893fad161e0bcb173591cae663514dbf">&#9670;&nbsp;</a></span>import()</h2>

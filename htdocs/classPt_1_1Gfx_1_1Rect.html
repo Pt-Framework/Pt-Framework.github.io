@@ -80,6 +80,9 @@
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Rect Class Reference</div>  </div>
 </div><!--header-->
@@ -89,6 +92,81 @@
 
 <p>Rect with floating-point coordinates.  
 </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:acf82f9b2937375c7b1cf3dccb3df3312"><td class="memItemLeft" align="right" valign="top"><a id="acf82f9b2937375c7b1cf3dccb3df3312"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#acf82f9b2937375c7b1cf3dccb3df3312">isEmpty</a> () const</td></tr>
+<tr class="memdesc:acf82f9b2937375c7b1cf3dccb3df3312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if width or height is zero. <br /></td></tr>
+<tr class="separator:acf82f9b2937375c7b1cf3dccb3df3312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0741a40d244ad64bd7c67a1f3615cc13"><td class="memItemLeft" align="right" valign="top"><a id="a0741a40d244ad64bd7c67a1f3615cc13"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a0741a40d244ad64bd7c67a1f3615cc13">toIntersected</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a> &amp;rect) const</td></tr>
+<tr class="memdesc:a0741a40d244ad64bd7c67a1f3615cc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection of this rect and another, or an empty rect if they do not overlap. <br /></td></tr>
+<tr class="separator:a0741a40d244ad64bd7c67a1f3615cc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ffa49438ba3e84f30819f531de9072e"><td class="memItemLeft" align="right" valign="top"><a id="a5ffa49438ba3e84f30819f531de9072e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a5ffa49438ba3e84f30819f531de9072e">contains</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Point</a> &amp;p) const</td></tr>
+<tr class="memdesc:a5ffa49438ba3e84f30819f531de9072e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given point is inside or on the edge of this rect. <br /></td></tr>
+<tr class="separator:a5ffa49438ba3e84f30819f531de9072e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16299ab0f30587894ebd3f9438a2366f"><td class="memItemLeft" align="right" valign="top"><a id="a16299ab0f30587894ebd3f9438a2366f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a16299ab0f30587894ebd3f9438a2366f">contains</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a> &amp;r) const</td></tr>
+<tr class="memdesc:a16299ab0f30587894ebd3f9438a2366f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given rect is entirely inside this rect. <br /></td></tr>
+<tr class="separator:a16299ab0f30587894ebd3f9438a2366f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11cbd1049e9eb9a53f86f87101b7cddb"><td class="memItemLeft" align="right" valign="top"><a id="a11cbd1049e9eb9a53f86f87101b7cddb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a11cbd1049e9eb9a53f86f87101b7cddb">intersects</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a> &amp;r) const</td></tr>
+<tr class="memdesc:a11cbd1049e9eb9a53f86f87101b7cddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this rect overlaps with the given rect. <br /></td></tr>
+<tr class="separator:a11cbd1049e9eb9a53f86f87101b7cddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f8db87b51cd96ad02f29d2c63ec9c9"><td class="memItemLeft" align="right" valign="top"><a id="a05f8db87b51cd96ad02f29d2c63ec9c9"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a05f8db87b51cd96ad02f29d2c63ec9c9">center</a> () const</td></tr>
+<tr class="memdesc:a05f8db87b51cd96ad02f29d2c63ec9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center point of this rect. <br /></td></tr>
+<tr class="separator:a05f8db87b51cd96ad02f29d2c63ec9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0de676568888d848beb97dcc53ae47"><td class="memItemLeft" align="right" valign="top"><a id="acd0de676568888d848beb97dcc53ae47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#acd0de676568888d848beb97dcc53ae47">normalize</a> ()</td></tr>
+<tr class="memdesc:acd0de676568888d848beb97dcc53ae47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes this rect so that width and height are non-negative. <br /></td></tr>
+<tr class="separator:acd0de676568888d848beb97dcc53ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffd428d9288256eb8148f4b16136a51"><td class="memItemLeft" align="right" valign="top"><a id="abffd428d9288256eb8148f4b16136a51"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#abffd428d9288256eb8148f4b16136a51">toNormalized</a> () const</td></tr>
+<tr class="memdesc:abffd428d9288256eb8148f4b16136a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a normalized copy of this rect. <br /></td></tr>
+<tr class="separator:abffd428d9288256eb8148f4b16136a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31400fae0fa613fbdf17fee2fcc661ec"><td class="memItemLeft" align="right" valign="top"><a id="a31400fae0fa613fbdf17fee2fcc661ec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a31400fae0fa613fbdf17fee2fcc661ec">Rect</a> (const <a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a> &amp;r)</td></tr>
+<tr class="memdesc:a31400fae0fa613fbdf17fee2fcc661ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs from a RectI by widening the coordinates. <br /></td></tr>
+<tr class="separator:a31400fae0fa613fbdf17fee2fcc661ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f11fbe26899458427bbc8b3db01a9fd"><td class="memItemLeft" align="right" valign="top"><a id="a5f11fbe26899458427bbc8b3db01a9fd"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a5f11fbe26899458427bbc8b3db01a9fd">operator=</a> (const <a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a> &amp;r)</td></tr>
+<tr class="memdesc:a5f11fbe26899458427bbc8b3db01a9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns from a RectI by widening the coordinates. <br /></td></tr>
+<tr class="separator:a5f11fbe26899458427bbc8b3db01a9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6845e276dd480995d061f077b93ac44"><td class="memItemLeft" align="right" valign="top"><a id="ab6845e276dd480995d061f077b93ac44"></a>
+<a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#ab6845e276dd480995d061f077b93ac44">round</a> () const</td></tr>
+<tr class="memdesc:ab6845e276dd480995d061f077b93ac44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds each component to the nearest integer and returns a RectI. <br /></td></tr>
+<tr class="separator:ab6845e276dd480995d061f077b93ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e5dad5cbe099195a05e2d891b996b7"><td class="memItemLeft" align="right" valign="top"><a id="a48e5dad5cbe099195a05e2d891b996b7"></a>
+<a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a48e5dad5cbe099195a05e2d891b996b7">floor</a> () const</td></tr>
+<tr class="memdesc:a48e5dad5cbe099195a05e2d891b996b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floors each component and returns a RectI. <br /></td></tr>
+<tr class="separator:a48e5dad5cbe099195a05e2d891b996b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5707c5188033120a2cd23884165de9"><td class="memItemLeft" align="right" valign="top"><a id="aac5707c5188033120a2cd23884165de9"></a>
+<a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#aac5707c5188033120a2cd23884165de9">ceil</a> () const</td></tr>
+<tr class="memdesc:aac5707c5188033120a2cd23884165de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ceils each component and returns a RectI. <br /></td></tr>
+<tr class="separator:aac5707c5188033120a2cd23884165de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873c54e1b29fb2172259763e9ccd0892"><td class="memItemLeft" align="right" valign="top"><a id="a873c54e1b29fb2172259763e9ccd0892"></a>
+<a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a873c54e1b29fb2172259763e9ccd0892">roundOut</a> () const</td></tr>
+<tr class="memdesc:a873c54e1b29fb2172259763e9ccd0892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the smallest enclosing integer rect. <br /></td></tr>
+<tr class="separator:a873c54e1b29fb2172259763e9ccd0892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ee93c3034bff91af35d2f18bc11162"><td class="memItemLeft" align="right" valign="top"><a id="a15ee93c3034bff91af35d2f18bc11162"></a>
+<a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a15ee93c3034bff91af35d2f18bc11162">roundIn</a> () const</td></tr>
+<tr class="memdesc:a15ee93c3034bff91af35d2f18bc11162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the largest integer rect contained within this rect. <br /></td></tr>
+<tr class="separator:a15ee93c3034bff91af35d2f18bc11162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2497ab58b437f3322ae6330e47c22fe4"><td class="memItemLeft" align="right" valign="top"><a id="a2497ab58b437f3322ae6330e47c22fe4"></a>
+static <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a2497ab58b437f3322ae6330e47c22fe4">fromLTRB</a> (Float left, Float top, Float right, Float bottom)</td></tr>
+<tr class="memdesc:a2497ab58b437f3322ae6330e47c22fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rect from left, top, right, and bottom edges. <br /></td></tr>
+<tr class="separator:a2497ab58b437f3322ae6330e47c22fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b6b271a9c6a3e15bfc1d0298d629c0"><td class="memItemLeft" align="right" valign="top"><a id="a49b6b271a9c6a3e15bfc1d0298d629c0"></a>
+static <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html#a49b6b271a9c6a3e15bfc1d0298d629c0">fromXYWH</a> (Float x, Float y, Float w, Float h)</td></tr>
+<tr class="memdesc:a49b6b271a9c6a3e15bfc1d0298d629c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rect from x, y, width, and height. <br /></td></tr>
+<tr class="separator:a49b6b271a9c6a3e15bfc1d0298d629c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

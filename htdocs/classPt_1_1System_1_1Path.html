@@ -227,6 +227,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Path.html#a3ad37564bd9beaf86009056586572494">toLocal</a> () const</td></tr>
 <tr class="memdesc:a3ad37564bd9beaf86009056586572494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the path name in local encoding. <br /></td></tr>
 <tr class="separator:a3ad37564bd9beaf86009056586572494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d46954fbeeea8860ffc598287fe2f53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1String.html">Pt::String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Path.html#a3d46954fbeeea8860ffc598287fe2f53">toGeneric</a> () const</td></tr>
+<tr class="memdesc:a3d46954fbeeea8860ffc598287fe2f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the path name with generic separators.  <a href="classPt_1_1System_1_1Path.html#a3d46954fbeeea8860ffc598287fe2f53">More...</a><br /></td></tr>
+<tr class="separator:a3d46954fbeeea8860ffc598287fe2f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -535,6 +538,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 <p>The two paths are directly joined and no separator is added. </p>
+
+</div>
+</div>
+<a id="a3d46954fbeeea8860ffc598287fe2f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d46954fbeeea8860ffc598287fe2f53">&#9670;&nbsp;</a></span>toGeneric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1String.html">Pt::String</a> toGeneric </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>On Windows the returned string uses forward slashes as directory separators. On POSIX it is identical to <a class="el" href="classPt_1_1System_1_1Path.html#ae4c1919387d80c91560cc6356991f09b" title="Returns the path name.">toString()</a>. </p>
 
 </div>
 </div>

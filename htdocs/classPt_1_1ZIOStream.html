@@ -81,6 +81,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ZIOStream Class Reference</div>  </div>
@@ -94,6 +95,13 @@
 
 <p>Inherits <a class="el" href="classPt_1_1BasicIOStream.html">BasicIOStream&lt; char &gt;</a>.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a5081314f93b38d20a5f308664caecec6"><td class="memItemLeft" align="right" valign="top"><a id="a5081314f93b38d20a5f308664caecec6"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZIOStream.html#a5081314f93b38d20a5f308664caecec6">Format</a> = <a class="el" href="classPt_1_1ZBuffer.html#ab4e88c89b3b7ea1735996cc4def22d58">ZBuffer::Format</a></td></tr>
+<tr class="memdesc:a5081314f93b38d20a5f308664caecec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression/decompression format. <br /></td></tr>
+<tr class="separator:a5081314f93b38d20a5f308664caecec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa157a30af0a064c3adbc61f9b9bec17d"><td class="memItemLeft" align="right" valign="top"><a id="aa157a30af0a064c3adbc61f9b9bec17d"></a>
@@ -132,6 +140,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZIOStream.html#a6dfe1abe0d1eb3ddc1ca081de98b5342">finish</a> ()</td></tr>
 <tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish and flush remaining data to the target stream. <br /></td></tr>
 <tr class="separator:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd64502514846a4071c6ff7937e2d10"><td class="memItemLeft" align="right" valign="top"><a id="a9cd64502514846a4071c6ff7937e2d10"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZIOStream.html#a9cd64502514846a4071c6ff7937e2d10">zcount</a> () const</td></tr>
+<tr class="memdesc:a9cd64502514846a4071c6ff7937e2d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of decompressed bytes produced so far. <br /></td></tr>
+<tr class="separator:a9cd64502514846a4071c6ff7937e2d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06710e909bf4323e3b3c5dda9d3dec4"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicIOStream.html#ac06710e909bf4323e3b3c5dda9d3dec4">peeksome</a> (char *<a class="el" href="classPt_1_1BasicIOStream.html#a6046f28f315a127459574eaf26bd3ebc">buffer</a>, std::streamsize n)</td></tr>
 <tr class="memdesc:ac06710e909bf4323e3b3c5dda9d3dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peeks bytes in the stream buffer.  <a href="classPt_1_1BasicIOStream.html#ac06710e909bf4323e3b3c5dda9d3dec4">More...</a><br /></td></tr>
 <tr class="separator:ac06710e909bf4323e3b3c5dda9d3dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>

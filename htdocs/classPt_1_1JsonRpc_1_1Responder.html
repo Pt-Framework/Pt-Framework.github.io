@@ -90,17 +90,17 @@
 
 <p><code>#include &lt;<a class="el" href="JsonRpc_2Responder_8h_source.html">Pt/JsonRpc/Responder.h</a>&gt;</code></p>
 
-<p>Dispatches requests to a service procedure.  
+<p>Dispatches JSON-RPC requests to a service procedure.  
 </p>
 
 <p>Inherits <a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0bd11f26fccc61f16371f8b2bbb1d666"><td class="memItemLeft" align="right" valign="top"><a id="a0bd11f26fccc61f16371f8b2bbb1d666"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a0bd11f26fccc61f16371f8b2bbb1d666">Responder</a> (<a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a> &amp;service)</td></tr>
-<tr class="memdesc:a0bd11f26fccc61f16371f8b2bbb1d666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with Service. <br /></td></tr>
-<tr class="separator:a0bd11f26fccc61f16371f8b2bbb1d666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e7fb104c8d80fdb9c5a7b0017d5f4b"><td class="memItemLeft" align="right" valign="top"><a id="a17e7fb104c8d80fdb9c5a7b0017d5f4b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a17e7fb104c8d80fdb9c5a7b0017d5f4b">Responder</a> (const <a class="el" href="classPt_1_1JsonRpc_1_1ServiceDeclaration.html">ServiceDeclaration</a> &amp;decl, <a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a> &amp;def)</td></tr>
+<tr class="memdesc:a17e7fb104c8d80fdb9c5a7b0017d5f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with <a class="el" href="classPt_1_1JsonRpc_1_1ServiceDeclaration.html" title="Declares named parameter mappings for JSON-RPC procedures.">ServiceDeclaration</a> and ServiceDefinition. <br /></td></tr>
+<tr class="separator:a17e7fb104c8d80fdb9c5a7b0017d5f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a441672d587b7f355d7308b08fa208633"><td class="memItemLeft" align="right" valign="top"><a id="a441672d587b7f355d7308b08fa208633"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a441672d587b7f355d7308b08fa208633">~Responder</a> ()</td></tr>
 <tr class="memdesc:a441672d587b7f355d7308b08fa208633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -132,26 +132,39 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aee417c3d369444f3b503dae87408e433"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aee417c3d369444f3b503dae87408e433">onResult</a> ()=0</td></tr>
 <tr class="memdesc:aee417c3d369444f3b503dae87408e433"><td class="mdescLeft">&#160;</td><td class="mdescRight">The service procedure has finished.  <a href="classPt_1_1JsonRpc_1_1Responder.html#aee417c3d369444f3b503dae87408e433">More...</a><br /></td></tr>
 <tr class="separator:aee417c3d369444f3b503dae87408e433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a537b3e57a18bb9bd4afd13a9a1473992"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a537b3e57a18bb9bd4afd13a9a1473992">beginMessage</a> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a537b3e57a18bb9bd4afd13a9a1473992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the XML-RPC message.  <a href="classPt_1_1JsonRpc_1_1Responder.html#a537b3e57a18bb9bd4afd13a9a1473992">More...</a><br /></td></tr>
+<tr class="memitem:a537b3e57a18bb9bd4afd13a9a1473992"><td class="memItemLeft" align="right" valign="top"><a id="a537b3e57a18bb9bd4afd13a9a1473992"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a537b3e57a18bb9bd4afd13a9a1473992">beginMessage</a> (std::istream &amp;is)</td></tr>
+<tr class="memdesc:a537b3e57a18bb9bd4afd13a9a1473992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin parsing a JSON-RPC request from a stream. <br /></td></tr>
 <tr class="separator:a537b3e57a18bb9bd4afd13a9a1473992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6259f3aa062e47ff5031fd719568f1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab6259f3aa062e47ff5031fd719568f1f">parseMessage</a> ()</td></tr>
-<tr class="memdesc:ab6259f3aa062e47ff5031fd719568f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the XML-RPC message.  <a href="classPt_1_1JsonRpc_1_1Responder.html#ab6259f3aa062e47ff5031fd719568f1f">More...</a><br /></td></tr>
+<tr class="memdesc:ab6259f3aa062e47ff5031fd719568f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse available data from the input stream.  <a href="classPt_1_1JsonRpc_1_1Responder.html#ab6259f3aa062e47ff5031fd719568f1f">More...</a><br /></td></tr>
 <tr class="separator:ab6259f3aa062e47ff5031fd719568f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd116018fdb0c20871fd780fde5107fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#afd116018fdb0c20871fd780fde5107fe">finishMessage</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop)</td></tr>
-<tr class="memdesc:afd116018fdb0c20871fd780fde5107fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the XML-RPC message.  <a href="classPt_1_1JsonRpc_1_1Responder.html#afd116018fdb0c20871fd780fde5107fe">More...</a><br /></td></tr>
+<tr class="memitem:afd116018fdb0c20871fd780fde5107fe"><td class="memItemLeft" align="right" valign="top"><a id="afd116018fdb0c20871fd780fde5107fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#afd116018fdb0c20871fd780fde5107fe">finishMessage</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop)</td></tr>
+<tr class="memdesc:afd116018fdb0c20871fd780fde5107fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the service procedure after parsing completes. <br /></td></tr>
 <tr class="separator:afd116018fdb0c20871fd780fde5107fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72ed5f0a66ebd08fbfcc70f98f75ee7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f">beginResult</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:a72ed5f0a66ebd08fbfcc70f98f75ee7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the XML-RPC result.  <a href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f">More...</a><br /></td></tr>
+<tr class="memitem:a4eed1200e5e6561522e68f2c20289ea5"><td class="memItemLeft" align="right" valign="top"><a id="a4eed1200e5e6561522e68f2c20289ea5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a4eed1200e5e6561522e68f2c20289ea5">finishMessage</a> ()</td></tr>
+<tr class="memdesc:a4eed1200e5e6561522e68f2c20289ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the service procedure synchronously. <br /></td></tr>
+<tr class="separator:a4eed1200e5e6561522e68f2c20289ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ed5f0a66ebd08fbfcc70f98f75ee7f"><td class="memItemLeft" align="right" valign="top"><a id="a72ed5f0a66ebd08fbfcc70f98f75ee7f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f">beginResult</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:a72ed5f0a66ebd08fbfcc70f98f75ee7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin formatting a JSON-RPC success response. <br /></td></tr>
 <tr class="separator:a72ed5f0a66ebd08fbfcc70f98f75ee7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9bf9cd11626e2fe323dd7937878810"><td class="memItemLeft" align="right" valign="top"><a id="a6a9bf9cd11626e2fe323dd7937878810"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a6a9bf9cd11626e2fe323dd7937878810">beginFault</a> (std::ostream &amp;os, const <a class="el" href="classPt_1_1JsonRpc_1_1Fault.html">Fault</a> &amp;fault)</td></tr>
+<tr class="memdesc:a6a9bf9cd11626e2fe323dd7937878810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin formatting a JSON-RPC error response. <br /></td></tr>
+<tr class="separator:a6a9bf9cd11626e2fe323dd7937878810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2fdaedbf3d7262a04889d8160480973"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973">advanceResult</a> ()</td></tr>
-<tr class="memdesc:ab2fdaedbf3d7262a04889d8160480973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the XML-RPC message.  <a href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973">More...</a><br /></td></tr>
+<tr class="memdesc:ab2fdaedbf3d7262a04889d8160480973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue formatting the result.  <a href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973">More...</a><br /></td></tr>
 <tr class="separator:ab2fdaedbf3d7262a04889d8160480973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad90571f447c822ee89516b908ec4d1c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1">finishResult</a> ()</td></tr>
-<tr class="memdesc:ad90571f447c822ee89516b908ec4d1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the XML-RPC message.  <a href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1">More...</a><br /></td></tr>
+<tr class="memitem:ad90571f447c822ee89516b908ec4d1c1"><td class="memItemLeft" align="right" valign="top"><a id="ad90571f447c822ee89516b908ec4d1c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1">finishResult</a> ()</td></tr>
+<tr class="memdesc:ad90571f447c822ee89516b908ec4d1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish formatting the result response. <br /></td></tr>
 <tr class="separator:ad90571f447c822ee89516b908ec4d1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaddcbb05736d6012a6412f5a8aa798b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aaddcbb05736d6012a6412f5a8aa798b4">setFault</a> (int rc, const char *msg)</td></tr>
-<tr class="memdesc:aaddcbb05736d6012a6412f5a8aa798b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fails the service procedure.  <a href="classPt_1_1JsonRpc_1_1Responder.html#aaddcbb05736d6012a6412f5a8aa798b4">More...</a><br /></td></tr>
+<tr class="memitem:aaddcbb05736d6012a6412f5a8aa798b4"><td class="memItemLeft" align="right" valign="top"><a id="aaddcbb05736d6012a6412f5a8aa798b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aaddcbb05736d6012a6412f5a8aa798b4">setFault</a> (int rc, const char *msg)</td></tr>
+<tr class="memdesc:aaddcbb05736d6012a6412f5a8aa798b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the procedure as failed. <br /></td></tr>
 <tr class="separator:aaddcbb05736d6012a6412f5a8aa798b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab51b6b1e9f0e9789e6387a20203d30a9"><td class="memItemLeft" align="right" valign="top"><a id="ab51b6b1e9f0e9789e6387a20203d30a9"></a>
 <a class="el" href="classPt_1_1Composer.html">Pt::Composer</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#ab51b6b1e9f0e9789e6387a20203d30a9">setProcedure</a> (const std::string &amp;name)</td></tr>
@@ -165,6 +178,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1Decomposer.html">Pt::Decomposer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a30e75d742c603e25f3294e1053782f55">endCall</a> ()</td></tr>
 <tr class="memdesc:a30e75d742c603e25f3294e1053782f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the service procedure call. <br /></td></tr>
 <tr class="separator:a30e75d742c603e25f3294e1053782f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041d6c9ef8b2768d2a63839a8ddbfa10"><td class="memItemLeft" align="right" valign="top"><a id="a041d6c9ef8b2768d2a63839a8ddbfa10"></a>
+<a class="el" href="classPt_1_1Decomposer.html">Pt::Decomposer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1Responder.html#a041d6c9ef8b2768d2a63839a8ddbfa10">call</a> ()</td></tr>
+<tr class="memdesc:a041d6c9ef8b2768d2a63839a8ddbfa10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronous call without EventLoop. <br /></td></tr>
+<tr class="separator:a041d6c9ef8b2768d2a63839a8ddbfa10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa37ece2e002c960665a87c6a8b6034e7"></a>
@@ -189,7 +206,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Derived responders implement this method to format and send the XML-RPC result. It is called when the service procedure has finished. Use <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f" title="Formats the XML-RPC result.">beginResult()</a>, <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973" title="Formats the XML-RPC message.">advanceResult()</a> and <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1" title="Formats the XML-RPC message.">finishResult()</a> to format the XML-RPC result. </p>
+<p>Derived responders implement this method to format and send the XML-RPC result. It is called when the service procedure has finished. Use <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f" title="Begin formatting a JSON-RPC success response.">beginResult()</a>, <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973" title="Continue formatting the result.">advanceResult()</a> and <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1" title="Finish formatting the result response.">finishResult()</a> to format the XML-RPC result. </p>
 
 <p>Implements <a class="el" href="classPt_1_1Remoting_1_1Responder.html#a83bc093f10b38b3429883892e9a72f87">Responder</a>.</p>
 
@@ -246,7 +263,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Derived responders implement this method to format and send the XML-RPC fault result. It is called when the service procedure has failed. Use <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f" title="Formats the XML-RPC result.">beginResult()</a>, <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973" title="Formats the XML-RPC message.">advanceResult()</a> and <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1" title="Formats the XML-RPC message.">finishResult()</a> to format the XML-RPC result. </p>
+<p>Derived responders implement this method to format and send the JSON-RPC error response. Use <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a6a9bf9cd11626e2fe323dd7937878810" title="Begin formatting a JSON-RPC error response.">beginFault()</a> to format the response. </p>
 
 </div>
 </div>
@@ -272,34 +289,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Derived responders implement this method to format and send the XML-RPC result. It is called when the service procedure has finished. Use <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f" title="Formats the XML-RPC result.">beginResult()</a>, <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973" title="Formats the XML-RPC message.">advanceResult()</a> and <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1" title="Formats the XML-RPC message.">finishResult()</a> to format the XML-RPC result. </p>
-
-</div>
-</div>
-<a id="a537b3e57a18bb9bd4afd13a9a1473992"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a537b3e57a18bb9bd4afd13a9a1473992">&#9670;&nbsp;</a></span>beginMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void beginMessage </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>is</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This method is used by derived responders to begin parsing a XML-RPC message from a std::istream. </p>
+<p>Derived responders implement this method to format and send the JSON-RPC result. Use <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f" title="Begin formatting a JSON-RPC success response.">beginResult()</a>, <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973" title="Continue formatting the result.">advanceResult()</a> and <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ad90571f447c822ee89516b908ec4d1c1" title="Finish formatting the result response.">finishResult()</a> to format the response. </p>
 
 </div>
 </div>
@@ -325,61 +315,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method is used by derived responders to parse a XML-RPC message. Each call consumes the available data from the std::istream set with <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a537b3e57a18bb9bd4afd13a9a1473992" title="Parses the XML-RPC message.">beginMessage()</a> and returns true if no more message data needs to be parsed, either because the message is complete or an error occured. </p>
-
-</div>
-</div>
-<a id="afd116018fdb0c20871fd780fde5107fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd116018fdb0c20871fd780fde5107fe">&#9670;&nbsp;</a></span>finishMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void finishMessage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;&#160;</td>
-          <td class="paramname"><em>loop</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This method is used by derived responders after the XML-RPC message has been parsed by <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab6259f3aa062e47ff5031fd719568f1f" title="Parses the XML-RPC message.">parseMessage()</a>. This will execute the service procedure. </p>
-
-</div>
-</div>
-<a id="a72ed5f0a66ebd08fbfcc70f98f75ee7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72ed5f0a66ebd08fbfcc70f98f75ee7f">&#9670;&nbsp;</a></span>beginResult()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void beginResult </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This method is used by derived responders in <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aee417c3d369444f3b503dae87408e433" title="The service procedure has finished.">onResult()</a> and onError() to begin formatting a XML-RPC result to a std::ostream. </p>
+<p>Each call consumes available data. Returns true if parsing is complete (success or error). </p>
 
 </div>
 </div>
@@ -405,70 +341,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method is used by derived responders in <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aee417c3d369444f3b503dae87408e433" title="The service procedure has finished.">onResult()</a> and onError() to format a XML-RPC result. Each call generates a chunk of the result and returns true if the message is complete. </p>
-
-</div>
-</div>
-<a id="ad90571f447c822ee89516b908ec4d1c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad90571f447c822ee89516b908ec4d1c1">&#9670;&nbsp;</a></span>finishResult()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void finishResult </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This method is used by derived responders in <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aee417c3d369444f3b503dae87408e433" title="The service procedure has finished.">onResult()</a> and onError() to format the end of a XML-RPC result. It is called after <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#ab2fdaedbf3d7262a04889d8160480973" title="Formats the XML-RPC message.">advanceResult()</a> returns true. </p>
-
-</div>
-</div>
-<a id="aaddcbb05736d6012a6412f5a8aa798b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaddcbb05736d6012a6412f5a8aa798b4">&#9670;&nbsp;</a></span>setFault()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFault </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This method is used by derived responders to indicate that the service procedure should not be executed, but a fault result be generated instead. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the result is fully formatted. </dd></dl>
 
 </div>
 </div>
