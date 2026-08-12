@@ -93,6 +93,20 @@
 <div class="line">    <span class="keywordflow">return</span> app.<a class="code" href="classPt_1_1System_1_1Application.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>This program will simply exit, when the timer expires after 1000 ms. The application object is the callee and the member function Application::exit serves as a slot. The timer is the caller, which has a signal called timeout.</p>
+<p>Non-generic lambdas and function objects derive their slot signature from operator(). Generic lambdas use an explicitly stated slot signature. The callable must be copyable because a connection clones its slot. A lambda slot cannot be removed with operator-= because captured values do not have general equality. Retain the returned Connection and close it when no context is supplied.</p>
+<div class="fragment"><div class="line">  <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;int&gt;</a> signal;</div>
+<div class="line">  <a class="code" href="classPt_1_1Connection.html">Pt::Connection</a> connection = signal +=</div>
+<div class="line">    Pt::slot([<span class="keyword">this</span>](<span class="keywordtype">int</span>) { add(42); });</div>
+<div class="line"> </div>
+<div class="line">  <a class="code" href="classPt_1_1Delegate.html">Pt::Delegate&lt;int, int&gt;</a> delegate;</div>
+<div class="line">  delegate += Pt::slot&lt;int, int&gt;([](<span class="keyword">auto</span> value) { <span class="keywordflow">return</span> value + 1; });</div>
+<div class="line">  <span class="keywordtype">int</span> result = delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>(41);</div>
+<div class="line"> </div>
+<div class="line">  connection.<a class="code" href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a> context;</div>
+<div class="line">signal += Pt::slot(context, [<span class="keyword">this</span>](<span class="keywordtype">int</span>) { add(42); });</div>
+</div><!-- fragment --><p>Destroying the context closes its bound connections automatically. The context must outlive every unsafe capture while the connection remains open.</p>
 <h1><a class="anchor" id="sigslot_Signals"></a>
 Signals</h1>
 <p>Signals are normally members of objects and are being sent e.g. When the object state changes or some event occurs. When a signal is sent, it calls all slots it is connected to. Callable entities, like functions or member functions can serve as slots for signals. The template parameter list of the <a class="el" href="classPt_1_1Signal.html" title="Multicast Signal to call multiple slots.">Pt::Signal</a> class template determines the signature of the signal. If a signal does not have any arguments the parameter list is left empty:</p>
@@ -197,11 +211,11 @@ Delegates</h1>
 </div><!-- fragment --><p>The program above connects a delegate to a slot and then calls it. After the connection was closed, the delegate is invoked, which has no effect. Finally, when the delegate is called again, an exception is thrown and catched. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a56c611dce085c482763cf72e18284146"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">Pt::System::Timer::timeout</a></div><div class="ttdeci">Signal &amp; timeout()</div><div class="ttdoc">Notifies about interval timeouts.</div><div class="ttdef"><b>Definition:</b> Timer.h:155</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:73</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a56c611dce085c482763cf72e18284146"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">Pt::System::Timer::timeout</a></div><div class="ttdeci">Signal &amp; timeout()</div><div class="ttdoc">Notifies about interval timeouts.</div><div class="ttdef"><b>Definition:</b> Timer.h:161</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:79</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html_a358d2e2397ca11ccd17553e3c40e7901"><div class="ttname"><a href="classPt_1_1System_1_1Application.html#a358d2e2397ca11ccd17553e3c40e7901">Pt::System::Application::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">Exits from the contained event loop.</div><div class="ttdef"><b>Definition:</b> Application.h:93</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html_a9d27135050e141db298170c2e94735e1"><div class="ttname"><a href="classPt_1_1System_1_1Application.html#a9d27135050e141db298170c2e94735e1">Pt::System::Application::loop</a></div><div class="ttdeci">EventLoop &amp; loop()</div><div class="ttdoc">Returns the event loop.</div><div class="ttdef"><b>Definition:</b> Application.h:83</div></div>
-<div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal</a></div><div class="ttdoc">Multicast Signal to call multiple slots.</div><div class="ttdef"><b>Definition:</b> Api-Signal.h:111</div></div>
+<div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; int &gt;</a></div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html_ae3749f90a9e105e71cebd34b8d4f20e2"><div class="ttname"><a href="classPt_1_1Signal.html#ae3749f90a9e105e71cebd34b8d4f20e2">Pt::Signal::send</a></div><div class="ttdeci">void send(ARGUMENTS args) const</div><div class="ttdoc">Invlokes all slots.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a1d0ec20a053d1eb6d987d1741e31e7b6"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">Pt::System::Timer::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;loop)</div><div class="ttdoc">Sets the used event loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>

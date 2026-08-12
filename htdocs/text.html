@@ -103,11 +103,11 @@ Characters and Strings</h1>
 </div><!-- fragment --><p>It offers all the functionality of the std::basic_string template. This has the advantage, that all generic algorithms that work with std::basic_string should also work with <a class="el" href="classPt_1_1String.html" title="Unicode capable basic_string.">Pt::String</a>. Please refer to a standard c++ manual for a complete overview. Additional methods make it easier to work with other character types. For example, the relational operators are also overloaded for char and wchar_t. <br  />
 </p>
 <p>Since a specialization of std::char_traits is also provided, the C++ iostreams can be instantiated for Pt::Char, including the string streams. Three typedefs provide shorter names for the unicode capable string streams:</p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> std::basic_istringstream&lt;Pt::Char&gt; <a class="code" href="classPt_1_1IStringStream.html">IStringStream</a>;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> std::basic_istringstream&lt;Pt::Char&gt; IStringStream;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">typedef</span> std::basic_ostringstream&lt;Pt::Char&gt; <a class="code" href="classPt_1_1OStringStream.html">OStringStream</a>;</div>
+<div class="line"><span class="keyword">typedef</span> std::basic_ostringstream&lt;Pt::Char&gt; OStringStream;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">typedef</span> std::basic_stringstream&lt;Pt::Char&gt; <a class="code" href="classPt_1_1StringStream.html">StringStream</a>;</div>
+<div class="line"><span class="keyword">typedef</span> std::basic_stringstream&lt;Pt::Char&gt; StringStream;</div>
 </div><!-- fragment --><p>The insertion and extraction opertors (&lt;&lt; and &gt;&gt;) for iostreams require certain localization factes to be present in the std::locale. Pt will install specializations of std::num_put, std::num_get, std::numpunct and std::ctype for Pt::Char. This means that all other facilities that use localization facets will also work.</p>
 <h1><a class="anchor" id="text_TextStreams"></a>
 Text Streams and Codecs</h1>
@@ -227,12 +227,9 @@ Base-64 Encoding</h1>
 <div class="ttc" id="aclassPt_1_1TextIStream_html"><div class="ttname"><a href="classPt_1_1TextIStream.html">TextIStream</a></div><div class="ttdoc">Text input stream for unicode character conversion.</div></div>
 <div class="ttc" id="astructPt_1_1Char_html_af65123f3eb14bc425760eb2ca615065d"><div class="ttname"><a href="structPt_1_1Char.html#af65123f3eb14bc425760eb2ca615065d">Pt::Char::isupper</a></div><div class="ttdeci">int isupper(const Char &amp;ch)</div><div class="ttdoc">Checks whether ch is upper case.</div><div class="ttdef"><b>Definition:</b> String.h:219</div></div>
 <div class="ttc" id="astructPt_1_1Char_html"><div class="ttname"><a href="structPt_1_1Char.html">Pt::Char</a></div><div class="ttdoc">Unicode character type.</div><div class="ttdef"><b>Definition:</b> String.h:67</div></div>
-<div class="ttc" id="aclassPt_1_1OStringStream_html"><div class="ttname"><a href="classPt_1_1OStringStream.html">OStringStream</a></div><div class="ttdoc">Unicode string output stream.</div></div>
 <div class="ttc" id="aclassPt_1_1BasicTextIStream_html"><div class="ttname"><a href="classPt_1_1BasicTextIStream.html">Pt::BasicTextIStream&lt; Char, char &gt;</a></div></div>
 <div class="ttc" id="aclassPt_1_1Regex_html"><div class="ttname"><a href="classPt_1_1Regex.html">Pt::Regex</a></div><div class="ttdoc">Regular Expressions for Unicode Strings.</div><div class="ttdef"><b>Definition:</b> Regex.h:174</div></div>
 <div class="ttc" id="aclassPt_1_1RegexSMatch_html_a49fcd5cf828f06dfe0aa8abdcd440952"><div class="ttname"><a href="classPt_1_1RegexSMatch.html#a49fcd5cf828f06dfe0aa8abdcd440952">Pt::RegexSMatch::str</a></div><div class="ttdeci">Pt::String str(std::size_t n=0) const</div><div class="ttdoc">Returns the nth match.</div></div>
-<div class="ttc" id="aclassPt_1_1IStringStream_html"><div class="ttname"><a href="classPt_1_1IStringStream.html">IStringStream</a></div><div class="ttdoc">Unicode string input stream.</div></div>
-<div class="ttc" id="aclassPt_1_1StringStream_html"><div class="ttname"><a href="classPt_1_1StringStream.html">StringStream</a></div><div class="ttdoc">Unicode string stream.</div></div>
 <div class="ttc" id="aclassPt_1_1TextOStream_html"><div class="ttname"><a href="classPt_1_1TextOStream.html">TextOStream</a></div><div class="ttdoc">Text output stream for unicode character conversion.</div></div>
 <div class="ttc" id="aclassPt_1_1RegexSMatch_html"><div class="ttname"><a href="classPt_1_1RegexSMatch.html">Pt::RegexSMatch</a></div><div class="ttdoc">Result of a regular expression match.</div><div class="ttdef"><b>Definition:</b> Regex.h:226</div></div>
 <div class="ttc" id="aclassPt_1_1String_html_a7fbef4df9f9ad1197feb4965b6d7ab30"><div class="ttname"><a href="classPt_1_1String.html#a7fbef4df9f9ad1197feb4965b6d7ab30">Pt::String::narrow</a></div><div class="ttdeci">std::string narrow(char dfault='?') const</div><div class="ttdoc">Narrow string to 8-bit.</div></div>

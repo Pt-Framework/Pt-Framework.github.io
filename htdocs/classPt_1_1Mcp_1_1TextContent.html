@@ -87,7 +87,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="ToolDeclaration_8h_source.html">Pt/Mcp/ToolDeclaration.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ContentType_8h_source.html">Pt/Mcp/ContentType.h</a>&gt;</code></p>
 
 <p>Formats tool results as MCP text content.  
  <a href="classPt_1_1Mcp_1_1TextContent.html#details">More...</a></p>
@@ -96,15 +96,18 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a99b7cdb2d95097ff4a20514115f72cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a99b7cdb2d95097ff4a20514115f72cb8">format</a> (<a class="el" href="classPt_1_1Decomposer.html">Decomposer</a> *result, std::ostream &amp;os) const override</td></tr>
-<tr class="memdesc:a99b7cdb2d95097ff4a20514115f72cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the decomposed result into an MCP content block.  <a href="classPt_1_1Mcp_1_1TextContent.html#a99b7cdb2d95097ff4a20514115f72cb8">More...</a><br /></td></tr>
-<tr class="separator:a99b7cdb2d95097ff4a20514115f72cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d2bf89da03552e85b531a2b7610ffe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a07d2bf89da03552e85b531a2b7610ffe">getFormatter</a> () const override</td></tr>
+<tr class="memdesc:a07d2bf89da03552e85b531a2b7610ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> for a result.  <a href="classPt_1_1Mcp_1_1TextContent.html#a07d2bf89da03552e85b531a2b7610ffe">More...</a><br /></td></tr>
+<tr class="separator:a07d2bf89da03552e85b531a2b7610ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d90826c1c326386b38bfafd2c703d9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a6d90826c1c326386b38bfafd2c703d9b">releaseFormatter</a> (<a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a> *formatter) const override</td></tr>
+<tr class="memdesc:a6d90826c1c326386b38bfafd2c703d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> previously obtained from <a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a07d2bf89da03552e85b531a2b7610ffe" title="Creates a new ContentFormatter for a result.">getFormatter()</a>.  <a href="classPt_1_1Mcp_1_1TextContent.html#a6d90826c1c326386b38bfafd2c703d9b">More...</a><br /></td></tr>
+<tr class="separator:a6d90826c1c326386b38bfafd2c703d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Serializes the result using TextFormatter (compact YAML-like) and embeds it in a text content block. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a99b7cdb2d95097ff4a20514115f72cb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99b7cdb2d95097ff4a20514115f72cb8">&#9670;&nbsp;</a></span>format()</h2>
+<a id="a07d2bf89da03552e85b531a2b7610ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d2bf89da03552e85b531a2b7610ffe">&#9670;&nbsp;</a></span>getFormatter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,21 +116,10 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void format </td>
+          <td class="memname"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a>* getFormatter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Decomposer.html">Decomposer</a> *&#160;</td>
-          <td class="paramname"><em>result</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -136,9 +128,38 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes a JSON content object (e.g. {"type":"text","text":"..."}) to the output stream. </p>
+<p>The caller owns the returned <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> and must release it via <a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a6d90826c1c326386b38bfafd2c703d9b" title="Releases a ContentFormatter previously obtained from getFormatter().">releaseFormatter()</a> once done with it, whether the format completed normally or was abandoned. The output stream is not known yet; it is passed to ContentFormatter::beginFormat(). </p>
 
-<p>Implements <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a610a0d3752e704d2ae3fe1efb1e8aee0">ContentType</a>.</p>
+<p>Implements <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52">ContentType</a>.</p>
+
+</div>
+</div>
+<a id="a6d90826c1c326386b38bfafd2c703d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d90826c1c326386b38bfafd2c703d9b">&#9670;&nbsp;</a></span>releaseFormatter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void releaseFormatter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a> *&#160;</td>
+          <td class="paramname"><em>formatter</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Deletes <em>formatter</em>; the caller must not use it afterward. Does not write anything - call formatter-&gt;finishFormat() first to complete the content block normally. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a06484925cd0ffeed7f03a71e10d654cc">ContentType</a>.</p>
 
 </div>
 </div>

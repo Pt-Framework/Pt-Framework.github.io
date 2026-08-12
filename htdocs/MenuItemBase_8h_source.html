@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>D:/a/Pt-Framework.github.io/Pt-Framework.github.io/pt-source/include/Pt/Forms/MenuBaseItem.h Source File</title>
+  <title>D:/a/Pt-Framework.github.io/Pt-Framework.github.io/pt-source/include/Pt/Forms/MenuItemBase.h Source File</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -81,7 +81,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">MenuBaseItem.h</div>  </div>
+<div class="title">MenuItemBase.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner</span></div>
@@ -123,16 +123,16 @@
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>Forms {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span>PT_FORMS_API MenuBaseItem : <span class="keyword">public</span> Control</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span>PT_FORMS_API MenuItemBase : <span class="keyword">public</span> Control</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">typedef</span> Control Base;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        MenuBaseItem();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        MenuItemBase();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">virtual</span> ~MenuBaseItem();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">virtual</span> ~MenuItemBase();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1String.html">Pt::String</a>&amp; text() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
@@ -161,7 +161,7 @@
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> _isHighlighted;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;MenuBaseItem&amp;&gt;</a>&amp; triggered();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;MenuItemBase&amp;&gt;</a>&amp; triggered();</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">public</span>:</div>
@@ -226,7 +226,7 @@
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        };</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;MenuBaseItem&amp;&gt;</a> _triggered;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;MenuItemBase&amp;&gt;</a> _triggered;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">double</span>            _iconWidth;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Pt::Gfx::Image</a>        _icon;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="classPt_1_1String.html">Pt::String</a>        _text;</div>
@@ -252,7 +252,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Pen_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Pen.html">Pt::Gfx::Pen</a></div><div class="ttdoc">Attributes for the drawing of outlines.</div><div class="ttdef"><b>Definition:</b> Pen.h:54</div></div>
-<div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; MenuBaseItem &amp; &gt;</a></div></div>
+<div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; MenuItemBase &amp; &gt;</a></div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Font_html_ab98ae24797c90e4aeecf0c84fe158d44"><div class="ttname"><a href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Pt::Gfx::Font::Slant</a></div><div class="ttdeci">Slant</div><div class="ttdoc">Describes the requested font slant.</div><div class="ttdef"><b>Definition:</b> Font.h:76</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
 <div class="ttc" id="aclassPt_1_1AutoPtr_html"><div class="ttname"><a href="classPt_1_1AutoPtr.html">Pt::AutoPtr&lt; Pt::Gfx::Brush &gt;</a></div></div>

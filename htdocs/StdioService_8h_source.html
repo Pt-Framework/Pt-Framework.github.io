@@ -119,53 +119,57 @@
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Pt/Mcp/Api.h&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Pt/Mcp/ToolDeclaration.h&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;Pt/Remoting/ServiceDefinition.h&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePt.html">Pt</a> {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>Mcp {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html">   48</a></span>&#160;<span class="keyword">class </span>PT_MCP_API <a class="code" href="classPt_1_1Mcp_1_1StdioService.html">StdioService</a></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#affab74cfc559aa343204520f0136a61d">   53</a></span>&#160;    <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#affab74cfc559aa343204520f0136a61d">StdioService</a>(<a class="code" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a>&amp; serviceDef,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                 <span class="keyword">const</span> <a class="code" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a>&amp; decl);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a1248592bbc0d907eb583a12e495310c2">   58</a></span>&#160;    <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a1248592bbc0d907eb583a12e495310c2">~StdioService</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">   64</a></span>&#160;    std::string <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">readMessage</a>(std::istream&amp; is);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">   68</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">writeMessage</a>(std::ostream&amp; os, <span class="keyword">const</span> std::string&amp; json);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">   75</a></span>&#160;    std::string <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">dispatch</a>(<span class="keyword">const</span> std::string&amp; json);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::string dispatchToolsCall(<span class="keyword">const</span> std::string&amp; json);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string dispatchInitialize(<span class="keyword">const</span> std::string&amp; json);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string dispatchToolsList(<span class="keyword">const</span> std::string&amp; json);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">static</span> std::string extractMethod(<span class="keyword">const</span> std::string&amp; json);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> <a class="code" href="group__BasicTypes.html#ga312c7e8848187d110315ab83a7b3d4d0">Pt::int64_t</a> extractId(<span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Pt/System/Api.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePt.html">Pt</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span>Mcp {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html">   49</a></span>&#160;<span class="keyword">class </span>PT_MCP_API <a class="code" href="classPt_1_1Mcp_1_1StdioService.html">StdioService</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#aacf7e663494c2e68850d81fb6b9696e2">   55</a></span>&#160;    <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#aacf7e663494c2e68850d81fb6b9696e2">StdioService</a>(<a class="code" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a>&amp; serviceDef,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                 <span class="keyword">const</span> <a class="code" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a>&amp; decl,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                 <a class="code" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a>&amp; loop);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a1248592bbc0d907eb583a12e495310c2">   61</a></span>&#160;    <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a1248592bbc0d907eb583a12e495310c2">~StdioService</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">   67</a></span>&#160;    std::string <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">readMessage</a>(std::istream&amp; is);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">   71</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">writeMessage</a>(std::ostream&amp; os, <span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">   78</a></span>&#160;    std::string <a class="code" href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">dispatch</a>(<span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::string dispatchToolsCall(<span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::string dispatchInitialize(<span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string dispatchToolsList(<span class="keyword">const</span> std::string&amp; json);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a>* _serviceDef;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> <a class="code" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a>* _decl;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;} <span class="comment">// namespace Mcp</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace Pt</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">static</span> std::string extractMethod(<span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">static</span> <a class="code" href="group__BasicTypes.html#ga312c7e8848187d110315ab83a7b3d4d0">Pt::int64_t</a> extractId(<span class="keyword">const</span> std::string&amp; json);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a>* _serviceDef;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> <a class="code" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a>* _decl;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a>&amp; _loop;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // PT_MCP_STDIOSERVICE_H</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace Mcp</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;} <span class="comment">// namespace Pt</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif // PT_MCP_STDIOSERVICE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html_affab74cfc559aa343204520f0136a61d"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html#affab74cfc559aa343204520f0136a61d">Pt::Mcp::StdioService::StdioService</a></div><div class="ttdeci">StdioService(Remoting::ServiceDefinition &amp;serviceDef, const ToolDeclaration &amp;decl)</div><div class="ttdoc">Construct with a service definition and tool declaration.</div></div>
-<div class="ttc" id="aclassPt_1_1Mcp_1_1ToolDeclaration_html"><div class="ttname"><a href="classPt_1_1Mcp_1_1ToolDeclaration.html">Pt::Mcp::ToolDeclaration</a></div><div class="ttdoc">MCP server and tool registry.</div><div class="ttdef"><b>Definition:</b> ToolDeclaration.h:129</div></div>
+<div class="ttc" id="aclassPt_1_1Mcp_1_1ToolDeclaration_html"><div class="ttname"><a href="classPt_1_1Mcp_1_1ToolDeclaration.html">Pt::Mcp::ToolDeclaration</a></div><div class="ttdoc">MCP server and tool registry.</div><div class="ttdef"><b>Definition:</b> ToolDeclaration.h:93</div></div>
+<div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html_aacf7e663494c2e68850d81fb6b9696e2"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html#aacf7e663494c2e68850d81fb6b9696e2">Pt::Mcp::StdioService::StdioService</a></div><div class="ttdeci">StdioService(Remoting::ServiceDefinition &amp;serviceDef, const ToolDeclaration &amp;decl, System::EventLoop &amp;loop)</div><div class="ttdoc">Construct with a service definition, tool declaration and the event loop used to drive asynchronous s...</div></div>
 <div class="ttc" id="aclassPt_1_1Remoting_1_1ServiceDefinition_html"><div class="ttname"><a href="classPt_1_1Remoting_1_1ServiceDefinition.html">Pt::Remoting::ServiceDefinition</a></div><div class="ttdoc">Remote service definition.</div><div class="ttdef"><b>Definition:</b> Api-ServiceDefinition.h:22</div></div>
 <div class="ttc" id="agroup__BasicTypes_html_ga312c7e8848187d110315ab83a7b3d4d0"><div class="ttname"><a href="group__BasicTypes.html#ga312c7e8848187d110315ab83a7b3d4d0">Pt::int64_t</a></div><div class="ttdeci">int_type int64_t</div><div class="ttdoc">Signed 64-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:55</div></div>
-<div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html">Pt::Mcp::StdioService</a></div><div class="ttdoc">MCP protocol service over stdio.</div><div class="ttdef"><b>Definition:</b> StdioService.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html">Pt::Mcp::StdioService</a></div><div class="ttdoc">MCP protocol service over stdio.</div><div class="ttdef"><b>Definition:</b> StdioService.h:50</div></div>
 <div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html_a6c1245f281c8c9a57d9aac63bacf2729"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">Pt::Mcp::StdioService::dispatch</a></div><div class="ttdeci">std::string dispatch(const std::string &amp;json)</div><div class="ttdoc">Dispatch an MCP request and return the response JSON.</div></div>
 <div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html_a52a061f3e17f744bf0e20b0d5cb0ccfb"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">Pt::Mcp::StdioService::writeMessage</a></div><div class="ttdeci">void writeMessage(std::ostream &amp;os, const std::string &amp;json)</div><div class="ttdoc">Write a Content-Length framed message to the stream.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> EventLoop.h:83</div></div>
 <div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html_a67f17d9be94ca2d1e9d321b68b98b758"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">Pt::Mcp::StdioService::readMessage</a></div><div class="ttdeci">std::string readMessage(std::istream &amp;is)</div><div class="ttdoc">Read a Content-Length framed message from the stream.</div></div>
 <div class="ttc" id="aclassPt_1_1Mcp_1_1StdioService_html_a1248592bbc0d907eb583a12e495310c2"><div class="ttname"><a href="classPt_1_1Mcp_1_1StdioService.html#a1248592bbc0d907eb583a12e495310c2">Pt::Mcp::StdioService::~StdioService</a></div><div class="ttdeci">~StdioService()</div><div class="ttdoc">Destructor.</div></div>
 

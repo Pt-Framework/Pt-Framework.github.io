@@ -87,24 +87,28 @@
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="ToolDeclaration_8h_source.html">Pt/Mcp/ToolDeclaration.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ContentType_8h_source.html">Pt/Mcp/ContentType.h</a>&gt;</code></p>
 
 <p>Formats a tool result as MCP content.  
  <a href="classPt_1_1Mcp_1_1ContentType.html#details">More...</a></p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Mcp_1_1TextContent.html">TextContent</a>.</p>
+<p>Inherited by <a class="el" href="classPt_1_1Mcp_1_1ImageContent.html">ImageContent</a>, and <a class="el" href="classPt_1_1Mcp_1_1TextContent.html">TextContent</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a610a0d3752e704d2ae3fe1efb1e8aee0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a610a0d3752e704d2ae3fe1efb1e8aee0">format</a> (<a class="el" href="classPt_1_1Decomposer.html">Decomposer</a> *result, std::ostream &amp;os) const =0</td></tr>
-<tr class="memdesc:a610a0d3752e704d2ae3fe1efb1e8aee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the decomposed result into an MCP content block.  <a href="classPt_1_1Mcp_1_1ContentType.html#a610a0d3752e704d2ae3fe1efb1e8aee0">More...</a><br /></td></tr>
-<tr class="separator:a610a0d3752e704d2ae3fe1efb1e8aee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901ec88edc2f7298a74bdc84f1df5f52"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52">getFormatter</a> () const =0</td></tr>
+<tr class="memdesc:a901ec88edc2f7298a74bdc84f1df5f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> for a result.  <a href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52">More...</a><br /></td></tr>
+<tr class="separator:a901ec88edc2f7298a74bdc84f1df5f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06484925cd0ffeed7f03a71e10d654cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a06484925cd0ffeed7f03a71e10d654cc">releaseFormatter</a> (<a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a> *formatter) const =0</td></tr>
+<tr class="memdesc:a06484925cd0ffeed7f03a71e10d654cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> previously obtained from <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52" title="Creates a new ContentFormatter for a result.">getFormatter()</a>.  <a href="classPt_1_1Mcp_1_1ContentType.html#a06484925cd0ffeed7f03a71e10d654cc">More...</a><br /></td></tr>
+<tr class="separator:a06484925cd0ffeed7f03a71e10d654cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPt_1_1Mcp_1_1ContentType.html" title="Formats a tool result as MCP content.">ContentType</a> determines how a <a class="el" href="classPt_1_1Decomposer.html" title="Manages the decomposition of types during serialization.">Decomposer</a> result is serialized into an MCP content block (text, image, etc.). </p>
+<div class="textblock"><p><a class="el" href="classPt_1_1Mcp_1_1ContentType.html" title="Formats a tool result as MCP content.">ContentType</a> determines how a <a class="el" href="classPt_1_1Decomposer.html" title="Manages the decomposition of types during serialization.">Decomposer</a> result is serialized into an MCP content block (text, image, etc.). <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52" title="Creates a new ContentFormatter for a result.">getFormatter()</a> creates the <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> used to write the block; the caller drives it directly (beginFormat(), the <a class="el" href="classPt_1_1Decomposer.html" title="Manages the decomposition of types during serialization.">Decomposer</a> begin/advance protocol, finishFormat()) and releases it via <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a06484925cd0ffeed7f03a71e10d654cc" title="Releases a ContentFormatter previously obtained from getFormatter().">releaseFormatter()</a>.</p>
+<dl class="section user"><dt>Thread-safety</dt><dd>Implementations are shared, process-wide singletons (see textContent(), imageContent()) that may be used by many Responders concurrently. <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52" title="Creates a new ContentFormatter for a result.">getFormatter()</a> must therefore be stateless: it may only read immutable members of the <a class="el" href="classPt_1_1Mcp_1_1ContentType.html" title="Formats a tool result as MCP content.">ContentType</a> (set once at construction) and must never cache a <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Formatter</a>, stream or scratch buffer as a mutable member of the <a class="el" href="classPt_1_1Mcp_1_1ContentType.html" title="Formats a tool result as MCP content.">ContentType</a> itself. All per-request state must live exclusively in the <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> instance returned by <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52" title="Creates a new ContentFormatter for a result.">getFormatter()</a>. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a610a0d3752e704d2ae3fe1efb1e8aee0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a610a0d3752e704d2ae3fe1efb1e8aee0">&#9670;&nbsp;</a></span>format()</h2>
+<a id="a901ec88edc2f7298a74bdc84f1df5f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a901ec88edc2f7298a74bdc84f1df5f52">&#9670;&nbsp;</a></span>getFormatter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,21 +117,10 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void format </td>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a>* getFormatter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Decomposer.html">Decomposer</a> *&#160;</td>
-          <td class="paramname"><em>result</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -136,9 +129,38 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes a JSON content object (e.g. {"type":"text","text":"..."}) to the output stream. </p>
+<p>The caller owns the returned <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> and must release it via <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a06484925cd0ffeed7f03a71e10d654cc" title="Releases a ContentFormatter previously obtained from getFormatter().">releaseFormatter()</a> once done with it, whether the format completed normally or was abandoned. The output stream is not known yet; it is passed to ContentFormatter::beginFormat(). </p>
 
-<p>Implemented in <a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a99b7cdb2d95097ff4a20514115f72cb8">TextContent</a>.</p>
+<p>Implemented in <a class="el" href="classPt_1_1Mcp_1_1ImageContent.html#a07d2bf89da03552e85b531a2b7610ffe">ImageContent</a>, and <a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a07d2bf89da03552e85b531a2b7610ffe">TextContent</a>.</p>
+
+</div>
+</div>
+<a id="a06484925cd0ffeed7f03a71e10d654cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06484925cd0ffeed7f03a71e10d654cc">&#9670;&nbsp;</a></span>releaseFormatter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void releaseFormatter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html">ContentFormatter</a> *&#160;</td>
+          <td class="paramname"><em>formatter</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Deletes <em>formatter</em>; the caller must not use it afterward. Does not write anything - call formatter-&gt;finishFormat() first to complete the content block normally. </p>
+
+<p>Implemented in <a class="el" href="classPt_1_1Mcp_1_1ImageContent.html#a6d90826c1c326386b38bfafd2c703d9b">ImageContent</a>, and <a class="el" href="classPt_1_1Mcp_1_1TextContent.html#a6d90826c1c326386b38bfafd2c703d9b">TextContent</a>.</p>
 
 </div>
 </div>

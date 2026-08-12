@@ -118,7 +118,7 @@
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/Api.h&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/AsyncCall.h&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/TypeManager.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/TypeManager.h&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Pt/Any.h&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -133,14 +133,14 @@
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1Context.html">   49</a></span>&#160;<span class="keyword">class </span>PT_LUA_API <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>(TypeManager&amp; tm);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>(Pt::Reflex::TypeManager&amp; tm);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ~<a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    lua_State* state()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> _L; }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    TypeManager&amp; typeManager()</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Pt::Reflex::TypeManager&amp; typeManager()</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    { <span class="keywordflow">return</span> _tm; }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> reset();</div>
@@ -149,10 +149,10 @@
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>&amp;);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classPt_1_1Lua_1_1Context.html">Context</a>&amp;);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> bindType(Type&amp; type, <span class="keywordtype">void</span> (*destructor)(<span class="keywordtype">void</span>*));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> bindType(Pt::Reflex::Type&amp; type);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    TypeManager&amp;   _tm;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Pt::Reflex::TypeManager&amp;  _tm;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">struct </span>lua_State* _L;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Snapshot of global keys present after bindType() calls, used by reset().</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::vector&lt;std::string&gt; _bindingKeys;</div>
@@ -162,17 +162,16 @@
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span>*             instance;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  Pt::Reflex::Type* type;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  void (*destructor)(<span class="keywordtype">void</span>*);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::size_t LUAOBJECT_DATA_OFFSET =</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  (<span class="keyword">sizeof</span>(LuaObjectHeader) + <span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*) - 1) &amp; ~(<span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*) - 1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::size_t LUAOBJECT_DATA_OFFSET =</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  (<span class="keyword">sizeof</span>(LuaObjectHeader) + <span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*) - 1) &amp; ~(<span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*) - 1);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Context_html"><div class="ttname"><a href="classPt_1_1Lua_1_1Context.html">Pt::Lua::Context</a></div><div class="ttdoc">Scripting context.</div><div class="ttdef"><b>Definition:</b> Context.h:50</div></div>
