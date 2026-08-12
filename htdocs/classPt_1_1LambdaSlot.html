@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>LambdaSlot&lt; L, R, ARGUMENTS &gt; Class Template Reference</title>
+  <title>LambdaSlot&lt; L, R, A &gt; Class Template Reference</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#related">Related Functions</a>  </div>
   <div class="headertitle">
-<div class="title">LambdaSlot&lt; L, R, ARGUMENTS &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
+<div class="title">LambdaSlot&lt; L, R, A &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -93,7 +93,7 @@
 <p>Adapts a Lambda for use as a slot.  
  <a href="classPt_1_1LambdaSlot.html#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot&lt; R, ARGUMENTS &gt;</a>.</p>
+<p>Inherits <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot&lt; R, A... &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -118,30 +118,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">onDisconnect</a> (const <a class="el" href="classPt_1_1Connection.html">Connection</a> &amp;connection)</td></tr>
 <tr class="memdesc:a82f6b74df5580c99c31d19712b3fd0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies of disconnects. <br /></td></tr>
 <tr class="separator:a82f6b74df5580c99c31d19712b3fd0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a441aa17f4954bb1a09136ed5c484a8a8"><td class="memItemLeft" align="right" valign="top"><a id="a441aa17f4954bb1a09136ed5c484a8a8"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#a441aa17f4954bb1a09136ed5c484a8a8">equals</a> (const <a class="el" href="classPt_1_1Slot.html">Slot</a> &amp;<a class="el" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>) const</td></tr>
-<tr class="memdesc:a441aa17f4954bb1a09136ed5c484a8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if two slots are equal in value. <br /></td></tr>
-<tr class="separator:a441aa17f4954bb1a09136ed5c484a8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa49fab3a41eb87ee45012149d2ffc0e0"><td class="memItemLeft" align="right" valign="top"><a id="aa49fab3a41eb87ee45012149d2ffc0e0"></a>
-virtual const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">callable</a> () const</td></tr>
-<tr class="memdesc:aa49fab3a41eb87ee45012149d2ffc0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the contained callable. <br /></td></tr>
-<tr class="separator:aa49fab3a41eb87ee45012149d2ffc0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a810dbc7a4e18a9a39775919aa9ba33f4"><td class="memItemLeft" align="right" valign="top"><a id="a810dbc7a4e18a9a39775919aa9ba33f4"></a>
-<a class="el" href="classPt_1_1Slot.html">Slot</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">clone</a> () const</td></tr>
-<tr class="memdesc:a810dbc7a4e18a9a39775919aa9ba33f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone this object with new. <br /></td></tr>
-<tr class="separator:a810dbc7a4e18a9a39775919aa9ba33f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac75d5c02327fdaa8ba50c8d2d21130a"><td class="memItemLeft" align="right" valign="top"><a id="aac75d5c02327fdaa8ba50c8d2d21130a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">onConnect</a> (const <a class="el" href="classPt_1_1Connection.html">Connection</a> &amp;connection)</td></tr>
-<tr class="memdesc:aac75d5c02327fdaa8ba50c8d2d21130a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies of connects. <br /></td></tr>
-<tr class="separator:aac75d5c02327fdaa8ba50c8d2d21130a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f6b74df5580c99c31d19712b3fd0a9"><td class="memItemLeft" align="right" valign="top"><a id="a82f6b74df5580c99c31d19712b3fd0a9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">onDisconnect</a> (const <a class="el" href="classPt_1_1Connection.html">Connection</a> &amp;connection)</td></tr>
-<tr class="memdesc:a82f6b74df5580c99c31d19712b3fd0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies of disconnects. <br /></td></tr>
-<tr class="separator:a82f6b74df5580c99c31d19712b3fd0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07fb581ef6bed362ed927fe7c827a79e"><td class="memItemLeft" align="right" valign="top"><a id="a07fb581ef6bed362ed927fe7c827a79e"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">equals</a> (const <a class="el" href="classPt_1_1Slot.html">Slot</a> &amp;) const</td></tr>
 <tr class="memdesc:a07fb581ef6bed362ed927fe7c827a79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if two slots are equal in value. <br /></td></tr>
 <tr class="separator:a07fb581ef6bed362ed927fe7c827a79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fd6b4701abcd69575ad8d12ac80317"><td class="memItemLeft" align="right" valign="top"><a id="ac7fd6b4701abcd69575ad8d12ac80317"></a>
+virtual const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicSlot.html#ac7fd6b4701abcd69575ad8d12ac80317">callable</a> () const=0</td></tr>
+<tr class="memdesc:ac7fd6b4701abcd69575ad8d12ac80317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the contained callable. <br /></td></tr>
+<tr class="separator:ac7fd6b4701abcd69575ad8d12ac80317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -155,25 +139,35 @@ template&lt;typename R , typename ARGS &gt; </td></tr>
 <tr class="memitem:ada68f22683c1caf397e4da96b5ac4dcb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1FunctionSlot.html">FunctionSlot</a>&lt; R, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#ada68f22683c1caf397e4da96b5ac4dcb">slot</a> (R(*func)(ARGS))</td></tr>
 <tr class="memdesc:ada68f22683c1caf397e4da96b5ac4dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given free/static function. <br /></td></tr>
 <tr class="separator:ada68f22683c1caf397e4da96b5ac4dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba81bbc11b09403403330bbb0af26c26"><td class="memTemplParams" colspan="2"><a id="aba81bbc11b09403403330bbb0af26c26"></a>
-template&lt;typename R , typename... A, typename L &gt; </td></tr>
-<tr class="memitem:aba81bbc11b09403403330bbb0af26c26"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; L, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#aba81bbc11b09403403330bbb0af26c26">slot</a> (L &amp;&amp;lambda)</td></tr>
-<tr class="memdesc:aba81bbc11b09403403330bbb0af26c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
-<tr class="separator:aba81bbc11b09403403330bbb0af26c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1d2d117eef2aa3509fca9936107e43"><td class="memTemplParams" colspan="2"><a id="a0e1d2d117eef2aa3509fca9936107e43"></a>
-template&lt;typename R , typename... A, typename L &gt; </td></tr>
-<tr class="memitem:a0e1d2d117eef2aa3509fca9936107e43"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; L, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a0e1d2d117eef2aa3509fca9936107e43">slot</a> (<a class="el" href="classPt_1_1Connectable.html">Connectable</a> &amp;context, L &amp;&amp;lambda)</td></tr>
-<tr class="memdesc:a0e1d2d117eef2aa3509fca9936107e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
-<tr class="separator:a0e1d2d117eef2aa3509fca9936107e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b04cbcb01d7f5e32892b7123302f30a"><td class="memTemplParams" colspan="2"><a id="a1b04cbcb01d7f5e32892b7123302f30a"></a>
 template&lt;class R , class BaseT , class ClassT , typename ARGS &gt; </td></tr>
 <tr class="memitem:a1b04cbcb01d7f5e32892b7123302f30a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1MethodSlot.html">MethodSlot</a>&lt; R, ClassT, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a1b04cbcb01d7f5e32892b7123302f30a">slot</a> (ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</td></tr>
 <tr class="memdesc:a1b04cbcb01d7f5e32892b7123302f30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given object/member pair. <br /></td></tr>
 <tr class="separator:a1b04cbcb01d7f5e32892b7123302f30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03257c74312032def2297909c1cdb9f1"><td class="memTemplParams" colspan="2"><a id="a03257c74312032def2297909c1cdb9f1"></a>
+template&lt;typename L , typename SlotT  = typename LambdaSlotTraits&lt;L&gt;::Slot&gt; </td></tr>
+<tr class="memitem:a03257c74312032def2297909c1cdb9f1"><td class="memTemplItemLeft" align="right" valign="top">SlotT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a03257c74312032def2297909c1cdb9f1">slot</a> (L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:a03257c74312032def2297909c1cdb9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deduced slot object for the given lambda. <br /></td></tr>
+<tr class="separator:a03257c74312032def2297909c1cdb9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae366cc410231bc7d00e562b83b56355d"><td class="memTemplParams" colspan="2"><a id="ae366cc410231bc7d00e562b83b56355d"></a>
+template&lt;typename L , typename SlotT  = typename LambdaSlotTraits&lt;L&gt;::Slot&gt; </td></tr>
+<tr class="memitem:ae366cc410231bc7d00e562b83b56355d"><td class="memTemplItemLeft" align="right" valign="top">SlotT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#ae366cc410231bc7d00e562b83b56355d">slot</a> (<a class="el" href="classPt_1_1Connectable.html">Connectable</a> &amp;context, L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:ae366cc410231bc7d00e562b83b56355d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deduced slot object for the given lambda. <br /></td></tr>
+<tr class="separator:ae366cc410231bc7d00e562b83b56355d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="memTemplParams" colspan="2"><a id="a97ba6ed3c82c714526c00b1eaa1db30f"></a>
+template&lt;typename R , typename... A, typename L &gt; </td></tr>
+<tr class="memitem:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; typename <a class="el" href="structPt_1_1TypeTraits.html">TypeTraits</a>&lt; L &gt;::Value, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a97ba6ed3c82c714526c00b1eaa1db30f">slot</a> (L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
+<tr class="separator:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15feb8824db02e053789ae306065e6e5"><td class="memTemplParams" colspan="2"><a id="a15feb8824db02e053789ae306065e6e5"></a>
+template&lt;typename R , typename... A, typename L &gt; </td></tr>
+<tr class="memitem:a15feb8824db02e053789ae306065e6e5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; typename <a class="el" href="structPt_1_1TypeTraits.html">TypeTraits</a>&lt; L &gt;::Value, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a15feb8824db02e053789ae306065e6e5">slot</a> (<a class="el" href="classPt_1_1Connectable.html">Connectable</a> &amp;context, L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:a15feb8824db02e053789ae306065e6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
+<tr class="separator:a15feb8824db02e053789ae306065e6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename L, typename R, typename ARGUMENTS&gt;<br />
-class Pt::LambdaSlot&lt; L, R, ARGUMENTS &gt;</h3>
+<div class="textblock"><h3>template&lt;typename L, typename R, typename... A&gt;<br />
+class Pt::LambdaSlot&lt; L, R, A &gt;</h3>
 
 <p><a class="el" href="classPt_1_1Lambda.html" title="Adapts a lambda or function object as a callable.">Lambda</a> slots cannot be compared because captured lambda values have no general equality operation. Retain and close the returned Connection to disconnect a slot, or bind it to a Connectable context. </p>
 </div></div><!-- contents -->

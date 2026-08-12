@@ -95,7 +95,7 @@
 
 <p>Inherits <a class="el" href="classPt_1_1Slot.html">Slot</a>.</p>
 
-<p>Inherited by BoundSlot&lt; R, A1, A2, A3, A4 &gt;, <a class="el" href="classPt_1_1ConstMethodSlot.html">ConstMethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1DelegateSlot.html">DelegateSlot&lt; R, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1FunctionSlot.html">FunctionSlot&lt; R, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot&lt; L, R, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1MethodSlot.html">MethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>, and <a class="el" href="classPt_1_1SignalSlot.html">SignalSlot&lt; ARGUMENTS &gt;</a>.</p>
+<p>Inherited by BoundSlot&lt; R, A1, A2, A3, A4 &gt;, <a class="el" href="classPt_1_1ConstMethodSlot.html">ConstMethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1DelegateSlot.html">DelegateSlot&lt; R, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1FunctionSlot.html">FunctionSlot&lt; R, ARGUMENTS &gt;</a>, <a class="el" href="classPt_1_1MethodSlot.html">MethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>, and <a class="el" href="classPt_1_1SignalSlot.html">SignalSlot&lt; ARGUMENTS &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -132,21 +132,31 @@ template&lt;typename R , typename ARGS &gt; </td></tr>
 <tr class="memitem:ada68f22683c1caf397e4da96b5ac4dcb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1FunctionSlot.html">FunctionSlot</a>&lt; R, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#ada68f22683c1caf397e4da96b5ac4dcb">slot</a> (R(*func)(ARGS))</td></tr>
 <tr class="memdesc:ada68f22683c1caf397e4da96b5ac4dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given free/static function. <br /></td></tr>
 <tr class="separator:ada68f22683c1caf397e4da96b5ac4dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba81bbc11b09403403330bbb0af26c26"><td class="memTemplParams" colspan="2"><a id="aba81bbc11b09403403330bbb0af26c26"></a>
-template&lt;typename R , typename... A, typename L &gt; </td></tr>
-<tr class="memitem:aba81bbc11b09403403330bbb0af26c26"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; L, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#aba81bbc11b09403403330bbb0af26c26">slot</a> (L &amp;&amp;lambda)</td></tr>
-<tr class="memdesc:aba81bbc11b09403403330bbb0af26c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
-<tr class="separator:aba81bbc11b09403403330bbb0af26c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1d2d117eef2aa3509fca9936107e43"><td class="memTemplParams" colspan="2"><a id="a0e1d2d117eef2aa3509fca9936107e43"></a>
-template&lt;typename R , typename... A, typename L &gt; </td></tr>
-<tr class="memitem:a0e1d2d117eef2aa3509fca9936107e43"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; L, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a0e1d2d117eef2aa3509fca9936107e43">slot</a> (<a class="el" href="classPt_1_1Connectable.html">Connectable</a> &amp;context, L &amp;&amp;lambda)</td></tr>
-<tr class="memdesc:a0e1d2d117eef2aa3509fca9936107e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
-<tr class="separator:a0e1d2d117eef2aa3509fca9936107e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b04cbcb01d7f5e32892b7123302f30a"><td class="memTemplParams" colspan="2"><a id="a1b04cbcb01d7f5e32892b7123302f30a"></a>
 template&lt;class R , class BaseT , class ClassT , typename ARGS &gt; </td></tr>
 <tr class="memitem:a1b04cbcb01d7f5e32892b7123302f30a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1MethodSlot.html">MethodSlot</a>&lt; R, ClassT, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a1b04cbcb01d7f5e32892b7123302f30a">slot</a> (ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</td></tr>
 <tr class="memdesc:a1b04cbcb01d7f5e32892b7123302f30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given object/member pair. <br /></td></tr>
 <tr class="separator:a1b04cbcb01d7f5e32892b7123302f30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03257c74312032def2297909c1cdb9f1"><td class="memTemplParams" colspan="2"><a id="a03257c74312032def2297909c1cdb9f1"></a>
+template&lt;typename L , typename SlotT  = typename LambdaSlotTraits&lt;L&gt;::Slot&gt; </td></tr>
+<tr class="memitem:a03257c74312032def2297909c1cdb9f1"><td class="memTemplItemLeft" align="right" valign="top">SlotT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a03257c74312032def2297909c1cdb9f1">slot</a> (L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:a03257c74312032def2297909c1cdb9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deduced slot object for the given lambda. <br /></td></tr>
+<tr class="separator:a03257c74312032def2297909c1cdb9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae366cc410231bc7d00e562b83b56355d"><td class="memTemplParams" colspan="2"><a id="ae366cc410231bc7d00e562b83b56355d"></a>
+template&lt;typename L , typename SlotT  = typename LambdaSlotTraits&lt;L&gt;::Slot&gt; </td></tr>
+<tr class="memitem:ae366cc410231bc7d00e562b83b56355d"><td class="memTemplItemLeft" align="right" valign="top">SlotT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#ae366cc410231bc7d00e562b83b56355d">slot</a> (<a class="el" href="classPt_1_1Connectable.html">Connectable</a> &amp;context, L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:ae366cc410231bc7d00e562b83b56355d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deduced slot object for the given lambda. <br /></td></tr>
+<tr class="separator:ae366cc410231bc7d00e562b83b56355d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="memTemplParams" colspan="2"><a id="a97ba6ed3c82c714526c00b1eaa1db30f"></a>
+template&lt;typename R , typename... A, typename L &gt; </td></tr>
+<tr class="memitem:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; typename <a class="el" href="structPt_1_1TypeTraits.html">TypeTraits</a>&lt; L &gt;::Value, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a97ba6ed3c82c714526c00b1eaa1db30f">slot</a> (L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
+<tr class="separator:a97ba6ed3c82c714526c00b1eaa1db30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15feb8824db02e053789ae306065e6e5"><td class="memTemplParams" colspan="2"><a id="a15feb8824db02e053789ae306065e6e5"></a>
+template&lt;typename R , typename... A, typename L &gt; </td></tr>
+<tr class="memitem:a15feb8824db02e053789ae306065e6e5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt; typename <a class="el" href="structPt_1_1TypeTraits.html">TypeTraits</a>&lt; L &gt;::Value, R, A... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a15feb8824db02e053789ae306065e6e5">slot</a> (<a class="el" href="classPt_1_1Connectable.html">Connectable</a> &amp;context, L &amp;&amp;lambda)</td></tr>
+<tr class="memdesc:a15feb8824db02e053789ae306065e6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a slot object for the given lambda. <br /></td></tr>
+<tr class="separator:a15feb8824db02e053789ae306065e6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 

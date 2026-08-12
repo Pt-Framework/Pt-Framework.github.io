@@ -335,7 +335,7 @@
 , <a class="el" href="classPt_1_1ConstMethodSlot.html#a9b5bf662811957679ed224465b3b0721">ConstMethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1DelegateSlot.html#a9b5bf662811957679ed224465b3b0721">DelegateSlot&lt; R, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1FunctionSlot.html#a9b5bf662811957679ed224465b3b0721">FunctionSlot&lt; R, ARGUMENTS &gt;</a>
-, <a class="el" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">LambdaSlot&lt; L, R, ARGUMENTS &gt;</a>
+, <a class="el" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">LambdaSlot&lt; L, R, A &gt;</a>
 , <a class="el" href="classPt_1_1MethodSlot.html#a9b5bf662811957679ed224465b3b0721">MethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1SignalSlot.html#a9b5bf662811957679ed224465b3b0721">SignalSlot&lt; ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Slot.html#a5d95eb428e542c5bf228f3e73fc88359">Slot</a>
@@ -378,7 +378,7 @@
 , <a class="el" href="classPt_1_1ConstMethodSlot.html#abfe4f3cc9cb9caf2e6eddf0d6f9f3c26">ConstMethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1DelegateSlot.html#abfe4f3cc9cb9caf2e6eddf0d6f9f3c26">DelegateSlot&lt; R, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1FunctionSlot.html#abfe4f3cc9cb9caf2e6eddf0d6f9f3c26">FunctionSlot&lt; R, ARGUMENTS &gt;</a>
-, <a class="el" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">LambdaSlot&lt; L, R, ARGUMENTS &gt;</a>
+, <a class="el" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">LambdaSlot&lt; L, R, A &gt;</a>
 , <a class="el" href="classPt_1_1MethodSlot.html#abfe4f3cc9cb9caf2e6eddf0d6f9f3c26">MethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1SignalSlot.html#abfe4f3cc9cb9caf2e6eddf0d6f9f3c26">SignalSlot&lt; ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Slot.html#a6d4c1dbaac8c93a4ab8500179ca22523">Slot</a>
@@ -806,7 +806,7 @@
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a3bc110f3fb313325cd475cc343587320">Settings::Entry</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#adaa85e621f6c353c8bafaec69bb501fc">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#aa0fda25b21fca117e9a802bea1a8f16b">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#acf6680f4a3957b281bc84f6336f5811f">String</a>
+, <a class="el" href="classPt_1_1String.html#aae18193adaf43ac95b55d68940374984">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#a3b6557beff44362dabf5d36ba5d3f7d1">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#a4b48fdd23b53bfdeae50d5722a2f1296">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#aa85838da392f4e4b53d15df6095ac712">Path</a>
@@ -837,7 +837,7 @@
 : <a class="el" href="classPt_1_1AutoPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#ab90825cd285e28cbdb2c6323747fc32a">PathIterator</a>
-, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2bae581b78b4b75255ec1384c494631c">Transform</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#abdf96f609692eae2fef72de1e9a0a5b5">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a9598d34b024cd6dfe9ef65656439af81">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#ab8668a0afd4e98308473f5d8a96dbd8f">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a25602f5d8391df8b352dfe6f3dba3922">Document::Element</a>
@@ -858,14 +858,14 @@
 <li>operator+()
 : <a class="el" href="classPt_1_1Date.html#a8e148dce315438d02f0ea92a687fa5d0">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a289a53eb21b6e9b31ee9f7d7c792d35a">DateTime</a>
-, <a class="el" href="classPt_1_1SourceInfo.html#a3185ff6b223da9dda5ed22f2f4f9f4e3">SourceInfo</a>
-, <a class="el" href="classPt_1_1String.html#af02046b120a46a4fe9d031d1e4320091">String</a>
+, <a class="el" href="classPt_1_1SourceInfo.html#a3802216ce44990ddd945a5add5a5d30c">SourceInfo</a>
+, <a class="el" href="classPt_1_1String.html#a34c48cf11fd8d500861b73a34c33b28f">String</a>
 , <a class="el" href="classPt_1_1Time.html#a9bf26b37f981815c6faf1fb88188fcb2">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ab827785c810b8b244d78f707674a6c09">Timespan</a>
 </li>
 <li>operator++()
 : <a class="el" href="classPt_1_1Date.html#ae6a991aa97305857a8f1f3ce86e56a8e">Date</a>
-, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a5da1c1ca09b4089e9f8250b2ee8abefe">PathIterator</a>
+, <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a288c2d9f6cd186acc1574b3ceb654ccd">PathIterator</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a858a8f58b67c9fc79d628f5ebef436b3">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#a6cc9e26cb15598521f807c872456d60c">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#ae03db7e3bab6887d136b9df289793e61">Document::Element</a>
@@ -884,7 +884,7 @@
 , <a class="el" href="classPt_1_1DateTime.html#a9ab1750e4d8bf705f23c16ce6d24f33f">DateTime</a>
 , <a class="el" href="classPt_1_1Delegate.html#a3c377f2e4b2d00cf5697a5ec603334be">Delegate&lt; R, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Signal.html#a43246b1c783f6fa258b6b05a77a0e1dd">Signal&lt; ARGUMENTS &gt;</a>
-, <a class="el" href="classPt_1_1String.html#a8c09167d2a0ffed51ebea0865b3e16e9">String</a>
+, <a class="el" href="classPt_1_1String.html#a7b02033067050cf3e13fe17696fa3c13">String</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#a551477cc4faee150c67bfd4369ac8c37">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a35690e01f94ba7fcf0302860cfa7217a">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ad08a656c69fe27b00a6154439444bd81">Timespan</a>
@@ -927,7 +927,7 @@
 : <a class="el" href="classPt_1_1System_1_1Path.html#a1c2caca40c883528a1fdd73c73b0fe2a">Path</a>
 </li>
 <li>operator/=()
-: <a class="el" href="classPt_1_1System_1_1Path.html#a72d0ab6904981ddb7eab45d04a43f66a">Path</a>
+: <a class="el" href="classPt_1_1System_1_1Path.html#a3c68eba76c226cf160d83b2df29930d7">Path</a>
 </li>
 <li>operator&lt;()
 : <a class="el" href="classPt_1_1AutoPtr.html#a0b0ce333ca0dfafcceb3a05f9f29d811">AutoPtr&lt; T, Destroy &gt;</a>
@@ -937,8 +937,8 @@
 , <a class="el" href="classPt_1_1Gfx_1_1Font.html#a615d88be94e2b0f9c24a6981e2927f8e">Font</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a934dfb3d1c9065c4abb878991a01cdc0">PathIterator</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a68757a602b586b16e632a51d8e61395f">Scaling</a>
-, <a class="el" href="classPt_1_1SmartPtr.html#a8c4c53901ac7e8392dfdba49553ecd9b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
-, <a class="el" href="classPt_1_1String.html#a312264be4b6b0452b5f82d4169bb5c13">String</a>
+, <a class="el" href="classPt_1_1SmartPtr.html#ac3a00e770145fe57ece2ba4763b0bef3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
+, <a class="el" href="classPt_1_1String.html#a28e768169cb2e0f9d8384f7d84275ad9">String</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#abc4f1649f9430830c2ebf74b2294327c">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#aff5f32a3ecb7cc733ed9c59779c1c55e">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a2176bf97f6b18969bb71b7c3f2e56234">Time</a>
@@ -949,20 +949,20 @@
 <li>operator&lt;&lt;()
 : <a class="el" href="classPt_1_1Arg.html#a4bf8e8df7e0ce9b07dd95a06b2a5480d">Arg&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1String.html#a54e7c59a4c450a81fe60ee7753d91444">String</a>
-, <a class="el" href="classPt_1_1System_1_1LogMessage.html#ae39c4a8b61f6a9e17a8937669fd1006a">LogMessage</a>
+, <a class="el" href="classPt_1_1System_1_1LogMessage.html#aeb22a23ae6e03d3709e2fce649211287">LogMessage</a>
 , <a class="el" href="classPt_1_1System_1_1LogRecord.html#acae6ac9a0084925facd1dc0d847698c3">LogRecord</a>
 </li>
 <li>operator&lt;&lt;=()
 : <a class="el" href="classPt_1_1Date.html#abb486a3a4ba29e5e1425f37dad28ff79">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#ad6ec544ced0e04e69a7427c6404bb0b7">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a077c54dae6fde0994afa15f7644912dc">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a606dfc722962a22de661585633564ec0">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a06b41188437d96b459699fcbd69ba6b7">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#ab220dae46e89b7286c6dfd93b1a22aa8">Time</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="classPt_1_1Date.html#a54e8d7e0bf2a62a64edbf0163b916964">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#abf9627c22b617dd531e214056bc67f92">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#acb4858fab3298ad3ef2d3c64ea208f56">String</a>
+, <a class="el" href="classPt_1_1String.html#a08a253f88d2e5bb253dd1033641f8356">String</a>
 , <a class="el" href="classPt_1_1Time.html#a6a0cd3c0e9278655b3751210ee91ab22">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#a22b73b37156a4f6beed7dacbb4e80964">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#ae6865e5a731ebd557b801c5b10948edb">TypeInfo</a>
@@ -993,19 +993,19 @@
 , <a class="el" href="classPt_1_1RegexSMatch.html#a5f597404a86f77f4365f61c8d495fa05">RegexSMatch</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a9c76d25b309e5012ca135e6768ef25c3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a098521b7d40674cefdc71c327bf95f61">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#a5eb07ee8a460b6568316ac3e9d0997c4">String</a>
+, <a class="el" href="classPt_1_1String.html#aa7694556e438408131523c949aeecdd0">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#ad4fbf13550fdca8eae388e8f40daa391">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a1e476f19923f26dd9fe90e8ce3e8eaba">Library</a>
-, <a class="el" href="classPt_1_1System_1_1Path.html#aabdad23ab07a625023972a679a40f4e4">Path</a>
+, <a class="el" href="classPt_1_1System_1_1Path.html#a94de7a6556038eaba998a927e959ed60">Path</a>
 , <a class="el" href="classPt_1_1System_1_1TarEntry.html#a42b1db701d4977779a13d4724f8503e4">TarEntry</a>
 , <a class="el" href="classPt_1_1Time.html#acb9b42de1a5b9b7dbb7b013dfc372ada">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#aec03ed9fcb9723e8e81506cadbd74c85">Timespan</a>
-, <a class="el" href="classPt_1_1Utf8Appender.html#a9697fcb43030fa1478e9038762709774">Utf8Appender</a>
+, <a class="el" href="classPt_1_1Utf8Appender.html#ac8062e6216b6962718709941565977ef">Utf8Appender</a>
 , <a class="el" href="classPt_1_1Utf8Iterator.html#aef23d502fda6b68f539fc59c4da710f5">Utf8Iterator</a>
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#a75426e8cb2f5ef29ad0a59df52104455">InputIterator</a>
 </li>
 <li>operator==()
-: <a class="el" href="classPt_1_1AutoPtr.html#aadf5d4a0b6e47fe277b62d40ac36cafa">AutoPtr&lt; T, Destroy &gt;</a>
+: <a class="el" href="classPt_1_1AutoPtr.html#a8362c744dadb40fbed1027cdfeb7f632">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1ConstMethod.html#a50ef12195e3994e0762e375081097ed0">ConstMethod&lt; R, ClassT, ARGUMENTS &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a38ca026ee98863972e1968c5a6288633">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a9cfaaa2dd5867578b32c02fd8bc16339">Date</a>
@@ -1039,7 +1039,7 @@
 <li>operator&gt;()
 : <a class="el" href="classPt_1_1Date.html#a0522a0522684cb4206274de78a4f2fce">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#adabc4caa88be53935e7c3d210821c97a">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#a3f630db0d8aa80b7e3ea0713ef8dc97e">String</a>
+, <a class="el" href="classPt_1_1String.html#abce7310c6e48505dd626fdcfe350ff01">String</a>
 , <a class="el" href="classPt_1_1Time.html#a8527bf1c14fd3ecf9d5ad2f3e2706ab3">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#a25792d4699ea5acb28dea4c71e7912b9">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#a98c4a8b3fb7af8d157c6b73640656113">TypeInfo</a>
@@ -1047,7 +1047,7 @@
 <li>operator&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a97555d84e3c89d8d27146e61a875a7f6">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a5a1cc8417dca4698082acedf1edb07cf">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#aee3c243b715ff6d5f17041dcada8aef5">String</a>
+, <a class="el" href="classPt_1_1String.html#ad4fd6238d66730ecbcb9464e041b35a5">String</a>
 , <a class="el" href="classPt_1_1Time.html#a4c81c1c1150b34a04ec6951f24e830ae">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#afa53e8488c0c139e4864d7040bc1700b">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#afb1695e93b8783aa5af661cb7f44ee7c">TypeInfo</a>
@@ -1055,26 +1055,26 @@
 <li>operator&gt;&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a808244de45ec52b6fa77e3d8a17854b5">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#afc1517c44d2c4427905054c505be94b5">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a19e09ad7feb5a444da6848b6e7558471">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a10dd0dd4664e899afab72909c4ea5660">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a5086a18d7e6423ff5647f7defab8ea6b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#aefa2b547256e14ed0cb125c60b88ccd1">Time</a>
 </li>
 <li>operator[]()
 : <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html#aeef1b0103701898b7d3dd1b58b06ca4b">ColorStops</a>
-, <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#aa64f356b25448f42a892ce48bd1bd5d5">Document::ConstElement</a>
-, <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a38ddf700deb69da473dfda2705d7a027">Document::Element</a>
+, <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#aaad18846f5f2e539f58fb51bdde5d139">Document::ConstElement</a>
+, <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#af488dde00041eac0bde68d95f15d904e">Document::Element</a>
 , <a class="el" href="classPt_1_1Json_1_1Document.html#a666b0f026e9d3fbe3d574bd7b747a48d">Document</a>
 , <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#a45c3214120b6ca60fbccd20a5257c530">Settings::ConstEntry</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a78e897e33ef0d5bf5aea29db12664f5b">Settings::Entry</a>
-, <a class="el" href="classPt_1_1Settings.html#a45c3214120b6ca60fbccd20a5257c530">Settings</a>
-, <a class="el" href="classPt_1_1String.html#ab2dcd7f3085e06f35ff2ba6f05f6a469">String</a>
+, <a class="el" href="classPt_1_1Settings.html#afa69993ac24702fbc591d47cfec3cb3e">Settings</a>
+, <a class="el" href="classPt_1_1String.html#ab91aea6636bccee368f5d405f9940aaf">String</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a0f0624726fef324c78e32f87fd1dd4be">Library</a>
 </li>
 <li>operator^()
 : <a class="el" href="classPt_1_1System_1_1FileInfo.html#a6e650080dafc08fa69d112e130b7d83c">FileInfo</a>
 </li>
 <li>operator|()
-: <a class="el" href="classPt_1_1System_1_1FileInfo.html#abba573db61d1ee96386f1faca4d18dab">FileInfo</a>
+: <a class="el" href="classPt_1_1System_1_1FileInfo.html#a9e166591c7704e91ff31ee66de2be658">FileInfo</a>
 </li>
 <li>operator|=()
 : <a class="el" href="classPt_1_1System_1_1FileInfo.html#a9e3910d8b81004b254cee1b1e796133a">FileInfo</a>
@@ -1090,7 +1090,7 @@
 </li>
 <li>out()
 : <a class="el" href="classPt_1_1SaveInfo.html#a7833bee8ef27bf29a78d7b1b3553902c">SaveInfo</a>
-, <a class="el" href="classPt_1_1System_1_1Pipe.html#a6f0c1f4665770de0f8c039f0664a53d9">Pipe</a>
+, <a class="el" href="classPt_1_1System_1_1Pipe.html#a1adb2b6d97e3db01e1ee4f13b14d480f">Pipe</a>
 , <a class="el" href="classPt_1_1TextCodec.html#a9f16d2fa95465dcfe471de1132df3a53">TextCodec&lt; CharT, ByteT &gt;</a>
 </li>
 <li>out_avail()
