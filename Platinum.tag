@@ -10891,18 +10891,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10994,18 +10994,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19306,18 +19306,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20449,18 +20449,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26124,18 +26124,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30284,18 +30284,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32528,18 +32528,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43414,18 +43414,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43621,18 +43621,18 @@
       <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a97ba6ed3c82c714526c00b1eaa1db30f</anchor>
-      <arglist>(L &amp;&amp;lambda)</arglist>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function">
-      <type>LambdaSlot&lt; typename TypeTraits&lt; L &gt;::Value, R, A... &gt;</type>
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a15feb8824db02e053789ae306065e6e5</anchor>
-      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
     </member>
   </compound>
   <compound kind="class">
