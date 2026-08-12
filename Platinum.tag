@@ -24479,6 +24479,654 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Formatter</name>
+    <filename>classPt_1_1Formatter.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Formatter</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad59b4a59b13d736a623241018b6fee0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addString</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aa0b1dc7979fc5b410b4d7737431aae92</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const Pt::String &amp;value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addString</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a9d3d64ab59564e10f1701fc8a225971e</anchor>
+      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBinary</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aacb1bf630cbf39bacb6fbee1bb62f76e</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const char *value, std::size_t length, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBinary</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6189ba18cd51a6bb2769850b9db15170</anchor>
+      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBool</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a2482fdd2f9e5d52843f2bed30c79a931</anchor>
+      <arglist>(const std::string &amp;name, bool value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBool</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a41f82e8ea79be7296a66961d1c5847fb</anchor>
+      <arglist>(const char *name, bool value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChar</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a434679cae54be1b16da6c983f651d926</anchor>
+      <arglist>(const std::string &amp;name, const Pt::Char &amp;value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChar</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a7f1bd2711f2c7c7a913a47b613159b10</anchor>
+      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aece1a3327d680daf47c86ff4c8afcd8f</anchor>
+      <arglist>(const std::string &amp;name, Pt::int8_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aacaff5b079a53ed89cae850e14f4f765</anchor>
+      <arglist>(const char *name, Pt::int8_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6303e43ccab8990ed4b41ba9a70eb8f9</anchor>
+      <arglist>(const std::string &amp;name, Pt::int16_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0aaf1082ce6f232f9356d1cfd0997f0b</anchor>
+      <arglist>(const char *name, Pt::int16_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ae4ed28cf02f9aa5a4404fda89081e5e5</anchor>
+      <arglist>(const std::string &amp;name, Pt::int32_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af8efd5ad34bf10b74372fdc1db843f2b</anchor>
+      <arglist>(const char *name, Pt::int32_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a74bf70661b473ee20670165d4ef11baa</anchor>
+      <arglist>(const std::string &amp;name, Pt::int64_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0fd11843c559acc601d08521e88fd242</anchor>
+      <arglist>(const char *name, Pt::int64_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>afca6b56b11953e426f4c43703885fc1e</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint8_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad013bb52acac9f66a49942fde82734a8</anchor>
+      <arglist>(const char *name, Pt::uint8_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a3704a7b19fcc5f499a39fdafaa0a7f37</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint16_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a175b962ab893066d5ca746e5ad78e50c</anchor>
+      <arglist>(const char *name, Pt::uint16_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a8a449829fc2e2adb791b1d02f098105a</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint32_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ae6758665fe25c0ba2e460aa302ef595c</anchor>
+      <arglist>(const char *name, Pt::uint32_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a3c6481b38a91cb14eaf789b7cdd7ea68</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint64_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>acf0ba05e5d76296d3a8cbf8927194a33</anchor>
+      <arglist>(const char *name, Pt::uint64_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFloat</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ace9560531a63f1204ea9ae9f9a3e7152</anchor>
+      <arglist>(const std::string &amp;name, float value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFloat</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0e640856f9e1e2d24a9861ab3ef63ffb</anchor>
+      <arglist>(const char *name, float value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a4139432ae59735b8db966e1af30e0856</anchor>
+      <arglist>(const std::string &amp;name, double value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a649237ac241b6b7057e66ac2768a5502</anchor>
+      <arglist>(const char *name, double value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addLongDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a7bddfa373a6dd642aa03e10d4a31d029</anchor>
+      <arglist>(const std::string &amp;name, long double value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addLongDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5cbbc28d96d8f36a7f57a93d8ae21219</anchor>
+      <arglist>(const char *name, long double value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addReference</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab66bc1d3021bcfa0e01d3bba9f88abe0</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;refId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addReference</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5ab4bfa2bb5a2a06ddd56222dac140a7</anchor>
+      <arglist>(const char *name, const char *refId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aefebc82030d444413ad8335dc52baa5e</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>abb35616624790200a2bd05daaa51546c</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>affe96e299a5af49efc60d7f39d412bf7</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a074919036d63ef03a1445f76364e6601</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad45f383daa7c4e2fb62a3e09c1338e61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aa5bac542ba8489cab0e779309b8cea07</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a40ac858247ebb3452f81940a6ccf920f</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af4f7bce763bb6fa6e18d09b26a58c1df</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aff59bd3122e1d4462f749477a59b9227</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5c06d4a635c77f67ca2378315aa2c8f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5a031fd700f98734bca1febefa08a1ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a649aca9143dbcc752ab91d04e9c999fa</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a2ec59cd4dd96fb15d6adc11058c8cdd3</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6bf0976f92c46dec278a4e5cf0e7fbe1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a52b22a8a1e7660a2aaa95e8c6670fca0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a174a91f3c067f614f7f100d9c7dd2c73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a74c5a397e2676dfcdc8bf2c642c52d89</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a754c52ef1979382a87cb8689664a90d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aff2d1bc00a7e13a3b360082f0eb34415</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a679535cb257654e4399d09d48f5ecdcc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginParse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6d40a211221c854e6126e83e270d2578</anchor>
+      <arglist>(Composer &amp;composer)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>parseSome</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a17d1b50464f0ec8bcc911a64c5ff3685</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad7c704b34912678d95c13243cacf9d7f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddString</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a77516510aa323df5793e7ba718c6adfa</anchor>
+      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddBinary</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a12a1e162944b94d5c50a108c579d658f</anchor>
+      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddBool</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af537c1352778186d63b2e5902e78fec8</anchor>
+      <arglist>(const char *name, bool value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddChar</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a1fd133cbc4bdc0bdbabb4330d1cf9b16</anchor>
+      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5c25f2c3c9787c163e3599c8d12ce3f9</anchor>
+      <arglist>(const char *name, Pt::int8_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a41d70893686e7ec3c6034cf80acf3d0c</anchor>
+      <arglist>(const char *name, Pt::int16_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a38d3d256b75f9d3604ab12db49d5a360</anchor>
+      <arglist>(const char *name, Pt::int32_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a49ae3c9d0251b7dc3296c989396eacbf</anchor>
+      <arglist>(const char *name, Pt::int64_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a8c42d50d86759261206edf149f5eec01</anchor>
+      <arglist>(const char *name, Pt::uint8_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af6fb9ed1bbe3eac30530473c9ba1fdee</anchor>
+      <arglist>(const char *name, Pt::uint16_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a31a6574a90cee4b184528921d035f551</anchor>
+      <arglist>(const char *name, Pt::uint32_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a9919f0aab56cce2426a420c4f4c249b1</anchor>
+      <arglist>(const char *name, Pt::uint64_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddFloat</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a7a0149cc85d46eaba3ab487e8ebaa510</anchor>
+      <arglist>(const char *name, float value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a9ffbb772c98cf981465ba764395f4019</anchor>
+      <arglist>(const char *name, double value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddLongDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a4e8a842c8d22235453a6b958ef97fb2c</anchor>
+      <arglist>(const char *name, long double value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddReference</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5821924e8acef4b8e3fd421c2e221fd0</anchor>
+      <arglist>(const char *name, const char *refId)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a79d72a39b64ed966e7f0680ccd5f5efa</anchor>
+      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0106812ee70de378937f6a8b0343e1ca</anchor>
+      <arglist>(const char *name)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a1f007ad58bbbb80bff2404bd5f140853</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a4be1c2d485f0d045d4fee791b90a7869</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab356d920d99f5bf894612dde97e6b854</anchor>
+      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a14a62ec22c310ff7b76f8a5b45158f66</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a09360a22dc30bcc85fafaf66c71c6846</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a69f57965cc5198ca051bfaa6e7f81d10</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ac93dcbdad681fdfeb246943c11080e67</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a033e60fc3849889d556ec6bc8279a28b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6e24ce4f96dc145835c508f318bd3311</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab177911c4562c26259bbd3b6a338fde5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a79cbbcee579047df4b44427caab336dc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5d33354774d90206b18ec29efc850466</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a038e3a7103e6fecdb0c2b45bf5f3fc1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6b83ee9a4251bb4879be3a5f1cd8eeb1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginParse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a2f4c601273b772ebc8aa661ec5fd3676</anchor>
+      <arglist>(Composer &amp;composer)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>onParseSome</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab59ff8689773c1f63b4a66cd899d0a59</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onParse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aacffbdcf3f3ac70d521a826a916f9a3b</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Formatter</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a8fd5a03aa722ac623bb521491ea3bc26</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::JsonRpc::Formatter</name>
     <filename>classPt_1_1JsonRpc_1_1Formatter.html</filename>
     <base>Pt::Formatter</base>
@@ -25160,654 +25808,6 @@
       <name>onFinishDict</name>
       <anchorfile>classPt_1_1Formatter.html</anchorfile>
       <anchor>a6b83ee9a4251bb4879be3a5f1cd8eeb1</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Formatter</name>
-    <filename>classPt_1_1Formatter.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Formatter</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad59b4a59b13d736a623241018b6fee0a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addString</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aa0b1dc7979fc5b410b4d7737431aae92</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const Pt::String &amp;value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addString</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a9d3d64ab59564e10f1701fc8a225971e</anchor>
-      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBinary</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aacb1bf630cbf39bacb6fbee1bb62f76e</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const char *value, std::size_t length, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBinary</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6189ba18cd51a6bb2769850b9db15170</anchor>
-      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBool</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a2482fdd2f9e5d52843f2bed30c79a931</anchor>
-      <arglist>(const std::string &amp;name, bool value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBool</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a41f82e8ea79be7296a66961d1c5847fb</anchor>
-      <arglist>(const char *name, bool value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addChar</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a434679cae54be1b16da6c983f651d926</anchor>
-      <arglist>(const std::string &amp;name, const Pt::Char &amp;value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addChar</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a7f1bd2711f2c7c7a913a47b613159b10</anchor>
-      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aece1a3327d680daf47c86ff4c8afcd8f</anchor>
-      <arglist>(const std::string &amp;name, Pt::int8_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aacaff5b079a53ed89cae850e14f4f765</anchor>
-      <arglist>(const char *name, Pt::int8_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6303e43ccab8990ed4b41ba9a70eb8f9</anchor>
-      <arglist>(const std::string &amp;name, Pt::int16_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0aaf1082ce6f232f9356d1cfd0997f0b</anchor>
-      <arglist>(const char *name, Pt::int16_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ae4ed28cf02f9aa5a4404fda89081e5e5</anchor>
-      <arglist>(const std::string &amp;name, Pt::int32_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af8efd5ad34bf10b74372fdc1db843f2b</anchor>
-      <arglist>(const char *name, Pt::int32_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a74bf70661b473ee20670165d4ef11baa</anchor>
-      <arglist>(const std::string &amp;name, Pt::int64_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0fd11843c559acc601d08521e88fd242</anchor>
-      <arglist>(const char *name, Pt::int64_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>afca6b56b11953e426f4c43703885fc1e</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint8_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad013bb52acac9f66a49942fde82734a8</anchor>
-      <arglist>(const char *name, Pt::uint8_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a3704a7b19fcc5f499a39fdafaa0a7f37</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint16_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a175b962ab893066d5ca746e5ad78e50c</anchor>
-      <arglist>(const char *name, Pt::uint16_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a8a449829fc2e2adb791b1d02f098105a</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint32_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ae6758665fe25c0ba2e460aa302ef595c</anchor>
-      <arglist>(const char *name, Pt::uint32_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a3c6481b38a91cb14eaf789b7cdd7ea68</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint64_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>acf0ba05e5d76296d3a8cbf8927194a33</anchor>
-      <arglist>(const char *name, Pt::uint64_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addFloat</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ace9560531a63f1204ea9ae9f9a3e7152</anchor>
-      <arglist>(const std::string &amp;name, float value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addFloat</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0e640856f9e1e2d24a9861ab3ef63ffb</anchor>
-      <arglist>(const char *name, float value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a4139432ae59735b8db966e1af30e0856</anchor>
-      <arglist>(const std::string &amp;name, double value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a649237ac241b6b7057e66ac2768a5502</anchor>
-      <arglist>(const char *name, double value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addLongDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a7bddfa373a6dd642aa03e10d4a31d029</anchor>
-      <arglist>(const std::string &amp;name, long double value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addLongDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5cbbc28d96d8f36a7f57a93d8ae21219</anchor>
-      <arglist>(const char *name, long double value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addReference</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab66bc1d3021bcfa0e01d3bba9f88abe0</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;refId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addReference</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5ab4bfa2bb5a2a06ddd56222dac140a7</anchor>
-      <arglist>(const char *name, const char *refId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aefebc82030d444413ad8335dc52baa5e</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>abb35616624790200a2bd05daaa51546c</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>affe96e299a5af49efc60d7f39d412bf7</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a074919036d63ef03a1445f76364e6601</anchor>
-      <arglist>(const char *name)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad45f383daa7c4e2fb62a3e09c1338e61</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aa5bac542ba8489cab0e779309b8cea07</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a40ac858247ebb3452f81940a6ccf920f</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af4f7bce763bb6fa6e18d09b26a58c1df</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aff59bd3122e1d4462f749477a59b9227</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5c06d4a635c77f67ca2378315aa2c8f8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5a031fd700f98734bca1febefa08a1ad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a649aca9143dbcc752ab91d04e9c999fa</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a2ec59cd4dd96fb15d6adc11058c8cdd3</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6bf0976f92c46dec278a4e5cf0e7fbe1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a52b22a8a1e7660a2aaa95e8c6670fca0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a174a91f3c067f614f7f100d9c7dd2c73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a74c5a397e2676dfcdc8bf2c642c52d89</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a754c52ef1979382a87cb8689664a90d5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aff2d1bc00a7e13a3b360082f0eb34415</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a679535cb257654e4399d09d48f5ecdcc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginParse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6d40a211221c854e6126e83e270d2578</anchor>
-      <arglist>(Composer &amp;composer)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>parseSome</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a17d1b50464f0ec8bcc911a64c5ff3685</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>parse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad7c704b34912678d95c13243cacf9d7f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddString</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a77516510aa323df5793e7ba718c6adfa</anchor>
-      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddBinary</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a12a1e162944b94d5c50a108c579d658f</anchor>
-      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddBool</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af537c1352778186d63b2e5902e78fec8</anchor>
-      <arglist>(const char *name, bool value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddChar</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a1fd133cbc4bdc0bdbabb4330d1cf9b16</anchor>
-      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5c25f2c3c9787c163e3599c8d12ce3f9</anchor>
-      <arglist>(const char *name, Pt::int8_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a41d70893686e7ec3c6034cf80acf3d0c</anchor>
-      <arglist>(const char *name, Pt::int16_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a38d3d256b75f9d3604ab12db49d5a360</anchor>
-      <arglist>(const char *name, Pt::int32_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a49ae3c9d0251b7dc3296c989396eacbf</anchor>
-      <arglist>(const char *name, Pt::int64_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a8c42d50d86759261206edf149f5eec01</anchor>
-      <arglist>(const char *name, Pt::uint8_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af6fb9ed1bbe3eac30530473c9ba1fdee</anchor>
-      <arglist>(const char *name, Pt::uint16_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a31a6574a90cee4b184528921d035f551</anchor>
-      <arglist>(const char *name, Pt::uint32_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a9919f0aab56cce2426a420c4f4c249b1</anchor>
-      <arglist>(const char *name, Pt::uint64_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddFloat</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a7a0149cc85d46eaba3ab487e8ebaa510</anchor>
-      <arglist>(const char *name, float value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a9ffbb772c98cf981465ba764395f4019</anchor>
-      <arglist>(const char *name, double value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddLongDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a4e8a842c8d22235453a6b958ef97fb2c</anchor>
-      <arglist>(const char *name, long double value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddReference</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5821924e8acef4b8e3fd421c2e221fd0</anchor>
-      <arglist>(const char *name, const char *refId)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a79d72a39b64ed966e7f0680ccd5f5efa</anchor>
-      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0106812ee70de378937f6a8b0343e1ca</anchor>
-      <arglist>(const char *name)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a1f007ad58bbbb80bff2404bd5f140853</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a4be1c2d485f0d045d4fee791b90a7869</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab356d920d99f5bf894612dde97e6b854</anchor>
-      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a14a62ec22c310ff7b76f8a5b45158f66</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a09360a22dc30bcc85fafaf66c71c6846</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a69f57965cc5198ca051bfaa6e7f81d10</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ac93dcbdad681fdfeb246943c11080e67</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a033e60fc3849889d556ec6bc8279a28b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6e24ce4f96dc145835c508f318bd3311</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab177911c4562c26259bbd3b6a338fde5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a79cbbcee579047df4b44427caab336dc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5d33354774d90206b18ec29efc850466</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a038e3a7103e6fecdb0c2b45bf5f3fc1a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6b83ee9a4251bb4879be3a5f1cd8eeb1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginParse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a2f4c601273b772ebc8aa661ec5fd3676</anchor>
-      <arglist>(Composer &amp;composer)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual bool</type>
-      <name>onParseSome</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab59ff8689773c1f63b4a66cd899d0a59</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onParse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aacffbdcf3f3ac70d521a826a916f9a3b</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>Formatter</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a8fd5a03aa722ac623bb521491ea3bc26</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -28764,12 +28764,12 @@
     <filename>classPt_1_1IStringStream.html</filename>
   </compound>
   <compound kind="class">
-    <name>Pt::SerializationInfo::Iterator</name>
-    <filename>classPt_1_1SerializationInfo_1_1Iterator.html</filename>
-  </compound>
-  <compound kind="class">
     <name>Pt::Forms::StyleOptions::Iterator</name>
     <filename>classPt_1_1Forms_1_1StyleOptions_1_1Iterator.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Pt::SerializationInfo::Iterator</name>
+    <filename>classPt_1_1SerializationInfo_1_1Iterator.html</filename>
   </compound>
   <compound kind="class">
     <name>Pt::System::PluginManager::Iterator</name>
@@ -29913,49 +29913,35 @@
     <filename>classPt_1_1Lambda.html</filename>
     <templarg></templarg>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::Callable</base>
-    <member kind="function">
-      <type></type>
-      <name>Lambda</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>a2e368d8d49935055671bcd6552e0d402</anchor>
-      <arglist>(T &amp;&amp;lambda)</arglist>
-    </member>
+    <templarg>A</templarg>
+    <base>Callable&lt; R, A... &gt;</base>
     <member kind="function">
       <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>a783491ab3c60d509dc575f335cc26345</anchor>
-      <arglist>(ARGUMENTS args) const</arglist>
+      <anchor>aee5dccc5057f64847a1c0267e77e5b4c</anchor>
+      <arglist>(A... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>Lambda *</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual Callable *</type>
       <name>clone</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>af0453e4c8694fbe0d82f06daafa26a29</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Lambda *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>af0453e4c8694fbe0d82f06daafa26a29</anchor>
-      <arglist>() const</arglist>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
       <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <arglist>(A...) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
       <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <arglist>(A...) const</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, C, ARGS &gt;</type>
@@ -29984,32 +29970,11 @@
     <filename>classPt_1_1Lambda.html</filename>
     <base>Callable&lt; R, A... &gt;</base>
     <member kind="function">
-      <type></type>
-      <name>Lambda</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>a2e368d8d49935055671bcd6552e0d402</anchor>
-      <arglist>(T &amp;&amp;lambda)</arglist>
-    </member>
-    <member kind="function">
       <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>a783491ab3c60d509dc575f335cc26345</anchor>
+      <anchor>aee5dccc5057f64847a1c0267e77e5b4c</anchor>
       <arglist>(A... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Lambda *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>af0453e4c8694fbe0d82f06daafa26a29</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Lambda *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>af0453e4c8694fbe0d82f06daafa26a29</anchor>
-      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>R</type>
@@ -32552,31 +32517,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::Node</name>
-    <filename>classPt_1_1Json_1_1Node.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Node</name>
-      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
-      <anchor>aaaefc7b696b15da7a556d7911735a277</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
-      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>Node</name>
-      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
-      <anchor>a42a6bcdb42087ff5e2fdb8f56b47ad8a</anchor>
-      <arglist>(Type type)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Xml::Node</name>
     <filename>classPt_1_1Xml_1_1Node.html</filename>
     <member kind="function" virtualness="virtual">
@@ -32597,6 +32537,31 @@
       <type></type>
       <name>Node</name>
       <anchorfile>classPt_1_1Xml_1_1Node.html</anchorfile>
+      <anchor>a42a6bcdb42087ff5e2fdb8f56b47ad8a</anchor>
+      <arglist>(Type type)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Json::Node</name>
+    <filename>classPt_1_1Json_1_1Node.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Node</name>
+      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
+      <anchor>aaaefc7b696b15da7a556d7911735a277</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Type</type>
+      <name>type</name>
+      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
+      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Node</name>
+      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
       <anchor>a42a6bcdb42087ff5e2fdb8f56b47ad8a</anchor>
       <arglist>(Type type)</arglist>
     </member>
@@ -32952,102 +32917,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PaintContext</name>
-    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
-    <base>Pt::Gfx::PaintContext</base>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>ab5ef25f0fe03c52f23ff41005952571f</anchor>
-      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::ImageFormat &amp;</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::SizeF &amp;</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Scaling &amp;</type>
-      <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const RectF *</type>
-      <name>clip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
-      <arglist>(const RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resetClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Canvas *</type>
-      <name>getCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
-      <arglist>(Canvas *canvas)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetachSurface</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
-      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Gfx::PaintContext</name>
     <filename>classPt_1_1Gfx_1_1PaintContext.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -33144,393 +33013,99 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Gfx::Painter</name>
-    <filename>classPt_1_1Gfx_1_1Painter.html</filename>
-    <base>Pt::Gfx::PainterBase</base>
+    <name>Pt::Forms::PaintContext</name>
+    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
+    <base>Pt::Gfx::PaintContext</base>
     <member kind="function">
       <type></type>
-      <name>Painter</name>
-      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
-      <anchor>a29c1d9ceedbe6abc5de3cf293b469c6b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Painter</name>
-      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
-      <anchor>a4cf6d839e01517a2ad62fed4de47f7ef</anchor>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
       <arglist>(PaintSurface &amp;surface)</arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>Painter</name>
-      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
-      <anchor>ab74920fab2c4bd8ad02d576219333aa8</anchor>
-      <arglist>(PaintContext &amp;context)</arglist>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>ab5ef25f0fe03c52f23ff41005952571f</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;clip)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Painter</name>
-      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
-      <anchor>a8669f9de04919cac91598d8fa990fbcc</anchor>
+    <member kind="function">
+      <type></type>
+      <name>~PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
-      <anchor>a6cb5c2952b6e9f6e6dfc3b2e688d407c</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
-      <anchor>ad372917fc022b2b34735d785cab0d1d1</anchor>
-      <arglist>(PaintContext &amp;context)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ImageFormat &amp;</type>
+      <type>const Gfx::ImageFormat &amp;</type>
       <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a98349696edd180c15a0be5129b7d610b</anchor>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>const Scaling &amp;</type>
       <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const CompositionMode &amp;</type>
-      <name>compositionMode</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ac3e2cb35722757f3d42c03ff73512658</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setCompositionMode</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a98a9ff991de2eebbdc289175ebc98b21</anchor>
-      <arglist>(const CompositionMode &amp;mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Pen &amp;</type>
-      <name>pen</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ad4fded169224f3f94c8bbf9b4105a32f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPen</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ac6b5a734fdfc27f6963a7e735ed14767</anchor>
-      <arglist>(const Pen &amp;pen)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Brush &amp;</type>
-      <name>brush</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a642324f95d7bede04c6f0a410472615e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBrush</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a911b1ab96ec7508d36aaf2cb305608db</anchor>
-      <arglist>(const Brush &amp;brush)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Font &amp;</type>
-      <name>font</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a03bfd66884ecd3f481d0db37a7f51fba</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFont</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ad56c22d0881053fd0d628fa139b1748b</anchor>
-      <arglist>(const Font &amp;font)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Transform &amp;</type>
-      <name>transform</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a51fab737c87cb087ed1d01864c989641</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTransform</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ac89ef0116bcafbe68197f5ac304a17e3</anchor>
-      <arglist>(const Transform &amp;tx)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resetTransform</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a6022a1fd1e5dcd2fd5585e5a36aa3f37</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
       <type>const RectF *</type>
       <name>clip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
       <arglist>(const RectF &amp;clip)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>resetClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>aa662021f2e504937de9ee14764f70253</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>drawLine</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a89cb90d8412e7329b6a0284de1a29d00</anchor>
-      <arglist>(const PointF &amp;from, const PointF &amp;to)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawPolyline</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a8ba5f7e551dd8adfc309bbf3044ef55f</anchor>
-      <arglist>(const PointF *points, const size_t pointCount)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillPolygon</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aad94393826eaceee3d83484155d61983</anchor>
-      <arglist>(const PointF *points, const size_t pointCount)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawRect</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a948ecb06eaccb519176a8c852693ef08</anchor>
-      <arglist>(const RectF &amp;rect)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillRect</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aefef5e3751726f3704b617d8622af735</anchor>
-      <arglist>(const RectF &amp;rect)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawCircle</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aafeb0223b17caab6985abd0f02495a3f</anchor>
-      <arglist>(const PointF &amp;topLeft, double diameter)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillCircle</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ac96a5f5e479db3917a7805e51ab983b6</anchor>
-      <arglist>(const PointF &amp;topLeft, double diameter)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawEllipse</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a5b0ccb445ea0e5960431cf5a861e5ca4</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillEllipse</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a991cc1348013f36ed57552c0ef29b06e</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawArc</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ae50dc69a5dd5c451827f2bc60f37579f</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillChord</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a94355c1b61619a68d29d23108b249852</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillPie</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a92f56a85a4d07e7d418d0358d02a67a6</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::Path &amp;</type>
-      <name>path</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a5401f004fef3fd1b447363e193a890f9</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPath</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a401a9f98190516b9479a1acaf02d0ea8</anchor>
-      <arglist>(const Path &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawPath</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ad837ad0ca158e38ac9032cebfdaae525</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawPath</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a24d1b1cf2f467c4bd1fe54ba21942fe7</anchor>
-      <arglist>(const Path &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillPath</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>afde048e81cca04a339a59d8dd315c524</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fillPath</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ab9187387d85661828e6c71ff7693a69c</anchor>
-      <arglist>(const Path &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type>const FontMetrics &amp;</type>
-      <name>fontMetrics</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aa4a14c77d6563b278c93a5976f7dfa7e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>TextMetrics</type>
-      <name>textMetrics</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aeaa1b376fd78a13cd18072ec560ab30f</anchor>
-      <arglist>(const Pt::String &amp;text) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawText</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a1bbbadfd6ef5bf1e12a18ec8dcef000c</anchor>
-      <arglist>(const PointF &amp;to, const Pt::String &amp;text)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawText</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aba008b710c10fcb3bca24396249afc04</anchor>
-      <arglist>(const PointF &amp;to, const Pt::String &amp;text, const Transform &amp;t)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawImage</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aaef5c4b858b32b3bf51d8910c15eec57</anchor>
-      <arglist>(const PointF &amp;to, const Image &amp;im)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawImage</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a9396c7dafe44a26e3756f668bc50ac0c</anchor>
-      <arglist>(const PointF &amp;to, const Image &amp;im, const RectF &amp;rect)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawBitmap</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a4b84a67f1ef9df1a49d9262f2e5cd0d5</anchor>
-      <arglist>(const PointF &amp;to, const Bitmap &amp;bm)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>drawBitmap</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a6ca0a07a640a7f583e29e2f1d7e30dc5</anchor>
-      <arglist>(const PointF &amp;to, const Bitmap &amp;bm, const RectF &amp;rect)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginPaint</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a0fc1526c75512deedc572a1c6b0ec7ef</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginPaint</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ae33fcfbe35a3aae4df444028b2750d28</anchor>
-      <arglist>(PaintContext &amp;context)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const Paint &amp;</type>
-      <name>paint</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ab330b2400928bccb0e7db4b6aab01e23</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>Canvas *</type>
-      <name>canvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>ae81a930db4bce8afd85a42948ec4adb5</anchor>
-      <arglist>() const</arglist>
+      <name>getCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
+      <arglist>(Canvas *canvas)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onDetachSurface</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetachContext</name>
-      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
-      <anchor>a3138f8ca97cb8090c915b6c35b6c6a66</anchor>
-      <arglist>(PaintContext &amp;context)</arglist>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
+      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33928,6 +33503,396 @@
       <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
       <anchor>ae81a930db4bce8afd85a42948ec4adb5</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachContext</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a3138f8ca97cb8090c915b6c35b6c6a66</anchor>
+      <arglist>(PaintContext &amp;context)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Gfx::Painter</name>
+    <filename>classPt_1_1Gfx_1_1Painter.html</filename>
+    <base>Pt::Gfx::PainterBase</base>
+    <member kind="function">
+      <type></type>
+      <name>Painter</name>
+      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
+      <anchor>a29c1d9ceedbe6abc5de3cf293b469c6b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Painter</name>
+      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
+      <anchor>a4cf6d839e01517a2ad62fed4de47f7ef</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Painter</name>
+      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
+      <anchor>ab74920fab2c4bd8ad02d576219333aa8</anchor>
+      <arglist>(PaintContext &amp;context)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Painter</name>
+      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
+      <anchor>a8669f9de04919cac91598d8fa990fbcc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>begin</name>
+      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
+      <anchor>a6cb5c2952b6e9f6e6dfc3b2e688d407c</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>begin</name>
+      <anchorfile>classPt_1_1Gfx_1_1Painter.html</anchorfile>
+      <anchor>ad372917fc022b2b34735d785cab0d1d1</anchor>
+      <arglist>(PaintContext &amp;context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ImageFormat &amp;</type>
+      <name>format</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a98349696edd180c15a0be5129b7d610b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Scaling &amp;</type>
+      <name>scaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const CompositionMode &amp;</type>
+      <name>compositionMode</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ac3e2cb35722757f3d42c03ff73512658</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCompositionMode</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a98a9ff991de2eebbdc289175ebc98b21</anchor>
+      <arglist>(const CompositionMode &amp;mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Pen &amp;</type>
+      <name>pen</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ad4fded169224f3f94c8bbf9b4105a32f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPen</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ac6b5a734fdfc27f6963a7e735ed14767</anchor>
+      <arglist>(const Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Brush &amp;</type>
+      <name>brush</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a642324f95d7bede04c6f0a410472615e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBrush</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a911b1ab96ec7508d36aaf2cb305608db</anchor>
+      <arglist>(const Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Font &amp;</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a03bfd66884ecd3f481d0db37a7f51fba</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ad56c22d0881053fd0d628fa139b1748b</anchor>
+      <arglist>(const Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform &amp;</type>
+      <name>transform</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a51fab737c87cb087ed1d01864c989641</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTransform</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ac89ef0116bcafbe68197f5ac304a17e3</anchor>
+      <arglist>(const Transform &amp;tx)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resetTransform</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a6022a1fd1e5dcd2fd5585e5a36aa3f37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const RectF *</type>
+      <name>clip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
+      <arglist>(const RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resetClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawLine</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a89cb90d8412e7329b6a0284de1a29d00</anchor>
+      <arglist>(const PointF &amp;from, const PointF &amp;to)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawPolyline</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a8ba5f7e551dd8adfc309bbf3044ef55f</anchor>
+      <arglist>(const PointF *points, const size_t pointCount)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillPolygon</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aad94393826eaceee3d83484155d61983</anchor>
+      <arglist>(const PointF *points, const size_t pointCount)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawRect</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a948ecb06eaccb519176a8c852693ef08</anchor>
+      <arglist>(const RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillRect</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aefef5e3751726f3704b617d8622af735</anchor>
+      <arglist>(const RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawCircle</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aafeb0223b17caab6985abd0f02495a3f</anchor>
+      <arglist>(const PointF &amp;topLeft, double diameter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillCircle</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ac96a5f5e479db3917a7805e51ab983b6</anchor>
+      <arglist>(const PointF &amp;topLeft, double diameter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawEllipse</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a5b0ccb445ea0e5960431cf5a861e5ca4</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillEllipse</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a991cc1348013f36ed57552c0ef29b06e</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawArc</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ae50dc69a5dd5c451827f2bc60f37579f</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillChord</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a94355c1b61619a68d29d23108b249852</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillPie</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a92f56a85a4d07e7d418d0358d02a67a6</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, float degBegin, float degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Path &amp;</type>
+      <name>path</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a5401f004fef3fd1b447363e193a890f9</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPath</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a401a9f98190516b9479a1acaf02d0ea8</anchor>
+      <arglist>(const Path &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawPath</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ad837ad0ca158e38ac9032cebfdaae525</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawPath</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a24d1b1cf2f467c4bd1fe54ba21942fe7</anchor>
+      <arglist>(const Path &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillPath</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>afde048e81cca04a339a59d8dd315c524</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillPath</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ab9187387d85661828e6c71ff7693a69c</anchor>
+      <arglist>(const Path &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>const FontMetrics &amp;</type>
+      <name>fontMetrics</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aa4a14c77d6563b278c93a5976f7dfa7e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>TextMetrics</type>
+      <name>textMetrics</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aeaa1b376fd78a13cd18072ec560ab30f</anchor>
+      <arglist>(const Pt::String &amp;text) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawText</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a1bbbadfd6ef5bf1e12a18ec8dcef000c</anchor>
+      <arglist>(const PointF &amp;to, const Pt::String &amp;text)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawText</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aba008b710c10fcb3bca24396249afc04</anchor>
+      <arglist>(const PointF &amp;to, const Pt::String &amp;text, const Transform &amp;t)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawImage</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aaef5c4b858b32b3bf51d8910c15eec57</anchor>
+      <arglist>(const PointF &amp;to, const Image &amp;im)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawImage</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a9396c7dafe44a26e3756f668bc50ac0c</anchor>
+      <arglist>(const PointF &amp;to, const Image &amp;im, const RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawBitmap</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a4b84a67f1ef9df1a49d9262f2e5cd0d5</anchor>
+      <arglist>(const PointF &amp;to, const Bitmap &amp;bm)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawBitmap</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a6ca0a07a640a7f583e29e2f1d7e30dc5</anchor>
+      <arglist>(const PointF &amp;to, const Bitmap &amp;bm, const RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginPaint</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>a0fc1526c75512deedc572a1c6b0ec7ef</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginPaint</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ae33fcfbe35a3aae4df444028b2750d28</anchor>
+      <arglist>(PaintContext &amp;context)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const Paint &amp;</type>
+      <name>paint</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ab330b2400928bccb0e7db4b6aab01e23</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Canvas *</type>
+      <name>canvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>ae81a930db4bce8afd85a42948ec4adb5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Gfx_1_1PainterBase.html</anchorfile>
+      <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -37952,6 +37917,81 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Remoting::Responder</name>
+    <filename>classPt_1_1Remoting_1_1Responder.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
+    <member kind="function">
+      <type></type>
+      <name>Responder</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a7b4c7e57995aa5d89fa22bcc5aa2a223</anchor>
+      <arglist>(ServiceDefinition &amp;serviceDef)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Responder</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ServiceProcedure *</type>
+      <name>activeProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Pt::Composer **</type>
+      <name>setProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>ab51b6b1e9f0e9789e6387a20203d30a9</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginCall</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>acaa96f8c157ef50d9d5448831c4bdc89</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Pt::Decomposer *</type>
+      <name>endCall</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Pt::Decomposer *</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a83bc093f10b38b3429883892e9a72f87</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::XmlRpc::Responder</name>
     <filename>classPt_1_1XmlRpc_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
@@ -38097,81 +38137,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Remoting::Responder</name>
-    <filename>classPt_1_1Remoting_1_1Responder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>Responder</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a7b4c7e57995aa5d89fa22bcc5aa2a223</anchor>
-      <arglist>(ServiceDefinition &amp;serviceDef)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Responder</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ServiceProcedure *</type>
-      <name>activeProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Composer **</type>
-      <name>setProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>ab51b6b1e9f0e9789e6387a20203d30a9</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginCall</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>acaa96f8c157ef50d9d5448831c4bdc89</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Decomposer *</type>
-      <name>endCall</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Decomposer *</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onReady</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a83bc093f10b38b3429883892e9a72f87</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Soap::Responder</name>
     <filename>classPt_1_1Soap_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
@@ -38314,87 +38279,6 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Http::Responder</name>
-    <filename>classPt_1_1Http_1_1Responder.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Responder</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a63d50035309ce5e9d88850cc910d8255</anchor>
-      <arglist>(Service &amp;s)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Responder</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Service &amp;</type>
-      <name>service</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Service &amp;</type>
-      <name>service</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>readRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>writeReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>ac42e9083a591870e368f493985579698</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onWriteReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38554,6 +38438,87 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::Responder</name>
+    <filename>classPt_1_1Http_1_1Responder.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Responder</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a63d50035309ce5e9d88850cc910d8255</anchor>
+      <arglist>(Service &amp;s)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Responder</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>readRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ac42e9083a591870e368f493985579698</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onWriteReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47635,39 +47600,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::SyntaxError</name>
-    <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
-    <base>Pt::Json::JsonError</base>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
-      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
-      <arglist>(const char *what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>line</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Xml::SyntaxError</name>
     <filename>classPt_1_1Xml_1_1SyntaxError.html</filename>
     <base>Pt::Xml::XmlError</base>
@@ -47696,6 +47628,39 @@
       <type>std::size_t</type>
       <name>line</name>
       <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
+      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Json::SyntaxError</name>
+    <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
+    <base>Pt::Json::JsonError</base>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
+      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
+      <arglist>(const char *what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>line</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
       <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
       <arglist>() const</arglist>
     </member>
@@ -49270,10 +49235,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; Char, char &gt;</name>
+    <name>TextCodec&lt; char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>Char</type>
+      <type>char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -49305,14 +49270,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -49358,10 +49323,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; char, char &gt;</name>
+    <name>TextCodec&lt; Char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>char</type>
+      <type>Char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -49393,14 +49358,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -50736,11 +50701,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Soap::Type</name>
-    <filename>classPt_1_1Soap_1_1Type.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-  </compound>
-  <compound kind="class">
     <name>Pt::Mcp::Type</name>
     <filename>classPt_1_1Mcp_1_1Type.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -50751,6 +50711,11 @@
       <anchor>a2f0d7cb90831dfebba0f143f96942dde</anchor>
       <arglist>(std::ostream &amp;os, const std::string &amp;description=&quot;&quot;) const</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Soap::Type</name>
+    <filename>classPt_1_1Soap_1_1Type.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
   </compound>
   <compound kind="class">
     <name>Pt::TypeInfo</name>
