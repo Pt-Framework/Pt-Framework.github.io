@@ -123,145 +123,145 @@
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePt.html">Pt</a> {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... A&gt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>Lambda : <span class="keyword">public</span> Callable&lt;R, A...&gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Lambda.html#a2e368d8d49935055671bcd6552e0d402">Lambda</a>(T&amp;&amp; lambda)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        : _lambda(std::forward&lt;T&gt;(lambda))</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        { }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        R <a class="code" href="classPt_1_1Lambda.html#a783491ab3c60d509dc575f335cc26345">operator()</a>(A... args)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> _lambda(std::forward&lt;A&gt;(args)...);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classPt_1_1Lambda.html#af0453e4c8694fbe0d82f06daafa26a29">   56</a></span>&#160;        <a class="code" href="classPt_1_1Lambda.html">Lambda</a>* <a class="code" href="classPt_1_1Lambda.html#af0453e4c8694fbe0d82f06daafa26a29">clone</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classPt_1_1Lambda.html#a2e368d8d49935055671bcd6552e0d402">Lambda</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">mutable</span> L _lambda;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... A&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">class </span>LambdaSlot : <span class="keyword">public</span> BasicSlot&lt;R, A...&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">typedef</span> Lambda&lt;L, R, A...&gt; LambdaT;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classPt_1_1LambdaSlot.html#adc74dea5c74b995ea98eac1e0d08f496">LambdaSlot</a>(T&amp;&amp; lambda, Connectable* context = 0)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        : _lambda(std::forward&lt;T&gt;(lambda))</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        , _context(context)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        { }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">   80</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">callable</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> &amp;_lambda;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">   85</a></span>&#160;        <a class="code" href="classPt_1_1Slot.html">Slot</a>* <a class="code" href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">clone</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classPt_1_1LambdaSlot.html#adc74dea5c74b995ea98eac1e0d08f496">LambdaSlot</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">   90</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">onConnect</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Connection.html">Connection</a>&amp; connection)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">if</span>(_context &amp;&amp; connection.<a class="code" href="classPt_1_1Connection.html#aad7e9a04348779a6d7c181d160e82028">sender</a>() != _context)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                _context-&gt;onConnectionOpen(connection);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">   98</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">onDisconnect</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Connection.html">Connection</a>&amp; connection)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">if</span>(_context &amp;&amp; connection.<a class="code" href="classPt_1_1Connection.html#aad7e9a04348779a6d7c181d160e82028">sender</a>() != _context)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                _context-&gt;onConnectionClose(connection);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">  106</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">equals</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Slot.html">Slot</a>&amp;)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        LambdaT _lambda;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classPt_1_1Connectable.html">Connectable</a>* _context;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L,</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;          <span class="keyword">class </span>C = <span class="keyword">typename</span> <a class="code" href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">TypeTraits&lt;L&gt;::Value</a>,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;          <span class="keyword">typename</span> M = decltype( &amp;C::operator() )&gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">struct </span>LambdaSlotTraits;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">class </span>C, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... As&gt;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">struct </span>LambdaSlotTraits&lt;L, C, R (C::*)(As...)&gt;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> LambdaSlot&lt;C, R, As...&gt; Slot;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... A&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">class </span>Lambda : <span class="keyword">public</span> Callable&lt;R, A...&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Lambda.html#a2e368d8d49935055671bcd6552e0d402">Lambda</a>(T&amp;&amp; lambda)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        : _lambda(std::forward&lt;T&gt;(lambda))</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        { }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        R <a class="code" href="classPt_1_1Lambda.html#a783491ab3c60d509dc575f335cc26345">operator()</a>(A... args)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> _lambda(std::forward&lt;A&gt;(args)...);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1Lambda.html#af0453e4c8694fbe0d82f06daafa26a29">   62</a></span>&#160;        <a class="code" href="classPt_1_1Lambda.html">Lambda</a>* <a class="code" href="classPt_1_1Lambda.html#af0453e4c8694fbe0d82f06daafa26a29">clone</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classPt_1_1Lambda.html#a2e368d8d49935055671bcd6552e0d402">Lambda</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">mutable</span> L _lambda;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... A&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">class </span>LambdaSlot : <span class="keyword">public</span> BasicSlot&lt;R, A...&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">typedef</span> Lambda&lt;L, R, A...&gt; LambdaT;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classPt_1_1LambdaSlot.html#adc74dea5c74b995ea98eac1e0d08f496">LambdaSlot</a>(T&amp;&amp; lambda, Connectable* context = 0)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        : _lambda(std::forward&lt;T&gt;(lambda))</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        , _context(context)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        { }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">   86</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">callable</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> &amp;_lambda;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">   91</a></span>&#160;        <a class="code" href="classPt_1_1Slot.html">Slot</a>* <a class="code" href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">clone</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classPt_1_1LambdaSlot.html#adc74dea5c74b995ea98eac1e0d08f496">LambdaSlot</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">   96</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">onConnect</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Connection.html">Connection</a>&amp; connection)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">if</span>(_context &amp;&amp; connection.<a class="code" href="classPt_1_1Connection.html#aad7e9a04348779a6d7c181d160e82028">sender</a>() != _context)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                _context-&gt;onConnectionOpen(connection);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">  104</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">onDisconnect</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Connection.html">Connection</a>&amp; connection)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span>(_context &amp;&amp; connection.<a class="code" href="classPt_1_1Connection.html#aad7e9a04348779a6d7c181d160e82028">sender</a>() != _context)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                _context-&gt;onConnectionClose(connection);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">  112</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">equals</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Slot.html">Slot</a>&amp;)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        LambdaT _lambda;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="classPt_1_1Connectable.html">Connectable</a>* _context;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          <span class="keyword">class </span>C = <span class="keyword">typename</span> <a class="code" href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">TypeTraits&lt;L&gt;::Value</a>,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;          <span class="keyword">typename</span> M = decltype( &amp;C::operator() )&gt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">struct </span>LambdaSlotTraits;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">class </span>C, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... As&gt;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">struct </span>LambdaSlotTraits&lt;L, C, R (C::*)(As...) const&gt;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">typedef</span> LambdaSlot&lt;C, R, As...&gt; Slot;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">class </span>C, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... As&gt;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">struct </span>LambdaSlotTraits&lt;L, C, R (C::*)(As...)&gt;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">typedef</span> LambdaSlot&lt;C, R, As...&gt; Slot;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;          <span class="keyword">typename</span> SlotT = <span class="keyword">typename</span> LambdaSlotTraits&lt;L&gt;::Slot&gt;</div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classPt_1_1Slot.html#aba81bbc11b09403403330bbb0af26c26">  141</a></span>&#160;SlotT slot(L&amp;&amp; lambda)</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> SlotT( std::forward&lt;L&gt;(lambda) );</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          <span class="keyword">typename</span> SlotT = <span class="keyword">typename</span> LambdaSlotTraits&lt;L&gt;::Slot&gt;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classPt_1_1Slot.html#a0e1d2d117eef2aa3509fca9936107e43">  150</a></span>&#160;SlotT slot(<a class="code" href="classPt_1_1Connectable.html">Connectable</a>&amp; context, L&amp;&amp; lambda)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> SlotT( std::forward&lt;L&gt;(lambda), &amp;context );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span>... A, <span class="keyword">typename</span> L&gt;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<a class="code" href="classPt_1_1LambdaSlot.html">LambdaSlot&lt;typename TypeTraits&lt;L&gt;::Value</a>, R, A...&gt; slot(L&amp;&amp; lambda)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">TypeTraits&lt;L&gt;::Value</a> LambdaT;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt;LambdaT, R, A...&gt;( std::forward&lt;L&gt;(lambda) );</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span>... A, <span class="keyword">typename</span> L&gt;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;LambdaSlot&lt;typename TypeTraits&lt;L&gt;::Value, R, A...&gt; slot(Connectable&amp; context, L&amp;&amp; lambda)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">TypeTraits&lt;L&gt;::Value</a> LambdaT;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> LambdaSlot&lt;LambdaT, R, A...&gt;( std::forward&lt;L&gt;(lambda), &amp;context );</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">// namespace Pt</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif // PT_LAMBDA_H</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L, <span class="keyword">class </span>C, <span class="keyword">typename</span> R, <span class="keyword">typename</span>... As&gt;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">struct </span>LambdaSlotTraits&lt;L, C, R (C::*)(As...) const&gt;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">typedef</span> LambdaSlot&lt;C, R, As...&gt; Slot;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;};</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;          <span class="keyword">typename</span> SlotT = <span class="keyword">typename</span> LambdaSlotTraits&lt;L&gt;::Slot&gt;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classPt_1_1Slot.html#aba81bbc11b09403403330bbb0af26c26">  147</a></span>&#160;SlotT slot(L&amp;&amp; lambda)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> SlotT( std::forward&lt;L&gt;(lambda) );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> L,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;          <span class="keyword">typename</span> SlotT = <span class="keyword">typename</span> LambdaSlotTraits&lt;L&gt;::Slot&gt;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classPt_1_1Slot.html#a0e1d2d117eef2aa3509fca9936107e43">  156</a></span>&#160;SlotT slot(<a class="code" href="classPt_1_1Connectable.html">Connectable</a>&amp; context, L&amp;&amp; lambda)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> SlotT( std::forward&lt;L&gt;(lambda), &amp;context );</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span>... A, <span class="keyword">typename</span> L&gt;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<a class="code" href="classPt_1_1LambdaSlot.html">LambdaSlot&lt;typename TypeTraits&lt;L&gt;::Value</a>, R, A...&gt; slot(L&amp;&amp; lambda)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">TypeTraits&lt;L&gt;::Value</a> LambdaT;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPt_1_1LambdaSlot.html">LambdaSlot</a>&lt;LambdaT, R, A...&gt;( std::forward&lt;L&gt;(lambda) );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span>... A, <span class="keyword">typename</span> L&gt;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;LambdaSlot&lt;typename TypeTraits&lt;L&gt;::Value, R, A...&gt; slot(Connectable&amp; context, L&amp;&amp; lambda)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">TypeTraits&lt;L&gt;::Value</a> LambdaT;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> LambdaSlot&lt;LambdaT, R, A...&gt;( std::forward&lt;L&gt;(lambda), &amp;context );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;} <span class="comment">// namespace Pt</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#endif // PT_LAMBDA_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1Connection_html_aad7e9a04348779a6d7c181d160e82028"><div class="ttname"><a href="classPt_1_1Connection.html#aad7e9a04348779a6d7c181d160e82028">Pt::Connection::sender</a></div><div class="ttdeci">const Connectable * sender() const</div><div class="ttdoc">Returns the sender.</div><div class="ttdef"><b>Definition:</b> Connection.h:110</div></div>
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1LambdaSlot_html_aa49fab3a41eb87ee45012149d2ffc0e0"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">Pt::LambdaSlot::callable</a></div><div class="ttdeci">virtual const void * callable() const</div><div class="ttdoc">Returns a pointer to the contained callable.</div><div class="ttdef"><b>Definition:</b> Lambda.h:80</div></div>
-<div class="ttc" id="aclassPt_1_1Lambda_html"><div class="ttname"><a href="classPt_1_1Lambda.html">Pt::Lambda</a></div><div class="ttdoc">Adapts a lambda or function object as a callable.</div><div class="ttdef"><b>Definition:</b> Api-Lambda.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1LambdaSlot_html_aa49fab3a41eb87ee45012149d2ffc0e0"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#aa49fab3a41eb87ee45012149d2ffc0e0">Pt::LambdaSlot::callable</a></div><div class="ttdeci">virtual const void * callable() const</div><div class="ttdoc">Returns a pointer to the contained callable.</div><div class="ttdef"><b>Definition:</b> Lambda.h:86</div></div>
+<div class="ttc" id="aclassPt_1_1Lambda_html"><div class="ttname"><a href="classPt_1_1Lambda.html">Pt::Lambda</a></div><div class="ttdoc">Adapts a lambda or function object as a callable.</div><div class="ttdef"><b>Definition:</b> Api-Lambda.h:40</div></div>
 <div class="ttc" id="astructPt_1_1TypeTraits_html_af18978f328894461670085d00ca66d0b"><div class="ttname"><a href="structPt_1_1TypeTraits.html#af18978f328894461670085d00ca66d0b">Pt::TypeTraits::Value</a></div><div class="ttdeci">IMPLEMENTATION_DEFINED Value</div><div class="ttdoc">The derived value type.</div><div class="ttdef"><b>Definition:</b> Api-TypeTraits.h:22</div></div>
-<div class="ttc" id="aclassPt_1_1LambdaSlot_html_a810dbc7a4e18a9a39775919aa9ba33f4"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">Pt::LambdaSlot::clone</a></div><div class="ttdeci">Slot * clone() const</div><div class="ttdoc">Clone this object with new.</div><div class="ttdef"><b>Definition:</b> Lambda.h:85</div></div>
-<div class="ttc" id="aclassPt_1_1LambdaSlot_html_a82f6b74df5580c99c31d19712b3fd0a9"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">Pt::LambdaSlot::onDisconnect</a></div><div class="ttdeci">virtual void onDisconnect(const Connection &amp;connection)</div><div class="ttdoc">Notifies of disconnects.</div><div class="ttdef"><b>Definition:</b> Lambda.h:98</div></div>
+<div class="ttc" id="aclassPt_1_1LambdaSlot_html_a810dbc7a4e18a9a39775919aa9ba33f4"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#a810dbc7a4e18a9a39775919aa9ba33f4">Pt::LambdaSlot::clone</a></div><div class="ttdeci">Slot * clone() const</div><div class="ttdoc">Clone this object with new.</div><div class="ttdef"><b>Definition:</b> Lambda.h:91</div></div>
+<div class="ttc" id="aclassPt_1_1LambdaSlot_html_a82f6b74df5580c99c31d19712b3fd0a9"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#a82f6b74df5580c99c31d19712b3fd0a9">Pt::LambdaSlot::onDisconnect</a></div><div class="ttdeci">virtual void onDisconnect(const Connection &amp;connection)</div><div class="ttdoc">Notifies of disconnects.</div><div class="ttdef"><b>Definition:</b> Lambda.h:104</div></div>
 <div class="ttc" id="aclassPt_1_1Lambda_html_a783491ab3c60d509dc575f335cc26345"><div class="ttname"><a href="classPt_1_1Lambda.html#a783491ab3c60d509dc575f335cc26345">Pt::Lambda::operator()</a></div><div class="ttdeci">R operator()(ARGUMENTS args) const</div><div class="ttdoc">Call the callable entity.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
 <div class="ttc" id="aclassPt_1_1Lambda_html_a2e368d8d49935055671bcd6552e0d402"><div class="ttname"><a href="classPt_1_1Lambda.html#a2e368d8d49935055671bcd6552e0d402">Pt::Lambda::Lambda</a></div><div class="ttdeci">Lambda(T &amp;&amp;lambda)</div><div class="ttdoc">Constructs from a lambda or function object.</div></div>
-<div class="ttc" id="aclassPt_1_1LambdaSlot_html"><div class="ttname"><a href="classPt_1_1LambdaSlot.html">Pt::LambdaSlot</a></div><div class="ttdoc">Adapts a Lambda for use as a slot.</div><div class="ttdef"><b>Definition:</b> Api-Lambda.h:75</div></div>
-<div class="ttc" id="aclassPt_1_1Lambda_html_af0453e4c8694fbe0d82f06daafa26a29"><div class="ttname"><a href="classPt_1_1Lambda.html#af0453e4c8694fbe0d82f06daafa26a29">Pt::Lambda::clone</a></div><div class="ttdeci">Lambda * clone() const</div><div class="ttdoc">Returns a copy of this instance.</div><div class="ttdef"><b>Definition:</b> Lambda.h:56</div></div>
-<div class="ttc" id="aclassPt_1_1LambdaSlot_html_aac75d5c02327fdaa8ba50c8d2d21130a"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">Pt::LambdaSlot::onConnect</a></div><div class="ttdeci">virtual void onConnect(const Connection &amp;connection)</div><div class="ttdoc">Notifies of connects.</div><div class="ttdef"><b>Definition:</b> Lambda.h:90</div></div>
+<div class="ttc" id="aclassPt_1_1LambdaSlot_html"><div class="ttname"><a href="classPt_1_1LambdaSlot.html">Pt::LambdaSlot</a></div><div class="ttdoc">Adapts a Lambda for use as a slot.</div><div class="ttdef"><b>Definition:</b> Api-Lambda.h:66</div></div>
+<div class="ttc" id="aclassPt_1_1Lambda_html_af0453e4c8694fbe0d82f06daafa26a29"><div class="ttname"><a href="classPt_1_1Lambda.html#af0453e4c8694fbe0d82f06daafa26a29">Pt::Lambda::clone</a></div><div class="ttdeci">Lambda * clone() const</div><div class="ttdoc">Returns a copy of this instance.</div><div class="ttdef"><b>Definition:</b> Lambda.h:62</div></div>
+<div class="ttc" id="aclassPt_1_1LambdaSlot_html_aac75d5c02327fdaa8ba50c8d2d21130a"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#aac75d5c02327fdaa8ba50c8d2d21130a">Pt::LambdaSlot::onConnect</a></div><div class="ttdeci">virtual void onConnect(const Connection &amp;connection)</div><div class="ttdoc">Notifies of connects.</div><div class="ttdef"><b>Definition:</b> Lambda.h:96</div></div>
 <div class="ttc" id="aclassPt_1_1Slot_html"><div class="ttname"><a href="classPt_1_1Slot.html">Pt::Slot</a></div><div class="ttdoc">Endpoint of a signal/slot connection.</div><div class="ttdef"><b>Definition:</b> Api-Slot.h:23</div></div>
 <div class="ttc" id="aclassPt_1_1LambdaSlot_html_adc74dea5c74b995ea98eac1e0d08f496"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#adc74dea5c74b995ea98eac1e0d08f496">Pt::LambdaSlot::LambdaSlot</a></div><div class="ttdeci">LambdaSlot(T &amp;&amp;lambda, Connectable *context=0)</div><div class="ttdoc">Constructs from a lambda and optional lifetime context.</div></div>
-<div class="ttc" id="aclassPt_1_1LambdaSlot_html_a07fb581ef6bed362ed927fe7c827a79e"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">Pt::LambdaSlot::equals</a></div><div class="ttdeci">virtual bool equals(const Slot &amp;) const</div><div class="ttdoc">Returns true if two slots are equal in value.</div><div class="ttdef"><b>Definition:</b> Lambda.h:106</div></div>
+<div class="ttc" id="aclassPt_1_1LambdaSlot_html_a07fb581ef6bed362ed927fe7c827a79e"><div class="ttname"><a href="classPt_1_1LambdaSlot.html#a07fb581ef6bed362ed927fe7c827a79e">Pt::LambdaSlot::equals</a></div><div class="ttdeci">virtual bool equals(const Slot &amp;) const</div><div class="ttdoc">Returns true if two slots are equal in value.</div><div class="ttdef"><b>Definition:</b> Lambda.h:112</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html"><div class="ttname"><a href="classPt_1_1Connection.html">Pt::Connection</a></div><div class="ttdoc">Represents a connection between a Signal/Delegate and a slot.</div><div class="ttdef"><b>Definition:</b> Connection.h:91</div></div>
 
 <div class="clear">&nbsp;</div>

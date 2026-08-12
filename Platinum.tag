@@ -56634,7 +56634,6 @@
     <class kind="class">Pt::Function</class>
     <class kind="class">Pt::FunctionSlot</class>
     <class kind="class">Pt::Invokable</class>
-    <class kind="class">Pt::Lambda</class>
     <class kind="class">Pt::LambdaSlot</class>
     <class kind="class">Pt::Method</class>
     <class kind="class">Pt::MethodSlot</class>
@@ -56644,6 +56643,7 @@
     <class kind="class">Pt::BasicSlot</class>
     <class kind="class">Pt::Connectable</class>
     <class kind="class">Pt::Connection</class>
+    <class kind="class">Pt::Lambda</class>
   </compound>
   <compound kind="group">
     <name>Pt-System-Tar</name>
