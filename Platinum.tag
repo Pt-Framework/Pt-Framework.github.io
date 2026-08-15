@@ -10818,36 +10818,8 @@
     <name>Pt::BasicSlot</name>
     <filename>classPt_1_1BasicSlot.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
+    <templarg>As</templarg>
     <base>Pt::Slot</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>onConnect</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
-      <anchor>a5d95eb428e542c5bf228f3e73fc88359</anchor>
-      <arglist>(const Connection &amp;c)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>onDisconnect</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
-      <anchor>a6d4c1dbaac8c93a4ab8500179ca22523</anchor>
-      <arglist>(const Connection &amp;c)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>equals</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
-      <anchor>a3e14fea3e6ecaf447ec91ae7d622260e</anchor>
-      <arglist>(const Slot &amp;slot) const =0</arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual Slot *</type>
       <name>clone</name>
@@ -10855,26 +10827,54 @@
       <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
       <arglist>() const =0</arglist>
     </member>
-    <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
-      <name>slot</name>
+    <member kind="function" virtualness="pure">
+      <type>virtual const void *</type>
+      <name>callable</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>onConnect</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5d95eb428e542c5bf228f3e73fc88359</anchor>
+      <arglist>(const Connection &amp;c)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>onDisconnect</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a6d4c1dbaac8c93a4ab8500179ca22523</anchor>
+      <arglist>(const Connection &amp;c)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>equals</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a3e14fea3e6ecaf447ec91ae7d622260e</anchor>
+      <arglist>(const Slot &amp;slot) const =0</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -10903,6 +10903,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10910,74 +10924,67 @@
     <filename>classPt_1_1BasicSlot.html</filename>
     <base>Pt::Slot</base>
     <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual const void *</type>
       <name>callable</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
-      <arglist>() const=0</arglist>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>onConnect</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>a5d95eb428e542c5bf228f3e73fc88359</anchor>
       <arglist>(const Connection &amp;c)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>onDisconnect</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>a6d4c1dbaac8c93a4ab8500179ca22523</anchor>
       <arglist>(const Connection &amp;c)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>equals</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>a3e14fea3e6ecaf447ec91ae7d622260e</anchor>
-      <arglist>(const Slot &amp;slot) const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Slot *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
-      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Slot *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
-      <arglist>() const =0</arglist>
+      <arglist>(const Slot &amp;slot) const =0</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>FunctionSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -11006,6 +11013,240 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>BasicSlot&lt; R, As... &gt;</name>
+    <filename>classPt_1_1BasicSlot.html</filename>
+    <base>Pt::Slot</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const void *</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>onConnect</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5d95eb428e542c5bf228f3e73fc88359</anchor>
+      <arglist>(const Connection &amp;c)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>onDisconnect</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a6d4c1dbaac8c93a4ab8500179ca22523</anchor>
+      <arglist>(const Connection &amp;c)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>equals</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a3e14fea3e6ecaf447ec91ae7d622260e</anchor>
+      <arglist>(const Slot &amp;slot) const =0</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
+    </member>
+    <member kind="function">
+      <type>DelegateSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SlotT</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a03257c74312032def2297909c1cdb9f1</anchor>
+      <arglist>(L &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>SlotT</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ae366cc410231bc7d00e562b83b56355d</anchor>
+      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>BasicSlot&lt; void, As... &gt;</name>
+    <filename>classPt_1_1BasicSlot.html</filename>
+    <base>Pt::Slot</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const void *</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>onConnect</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5d95eb428e542c5bf228f3e73fc88359</anchor>
+      <arglist>(const Connection &amp;c)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>onDisconnect</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a6d4c1dbaac8c93a4ab8500179ca22523</anchor>
+      <arglist>(const Connection &amp;c)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>equals</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a3e14fea3e6ecaf447ec91ae7d622260e</anchor>
+      <arglist>(const Slot &amp;slot) const =0</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
+    </member>
+    <member kind="function">
+      <type>DelegateSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SlotT</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a03257c74312032def2297909c1cdb9f1</anchor>
+      <arglist>(L &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>SlotT</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ae366cc410231bc7d00e562b83b56355d</anchor>
+      <arglist>(Connectable &amp;context, L &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>ab6e9c7df91cc3888c9b2b6439a23eb04</anchor>
+      <arglist>(T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>LambdaSlot&lt; L, R, A... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
+      <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13411,6 +13652,20 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::BoundSlot</name>
+    <filename>classPt_1_1BoundSlot.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <member kind="function">
+      <type>SigSlotDetail::BoundSlotTraits&lt; R, std::tuple&lt; As... &gt; &gt;::Type</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1BoundSlot.html</anchorfile>
+      <anchor>a98ab4d7298179285290bf6e60b9e5356</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot, const T &amp;arg)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Gfx::Brush</name>
     <filename>classPt_1_1Gfx_1_1Brush.html</filename>
     <member kind="enumeration">
@@ -14169,8 +14424,8 @@
     <name>Pt::Callable</name>
     <filename>classPt_1_1Callable.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::Invokable</base>
+    <templarg>As</templarg>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14179,52 +14434,52 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(ARGUMENTS) const =0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const =0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; CallT *, Pt::Remoting::Responder &amp; &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; Pt::Remoting::Responder &amp; &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14233,52 +14488,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual CallT *</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(Pt::Remoting::Responder &amp;) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>CallT *</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(Pt::Remoting::Responder &amp;) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(Pt::Remoting::Responder &amp;) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; CallT *, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; CallT *, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, CallT *(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, CallT *(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; CallT *, ARGS &gt;</type>
+      <type>Function&lt; CallT *, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(CallT *(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(CallT *(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; CallT *, ClassT, ARGS &gt;</type>
+      <type>Method&lt; CallT *, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, CallT *(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, CallT *(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Pt::Invokable</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14287,52 +14542,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(ARGUMENTS) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A... &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A... &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14341,52 +14596,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A...) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A...) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A...) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14395,52 +14650,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14449,52 +14704,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14503,52 +14758,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3, A4 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14557,52 +14812,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3, A4, A5 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14611,52 +14866,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3, A4, A5, A6 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14665,52 +14920,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3, A4, A5, A6, A7 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14719,52 +14974,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3, A4, A5, A6, A7, A8 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14773,52 +15028,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, A1, A2, A3, A4, A5, A6, A7, A8, A9 &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14827,52 +15082,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>Callable&lt; R, A1, Void, Void &gt;</name>
+    <name>Callable&lt; R, As... &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14881,106 +15136,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, ARGUMENTS0 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; ARGUMENTS0 &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual R</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(ARGUMENTS0) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>R</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS0) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS0) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Callable&lt; R, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; Pt::Void &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -14989,52 +15190,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(Pt::Void) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(Pt::Void) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(Pt::Void) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>Callable&lt; void, A1 &gt;</name>
+    <name>Callable&lt; R, std::tuple_element&lt; Is, Tuple &gt;::type... &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; A1 &gt;</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -15043,52 +15244,52 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>Callable&lt; void, ARGUMENTS &gt;</name>
+    <name>Callable&lt; void, As... &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
-    <base>Pt::Invokable</base>
+    <base>Invokable&lt; As... &gt;</base>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -15097,100 +15298,46 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual ReturnT</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(ARGUMENTS) const=0</arglist>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; void, Pt::Void &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; Pt::Void &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(Pt::Void) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(Pt::Void) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(Pt::Void) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18832,28 +18979,21 @@
     <filename>classPt_1_1ConstMethod.html</filename>
     <templarg></templarg>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::Callable</base>
+    <templarg>As</templarg>
+    <base>Callable&lt; R, As... &gt;</base>
     <member kind="typedef">
       <type>R(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a0bccf86255b948235ef88e592ccf63a0</anchor>
-      <arglist>)(ARGUMENTS) const</arglist>
+      <anchor>a348313ba27b4390f7ab9ec655ad5f88f</anchor>
+      <arglist>)(As...) const</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ConstMethod</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3dfc8614d6ac4294b8c30c32d2086f37</anchor>
-      <arglist>(ClassT &amp;object, MemFuncT ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ConstMethod</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3a06d89ef0adbd3e07301a6979db7834</anchor>
-      <arglist>(const ConstMethod &amp;rhs)</arglist>
+      <anchor>ae389717851a28159f9425db22f9a8ef5</anchor>
+      <arglist>(ClassT &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>ClassT &amp;</type>
@@ -18873,352 +19013,139 @@
       <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a29c3fb244c2c5315b406905eb2eda4ce</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ARGUMENTS &gt; *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a063401eee05a23ee22da5d4838dd6247</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a50ef12195e3994e0762e375081097ed0</anchor>
-      <arglist>(const ConstMethod &amp;rhs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>R</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ConstMethod&lt; R, ClassT, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10 &gt;</name>
-    <filename>classPt_1_1ConstMethod.html</filename>
-    <base>Callable&lt; R, A1 &gt;</base>
-    <member kind="typedef">
-      <type>R(ClassT::*</type>
-      <name>MemFuncT</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a0bccf86255b948235ef88e592ccf63a0</anchor>
-      <arglist>)(A1) const</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ConstMethod</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3dfc8614d6ac4294b8c30c32d2086f37</anchor>
-      <arglist>(ClassT &amp;object, MemFuncT ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ConstMethod</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3a06d89ef0adbd3e07301a6979db7834</anchor>
-      <arglist>(const ConstMethod &amp;rhs)</arglist>
-    </member>
-    <member kind="function">
-      <type>ClassT &amp;</type>
-      <name>object</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a559f28105d2bbb02ae479920ef15f783</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ClassT &amp;</type>
-      <name>object</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a4c170f72886d7c5e23a4545438105cc2</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>R</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a29c3fb244c2c5315b406905eb2eda4ce</anchor>
-      <arglist>(A1) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, A1 &gt; *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a063401eee05a23ee22da5d4838dd6247</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a50ef12195e3994e0762e375081097ed0</anchor>
-      <arglist>(const ConstMethod &amp;rhs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>R</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ConstMethod&lt; R, Pt::Delegate&lt; R, ARGUMENTS &gt;, ARGUMENTS &gt;</name>
-    <filename>classPt_1_1ConstMethod.html</filename>
-    <base>Pt::Callable</base>
-    <member kind="typedef">
-      <type>R(ClassT::*</type>
-      <name>MemFuncT</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a0bccf86255b948235ef88e592ccf63a0</anchor>
-      <arglist>)(ARGUMENTS) const</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ConstMethod</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3dfc8614d6ac4294b8c30c32d2086f37</anchor>
-      <arglist>(Pt::Delegate&lt; R, ARGUMENTS &gt; &amp;object, MemFuncT ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ConstMethod</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3a06d89ef0adbd3e07301a6979db7834</anchor>
-      <arglist>(const ConstMethod &amp;rhs)</arglist>
-    </member>
-    <member kind="function">
-      <type>Pt::Delegate&lt; R, ARGUMENTS &gt; &amp;</type>
-      <name>object</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a559f28105d2bbb02ae479920ef15f783</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Pt::Delegate&lt; R, ARGUMENTS &gt; &amp;</type>
-      <name>object</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a4c170f72886d7c5e23a4545438105cc2</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>R</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a29c3fb244c2c5315b406905eb2eda4ce</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ARGUMENTS &gt; *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a063401eee05a23ee22da5d4838dd6247</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a50ef12195e3994e0762e375081097ed0</anchor>
-      <arglist>(const ConstMethod &amp;rhs) const</arglist>
+      <anchor>aee3b7d3465f814822ced92b202ae072f</anchor>
+      <arglist>(const ConstMethod &amp;other) const</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
       <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const =0</arglist>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ConstMethod&lt; void, Pt::Signal&lt; ARGUMENTS &gt;, ARGUMENTS &gt;</name>
+    <name>ConstMethod&lt; R, ClassT, As... &gt;</name>
     <filename>classPt_1_1ConstMethod.html</filename>
-    <base>Callable&lt; void, ARGUMENTS &gt;</base>
+    <base>Callable&lt; R, As... &gt;</base>
     <member kind="typedef">
-      <type>void(ClassT::*</type>
+      <type>R(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a0bccf86255b948235ef88e592ccf63a0</anchor>
-      <arglist>)(ARGUMENTS) const</arglist>
+      <anchor>a348313ba27b4390f7ab9ec655ad5f88f</anchor>
+      <arglist>)(As...) const</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ConstMethod</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3dfc8614d6ac4294b8c30c32d2086f37</anchor>
-      <arglist>(Pt::Signal&lt; ARGUMENTS &gt; &amp;object, MemFuncT ptr)</arglist>
+      <anchor>ae389717851a28159f9425db22f9a8ef5</anchor>
+      <arglist>(ClassT &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>ConstMethod</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a3a06d89ef0adbd3e07301a6979db7834</anchor>
-      <arglist>(const ConstMethod &amp;rhs)</arglist>
-    </member>
-    <member kind="function">
-      <type>Pt::Signal&lt; ARGUMENTS &gt; &amp;</type>
+      <type>ClassT &amp;</type>
       <name>object</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
       <anchor>a559f28105d2bbb02ae479920ef15f783</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const Pt::Signal&lt; ARGUMENTS &gt; &amp;</type>
+      <type>const ClassT &amp;</type>
       <name>object</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
       <anchor>a4c170f72886d7c5e23a4545438105cc2</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a29c3fb244c2c5315b406905eb2eda4ce</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; void, ARGUMENTS &gt; *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a063401eee05a23ee22da5d4838dd6247</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a50ef12195e3994e0762e375081097ed0</anchor>
-      <arglist>(const ConstMethod &amp;rhs) const</arglist>
+      <anchor>aee3b7d3465f814822ced92b202ae072f</anchor>
+      <arglist>(const ConstMethod &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19226,14 +19153,14 @@
     <filename>classPt_1_1ConstMethodSlot.html</filename>
     <templarg></templarg>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::BasicSlot</base>
+    <templarg>As</templarg>
+    <base>BasicSlot&lt; R, As... &gt;</base>
     <member kind="function">
       <type></type>
       <name>ConstMethodSlot</name>
       <anchorfile>classPt_1_1ConstMethodSlot.html</anchorfile>
-      <anchor>a7ce465be6d1b578c521a45c6497d8d53</anchor>
-      <arglist>(const ConstMethod&lt; R, ClassT, ARGUMENTS &gt; &amp;method)</arglist>
+      <anchor>ac31417ecc38d3230127a0ccdf2bc64a7</anchor>
+      <arglist>(const ConstMethod&lt; R, ClassT, As... &gt; &amp;method)</arglist>
     </member>
     <member kind="function">
       <type>Slot *</type>
@@ -19253,15 +19180,15 @@
       <type>virtual void</type>
       <name>onConnect</name>
       <anchorfile>classPt_1_1ConstMethodSlot.html</anchorfile>
-      <anchor>a9b5bf662811957679ed224465b3b0721</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>aac75d5c02327fdaa8ba50c8d2d21130a</anchor>
+      <arglist>(const Connection &amp;connection)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>onDisconnect</name>
       <anchorfile>classPt_1_1ConstMethodSlot.html</anchorfile>
-      <anchor>abfe4f3cc9cb9caf2e6eddf0d6f9f3c26</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>a82f6b74df5580c99c31d19712b3fd0a9</anchor>
+      <arglist>(const Connection &amp;connection)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -19270,26 +19197,33 @@
       <anchor>a441aa17f4954bb1a09136ed5c484a8a8</anchor>
       <arglist>(const Slot &amp;slot) const</arglist>
     </member>
-    <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
-      <name>slot</name>
-      <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -19318,6 +19252,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20292,8 +20240,7 @@
     <name>Pt::Delegate</name>
     <filename>classPt_1_1Delegate.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::Connectable</base>
+    <templarg>As</templarg>
     <member kind="function">
       <type></type>
       <name>Delegate</name>
@@ -20312,8 +20259,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>a42a3dba49c206ee249eea39fb927f217</anchor>
-      <arglist>(const BasicSlot&lt; R, ARGUMENTS &gt; &amp;slot)</arglist>
+      <anchor>a388d5be7d03361475f0e98d72f1a3460</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -20326,57 +20273,117 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>af81329b64f5d1e5cdc759cc17418e483</anchor>
-      <arglist>(const BasicSlot&lt; R, ARGUMENTS &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isConnected</name>
-      <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3f923308b3cf0a5e1798c500d1f8181b</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>call</name>
       <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>abd3f354e905203c9d25f76b549a59aea</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>aee09805cf0b37aa81f8f05d4c63ad5a7</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>a29c3fb244c2c5315b406905eb2eda4ce</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>afe2ce14ebe794e8f8d4da20a20dfbbbe</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Delegate.html</anchorfile>
-      <anchor>a3c377f2e4b2d00cf5697a5ec603334be</anchor>
-      <arglist>(Delegate&lt; R, ARGS &gt; &amp;delegate, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>aa53c69b236efc457195b407e18974d8b</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Delegate&lt; R, As... &gt;</name>
+    <filename>classPt_1_1Delegate.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Delegate</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>a14bef0b4a284ace6906564aeee5a7efe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Delegate</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>afafeb333bbeb0b937703d05b8a9db257</anchor>
+      <arglist>(const Delegate &amp;rhs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>connect</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>a388d5be7d03361475f0e98d72f1a3460</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>a960705de531a20389fb29928d43258c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>a3f923308b3cf0a5e1798c500d1f8181b</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>R</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>abd3f354e905203c9d25f76b549a59aea</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>aee09805cf0b37aa81f8f05d4c63ad5a7</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>R</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>afe2ce14ebe794e8f8d4da20a20dfbbbe</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>operator+=</name>
+      <anchorfile>classPt_1_1Delegate.html</anchorfile>
+      <anchor>aa53c69b236efc457195b407e18974d8b</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Pt::DelegateSlot</name>
     <filename>classPt_1_1DelegateSlot.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::BasicSlot</base>
+    <templarg>As</templarg>
+    <base>BasicSlot&lt; R, As... &gt;</base>
     <member kind="function">
       <type></type>
       <name>DelegateSlot</name>
       <anchorfile>classPt_1_1DelegateSlot.html</anchorfile>
-      <anchor>a4584763107689dc149ad06788b7327fa</anchor>
-      <arglist>(Delegate&lt; R, ARGUMENTS &gt; &amp;delegate)</arglist>
+      <anchor>a0334ea2fa38a983d38ff9786785a4f64</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
     </member>
     <member kind="function">
       <type>Slot *</type>
@@ -20396,15 +20403,15 @@
       <type>virtual void</type>
       <name>onConnect</name>
       <anchorfile>classPt_1_1DelegateSlot.html</anchorfile>
-      <anchor>a9b5bf662811957679ed224465b3b0721</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>aac75d5c02327fdaa8ba50c8d2d21130a</anchor>
+      <arglist>(const Connection &amp;connection)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>onDisconnect</name>
       <anchorfile>classPt_1_1DelegateSlot.html</anchorfile>
-      <anchor>abfe4f3cc9cb9caf2e6eddf0d6f9f3c26</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>a82f6b74df5580c99c31d19712b3fd0a9</anchor>
+      <arglist>(const Connection &amp;connection)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -20413,26 +20420,33 @@
       <anchor>a441aa17f4954bb1a09136ed5c484a8a8</anchor>
       <arglist>(const Slot &amp;slot) const</arglist>
     </member>
-    <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
-      <name>slot</name>
-      <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -20461,6 +20475,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22730,131 +22758,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::JsonRpc::Fault</name>
-    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
-    <base>Pt::Remoting::Fault</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>ErrorCodes</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
-      <arglist>(const std::string &amp;msg, int ec)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
-      <arglist>(const char *msg, int rc)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>code</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Remoting::Fault</name>
-    <filename>classPt_1_1Remoting_1_1Fault.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
-      <anchor>a5c7d2961d7226216146a1d5cb2b6188b</anchor>
-      <arglist>(const std::string &amp;msg)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
-      <anchor>a1d954ac1e8d229c08388c694c4c909b3</anchor>
-      <arglist>(const char *msg)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Fault</name>
-      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
-      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Soap::Fault</name>
     <filename>classPt_1_1Soap_1_1Fault.html</filename>
     <base>Pt::Remoting::Fault</base>
@@ -23015,6 +22918,31 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Remoting::Fault</name>
+    <filename>classPt_1_1Remoting_1_1Fault.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
+      <anchor>a5c7d2961d7226216146a1d5cb2b6188b</anchor>
+      <arglist>(const std::string &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
+      <anchor>a1d954ac1e8d229c08388c694c4c909b3</anchor>
+      <arglist>(const char *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Fault</name>
+      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
+      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::XmlRpc::Fault</name>
     <filename>classPt_1_1XmlRpc_1_1Fault.html</filename>
     <base>Pt::Remoting::Fault</base>
@@ -23171,6 +23099,106 @@
       <name>rc</name>
       <anchorfile>classPt_1_1XmlRpc_1_1Fault.html</anchorfile>
       <anchor>ac66b30f37d7df8c9bccc0b913d90bf16</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::JsonRpc::Fault</name>
+    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
+    <base>Pt::Remoting::Fault</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorCodes</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
+      <arglist>(const std::string &amp;msg, int ec)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
+      <arglist>(const char *msg, int rc)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>code</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -24624,654 +24652,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Formatter</name>
-    <filename>classPt_1_1Formatter.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Formatter</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad59b4a59b13d736a623241018b6fee0a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addString</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aa0b1dc7979fc5b410b4d7737431aae92</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const Pt::String &amp;value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addString</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a9d3d64ab59564e10f1701fc8a225971e</anchor>
-      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBinary</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aacb1bf630cbf39bacb6fbee1bb62f76e</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const char *value, std::size_t length, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBinary</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6189ba18cd51a6bb2769850b9db15170</anchor>
-      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBool</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a2482fdd2f9e5d52843f2bed30c79a931</anchor>
-      <arglist>(const std::string &amp;name, bool value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addBool</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a41f82e8ea79be7296a66961d1c5847fb</anchor>
-      <arglist>(const char *name, bool value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addChar</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a434679cae54be1b16da6c983f651d926</anchor>
-      <arglist>(const std::string &amp;name, const Pt::Char &amp;value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addChar</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a7f1bd2711f2c7c7a913a47b613159b10</anchor>
-      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aece1a3327d680daf47c86ff4c8afcd8f</anchor>
-      <arglist>(const std::string &amp;name, Pt::int8_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aacaff5b079a53ed89cae850e14f4f765</anchor>
-      <arglist>(const char *name, Pt::int8_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6303e43ccab8990ed4b41ba9a70eb8f9</anchor>
-      <arglist>(const std::string &amp;name, Pt::int16_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0aaf1082ce6f232f9356d1cfd0997f0b</anchor>
-      <arglist>(const char *name, Pt::int16_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ae4ed28cf02f9aa5a4404fda89081e5e5</anchor>
-      <arglist>(const std::string &amp;name, Pt::int32_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af8efd5ad34bf10b74372fdc1db843f2b</anchor>
-      <arglist>(const char *name, Pt::int32_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a74bf70661b473ee20670165d4ef11baa</anchor>
-      <arglist>(const std::string &amp;name, Pt::int64_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0fd11843c559acc601d08521e88fd242</anchor>
-      <arglist>(const char *name, Pt::int64_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>afca6b56b11953e426f4c43703885fc1e</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint8_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad013bb52acac9f66a49942fde82734a8</anchor>
-      <arglist>(const char *name, Pt::uint8_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a3704a7b19fcc5f499a39fdafaa0a7f37</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint16_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a175b962ab893066d5ca746e5ad78e50c</anchor>
-      <arglist>(const char *name, Pt::uint16_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a8a449829fc2e2adb791b1d02f098105a</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint32_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ae6758665fe25c0ba2e460aa302ef595c</anchor>
-      <arglist>(const char *name, Pt::uint32_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a3c6481b38a91cb14eaf789b7cdd7ea68</anchor>
-      <arglist>(const std::string &amp;name, Pt::uint64_t value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addUInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>acf0ba05e5d76296d3a8cbf8927194a33</anchor>
-      <arglist>(const char *name, Pt::uint64_t value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addFloat</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ace9560531a63f1204ea9ae9f9a3e7152</anchor>
-      <arglist>(const std::string &amp;name, float value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addFloat</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0e640856f9e1e2d24a9861ab3ef63ffb</anchor>
-      <arglist>(const char *name, float value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a4139432ae59735b8db966e1af30e0856</anchor>
-      <arglist>(const std::string &amp;name, double value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a649237ac241b6b7057e66ac2768a5502</anchor>
-      <arglist>(const char *name, double value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addLongDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a7bddfa373a6dd642aa03e10d4a31d029</anchor>
-      <arglist>(const std::string &amp;name, long double value, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addLongDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5cbbc28d96d8f36a7f57a93d8ae21219</anchor>
-      <arglist>(const char *name, long double value, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addReference</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab66bc1d3021bcfa0e01d3bba9f88abe0</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;refId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addReference</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5ab4bfa2bb5a2a06ddd56222dac140a7</anchor>
-      <arglist>(const char *name, const char *refId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aefebc82030d444413ad8335dc52baa5e</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>abb35616624790200a2bd05daaa51546c</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>affe96e299a5af49efc60d7f39d412bf7</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a074919036d63ef03a1445f76364e6601</anchor>
-      <arglist>(const char *name)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad45f383daa7c4e2fb62a3e09c1338e61</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aa5bac542ba8489cab0e779309b8cea07</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a40ac858247ebb3452f81940a6ccf920f</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af4f7bce763bb6fa6e18d09b26a58c1df</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aff59bd3122e1d4462f749477a59b9227</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5c06d4a635c77f67ca2378315aa2c8f8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5a031fd700f98734bca1febefa08a1ad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a649aca9143dbcc752ab91d04e9c999fa</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a2ec59cd4dd96fb15d6adc11058c8cdd3</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6bf0976f92c46dec278a4e5cf0e7fbe1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a52b22a8a1e7660a2aaa95e8c6670fca0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a174a91f3c067f614f7f100d9c7dd2c73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a74c5a397e2676dfcdc8bf2c642c52d89</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a754c52ef1979382a87cb8689664a90d5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aff2d1bc00a7e13a3b360082f0eb34415</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finishDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a679535cb257654e4399d09d48f5ecdcc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginParse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6d40a211221c854e6126e83e270d2578</anchor>
-      <arglist>(Composer &amp;composer)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>parseSome</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a17d1b50464f0ec8bcc911a64c5ff3685</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>parse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ad7c704b34912678d95c13243cacf9d7f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddString</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a77516510aa323df5793e7ba718c6adfa</anchor>
-      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddBinary</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a12a1e162944b94d5c50a108c579d658f</anchor>
-      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddBool</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af537c1352778186d63b2e5902e78fec8</anchor>
-      <arglist>(const char *name, bool value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddChar</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a1fd133cbc4bdc0bdbabb4330d1cf9b16</anchor>
-      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5c25f2c3c9787c163e3599c8d12ce3f9</anchor>
-      <arglist>(const char *name, Pt::int8_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a41d70893686e7ec3c6034cf80acf3d0c</anchor>
-      <arglist>(const char *name, Pt::int16_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a38d3d256b75f9d3604ab12db49d5a360</anchor>
-      <arglist>(const char *name, Pt::int32_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a49ae3c9d0251b7dc3296c989396eacbf</anchor>
-      <arglist>(const char *name, Pt::int64_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt8</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a8c42d50d86759261206edf149f5eec01</anchor>
-      <arglist>(const char *name, Pt::uint8_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt16</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>af6fb9ed1bbe3eac30530473c9ba1fdee</anchor>
-      <arglist>(const char *name, Pt::uint16_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt32</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a31a6574a90cee4b184528921d035f551</anchor>
-      <arglist>(const char *name, Pt::uint32_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddUInt64</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a9919f0aab56cce2426a420c4f4c249b1</anchor>
-      <arglist>(const char *name, Pt::uint64_t value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddFloat</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a7a0149cc85d46eaba3ab487e8ebaa510</anchor>
-      <arglist>(const char *name, float value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a9ffbb772c98cf981465ba764395f4019</anchor>
-      <arglist>(const char *name, double value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddLongDouble</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a4e8a842c8d22235453a6b958ef97fb2c</anchor>
-      <arglist>(const char *name, long double value, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onAddReference</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5821924e8acef4b8e3fd421c2e221fd0</anchor>
-      <arglist>(const char *name, const char *refId)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a79d72a39b64ed966e7f0680ccd5f5efa</anchor>
-      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a0106812ee70de378937f6a8b0343e1ca</anchor>
-      <arglist>(const char *name)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishMember</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a1f007ad58bbbb80bff2404bd5f140853</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishStruct</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a4be1c2d485f0d045d4fee791b90a7869</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab356d920d99f5bf894612dde97e6b854</anchor>
-      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a14a62ec22c310ff7b76f8a5b45158f66</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a09360a22dc30bcc85fafaf66c71c6846</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinishSequence</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a69f57965cc5198ca051bfaa6e7f81d10</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ac93dcbdad681fdfeb246943c11080e67</anchor>
-      <arglist>(const char *name, const char *type, const char *id)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a033e60fc3849889d556ec6bc8279a28b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6e24ce4f96dc145835c508f318bd3311</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDictKey</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab177911c4562c26259bbd3b6a338fde5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a79cbbcee579047df4b44427caab336dc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDictValue</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a5d33354774d90206b18ec29efc850466</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDictElement</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a038e3a7103e6fecdb0c2b45bf5f3fc1a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onFinishDict</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a6b83ee9a4251bb4879be3a5f1cd8eeb1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onBeginParse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a2f4c601273b772ebc8aa661ec5fd3676</anchor>
-      <arglist>(Composer &amp;composer)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual bool</type>
-      <name>onParseSome</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>ab59ff8689773c1f63b4a66cd899d0a59</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onParse</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>aacffbdcf3f3ac70d521a826a916f9a3b</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>Formatter</name>
-      <anchorfile>classPt_1_1Formatter.html</anchorfile>
-      <anchor>a8fd5a03aa722ac623bb521491ea3bc26</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::JsonRpc::Formatter</name>
     <filename>classPt_1_1JsonRpc_1_1Formatter.html</filename>
     <base>Pt::Formatter</base>
@@ -25957,108 +25337,810 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Formatter</name>
+    <filename>classPt_1_1Formatter.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Formatter</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad59b4a59b13d736a623241018b6fee0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addString</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aa0b1dc7979fc5b410b4d7737431aae92</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const Pt::String &amp;value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addString</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a9d3d64ab59564e10f1701fc8a225971e</anchor>
+      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBinary</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aacb1bf630cbf39bacb6fbee1bb62f76e</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const char *value, std::size_t length, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBinary</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6189ba18cd51a6bb2769850b9db15170</anchor>
+      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBool</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a2482fdd2f9e5d52843f2bed30c79a931</anchor>
+      <arglist>(const std::string &amp;name, bool value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBool</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a41f82e8ea79be7296a66961d1c5847fb</anchor>
+      <arglist>(const char *name, bool value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChar</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a434679cae54be1b16da6c983f651d926</anchor>
+      <arglist>(const std::string &amp;name, const Pt::Char &amp;value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChar</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a7f1bd2711f2c7c7a913a47b613159b10</anchor>
+      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aece1a3327d680daf47c86ff4c8afcd8f</anchor>
+      <arglist>(const std::string &amp;name, Pt::int8_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aacaff5b079a53ed89cae850e14f4f765</anchor>
+      <arglist>(const char *name, Pt::int8_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6303e43ccab8990ed4b41ba9a70eb8f9</anchor>
+      <arglist>(const std::string &amp;name, Pt::int16_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0aaf1082ce6f232f9356d1cfd0997f0b</anchor>
+      <arglist>(const char *name, Pt::int16_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ae4ed28cf02f9aa5a4404fda89081e5e5</anchor>
+      <arglist>(const std::string &amp;name, Pt::int32_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af8efd5ad34bf10b74372fdc1db843f2b</anchor>
+      <arglist>(const char *name, Pt::int32_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a74bf70661b473ee20670165d4ef11baa</anchor>
+      <arglist>(const std::string &amp;name, Pt::int64_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0fd11843c559acc601d08521e88fd242</anchor>
+      <arglist>(const char *name, Pt::int64_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>afca6b56b11953e426f4c43703885fc1e</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint8_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad013bb52acac9f66a49942fde82734a8</anchor>
+      <arglist>(const char *name, Pt::uint8_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a3704a7b19fcc5f499a39fdafaa0a7f37</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint16_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a175b962ab893066d5ca746e5ad78e50c</anchor>
+      <arglist>(const char *name, Pt::uint16_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a8a449829fc2e2adb791b1d02f098105a</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint32_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ae6758665fe25c0ba2e460aa302ef595c</anchor>
+      <arglist>(const char *name, Pt::uint32_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a3c6481b38a91cb14eaf789b7cdd7ea68</anchor>
+      <arglist>(const std::string &amp;name, Pt::uint64_t value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>acf0ba05e5d76296d3a8cbf8927194a33</anchor>
+      <arglist>(const char *name, Pt::uint64_t value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFloat</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ace9560531a63f1204ea9ae9f9a3e7152</anchor>
+      <arglist>(const std::string &amp;name, float value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFloat</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0e640856f9e1e2d24a9861ab3ef63ffb</anchor>
+      <arglist>(const char *name, float value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a4139432ae59735b8db966e1af30e0856</anchor>
+      <arglist>(const std::string &amp;name, double value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a649237ac241b6b7057e66ac2768a5502</anchor>
+      <arglist>(const char *name, double value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addLongDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a7bddfa373a6dd642aa03e10d4a31d029</anchor>
+      <arglist>(const std::string &amp;name, long double value, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addLongDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5cbbc28d96d8f36a7f57a93d8ae21219</anchor>
+      <arglist>(const char *name, long double value, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addReference</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab66bc1d3021bcfa0e01d3bba9f88abe0</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;refId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addReference</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5ab4bfa2bb5a2a06ddd56222dac140a7</anchor>
+      <arglist>(const char *name, const char *refId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aefebc82030d444413ad8335dc52baa5e</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>abb35616624790200a2bd05daaa51546c</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>affe96e299a5af49efc60d7f39d412bf7</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a074919036d63ef03a1445f76364e6601</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad45f383daa7c4e2fb62a3e09c1338e61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aa5bac542ba8489cab0e779309b8cea07</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a40ac858247ebb3452f81940a6ccf920f</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af4f7bce763bb6fa6e18d09b26a58c1df</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aff59bd3122e1d4462f749477a59b9227</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5c06d4a635c77f67ca2378315aa2c8f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5a031fd700f98734bca1febefa08a1ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a649aca9143dbcc752ab91d04e9c999fa</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;type, const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a2ec59cd4dd96fb15d6adc11058c8cdd3</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6bf0976f92c46dec278a4e5cf0e7fbe1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a52b22a8a1e7660a2aaa95e8c6670fca0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a174a91f3c067f614f7f100d9c7dd2c73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a74c5a397e2676dfcdc8bf2c642c52d89</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a754c52ef1979382a87cb8689664a90d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aff2d1bc00a7e13a3b360082f0eb34415</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finishDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a679535cb257654e4399d09d48f5ecdcc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginParse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6d40a211221c854e6126e83e270d2578</anchor>
+      <arglist>(Composer &amp;composer)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>parseSome</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a17d1b50464f0ec8bcc911a64c5ff3685</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ad7c704b34912678d95c13243cacf9d7f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddString</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a77516510aa323df5793e7ba718c6adfa</anchor>
+      <arglist>(const char *name, const char *type, const Pt::Char *value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddBinary</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a12a1e162944b94d5c50a108c579d658f</anchor>
+      <arglist>(const char *name, const char *type, const char *value, std::size_t length, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddBool</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af537c1352778186d63b2e5902e78fec8</anchor>
+      <arglist>(const char *name, bool value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddChar</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a1fd133cbc4bdc0bdbabb4330d1cf9b16</anchor>
+      <arglist>(const char *name, const Pt::Char &amp;value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5c25f2c3c9787c163e3599c8d12ce3f9</anchor>
+      <arglist>(const char *name, Pt::int8_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a41d70893686e7ec3c6034cf80acf3d0c</anchor>
+      <arglist>(const char *name, Pt::int16_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a38d3d256b75f9d3604ab12db49d5a360</anchor>
+      <arglist>(const char *name, Pt::int32_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a49ae3c9d0251b7dc3296c989396eacbf</anchor>
+      <arglist>(const char *name, Pt::int64_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt8</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a8c42d50d86759261206edf149f5eec01</anchor>
+      <arglist>(const char *name, Pt::uint8_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt16</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>af6fb9ed1bbe3eac30530473c9ba1fdee</anchor>
+      <arglist>(const char *name, Pt::uint16_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt32</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a31a6574a90cee4b184528921d035f551</anchor>
+      <arglist>(const char *name, Pt::uint32_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddUInt64</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a9919f0aab56cce2426a420c4f4c249b1</anchor>
+      <arglist>(const char *name, Pt::uint64_t value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddFloat</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a7a0149cc85d46eaba3ab487e8ebaa510</anchor>
+      <arglist>(const char *name, float value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a9ffbb772c98cf981465ba764395f4019</anchor>
+      <arglist>(const char *name, double value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddLongDouble</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a4e8a842c8d22235453a6b958ef97fb2c</anchor>
+      <arglist>(const char *name, long double value, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onAddReference</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5821924e8acef4b8e3fd421c2e221fd0</anchor>
+      <arglist>(const char *name, const char *refId)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a79d72a39b64ed966e7f0680ccd5f5efa</anchor>
+      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a0106812ee70de378937f6a8b0343e1ca</anchor>
+      <arglist>(const char *name)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishMember</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a1f007ad58bbbb80bff2404bd5f140853</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishStruct</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a4be1c2d485f0d045d4fee791b90a7869</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab356d920d99f5bf894612dde97e6b854</anchor>
+      <arglist>(const char *name, const char *type, const char *id)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a14a62ec22c310ff7b76f8a5b45158f66</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a09360a22dc30bcc85fafaf66c71c6846</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinishSequence</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a69f57965cc5198ca051bfaa6e7f81d10</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ac93dcbdad681fdfeb246943c11080e67</anchor>
+      <arglist>(const char *name, const char *type, const char *id)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a033e60fc3849889d556ec6bc8279a28b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6e24ce4f96dc145835c508f318bd3311</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDictKey</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab177911c4562c26259bbd3b6a338fde5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a79cbbcee579047df4b44427caab336dc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDictValue</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a5d33354774d90206b18ec29efc850466</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDictElement</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a038e3a7103e6fecdb0c2b45bf5f3fc1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onFinishDict</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a6b83ee9a4251bb4879be3a5f1cd8eeb1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginParse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a2f4c601273b772ebc8aa661ec5fd3676</anchor>
+      <arglist>(Composer &amp;composer)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>onParseSome</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>ab59ff8689773c1f63b4a66cd899d0a59</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onParse</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>aacffbdcf3f3ac70d521a826a916f9a3b</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Formatter</name>
+      <anchorfile>classPt_1_1Formatter.html</anchorfile>
+      <anchor>a8fd5a03aa722ac623bb521491ea3bc26</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Function</name>
     <filename>classPt_1_1Function.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::Callable</base>
+    <templarg>As</templarg>
+    <base>Callable&lt; R, As... &gt;</base>
     <member kind="typedef">
       <type>R(*</type>
       <name>FuncT</name>
       <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a91316a2b03adb6ec5ca65f9e14f0c0e0</anchor>
-      <arglist>)(ARGUMENTS)</arglist>
+      <anchor>aa4732c1bed30bfbefa309fde0facb1f9</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Function</name>
       <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a6f8762e5587d3ff482acb86dfde56aef</anchor>
-      <arglist>(FuncT func)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Function</name>
-      <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a00e7471a72ecf48d448c72a5bd614883</anchor>
-      <arglist>(const Function &amp;f)</arglist>
+      <anchor>a7d9711ee358e981fa6b853c5bd3b65df</anchor>
+      <arglist>(FuncT function)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a783491ab3c60d509dc575f335cc26345</anchor>
-      <arglist>(ARGUMENTS args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, ARGUMENTS &gt; *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>abed53b622e63b17187d79dcb1e0ddba2</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a4a66cc4485a7cca3b6ae74b8ab9c680e</anchor>
-      <arglist>(const Function &amp;rhs) const</arglist>
+      <anchor>a912e1878d0faf6ec3b4316193b2a3dc0</anchor>
+      <arglist>(const Function &amp;other) const</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Callable *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Function&lt; R, As... &gt;</name>
+    <filename>classPt_1_1Function.html</filename>
+    <base>Callable&lt; R, As... &gt;</base>
+    <member kind="typedef">
+      <type>R(*</type>
+      <name>FuncT</name>
+      <anchorfile>classPt_1_1Function.html</anchorfile>
+      <anchor>aa4732c1bed30bfbefa309fde0facb1f9</anchor>
+      <arglist>)(As...)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Function</name>
+      <anchorfile>classPt_1_1Function.html</anchorfile>
+      <anchor>a7d9711ee358e981fa6b853c5bd3b65df</anchor>
+      <arglist>(FuncT function)</arglist>
+    </member>
+    <member kind="function">
+      <type>R</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Function.html</anchorfile>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classPt_1_1Function.html</anchorfile>
+      <anchor>a912e1878d0faf6ec3b4316193b2a3dc0</anchor>
+      <arglist>(const Function &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ReturnT</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
+    </member>
+    <member kind="function">
+      <type>Function&lt; R, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>Method&lt; R, ClassT, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Pt::FunctionSlot</name>
     <filename>classPt_1_1FunctionSlot.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::BasicSlot</base>
+    <templarg>As</templarg>
+    <base>BasicSlot&lt; R, As... &gt;</base>
     <member kind="function">
       <type></type>
       <name>FunctionSlot</name>
       <anchorfile>classPt_1_1FunctionSlot.html</anchorfile>
-      <anchor>a75d3160dc9ed16c3e8df105f346ddff0</anchor>
-      <arglist>(const Function&lt; R, ARGUMENTS &gt; &amp;func)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1FunctionSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac26e4165b5b08860e55aa17c247bf720</anchor>
+      <arglist>(const Function&lt; R, As... &gt; &amp;function)</arglist>
     </member>
     <member kind="function">
       <type>Slot *</type>
@@ -26068,18 +26150,25 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const void *</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1FunctionSlot.html</anchorfile>
+      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>onConnect</name>
       <anchorfile>classPt_1_1FunctionSlot.html</anchorfile>
-      <anchor>a9b5bf662811957679ed224465b3b0721</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>a8e51591dd0f0decf32fba6c520a0f39c</anchor>
+      <arglist>(const Connection &amp;)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>onDisconnect</name>
       <anchorfile>classPt_1_1FunctionSlot.html</anchorfile>
-      <anchor>abfe4f3cc9cb9caf2e6eddf0d6f9f3c26</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>a6427abefe5f5c4aa927a3f587784a0da</anchor>
+      <arglist>(const Connection &amp;)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -26088,26 +26177,33 @@
       <anchor>a441aa17f4954bb1a09136ed5c484a8a8</anchor>
       <arglist>(const Slot &amp;slot) const</arglist>
     </member>
-    <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
-      <name>slot</name>
-      <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -26136,6 +26232,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26960,53 +27070,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Mcp::HttpService</name>
-    <filename>classPt_1_1Mcp_1_1HttpService.html</filename>
-    <base>Pt::Http::Service</base>
-    <member kind="function">
-      <type></type>
-      <name>HttpService</name>
-      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
-      <anchor>a5ecc3f8889d8eca13d859edaff90de9a</anchor>
-      <arglist>(Remoting::ServiceDefinition &amp;serviceDef, const ToolDeclaration &amp;decl)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~HttpService</name>
-      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
-      <anchor>a8568cb4f69a384616625164d03a835e1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Responder *</type>
-      <name>getResponder</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
-      <arglist>(const Request &amp;)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>releaseResponder</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
-      <arglist>(Responder *)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual Http::Responder *</type>
-      <name>onGetResponder</name>
-      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
-      <anchor>a39d2acca58a1a563cdfa2aa66dc06606</anchor>
-      <arglist>(const Http::Request &amp;request)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReleaseResponder</name>
-      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
-      <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
-      <arglist>(Http::Responder *resp)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::JsonRpc::HttpService</name>
     <filename>classPt_1_1JsonRpc_1_1HttpService.html</filename>
     <base>Pt::Http::Service</base>
@@ -27049,6 +27112,53 @@
       <type>virtual void</type>
       <name>onReleaseResponder</name>
       <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
+      <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
+      <arglist>(Http::Responder *resp)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Mcp::HttpService</name>
+    <filename>classPt_1_1Mcp_1_1HttpService.html</filename>
+    <base>Pt::Http::Service</base>
+    <member kind="function">
+      <type></type>
+      <name>HttpService</name>
+      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
+      <anchor>a5ecc3f8889d8eca13d859edaff90de9a</anchor>
+      <arglist>(Remoting::ServiceDefinition &amp;serviceDef, const ToolDeclaration &amp;decl)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HttpService</name>
+      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
+      <anchor>a8568cb4f69a384616625164d03a835e1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Responder *</type>
+      <name>getResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>releaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
+      <arglist>(Responder *)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Http::Responder *</type>
+      <name>onGetResponder</name>
+      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
+      <anchor>a39d2acca58a1a563cdfa2aa66dc06606</anchor>
+      <arglist>(const Http::Request &amp;request)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReleaseResponder</name>
+      <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
       <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
       <arglist>(Http::Responder *resp)</arglist>
     </member>
@@ -28112,7 +28222,7 @@
   <compound kind="class">
     <name>Pt::Invokable</name>
     <filename>classPt_1_1Invokable.html</filename>
-    <templarg></templarg>
+    <templarg>As</templarg>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Invokable</name>
@@ -28124,12 +28234,12 @@
       <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>a5c882b1bfd53e2da07089dd9fb4d40fd</anchor>
-      <arglist>(ARGUMENTS) const =0</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>Invokable&lt; A... &gt;</name>
+    <name>Invokable&lt; As... &gt;</name>
     <filename>classPt_1_1Invokable.html</filename>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
@@ -28142,80 +28252,8 @@
       <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>a5c882b1bfd53e2da07089dd9fb4d40fd</anchor>
-      <arglist>(A...) const=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Invokable&lt; A1 &gt;</name>
-    <filename>classPt_1_1Invokable.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Invokable</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>ad1ecda380b06dcd756745c52e34900e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>a5c882b1bfd53e2da07089dd9fb4d40fd</anchor>
-      <arglist>(A1) const=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Invokable&lt; ARGUMENTS0 &gt;</name>
-    <filename>classPt_1_1Invokable.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Invokable</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>ad1ecda380b06dcd756745c52e34900e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>a5c882b1bfd53e2da07089dd9fb4d40fd</anchor>
-      <arglist>(ARGUMENTS0) const=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Invokable&lt; Pt::Remoting::Responder &amp; &gt;</name>
-    <filename>classPt_1_1Invokable.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Invokable</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>ad1ecda380b06dcd756745c52e34900e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>a5c882b1bfd53e2da07089dd9fb4d40fd</anchor>
-      <arglist>(Pt::Remoting::Responder &amp;) const=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Invokable&lt; Pt::Void &gt;</name>
-    <filename>classPt_1_1Invokable.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Invokable</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>ad1ecda380b06dcd756745c52e34900e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Invokable.html</anchorfile>
-      <anchor>a5c882b1bfd53e2da07089dd9fb4d40fd</anchor>
-      <arglist>(Pt::Void) const=0</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30081,13 +30119,6 @@
       <anchor>a2e368d8d49935055671bcd6552e0d402</anchor>
       <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
-    <member kind="function">
-      <type>R</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>aee5dccc5057f64847a1c0267e77e5b4c</anchor>
-      <arglist>(A... args) const</arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual Callable *</type>
       <name>clone</name>
@@ -30095,40 +30126,47 @@
       <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
       <arglist>() const=0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ReturnT</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
+    </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A...) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A...) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30142,47 +30180,47 @@
       <anchor>a2e368d8d49935055671bcd6552e0d402</anchor>
       <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
-    <member kind="function">
-      <type>R</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual ReturnT</type>
       <name>operator()</name>
-      <anchorfile>classPt_1_1Lambda.html</anchorfile>
-      <anchor>aee5dccc5057f64847a1c0267e77e5b4c</anchor>
-      <arglist>(A... args) const</arglist>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A...) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A...) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30235,13 +30273,6 @@
       <arglist>(const Slot &amp;) const</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual Slot *</type>
       <name>clone</name>
       <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
@@ -30249,25 +30280,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>FunctionSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -30296,6 +30327,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31588,21 +31633,21 @@
     <filename>classPt_1_1Method.html</filename>
     <templarg></templarg>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::Callable</base>
+    <templarg>As</templarg>
+    <base>Callable&lt; R, As... &gt;</base>
     <member kind="typedef">
       <type>R(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(ARGUMENTS)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(ClassT &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(ClassT &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>ClassT &amp;</type>
@@ -31626,79 +31671,79 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGUMENTS &gt; *</type>
-      <name>clone</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual R</type>
-      <name>operator()</name>
+      <type>virtual Callable *</type>
+      <name>clone</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(ARGUMENTS) const =0</arglist>
+      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>Method&lt; R, ClassT, ARGUMENTS0 &gt;</name>
+    <name>Method&lt; R, ClassT, As... &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; R, ARGUMENTS0 &gt;</base>
+    <base>Callable&lt; R, As... &gt;</base>
     <member kind="typedef">
       <type>R(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(ARGUMENTS0)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(ClassT &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(ClassT &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>ClassT &amp;</type>
@@ -31722,72 +31767,161 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGUMENTS0 &gt; *</type>
-      <name>clone</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>R</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS0) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS0) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; R, ARGS &gt;</type>
+      <type>Function&lt; R, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; R, ClassT, ARGS &gt;</type>
+      <type>Method&lt; R, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Method&lt; R, Pt::Delegate&lt; R, As... &gt;, As... &gt;</name>
+    <filename>classPt_1_1Method.html</filename>
+    <base>Callable&lt; R, As... &gt;</base>
+    <member kind="typedef">
+      <type>R(ClassT::*</type>
+      <name>MemFuncT</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Method</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(Pt::Delegate&lt; R, As... &gt; &amp;object, MemFuncT method)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Delegate&lt; R, As... &gt; &amp;</type>
+      <name>object</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a559f28105d2bbb02ae479920ef15f783</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Pt::Delegate&lt; R, As... &gt; &amp;</type>
+      <name>object</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a4c170f72886d7c5e23a4545438105cc2</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const MemFuncT &amp;</type>
+      <name>method</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a5791ae9d7f8dad7ab5cfad3278fd5303</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>R</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ReturnT</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
+    </member>
+    <member kind="function">
+      <type>Function&lt; R, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(R(*function)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>Method&lt; R, ClassT, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, ARGUMENTS &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(ARGUMENTS)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -31811,79 +31945,72 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, ARGUMENTS &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(ARGUMENTS) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(ARGUMENTS) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C, A1 &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, A1 &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(A1)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -31907,79 +32034,72 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, A1 &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C, A1, A2 &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, A1 &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(A1)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -32003,79 +32123,72 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, A1 &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C, A1, A2, A3 &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, A1 &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(A1)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -32099,79 +32212,72 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, A1 &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C, A1, A2, A3, A4 &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, A1 &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(A1)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -32195,79 +32301,72 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, A1 &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C, A1, A2, A3, A4, A5 &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, A1 &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(A1)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -32291,79 +32390,72 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, A1 &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(A1) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(A1) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Method&lt; void, C, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void &gt;</name>
     <filename>classPt_1_1Method.html</filename>
-    <base>Callable&lt; void, Pt::Void &gt;</base>
+    <base>Callable&lt; void, As... &gt;</base>
     <member kind="typedef">
       <type>void(ClassT::*</type>
       <name>MemFuncT</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>aea2ef5647097501de64e636de35c3f35</anchor>
-      <arglist>)(Pt::Void)</arglist>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>ac2e5f975ab123d5cda061a3eed918056</anchor>
-      <arglist>(C &amp;object, MemFuncT ptr)</arglist>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(C &amp;object, MemFuncT method)</arglist>
     </member>
     <member kind="function">
       <type>C &amp;</type>
@@ -32387,60 +32479,142 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, C, Pt::Void &gt; *</type>
-      <name>clone</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a1f6328e2f77c88f5f3b8907167e2c8f6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a53aeddfc0f514343efcab651ac7f9912</anchor>
-      <arglist>(const Method &amp;rhs) const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ac20efa74238bc67b3096403994ee5f50</anchor>
-      <arglist>(Pt::Void) const=0</arglist>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ReturnT</type>
       <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4c5acdcba26acb7e90ddec49f40116aa</anchor>
-      <arglist>(Pt::Void) const</arglist>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a56f3751846a98f5f6042424ccd5cf322</anchor>
-      <arglist>(Pt::Void) const</arglist>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethod&lt; void, C, ARGS &gt;</type>
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a169851a14031a74b4d04fd20cf970041</anchor>
-      <arglist>(C &amp;obj, void(BaseT::*ptr)(ARGS) const)</arglist>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>Function&lt; void, ARGS &gt;</type>
+      <type>Function&lt; void, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a4d822dd5dfa2cb53457796cd0d241ae7</anchor>
-      <arglist>(void(*func)(ARGS))</arglist>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
     </member>
     <member kind="function">
-      <type>Method&lt; void, ClassT, ARGS &gt;</type>
+      <type>Method&lt; void, ClassT, As... &gt;</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a41fccd656907df715d97809fe292752b</anchor>
-      <arglist>(ClassT &amp;obj, void(BaseT::*ptr)(ARGS))</arglist>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Method&lt; void, Pt::Signal&lt; As... &gt;, As... &gt;</name>
+    <filename>classPt_1_1Method.html</filename>
+    <base>Callable&lt; void, As... &gt;</base>
+    <member kind="typedef">
+      <type>void(ClassT::*</type>
+      <name>MemFuncT</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a02be7f582faa4d46f19f87f19148c177</anchor>
+      <arglist>)(As...)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Method</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a8861f8e947ccdf012934e8ed7859355b</anchor>
+      <arglist>(Pt::Signal&lt; As... &gt; &amp;object, MemFuncT method)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; As... &gt; &amp;</type>
+      <name>object</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a559f28105d2bbb02ae479920ef15f783</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Pt::Signal&lt; As... &gt; &amp;</type>
+      <name>object</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a4c170f72886d7c5e23a4545438105cc2</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const MemFuncT &amp;</type>
+      <name>method</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a5791ae9d7f8dad7ab5cfad3278fd5303</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>a6f911644e75a12711cb934f6693f808c</anchor>
+      <arglist>(const Method &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ReturnT</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...) const)</arglist>
+    </member>
+    <member kind="function">
+      <type>Function&lt; void, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a478226333059981d4f0d56780210f620</anchor>
+      <arglist>(void(*function)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>Method&lt; void, ClassT, As... &gt;</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Callable.html</anchorfile>
+      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
+      <arglist>(ClassT &amp;object, void(BaseT::*method)(As...))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32448,14 +32622,14 @@
     <filename>classPt_1_1MethodSlot.html</filename>
     <templarg></templarg>
     <templarg></templarg>
-    <templarg></templarg>
-    <base>Pt::BasicSlot</base>
+    <templarg>As</templarg>
+    <base>BasicSlot&lt; R, As... &gt;</base>
     <member kind="function">
       <type></type>
       <name>MethodSlot</name>
       <anchorfile>classPt_1_1MethodSlot.html</anchorfile>
-      <anchor>a61f698edc5c6862c622bc170c2257dcf</anchor>
-      <arglist>(const Method&lt; R, ClassT, ARGUMENTS &gt; &amp;method)</arglist>
+      <anchor>ab689e62227434c912884519d79df08b2</anchor>
+      <arglist>(const Method&lt; R, ClassT, As... &gt; &amp;method)</arglist>
     </member>
     <member kind="function">
       <type>Slot *</type>
@@ -32475,15 +32649,15 @@
       <type>virtual void</type>
       <name>onConnect</name>
       <anchorfile>classPt_1_1MethodSlot.html</anchorfile>
-      <anchor>a9b5bf662811957679ed224465b3b0721</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>aac75d5c02327fdaa8ba50c8d2d21130a</anchor>
+      <arglist>(const Connection &amp;connection)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>onDisconnect</name>
       <anchorfile>classPt_1_1MethodSlot.html</anchorfile>
-      <anchor>abfe4f3cc9cb9caf2e6eddf0d6f9f3c26</anchor>
-      <arglist>(const Connection &amp;c)</arglist>
+      <anchor>a82f6b74df5580c99c31d19712b3fd0a9</anchor>
+      <arglist>(const Connection &amp;connection)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32492,26 +32666,33 @@
       <anchor>a441aa17f4954bb1a09136ed5c484a8a8</anchor>
       <arglist>(const Slot &amp;slot) const</arglist>
     </member>
-    <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
-      <name>slot</name>
-      <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
+    </member>
+    <member kind="function">
+      <type>FunctionSlot&lt; R, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -32540,6 +32721,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33097,102 +33292,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PaintContext</name>
-    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
-    <base>Pt::Gfx::PaintContext</base>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>ab5ef25f0fe03c52f23ff41005952571f</anchor>
-      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::ImageFormat &amp;</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::SizeF &amp;</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Scaling &amp;</type>
-      <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const RectF *</type>
-      <name>clip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
-      <arglist>(const RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resetClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Canvas *</type>
-      <name>getCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
-      <arglist>(Canvas *canvas)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetachSurface</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
-      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Gfx::PaintContext</name>
     <filename>classPt_1_1Gfx_1_1PaintContext.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -33286,6 +33385,102 @@
       <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
       <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::PaintContext</name>
+    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
+    <base>Pt::Gfx::PaintContext</base>
+    <member kind="function">
+      <type></type>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>ab5ef25f0fe03c52f23ff41005952571f</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::ImageFormat &amp;</type>
+      <name>format</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Scaling &amp;</type>
+      <name>scaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const RectF *</type>
+      <name>clip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
+      <arglist>(const RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resetClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Canvas *</type>
+      <name>getCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
+      <arglist>(Canvas *canvas)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
+      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38172,27 +38367,27 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::XmlRpc::Responder</name>
-    <filename>classPt_1_1XmlRpc_1_1Responder.html</filename>
+    <name>Pt::JsonRpc::Responder</name>
+    <filename>classPt_1_1JsonRpc_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
     <member kind="function">
       <type></type>
       <name>Responder</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>a0bd11f26fccc61f16371f8b2bbb1d666</anchor>
-      <arglist>(Remoting::ServiceDefinition &amp;service)</arglist>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a17e7fb104c8d80fdb9c5a7b0017d5f4b</anchor>
+      <arglist>(const ServiceDeclaration &amp;decl, Remoting::ServiceDefinition &amp;def)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Responder</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>a441672d587b7f355d7308b08fa208633</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isFailed</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
       <arglist>() const</arglist>
     </member>
@@ -38213,77 +38408,91 @@
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onReady</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>aa37ece2e002c960665a87c6a8b6034e7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onCancel</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>onFault</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>ae9f91c14b52a03ef226f2cf76e459c35</anchor>
       <arglist>(const Fault &amp;fault)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>onResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>aee417c3d369444f3b503dae87408e433</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>beginMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>a537b3e57a18bb9bd4afd13a9a1473992</anchor>
       <arglist>(std::istream &amp;is)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>parseMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>ab6259f3aa062e47ff5031fd719568f1f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>finishMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>afd116018fdb0c20871fd780fde5107fe</anchor>
       <arglist>(System::EventLoop &amp;loop)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
+      <name>finishMessage</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
       <name>beginResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>a72ed5f0a66ebd08fbfcc70f98f75ee7f</anchor>
       <arglist>(std::ostream &amp;os)</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginFault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a6a9bf9cd11626e2fe323dd7937878810</anchor>
+      <arglist>(std::ostream &amp;os, const Fault &amp;fault)</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>bool</type>
       <name>advanceResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>ab2fdaedbf3d7262a04889d8160480973</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>finishResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>ad90571f447c822ee89516b908ec4d1c1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>setFault</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
       <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
       <arglist>(int rc, const char *msg)</arglist>
     </member>
@@ -38543,27 +38752,27 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::JsonRpc::Responder</name>
-    <filename>classPt_1_1JsonRpc_1_1Responder.html</filename>
+    <name>Pt::XmlRpc::Responder</name>
+    <filename>classPt_1_1XmlRpc_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
     <member kind="function">
       <type></type>
       <name>Responder</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a17e7fb104c8d80fdb9c5a7b0017d5f4b</anchor>
-      <arglist>(const ServiceDeclaration &amp;decl, Remoting::ServiceDefinition &amp;def)</arglist>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>a0bd11f26fccc61f16371f8b2bbb1d666</anchor>
+      <arglist>(Remoting::ServiceDefinition &amp;service)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Responder</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>a441672d587b7f355d7308b08fa208633</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isFailed</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
       <arglist>() const</arglist>
     </member>
@@ -38584,91 +38793,77 @@
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onReady</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>aa37ece2e002c960665a87c6a8b6034e7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onCancel</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>onFault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>ae9f91c14b52a03ef226f2cf76e459c35</anchor>
       <arglist>(const Fault &amp;fault)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>onResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>aee417c3d369444f3b503dae87408e433</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>beginMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>a537b3e57a18bb9bd4afd13a9a1473992</anchor>
       <arglist>(std::istream &amp;is)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>parseMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>ab6259f3aa062e47ff5031fd719568f1f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>finishMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>afd116018fdb0c20871fd780fde5107fe</anchor>
       <arglist>(System::EventLoop &amp;loop)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>finishMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
       <name>beginResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>a72ed5f0a66ebd08fbfcc70f98f75ee7f</anchor>
       <arglist>(std::ostream &amp;os)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginFault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a6a9bf9cd11626e2fe323dd7937878810</anchor>
-      <arglist>(std::ostream &amp;os, const Fault &amp;fault)</arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>bool</type>
       <name>advanceResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>ab2fdaedbf3d7262a04889d8160480973</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>finishResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>ad90571f447c822ee89516b908ec4d1c1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>setFault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
       <arglist>(int rc, const char *msg)</arglist>
     </member>
@@ -41973,8 +42168,7 @@
   <compound kind="class">
     <name>Pt::Signal</name>
     <filename>classPt_1_1Signal.html</filename>
-    <templarg></templarg>
-    <base>Pt::Connectable</base>
+    <templarg>As</templarg>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -41993,8 +42187,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, ARGUMENTS &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42007,42 +42201,108 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, ARGUMENTS &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(ARGUMENTS args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(ARGUMENTS args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Signal&lt; As... &gt;</name>
+    <filename>classPt_1_1Signal.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a44146dfdbec17a8ab7207e52ffae152c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>af291bb2b5c535bb82eabda8169ecaee3</anchor>
+      <arglist>(const Signal &amp;rhs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>connect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a960705de531a20389fb29928d43258c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>operator+=</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator-=</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; const Pt::Event &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42061,8 +42321,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, const Pt::Event &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42075,42 +42335,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, const Pt::Event &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(const Pt::Event &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(const Pt::Event &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; const Pt::Remoting::Result&lt; R &gt; &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42129,8 +42388,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, const Pt::Remoting::Result&lt; R &gt; &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42143,42 +42402,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, const Pt::Remoting::Result&lt; R &gt; &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(const Pt::Remoting::Result&lt; R &gt; &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(const Pt::Remoting::Result&lt; R &gt; &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; const Pt::String &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42197,8 +42455,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, const Pt::String &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42211,42 +42469,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, const Pt::String &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(const Pt::String &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(const Pt::String &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; double &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42265,8 +42522,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, double &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42279,42 +42536,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, double &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(double args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(double args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; int &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42333,8 +42589,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, int &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42347,42 +42603,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, int &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(int args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(int args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; ListBoxItem &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42401,8 +42656,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, ListBoxItem &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42415,42 +42670,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, ListBoxItem &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(ListBoxItem &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(ListBoxItem &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; MenuItemBase &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42469,8 +42723,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, MenuItemBase &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42483,42 +42737,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, MenuItemBase &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(MenuItemBase &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(MenuItemBase &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Char &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42537,8 +42790,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Char &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42551,42 +42804,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Char &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Char args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Char args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Forms::Window &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42605,8 +42857,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Forms::Window &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42619,42 +42871,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Forms::Window &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Forms::Window &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Forms::Window &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Http::Authorization &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42673,8 +42924,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Http::Authorization &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42687,42 +42938,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Http::Authorization &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Http::Authorization &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Http::Authorization &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Http::Reply &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42741,8 +42991,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Http::Reply &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42755,42 +43005,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Http::Reply &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Http::Reply &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Http::Reply &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Http::Request &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42809,8 +43058,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Http::Request &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42823,42 +43072,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Http::Request &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Http::Request &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Http::Request &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Net::TcpServer &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42877,8 +43125,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Net::TcpServer &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42891,42 +43139,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Net::TcpServer &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Net::TcpServer &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Net::TcpServer &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Net::TcpSocket &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -42945,8 +43192,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Net::TcpSocket &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42959,42 +43206,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Net::TcpSocket &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Net::TcpSocket &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Net::TcpSocket &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Net::UdpSocket &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -43013,8 +43259,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Net::UdpSocket &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -43027,42 +43273,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::Net::UdpSocket &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::Net::UdpSocket &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::Net::UdpSocket &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::System::FileDevice &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -43081,8 +43326,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::System::FileDevice &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -43095,42 +43340,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::System::FileDevice &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::System::FileDevice &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::System::FileDevice &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::System::IOBuffer &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -43149,8 +43393,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::System::IOBuffer &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -43163,42 +43407,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::System::IOBuffer &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::System::IOBuffer &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::System::IOBuffer &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::System::IODevice &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -43217,8 +43460,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::System::IODevice &amp; &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -43231,42 +43474,41 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, Pt::System::IODevice &amp; &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(Pt::System::IODevice &amp; args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(Pt::System::IODevice &amp; args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Signal&lt; std::size_t &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
-    <base>Pt::Connectable</base>
     <member kind="function">
       <type></type>
       <name>Signal</name>
@@ -43285,8 +43527,8 @@
       <type>Connection</type>
       <name>connect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a09a46c0df7bbe44e1001beeee144ae79</anchor>
-      <arglist>(const BasicSlot&lt; R, std::size_t &gt; &amp;slot)</arglist>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -43299,49 +43541,49 @@
       <type>void</type>
       <name>disconnect</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4fd629ebd7306a6b13576e0ccab20323</anchor>
-      <arglist>(const BasicSlot&lt; R, std::size_t &gt; &amp;slot)</arglist>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>send</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ae3749f90a9e105e71cebd34b8d4f20e2</anchor>
-      <arglist>(std::size_t args) const</arglist>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a07110c490b93c140c1157c38919295d9</anchor>
-      <arglist>(std::size_t args) const</arglist>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
     </member>
     <member kind="function">
       <type>Connection</type>
       <name>operator+=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a43246b1c783f6fa258b6b05a77a0e1dd</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator-=</name>
       <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a50df78f057d51efbcc1115e851bd2516</anchor>
-      <arglist>(Signal&lt; ARGS &gt; &amp;signal, const BasicSlot&lt; R, ARGS &gt; &amp;slot)</arglist>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>Pt::SignalSlot</name>
     <filename>classPt_1_1SignalSlot.html</filename>
-    <templarg></templarg>
-    <base>Pt::BasicSlot</base>
+    <templarg>As</templarg>
+    <base>BasicSlot&lt; void, As... &gt;</base>
     <member kind="function">
       <type></type>
       <name>SignalSlot</name>
       <anchorfile>classPt_1_1SignalSlot.html</anchorfile>
-      <anchor>a8deefce0e319f3e0abf385de171e9baa</anchor>
-      <arglist>(Signal&lt; ARGUMENTS &gt; &amp;signal)</arglist>
+      <anchor>a3df5bef501f18a91ebbd0923bc2fb43d</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
     <member kind="function">
       <type>Slot *</type>
@@ -43375,29 +43617,36 @@
       <type>virtual bool</type>
       <name>equals</name>
       <anchorfile>classPt_1_1SignalSlot.html</anchorfile>
-      <anchor>a441aa17f4954bb1a09136ed5c484a8a8</anchor>
-      <arglist>(const Slot &amp;slot) const</arglist>
+      <anchor>a782cfa02c81bffbe1e51f9d6ceb9f8b5</anchor>
+      <arglist>(const Slot &amp;rhs) const</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Slot *</type>
+      <name>clone</name>
+      <anchorfile>classPt_1_1BasicSlot.html</anchorfile>
+      <anchor>a40029bacb7f972d34d204b89403d6f87</anchor>
+      <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>FunctionSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -43426,6 +43675,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43586,25 +43849,25 @@
       <arglist>(const Slot &amp;slot) const =0</arglist>
     </member>
     <member kind="function">
-      <type>ConstMethodSlot&lt; R, C, ARGS &gt;</type>
+      <type>ConstMethodSlot&lt; R, ClassT, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a0df0457a8259dfc9336af7b304a63058</anchor>
-      <arglist>(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</arglist>
+      <anchor>a6fe36105ca29dc11b2f8ffb98cfffcf5</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
     </member>
     <member kind="function">
-      <type>FunctionSlot&lt; R, ARGS &gt;</type>
+      <type>DelegateSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ada68f22683c1caf397e4da96b5ac4dcb</anchor>
-      <arglist>(R(*func)(ARGS))</arglist>
+      <anchor>ab3840ad2e8d88358f1a768fd6f905ba8</anchor>
+      <arglist>(Delegate&lt; R, As... &gt; &amp;delegate)</arglist>
     </member>
     <member kind="function">
-      <type>MethodSlot&lt; R, ClassT, ARGS &gt;</type>
+      <type>FunctionSlot&lt; R, As... &gt;</type>
       <name>slot</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>a1b04cbcb01d7f5e32892b7123302f30a</anchor>
-      <arglist>(ClassT &amp;obj, R(BaseT::*memFunc)(ARGS))</arglist>
+      <anchor>a5332b78d27cf0e0d2a15168b600dffb3</anchor>
+      <arglist>(R(*function)(As...))</arglist>
     </member>
     <member kind="function">
       <type>SlotT</type>
@@ -43633,6 +43896,20 @@
       <anchorfile>classPt_1_1Slot.html</anchorfile>
       <anchor>abd0872bd11bd37c0d3d885b6ac8d142d</anchor>
       <arglist>(Connectable &amp;context, T &amp;&amp;lambda)</arglist>
+    </member>
+    <member kind="function">
+      <type>MethodSlot&lt; R, ClassT, As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>afeec39922bf93ff7a47254aabaddb1d6</anchor>
+      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalSlot&lt; As... &gt;</type>
+      <name>slot</name>
+      <anchorfile>classPt_1_1Slot.html</anchorfile>
+      <anchor>a64b85517ad30cb856e8175e099deb7b2</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47808,39 +48085,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::SyntaxError</name>
-    <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
-    <base>Pt::Json::JsonError</base>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
-      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
-      <arglist>(const char *what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~SyntaxError</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>line</name>
-      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
-      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Xml::SyntaxError</name>
     <filename>classPt_1_1Xml_1_1SyntaxError.html</filename>
     <base>Pt::Xml::XmlError</base>
@@ -47869,6 +48113,39 @@
       <type>std::size_t</type>
       <name>line</name>
       <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
+      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Json::SyntaxError</name>
+    <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
+    <base>Pt::Json::JsonError</base>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
+      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
+      <arglist>(const char *what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SyntaxError</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>line</name>
+      <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
       <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
       <arglist>() const</arglist>
     </member>
@@ -49443,10 +49720,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; char, char &gt;</name>
+    <name>TextCodec&lt; Char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>char</type>
+      <type>Char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -49478,14 +49755,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -49531,10 +49808,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; Char, char &gt;</name>
+    <name>TextCodec&lt; char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>Char</type>
+      <type>char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -49566,14 +49843,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -51054,6 +51331,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
       <name>isPointer</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
@@ -51117,6 +51401,13 @@
       <name>isConst</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -51188,6 +51479,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
       <name>isPointer</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
@@ -51251,6 +51549,13 @@
       <name>isConst</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -51322,6 +51627,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
       <name>isPointer</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
@@ -51385,6 +51697,13 @@
       <name>isConst</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -51456,6 +51775,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
       <name>isPointer</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
@@ -51519,6 +51845,13 @@
       <name>isConst</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -51590,6 +51923,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
       <name>isPointer</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
@@ -51653,6 +51993,13 @@
       <name>isConst</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -51724,6 +52071,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
       <name>isPointer</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
@@ -51787,6 +52141,13 @@
       <name>isConst</name>
       <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
       <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const unsigned int</type>
+      <name>isVolatile</name>
+      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
+      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -55218,6 +55579,7 @@
     <class kind="class">Pt::BasicTextIStream</class>
     <class kind="class">Pt::BasicTextOStream</class>
     <class kind="class">Pt::BasicTextStream</class>
+    <class kind="class">Pt::BoundSlot</class>
     <class kind="class">Pt::Callable</class>
     <class kind="struct">Pt::Char</class>
     <class kind="class">Pt::Composer</class>
@@ -56800,6 +57162,8 @@
     <title>Signals and Delegates</title>
     <filename>group__sigslot.html</filename>
     <class kind="class">Pt::Callable</class>
+    <class kind="class">Pt::Connectable</class>
+    <class kind="class">Pt::Connection</class>
     <class kind="class">Pt::ConstMethod</class>
     <class kind="class">Pt::ConstMethodSlot</class>
     <class kind="class">Pt::Delegate</class>
@@ -56807,16 +57171,15 @@
     <class kind="class">Pt::Function</class>
     <class kind="class">Pt::FunctionSlot</class>
     <class kind="class">Pt::Invokable</class>
+    <class kind="class">Pt::Lambda</class>
+    <class kind="class">Pt::LambdaSlot</class>
     <class kind="class">Pt::Method</class>
     <class kind="class">Pt::MethodSlot</class>
     <class kind="class">Pt::Signal</class>
     <class kind="class">Pt::SignalSlot</class>
     <class kind="class">Pt::Slot</class>
     <class kind="class">Pt::BasicSlot</class>
-    <class kind="class">Pt::Connectable</class>
-    <class kind="class">Pt::Connection</class>
-    <class kind="class">Pt::Lambda</class>
-    <class kind="class">Pt::LambdaSlot</class>
+    <class kind="class">Pt::BoundSlot</class>
   </compound>
   <compound kind="group">
     <name>Pt-System-Tar</name>

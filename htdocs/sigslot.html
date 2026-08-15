@@ -100,7 +100,7 @@
 <div class="line"> </div>
 <div class="line">  <a class="code" href="classPt_1_1Delegate.html">Pt::Delegate&lt;int, int&gt;</a> delegate;</div>
 <div class="line">  delegate += Pt::slot&lt;int, int&gt;([](<span class="keyword">auto</span> value) { <span class="keywordflow">return</span> value + 1; });</div>
-<div class="line">  <span class="keywordtype">int</span> result = delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>(41);</div>
+<div class="line">  <span class="keywordtype">int</span> result = delegate.<a class="code" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a>(41);</div>
 <div class="line"> </div>
 <div class="line">  connection.<a class="code" href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
 <div class="line"> </div>
@@ -122,7 +122,7 @@ Signals</h1>
 <div class="line">    { std::cout &lt;&lt; <span class="stringliteral">&quot;Callee::slot() called&quot;</span> &lt;&lt; std::endl; }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>()</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">slot</a>()</div>
 <div class="line">{ std::cout &lt;&lt; <span class="stringliteral">&quot;slot() called.&quot;</span> &lt;&lt; std::endl; }</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
@@ -130,19 +130,19 @@ Signals</h1>
 <div class="line">    Callee callee;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a> signal;</div>
-<div class="line">    signal += Pt::slot(<a class="code" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>);</div>
+<div class="line">    signal += Pt::slot(<a class="code" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">slot</a>);</div>
 <div class="line">    signal += Pt::slot(callee, &amp;Callee::slot);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Two slots are constructed, one from a function pointer and another one from a member function pointer and the object instance to be called. The signal is connected to both slots. Signals can only be connected to objects that derive from <a class="el" href="classPt_1_1Connectable.html" title="Connection Management for Signal and Slot Objects.">Pt::Connectable</a>, to ensure that all connections are closed when the object runs out of scope and no dangling connections are left. The += operator, to connect a signal with a slot, returns a connection object, which can be used to disconnect signals from slots manually. The following code illustrates this:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>()</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">slot</a>()</div>
 <div class="line">{ std::cout &lt;&lt; <span class="stringliteral">&quot;slot() called.&quot;</span> &lt;&lt; std::endl; }</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a> signal;</div>
-<div class="line">    Connection c = signal += Pt::slot(<a class="code" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>);</div>
+<div class="line">    Connection c = signal += Pt::slot(<a class="code" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">slot</a>);</div>
 <div class="line">    c.isValid() <span class="comment">// returns true</span></div>
 <div class="line"> </div>
 <div class="line">    c.close();</div>
@@ -150,7 +150,7 @@ Signals</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>A connection is reference counted and can not be duplicated as such, but always refers to the same shared connection data. If one peer of a connection is destroyed or the connection is closed manually, the connection becomes invalid. Once a connection has been established, signals can be send to invoke the connected slots. This happens by calling <a class="el" href="classPt_1_1Signal.html#ae3749f90a9e105e71cebd34b8d4f20e2">send()</a> with the appropriate arguments, if any.</p>
+</div><!-- fragment --><p>A connection is reference counted and can not be duplicated as such, but always refers to the same shared connection data. If one peer of a connection is destroyed or the connection is closed manually, the connection becomes invalid. Once a connection has been established, signals can be send to invoke the connected slots. This happens by calling <a class="el" href="classPt_1_1Signal.html#a7652e7cc10c31f0df5d5b27a1d5389c8">send()</a> with the appropriate arguments, if any.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> tellAge(<span class="keywordtype">int</span> age)</div>
 <div class="line">{ std::cout &lt;&lt; <span class="stringliteral">&quot;I am &quot;</span> &lt;&lt; age &lt;&lt; <span class="stringliteral">&quot; years old\n&quot;</span>; }</div>
 <div class="line"> </div>
@@ -158,7 +158,7 @@ Signals</h1>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;int&gt;</a> signal;</div>
 <div class="line">    signal += Pt::slot(tellAge);</div>
-<div class="line">    signal.<a class="code" href="classPt_1_1Signal.html#ae3749f90a9e105e71cebd34b8d4f20e2">send</a>(26);</div>
+<div class="line">    signal.<a class="code" href="classPt_1_1Signal.html#a7652e7cc10c31f0df5d5b27a1d5389c8">send</a>(26);</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>When the signal is send, the slot is called with the same value passed to Signal::send. Nothing will happen if the signal is not connected to any slots. When a signal is sent, the slot is called immediatly and directly and does not depend on an event loop. If multiple slots are connected to a signal, the slots will be called one after another.</p>
@@ -184,8 +184,8 @@ Delegates</h1>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The example above constructs a delegate which can be connected to any slot that returns an int. It is first connected to a slot of the function slotA. When it is connected for the second time to a slot of the function slotB, the old connection will be closed and only slotB is called when the delegate is called.</p>
-<p>There are two possibilities how a delegate can call its slot. The member function <a class="el" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call()</a> will return the return value of the slot. If the delegate is not connected to a slot, an exception is thrown. The second method is through <a class="el" href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">invoke()</a>, where the return value is ignored, but if the delegate is not connected, no exception will be thrown.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>()</div>
+<p>There are two possibilities how a delegate can call its slot. The member function <a class="el" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call()</a> will return the return value of the slot. If the delegate is not connected to a slot, an exception is thrown. The second method is through <a class="el" href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">invoke()</a>, where the return value is ignored, but if the delegate is not connected, no exception will be thrown.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">slot</a>()</div>
 <div class="line">{ <span class="keywordflow">return</span> 5; }</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
@@ -193,13 +193,13 @@ Delegates</h1>
 <div class="line">    <span class="keywordflow">try</span></div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="classPt_1_1Delegate.html">Pt::Delegate&lt;int&gt;</a> delegate;</div>
-<div class="line">        <a class="code" href="classPt_1_1Connection.html">Pt::Connection</a> connection = delegate += Pt::slot(<a class="code" href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">slot</a>);</div>
+<div class="line">        <a class="code" href="classPt_1_1Connection.html">Pt::Connection</a> connection = delegate += Pt::slot(<a class="code" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">slot</a>);</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordtype">int</span> i = delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>(); <span class="comment">// i is 5 now</span></div>
+<div class="line">        <span class="keywordtype">int</span> i = delegate.<a class="code" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a>(); <span class="comment">// i is 5 now</span></div>
 <div class="line"> </div>
 <div class="line">        connection.<a class="code" href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
-<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">invoke</a>() <span class="comment">// does not throw</span></div>
-<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>();  <span class="comment">// will throw because not connected</span></div>
+<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">invoke</a>() <span class="comment">// does not throw</span></div>
+<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a>();  <span class="comment">// will throw because not connected</span></div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::logic_error&amp; ex)</div>
 <div class="line">    {</div>
@@ -211,23 +211,23 @@ Delegates</h1>
 </div><!-- fragment --><p>The program above connects a delegate to a slot and then calls it. After the connection was closed, the delegate is invoked, which has no effect. Finally, when the delegate is called again, an exception is thrown and catched. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="aclassPt_1_1Delegate_html_aee09805cf0b37aa81f8f05d4c63ad5a7"><div class="ttname"><a href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">Pt::Delegate::invoke</a></div><div class="ttdeci">void invoke(As... args)</div><div class="ttdoc">Invoke the slot connected to the Delegate.</div><div class="ttdef"><b>Definition:</b> Delegate.h:251</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a56c611dce085c482763cf72e18284146"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">Pt::System::Timer::timeout</a></div><div class="ttdeci">Signal &amp; timeout()</div><div class="ttdoc">Notifies about interval timeouts.</div><div class="ttdef"><b>Definition:</b> Timer.h:161</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:79</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html_a358d2e2397ca11ccd17553e3c40e7901"><div class="ttname"><a href="classPt_1_1System_1_1Application.html#a358d2e2397ca11ccd17553e3c40e7901">Pt::System::Application::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">Exits from the contained event loop.</div><div class="ttdef"><b>Definition:</b> Application.h:93</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html_a9d27135050e141db298170c2e94735e1"><div class="ttname"><a href="classPt_1_1System_1_1Application.html#a9d27135050e141db298170c2e94735e1">Pt::System::Application::loop</a></div><div class="ttdeci">EventLoop &amp; loop()</div><div class="ttdoc">Returns the event loop.</div><div class="ttdef"><b>Definition:</b> Application.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1Slot_html_a6fe36105ca29dc11b2f8ffb98cfffcf5"><div class="ttname"><a href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, ClassT, As... &gt; slot(ClassT &amp;object, R(BaseT::*method)(As...) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div><div class="ttdef"><b>Definition:</b> ConstMethod.h:166</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; int &gt;</a></div></div>
-<div class="ttc" id="aclassPt_1_1Signal_html_ae3749f90a9e105e71cebd34b8d4f20e2"><div class="ttname"><a href="classPt_1_1Signal.html#ae3749f90a9e105e71cebd34b8d4f20e2">Pt::Signal::send</a></div><div class="ttdeci">void send(ARGUMENTS args) const</div><div class="ttdoc">Invlokes all slots.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a1d0ec20a053d1eb6d987d1741e31e7b6"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">Pt::System::Timer::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;loop)</div><div class="ttdoc">Sets the used event loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1Signal_html_a7652e7cc10c31f0df5d5b27a1d5389c8"><div class="ttname"><a href="classPt_1_1Signal.html#a7652e7cc10c31f0df5d5b27a1d5389c8">Pt::Signal::send</a></div><div class="ttdeci">void send(As... args)</div><div class="ttdoc">Invlokes all slots.</div><div class="ttdef"><b>Definition:</b> Signal.h:237</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1Application.html#a13a43e6d814de94978c515cb084873b1">Pt::System::Application::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the contained event loop.</div><div class="ttdef"><b>Definition:</b> Application.h:88</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html_a4c5acdcba26acb7e90ddec49f40116aa"><div class="ttname"><a href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">Pt::Delegate::call</a></div><div class="ttdeci">R call(ARGUMENTS) const</div><div class="ttdoc">Calls the slot connected to the Delegate.</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">Pt::Connection::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the connection.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html"><div class="ttname"><a href="classPt_1_1System_1_1Application.html">Pt::System::Application</a></div><div class="ttdoc">Console applications without a GUI.</div><div class="ttdef"><b>Definition:</b> Application.h:55</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html_a56f3751846a98f5f6042424ccd5cf322"><div class="ttname"><a href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">Pt::Delegate::invoke</a></div><div class="ttdeci">void invoke(ARGUMENTS) const</div><div class="ttdoc">Invoke the slot connected to the Delegate.</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html"><div class="ttname"><a href="classPt_1_1Delegate.html">Pt::Delegate</a></div><div class="ttdoc">Delegates an action to a slot.</div><div class="ttdef"><b>Definition:</b> Api-Delegate.h:93</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html_abd3f354e905203c9d25f76b549a59aea"><div class="ttname"><a href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">Pt::Delegate::call</a></div><div class="ttdeci">R call(As... args)</div><div class="ttdoc">Calls the slot connected to the Delegate.</div><div class="ttdef"><b>Definition:</b> Delegate.h:236</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html"><div class="ttname"><a href="classPt_1_1Delegate.html">Pt::Delegate</a></div><div class="ttdoc">Delegates an action to a slot.</div><div class="ttdef"><b>Definition:</b> Delegate.h:194</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html"><div class="ttname"><a href="classPt_1_1Connection.html">Pt::Connection</a></div><div class="ttdoc">Represents a connection between a Signal/Delegate and a slot.</div><div class="ttdef"><b>Definition:</b> Connection.h:91</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a84dfa917d34f43228ab9472a2a5d0455"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a84dfa917d34f43228ab9472a2a5d0455">Pt::System::Timer::start</a></div><div class="ttdeci">void start(std::size_t interval)</div><div class="ttdoc">Starts the timer.</div></div>
-<div class="ttc" id="aclassPt_1_1Slot_html_a0df0457a8259dfc9336af7b304a63058"><div class="ttname"><a href="classPt_1_1Slot.html#a0df0457a8259dfc9336af7b304a63058">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, C, ARGS &gt; slot(C &amp;obj, R(BaseT::*memFunc)(ARGS) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

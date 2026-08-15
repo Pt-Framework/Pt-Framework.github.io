@@ -103,7 +103,7 @@
 <div class="line"> </div>
 <div class="line">  <a class="code" href="classPt_1_1Delegate.html">Pt::Delegate&lt;int, int&gt;</a> delegate;</div>
 <div class="line">  delegate += Pt::slot&lt;int, int&gt;([](<span class="keyword">auto</span> value) { <span class="keywordflow">return</span> value + 1; });</div>
-<div class="line">  <span class="keywordtype">int</span> result = delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>(41);</div>
+<div class="line">  <span class="keywordtype">int</span> result = delegate.<a class="code" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a>(41);</div>
 <div class="line"> </div>
 <div class="line">  connection.<a class="code" href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
 <div class="line"> </div>
@@ -113,47 +113,8 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html">Callable&lt; R, ARGUMENTS &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html">Callable&lt; R, As &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface for all callable entities.  <a href="classPt_1_1Callable.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ConstMethod.html">ConstMethod&lt; R, ClassT, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapter for const class methods.  <a href="classPt_1_1ConstMethod.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ConstMethodSlot.html">ConstMethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps ConstMethod objects so that they can act as Slots.  <a href="classPt_1_1ConstMethodSlot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html">Delegate&lt; R, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegates an action to a slot.  <a href="classPt_1_1Delegate.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1DelegateSlot.html">DelegateSlot&lt; R, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Delegate objects so that they can act as Slots.  <a href="classPt_1_1DelegateSlot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html">Function&lt; R, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps free functions into a generic callable for use with the signals/slots.  <a href="classPt_1_1Function.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1FunctionSlot.html">FunctionSlot&lt; R, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Function objects so that they can act as slots.  <a href="classPt_1_1FunctionSlot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Invokable.html">Invokable&lt; ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for invokable entities.  <a href="classPt_1_1Invokable.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html">Method&lt; R, ClassT, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapter for class methods.  <a href="classPt_1_1Method.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1MethodSlot.html">MethodSlot&lt; R, ClassT, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Method objects so that they can act as Slots.  <a href="classPt_1_1MethodSlot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Signal.html">Signal&lt; ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multicast Signal to call multiple slots.  <a href="classPt_1_1Signal.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1SignalSlot.html">SignalSlot&lt; ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Signal objects so that they can act as Slots.  <a href="classPt_1_1SignalSlot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html">Slot</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint of a signal/slot connection.  <a href="classPt_1_1Slot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicSlot.html">BasicSlot&lt; R, ARGUMENTS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base type for various "slot" types.  <a href="classPt_1_1BasicSlot.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Connectable.html">Connectable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connection Management for <a class="el" href="classPt_1_1Signal.html" title="Multicast Signal to call multiple slots.">Signal</a> and <a class="el" href="classPt_1_1Slot.html" title="Endpoint of a signal/slot connection.">Slot</a> Objects.  <a href="classPt_1_1Connectable.html#details">More...</a><br /></td></tr>
@@ -161,11 +122,53 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Connection.html">Connection</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a connection between a Signal/Delegate and a slot.  <a href="classPt_1_1Connection.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ConstMethod.html">ConstMethod&lt; R, ClassT, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapter for const class methods.  <a href="classPt_1_1ConstMethod.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ConstMethodSlot.html">ConstMethodSlot&lt; R, ClassT, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps ConstMethod objects so that they can act as Slots.  <a href="classPt_1_1ConstMethodSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html">Delegate&lt; R, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegates an action to a slot.  <a href="classPt_1_1Delegate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1DelegateSlot.html">DelegateSlot&lt; R, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Delegate objects so that they can act as Slots.  <a href="classPt_1_1DelegateSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html">Function&lt; R, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps free functions into a generic callable for use with the signals/slots.  <a href="classPt_1_1Function.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1FunctionSlot.html">FunctionSlot&lt; R, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Function objects so that they can act as slots.  <a href="classPt_1_1FunctionSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Invokable.html">Invokable&lt; As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for invokable entities.  <a href="classPt_1_1Invokable.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lambda.html">Lambda&lt; L, R, A &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapts a lambda or function object as a callable.  <a href="classPt_1_1Lambda.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1LambdaSlot.html">LambdaSlot&lt; L, R, A &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapts a Lambda for use as a slot.  <a href="classPt_1_1LambdaSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html">Method&lt; R, ClassT, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapter for class methods.  <a href="classPt_1_1Method.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1MethodSlot.html">MethodSlot&lt; R, ClassT, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Method objects so that they can act as Slots.  <a href="classPt_1_1MethodSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Signal.html">Signal&lt; As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multicast Signal to call multiple slots.  <a href="classPt_1_1Signal.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1SignalSlot.html">SignalSlot&lt; As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps Signal objects so that they can act as Slots.  <a href="classPt_1_1SignalSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html">Slot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint of a signal/slot connection.  <a href="classPt_1_1Slot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicSlot.html">BasicSlot&lt; R, As &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base type for various "slot" types.  <a href="classPt_1_1BasicSlot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BoundSlot.html">BoundSlot&lt; R, Tuple, Indices &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Slot.html" title="Endpoint of a signal/slot connection.">Slot</a> produced by binding a final argument to another slot.  <a href="classPt_1_1BoundSlot.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -177,10 +180,10 @@ Classes</h2></td></tr>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a1d0ec20a053d1eb6d987d1741e31e7b6"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">Pt::System::Timer::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;loop)</div><div class="ttdoc">Sets the used event loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1Application.html#a13a43e6d814de94978c515cb084873b1">Pt::System::Application::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the contained event loop.</div><div class="ttdef"><b>Definition:</b> Application.h:88</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html_a4c5acdcba26acb7e90ddec49f40116aa"><div class="ttname"><a href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">Pt::Delegate::call</a></div><div class="ttdeci">R call(ARGUMENTS) const</div><div class="ttdoc">Calls the slot connected to the Delegate.</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">Pt::Connection::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the connection.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html"><div class="ttname"><a href="classPt_1_1System_1_1Application.html">Pt::System::Application</a></div><div class="ttdoc">Console applications without a GUI.</div><div class="ttdef"><b>Definition:</b> Application.h:55</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html"><div class="ttname"><a href="classPt_1_1Delegate.html">Pt::Delegate</a></div><div class="ttdoc">Delegates an action to a slot.</div><div class="ttdef"><b>Definition:</b> Api-Delegate.h:93</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html_abd3f354e905203c9d25f76b549a59aea"><div class="ttname"><a href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">Pt::Delegate::call</a></div><div class="ttdeci">R call(As... args)</div><div class="ttdoc">Calls the slot connected to the Delegate.</div><div class="ttdef"><b>Definition:</b> Delegate.h:236</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html"><div class="ttname"><a href="classPt_1_1Delegate.html">Pt::Delegate</a></div><div class="ttdoc">Delegates an action to a slot.</div><div class="ttdef"><b>Definition:</b> Delegate.h:194</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html"><div class="ttname"><a href="classPt_1_1Connection.html">Pt::Connection</a></div><div class="ttdoc">Represents a connection between a Signal/Delegate and a slot.</div><div class="ttdef"><b>Definition:</b> Connection.h:91</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a84dfa917d34f43228ab9472a2a5d0455"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a84dfa917d34f43228ab9472a2a5d0455">Pt::System::Timer::start</a></div><div class="ttdeci">void start(std::size_t interval)</div><div class="ttdoc">Starts the timer.</div></div>
 

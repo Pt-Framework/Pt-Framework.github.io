@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>Function&lt; R, ARGUMENTS &gt; Class Template Reference</title>
+  <title>Function&lt; R, As &gt; Class Template Reference</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -85,7 +85,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#related">Related Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Function&lt; R, ARGUMENTS &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
+<div class="title">Function&lt; R, As &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -94,69 +94,62 @@
 <p>Wraps free functions into a generic callable for use with the signals/slots.  
  <a href="classPt_1_1Function.html#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classPt_1_1Callable.html">Callable&lt; R, ARGUMENTS &gt;</a>.</p>
+<p>Inherits <a class="el" href="classPt_1_1Callable.html">Callable&lt; R, As... &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a91316a2b03adb6ec5ca65f9e14f0c0e0"><td class="memItemLeft" align="right" valign="top"><a id="a91316a2b03adb6ec5ca65f9e14f0c0e0"></a>
-typedef R(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a91316a2b03adb6ec5ca65f9e14f0c0e0">FuncT</a>) (ARGUMENTS)</td></tr>
-<tr class="memdesc:a91316a2b03adb6ec5ca65f9e14f0c0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function signature wrapped by this class. <br /></td></tr>
-<tr class="separator:a91316a2b03adb6ec5ca65f9e14f0c0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4732c1bed30bfbefa309fde0facb1f9"><td class="memItemLeft" align="right" valign="top"><a id="aa4732c1bed30bfbefa309fde0facb1f9"></a>
+typedef R(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#aa4732c1bed30bfbefa309fde0facb1f9">FuncT</a>) (As...)</td></tr>
+<tr class="memdesc:aa4732c1bed30bfbefa309fde0facb1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function signature wrapped by this class. <br /></td></tr>
+<tr class="separator:aa4732c1bed30bfbefa309fde0facb1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6f8762e5587d3ff482acb86dfde56aef"><td class="memItemLeft" align="right" valign="top"><a id="a6f8762e5587d3ff482acb86dfde56aef"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a6f8762e5587d3ff482acb86dfde56aef">Function</a> (<a class="el" href="classPt_1_1Function.html#a91316a2b03adb6ec5ca65f9e14f0c0e0">FuncT</a> func)</td></tr>
-<tr class="memdesc:a6f8762e5587d3ff482acb86dfde56aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from function pointer. <br /></td></tr>
-<tr class="separator:a6f8762e5587d3ff482acb86dfde56aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00e7471a72ecf48d448c72a5bd614883"><td class="memItemLeft" align="right" valign="top"><a id="a00e7471a72ecf48d448c72a5bd614883"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a00e7471a72ecf48d448c72a5bd614883">Function</a> (const <a class="el" href="classPt_1_1Function.html">Function</a> &amp;f)</td></tr>
-<tr class="memdesc:a00e7471a72ecf48d448c72a5bd614883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor. <br /></td></tr>
-<tr class="separator:a00e7471a72ecf48d448c72a5bd614883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783491ab3c60d509dc575f335cc26345"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a783491ab3c60d509dc575f335cc26345">operator()</a> (ARGUMENTS args) const</td></tr>
-<tr class="memdesc:a783491ab3c60d509dc575f335cc26345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the callable entity.  <a href="classPt_1_1Function.html#a783491ab3c60d509dc575f335cc26345">More...</a><br /></td></tr>
-<tr class="separator:a783491ab3c60d509dc575f335cc26345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed53b622e63b17187d79dcb1e0ddba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Function.html">Function</a>&lt; R, ARGUMENTS &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#abed53b622e63b17187d79dcb1e0ddba2">clone</a> () const</td></tr>
-<tr class="memdesc:abed53b622e63b17187d79dcb1e0ddba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this instance.  <a href="classPt_1_1Function.html#abed53b622e63b17187d79dcb1e0ddba2">More...</a><br /></td></tr>
-<tr class="separator:abed53b622e63b17187d79dcb1e0ddba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a66cc4485a7cca3b6ae74b8ab9c680e"><td class="memItemLeft" align="right" valign="top"><a id="a4a66cc4485a7cca3b6ae74b8ab9c680e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a4a66cc4485a7cca3b6ae74b8ab9c680e">operator==</a> (const <a class="el" href="classPt_1_1Function.html">Function</a> &amp;rhs) const</td></tr>
-<tr class="memdesc:a4a66cc4485a7cca3b6ae74b8ab9c680e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if both use the same function pointer. <br /></td></tr>
-<tr class="separator:a4a66cc4485a7cca3b6ae74b8ab9c680e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5acdcba26acb7e90ddec49f40116aa"><td class="memItemLeft" align="right" valign="top"><a id="a4c5acdcba26acb7e90ddec49f40116aa"></a>
-R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a> (ARGUMENTS) const</td></tr>
-<tr class="memdesc:a4c5acdcba26acb7e90ddec49f40116aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as operator(). <br /></td></tr>
-<tr class="separator:a4c5acdcba26acb7e90ddec49f40116aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56f3751846a98f5f6042424ccd5cf322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a56f3751846a98f5f6042424ccd5cf322">invoke</a> (ARGUMENTS) const</td></tr>
-<tr class="memdesc:a56f3751846a98f5f6042424ccd5cf322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the callable entity.  <a href="classPt_1_1Callable.html#a56f3751846a98f5f6042424ccd5cf322">More...</a><br /></td></tr>
-<tr class="separator:a56f3751846a98f5f6042424ccd5cf322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9711ee358e981fa6b853c5bd3b65df"><td class="memItemLeft" align="right" valign="top"><a id="a7d9711ee358e981fa6b853c5bd3b65df"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a7d9711ee358e981fa6b853c5bd3b65df">Function</a> (<a class="el" href="classPt_1_1Function.html#aa4732c1bed30bfbefa309fde0facb1f9">FuncT</a> function)</td></tr>
+<tr class="memdesc:a7d9711ee358e981fa6b853c5bd3b65df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from function pointer. <br /></td></tr>
+<tr class="separator:a7d9711ee358e981fa6b853c5bd3b65df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef5e8eed943c9377c194320d6c78f6e"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a8ef5e8eed943c9377c194320d6c78f6e">operator()</a> (As... args) const</td></tr>
+<tr class="memdesc:a8ef5e8eed943c9377c194320d6c78f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the callable entity.  <a href="classPt_1_1Function.html#a8ef5e8eed943c9377c194320d6c78f6e">More...</a><br /></td></tr>
+<tr class="separator:a8ef5e8eed943c9377c194320d6c78f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912e1878d0faf6ec3b4316193b2a3dc0"><td class="memItemLeft" align="right" valign="top"><a id="a912e1878d0faf6ec3b4316193b2a3dc0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Function.html#a912e1878d0faf6ec3b4316193b2a3dc0">operator==</a> (const <a class="el" href="classPt_1_1Function.html">Function</a> &amp;other) const</td></tr>
+<tr class="memdesc:a912e1878d0faf6ec3b4316193b2a3dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if both use the same function pointer. <br /></td></tr>
+<tr class="separator:a912e1878d0faf6ec3b4316193b2a3dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245f1cb11cc5d37d2800a6e1dd4ecbb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Callable.html">Callable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">clone</a> () const=0</td></tr>
+<tr class="memdesc:a245f1cb11cc5d37d2800a6e1dd4ecbb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this instance.  <a href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">More...</a><br /></td></tr>
+<tr class="separator:a245f1cb11cc5d37d2800a6e1dd4ecbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e90f858fe874d5a854913235da2eaa"><td class="memItemLeft" align="right" valign="top"><a id="a70e90f858fe874d5a854913235da2eaa"></a>
+ReturnT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a70e90f858fe874d5a854913235da2eaa">call</a> (As... args) const</td></tr>
+<tr class="memdesc:a70e90f858fe874d5a854913235da2eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as operator(). <br /></td></tr>
+<tr class="separator:a70e90f858fe874d5a854913235da2eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e1af7ead2bf585d9a854bf668d0624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">invoke</a> (As... args) const</td></tr>
+<tr class="memdesc:ab2e1af7ead2bf585d9a854bf668d0624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the callable entity.  <a href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">More...</a><br /></td></tr>
+<tr class="separator:ab2e1af7ead2bf585d9a854bf668d0624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
-<tr class="memitem:a169851a14031a74b4d04fd20cf970041"><td class="memTemplParams" colspan="2"><a id="a169851a14031a74b4d04fd20cf970041"></a>
-template&lt;class R , class BaseT , class C , typename ARGS &gt; </td></tr>
-<tr class="memitem:a169851a14031a74b4d04fd20cf970041"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1ConstMethod.html">ConstMethod</a>&lt; R, C, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a169851a14031a74b4d04fd20cf970041">callable</a> (C &amp;obj, R(BaseT::*ptr)(ARGS) const)</td></tr>
-<tr class="memdesc:a169851a14031a74b4d04fd20cf970041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ConstMethod object for the given object/method pair. <br /></td></tr>
-<tr class="separator:a169851a14031a74b4d04fd20cf970041"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d822dd5dfa2cb53457796cd0d241ae7"><td class="memTemplParams" colspan="2"><a id="a4d822dd5dfa2cb53457796cd0d241ae7"></a>
-template&lt;typename R , typename ARGS &gt; </td></tr>
-<tr class="memitem:a4d822dd5dfa2cb53457796cd0d241ae7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Function.html">Function</a>&lt; R, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a4d822dd5dfa2cb53457796cd0d241ae7">callable</a> (R(*func)(ARGS))</td></tr>
-<tr class="memdesc:a4d822dd5dfa2cb53457796cd0d241ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Function wrapper for the given free/static function. <br /></td></tr>
-<tr class="separator:a4d822dd5dfa2cb53457796cd0d241ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41fccd656907df715d97809fe292752b"><td class="memTemplParams" colspan="2"><a id="a41fccd656907df715d97809fe292752b"></a>
-template&lt;class R , class BaseT , class ClassT , typename ARGS &gt; </td></tr>
-<tr class="memitem:a41fccd656907df715d97809fe292752b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Method.html">Method</a>&lt; R, ClassT, ARGS &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a41fccd656907df715d97809fe292752b">callable</a> (ClassT &amp;obj, R(BaseT::*ptr)(ARGS))</td></tr>
-<tr class="memdesc:a41fccd656907df715d97809fe292752b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Method object for the given object/method pair. <br /></td></tr>
-<tr class="separator:a41fccd656907df715d97809fe292752b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638d90e2abbe628309750a1d66690d71"><td class="memItemLeft" align="right" valign="top"><a id="a638d90e2abbe628309750a1d66690d71"></a>
+<a class="el" href="classPt_1_1ConstMethod.html">ConstMethod</a>&lt; R, ClassT, As... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a638d90e2abbe628309750a1d66690d71">callable</a> (ClassT &amp;object, R(BaseT::*method)(As...) const)</td></tr>
+<tr class="memdesc:a638d90e2abbe628309750a1d66690d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ConstMethod object for the given object/method pair. <br /></td></tr>
+<tr class="separator:a638d90e2abbe628309750a1d66690d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478226333059981d4f0d56780210f620"><td class="memItemLeft" align="right" valign="top"><a id="a478226333059981d4f0d56780210f620"></a>
+<a class="el" href="classPt_1_1Function.html">Function</a>&lt; R, As... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a478226333059981d4f0d56780210f620">callable</a> (R(*function)(As...))</td></tr>
+<tr class="memdesc:a478226333059981d4f0d56780210f620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Function wrapper for the given free/static function. <br /></td></tr>
+<tr class="separator:a478226333059981d4f0d56780210f620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6413be0a8c6ee15353971279650d88d0"><td class="memItemLeft" align="right" valign="top"><a id="a6413be0a8c6ee15353971279650d88d0"></a>
+<a class="el" href="classPt_1_1Method.html">Method</a>&lt; R, ClassT, As... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a6413be0a8c6ee15353971279650d88d0">callable</a> (ClassT &amp;object, R(BaseT::*method)(As...))</td></tr>
+<tr class="memdesc:a6413be0a8c6ee15353971279650d88d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Method object for the given object/method pair. <br /></td></tr>
+<tr class="separator:a6413be0a8c6ee15353971279650d88d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename R, typename ARGUMENTS&gt;<br />
-class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
+<div class="textblock"><h3>template&lt;typename R, typename... As&gt;<br />
+class Pt::Function&lt; R, As &gt;</h3>
 
 <p>The Function class wraps free functions in the form of a <a class="el" href="classPt_1_1Callable.html" title="An interface for all callable entities.">Callable</a>, for use with the signals/slots framework. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a783491ab3c60d509dc575f335cc26345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a783491ab3c60d509dc575f335cc26345">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a8ef5e8eed943c9377c194320d6c78f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef5e8eed943c9377c194320d6c78f6e">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,8 +160,8 @@ class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
         <tr>
           <td class="memname">R operator() </td>
           <td>(</td>
-          <td class="paramtype">ARGUMENTS&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">As...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -178,14 +171,14 @@ class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Since this class template is partially specialized, the passed arguments <em>ARGUMENTS</em> must match the template parameters. </p>
+<p>The passed arguments must match the template arguments. </p>
 
-<p>Implements <a class="el" href="classPt_1_1Callable.html#ac20efa74238bc67b3096403994ee5f50">Callable&lt; R, ARGUMENTS &gt;</a>.</p>
+<p>Implements <a class="el" href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">Callable&lt; R, As... &gt;</a>.</p>
 
 </div>
 </div>
-<a id="abed53b622e63b17187d79dcb1e0ddba2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abed53b622e63b17187d79dcb1e0ddba2">&#9670;&nbsp;</a></span>clone()</h2>
+<a id="a245f1cb11cc5d37d2800a6e1dd4ecbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245f1cb11cc5d37d2800a6e1dd4ecbb5">&#9670;&nbsp;</a></span>clone()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +187,7 @@ class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Function.html">Function</a>&lt;R, ARGUMENTS&gt;* clone </td>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Callable.html">Callable</a>* clone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -202,18 +195,16 @@ class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>A copy of the instance is created with new is returned. Ownership is transfered to the caller, who has to delete it. </p>
 
-<p>Implements <a class="el" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">Callable&lt; R, ARGUMENTS &gt;</a>.</p>
-
 </div>
 </div>
-<a id="a56f3751846a98f5f6042424ccd5cf322"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56f3751846a98f5f6042424ccd5cf322">&#9670;&nbsp;</a></span>invoke()</h2>
+<a id="ab2e1af7ead2bf585d9a854bf668d0624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e1af7ead2bf585d9a854bf668d0624">&#9670;&nbsp;</a></span>invoke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,8 +215,8 @@ class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
         <tr>
           <td class="memname">void invoke </td>
           <td>(</td>
-          <td class="paramtype">ARGUMENTS&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">As...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -235,9 +226,9 @@ class Pt::Function&lt; R, ARGUMENTS &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Inherited from <a class="el" href="classPt_1_1Invokable.html" title="Interface for invokable entities.">Invokable</a>. Ignores the return value of the Callable. Since this class template is partially specialized, the passed arguments <em>ARGUMENTS</em> must match the template parameters. </p>
+<p>Inherited from Invokable. Ignores the return value of the Callable. The passed arguments must match the template arguments. </p>
 
-<p>Implements <a class="el" href="classPt_1_1Invokable.html#a5c882b1bfd53e2da07089dd9fb4d40fd">Invokable&lt; ARGUMENTS &gt;</a>.</p>
+<p>Implements <a class="el" href="classPt_1_1Invokable.html#a7f6805dd9bc4d53ef52257f038881d48">Invokable&lt; As... &gt;</a>.</p>
 
 </div>
 </div>

@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>Delegate&lt; R, ARGUMENTS &gt; Class Template Reference</title>
+  <title>Delegate&lt; R, As &gt; Class Template Reference</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#related">Related Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Delegate&lt; R, ARGUMENTS &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
+<div class="title">Delegate&lt; R, As &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -93,7 +93,7 @@
 <p>Delegates an action to a slot.  
  <a href="classPt_1_1Delegate.html#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
+<p>Inherits DelegateBase.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -105,44 +105,44 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#afafeb333bbeb0b937703d05b8a9db257">Delegate</a> (const <a class="el" href="classPt_1_1Delegate.html">Delegate</a> &amp;rhs)</td></tr>
 <tr class="memdesc:afafeb333bbeb0b937703d05b8a9db257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deeply copies the other Delegate. <br /></td></tr>
 <tr class="separator:afafeb333bbeb0b937703d05b8a9db257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42a3dba49c206ee249eea39fb927f217"><td class="memItemLeft" align="right" valign="top"><a id="a42a3dba49c206ee249eea39fb927f217"></a>
-<a class="el" href="classPt_1_1Connection.html">Connection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a42a3dba49c206ee249eea39fb927f217">connect</a> (const <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot</a>&lt; R, ARGUMENTS &gt; &amp;slot)</td></tr>
-<tr class="memdesc:a42a3dba49c206ee249eea39fb927f217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects this object to the given slot and returns that <a class="el" href="classPt_1_1Connection.html" title="Represents a connection between a Signal/Delegate and a slot.">Connection</a>. <br /></td></tr>
-<tr class="separator:a42a3dba49c206ee249eea39fb927f217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388d5be7d03361475f0e98d72f1a3460"><td class="memItemLeft" align="right" valign="top"><a id="a388d5be7d03361475f0e98d72f1a3460"></a>
+<a class="el" href="classPt_1_1Connection.html">Connection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a388d5be7d03361475f0e98d72f1a3460">connect</a> (const <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot</a>&lt; R, As... &gt; &amp;slot)</td></tr>
+<tr class="memdesc:a388d5be7d03361475f0e98d72f1a3460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects this object to the given slot and returns that <a class="el" href="classPt_1_1Connection.html" title="Represents a connection between a Signal/Delegate and a slot.">Connection</a>. <br /></td></tr>
+<tr class="separator:a388d5be7d03361475f0e98d72f1a3460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a960705de531a20389fb29928d43258c3"><td class="memItemLeft" align="right" valign="top"><a id="a960705de531a20389fb29928d43258c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a960705de531a20389fb29928d43258c3">disconnect</a> ()</td></tr>
 <tr class="memdesc:a960705de531a20389fb29928d43258c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects from current target. <br /></td></tr>
 <tr class="separator:a960705de531a20389fb29928d43258c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af81329b64f5d1e5cdc759cc17418e483"><td class="memItemLeft" align="right" valign="top"><a id="af81329b64f5d1e5cdc759cc17418e483"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#af81329b64f5d1e5cdc759cc17418e483">disconnect</a> (const <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot</a>&lt; R, ARGUMENTS &gt; &amp;slot)</td></tr>
-<tr class="memdesc:af81329b64f5d1e5cdc759cc17418e483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects from the target. <br /></td></tr>
-<tr class="separator:af81329b64f5d1e5cdc759cc17418e483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f923308b3cf0a5e1798c500d1f8181b"><td class="memItemLeft" align="right" valign="top"><a id="a3f923308b3cf0a5e1798c500d1f8181b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a3f923308b3cf0a5e1798c500d1f8181b">disconnect</a> (const <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot</a>&lt; R, As... &gt; &amp;slot)</td></tr>
+<tr class="memdesc:a3f923308b3cf0a5e1798c500d1f8181b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects from the target. <br /></td></tr>
+<tr class="separator:a3f923308b3cf0a5e1798c500d1f8181b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3f354e905203c9d25f76b549a59aea"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a> (As... args)</td></tr>
+<tr class="memdesc:abd3f354e905203c9d25f76b549a59aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the slot connected to the Delegate.  <a href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">More...</a><br /></td></tr>
+<tr class="separator:abd3f354e905203c9d25f76b549a59aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee09805cf0b37aa81f8f05d4c63ad5a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">invoke</a> (As... args)</td></tr>
+<tr class="memdesc:aee09805cf0b37aa81f8f05d4c63ad5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the slot connected to the Delegate.  <a href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">More...</a><br /></td></tr>
+<tr class="separator:aee09805cf0b37aa81f8f05d4c63ad5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2ce14ebe794e8f8d4da20a20dfbbbe"><td class="memItemLeft" align="right" valign="top"><a id="afe2ce14ebe794e8f8d4da20a20dfbbbe"></a>
+R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#afe2ce14ebe794e8f8d4da20a20dfbbbe">operator()</a> (As... args)</td></tr>
+<tr class="memdesc:afe2ce14ebe794e8f8d4da20a20dfbbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea" title="Calls the slot connected to the Delegate.">call()</a> <br /></td></tr>
+<tr class="separator:afe2ce14ebe794e8f8d4da20a20dfbbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80178eafbc14f5434c65b0a8413c12c7"><td class="memItemLeft" align="right" valign="top"><a id="a80178eafbc14f5434c65b0a8413c12c7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a80178eafbc14f5434c65b0a8413c12c7">isConnected</a> () const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</b> () const</td></tr>
 <tr class="memdesc:a80178eafbc14f5434c65b0a8413c12c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if connected to a target. <br /></td></tr>
 <tr class="separator:a80178eafbc14f5434c65b0a8413c12c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5acdcba26acb7e90ddec49f40116aa"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a> (ARGUMENTS) const</td></tr>
-<tr class="memdesc:a4c5acdcba26acb7e90ddec49f40116aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the slot connected to the Delegate.  <a href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">More...</a><br /></td></tr>
-<tr class="separator:a4c5acdcba26acb7e90ddec49f40116aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56f3751846a98f5f6042424ccd5cf322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">invoke</a> (ARGUMENTS) const</td></tr>
-<tr class="memdesc:a56f3751846a98f5f6042424ccd5cf322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the slot connected to the Delegate.  <a href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">More...</a><br /></td></tr>
-<tr class="separator:a56f3751846a98f5f6042424ccd5cf322"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29c3fb244c2c5315b406905eb2eda4ce"><td class="memItemLeft" align="right" valign="top"><a id="a29c3fb244c2c5315b406905eb2eda4ce"></a>
-R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a29c3fb244c2c5315b406905eb2eda4ce">operator()</a> (ARGUMENTS) const</td></tr>
-<tr class="memdesc:a29c3fb244c2c5315b406905eb2eda4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa" title="Calls the slot connected to the Delegate.">call()</a> <br /></td></tr>
-<tr class="separator:a29c3fb244c2c5315b406905eb2eda4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
-<tr class="memitem:a3c377f2e4b2d00cf5697a5ec603334be"><td class="memTemplParams" colspan="2"><a id="a3c377f2e4b2d00cf5697a5ec603334be"></a>
-template&lt;typename R , typename ARGS &gt; </td></tr>
-<tr class="memitem:a3c377f2e4b2d00cf5697a5ec603334be"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Connection.html">Connection</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#a3c377f2e4b2d00cf5697a5ec603334be">operator+=</a> (<a class="el" href="classPt_1_1Delegate.html">Delegate</a>&lt; R, ARGS &gt; &amp;delegate, const <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot</a>&lt; R, ARGS &gt; &amp;slot)</td></tr>
-<tr class="memdesc:a3c377f2e4b2d00cf5697a5ec603334be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect a Delegate to a slot. <br /></td></tr>
-<tr class="separator:a3c377f2e4b2d00cf5697a5ec603334be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53c69b236efc457195b407e18974d8b"><td class="memTemplParams" colspan="2"><a id="aa53c69b236efc457195b407e18974d8b"></a>
+template&lt;typename R , typename... As&gt; </td></tr>
+<tr class="memitem:aa53c69b236efc457195b407e18974d8b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Connection.html">Connection</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Delegate.html#aa53c69b236efc457195b407e18974d8b">operator+=</a> (<a class="el" href="classPt_1_1Delegate.html">Delegate</a>&lt; R, As... &gt; &amp;delegate, const <a class="el" href="classPt_1_1BasicSlot.html">BasicSlot</a>&lt; R, As... &gt; &amp;slot)</td></tr>
+<tr class="memdesc:aa53c69b236efc457195b407e18974d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect a Delegate to a slot. <br /></td></tr>
+<tr class="separator:aa53c69b236efc457195b407e18974d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename R, typename ARGUMENTS&gt;<br />
-class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
+<div class="textblock"><h3>template&lt;typename R, typename... As&gt;<br />
+class Pt::Delegate&lt; R, As &gt;</h3>
 
 <p>The <a class="el" href="classPt_1_1Delegate.html" title="Delegates an action to a slot.">Pt::Delegate</a> is an alternative to the <a class="el" href="classPt_1_1Signal.html" title="Multicast Signal to call multiple slots.">Pt::Signal</a> and differs from it in two ways. Firstly, delegates forward the return value of the slot and secondly, delegates can only be connected to one slot at a time. The same types of slots can be used for signals and delegates. The template parameter list of the <a class="el" href="classPt_1_1Delegate.html" title="Delegates an action to a slot.">Delegate</a> determines its signature, where the first parameter represents the return type:</p>
 <div class="fragment"><div class="line"><a class="code" href="classPt_1_1Delegate.html">Pt::Delegate&lt;int&gt;</a> del0;           <span class="comment">// Delegate only returns int</span></div>
@@ -164,7 +164,7 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The example above constructs a delegate which can be connected to any slot that returns an int. It is first connected to a slot of the function slotA. When it is connected for the second time to a slot of the function slotB, the old connection will be closed and only slotB is called when the delegate is called.</p>
-<p>There are two possibilities how a delegate can call its slot. The member function <a class="el" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call()</a> will return the return value of the slot. If the delegate is not connected to a slot, an exception is thrown. The second method is through <a class="el" href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">invoke()</a>, where the return value is ignored, but if the delegate is not connected, no exception will be thrown.</p>
+<p>There are two possibilities how a delegate can call its slot. The member function <a class="el" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call()</a> will return the return value of the slot. If the delegate is not connected to a slot, an exception is thrown. The second method is through <a class="el" href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">invoke()</a>, where the return value is ignored, but if the delegate is not connected, no exception will be thrown.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> slot()</div>
 <div class="line">{ <span class="keywordflow">return</span> 5; }</div>
 <div class="line"> </div>
@@ -175,11 +175,11 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
 <div class="line">        <a class="code" href="classPt_1_1Delegate.html">Pt::Delegate&lt;int&gt;</a> delegate;</div>
 <div class="line">        <a class="code" href="classPt_1_1Connection.html">Pt::Connection</a> connection = delegate += Pt::slot(slot);</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordtype">int</span> i = delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>(); <span class="comment">// i is 5 now</span></div>
+<div class="line">        <span class="keywordtype">int</span> i = delegate.<a class="code" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a>(); <span class="comment">// i is 5 now</span></div>
 <div class="line"> </div>
 <div class="line">        connection.<a class="code" href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
-<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">invoke</a>() <span class="comment">// does not throw</span></div>
-<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">call</a>();  <span class="comment">// will throw because not connected</span></div>
+<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">invoke</a>() <span class="comment">// does not throw</span></div>
+<div class="line">        delegate.<a class="code" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">call</a>();  <span class="comment">// will throw because not connected</span></div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::logic_error&amp; ex)</div>
 <div class="line">    {</div>
@@ -190,8 +190,8 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
 <div class="line">}</div>
 </div><!-- fragment --><p>The program above connects a delegate to a slot and then calls it. After the connection was closed, the delegate is invoked, which has no effect. Finally, when the delegate is called again, an exception is thrown and catched. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4c5acdcba26acb7e90ddec49f40116aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5acdcba26acb7e90ddec49f40116aa">&#9670;&nbsp;</a></span>call()</h2>
+<a id="abd3f354e905203c9d25f76b549a59aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3f354e905203c9d25f76b549a59aea">&#9670;&nbsp;</a></span>call()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,9 +199,9 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
         <tr>
           <td class="memname">R call </td>
           <td>(</td>
-          <td class="paramtype">ARGUMENTS&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">As...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -209,8 +209,8 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
 
 </div>
 </div>
-<a id="a56f3751846a98f5f6042424ccd5cf322"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56f3751846a98f5f6042424ccd5cf322">&#9670;&nbsp;</a></span>invoke()</h2>
+<a id="aee09805cf0b37aa81f8f05d4c63ad5a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee09805cf0b37aa81f8f05d4c63ad5a7">&#9670;&nbsp;</a></span>invoke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,9 +218,9 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
         <tr>
           <td class="memname">void invoke </td>
           <td>(</td>
-          <td class="paramtype">ARGUMENTS&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">As...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -229,10 +229,10 @@ class Pt::Delegate&lt; R, ARGUMENTS &gt;</h3>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1Delegate_html_a4c5acdcba26acb7e90ddec49f40116aa"><div class="ttname"><a href="classPt_1_1Delegate.html#a4c5acdcba26acb7e90ddec49f40116aa">Pt::Delegate::call</a></div><div class="ttdeci">R call(ARGUMENTS) const</div><div class="ttdoc">Calls the slot connected to the Delegate.</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html_aee09805cf0b37aa81f8f05d4c63ad5a7"><div class="ttname"><a href="classPt_1_1Delegate.html#aee09805cf0b37aa81f8f05d4c63ad5a7">Pt::Delegate::invoke</a></div><div class="ttdeci">void invoke(As... args)</div><div class="ttdoc">Invoke the slot connected to the Delegate.</div><div class="ttdef"><b>Definition:</b> Delegate.h:251</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">Pt::Connection::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the connection.</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html_a56f3751846a98f5f6042424ccd5cf322"><div class="ttname"><a href="classPt_1_1Delegate.html#a56f3751846a98f5f6042424ccd5cf322">Pt::Delegate::invoke</a></div><div class="ttdeci">void invoke(ARGUMENTS) const</div><div class="ttdoc">Invoke the slot connected to the Delegate.</div></div>
-<div class="ttc" id="aclassPt_1_1Delegate_html"><div class="ttname"><a href="classPt_1_1Delegate.html">Pt::Delegate</a></div><div class="ttdoc">Delegates an action to a slot.</div><div class="ttdef"><b>Definition:</b> Api-Delegate.h:93</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html_abd3f354e905203c9d25f76b549a59aea"><div class="ttname"><a href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">Pt::Delegate::call</a></div><div class="ttdeci">R call(As... args)</div><div class="ttdoc">Calls the slot connected to the Delegate.</div><div class="ttdef"><b>Definition:</b> Delegate.h:236</div></div>
+<div class="ttc" id="aclassPt_1_1Delegate_html"><div class="ttname"><a href="classPt_1_1Delegate.html">Pt::Delegate</a></div><div class="ttdoc">Delegates an action to a slot.</div><div class="ttdef"><b>Definition:</b> Delegate.h:194</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html"><div class="ttname"><a href="classPt_1_1Connection.html">Pt::Connection</a></div><div class="ttdoc">Represents a connection between a Signal/Delegate and a slot.</div><div class="ttdef"><b>Definition:</b> Connection.h:91</div></div>
 
 <div class="clear">&nbsp;</div>
