@@ -346,7 +346,7 @@
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">  289</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(<span class="keywordtype">float</span> x)</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">  289</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(<span class="keywordtype">float</span> x)</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201103L</span></div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
@@ -354,7 +354,7 @@
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#elif (_MSC_VER &lt; 1800)</span></div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> tmp = <span class="keyword">static_cast&lt;</span><a class="code" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a><span class="keyword">&gt;</span>(x);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> tmp = <span class="keyword">static_cast&lt;</span><a class="code" href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a><span class="keyword">&gt;</span>(x);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    tmp += (x - tmp &gt;= 0.5) - (x - tmp &lt;= -0.5);</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
@@ -399,7 +399,7 @@
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    </div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="namespacePt.html#a622ef977672fa175cec4365a5352add1">  344</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(<span class="keywordtype">double</span> x)</div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="namespacePt.html#a622ef977672fa175cec4365a5352add1">  344</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> <a class="code" href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">lround</a>(<span class="keywordtype">double</span> x)</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;{</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201103L</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
@@ -407,7 +407,7 @@
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">#elif (_MSC_VER &lt; 1800)</span></div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> tmp = <span class="keyword">static_cast&lt;</span><a class="code" href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a><span class="keyword">&gt;</span>(x);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a> tmp = <span class="keyword">static_cast&lt;</span><a class="code" href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a><span class="keyword">&gt;</span>(x);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    tmp += (x - tmp &gt;= 0.5) - (x - tmp &lt;= -0.5);</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
@@ -460,11 +460,11 @@
 <div class="ttc" id="anamespacePt_html_ac19ed701e0d38ec08f5284c07932ae34"><div class="ttname"><a href="namespacePt.html#ac19ed701e0d38ec08f5284c07932ae34">Pt::lround</a></div><div class="ttdeci">Pt::int32_t lround(float x)</div><div class="ttdoc">Rounds to nearest integer value.</div><div class="ttdef"><b>Definition:</b> Math.h:289</div></div>
 <div class="ttc" id="anamespacePt_html_a1a5c7eee6cab394a14634c3f86e7679b"><div class="ttname"><a href="namespacePt.html#a1a5c7eee6cab394a14634c3f86e7679b">Pt::piHalf</a></div><div class="ttdeci">T piHalf()</div><div class="ttdoc">The constant pi/2.</div></div>
 <div class="ttc" id="anamespacePt_html_a32a0294d6d0d6cac3c520ebdab6f37e7"><div class="ttname"><a href="namespacePt.html#a32a0294d6d0d6cac3c520ebdab6f37e7">Pt::piQuart</a></div><div class="ttdeci">T piQuart()</div><div class="ttdoc">The constant pi/4.</div></div>
+<div class="ttc" id="agroup__Pt-Basics_html_ga32f2e37ee053cf2ce8ca28d1f74630e5"><div class="ttname"><a href="group__Pt-Basics.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a></div><div class="ttdeci">int_type int32_t</div><div class="ttdoc">Signed 32-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:41</div></div>
 <div class="ttc" id="anamespacePt_html_ad2431ccb4e575396cf8c3ded73aa6a80"><div class="ttname"><a href="namespacePt.html#ad2431ccb4e575396cf8c3ded73aa6a80">Pt::piSquare</a></div><div class="ttdeci">T piSquare()</div><div class="ttdoc">The constant pi^2.</div></div>
 <div class="ttc" id="anamespacePt_html_aaff9b289f7e6590d0585fe137e32db34"><div class="ttname"><a href="namespacePt.html#aaff9b289f7e6590d0585fe137e32db34">Pt::fastAtan2</a></div><div class="ttdeci">T fastAtan2(T y, T x)</div><div class="ttdoc">Fast, but less precise atan2 calculation.</div><div class="ttdef"><b>Definition:</b> Math.h:220</div></div>
 <div class="ttc" id="anamespacePt_html_a9264e43dca871714965e4e82835a7be7"><div class="ttname"><a href="namespacePt.html#a9264e43dca871714965e4e82835a7be7">Pt::hypot</a></div><div class="ttdeci">double hypot(double x, double y)</div><div class="ttdoc">Return the euclidean distance of the given values.</div><div class="ttdef"><b>Definition:</b> Math.h:275</div></div>
 <div class="ttc" id="anamespacePt_html_ac1633e6539d9c7166728b51df7027c36"><div class="ttname"><a href="namespacePt.html#ac1633e6539d9c7166728b51df7027c36">Pt::fastCos</a></div><div class="ttdeci">T fastCos(const T &amp;theta)</div><div class="ttdoc">Fast, less precise cosine calculation.</div><div class="ttdef"><b>Definition:</b> Math.h:200</div></div>
-<div class="ttc" id="agroup__BasicTypes_html_ga32f2e37ee053cf2ce8ca28d1f74630e5"><div class="ttname"><a href="group__BasicTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">Pt::int32_t</a></div><div class="ttdeci">int_type int32_t</div><div class="ttdoc">Signed 32-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:41</div></div>
 <div class="ttc" id="anamespacePt_html_acea03e02bba921df78a570d6cfb6f2c6"><div class="ttname"><a href="namespacePt.html#acea03e02bba921df78a570d6cfb6f2c6">Pt::fastSin</a></div><div class="ttdeci">T fastSin(const T &amp;theta)</div><div class="ttdoc">Fast, but less precise sine calculation.</div><div class="ttdef"><b>Definition:</b> Math.h:170</div></div>
 
 <div class="clear">&nbsp;</div>

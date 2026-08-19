@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>RemoteProcedure&lt; R, ARGUMENTS &gt; Class Template Reference</title>
+  <title>RemoteProcedure&lt; R, As &gt; Class Template Reference</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">RemoteProcedure&lt; R, ARGUMENTS &gt; Class Template Reference</div>  </div>
+<div class="title">RemoteProcedure&lt; R, As &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -91,64 +91,66 @@
 
 <p>Performs a remote procedure call.  
  <a href="classPt_1_1Remoting_1_1RemoteProcedure.html#details">More...</a></p>
+
+<p>Inherits RemoteProcedureBase&lt; R &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aabeb06e11f0bd624b79a914d53ccec24"><td class="memItemLeft" align="right" valign="top"><a id="aabeb06e11f0bd624b79a914d53ccec24"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#aabeb06e11f0bd624b79a914d53ccec24">RemoteProcedure</a> (<a class="el" href="classPt_1_1Remoting_1_1Client.html">Client</a> &amp;<a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a18569c57a6931b850da67a49852c9dba">client</a>, const std::string &amp;<a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#ac7fa2815980eb7a696b3ce00436c44ba">name</a>)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#aabeb06e11f0bd624b79a914d53ccec24">RemoteProcedure</a> (<a class="el" href="classPt_1_1Remoting_1_1Client.html">Client</a> &amp;client, const std::string &amp;name)</td></tr>
 <tr class="memdesc:aabeb06e11f0bd624b79a914d53ccec24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with procedure name and client. <br /></td></tr>
 <tr class="separator:aabeb06e11f0bd624b79a914d53ccec24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec69864c390815311ff0a2bd8d328945"><td class="memItemLeft" align="right" valign="top"><a id="aec69864c390815311ff0a2bd8d328945"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#aec69864c390815311ff0a2bd8d328945">~RemoteProcedure</a> ()</td></tr>
 <tr class="memdesc:aec69864c390815311ff0a2bd8d328945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:aec69864c390815311ff0a2bd8d328945"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f7e8e6f89536c36fd3f3e15d6464aa5"><td class="memItemLeft" align="right" valign="top"><a id="a8f7e8e6f89536c36fd3f3e15d6464aa5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a8f7e8e6f89536c36fd3f3e15d6464aa5">begin</a> (const ARGUMENTS &amp;args...)</td></tr>
-<tr class="memdesc:a8f7e8e6f89536c36fd3f3e15d6464aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins an asynchronous remote call. <br /></td></tr>
-<tr class="separator:a8f7e8e6f89536c36fd3f3e15d6464aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35887e789467f68916a2e00530978178"><td class="memItemLeft" align="right" valign="top"><a id="a35887e789467f68916a2e00530978178"></a>
-const R &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a35887e789467f68916a2e00530978178">call</a> (const ARGUMENTS &amp;args...)</td></tr>
-<tr class="memdesc:a35887e789467f68916a2e00530978178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking remote call. <br /></td></tr>
-<tr class="separator:a35887e789467f68916a2e00530978178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae244a79f0b4bced6511462b60f8cbf4a"><td class="memItemLeft" align="right" valign="top"><a id="ae244a79f0b4bced6511462b60f8cbf4a"></a>
-const R &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#ae244a79f0b4bced6511462b60f8cbf4a">operator()</a> (const ARGUMENTS &amp;args...)</td></tr>
-<tr class="memdesc:ae244a79f0b4bced6511462b60f8cbf4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking remote call. <br /></td></tr>
-<tr class="separator:ae244a79f0b4bced6511462b60f8cbf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539794dc07eb042dd2246587e8c668ea"><td class="memItemLeft" align="right" valign="top"><a id="a539794dc07eb042dd2246587e8c668ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a539794dc07eb042dd2246587e8c668ea">begin</a> (const As &amp;... args)</td></tr>
+<tr class="memdesc:a539794dc07eb042dd2246587e8c668ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins an asynchronous remote call. <br /></td></tr>
+<tr class="separator:a539794dc07eb042dd2246587e8c668ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585bb43cc46ead593e538dd9b67a5cd9"><td class="memItemLeft" align="right" valign="top"><a id="a585bb43cc46ead593e538dd9b67a5cd9"></a>
+const R &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a585bb43cc46ead593e538dd9b67a5cd9">call</a> (const As &amp;... args)</td></tr>
+<tr class="memdesc:a585bb43cc46ead593e538dd9b67a5cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking remote call. <br /></td></tr>
+<tr class="separator:a585bb43cc46ead593e538dd9b67a5cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8c9e135a4d9c28a29213788ed38a9d"><td class="memItemLeft" align="right" valign="top"><a id="a2f8c9e135a4d9c28a29213788ed38a9d"></a>
+const R &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a2f8c9e135a4d9c28a29213788ed38a9d">operator()</a> (const As &amp;... args)</td></tr>
+<tr class="memdesc:a2f8c9e135a4d9c28a29213788ed38a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking remote call. <br /></td></tr>
+<tr class="separator:a2f8c9e135a4d9c28a29213788ed38a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af797d0e40a732b93fb8d63de4c547ca5"><td class="memItemLeft" align="right" valign="top"><a id="af797d0e40a732b93fb8d63de4c547ca5"></a>
-<a class="el" href="classPt_1_1Remoting_1_1Result.html">Result</a>&lt; R &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#af797d0e40a732b93fb8d63de4c547ca5">result</a> ()</td></tr>
+<a class="el" href="classPt_1_1Remoting_1_1Result.html">Result</a>&lt; R &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>result</b> ()</td></tr>
 <tr class="memdesc:af797d0e40a732b93fb8d63de4c547ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the call. <br /></td></tr>
 <tr class="separator:af797d0e40a732b93fb8d63de4c547ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a521f6688e44617fc838c7b7b85a42734"><td class="memItemLeft" align="right" valign="top"><a id="a521f6688e44617fc838c7b7b85a42734"></a>
-const <a class="el" href="classPt_1_1Remoting_1_1Result.html">Result</a>&lt; R &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a521f6688e44617fc838c7b7b85a42734">result</a> () const</td></tr>
+const <a class="el" href="classPt_1_1Remoting_1_1Result.html">Result</a>&lt; R &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>result</b> () const</td></tr>
 <tr class="memdesc:a521f6688e44617fc838c7b7b85a42734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the call. <br /></td></tr>
 <tr class="separator:a521f6688e44617fc838c7b7b85a42734"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8500e6f3056baa83fa1aabf1be3ceda8"><td class="memItemLeft" align="right" valign="top"><a id="a8500e6f3056baa83fa1aabf1be3ceda8"></a>
-<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; const <a class="el" href="classPt_1_1Remoting_1_1Result.html">Result</a>&lt; R &gt; &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a8500e6f3056baa83fa1aabf1be3ceda8">finished</a> ()</td></tr>
+<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; const <a class="el" href="classPt_1_1Remoting_1_1Result.html">Result</a>&lt; R &gt; &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td></tr>
 <tr class="memdesc:a8500e6f3056baa83fa1aabf1be3ceda8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports that the result has been received. <br /></td></tr>
 <tr class="separator:a8500e6f3056baa83fa1aabf1be3ceda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18569c57a6931b850da67a49852c9dba"><td class="memItemLeft" align="right" valign="top"><a id="a18569c57a6931b850da67a49852c9dba"></a>
-<a class="el" href="classPt_1_1Remoting_1_1Client.html">Client</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a18569c57a6931b850da67a49852c9dba">client</a> ()</td></tr>
+<a class="el" href="classPt_1_1Remoting_1_1Client.html">Client</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>client</b> ()</td></tr>
 <tr class="memdesc:a18569c57a6931b850da67a49852c9dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the client used for communication. <br /></td></tr>
 <tr class="separator:a18569c57a6931b850da67a49852c9dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7fa2815980eb7a696b3ce00436c44ba"><td class="memItemLeft" align="right" valign="top"><a id="ac7fa2815980eb7a696b3ce00436c44ba"></a>
-const <a class="el" href="classPt_1_1String.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#ac7fa2815980eb7a696b3ce00436c44ba">name</a> () const</td></tr>
+const <a class="el" href="classPt_1_1String.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> () const</td></tr>
 <tr class="memdesc:ac7fa2815980eb7a696b3ce00436c44ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the procedure. <br /></td></tr>
 <tr class="separator:ac7fa2815980eb7a696b3ce00436c44ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4c45a56f5aca569ab9a2719de8f4f8"><td class="memItemLeft" align="right" valign="top"><a id="adb4c45a56f5aca569ab9a2719de8f4f8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#adb4c45a56f5aca569ab9a2719de8f4f8">isFailed</a> () const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFailed</b> () const</td></tr>
 <tr class="memdesc:adb4c45a56f5aca569ab9a2719de8f4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the procedure failed. <br /></td></tr>
 <tr class="separator:adb4c45a56f5aca569ab9a2719de8f4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft" align="right" valign="top"><a id="a02d5fa6b14e221f3012a794b905be166"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a02d5fa6b14e221f3012a794b905be166">cancel</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cancel</b> ()</td></tr>
 <tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the remote call. <br /></td></tr>
 <tr class="separator:a02d5fa6b14e221f3012a794b905be166"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename R, typename... ARGUMENTS&gt;<br />
-class Pt::Remoting::RemoteProcedure&lt; R, ARGUMENTS &gt;</h3>
+<div class="textblock"><h3>template&lt;typename R, typename... As&gt;<br />
+class Pt::Remoting::RemoteProcedure&lt; R, As &gt;</h3>
 
 <p>This class is a function object to perform remote procedure call. It is a class template where the template parameters imply the signature of the remote procedure. The first tempate parameter is the return value type, followed by the argument types, if any. For example, a RemoteProcedure&lt;double, int, int&gt; calls a remote procedure which returns a double and takes two ints as arguments. A RemoteProcedure&lt;std::string&gt; calls a remote procedure without arguments, only returning a std::string.</p>
-<p>Synchronous operation is supported by means of the operator() and the <a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a35887e789467f68916a2e00530978178" title="Blocking remote call.">call()</a> method. Asynchronous calls can be made by calling begin and connecting to the finished signal, which is sent when the result has been received. The finshed signal has one parameter of type Result&lt;R&gt;, which contains the return value.</p>
+<p>Synchronous operation is supported by means of the operator() and the <a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a585bb43cc46ead593e538dd9b67a5cd9" title="Blocking remote call.">call()</a> method. Asynchronous calls can be made by calling begin and connecting to the finished signal, which is sent when the result has been received. The finshed signal has one parameter of type Result&lt;R&gt;, which contains the return value.</p>
 <p>The RemoteProcedure uses a <a class="el" href="classPt_1_1Remoting_1_1Client.html" title="A client for remote procedure calls.">Client</a> for communication with the service. In many cases this will be a HttpClient, but other transport protocols can be supported by other types of clients. The <a class="el" href="classPt_1_1Remoting_1_1Client.html" title="A client for remote procedure calls.">Client</a> must live longer than the remote procedures using it. </p>
 </div></div><!-- contents -->
 

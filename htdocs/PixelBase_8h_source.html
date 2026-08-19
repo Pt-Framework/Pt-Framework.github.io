@@ -133,7 +133,7 @@
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PixelBase.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>(<span class="keyword">const</span> ViewBase&amp; view, <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base, Pt::ssize_t x, Pt::ssize_t y)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>(<span class="keyword">const</span> ViewBase&amp; view, <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base, Pt::ssize_t x, Pt::ssize_t y)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        : _view(&amp;view)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        , _base(base)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        { }</div>
@@ -144,10 +144,10 @@
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">const</span> ViewBase&amp; view()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> *_view; }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        { <span class="keywordflow">return</span> _base; }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _base; }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> advance()</div>
@@ -247,14 +247,14 @@
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::type_info&amp; onGetType() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onAdvance() = 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onAdvance() = 0;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onSkipPadding()</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onSkipPadding()</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        { <span class="keywordflow">return</span> 0; }</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onAdvance(Pt::ssize_t n) = 0;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onAdvance(Pt::ssize_t n) = 0;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onAdvanceLines(Pt::ssize_t n)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* onAdvanceLines(Pt::ssize_t n)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        { <span class="keywordflow">return</span> 0; }</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1ColorF.html">ColorF</a> onGetColorF() <span class="keyword">const</span> = 0;</div>
@@ -291,7 +291,7 @@
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">const</span> ViewBase* _view;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>*    _base;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>*    _base;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;};</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
@@ -354,9 +354,9 @@
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="agroup__Pt-Basics_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PixelBase_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PixelBase.html">Pt::Gfx::PixelBase</a></div><div class="ttdoc">Pixel base class.</div><div class="ttdef"><b>Definition:</b> PixelBase.h:52</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1ColorF_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ColorF.html">Pt::Gfx::ColorF</a></div><div class="ttdef"><b>Definition:</b> Color.h:143</div></div>
-<div class="ttc" id="agroup__BasicTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">Standard color type.</div><div class="ttdef"><b>Definition:</b> Color.h:47</div></div>
 
 <div class="clear">&nbsp;</div>

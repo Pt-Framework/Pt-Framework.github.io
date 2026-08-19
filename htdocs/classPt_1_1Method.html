@@ -85,7 +85,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#related">Related Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Method&lt; R, ClassT, As &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
+<div class="title">Method&lt; R, ClassT, As &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Signals.html">Signals and Delegates</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -121,9 +121,12 @@ const ClassT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 const <a class="el" href="classPt_1_1Method.html#a02be7f582faa4d46f19f87f19148c177">MemFuncT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html#a5791ae9d7f8dad7ab5cfad3278fd5303">method</a> () const</td></tr>
 <tr class="memdesc:a5791ae9d7f8dad7ab5cfad3278fd5303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the wrapped member function. <br /></td></tr>
 <tr class="separator:a5791ae9d7f8dad7ab5cfad3278fd5303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ef5e8eed943c9377c194320d6c78f6e"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html#a8ef5e8eed943c9377c194320d6c78f6e">operator()</a> (As... args) const</td></tr>
-<tr class="memdesc:a8ef5e8eed943c9377c194320d6c78f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the callable entity.  <a href="classPt_1_1Method.html#a8ef5e8eed943c9377c194320d6c78f6e">More...</a><br /></td></tr>
-<tr class="separator:a8ef5e8eed943c9377c194320d6c78f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eafc9fafa41fc928d7d905b61ff0e9e"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html#a8eafc9fafa41fc928d7d905b61ff0e9e">call</a> (As... args) const</td></tr>
+<tr class="memdesc:a8eafc9fafa41fc928d7d905b61ff0e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the callable entity and returns its result.  <a href="classPt_1_1Method.html#a8eafc9fafa41fc928d7d905b61ff0e9e">More...</a><br /></td></tr>
+<tr class="separator:a8eafc9fafa41fc928d7d905b61ff0e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e1af7ead2bf585d9a854bf668d0624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html#ab2e1af7ead2bf585d9a854bf668d0624">invoke</a> (As... args) const</td></tr>
+<tr class="memdesc:ab2e1af7ead2bf585d9a854bf668d0624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes the invokable entity with the given arguments.  <a href="classPt_1_1Method.html#ab2e1af7ead2bf585d9a854bf668d0624">More...</a><br /></td></tr>
+<tr class="separator:ab2e1af7ead2bf585d9a854bf668d0624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f911644e75a12711cb934f6693f808c"><td class="memItemLeft" align="right" valign="top"><a id="a6f911644e75a12711cb934f6693f808c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Method.html#a6f911644e75a12711cb934f6693f808c">operator==</a> (const <a class="el" href="classPt_1_1Method.html">Method</a> &amp;other) const</td></tr>
 <tr class="memdesc:a6f911644e75a12711cb934f6693f808c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if both use the same object and function pointer. <br /></td></tr>
@@ -131,13 +134,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a245f1cb11cc5d37d2800a6e1dd4ecbb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Callable.html">Callable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">clone</a> () const=0</td></tr>
 <tr class="memdesc:a245f1cb11cc5d37d2800a6e1dd4ecbb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this instance.  <a href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">More...</a><br /></td></tr>
 <tr class="separator:a245f1cb11cc5d37d2800a6e1dd4ecbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70e90f858fe874d5a854913235da2eaa"><td class="memItemLeft" align="right" valign="top"><a id="a70e90f858fe874d5a854913235da2eaa"></a>
-ReturnT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a70e90f858fe874d5a854913235da2eaa">call</a> (As... args) const</td></tr>
-<tr class="memdesc:a70e90f858fe874d5a854913235da2eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as operator(). <br /></td></tr>
-<tr class="separator:a70e90f858fe874d5a854913235da2eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e1af7ead2bf585d9a854bf668d0624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">invoke</a> (As... args) const</td></tr>
-<tr class="memdesc:ab2e1af7ead2bf585d9a854bf668d0624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the callable entity.  <a href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">More...</a><br /></td></tr>
-<tr class="separator:ab2e1af7ead2bf585d9a854bf668d0624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef5e8eed943c9377c194320d6c78f6e"><td class="memItemLeft" align="right" valign="top"><a id="a8ef5e8eed943c9377c194320d6c78f6e"></a>
+R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Callable.html#a8ef5e8eed943c9377c194320d6c78f6e">operator()</a> (As... args) const</td></tr>
+<tr class="memdesc:a8ef5e8eed943c9377c194320d6c78f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classPt_1_1Callable.html#a6a308be03e7065f8df4e4da4315e2b5e" title="Calls the callable entity and returns its result.">call()</a>. <br /></td></tr>
+<tr class="separator:a8ef5e8eed943c9377c194320d6c78f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -160,8 +160,8 @@ class Pt::Method&lt; R, ClassT, As &gt;</h3>
 
 <p>The Method class wraps member functions as <a class="el" href="classPt_1_1Callable.html" title="An interface for all callable entities.">Callable</a> objects so that they can be used with the signals/slots framework. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8ef5e8eed943c9377c194320d6c78f6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ef5e8eed943c9377c194320d6c78f6e">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a8eafc9fafa41fc928d7d905b61ff0e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eafc9fafa41fc928d7d905b61ff0e9e">&#9670;&nbsp;</a></span>call()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +170,7 @@ class Pt::Method&lt; R, ClassT, As &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">R operator() </td>
+          <td class="memname">R call </td>
           <td>(</td>
           <td class="paramtype">As...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
@@ -183,9 +183,38 @@ class Pt::Method&lt; R, ClassT, As &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The passed arguments must match the template arguments. </p>
+<p>This is the primary non-virtual entry point used by <a class="el" href="classPt_1_1Delegate.html" title="Delegates an action to a slot.">Delegate</a> and other callers that need the return value. All derived classes must implement this. </p>
 
-<p>Implements <a class="el" href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">Callable&lt; R, As... &gt;</a>.</p>
+<p>Implements <a class="el" href="classPt_1_1Callable.html#a6a308be03e7065f8df4e4da4315e2b5e">Callable&lt; R, As... &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab2e1af7ead2bf585d9a854bf668d0624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e1af7ead2bf585d9a854bf668d0624">&#9670;&nbsp;</a></span>invoke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void invoke </td>
+          <td>(</td>
+          <td class="paramtype">As...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The passed arguments must match the template parameters. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Callable.html#a7f6805dd9bc4d53ef52257f038881d48">Callable&lt; R, As... &gt;</a>.</p>
 
 </div>
 </div>
@@ -212,35 +241,6 @@ class Pt::Method&lt; R, ClassT, As &gt;</h3>
 </table>
 </div><div class="memdoc">
 <p>A copy of the instance is created with new is returned. Ownership is transfered to the caller, who has to delete it. </p>
-
-</div>
-</div>
-<a id="ab2e1af7ead2bf585d9a854bf668d0624"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2e1af7ead2bf585d9a854bf668d0624">&#9670;&nbsp;</a></span>invoke()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void invoke </td>
-          <td>(</td>
-          <td class="paramtype">As...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Inherited from Invokable. Ignores the return value of the Callable. The passed arguments must match the template arguments. </p>
-
-<p>Implements <a class="el" href="classPt_1_1Invokable.html#a7f6805dd9bc4d53ef52257f038881d48">Invokable&lt; As... &gt;</a>.</p>
 
 </div>
 </div>

@@ -125,36 +125,30 @@
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Callable.html">Callable</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Invokable.html">Invokable</a>&lt;As...&gt;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">typedef</span> R ReturnT;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">enum</span> { NumArgs = <span class="keyword">sizeof</span>...(As) };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">   59</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Callable.html">Callable</a>* <a class="code" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">clone</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">   65</a></span>&#160;        <span class="keyword">virtual</span> ReturnT <a class="code" href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">operator()</a>(As... args) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#a70e90f858fe874d5a854913235da2eaa">   69</a></span>&#160;        ReturnT <a class="code" href="classPt_1_1Callable.html#a70e90f858fe874d5a854913235da2eaa">call</a>(As... args)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">operator()</a>(args...);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">   79</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">invoke</a>(As... args)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            this-&gt;<a class="code" href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">operator()</a>(args...);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// namespace Pt</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">   55</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Callable.html">Callable</a>* <a class="code" href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#a6a308be03e7065f8df4e4da4315e2b5e">   63</a></span>&#160;        <span class="keyword">virtual</span> R <a class="code" href="classPt_1_1Callable.html#a6a308be03e7065f8df4e4da4315e2b5e">call</a>(As... args) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#a8ef5e8eed943c9377c194320d6c78f6e">   67</a></span>&#160;        R <a class="code" href="classPt_1_1Callable.html#a8ef5e8eed943c9377c194320d6c78f6e">operator()</a>(As... args)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="classPt_1_1Callable.html#a6a308be03e7065f8df4e4da4315e2b5e">call</a>(args...);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// inherit docs</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classPt_1_1Callable.html#a7f6805dd9bc4d53ef52257f038881d48">   73</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Callable.html#a7f6805dd9bc4d53ef52257f038881d48">invoke</a>(As... args) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <span class="comment">// namespace Pt</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Callable_html"><div class="ttname"><a href="classPt_1_1Callable.html">Pt::Callable</a></div><div class="ttdoc">An interface for all callable entities.</div><div class="ttdef"><b>Definition:</b> Callable.h:48</div></div>
 <div class="ttc" id="aclassPt_1_1Invokable_html"><div class="ttname"><a href="classPt_1_1Invokable.html">Pt::Invokable</a></div><div class="ttdoc">Interface for invokable entities.</div><div class="ttdef"><b>Definition:</b> Invokable.h:57</div></div>
-<div class="ttc" id="aclassPt_1_1Callable_html_ab2e1af7ead2bf585d9a854bf668d0624"><div class="ttname"><a href="classPt_1_1Callable.html#ab2e1af7ead2bf585d9a854bf668d0624">Pt::Callable::invoke</a></div><div class="ttdeci">void invoke(As... args) const</div><div class="ttdoc">Invoke the callable entity.</div><div class="ttdef"><b>Definition:</b> Callable.h:79</div></div>
-<div class="ttc" id="aclassPt_1_1Callable_html_a70e90f858fe874d5a854913235da2eaa"><div class="ttname"><a href="classPt_1_1Callable.html#a70e90f858fe874d5a854913235da2eaa">Pt::Callable::call</a></div><div class="ttdeci">ReturnT call(As... args) const</div><div class="ttdoc">Same as operator().</div><div class="ttdef"><b>Definition:</b> Callable.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Callable_html_a7f6805dd9bc4d53ef52257f038881d48"><div class="ttname"><a href="classPt_1_1Callable.html#a7f6805dd9bc4d53ef52257f038881d48">Pt::Callable::invoke</a></div><div class="ttdeci">virtual void invoke(As... args) const =0</div><div class="ttdoc">Invokes the invokable entity with the given arguments.</div></div>
+<div class="ttc" id="aclassPt_1_1Callable_html_a8ef5e8eed943c9377c194320d6c78f6e"><div class="ttname"><a href="classPt_1_1Callable.html#a8ef5e8eed943c9377c194320d6c78f6e">Pt::Callable::operator()</a></div><div class="ttdeci">R operator()(As... args) const</div><div class="ttdoc">Same as call().</div><div class="ttdef"><b>Definition:</b> Callable.h:67</div></div>
 <div class="ttc" id="aclassPt_1_1Callable_html_a245f1cb11cc5d37d2800a6e1dd4ecbb5"><div class="ttname"><a href="classPt_1_1Callable.html#a245f1cb11cc5d37d2800a6e1dd4ecbb5">Pt::Callable::clone</a></div><div class="ttdeci">virtual Callable * clone() const =0</div><div class="ttdoc">Returns a copy of this instance.</div></div>
-<div class="ttc" id="aclassPt_1_1Callable_html_ae848cfafbe9940bbd296a7e345e64359"><div class="ttname"><a href="classPt_1_1Callable.html#ae848cfafbe9940bbd296a7e345e64359">Pt::Callable::operator()</a></div><div class="ttdeci">virtual ReturnT operator()(As... args) const =0</div><div class="ttdoc">Call the callable entity.</div></div>
+<div class="ttc" id="aclassPt_1_1Callable_html_a6a308be03e7065f8df4e4da4315e2b5e"><div class="ttname"><a href="classPt_1_1Callable.html#a6a308be03e7065f8df4e4da4315e2b5e">Pt::Callable::call</a></div><div class="ttdeci">virtual R call(As... args) const =0</div><div class="ttdoc">Calls the callable entity and returns its result.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

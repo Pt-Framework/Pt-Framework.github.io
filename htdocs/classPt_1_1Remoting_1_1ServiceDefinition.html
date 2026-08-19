@@ -87,7 +87,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="Soap_2ServiceDefinition_8h_source.html">Pt/Remoting/ServiceDefinition.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Remoting_2ServiceDefinition_8h_source.html">Pt/Remoting/ServiceDefinition.h</a>&gt;</code></p>
 
 <p>Remote service definition.  
  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#details">More...</a></p>
@@ -106,36 +106,36 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#af9b8d4868881c59269913f313274d4cd">~ServiceDefinition</a> ()</td></tr>
 <tr class="memdesc:af9b8d4868881c59269913f313274d4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:af9b8d4868881c59269913f313274d4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cb8b1570a789b4c5eb9e1c8dd92f62b"><td class="memTemplParams" colspan="2">template&lt;typename R , typename... ARGS&gt; </td></tr>
-<tr class="memitem:a0cb8b1570a789b4c5eb9e1c8dd92f62b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a0cb8b1570a789b4c5eb9e1c8dd92f62b">registerProcedure</a> (const std::string &amp;name, R(*func)(ARGS...))</td></tr>
-<tr class="memdesc:a0cb8b1570a789b4c5eb9e1c8dd92f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a function as a synchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a0cb8b1570a789b4c5eb9e1c8dd92f62b">More...</a><br /></td></tr>
-<tr class="separator:a0cb8b1570a789b4c5eb9e1c8dd92f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ba7221c6f01d8c5004039e4134f4dc"><td class="memTemplParams" colspan="2">template&lt;typename R , class C , typename... ARGS&gt; </td></tr>
-<tr class="memitem:a62ba7221c6f01d8c5004039e4134f4dc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a62ba7221c6f01d8c5004039e4134f4dc">registerProcedure</a> (const std::string &amp;name, C &amp;obj, R(C::*mth)(ARGS...))</td></tr>
-<tr class="memdesc:a62ba7221c6f01d8c5004039e4134f4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a member function as a synchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a62ba7221c6f01d8c5004039e4134f4dc">More...</a><br /></td></tr>
-<tr class="separator:a62ba7221c6f01d8c5004039e4134f4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00eb20735b7a0e274df8c69e460feba4"><td class="memTemplParams" colspan="2">template&lt;typename R , typename... ARGS&gt; </td></tr>
-<tr class="memitem:a00eb20735b7a0e274df8c69e460feba4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a00eb20735b7a0e274df8c69e460feba4">registerProcedure</a> (const std::string &amp;name, const <a class="el" href="classPt_1_1Callable.html">Callable</a>&lt; R, ARGS... &gt; &amp;cb)</td></tr>
-<tr class="memdesc:a00eb20735b7a0e274df8c69e460feba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a generic callable as a synchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a00eb20735b7a0e274df8c69e460feba4">More...</a><br /></td></tr>
-<tr class="separator:a00eb20735b7a0e274df8c69e460feba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00a5e7e38f01ea21d8ed8932a476b8f"><td class="memTemplParams" colspan="2">template&lt;typename A &gt; </td></tr>
-<tr class="memitem:af00a5e7e38f01ea21d8ed8932a476b8f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#af00a5e7e38f01ea21d8ed8932a476b8f">registerActiveProcedure</a> (const std::string &amp;name, A *(*func)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;))</td></tr>
-<tr class="memdesc:af00a5e7e38f01ea21d8ed8932a476b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a function as an asynchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#af00a5e7e38f01ea21d8ed8932a476b8f">More...</a><br /></td></tr>
-<tr class="separator:af00a5e7e38f01ea21d8ed8932a476b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb809dac78a365ba7c105ae7dcc0cf3"><td class="memTemplParams" colspan="2">template&lt;typename A , class C &gt; </td></tr>
-<tr class="memitem:aedb809dac78a365ba7c105ae7dcc0cf3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#aedb809dac78a365ba7c105ae7dcc0cf3">registerActiveProcedure</a> (const std::string &amp;name, C &amp;obj, A *(C::*mth)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;))</td></tr>
-<tr class="memdesc:aedb809dac78a365ba7c105ae7dcc0cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a member function as an asynchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#aedb809dac78a365ba7c105ae7dcc0cf3">More...</a><br /></td></tr>
-<tr class="separator:aedb809dac78a365ba7c105ae7dcc0cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf6354ac4b25f93875bb0ac66b4bf98c"><td class="memTemplParams" colspan="2">template&lt;typename A , class C &gt; </td></tr>
-<tr class="memitem:aaf6354ac4b25f93875bb0ac66b4bf98c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#aaf6354ac4b25f93875bb0ac66b4bf98c">registerActiveProcedure</a> (const std::string &amp;name, C &amp;obj, A *(C::*mth)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;) const)</td></tr>
-<tr class="memdesc:aaf6354ac4b25f93875bb0ac66b4bf98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a const member function as an asynchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#aaf6354ac4b25f93875bb0ac66b4bf98c">More...</a><br /></td></tr>
-<tr class="separator:aaf6354ac4b25f93875bb0ac66b4bf98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ec7cc4ed12e20c15f4dcb0cef71263"><td class="memTemplParams" colspan="2">template&lt;typename R , typename... As&gt; </td></tr>
+<tr class="memitem:a96ec7cc4ed12e20c15f4dcb0cef71263"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a96ec7cc4ed12e20c15f4dcb0cef71263">registerProcedure</a> (const std::string &amp;name, R(*func)(As...))</td></tr>
+<tr class="memdesc:a96ec7cc4ed12e20c15f4dcb0cef71263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a function as a synchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a96ec7cc4ed12e20c15f4dcb0cef71263">More...</a><br /></td></tr>
+<tr class="separator:a96ec7cc4ed12e20c15f4dcb0cef71263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b8cac471843669390545c50a70eea9"><td class="memTemplParams" colspan="2">template&lt;typename R , class C , typename... As&gt; </td></tr>
+<tr class="memitem:a99b8cac471843669390545c50a70eea9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a99b8cac471843669390545c50a70eea9">registerProcedure</a> (const std::string &amp;name, C &amp;obj, R(C::*mth)(As...))</td></tr>
+<tr class="memdesc:a99b8cac471843669390545c50a70eea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a member function as a synchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a99b8cac471843669390545c50a70eea9">More...</a><br /></td></tr>
+<tr class="separator:a99b8cac471843669390545c50a70eea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f187ef481436e53e08d05a022efa8e"><td class="memTemplParams" colspan="2">template&lt;typename R , typename... As&gt; </td></tr>
+<tr class="memitem:a19f187ef481436e53e08d05a022efa8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a19f187ef481436e53e08d05a022efa8e">registerProcedure</a> (const std::string &amp;name, const <a class="el" href="classPt_1_1Callable.html">Callable</a>&lt; R, As... &gt; &amp;cb)</td></tr>
+<tr class="memdesc:a19f187ef481436e53e08d05a022efa8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a generic callable as a synchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a19f187ef481436e53e08d05a022efa8e">More...</a><br /></td></tr>
+<tr class="separator:a19f187ef481436e53e08d05a022efa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd011e7b58da72b985172e3b28b17aa"><td class="memTemplParams" colspan="2">template&lt;typename A , class C &gt; </td></tr>
+<tr class="memitem:addd011e7b58da72b985172e3b28b17aa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#addd011e7b58da72b985172e3b28b17aa">registerActiveProcedure</a> (const std::string &amp;name, A *(*fn)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;))</td></tr>
+<tr class="memdesc:addd011e7b58da72b985172e3b28b17aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a function as an asynchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#addd011e7b58da72b985172e3b28b17aa">More...</a><br /></td></tr>
+<tr class="separator:addd011e7b58da72b985172e3b28b17aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b94d09398eca4eb6b13c825ed35b0d"><td class="memTemplParams" colspan="2">template&lt;typename A , class C &gt; </td></tr>
+<tr class="memitem:a01b94d09398eca4eb6b13c825ed35b0d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a01b94d09398eca4eb6b13c825ed35b0d">registerActiveProcedure</a> (const std::string &amp;name, C &amp;obj, A *(C::*method)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;))</td></tr>
+<tr class="memdesc:a01b94d09398eca4eb6b13c825ed35b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a member function as an asynchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a01b94d09398eca4eb6b13c825ed35b0d">More...</a><br /></td></tr>
+<tr class="separator:a01b94d09398eca4eb6b13c825ed35b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639d5069165586aa294dd3b85f27d616"><td class="memTemplParams" colspan="2">template&lt;typename A , class C &gt; </td></tr>
+<tr class="memitem:a639d5069165586aa294dd3b85f27d616"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html#a639d5069165586aa294dd3b85f27d616">registerActiveProcedure</a> (const std::string &amp;name, C &amp;obj, A *(C::*method)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;) const)</td></tr>
+<tr class="memdesc:a639d5069165586aa294dd3b85f27d616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a const member function as an asynchronous procedure.  <a href="classPt_1_1Remoting_1_1ServiceDefinition.html#a639d5069165586aa294dd3b85f27d616">More...</a><br /></td></tr>
+<tr class="separator:a639d5069165586aa294dd3b85f27d616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The remote service provides a number of service procedures to its clients. Regular C++ functions or methods can be registered as service procedures, but in many cases a derived service simply registers member functions. The RPC requests are then dispatched according to the name of the registered procedures. The arguments and return values must be serializable, for example by supporting serialization to a <a class="el" href="classPt_1_1SerializationInfo.html" title="Represents arbitrary types during serialization.">SerializationInfo</a>. The service supports synchronous and asynchronous procedures, where the latter ones are factories for ActiveProcedure objects. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0cb8b1570a789b4c5eb9e1c8dd92f62b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cb8b1570a789b4c5eb9e1c8dd92f62b">&#9670;&nbsp;</a></span>registerProcedure() <span class="overload">[1/3]</span></h2>
+<a id="a96ec7cc4ed12e20c15f4dcb0cef71263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ec7cc4ed12e20c15f4dcb0cef71263">&#9670;&nbsp;</a></span>registerProcedure() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +149,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">R(*)(ARGS...)&#160;</td>
+          <td class="paramtype">R(*)(As...)&#160;</td>
           <td class="paramname"><em>func</em>&#160;</td>
         </tr>
         <tr>
@@ -163,8 +163,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a62ba7221c6f01d8c5004039e4134f4dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62ba7221c6f01d8c5004039e4134f4dc">&#9670;&nbsp;</a></span>registerProcedure() <span class="overload">[2/3]</span></h2>
+<a id="a99b8cac471843669390545c50a70eea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b8cac471843669390545c50a70eea9">&#9670;&nbsp;</a></span>registerProcedure() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +184,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">R(C::*)(ARGS...)&#160;</td>
+          <td class="paramtype">R(C::*)(As...)&#160;</td>
           <td class="paramname"><em>mth</em>&#160;</td>
         </tr>
         <tr>
@@ -198,8 +198,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a00eb20735b7a0e274df8c69e460feba4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00eb20735b7a0e274df8c69e460feba4">&#9670;&nbsp;</a></span>registerProcedure() <span class="overload">[3/3]</span></h2>
+<a id="a19f187ef481436e53e08d05a022efa8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f187ef481436e53e08d05a022efa8e">&#9670;&nbsp;</a></span>registerProcedure() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +213,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Callable.html">Callable</a>&lt; R, ARGS... &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Callable.html">Callable</a>&lt; R, As... &gt; &amp;&#160;</td>
           <td class="paramname"><em>cb</em>&#160;</td>
         </tr>
         <tr>
@@ -227,8 +227,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="af00a5e7e38f01ea21d8ed8932a476b8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af00a5e7e38f01ea21d8ed8932a476b8f">&#9670;&nbsp;</a></span>registerActiveProcedure() <span class="overload">[1/3]</span></h2>
+<a id="addd011e7b58da72b985172e3b28b17aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd011e7b58da72b985172e3b28b17aa">&#9670;&nbsp;</a></span>registerActiveProcedure() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +243,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">A *(*)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;)&#160;</td>
-          <td class="paramname"><em>func</em>&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -256,8 +256,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="aedb809dac78a365ba7c105ae7dcc0cf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedb809dac78a365ba7c105ae7dcc0cf3">&#9670;&nbsp;</a></span>registerActiveProcedure() <span class="overload">[2/3]</span></h2>
+<a id="a01b94d09398eca4eb6b13c825ed35b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b94d09398eca4eb6b13c825ed35b0d">&#9670;&nbsp;</a></span>registerActiveProcedure() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +278,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">A *(C::*)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;)&#160;</td>
-          <td class="paramname"><em>mth</em>&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -291,8 +291,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="aaf6354ac4b25f93875bb0ac66b4bf98c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf6354ac4b25f93875bb0ac66b4bf98c">&#9670;&nbsp;</a></span>registerActiveProcedure() <span class="overload">[3/3]</span></h2>
+<a id="a639d5069165586aa294dd3b85f27d616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639d5069165586aa294dd3b85f27d616">&#9670;&nbsp;</a></span>registerActiveProcedure() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +313,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">A *(C::*)(<a class="el" href="classPt_1_1Remoting_1_1Responder.html">Responder</a> &amp;) const&#160;</td>
-          <td class="paramname"><em>mth</em>&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

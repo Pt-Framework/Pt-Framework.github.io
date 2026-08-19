@@ -37,16 +37,7 @@
     <name>Pt::Remoting::ActiveProcedure</name>
     <filename>classPt_1_1Remoting_1_1ActiveProcedure.html</filename>
     <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
+    <templarg>As</templarg>
     <base>Pt::Remoting::ServiceProcedure</base>
     <member kind="function">
       <type></type>
@@ -55,12 +46,26 @@
       <anchor>ae7752b7015c473b51804df125f72f7de</anchor>
       <arglist>(Responder &amp;resp)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
       <name>~ActiveProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ActiveProcedure.html</anchorfile>
-      <anchor>a6daaf086fc068dd318b9c01c0ad3b423</anchor>
+      <anchor>acbf8d9462c5af7dfd1991eef31f80b1f</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>auto &amp;</type>
+      <name>arg</name>
+      <anchorfile>classPt_1_1Remoting_1_1ActiveProcedure.html</anchorfile>
+      <anchor>a421b628a34ee62d4fbcccef9631fb370</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const auto &amp;</type>
+      <name>arg</name>
+      <anchorfile>classPt_1_1Remoting_1_1ActiveProcedure.html</anchorfile>
+      <anchor>af707169fec3e93361d6d7684cd185821</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -73,8 +78,8 @@
       <type>virtual void</type>
       <name>onInvoke</name>
       <anchorfile>classPt_1_1Remoting_1_1ActiveProcedure.html</anchorfile>
-      <anchor>a003495e9b147d0e31515619d9148f5a9</anchor>
-      <arglist>(System::EventLoop &amp;loop, const ARGS...&amp;args)=0</arglist>
+      <anchor>a102473fe8622ecc0e609fed9548dfab2</anchor>
+      <arglist>(System::EventLoop &amp;loop, const As &amp;... args)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual const R &amp;</type>
@@ -82,6 +87,25 @@
       <anchorfile>classPt_1_1Remoting_1_1ActiveProcedure.html</anchorfile>
       <anchor>a3d5095afa6e9282e101e69c7fd3f6830</anchor>
       <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Remoting::ActiveProcedureDef</name>
+    <filename>classPt_1_1Remoting_1_1ActiveProcedureDef.html</filename>
+    <templarg></templarg>
+    <member kind="function">
+      <type></type>
+      <name>ActiveProcedureDef</name>
+      <anchorfile>classPt_1_1Remoting_1_1ActiveProcedureDef.html</anchorfile>
+      <anchor>ae3870651b0b313210ae537828223f00f</anchor>
+      <arglist>(const Callable&lt; CallT *, Responder &amp; &gt; &amp;cb)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ActiveProcedureDef</name>
+      <anchorfile>classPt_1_1Remoting_1_1ActiveProcedureDef.html</anchorfile>
+      <anchor>a96aed8c36e6cf3239c563a6163a28ea1</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -754,63 +778,63 @@
     <member kind="function">
       <type>int</type>
       <name>atomicGet</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gad0729b77fd43f998cccf80171d578830</anchor>
       <arglist>(volatile atomic_t &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>atomicSet</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga8b80549fe3fa12eee7081f6f0dd669f1</anchor>
       <arglist>(volatile atomic_t &amp;val, int n)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicIncrement</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gafa41ce93d64b93ccadb3e502e2cbfd24</anchor>
       <arglist>(volatile atomic_t &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicDecrement</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gaa1d59f5056e060e9dc2b2feeecd72c6c</anchor>
       <arglist>(volatile atomic_t &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga73f8334ef879b3d3b6a9f7ff8a88f01d</anchor>
       <arglist>(volatile atomic_t &amp;val, int exch)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicCompareExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga5ef07ac96bad50ab18f0f981db36d756</anchor>
       <arglist>(volatile atomic_t &amp;val, int exch, int comp)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicExchangeAdd</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga5ba4ae2225861a3154f9e2a33da82af0</anchor>
       <arglist>(volatile atomic_t &amp;val, int add)</arglist>
     </member>
     <member kind="function">
       <type>void *</type>
       <name>atomicExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gab58678307ec4e4677e7f1b75ac8a1323</anchor>
       <arglist>(void *volatile &amp;val, void *exch)</arglist>
     </member>
     <member kind="function">
       <type>void *</type>
       <name>atomicCompareExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gad79b7e6699c7ddf27695b6877d8e3ebe</anchor>
       <arglist>(void *volatile &amp;val, void *exch, void *comp)</arglist>
     </member>
@@ -2951,2634 +2975,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>BasicComposer&lt; A1 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A1 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A2 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A2 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A3 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A3 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A4 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A4 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A5 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A5 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A6 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A6 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A7 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A7 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A8 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A8 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; A9 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(A9 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::BasicComposer&lt; Pt::SerializationInfo &gt;</name>
     <filename>classPt_1_1BasicComposer_3_01Pt_1_1SerializationInfo_01_4.html</filename>
     <base>Pt::Composer</base>
@@ -5866,298 +3262,6 @@
       <type>Composer *</type>
       <name>onFinish</name>
       <anchorfile>classPt_1_1BasicComposer_3_01Pt_1_1SerializationInfo_01_4.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; Pt::Void &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(Pt::Void &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
       <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
       <arglist>()</arglist>
     </member>
@@ -6747,2926 +3851,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>BasicComposer&lt; V1 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V1 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V10 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V10 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V2 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V2 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V3 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V3 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V4 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V4 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V5 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V5 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V6 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V6 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V7 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V7 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V8 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V8 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicComposer&lt; V9 &gt;</name>
-    <filename>classPt_1_1BasicComposer.html</filename>
-    <base>Pt::Composer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicComposer</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af5740c51298f9c9454bb0df456e3972d</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a6aa0fe55c467a35a5ea68c5583861762</anchor>
-      <arglist>(V9 &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a6d8c5f5731e17d352e1adb6a51d75e8a</anchor>
-      <arglist>(Composer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a03428171f65221ac0ea64b69b0fe20cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a3d659d211bc3061ce95fbcacf5fc5b7b</anchor>
-      <arglist>(const std::string &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTypeName</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad704da99c3ea7f7169be23a2520a6302</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a27ace557824fd670c67909e196f106bc</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setId</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a376e73f9675db287534c20cce953f151</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a18e118ab4da73a2c2bb0c1167a9eff29</anchor>
-      <arglist>(const Pt::String &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setString</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a5de669ca6cf00725ad5081a1725f8efd</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBinary</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a50b423119bb8aba17ff2e21c344db3cb</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setChar</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad89e9179e4c7e9edd8bb137de6bb304f</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setBool</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ae1adb136dc31105ad2ba4ca99344b10a</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a0de5ef23909d0d0c6ad206adf1aabb14</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setUInt</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa961f25d7bf21594fcb1e87d7e3d5d02</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setFloat</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a88ce73c8a3e41b1b1c18c2c8618ee3a2</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ad967ace7b06827364fd3a639c38b1a0e</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setReference</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aba6b54b85dabb3db9da82925660d21f2</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>ab75b86fa3ae308c3f8bb7c26c18fc7f8</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginMember</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa132348585e852db9bcd66923db66071</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a666f3cb85e7d9e0cfbfcdf6c4b7e2aad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictElement</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a67af5d44c0e972cc0f325d55660be75c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictKey</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a80461e64bef2e60b54d3d59f09861a12</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>beginDictValue</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>aa4da5c3a1ec8e7085730cd1a2676c0d0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Composer *</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Composer.html</anchorfile>
-      <anchor>a9d8cdfeda3e468e2d9d50fc02eccadbd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetId</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a202db30bcd3ad74bd11be0ef6d8b3ecc</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetTypeName</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabf0b85b1a6ff2618ac7b026eec06e28</anchor>
-      <arglist>(const char *type, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetString</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a150bc597c296a29d587fad0464a1bb09</anchor>
-      <arglist>(const Pt::Char *value, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBinary</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>abfe59b1afcfba5b9cccf5080d7f459ce</anchor>
-      <arglist>(const char *data, std::size_t length)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetChar</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af43d037145f69ed9d2d9a79ec59b2de1</anchor>
-      <arglist>(const Pt::Char &amp;ch)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetBool</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a280b308117328a522588b23e50b566b0</anchor>
-      <arglist>(bool value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aa6fffb1efd5fbd70cbe66baf3ad470d7</anchor>
-      <arglist>(Pt::int64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetUInt</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>af026fb2a50c9c72f9df80a5d5df0776e</anchor>
-      <arglist>(Pt::uint64_t value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetFloat</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a965e5a7ebd4a55e9b03a86f5d7b3b238</anchor>
-      <arglist>(long double value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onSetReference</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a38dd0da33b6657e34cbc8ecfc6db4153</anchor>
-      <arglist>(const char *id, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginMember</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a87d11fb0f9a4914763c8f27660b53bdd</anchor>
-      <arglist>(const char *name, std::size_t len)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>aabba2a186bcdf997fb29d08ed563386a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictElement</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a32e206f152d4b7b58027e42376ab0dca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictKey</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a2763a882f639f387c0670063201ea98b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onBeginDictValue</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>ad34a9720c4d97034349e30df8fd72197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Composer *</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1BasicComposer.html</anchorfile>
-      <anchor>a1f4a02a7b54c38d5efef21168afe2c8d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Gfx::BasicConstImage</name>
     <filename>classPt_1_1Gfx_1_1BasicConstImage.html</filename>
     <templarg></templarg>
@@ -9838,7 +4022,7 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>BasicDecomposer&lt; R &gt;</name>
+    <name>BasicDecomposer&lt; ValueType&lt; R &gt; &gt;</name>
     <filename>classPt_1_1BasicDecomposer.html</filename>
     <base>Pt::Decomposer</base>
     <member kind="function">
@@ -9853,82 +4037,7 @@
       <name>begin</name>
       <anchorfile>classPt_1_1BasicDecomposer.html</anchorfile>
       <anchor>a23234d89a029fda36b9a7c53f1f1f632</anchor>
-      <arglist>(const R &amp;type, const char *name)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setParent</name>
-      <anchorfile>classPt_1_1Decomposer.html</anchorfile>
-      <anchor>a7bc37b45968f5ce634bcf45362f64e0a</anchor>
-      <arglist>(Decomposer *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type>Decomposer *</type>
-      <name>parent</name>
-      <anchorfile>classPt_1_1Decomposer.html</anchorfile>
-      <anchor>a2c391d8e8c4873431dc5b4ed64fa1de7</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Decomposer.html</anchorfile>
-      <anchor>af46369f6e698bb82ea970bb9a23b8716</anchor>
-      <arglist>(Formatter &amp;formatter)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginFormat</name>
-      <anchorfile>classPt_1_1Decomposer.html</anchorfile>
-      <anchor>afe89415fae9af61721cf5930e1f22420</anchor>
-      <arglist>(Formatter &amp;formatter)</arglist>
-    </member>
-    <member kind="function">
-      <type>Decomposer *</type>
-      <name>advanceFormat</name>
-      <anchorfile>classPt_1_1Decomposer.html</anchorfile>
-      <anchor>adcfa0c6475b9d5a2ec8febc657d634e9</anchor>
-      <arglist>(Formatter &amp;formatter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onFormat</name>
-      <anchorfile>classPt_1_1BasicDecomposer.html</anchorfile>
-      <anchor>ad32dbdfe18b472377143b30b3280e6d9</anchor>
-      <arglist>(Formatter &amp;formatter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>onBeginFormat</name>
-      <anchorfile>classPt_1_1BasicDecomposer.html</anchorfile>
-      <anchor>a4966f2c2c5363c2b3577e42579273527</anchor>
-      <arglist>(Formatter &amp;formatter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Decomposer *</type>
-      <name>onAdvanceFormat</name>
-      <anchorfile>classPt_1_1BasicDecomposer.html</anchorfile>
-      <anchor>a8e203ec4095e58e4c18c023bc1a064ae</anchor>
-      <arglist>(Formatter &amp;formatter)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicDecomposer&lt; RV &gt;</name>
-    <filename>classPt_1_1BasicDecomposer.html</filename>
-    <base>Pt::Decomposer</base>
-    <member kind="function">
-      <type></type>
-      <name>BasicDecomposer</name>
-      <anchorfile>classPt_1_1BasicDecomposer.html</anchorfile>
-      <anchor>afa1499447806067d979c347a93627343</anchor>
-      <arglist>(SerializationContext *context=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1BasicDecomposer.html</anchorfile>
-      <anchor>a23234d89a029fda36b9a7c53f1f1f632</anchor>
-      <arglist>(const RV &amp;type, const char *name)</arglist>
+      <arglist>(const ValueType&lt; R &gt; &amp;type, const char *name)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -10766,6 +4875,20 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Remoting::BasicProcedure</name>
+    <filename>classPt_1_1Remoting_1_1BasicProcedure.html</filename>
+    <templarg></templarg>
+    <templarg>As</templarg>
+    <base>Pt::Remoting::ServiceProcedure</base>
+    <member kind="function">
+      <type>void</type>
+      <name>setReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1ServiceProcedure.html</anchorfile>
+      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Http::BasicService</name>
     <filename>classPt_1_1Http_1_1BasicService.html</filename>
     <templarg></templarg>
@@ -10828,10 +4951,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <anchor>a0c9eb3e2934ab7dab9d04a78afe844df</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -10938,10 +5061,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <anchor>a0c9eb3e2934ab7dab9d04a78afe844df</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -11048,10 +5171,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <anchor>a0c9eb3e2934ab7dab9d04a78afe844df</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -11158,10 +5281,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <anchor>a0c9eb3e2934ab7dab9d04a78afe844df</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -14434,25 +8557,25 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual R</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const =0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const =0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
@@ -14488,25 +8611,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual CallT *</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>CallT *</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; CallT *, ClassT, As... &gt;</type>
@@ -14531,60 +8654,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Callable&lt; R &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Callable&lt; R, A... &gt;</name>
     <filename>classPt_1_1Callable.html</filename>
     <base>Invokable&lt; As... &gt;</base>
@@ -14596,511 +8665,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual R</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
+      <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
       <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3, A4 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3, A4, A5 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3, A4, A5, A6 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3, A4, A5, A6, A7 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3, A4, A5, A6, A7, A8 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, A1, A2, A3, A4, A5, A6, A7, A8, A9 &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
@@ -15136,79 +8719,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual R</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a638d90e2abbe628309750a1d66690d71</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...) const)</arglist>
-    </member>
-    <member kind="function">
-      <type>Function&lt; R, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a478226333059981d4f0d56780210f620</anchor>
-      <arglist>(R(*function)(As...))</arglist>
-    </member>
-    <member kind="function">
-      <type>Method&lt; R, ClassT, As... &gt;</type>
-      <name>callable</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a6413be0a8c6ee15353971279650d88d0</anchor>
-      <arglist>(ClassT &amp;object, R(BaseT::*method)(As...))</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Callable&lt; R, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void, Pt::Void &gt;</name>
-    <filename>classPt_1_1Callable.html</filename>
-    <base>Invokable&lt; As... &gt;</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual Callable *</type>
-      <name>clone</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a245f1cb11cc5d37d2800a6e1dd4ecbb5</anchor>
-      <arglist>() const=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
+      <type>R</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
-      <arglist>(As... args) const=0</arglist>
-    </member>
-    <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
@@ -15244,25 +8773,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual R</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
@@ -15298,25 +8827,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual void</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>void</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; void, ClassT, As... &gt;</type>
@@ -16291,60 +9820,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Remoting::Client</name>
-    <filename>classPt_1_1Remoting_1_1Client.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>Client</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>aa5777bac2de54b388226a381a4174ff0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Client</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>aa251ddafc00941fe0f1781a982fad76e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const RemoteCall *</type>
-      <name>activeProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a97c67890f440dc6fef7f91f54f756d5a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>isFailed</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>afd0cfe6f4dbdc6df76f19ce351e70032</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setReady</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Soap::Client</name>
     <filename>classPt_1_1Soap_1_1Client.html</filename>
     <base>Pt::Remoting::Client</base>
@@ -16902,6 +10377,60 @@
       <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
       <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Remoting::Client</name>
+    <filename>classPt_1_1Remoting_1_1Client.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
+    <member kind="function">
+      <type></type>
+      <name>Client</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>aa5777bac2de54b388226a381a4174ff0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Client</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>aa251ddafc00941fe0f1781a982fad76e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const RemoteCall *</type>
+      <name>activeProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a97c67890f440dc6fef7f91f54f756d5a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>isFailed</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>afd0cfe6f4dbdc6df76f19ce351e70032</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18625,6 +12154,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>const Callback *</type>
+      <name>callable</name>
+      <anchorfile>classPt_1_1Connection.html</anchorfile>
+      <anchor>abb0db1019ed85c705c0a39bbd892340a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>operator!</name>
       <anchorfile>classPt_1_1Connection.html</anchorfile>
@@ -19011,9 +12547,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -19031,17 +12574,10 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -19100,9 +12636,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1ConstMethod.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -19113,17 +12656,10 @@
       <arglist>(const ConstMethod &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -19170,10 +12706,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1ConstMethodSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <anchor>ad82b65d7b806ac01c473d0527b162b12</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20393,10 +13929,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1DelegateSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <anchor>ad82b65d7b806ac01c473d0527b162b12</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22918,31 +16454,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Remoting::Fault</name>
-    <filename>classPt_1_1Remoting_1_1Fault.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
-      <anchor>a5c7d2961d7226216146a1d5cb2b6188b</anchor>
-      <arglist>(const std::string &amp;msg)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
-      <anchor>a1d954ac1e8d229c08388c694c4c909b3</anchor>
-      <arglist>(const char *msg)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Fault</name>
-      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
-      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::XmlRpc::Fault</name>
     <filename>classPt_1_1XmlRpc_1_1Fault.html</filename>
     <base>Pt::Remoting::Fault</base>
@@ -23200,6 +16711,31 @@
       <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
       <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
       <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Remoting::Fault</name>
+    <filename>classPt_1_1Remoting_1_1Fault.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
+      <anchor>a5c7d2961d7226216146a1d5cb2b6188b</anchor>
+      <arglist>(const std::string &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
+      <anchor>a1d954ac1e8d229c08388c694c4c909b3</anchor>
+      <arglist>(const char *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Fault</name>
+      <anchorfile>classPt_1_1Remoting_1_1Fault.html</anchorfile>
+      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26006,9 +19542,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Function.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -26026,17 +19569,10 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -26081,9 +19617,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Function.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Function.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -26094,17 +19637,10 @@
       <arglist>(const Function &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -26150,10 +19686,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1FunctionSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <anchor>ad82b65d7b806ac01c473d0527b162b12</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -26509,243 +20045,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::XmlRpc::HttpClient</name>
-    <filename>classPt_1_1XmlRpc_1_1HttpClient.html</filename>
-    <base>Pt::XmlRpc::Client</base>
-    <base>Pt::Connectable</base>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a344839bd00011fb21fd4fb8130acb670</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8c202c93c0ac0cbed50d080c344fc132</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a4c5323d21d9a80458d5fe8e2f12d90e6</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a1d01bbd43d09b97539be57d8cea49734</anchor>
-      <arglist>(System::EventLoop &amp;loop, const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>ada89e260165ff152b91e556444bdfa69</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setActive</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a9f9aae5e84ced20cd32429d4bd036b4f</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>System::EventLoop *</type>
-      <name>loop</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a1edfac22331fb732120df36898d0a907</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setSecure</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a08968935c2f4dee47a3c29134bc7bee4</anchor>
-      <arglist>(Ssl::Context &amp;ctx)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPeerName</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>aeca6698a6ec4c085e45ab44641a89a7a</anchor>
-      <arglist>(const std::string &amp;peer)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setKeepAlive</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a0c5021ac5d779d2ef743c5e0a2712054</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTimeout</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a4e6264069bc112d5f7a636525f88a396</anchor>
-      <arglist>(std::size_t timeout)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTarget</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a28a3ae409dc63dc51452526d3817e345</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTarget</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a3a546a876e2bdb49d97d9dee5c42bb37</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setHost</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a5f25e80a5fd1c2c6b2c78f5a25528d05</anchor>
-      <arglist>(const Net::Endpoint &amp;ep)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setHost</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>ae5cceed20af51afda77bb327ca2df180</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setServiceUrl</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a65a2bb0af87cc138d252c5f63f31b493</anchor>
-      <arglist>(const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setServiceUrl</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a6ce0b826b590129c688580300ab6910b</anchor>
-      <arglist>(const char *url)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Net::Endpoint &amp;</type>
-      <name>host</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8b5e93b6494d52c1f181beb48adbdca0</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>close</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const RemoteCall *</type>
-      <name>activeProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a97c67890f440dc6fef7f91f54f756d5a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>isFailed</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8bb143d1034a37c831188adaa98c3fdf</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginInvoke</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a56a360e9a957dc1961570f4d280c83b0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onInvoke</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8ebd6cb49caff5681c45860a43c99fc3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>adde1b3544f8b7fbfce805bde01ae33c8</anchor>
-      <arglist>(std::ostream &amp;os)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>advanceMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a5be2944d448fa1303049be88de0370a7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a47023fe0730ed1c00bbecaeb01aa02d0</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>parseResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>abda6a495e2daad5addb4560e54a499d7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>processResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a5aceb42a9baee0fe842198cc587a972d</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setFault</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
-      <arglist>(int rc, const char *msg)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setReady</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::JsonRpc::HttpClient</name>
     <filename>classPt_1_1JsonRpc_1_1HttpClient.html</filename>
     <base>Pt::JsonRpc::Client</base>
@@ -26985,6 +20284,243 @@
       <type>void</type>
       <name>setFault</name>
       <anchorfile>classPt_1_1JsonRpc_1_1Client.html</anchorfile>
+      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
+      <arglist>(int rc, const char *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::XmlRpc::HttpClient</name>
+    <filename>classPt_1_1XmlRpc_1_1HttpClient.html</filename>
+    <base>Pt::XmlRpc::Client</base>
+    <base>Pt::Connectable</base>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a344839bd00011fb21fd4fb8130acb670</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8c202c93c0ac0cbed50d080c344fc132</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a4c5323d21d9a80458d5fe8e2f12d90e6</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a1d01bbd43d09b97539be57d8cea49734</anchor>
+      <arglist>(System::EventLoop &amp;loop, const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>ada89e260165ff152b91e556444bdfa69</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setActive</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a9f9aae5e84ced20cd32429d4bd036b4f</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>System::EventLoop *</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a1edfac22331fb732120df36898d0a907</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setSecure</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a08968935c2f4dee47a3c29134bc7bee4</anchor>
+      <arglist>(Ssl::Context &amp;ctx)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPeerName</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>aeca6698a6ec4c085e45ab44641a89a7a</anchor>
+      <arglist>(const std::string &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setKeepAlive</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a0c5021ac5d779d2ef743c5e0a2712054</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTimeout</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a4e6264069bc112d5f7a636525f88a396</anchor>
+      <arglist>(std::size_t timeout)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTarget</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a28a3ae409dc63dc51452526d3817e345</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTarget</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a3a546a876e2bdb49d97d9dee5c42bb37</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHost</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a5f25e80a5fd1c2c6b2c78f5a25528d05</anchor>
+      <arglist>(const Net::Endpoint &amp;ep)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHost</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>ae5cceed20af51afda77bb327ca2df180</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceUrl</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a65a2bb0af87cc138d252c5f63f31b493</anchor>
+      <arglist>(const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceUrl</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a6ce0b826b590129c688580300ab6910b</anchor>
+      <arglist>(const char *url)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Net::Endpoint &amp;</type>
+      <name>host</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8b5e93b6494d52c1f181beb48adbdca0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const RemoteCall *</type>
+      <name>activeProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a97c67890f440dc6fef7f91f54f756d5a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>isFailed</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8bb143d1034a37c831188adaa98c3fdf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginInvoke</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a56a360e9a957dc1961570f4d280c83b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onInvoke</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8ebd6cb49caff5681c45860a43c99fc3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>adde1b3544f8b7fbfce805bde01ae33c8</anchor>
+      <arglist>(std::ostream &amp;os)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>advanceMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a5be2944d448fa1303049be88de0370a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a47023fe0730ed1c00bbecaeb01aa02d0</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>parseResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>abda6a495e2daad5addb4560e54a499d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>processResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a5aceb42a9baee0fe842198cc587a972d</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setFault</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
       <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
       <arglist>(int rc, const char *msg)</arglist>
     </member>
@@ -27856,80 +21392,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Xml::InputIterator</name>
-    <filename>classPt_1_1Xml_1_1InputIterator.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>InputIterator</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>afc588072a958801184ea34c95e6f3349</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>InputIterator</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a84675eb657c3938382583a7aeef66322</anchor>
-      <arglist>(XmlReader &amp;xis)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>InputIterator</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a40a63b71e77cb8dae4d79f13ceb00f41</anchor>
-      <arglist>(const InputIterator &amp;it)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~InputIterator</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a5f8fa00fb3b15e629017647489358add</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>InputIterator &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a75426e8cb2f5ef29ad0a59df52104455</anchor>
-      <arglist>(const InputIterator &amp;it)</arglist>
-    </member>
-    <member kind="function">
-      <type>Node &amp;</type>
-      <name>operator*</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a7e33bea6ccde6792db9b3d8522b639a4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Node *</type>
-      <name>operator-&gt;</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>abbcb321fe8fcb32d38edf18d5e049862</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>InputIterator &amp;</type>
-      <name>operator++</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a5aca15d82412956581232e2578603725</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>a49b34afe93a7045c560ec138a9063e93</anchor>
-      <arglist>(const InputIterator &amp;it) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
-      <anchor>afe1923bd088a6b0510e0e28f5748f682</anchor>
-      <arglist>(const InputIterator &amp;it) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Json::InputIterator</name>
     <filename>classPt_1_1Json_1_1InputIterator.html</filename>
     <member kind="function">
@@ -27999,6 +21461,80 @@
       <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>afe1923bd088a6b0510e0e28f5748f682</anchor>
+      <arglist>(const InputIterator &amp;it) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Xml::InputIterator</name>
+    <filename>classPt_1_1Xml_1_1InputIterator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>InputIterator</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>afc588072a958801184ea34c95e6f3349</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>InputIterator</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a84675eb657c3938382583a7aeef66322</anchor>
+      <arglist>(XmlReader &amp;xis)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>InputIterator</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a40a63b71e77cb8dae4d79f13ceb00f41</anchor>
+      <arglist>(const InputIterator &amp;it)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~InputIterator</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a5f8fa00fb3b15e629017647489358add</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>InputIterator &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a75426e8cb2f5ef29ad0a59df52104455</anchor>
+      <arglist>(const InputIterator &amp;it)</arglist>
+    </member>
+    <member kind="function">
+      <type>Node &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a7e33bea6ccde6792db9b3d8522b639a4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Node *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>abbcb321fe8fcb32d38edf18d5e049862</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>InputIterator &amp;</type>
+      <name>operator++</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a5aca15d82412956581232e2578603725</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>a49b34afe93a7045c560ec138a9063e93</anchor>
+      <arglist>(const InputIterator &amp;it) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
       <anchor>afe1923bd088a6b0510e0e28f5748f682</anchor>
       <arglist>(const InputIterator &amp;it) const</arglist>
     </member>
@@ -30127,25 +23663,25 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual R</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
@@ -30181,25 +23717,25 @@
       <arglist>(T &amp;&amp;lambda)</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ReturnT</type>
-      <name>operator()</name>
+      <type>virtual R</type>
+      <name>call</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ae848cfafbe9940bbd296a7e345e64359</anchor>
+      <anchor>a6a308be03e7065f8df4e4da4315e2b5e</anchor>
       <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>invoke</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
-      <arglist>(As... args) const</arglist>
+      <anchor>a7f6805dd9bc4d53ef52257f038881d48</anchor>
+      <arglist>(As... args) const=0</arglist>
     </member>
     <member kind="function">
       <type>ConstMethod&lt; R, ClassT, As... &gt;</type>
@@ -30238,10 +23774,10 @@
       <arglist>(T &amp;&amp;lambda, Connectable *context=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1LambdaSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <anchor>ad82b65d7b806ac01c473d0527b162b12</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -31672,9 +25208,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31692,17 +25235,10 @@
       <arglist>() const=0</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31768,9 +25304,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31781,17 +25324,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31857,9 +25393,16 @@
     </member>
     <member kind="function">
       <type>R</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31870,17 +25413,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
+      <type>R</type>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invoke</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31946,9 +25482,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -31959,17 +25502,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32035,9 +25571,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32048,17 +25591,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32124,9 +25660,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32137,17 +25680,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32213,9 +25749,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32226,17 +25769,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32302,9 +25838,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32315,17 +25858,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32391,9 +25927,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32404,17 +25947,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32480,9 +26016,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32493,17 +26036,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32569,9 +26105,16 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>operator()</name>
+      <name>call</name>
       <anchorfile>classPt_1_1Method.html</anchorfile>
-      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
+      <anchor>a8eafc9fafa41fc928d7d905b61ff0e9e</anchor>
+      <arglist>(As... args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invoke</name>
+      <anchorfile>classPt_1_1Method.html</anchorfile>
+      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32582,17 +26125,10 @@
       <arglist>(const Method &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>ReturnT</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>a70e90f858fe874d5a854913235da2eaa</anchor>
-      <arglist>(As... args) const</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
-      <name>invoke</name>
+      <name>operator()</name>
       <anchorfile>classPt_1_1Callable.html</anchorfile>
-      <anchor>ab2e1af7ead2bf585d9a854bf668d0624</anchor>
+      <anchor>a8ef5e8eed943c9377c194320d6c78f6e</anchor>
       <arglist>(As... args) const</arglist>
     </member>
     <member kind="function">
@@ -32639,10 +26175,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1MethodSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <anchor>ad82b65d7b806ac01c473d0527b162b12</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33292,102 +26828,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Gfx::PaintContext</name>
-    <filename>classPt_1_1Gfx_1_1PaintContext.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a43271e0c71cd58e96a93863c2cc7dcbd</anchor>
-      <arglist>(PaintSurface &amp;surface, const RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~PaintContext</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a9b8f05980acc359e07413062f2070881</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::ImageFormat &amp;</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::SizeF &amp;</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Scaling &amp;</type>
-      <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const RectF *</type>
-      <name>clip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
-      <arglist>(const RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resetClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Canvas *</type>
-      <name>getCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
-      <arglist>(Canvas *canvas)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetachSurface</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Forms::PaintContext</name>
     <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
     <base>Pt::Gfx::PaintContext</base>
@@ -33481,6 +26921,102 @@
       <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
       <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
       <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Gfx::PaintContext</name>
+    <filename>classPt_1_1Gfx_1_1PaintContext.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
+    <member kind="function">
+      <type></type>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a43271e0c71cd58e96a93863c2cc7dcbd</anchor>
+      <arglist>(PaintSurface &amp;surface, const RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~PaintContext</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a9b8f05980acc359e07413062f2070881</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::ImageFormat &amp;</type>
+      <name>format</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Scaling &amp;</type>
+      <name>scaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const RectF *</type>
+      <name>clip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
+      <arglist>(const RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resetClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Canvas *</type>
+      <name>getCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
+      <arglist>(Canvas *canvas)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34640,14 +28176,14 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Gfx::PaintSurface</name>
-    <filename>classPt_1_1Gfx_1_1PaintSurface.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
+    <name>Pt::Forms::PaintSurface</name>
+    <filename>classPt_1_1Forms_1_1PaintSurface.html</filename>
+    <base>Pt::Gfx::PaintSurface</base>
+    <member kind="function">
+      <type></type>
       <name>~PaintSurface</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a67497ada9e6faee163ad3ef082711a03</anchor>
+      <anchorfile>classPt_1_1Forms_1_1PaintSurface.html</anchorfile>
+      <anchor>afb2141e21845ea9feb60b0ee7496b208</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -34690,13 +28226,6 @@
       <name>finish</name>
       <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
       <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>PaintSurface</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a5a34c712af0eb8661fa9cd21001dd3db</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -34764,14 +28293,14 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PaintSurface</name>
-    <filename>classPt_1_1Forms_1_1PaintSurface.html</filename>
-    <base>Pt::Gfx::PaintSurface</base>
-    <member kind="function">
-      <type></type>
+    <name>Pt::Gfx::PaintSurface</name>
+    <filename>classPt_1_1Gfx_1_1PaintSurface.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
       <name>~PaintSurface</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintSurface.html</anchorfile>
-      <anchor>afb2141e21845ea9feb60b0ee7496b208</anchor>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a67497ada9e6faee163ad3ef082711a03</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -34814,6 +28343,13 @@
       <name>finish</name>
       <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
       <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>PaintSurface</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a5a34c712af0eb8661fa9cd21001dd3db</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -37798,7 +31334,7 @@
     <name>Pt::Remoting::RemoteProcedure</name>
     <filename>classPt_1_1Remoting_1_1RemoteProcedure.html</filename>
     <templarg></templarg>
-    <templarg>ARGUMENTS</templarg>
+    <templarg>As</templarg>
     <member kind="function">
       <type></type>
       <name>RemoteProcedure</name>
@@ -37817,71 +31353,22 @@
       <type>void</type>
       <name>begin</name>
       <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>a8f7e8e6f89536c36fd3f3e15d6464aa5</anchor>
-      <arglist>(const ARGUMENTS &amp;args...)</arglist>
+      <anchor>a539794dc07eb042dd2246587e8c668ea</anchor>
+      <arglist>(const As &amp;... args)</arglist>
     </member>
     <member kind="function">
       <type>const R &amp;</type>
       <name>call</name>
       <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>a35887e789467f68916a2e00530978178</anchor>
-      <arglist>(const ARGUMENTS &amp;args...)</arglist>
+      <anchor>a585bb43cc46ead593e538dd9b67a5cd9</anchor>
+      <arglist>(const As &amp;... args)</arglist>
     </member>
     <member kind="function">
       <type>const R &amp;</type>
       <name>operator()</name>
       <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>ae244a79f0b4bced6511462b60f8cbf4a</anchor>
-      <arglist>(const ARGUMENTS &amp;args...)</arglist>
-    </member>
-    <member kind="function">
-      <type>Result&lt; R &gt; &amp;</type>
-      <name>result</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>af797d0e40a732b93fb8d63de4c547ca5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Result&lt; R &gt; &amp;</type>
-      <name>result</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>a521f6688e44617fc838c7b7b85a42734</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Signal&lt; const Result&lt; R &gt; &amp; &gt; &amp;</type>
-      <name>finished</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>a8500e6f3056baa83fa1aabf1be3ceda8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Client &amp;</type>
-      <name>client</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>a18569c57a6931b850da67a49852c9dba</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const String &amp;</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>ac7fa2815980eb7a696b3ce00436c44ba</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isFailed</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1RemoteProcedure.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
+      <anchor>a2f8c9e135a4d9c28a29213788ed38a9d</anchor>
+      <arglist>(const As &amp;... args)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38367,165 +31854,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::JsonRpc::Responder</name>
-    <filename>classPt_1_1JsonRpc_1_1Responder.html</filename>
-    <base>Pt::Remoting::Responder</base>
-    <member kind="function">
-      <type></type>
-      <name>Responder</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a17e7fb104c8d80fdb9c5a7b0017d5f4b</anchor>
-      <arglist>(const ServiceDeclaration &amp;decl, Remoting::ServiceDefinition &amp;def)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Responder</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isFailed</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ServiceProcedure *</type>
-      <name>activeProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReady</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>aa37ece2e002c960665a87c6a8b6034e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>ae9f91c14b52a03ef226f2cf76e459c35</anchor>
-      <arglist>(const Fault &amp;fault)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>aee417c3d369444f3b503dae87408e433</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a537b3e57a18bb9bd4afd13a9a1473992</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>parseMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>ab6259f3aa062e47ff5031fd719568f1f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>afd116018fdb0c20871fd780fde5107fe</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishMessage</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a72ed5f0a66ebd08fbfcc70f98f75ee7f</anchor>
-      <arglist>(std::ostream &amp;os)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginFault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>a6a9bf9cd11626e2fe323dd7937878810</anchor>
-      <arglist>(std::ostream &amp;os, const Fault &amp;fault)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>advanceResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>ab2fdaedbf3d7262a04889d8160480973</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishResult</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>ad90571f447c822ee89516b908ec4d1c1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setFault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
-      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
-      <arglist>(int rc, const char *msg)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Composer **</type>
-      <name>setProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>ab51b6b1e9f0e9789e6387a20203d30a9</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginCall</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>acaa96f8c157ef50d9d5448831c4bdc89</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Decomposer *</type>
-      <name>endCall</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Decomposer *</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Soap::Responder</name>
     <filename>classPt_1_1Soap_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
@@ -38749,6 +32077,165 @@
       <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
       <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
       <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::JsonRpc::Responder</name>
+    <filename>classPt_1_1JsonRpc_1_1Responder.html</filename>
+    <base>Pt::Remoting::Responder</base>
+    <member kind="function">
+      <type></type>
+      <name>Responder</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a17e7fb104c8d80fdb9c5a7b0017d5f4b</anchor>
+      <arglist>(const ServiceDeclaration &amp;decl, Remoting::ServiceDefinition &amp;def)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Responder</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isFailed</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ServiceProcedure *</type>
+      <name>activeProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReady</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>aa37ece2e002c960665a87c6a8b6034e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>ae9f91c14b52a03ef226f2cf76e459c35</anchor>
+      <arglist>(const Fault &amp;fault)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onResult</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>aee417c3d369444f3b503dae87408e433</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginMessage</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a537b3e57a18bb9bd4afd13a9a1473992</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>parseMessage</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>ab6259f3aa062e47ff5031fd719568f1f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishMessage</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>afd116018fdb0c20871fd780fde5107fe</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishMessage</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginResult</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a72ed5f0a66ebd08fbfcc70f98f75ee7f</anchor>
+      <arglist>(std::ostream &amp;os)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginFault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>a6a9bf9cd11626e2fe323dd7937878810</anchor>
+      <arglist>(std::ostream &amp;os, const Fault &amp;fault)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>advanceResult</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>ab2fdaedbf3d7262a04889d8160480973</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishResult</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>ad90571f447c822ee89516b908ec4d1c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setFault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Responder.html</anchorfile>
+      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
+      <arglist>(int rc, const char *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Pt::Composer **</type>
+      <name>setProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>ab51b6b1e9f0e9789e6387a20203d30a9</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginCall</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>acaa96f8c157ef50d9d5448831c4bdc89</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Pt::Decomposer *</type>
+      <name>endCall</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Pt::Decomposer *</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41776,43 +35263,43 @@
       <type>void</type>
       <name>registerProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ServiceDefinition.html</anchorfile>
-      <anchor>a0cb8b1570a789b4c5eb9e1c8dd92f62b</anchor>
-      <arglist>(const std::string &amp;name, R(*func)(ARGS...))</arglist>
+      <anchor>a96ec7cc4ed12e20c15f4dcb0cef71263</anchor>
+      <arglist>(const std::string &amp;name, R(*func)(As...))</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>registerProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ServiceDefinition.html</anchorfile>
-      <anchor>a62ba7221c6f01d8c5004039e4134f4dc</anchor>
-      <arglist>(const std::string &amp;name, C &amp;obj, R(C::*mth)(ARGS...))</arglist>
+      <anchor>a99b8cac471843669390545c50a70eea9</anchor>
+      <arglist>(const std::string &amp;name, C &amp;obj, R(C::*mth)(As...))</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>registerProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ServiceDefinition.html</anchorfile>
-      <anchor>a00eb20735b7a0e274df8c69e460feba4</anchor>
-      <arglist>(const std::string &amp;name, const Callable&lt; R, ARGS... &gt; &amp;cb)</arglist>
+      <anchor>a19f187ef481436e53e08d05a022efa8e</anchor>
+      <arglist>(const std::string &amp;name, const Callable&lt; R, As... &gt; &amp;cb)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>registerActiveProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ServiceDefinition.html</anchorfile>
-      <anchor>af00a5e7e38f01ea21d8ed8932a476b8f</anchor>
-      <arglist>(const std::string &amp;name, A *(*func)(Responder &amp;))</arglist>
+      <anchor>addd011e7b58da72b985172e3b28b17aa</anchor>
+      <arglist>(const std::string &amp;name, A *(*fn)(Responder &amp;))</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>registerActiveProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ServiceDefinition.html</anchorfile>
-      <anchor>aedb809dac78a365ba7c105ae7dcc0cf3</anchor>
-      <arglist>(const std::string &amp;name, C &amp;obj, A *(C::*mth)(Responder &amp;))</arglist>
+      <anchor>a01b94d09398eca4eb6b13c825ed35b0d</anchor>
+      <arglist>(const std::string &amp;name, C &amp;obj, A *(C::*method)(Responder &amp;))</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>registerActiveProcedure</name>
       <anchorfile>classPt_1_1Remoting_1_1ServiceDefinition.html</anchorfile>
-      <anchor>aaf6354ac4b25f93875bb0ac66b4bf98c</anchor>
-      <arglist>(const std::string &amp;name, C &amp;obj, A *(C::*mth)(Responder &amp;) const)</arglist>
+      <anchor>a639d5069165586aa294dd3b85f27d616</anchor>
+      <arglist>(const std::string &amp;name, C &amp;obj, A *(C::*method)(Responder &amp;) const)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43593,10 +37080,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1SignalSlot.html</anchorfile>
-      <anchor>aa49fab3a41eb87ee45012149d2ffc0e0</anchor>
+      <anchor>ad82b65d7b806ac01c473d0527b162b12</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -43821,10 +37308,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const void *</type>
+      <type>virtual const Callback *</type>
       <name>callable</name>
       <anchorfile>classPt_1_1Slot.html</anchorfile>
-      <anchor>ac7fd6b4701abcd69575ad8d12ac80317</anchor>
+      <anchor>a0c9eb3e2934ab7dab9d04a78afe844df</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -45649,53 +39136,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::String</name>
-    <filename>classPt_1_1Json_1_1String.html</filename>
-    <base>Pt::Json::Node</base>
-    <member kind="function">
-      <type></type>
-      <name>String</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>a8db865e64c3c3f65ec6a0b6fd8c09a94</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
-      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>String *</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>a47531c63b26049e4d47184ef6c41585c</anchor>
-      <arglist>(Node *node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const String *</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>ac9504fb3a1d233ad20e7f7357df09e62</anchor>
-      <arglist>(const Node *node)</arglist>
-    </member>
-    <member kind="function">
-      <type>String &amp;</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>aa5529f10aa20b1cc104e618b5f58d3e8</anchor>
-      <arglist>(Node &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const String &amp;</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>ae1831e5810000c10a9c6346fb5080830</anchor>
-      <arglist>(const Node &amp;node)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::String</name>
     <filename>classPt_1_1String.html</filename>
     <member kind="function">
@@ -46897,6 +40337,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Json::String</name>
+    <filename>classPt_1_1Json_1_1String.html</filename>
+    <base>Pt::Json::Node</base>
+    <member kind="function">
+      <type></type>
+      <name>String</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>a8db865e64c3c3f65ec6a0b6fd8c09a94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Type</type>
+      <name>type</name>
+      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
+      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>String *</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>a47531c63b26049e4d47184ef6c41585c</anchor>
+      <arglist>(Node *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>const String *</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>ac9504fb3a1d233ad20e7f7357df09e62</anchor>
+      <arglist>(const Node *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>String &amp;</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>aa5529f10aa20b1cc104e618b5f58d3e8</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>const String &amp;</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>ae1831e5810000c10a9c6346fb5080830</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::StringBuffer</name>
     <filename>classPt_1_1StringBuffer.html</filename>
     <base>BasicStreamBuffer&lt; Char &gt;</base>
@@ -48085,39 +41572,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Xml::SyntaxError</name>
-    <filename>classPt_1_1Xml_1_1SyntaxError.html</filename>
-    <base>Pt::Xml::XmlError</base>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
-      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
-      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>SyntaxError</name>
-      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
-      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
-      <arglist>(const char *what, std::size_t line)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~SyntaxError</name>
-      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
-      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>line</name>
-      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
-      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Json::SyntaxError</name>
     <filename>classPt_1_1Json_1_1SyntaxError.html</filename>
     <base>Pt::Json::JsonError</base>
@@ -48146,6 +41600,39 @@
       <type>std::size_t</type>
       <name>line</name>
       <anchorfile>classPt_1_1Json_1_1SyntaxError.html</anchorfile>
+      <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Xml::SyntaxError</name>
+    <filename>classPt_1_1Xml_1_1SyntaxError.html</filename>
+    <base>Pt::Xml::XmlError</base>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
+      <anchor>ae772c7f1f652f541ee8fa1b26971e92c</anchor>
+      <arglist>(const std::string &amp;what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SyntaxError</name>
+      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
+      <anchor>a6135ca7663bdf7ae25ae9b8e69fcbdab</anchor>
+      <arglist>(const char *what, std::size_t line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SyntaxError</name>
+      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
+      <anchor>a966547ab5beebb8d3113af9a451e38fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>line</name>
+      <anchorfile>classPt_1_1Xml_1_1SyntaxError.html</anchorfile>
       <anchor>a7c537b446f26ef9fcbef7ede7c03a0cc</anchor>
       <arglist>() const</arglist>
     </member>
@@ -49720,10 +43207,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; Char, char &gt;</name>
+    <name>TextCodec&lt; char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>Char</type>
+      <type>char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -49755,14 +43242,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -49808,10 +43295,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; char, char &gt;</name>
+    <name>TextCodec&lt; Char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>char</type>
+      <type>Char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -49843,14 +43330,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -51280,820 +44767,6 @@
     <name>Pt::TypeTraits</name>
     <filename>structPt_1_1TypeTraits.html</filename>
     <templarg></templarg>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A1 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A2 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A3 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A4 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A5 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A6 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A7 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A8 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; A9 &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; Pt::Void &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Value</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af18978f328894461670085d00ca66d0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstValue</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>af24b45c1e88fa52b73776ffc6a966bfe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Reference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>abfa828589a6e564c2723f1befb54f8f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a835ef035ef8ac9d24b968d2fc34aa845</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>Pointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a610f419482f06625b942f18137622632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>IMPLEMENTATION_DEFINED</type>
-      <name>ConstPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a976960298e9f635db316ee4b9c20721f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isConst</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a80e974da694f2a44422ebc069b49ab98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isVolatile</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aea9994e18e041ccf8b76cbcd9759b3c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isPointer</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>aaeb0ab0968a711d40c2fddea91414030</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const unsigned int</type>
-      <name>isReference</name>
-      <anchorfile>structPt_1_1TypeTraits.html</anchorfile>
-      <anchor>a29fb58efcc3e53182a7bc08c8d3c753d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TypeTraits&lt; R &gt;</name>
-    <filename>structPt_1_1TypeTraits.html</filename>
     <member kind="typedef">
       <type>IMPLEMENTATION_DEFINED</type>
       <name>Value</name>
@@ -55659,56 +48332,56 @@
     <member kind="typedef">
       <type>int_type</type>
       <name>int8_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaef44329758059c91c76d334e8fc09700</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint8_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaba7bc1797add20fe3efdf37ced1182c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int16_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaa343fa3b3d06292b959ffdd4c4703b06</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint16_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga273cf69d639a59973b6019625df33e30</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int32_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint32_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga435d1572bf3f880d55459d9805097f62</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int64_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga312c7e8848187d110315ab83a7b3d4d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint64_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaa232ecf786a74ce5363c36c10798d2b1</anchor>
       <arglist></arglist>
     </member>
@@ -56568,6 +49241,8 @@
     <name>Pt::Remoting</name>
     <filename>namespacePt_1_1Remoting.html</filename>
     <class kind="class">Pt::Remoting::ActiveProcedure</class>
+    <class kind="class">Pt::Remoting::ActiveProcedureDef</class>
+    <class kind="class">Pt::Remoting::BasicProcedure</class>
     <class kind="class">Pt::Remoting::Client</class>
     <class kind="class">Pt::Remoting::Fault</class>
     <class kind="class">Pt::Remoting::RemoteProcedure</class>
@@ -56863,9 +49538,9 @@
     <class kind="class">Pt::PoolAllocator</class>
   </compound>
   <compound kind="group">
-    <name>BasicTypes</name>
+    <name>Pt-Basics</name>
     <title>Basic Types</title>
-    <filename>group__BasicTypes.html</filename>
+    <filename>group__Pt-Basics.html</filename>
     <class kind="class">Pt::Any</class>
     <class kind="class">Pt::InvalidDate</class>
     <class kind="class">Pt::Date</class>
@@ -56875,128 +49550,129 @@
     <class kind="class">Pt::Time</class>
     <class kind="class">Pt::Timespan</class>
     <class kind="struct">Pt::Void</class>
+    <class kind="class">Pt::atomic_t</class>
     <member kind="typedef">
       <type>int_type</type>
       <name>int8_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaef44329758059c91c76d334e8fc09700</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint8_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaba7bc1797add20fe3efdf37ced1182c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int16_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaa343fa3b3d06292b959ffdd4c4703b06</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint16_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga273cf69d639a59973b6019625df33e30</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int32_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint32_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga435d1572bf3f880d55459d9805097f62</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int64_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>ga312c7e8848187d110315ab83a7b3d4d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint64_t</name>
-      <anchorfile>group__BasicTypes.html</anchorfile>
+      <anchorfile>group__Pt-Basics.html</anchorfile>
       <anchor>gaa232ecf786a74ce5363c36c10798d2b1</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="group">
-    <name>Concurrency</name>
+    <name>Pt-System-Concurrency</name>
     <title>Concurrency</title>
-    <filename>group__Concurrency.html</filename>
+    <filename>group__Pt-System-Concurrency.html</filename>
     <class kind="class">Pt::atomic_t</class>
     <member kind="function">
       <type>int</type>
       <name>atomicGet</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gad0729b77fd43f998cccf80171d578830</anchor>
       <arglist>(volatile atomic_t &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>atomicSet</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga8b80549fe3fa12eee7081f6f0dd669f1</anchor>
       <arglist>(volatile atomic_t &amp;val, int n)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicIncrement</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gafa41ce93d64b93ccadb3e502e2cbfd24</anchor>
       <arglist>(volatile atomic_t &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicDecrement</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gaa1d59f5056e060e9dc2b2feeecd72c6c</anchor>
       <arglist>(volatile atomic_t &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga73f8334ef879b3d3b6a9f7ff8a88f01d</anchor>
       <arglist>(volatile atomic_t &amp;val, int exch)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicCompareExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga5ef07ac96bad50ab18f0f981db36d756</anchor>
       <arglist>(volatile atomic_t &amp;val, int exch, int comp)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>atomicExchangeAdd</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>ga5ba4ae2225861a3154f9e2a33da82af0</anchor>
       <arglist>(volatile atomic_t &amp;val, int add)</arglist>
     </member>
     <member kind="function">
       <type>void *</type>
       <name>atomicExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gab58678307ec4e4677e7f1b75ac8a1323</anchor>
       <arglist>(void *volatile &amp;val, void *exch)</arglist>
     </member>
     <member kind="function">
       <type>void *</type>
       <name>atomicCompareExchange</name>
-      <anchorfile>group__Concurrency.html</anchorfile>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
       <anchor>gad79b7e6699c7ddf27695b6877d8e3ebe</anchor>
       <arglist>(void *volatile &amp;val, void *exch, void *comp)</arglist>
     </member>
@@ -57158,9 +49834,9 @@
     </member>
   </compound>
   <compound kind="group">
-    <name>sigslot</name>
+    <name>Pt-Signals</name>
     <title>Signals and Delegates</title>
-    <filename>group__sigslot.html</filename>
+    <filename>group__Pt-Signals.html</filename>
     <class kind="class">Pt::Callable</class>
     <class kind="class">Pt::Connectable</class>
     <class kind="class">Pt::Connection</class>
@@ -57482,19 +50158,6 @@
     <docanchor file="allocators.html" title="Page Allocation">allocators_Page</docanchor>
   </compound>
   <compound kind="page">
-    <name>basictypes</name>
-    <title>Basic Types</title>
-    <filename>basictypes.html</filename>
-    <docanchor file="basictypes.html" title="Fixed Size Integers">basictypes_FixedInt</docanchor>
-    <docanchor file="basictypes.html" title="Dates and Times">basictypes_DateTime</docanchor>
-    <docanchor file="basictypes.html" title="The Any Class">basictypes_Any</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>concurrency</name>
-    <title>Concurrency</title>
-    <filename>concurrency.html</filename>
-  </compound>
-  <compound kind="page">
     <name>faq</name>
     <title>Frequently Asked Questions</title>
     <filename>faq.html</filename>
@@ -57597,6 +50260,14 @@
     <docanchor file="plugins.html" title="Loading Plugins">plugins_LoadingPlugins</docanchor>
   </compound>
   <compound kind="page">
+    <name>Pt-Basics-Page</name>
+    <title>Basic Types</title>
+    <filename>Pt-Basics-Page.html</filename>
+    <docanchor file="Pt-Basics-Page.html" title="Fixed Size Integers">Pt-Basics-Page-FixedInt</docanchor>
+    <docanchor file="Pt-Basics-Page.html" title="Dates and Times">Pt-Basics-Page-DateTime</docanchor>
+    <docanchor file="Pt-Basics-Page.html" title="The Any Class">Pt-Basics-Page-Any</docanchor>
+  </compound>
+  <compound kind="page">
     <name>pt_contents</name>
     <title>The Platinum C++ Framework</title>
     <filename>pt_contents.html</filename>
@@ -57615,6 +50286,18 @@
     <docanchor file="Pt-Gfx-Drawing-Page.html" title="Painters and Paint Surfaces">Pt-Gfx-Drawing-Page-Painter</docanchor>
     <docanchor file="Pt-Gfx-Drawing-Page.html" title="Paths and Transforms">Pt-Gfx-Drawing-Page-Paths</docanchor>
     <docanchor file="Pt-Gfx-Drawing-Page.html" title="Text and FontMetrics">Pt-Gfx-Drawing-Page-Text</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>Pt-Signals-Page</name>
+    <title>Signals and Delegates</title>
+    <filename>Pt-Signals-Page.html</filename>
+    <docanchor file="Pt-Signals-Page.html" title="Signals">Pt-Signals-Page-Signals</docanchor>
+    <docanchor file="Pt-Signals-Page.html" title="Delegates">Pt-Signals-Page-Delegates</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>Pt-System-Concurrency-Page</name>
+    <title>Concurrency</title>
+    <filename>Pt-System-Concurrency-Page.html</filename>
   </compound>
   <compound kind="page">
     <name>Pt-System-Tar-Page</name>
@@ -57662,13 +50345,6 @@
     <docanchor file="serialization.html" title="Serialization of Value Types">serialization_ValueTypes</docanchor>
     <docanchor file="serialization.html" title="Serialization of Pointers">serialization_Pointers</docanchor>
     <docanchor file="serialization.html" title="Serialization of Containers">serialization_Containers</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>sigslot</name>
-    <title>Signals and Delegates</title>
-    <filename>sigslot.html</filename>
-    <docanchor file="sigslot.html" title="Signals">sigslot_Signals</docanchor>
-    <docanchor file="sigslot.html" title="Delegates">sigslot_Delegates</docanchor>
   </compound>
   <compound kind="page">
     <name>ssl</name>

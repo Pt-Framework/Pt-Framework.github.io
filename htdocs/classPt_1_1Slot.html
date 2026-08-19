@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#related">Related Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Slot Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__sigslot.html">Signals and Delegates</a></div></div>  </div>
+<div class="title">Slot Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Signals.html">Signals and Delegates</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -105,10 +105,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 virtual <a class="el" href="classPt_1_1Slot.html">Slot</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a40029bacb7f972d34d204b89403d6f87">clone</a> () const =0</td></tr>
 <tr class="memdesc:a40029bacb7f972d34d204b89403d6f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone this object with new. <br /></td></tr>
 <tr class="separator:a40029bacb7f972d34d204b89403d6f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7fd6b4701abcd69575ad8d12ac80317"><td class="memItemLeft" align="right" valign="top"><a id="ac7fd6b4701abcd69575ad8d12ac80317"></a>
-virtual const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#ac7fd6b4701abcd69575ad8d12ac80317">callable</a> () const =0</td></tr>
-<tr class="memdesc:ac7fd6b4701abcd69575ad8d12ac80317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the contained callable. <br /></td></tr>
-<tr class="separator:ac7fd6b4701abcd69575ad8d12ac80317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c9eb3e2934ab7dab9d04a78afe844df"><td class="memItemLeft" align="right" valign="top">virtual const Callback *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a0c9eb3e2934ab7dab9d04a78afe844df">callable</a> () const =0</td></tr>
+<tr class="memdesc:a0c9eb3e2934ab7dab9d04a78afe844df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the callable converted to the type-erased Callback interface.  <a href="classPt_1_1Slot.html#a0c9eb3e2934ab7dab9d04a78afe844df">More...</a><br /></td></tr>
+<tr class="separator:a0c9eb3e2934ab7dab9d04a78afe844df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d95eb428e542c5bf228f3e73fc88359"><td class="memItemLeft" align="right" valign="top"><a id="a5d95eb428e542c5bf228f3e73fc88359"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Slot.html#a5d95eb428e542c5bf228f3e73fc88359">onConnect</a> (const <a class="el" href="classPt_1_1Connection.html">Connection</a> &amp;c)=0</td></tr>
 <tr class="memdesc:a5d95eb428e542c5bf228f3e73fc88359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies of connects. <br /></td></tr>
@@ -172,7 +171,36 @@ template&lt;typename... As&gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Slots can be constructed with the <a class="el" href="classPt_1_1Slot.html">slot()</a> function, which is overloaded for various types of callable entities, most notably functions or member functions. Slots are lightweight proxy-objects and one example is the <a class="el" href="classPt_1_1MethodSlot.html" title="Wraps Method objects so that they can act as Slots.">Pt::MethodSlot</a>, which allows to use a member function as a slot. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c9eb3e2934ab7dab9d04a78afe844df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c9eb3e2934ab7dab9d04a78afe844df">&#9670;&nbsp;</a></span>callable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const Callback* callable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The concrete slot returns its stored callable converted to Callback via a derived-to-base conversion. Callers downcast the result to <a class="el" href="classPt_1_1Callable.html">Callable&lt;R, As...&gt;</a> or <a class="el" href="classPt_1_1Invokable.html">Invokable&lt;As...&gt;</a> to invoke it. </p>
+
+<p>Implemented in <a class="el" href="classPt_1_1SignalSlot.html#ad82b65d7b806ac01c473d0527b162b12">SignalSlot&lt; As &gt;</a>, <a class="el" href="classPt_1_1MethodSlot.html#ad82b65d7b806ac01c473d0527b162b12">MethodSlot&lt; R, ClassT, As &gt;</a>, <a class="el" href="classPt_1_1LambdaSlot.html#ad82b65d7b806ac01c473d0527b162b12">LambdaSlot&lt; L, R, A &gt;</a>, <a class="el" href="classPt_1_1FunctionSlot.html#ad82b65d7b806ac01c473d0527b162b12">FunctionSlot&lt; R, As &gt;</a>, <a class="el" href="classPt_1_1DelegateSlot.html#ad82b65d7b806ac01c473d0527b162b12">DelegateSlot&lt; R, As &gt;</a>, and <a class="el" href="classPt_1_1ConstMethodSlot.html#ad82b65d7b806ac01c473d0527b162b12">ConstMethodSlot&lt; R, ClassT, As &gt;</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

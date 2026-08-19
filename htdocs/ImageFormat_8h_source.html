@@ -144,7 +144,7 @@
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classPt_1_1Gfx_1_1ImageFormat.html">ImageFormat</a>() </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        { }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>* createPixel(<a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>* createPixel(<a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                               Pt::ssize_t x, Pt::ssize_t y, </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                               PixelStorage&amp; store)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">        </span>{</div>
@@ -186,7 +186,7 @@
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">virtual</span> std::size_t onImageSize(Pt::ssize_t width, Pt::ssize_t height,</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                        std::size_t padding) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>* onCreatePixel(<a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>* onCreatePixel(<a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                         Pt::ssize_t x, Pt::ssize_t y, </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                         PixelStorage&amp; store) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
@@ -299,10 +299,10 @@
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">const</span> ImageFormat&amp; format()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> *_format; }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        { <span class="keywordflow">return</span> _pixel-&gt;base(); }</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _pixel-&gt;base(); }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">void</span> advance()</div>
@@ -416,7 +416,7 @@
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keyword">const</span> ViewBase&amp; view()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _pixel-&gt;view(); }</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _pixel-&gt;base(); }</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordtype">void</span> advance()</div>
@@ -474,10 +474,10 @@
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="agroup__Pt-Basics_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1ImageFormat_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ImageFormat.html">Pt::Gfx::ImageFormat</a></div><div class="ttdoc">Image format.</div><div class="ttdef"><b>Definition:</b> ImageFormat.h:53</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PixelBase_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PixelBase.html">Pt::Gfx::PixelBase</a></div><div class="ttdoc">Pixel base class.</div><div class="ttdef"><b>Definition:</b> PixelBase.h:52</div></div>
 <div class="ttc" id="astructPt_1_1Gfx_1_1ImageTraits_html"><div class="ttname"><a href="structPt_1_1Gfx_1_1ImageTraits.html">Pt::Gfx::ImageTraits</a></div><div class="ttdoc">Image traits.</div><div class="ttdef"><b>Definition:</b> ImageTraits.h:44</div></div>
-<div class="ttc" id="agroup__BasicTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

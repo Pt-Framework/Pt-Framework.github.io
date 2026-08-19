@@ -361,7 +361,7 @@
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">explicit</span> BasicPixelView( <span class="keyword">const</span> Format&amp; format = FormatT::get() );</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        BasicPixelView(<a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width, Pt::ssize_t height,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        BasicPixelView(<a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width, Pt::ssize_t height,</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                       Pt::ssize_t padding = 0, <span class="keyword">const</span> Format&amp; format = FormatT::get());</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
@@ -372,10 +372,10 @@
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        BasicPixelView&amp; operator=(<span class="keyword">const</span> BasicPixelView&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data()</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data()</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        { <span class="keywordflow">return</span> _view.data(); }</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _view.data(); }</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        Pt::ssize_t width()<span class="keyword"> const</span></div>
@@ -425,7 +425,7 @@
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keyword">explicit</span> BasicConstPixelView( <span class="keyword">const</span> Format&amp; format = FormatT::get() );</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        BasicConstPixelView(<span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width, Pt::ssize_t height,</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        BasicConstPixelView(<span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width, Pt::ssize_t height,</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                            Pt::ssize_t padding, <span class="keyword">const</span> Format&amp; format = FormatT::get());</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
@@ -436,7 +436,7 @@
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        BasicConstPixelView&amp; operator=(<span class="keyword">const</span> BasicConstPixelView&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _view.data(); }</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        Pt::ssize_t width()<span class="keyword"> const</span></div>
@@ -504,7 +504,7 @@
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatT, <span class="keyword">typename</span> TraitsT = ImageTraits&lt;FormatT&gt; &gt;</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;BasicPixelView&lt;FormatT,</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;               TraitsT&gt; pixelView(<a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;               TraitsT&gt; pixelView(<a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                                  Pt::ssize_t height, Pt::ssize_t padding = 0)</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;{</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">return</span> BasicPixelView&lt;FormatT, TraitsT&gt;(data, width, height, padding, FormatT::get());</div>
@@ -513,7 +513,7 @@
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatT, <span class="keyword">typename</span> TraitsT = ImageTraits&lt;FormatT&gt; &gt;</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;BasicConstPixelView&lt;FormatT,</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                    TraitsT&gt; pixelView(<span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                    TraitsT&gt; pixelView(<span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                                       Pt::ssize_t height, Pt::ssize_t padding = 0)</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;{</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">return</span> BasicConstPixelView&lt;FormatT, TraitsT&gt;(data, width, height, padding, FormatT::get());</div>
@@ -552,7 +552,7 @@
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;}</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keyword">inline</span> PixelViewF pixelViewF(<a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keyword">inline</span> PixelViewF pixelViewF(<a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                              Pt::ssize_t height, Pt::ssize_t padding,</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                              <span class="keyword">const</span> ImageFormat&amp; format)</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;{</div>
@@ -560,7 +560,7 @@
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;}</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160; </div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="keyword">inline</span> ConstPixelViewF pixelViewF(<span class="keyword">const</span> <a class="code" href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="keyword">inline</span> ConstPixelViewF pixelViewF(<span class="keyword">const</span> <a class="code" href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, Pt::ssize_t width,</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                                   Pt::ssize_t height, Pt::ssize_t padding,</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                                   <span class="keyword">const</span> ImageFormat&amp; format)</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;{</div>
@@ -576,7 +576,7 @@
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">#include &lt;Pt/Gfx/PixelView.hpp&gt;</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="agroup__BasicTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__BasicTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
+<div class="ttc" id="agroup__Pt-Basics_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-Basics.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
