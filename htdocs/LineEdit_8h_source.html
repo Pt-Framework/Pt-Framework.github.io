@@ -84,14 +84,14 @@
 <div class="title">LineEdit.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner </span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">   Copyright (C) 2015 Laurentiu-Gheorghe Crisan</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  modify it under the terms of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  License as published by the Free Software Foundation; either</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  As a special exception, you may use this file as part of a free</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  software library without restriction. Specifically, if other files</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  instantiate templates or use macros or inline functions from this</span></div>
@@ -101,12 +101,12 @@
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  License. This exception does not however invalidate any other</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  reasons why the executable file might be covered by the GNU Library</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  General Public License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  This library is distributed in the hope that it will be useful,</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  You should have received a copy of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  License along with this library; if not, write to the Free Software</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,</span></div>
@@ -117,7 +117,7 @@
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define PT_FORMS_LINEEDIT_H</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/Control.h&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/LineEditStyle.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/LineEditStyler.h&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/LineEditor.h&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/Adjustment.h&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;Pt/SmartPtr.h&gt;</span></div>
@@ -197,7 +197,7 @@
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> setTextColor(<span class="keyword">const</span> Gfx::Color&amp; color);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">const</span> Gfx::Font&amp; font() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        Gfx::Font font() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">void</span> setFont(<span class="keyword">const</span> Gfx::Font&amp; font);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
@@ -260,18 +260,17 @@
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        EchoMode                      _echoMode;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">double</span>                        _spacing;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        LineEditStyle                  _lineEditStyle;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        LineEditStyleOptions           _lineEditOptions;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        Gfx::RectF                    _textRect;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        Gfx::RectF                    _cursorRect;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        LineEditStyler                 _styler;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        Gfx::RectF                    _textRect;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        Gfx::RectF                    _cursorRect;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; const Pt::String &amp; &gt;</a></div></div>

@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile doxygen_version="1.8.20" doxygen_gitid="f246dd2f1c58eea39ea3f50c108019e4d4137bd5">
   <compound kind="class">
+    <name>Pt::Forms::AccentColorOption</name>
+    <filename>classPt_1_1Forms_1_1AccentColorOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
     <name>Pt::AccessFailed</name>
     <filename>classPt_1_1AccessFailed.html</filename>
     <base>Pt::IOError</base>
@@ -172,6 +177,11 @@
       <anchor>a1783ebebe4aabff1b4fe4866c1dbcdcf</anchor>
       <arglist>(void *p, std::size_t)</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::AlternateViewBackgroundOption</name>
+    <filename>classPt_1_1Forms_1_1AlternateViewBackgroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="class">
     <name>Pt::Any</name>
@@ -2476,6 +2486,11 @@
     <name>Pt::Cosmo::AutoReleasePool</name>
     <filename>classPt_1_1Cosmo_1_1AutoReleasePool.html</filename>
     <base>Pt::Cosmo::IAutoReleasePool</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::BackgroundOption</name>
+    <filename>classPt_1_1Forms_1_1BackgroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="class">
     <name>Pt::Base64Codec</name>
@@ -5609,333 +5624,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::BasicStyleOption</name>
-    <filename>classPt_1_1Forms_1_1BasicStyleOption.html</filename>
-    <templarg></templarg>
-    <base>Pt::Forms::StyleOption</base>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>value</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a77c7d528ac063d870b8c8426ec81c1c3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setValue</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a98a715331ff9a5bfe9fd1dac0aaebf2a</anchor>
-      <arglist>(const T &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>BasicStyleOption &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>aaa532d8404bafc6ea21081852e5c753c</anchor>
-      <arglist>(const BasicStyleOption &amp;o)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>acccc5ff2b90196c01d51642582337e5b</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a5d9f6be922b04a998f4f3de9858f95dc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>set</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a73bebb423940bd6189830d9799b992c7</anchor>
-      <arglist>(const Pt::Any &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>const char *</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a8c4da4b626748f746b1f9fdbe885edfb</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicStyleOption&lt; Pt::Gfx::Brush &gt;</name>
-    <filename>classPt_1_1Forms_1_1BasicStyleOption.html</filename>
-    <base>Pt::Forms::StyleOption</base>
-    <member kind="function">
-      <type>const Pt::Gfx::Brush &amp;</type>
-      <name>value</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a77c7d528ac063d870b8c8426ec81c1c3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setValue</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a98a715331ff9a5bfe9fd1dac0aaebf2a</anchor>
-      <arglist>(const Pt::Gfx::Brush &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>BasicStyleOption &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>aaa532d8404bafc6ea21081852e5c753c</anchor>
-      <arglist>(const BasicStyleOption &amp;o)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>acccc5ff2b90196c01d51642582337e5b</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a5d9f6be922b04a998f4f3de9858f95dc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>set</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a73bebb423940bd6189830d9799b992c7</anchor>
-      <arglist>(const Pt::Any &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>const char *</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a8c4da4b626748f746b1f9fdbe885edfb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a7370d854a3a71b207517c4a814af8c30</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a6d6130f7c873c8762dcd22f73dfdc6eb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicStyleOption&lt; Pt::Gfx::Color &gt;</name>
-    <filename>classPt_1_1Forms_1_1BasicStyleOption.html</filename>
-    <base>Pt::Forms::StyleOption</base>
-    <member kind="function">
-      <type>const Pt::Gfx::Color &amp;</type>
-      <name>value</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a77c7d528ac063d870b8c8426ec81c1c3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setValue</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a98a715331ff9a5bfe9fd1dac0aaebf2a</anchor>
-      <arglist>(const Pt::Gfx::Color &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>BasicStyleOption &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>aaa532d8404bafc6ea21081852e5c753c</anchor>
-      <arglist>(const BasicStyleOption &amp;o)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>acccc5ff2b90196c01d51642582337e5b</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a5d9f6be922b04a998f4f3de9858f95dc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>set</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a73bebb423940bd6189830d9799b992c7</anchor>
-      <arglist>(const Pt::Any &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>const char *</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a8c4da4b626748f746b1f9fdbe885edfb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a7370d854a3a71b207517c4a814af8c30</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a6d6130f7c873c8762dcd22f73dfdc6eb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicStyleOption&lt; Pt::Gfx::Font &gt;</name>
-    <filename>classPt_1_1Forms_1_1BasicStyleOption.html</filename>
-    <base>Pt::Forms::StyleOption</base>
-    <member kind="function">
-      <type>const Pt::Gfx::Font &amp;</type>
-      <name>value</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a77c7d528ac063d870b8c8426ec81c1c3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setValue</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a98a715331ff9a5bfe9fd1dac0aaebf2a</anchor>
-      <arglist>(const Pt::Gfx::Font &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>BasicStyleOption &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>aaa532d8404bafc6ea21081852e5c753c</anchor>
-      <arglist>(const BasicStyleOption &amp;o)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>acccc5ff2b90196c01d51642582337e5b</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a5d9f6be922b04a998f4f3de9858f95dc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>set</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a73bebb423940bd6189830d9799b992c7</anchor>
-      <arglist>(const Pt::Any &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>const char *</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a8c4da4b626748f746b1f9fdbe885edfb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a7370d854a3a71b207517c4a814af8c30</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a6d6130f7c873c8762dcd22f73dfdc6eb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>BasicStyleOption&lt; Pt::Gfx::Pen &gt;</name>
-    <filename>classPt_1_1Forms_1_1BasicStyleOption.html</filename>
-    <base>Pt::Forms::StyleOption</base>
-    <member kind="function">
-      <type>const Pt::Gfx::Pen &amp;</type>
-      <name>value</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a77c7d528ac063d870b8c8426ec81c1c3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setValue</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a98a715331ff9a5bfe9fd1dac0aaebf2a</anchor>
-      <arglist>(const Pt::Gfx::Pen &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>BasicStyleOption &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>aaa532d8404bafc6ea21081852e5c753c</anchor>
-      <arglist>(const BasicStyleOption &amp;o)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>acccc5ff2b90196c01d51642582337e5b</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a5d9f6be922b04a998f4f3de9858f95dc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>set</name>
-      <anchorfile>classPt_1_1Forms_1_1BasicStyleOption.html</anchorfile>
-      <anchor>a73bebb423940bd6189830d9799b992c7</anchor>
-      <arglist>(const Pt::Any &amp;v)</arglist>
-    </member>
-    <member kind="function">
-      <type>const char *</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a8c4da4b626748f746b1f9fdbe885edfb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a7370d854a3a71b207517c4a814af8c30</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a6d6130f7c873c8762dcd22f73dfdc6eb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::BasicTextBuffer</name>
     <filename>classPt_1_1BasicTextBuffer.html</filename>
     <templarg></templarg>
@@ -8024,6 +7712,7 @@
   <compound kind="class">
     <name>Pt::Forms::ButtonRenderer</name>
     <filename>classPt_1_1Forms_1_1ButtonRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
     <member kind="function">
       <type>ButtonRenderer *</type>
       <name>create</name>
@@ -8035,8 +7724,8 @@
       <type>void</type>
       <name>prepare</name>
       <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
-      <anchor>adbea44ea1ae0ee110f5dd8647eff39e0</anchor>
-      <arglist>(const StyleOptions &amp;options, const ButtonStyleOptions &amp;buttonOptions)</arglist>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
     </member>
     <member kind="function">
       <type>Gfx::SizeF</type>
@@ -8129,6 +7818,13 @@
       <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
       <arglist>(const StyleOptions &amp;options)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual ButtonRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
+      <anchor>a25b4b0f471c7ac786cdc5063e7493cfe</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Forms::ButtonState</name>
@@ -8212,201 +7908,267 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::ButtonStyle</name>
-    <filename>classPt_1_1Forms_1_1ButtonStyle.html</filename>
-    <base>StyleBinder&lt; ButtonRenderer, ButtonStyleOptions &gt;</base>
+    <name>Pt::Forms::ButtonStyler</name>
+    <filename>classPt_1_1Forms_1_1ButtonStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
     <member kind="function">
       <type></type>
-      <name>ButtonStyle</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyle.html</anchorfile>
-      <anchor>a544e17cfe8cc3cf63b997cca6e6321e1</anchor>
+      <name>ButtonStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a59fed64e4291f369a1b6167a270ef759</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ButtonStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ButtonRenderer &amp;renderer, const StyleOptions &amp;options, const ButtonStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ButtonStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ButtonRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Forms::ButtonStyleOptions</name>
-    <filename>classPt_1_1Forms_1_1ButtonStyleOptions.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>ButtonStyleOptions</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>a29cae4c2cd26d1b3c520fd5e80ac7194</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>hasOverrides</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>ac1b75cf1e0493f4dc35099600594359d</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>generation</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>aa27a67d1d644d2d8f28e92ced9a1d4a5</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::Brush *</type>
+      <type>const Gfx::Brush &amp;</type>
       <name>foreground</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>a1ce2a0073435a80c75302d94637e6282</anchor>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a6d159aeeaa0870b520a6ea415a80a157</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setForeground</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>a57d1d8e1cb5c2f071d2d745c6cd00e7f</anchor>
       <arglist>(const Gfx::Brush &amp;brush)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Pen *</type>
+      <type>const Gfx::Pen &amp;</type>
       <name>contour</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>ac8789626185e9e01f39b77a33627fa05</anchor>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setContour</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
       <arglist>(const Gfx::Pen &amp;pen)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Color *</type>
+      <type>const Gfx::Color &amp;</type>
       <name>accentColor</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>a89085c6513635c84b960a155a5e8e041</anchor>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a6a90758a42549498261effe29a3843a8</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setAccentColor</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>af194e5bfd813c293867cf0769a3eed7d</anchor>
       <arglist>(const Gfx::Color &amp;color)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Color *</type>
+      <type>const Gfx::Color &amp;</type>
       <name>highlightColor</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>ae9049ef36c26e7d732ad719b40b43d75</anchor>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a129d9bcf5ac85fce856e5329d667b4be</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setHighlightColor</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>a4ef7cca08bd9a5161f62d8458d0d23e7</anchor>
       <arglist>(const Gfx::Color &amp;color)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Color *</type>
+      <type>const Gfx::Color &amp;</type>
       <name>textColor</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>a0a39ac47c66186967c321f2b7ce8b2ad</anchor>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setTextColor</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
       <arglist>(const Gfx::Color &amp;color)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Font *</type>
+      <type>Gfx::Font</type>
       <name>font</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>ad75820d7f491993221bb52b0285ab29a</anchor>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFont</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
       <arglist>(const Gfx::Font &amp;font)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontSize</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
       <arglist>(std::size_t size)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontWeight</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
       <arglist>(Gfx::Font::Weight weight)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontSlant</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
       <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
       <arglist>(Gfx::Font::Slant slant)</arglist>
     </member>
     <member kind="function">
-      <type>Gfx::Font</type>
-      <name>getFont</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonStyleOptions.html</anchorfile>
-      <anchor>afc6877a3de75da360b9ef15728ac748e</anchor>
-      <arglist>(const Gfx::Font &amp;base) const</arglist>
+      <type>bool</type>
+      <name>prepareIcon</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a94e20a74de4fa6ec4fc5c062d966c070</anchor>
+      <arglist>(const Gfx::Image &amp;icon, Pixmap &amp;picture, const ButtonState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>measureText</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>af3ea1c7224e99e5edc67137dbe13ff7f</anchor>
+      <arglist>(PaintSurface &amp;surface, const String &amp;text, Gfx::TextMetrics &amp;textMetrics, Gfx::FontMetrics &amp;fontMetrics) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureContent</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a1247c5e573e32ffa0e79cf79dccaf92d</anchor>
+      <arglist>(PaintSurface &amp;surface, Direction direction, const Gfx::SizeF &amp;iconSize, const Gfx::SizeF &amp;textSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a9dc290c06a8b203ee6ea5f4a8e171466</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;frameRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutContent</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a952222a44f6d5cee2b19ff4e00d2cb6d</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;contentRect, Direction direction, const Gfx::SizeF &amp;iconSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;iconRect, Gfx::RectF &amp;textRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutMnemonic</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a4dbe0ae40014387c3b97a81e35908426</anchor>
+      <arglist>(PaintSurface &amp;surface, const String &amp;text, const Gfx::PointF &amp;textPos, const Gfx::FontMetrics &amp;fontMetrics, String::size_type mnemonicIndex) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a798b1caa95fc724b296f73c77e11c5fc</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ButtonState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a94a756b6657b486b66748d7278947859</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ButtonState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>aae47e4ec06a751bd805f9405f1e57716</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const String &amp;text, const Gfx::PointF &amp;pos, const ButtonState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderMnemonic</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a558949e14c75301494295919d56254a0</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;mnemonic, const ButtonState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderIcon</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>ab34c366db13e4cd1b5b2219da841243e</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Pixmap &amp;picture, const Gfx::PointF &amp;pos, const ButtonState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a9b28739a5c4f8825d5af3fa563f23a84</anchor>
+      <arglist>(ButtonRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>ad7ab5eb210a489ec5908eb6157877142</anchor>
+      <arglist>(const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9490,6 +9252,7 @@
   <compound kind="class">
     <name>Pt::Forms::CheckBoxRenderer</name>
     <filename>classPt_1_1Forms_1_1CheckBoxRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
     <member kind="function">
       <type>CheckBoxRenderer *</type>
       <name>create</name>
@@ -9501,8 +9264,8 @@
       <type>void</type>
       <name>prepare</name>
       <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
-      <anchor>adaf0dec77c0e51692c635b6af09786b2</anchor>
-      <arglist>(const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;checkBoxOptions)</arglist>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
     </member>
     <member kind="function">
       <type>Gfx::SizeF</type>
@@ -9581,6 +9344,13 @@
       <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
       <arglist>(const StyleOptions &amp;options)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual CheckBoxRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
+      <anchor>a97b29eb0bcc62c189e44218888c78268</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Forms::CheckBoxState</name>
@@ -9650,173 +9420,225 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::CheckBoxStyle</name>
-    <filename>classPt_1_1Forms_1_1CheckBoxStyle.html</filename>
-    <base>StyleBinder&lt; CheckBoxRenderer, CheckBoxStyleOptions &gt;</base>
+    <name>Pt::Forms::CheckBoxStyler</name>
+    <filename>classPt_1_1Forms_1_1CheckBoxStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
     <member kind="function">
       <type></type>
-      <name>CheckBoxStyle</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyle.html</anchorfile>
-      <anchor>aba6c6da3f5cdc98cde53668386161ffe</anchor>
+      <name>CheckBoxStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a0518eb42010c86352fa0f97085e52746</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(CheckBoxRenderer &amp;renderer, const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const CheckBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Forms::CheckBoxStyleOptions</name>
-    <filename>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CheckBoxStyleOptions</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>a7976d0233a6041fe5a01ff7ae8c4455e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>hasOverrides</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>ac1b75cf1e0493f4dc35099600594359d</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>generation</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>aa27a67d1d644d2d8f28e92ced9a1d4a5</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::Brush *</type>
+      <type>const Gfx::Brush &amp;</type>
       <name>background</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>aafc94b88e548a84dd3ba893b2cbc7858</anchor>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setBackground</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
       <arglist>(const Gfx::Brush &amp;brush)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Pen *</type>
+      <type>const Gfx::Pen &amp;</type>
       <name>contour</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>ac8789626185e9e01f39b77a33627fa05</anchor>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setContour</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
       <arglist>(const Gfx::Pen &amp;pen)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Color *</type>
+      <type>const Gfx::Color &amp;</type>
       <name>textColor</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>a0a39ac47c66186967c321f2b7ce8b2ad</anchor>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setTextColor</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
       <arglist>(const Gfx::Color &amp;color)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Font *</type>
+      <type>Gfx::Font</type>
       <name>font</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>ad75820d7f491993221bb52b0285ab29a</anchor>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFont</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
       <arglist>(const Gfx::Font &amp;font)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontSize</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
       <arglist>(std::size_t size)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontWeight</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
       <arglist>(Gfx::Font::Weight weight)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontSlant</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
       <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
       <arglist>(Gfx::Font::Slant slant)</arglist>
     </member>
     <member kind="function">
-      <type>Gfx::Font</type>
-      <name>getFont</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyleOptions.html</anchorfile>
-      <anchor>afc6877a3de75da360b9ef15728ac748e</anchor>
-      <arglist>(const Gfx::Font &amp;base) const</arglist>
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a2b4f5a790c408256a6fc63c3318236eb</anchor>
+      <arglist>(CheckBoxRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ae405b0103845bca015863a85e115b714</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureIndicator</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ac1167dfe190277d3610bc5f1b0c49578</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureContent</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a23b31af3593601669ac39385f8e0bb90</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;indicatorSize, const Gfx::SizeF &amp;textSize)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a2937d7b5508889f628308d933ab5473e</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a4b4b008dbbf3ec6e9a4c4ced4d5ff350</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;frameRect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutContent</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ae4040ea7a19a792217a17be130744ae7</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;contentRect, const Gfx::SizeF &amp;indicatorSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;indicatorRect, Gfx::RectF &amp;textRect)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutMnemonic</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ac8f50d9280dd78036a7cd8a9d01df870</anchor>
+      <arglist>(PaintSurface &amp;surface, const String &amp;text, const Gfx::PointF &amp;textPos, const Gfx::FontMetrics &amp;fontMetrics, String::size_type mnemonicIndex)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ae972b3a26a0e8f09ef10a4ef9b3e5673</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;boxRect, const CheckBoxState &amp;state)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a9cddea9d70d4b4e5fdd64cf168364abc</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;textRect, const String &amp;text, const Gfx::PointF &amp;pos, const CheckBoxState &amp;state)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderMnemonic</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>adc8382085afa8dd8c13306c826a3bd88</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;mnemonic, const CheckBoxState &amp;state)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10598,6 +10420,247 @@
       <anchorfile>classPt_1_1Gfx_1_1ColorStops.html</anchorfile>
       <anchor>a4e8440ca0e5a521d4d176b43bb5f37ba</anchor>
       <arglist>(Color &amp;res, const float position) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ComboBoxRenderer</name>
+    <filename>classPt_1_1Forms_1_1ComboBoxRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type></type>
+      <name>ComboBoxRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
+      <anchor>a180fec38a9c4a40e7a4c0dcae8b7bda4</anchor>
+      <arglist>(std::size_t refs=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>ComboBoxRenderer *</type>
+      <name>create</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
+      <anchor>a94c1fd692d50c065a708818f4b4fca8a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual ComboBoxRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
+      <anchor>a2c4f82fbc008d8a246176ffe0a2e693b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onPrepare</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
+      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ComboBoxStyler</name>
+    <filename>classPt_1_1Forms_1_1ComboBoxStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>ComboBoxStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a8125e48c26f604ace3bd7c1152de2046</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>foreground</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a6d159aeeaa0870b520a6ea415a80a157</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setForeground</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a57d1d8e1cb5c2f071d2d745c6cd00e7f</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a38b766279fbdb0d7df69bfec8936b97a</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;rect, Gfx::RectF &amp;entryRect, Gfx::RectF &amp;buttonRect, Gfx::RectF &amp;textRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ae405b0103845bca015863a85e115b714</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a848beaccdb8d8d205623485622e42938</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;entryRect, const Gfx::RectF &amp;buttonRect, const ComboBoxState &amp;state, const ComboBoxButtonState &amp;buttonState) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a309ec9a7bb4c807746e402a8aa25ad63</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;textRect, const String &amp;text, const Gfx::PointF &amp;textPos, const Gfx::RectF &amp;cursor, const ComboBoxState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a4bf1332b31cdcef3fe4954069bb5667e</anchor>
+      <arglist>(ComboBoxRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ComboBoxStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12967,6 +13030,11 @@
   <compound kind="class">
     <name>Pt::Lua::Context</name>
     <filename>classPt_1_1Lua_1_1Context.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ContourOption</name>
+    <filename>classPt_1_1Forms_1_1ContourOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="class">
     <name>Pt::ConversionError</name>
@@ -16454,6 +16522,106 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::JsonRpc::Fault</name>
+    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
+    <base>Pt::Remoting::Fault</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorCodes</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
+      <arglist>(const std::string &amp;msg, int ec)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
+      <arglist>(const char *msg, int rc)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>code</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::XmlRpc::Fault</name>
     <filename>classPt_1_1XmlRpc_1_1Fault.html</filename>
     <base>Pt::Remoting::Fault</base>
@@ -16610,106 +16778,6 @@
       <name>rc</name>
       <anchorfile>classPt_1_1XmlRpc_1_1Fault.html</anchorfile>
       <anchor>ac66b30f37d7df8c9bccc0b913d90bf16</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::JsonRpc::Fault</name>
-    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
-    <base>Pt::Remoting::Fault</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>ErrorCodes</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
-      <arglist>(const std::string &amp;msg, int ec)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
-      <arglist>(const char *msg, int rc)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>code</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -18130,6 +18198,7 @@
   <compound kind="class">
     <name>Pt::Forms::FontOption</name>
     <filename>classPt_1_1Forms_1_1FontOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
     <member kind="function">
       <type></type>
       <name>FontOption</name>
@@ -18139,16 +18208,16 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>hasOverride</name>
+      <name>isSet</name>
       <anchorfile>classPt_1_1Forms_1_1FontOption.html</anchorfile>
-      <anchor>aa398fae1fb49c375c7c0f967c565d089</anchor>
+      <anchor>a479da8bc6c27c908ec0c5c460fb26a4a</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Font *</type>
-      <name>font</name>
+      <type>const Gfx::Font &amp;</type>
+      <name>value</name>
       <anchorfile>classPt_1_1Forms_1_1FontOption.html</anchorfile>
-      <anchor>ad75820d7f491993221bb52b0285ab29a</anchor>
+      <anchor>afce26d458b7a5cbaacc2151b125b95e0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -18183,9 +18252,14 @@
       <type>Gfx::Font</type>
       <name>getFont</name>
       <anchorfile>classPt_1_1Forms_1_1FontOption.html</anchorfile>
-      <anchor>afc6877a3de75da360b9ef15728ac748e</anchor>
-      <arglist>(const Gfx::Font &amp;base) const</arglist>
+      <anchor>ad423eba3e0e3b1eb77f8c15b6120ec48</anchor>
+      <arglist>(const Gfx::Font &amp;baseFont) const</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ForegroundOption</name>
+    <filename>classPt_1_1Forms_1_1ForegroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="class">
     <name>Pt::JsonRpc::Formatter</name>
@@ -19815,6 +19889,21 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::HighlightColorOption</name>
+    <filename>classPt_1_1Forms_1_1HighlightColorOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::HighlightedTextColorOption</name>
+    <filename>classPt_1_1Forms_1_1HighlightedTextColorOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::HoverBackgroundOption</name>
+    <filename>classPt_1_1Forms_1_1HoverBackgroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
     <name>Pt::Soap::HttpClient</name>
     <filename>classPt_1_1Soap_1_1HttpClient.html</filename>
     <base>Pt::Soap::Client</base>
@@ -20033,6 +20122,243 @@
       <type>void</type>
       <name>setFault</name>
       <anchorfile>classPt_1_1Soap_1_1Client.html</anchorfile>
+      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
+      <arglist>(int rc, const char *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::XmlRpc::HttpClient</name>
+    <filename>classPt_1_1XmlRpc_1_1HttpClient.html</filename>
+    <base>Pt::XmlRpc::Client</base>
+    <base>Pt::Connectable</base>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a344839bd00011fb21fd4fb8130acb670</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8c202c93c0ac0cbed50d080c344fc132</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a4c5323d21d9a80458d5fe8e2f12d90e6</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a1d01bbd43d09b97539be57d8cea49734</anchor>
+      <arglist>(System::EventLoop &amp;loop, const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HttpClient</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>ada89e260165ff152b91e556444bdfa69</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setActive</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a9f9aae5e84ced20cd32429d4bd036b4f</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>System::EventLoop *</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a1edfac22331fb732120df36898d0a907</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setSecure</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a08968935c2f4dee47a3c29134bc7bee4</anchor>
+      <arglist>(Ssl::Context &amp;ctx)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPeerName</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>aeca6698a6ec4c085e45ab44641a89a7a</anchor>
+      <arglist>(const std::string &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setKeepAlive</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a0c5021ac5d779d2ef743c5e0a2712054</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTimeout</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a4e6264069bc112d5f7a636525f88a396</anchor>
+      <arglist>(std::size_t timeout)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTarget</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a28a3ae409dc63dc51452526d3817e345</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTarget</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a3a546a876e2bdb49d97d9dee5c42bb37</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts, const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHost</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a5f25e80a5fd1c2c6b2c78f5a25528d05</anchor>
+      <arglist>(const Net::Endpoint &amp;ep)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHost</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>ae5cceed20af51afda77bb327ca2df180</anchor>
+      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceUrl</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a65a2bb0af87cc138d252c5f63f31b493</anchor>
+      <arglist>(const std::string &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceUrl</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a6ce0b826b590129c688580300ab6910b</anchor>
+      <arglist>(const char *url)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Net::Endpoint &amp;</type>
+      <name>host</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8b5e93b6494d52c1f181beb48adbdca0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const RemoteCall *</type>
+      <name>activeProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a97c67890f440dc6fef7f91f54f756d5a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>isFailed</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8bb143d1034a37c831188adaa98c3fdf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginInvoke</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a56a360e9a957dc1961570f4d280c83b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onInvoke</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a8ebd6cb49caff5681c45860a43c99fc3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
+      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>adde1b3544f8b7fbfce805bde01ae33c8</anchor>
+      <arglist>(std::ostream &amp;os)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>advanceMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a5be2944d448fa1303049be88de0370a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a47023fe0730ed1c00bbecaeb01aa02d0</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>parseResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>abda6a495e2daad5addb4560e54a499d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>processResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
+      <anchor>a5aceb42a9baee0fe842198cc587a972d</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setFault</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
       <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
       <arglist>(int rc, const char *msg)</arglist>
     </member>
@@ -20296,243 +20622,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::XmlRpc::HttpClient</name>
-    <filename>classPt_1_1XmlRpc_1_1HttpClient.html</filename>
-    <base>Pt::XmlRpc::Client</base>
-    <base>Pt::Connectable</base>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a344839bd00011fb21fd4fb8130acb670</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8c202c93c0ac0cbed50d080c344fc132</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a4c5323d21d9a80458d5fe8e2f12d90e6</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a1d01bbd43d09b97539be57d8cea49734</anchor>
-      <arglist>(System::EventLoop &amp;loop, const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~HttpClient</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>ada89e260165ff152b91e556444bdfa69</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setActive</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a9f9aae5e84ced20cd32429d4bd036b4f</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function">
-      <type>System::EventLoop *</type>
-      <name>loop</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a1edfac22331fb732120df36898d0a907</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setSecure</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a08968935c2f4dee47a3c29134bc7bee4</anchor>
-      <arglist>(Ssl::Context &amp;ctx)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPeerName</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>aeca6698a6ec4c085e45ab44641a89a7a</anchor>
-      <arglist>(const std::string &amp;peer)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setKeepAlive</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a0c5021ac5d779d2ef743c5e0a2712054</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTimeout</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a4e6264069bc112d5f7a636525f88a396</anchor>
-      <arglist>(std::size_t timeout)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTarget</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a28a3ae409dc63dc51452526d3817e345</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTarget</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a3a546a876e2bdb49d97d9dee5c42bb37</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts, const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setHost</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a5f25e80a5fd1c2c6b2c78f5a25528d05</anchor>
-      <arglist>(const Net::Endpoint &amp;ep)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setHost</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>ae5cceed20af51afda77bb327ca2df180</anchor>
-      <arglist>(const Net::Endpoint &amp;ep, const Net::TcpSocketOptions &amp;opts)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setServiceUrl</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a65a2bb0af87cc138d252c5f63f31b493</anchor>
-      <arglist>(const std::string &amp;url)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setServiceUrl</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a6ce0b826b590129c688580300ab6910b</anchor>
-      <arglist>(const char *url)</arglist>
-    </member>
-    <member kind="function">
-      <type>const Net::Endpoint &amp;</type>
-      <name>host</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8b5e93b6494d52c1f181beb48adbdca0</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>close</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const RemoteCall *</type>
-      <name>activeProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a97c67890f440dc6fef7f91f54f756d5a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>isFailed</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8bb143d1034a37c831188adaa98c3fdf</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onBeginInvoke</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a56a360e9a957dc1961570f4d280c83b0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onInvoke</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a8ebd6cb49caff5681c45860a43c99fc3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpClient.html</anchorfile>
-      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>adde1b3544f8b7fbfce805bde01ae33c8</anchor>
-      <arglist>(std::ostream &amp;os)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>advanceMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a5be2944d448fa1303049be88de0370a7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a4eed1200e5e6561522e68f2c20289ea5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a47023fe0730ed1c00bbecaeb01aa02d0</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>parseResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>abda6a495e2daad5addb4560e54a499d7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>processResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>a5aceb42a9baee0fe842198cc587a972d</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setFault</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Client.html</anchorfile>
-      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
-      <arglist>(int rc, const char *msg)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setReady</name>
-      <anchorfile>classPt_1_1Remoting_1_1Client.html</anchorfile>
-      <anchor>aa70e4661651376db02803dde8117e8e0</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Http::HttpError</name>
     <filename>classPt_1_1Http_1_1HttpError.html</filename>
     <base>Pt::IOError</base>
@@ -20556,53 +20645,6 @@
       <anchorfile>classPt_1_1Http_1_1HttpError.html</anchorfile>
       <anchor>afc5cffd023f3ce1162986c5427d31f8e</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::XmlRpc::HttpService</name>
-    <filename>classPt_1_1XmlRpc_1_1HttpService.html</filename>
-    <base>Pt::Http::Service</base>
-    <member kind="function">
-      <type></type>
-      <name>HttpService</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
-      <anchor>afb4ff97daa88b8ee62616085c6d24660</anchor>
-      <arglist>(Remoting::ServiceDefinition &amp;rpcService)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~HttpService</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
-      <anchor>a8568cb4f69a384616625164d03a835e1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Responder *</type>
-      <name>getResponder</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
-      <arglist>(const Request &amp;)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>releaseResponder</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
-      <arglist>(Responder *)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual Http::Responder *</type>
-      <name>onGetResponder</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
-      <anchor>a9cec4737fc8674d68bd7de8559f5ad5b</anchor>
-      <arglist>(const Http::Request &amp;)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReleaseResponder</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
-      <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
-      <arglist>(Http::Responder *resp)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20648,6 +20690,53 @@
       <type>virtual void</type>
       <name>onReleaseResponder</name>
       <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
+      <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
+      <arglist>(Http::Responder *resp)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::XmlRpc::HttpService</name>
+    <filename>classPt_1_1XmlRpc_1_1HttpService.html</filename>
+    <base>Pt::Http::Service</base>
+    <member kind="function">
+      <type></type>
+      <name>HttpService</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
+      <anchor>afb4ff97daa88b8ee62616085c6d24660</anchor>
+      <arglist>(Remoting::ServiceDefinition &amp;rpcService)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HttpService</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
+      <anchor>a8568cb4f69a384616625164d03a835e1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Responder *</type>
+      <name>getResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>releaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
+      <arglist>(Responder *)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Http::Responder *</type>
+      <name>onGetResponder</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
+      <anchor>a9cec4737fc8674d68bd7de8559f5ad5b</anchor>
+      <arglist>(const Http::Request &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReleaseResponder</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
       <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
       <arglist>(Http::Responder *resp)</arglist>
     </member>
@@ -21392,80 +21481,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::InputIterator</name>
-    <filename>classPt_1_1Json_1_1InputIterator.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>InputIterator</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>afc588072a958801184ea34c95e6f3349</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>InputIterator</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a00d7b56a4047c8b3ea735485d748352d</anchor>
-      <arglist>(JsonReader &amp;xis)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>InputIterator</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a40a63b71e77cb8dae4d79f13ceb00f41</anchor>
-      <arglist>(const InputIterator &amp;it)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~InputIterator</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a5f8fa00fb3b15e629017647489358add</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>InputIterator &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a75426e8cb2f5ef29ad0a59df52104455</anchor>
-      <arglist>(const InputIterator &amp;it)</arglist>
-    </member>
-    <member kind="function">
-      <type>Node &amp;</type>
-      <name>operator*</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a7e33bea6ccde6792db9b3d8522b639a4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Node *</type>
-      <name>operator-&gt;</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>abbcb321fe8fcb32d38edf18d5e049862</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>InputIterator &amp;</type>
-      <name>operator++</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a5aca15d82412956581232e2578603725</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>a49b34afe93a7045c560ec138a9063e93</anchor>
-      <arglist>(const InputIterator &amp;it) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
-      <anchor>afe1923bd088a6b0510e0e28f5748f682</anchor>
-      <arglist>(const InputIterator &amp;it) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Xml::InputIterator</name>
     <filename>classPt_1_1Xml_1_1InputIterator.html</filename>
     <member kind="function">
@@ -21535,6 +21550,80 @@
       <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classPt_1_1Xml_1_1InputIterator.html</anchorfile>
+      <anchor>afe1923bd088a6b0510e0e28f5748f682</anchor>
+      <arglist>(const InputIterator &amp;it) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Json::InputIterator</name>
+    <filename>classPt_1_1Json_1_1InputIterator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>InputIterator</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>afc588072a958801184ea34c95e6f3349</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>InputIterator</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a00d7b56a4047c8b3ea735485d748352d</anchor>
+      <arglist>(JsonReader &amp;xis)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>InputIterator</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a40a63b71e77cb8dae4d79f13ceb00f41</anchor>
+      <arglist>(const InputIterator &amp;it)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~InputIterator</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a5f8fa00fb3b15e629017647489358add</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>InputIterator &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a75426e8cb2f5ef29ad0a59df52104455</anchor>
+      <arglist>(const InputIterator &amp;it)</arglist>
+    </member>
+    <member kind="function">
+      <type>Node &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a7e33bea6ccde6792db9b3d8522b639a4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Node *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>abbcb321fe8fcb32d38edf18d5e049862</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>InputIterator &amp;</type>
+      <name>operator++</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a5aca15d82412956581232e2578603725</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
+      <anchor>a49b34afe93a7045c560ec138a9063e93</anchor>
+      <arglist>(const InputIterator &amp;it) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classPt_1_1Json_1_1InputIterator.html</anchorfile>
       <anchor>afe1923bd088a6b0510e0e28f5748f682</anchor>
       <arglist>(const InputIterator &amp;it) const</arglist>
     </member>
@@ -22495,10 +22584,6 @@
   <compound kind="class">
     <name>Pt::IStringStream</name>
     <filename>classPt_1_1IStringStream.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Forms::StyleOptions::Iterator</name>
-    <filename>classPt_1_1Forms_1_1StyleOptions_1_1Iterator.html</filename>
   </compound>
   <compound kind="class">
     <name>Pt::SerializationInfo::Iterator</name>
@@ -24075,6 +24160,589 @@
       <anchorfile>classPt_1_1System_1_1Library.html</anchorfile>
       <anchor>a413a7cbc7d2d88c93d45dd6876d92e2e</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::LineEditRenderer</name>
+    <filename>classPt_1_1Forms_1_1LineEditRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter &amp;</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
+      <anchor>a9deed02dcbe69a706bc9515156d49f6d</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual LineEditRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
+      <anchor>ab804cb154949925b3b39c9a54f3eec06</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::LineEditStyler</name>
+    <filename>classPt_1_1Forms_1_1LineEditStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>LineEditStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a7422a27458700ba2a1e69734c8a11760</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a502af9439bff06d7a09dd2148c5548b8</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;rect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ac1335e4b17122c95f0c913019fc29c5c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a135f4d98fe3d569af9f756e29eacea09</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;textRect, const String &amp;text, const Gfx::PointF &amp;textPos, const Gfx::RectF &amp;cursor, const Gfx::RectF &amp;selection, const LineEditState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>afec68565bee6db4234f1bb968b3be2d7</anchor>
+      <arglist>(LineEditRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>ad7ab5eb210a489ec5908eb6157877142</anchor>
+      <arglist>(const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ListBoxRenderer</name>
+    <filename>classPt_1_1Forms_1_1ListBoxRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type>ListBoxRenderer *</type>
+      <name>create</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxRenderer.html</anchorfile>
+      <anchor>a198878ae9bdb11fd8f946f2ec49c7442</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual ListBoxRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxRenderer.html</anchorfile>
+      <anchor>a1c339f2e499fc5c5bf964077362ecd9d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ListBoxStyler</name>
+    <filename>classPt_1_1Forms_1_1ListBoxStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>ListBoxStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a42967f2937690155e6153472a0c8c616</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a9dc290c06a8b203ee6ea5f4a8e171466</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;frameRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a0ac3901898bd07465d1b2ceb4743a33e</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ListBoxState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a26ada2e7f0f843e1cc817082a056c9fe</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ListBoxState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>aeb019a1deae3a381299e7eddb9c22b1e</anchor>
+      <arglist>(ListBoxRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ListItemRenderer</name>
+    <filename>classPt_1_1Forms_1_1ListItemRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderHighlight</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
+      <anchor>a340beaea5a7b5df20b0a6790c80b0e35</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ListItemState &amp;state)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual ListItemRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
+      <anchor>a0f413b8153d64dd2b7c6078102bfed29</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onPrepare</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
+      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onRenderHighlight</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
+      <anchor>ab6a64fadb2498636181737d8101546df</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ListItemState &amp;state)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ListItemStyler</name>
+    <filename>classPt_1_1Forms_1_1ListItemStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>ListItemStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a816f43671b388059f594a673e2e4d7f5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureContent</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a263cf485274feefc1b7042e80f934773</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;iconSize, const Gfx::SizeF &amp;textSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>ac1335e4b17122c95f0c913019fc29c5c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a9dc290c06a8b203ee6ea5f4a8e171466</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;frameRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutContent</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>aff5890e52447bf4dc62c2eaf7c54ce52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;contentRect, const Gfx::SizeF &amp;iconSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;iconRect, Gfx::RectF &amp;textRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>adfbda0f450db835eba3d003e1b944291</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ListItemState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderHighlight</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a0e2d272934d294e7e6cc24f6479b8dd5</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const ListItemState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>abc32af2f455cc1746d43a5f77d2a6195</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;textRect, const String &amp;text, const Gfx::PointF &amp;pos, const ListItemState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderIcon</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a12da84ee634f22a5e94aaec81af71387</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;iconRect, const Pixmap &amp;picture, const Gfx::PointF &amp;pos, const ListItemState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a28cd15c184e0c0d789020fdd4a03e458</anchor>
+      <arglist>(ListItemRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ListItemStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26828,102 +27496,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PaintContext</name>
-    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
-    <base>Pt::Gfx::PaintContext</base>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
-      <arglist>(PaintSurface &amp;surface)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>ab5ef25f0fe03c52f23ff41005952571f</anchor>
-      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~PaintContext</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::ImageFormat &amp;</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::SizeF &amp;</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Scaling &amp;</type>
-      <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const RectF *</type>
-      <name>clip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
-      <arglist>(const RectF &amp;clip)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resetClip</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Canvas *</type>
-      <name>getCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
-      <arglist>(Canvas *canvas)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetachSurface</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
-      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
-      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Gfx::PaintContext</name>
     <filename>classPt_1_1Gfx_1_1PaintContext.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -27017,6 +27589,102 @@
       <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
       <anchor>aa9e8bcd14842f44267c7e82d0eb05e98</anchor>
       <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::PaintContext</name>
+    <filename>classPt_1_1Forms_1_1PaintContext.html</filename>
+    <base>Pt::Gfx::PaintContext</base>
+    <member kind="function">
+      <type></type>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a1e9bfa9332f92b0f39cdc6212dbad2ee</anchor>
+      <arglist>(PaintSurface &amp;surface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>ab5ef25f0fe03c52f23ff41005952571f</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~PaintContext</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a38c27b28f59872acb4fa449db5197cce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::ImageFormat &amp;</type>
+      <name>format</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Scaling &amp;</type>
+      <name>scaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const RectF *</type>
+      <name>clip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aabb3156c1870a1ca631baf8b4f263292</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a21fc57e50baf2900fcf7928f96d3a27c</anchor>
+      <arglist>(const RectF &amp;clip)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resetClip</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>aa662021f2e504937de9ee14764f70253</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Canvas *</type>
+      <name>getCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
+      <arglist>(Canvas *canvas)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintContext.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetachSurface</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintContext.html</anchorfile>
+      <anchor>a50aa2ca65b7535ecc063885ea4946ae1</anchor>
+      <arglist>(Gfx::PaintSurface &amp;surface) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28176,123 +28844,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PaintSurface</name>
-    <filename>classPt_1_1Forms_1_1PaintSurface.html</filename>
-    <base>Pt::Gfx::PaintSurface</base>
-    <member kind="function">
-      <type></type>
-      <name>~PaintSurface</name>
-      <anchorfile>classPt_1_1Forms_1_1PaintSurface.html</anchorfile>
-      <anchor>afb2141e21845ea9feb60b0ee7496b208</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::ImageFormat &amp;</type>
-      <name>format</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::SizeF &amp;</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Scaling &amp;</type>
-      <name>scaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Canvas *</type>
-      <name>getCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
-      <arglist>(Canvas *canvas)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>invalidate</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual const Gfx::ImageFormat &amp;</type>
-      <name>onGetFormat</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>ab5a91e916f4f15a14fd4987337beecbd</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual const Gfx::SizeF &amp;</type>
-      <name>onGetSize</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a53b0aec6c2a14d263b67ca82482dc727</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual const Scaling &amp;</type>
-      <name>onGetScaling</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a0af2ac2d4cfd0539ab5fcab00344fd51</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual Gfx::Canvas *</type>
-      <name>onGetCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a67aa55c887285040a03580dd6051798d</anchor>
-      <arglist>(Gfx::Canvas *reuse)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual Gfx::Canvas *</type>
-      <name>onCreateCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a962a4c7feb392af0fd5c970ce7d5ef65</anchor>
-      <arglist>(Gfx::Canvas *reuse)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onReleaseCanvas</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a631556d31880af997a4bcc2455f4f8f6</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onSync</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>a6814bdc5696e27e1f38687b8a1c50e8f</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFinish</name>
-      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
-      <anchor>acef200f77a155c73fff25a83b105c1ed</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Gfx::PaintSurface</name>
     <filename>classPt_1_1Gfx_1_1PaintSurface.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -28417,8 +28968,126 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::PaintSurface</name>
+    <filename>classPt_1_1Forms_1_1PaintSurface.html</filename>
+    <base>Pt::Gfx::PaintSurface</base>
+    <member kind="function">
+      <type></type>
+      <name>~PaintSurface</name>
+      <anchorfile>classPt_1_1Forms_1_1PaintSurface.html</anchorfile>
+      <anchor>afb2141e21845ea9feb60b0ee7496b208</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::ImageFormat &amp;</type>
+      <name>format</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a9c2b28be331792e260c7d7836de328d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Scaling &amp;</type>
+      <name>scaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a7892fd68463d0846bcd72f0580a5cdbb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Canvas *</type>
+      <name>getCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a233b273485dc5fb1f169bd068358d08f</anchor>
+      <arglist>(Canvas *canvas)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a6dfe1abe0d1eb3ddc1ca081de98b5342</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual const Gfx::ImageFormat &amp;</type>
+      <name>onGetFormat</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>ab5a91e916f4f15a14fd4987337beecbd</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual const Gfx::SizeF &amp;</type>
+      <name>onGetSize</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a53b0aec6c2a14d263b67ca82482dc727</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual const Scaling &amp;</type>
+      <name>onGetScaling</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a0af2ac2d4cfd0539ab5fcab00344fd51</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Gfx::Canvas *</type>
+      <name>onGetCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a67aa55c887285040a03580dd6051798d</anchor>
+      <arglist>(Gfx::Canvas *reuse)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual Gfx::Canvas *</type>
+      <name>onCreateCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a962a4c7feb392af0fd5c970ce7d5ef65</anchor>
+      <arglist>(Gfx::Canvas *reuse)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReleaseCanvas</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a631556d31880af997a4bcc2455f4f8f6</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onSync</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>a6814bdc5696e27e1f38687b8a1c50e8f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFinish</name>
+      <anchorfile>classPt_1_1Gfx_1_1PaintSurface.html</anchorfile>
+      <anchor>acef200f77a155c73fff25a83b105c1ed</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Forms::PanelRenderer</name>
     <filename>classPt_1_1Forms_1_1PanelRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
     <member kind="function">
       <type>PanelRenderer *</type>
       <name>create</name>
@@ -28430,8 +29099,8 @@
       <type>void</type>
       <name>prepare</name>
       <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
-      <anchor>a87f9f8365926dbcab78c78954d16dd27</anchor>
-      <arglist>(const StyleOptions &amp;options, const PanelStyleOptions &amp;panelOptions)</arglist>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
     </member>
     <member kind="function">
       <type>Gfx::SizeF</type>
@@ -28489,6 +29158,13 @@
       <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
       <arglist>(const StyleOptions &amp;options)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual PanelRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
+      <anchor>a114f3b7e6cd440fbc7266af60cb6e351</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Forms::PanelState</name>
@@ -28530,173 +29206,446 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::PanelStyle</name>
-    <filename>classPt_1_1Forms_1_1PanelStyle.html</filename>
-    <base>StyleBinder&lt; PanelRenderer, PanelStyleOptions &gt;</base>
+    <name>Pt::Forms::PanelStyler</name>
+    <filename>classPt_1_1Forms_1_1PanelStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
     <member kind="function">
       <type></type>
-      <name>PanelStyle</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyle.html</anchorfile>
-      <anchor>afea0a0b3f633620da9a81365e81f087f</anchor>
+      <name>PanelStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a6bfccc4884dec4082bfd594ea94f1716</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const PanelStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(PanelRenderer &amp;renderer, const StyleOptions &amp;options, const PanelStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const PanelStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const PanelRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Forms::PanelStyleOptions</name>
-    <filename>classPt_1_1Forms_1_1PanelStyleOptions.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>PanelStyleOptions</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>aa192886d0f4bd5adc36e2a5f87f349cf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>hasOverrides</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>ac1b75cf1e0493f4dc35099600594359d</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>generation</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>aa27a67d1d644d2d8f28e92ced9a1d4a5</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const Gfx::Brush *</type>
+      <type>const Gfx::Brush &amp;</type>
       <name>background</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>aafc94b88e548a84dd3ba893b2cbc7858</anchor>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setBackground</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
       <arglist>(const Gfx::Brush &amp;brush)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Pen *</type>
+      <type>const Gfx::Pen &amp;</type>
       <name>contour</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>ac8789626185e9e01f39b77a33627fa05</anchor>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setContour</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
       <arglist>(const Gfx::Pen &amp;pen)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Color *</type>
+      <type>const Gfx::Color &amp;</type>
       <name>textColor</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>a0a39ac47c66186967c321f2b7ce8b2ad</anchor>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setTextColor</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
       <arglist>(const Gfx::Color &amp;color)</arglist>
     </member>
     <member kind="function">
-      <type>const Gfx::Font *</type>
+      <type>Gfx::Font</type>
       <name>font</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>ad75820d7f491993221bb52b0285ab29a</anchor>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFont</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
       <arglist>(const Gfx::Font &amp;font)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontSize</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
       <arglist>(std::size_t size)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontWeight</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
       <arglist>(Gfx::Font::Weight weight)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFontSlant</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
       <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
       <arglist>(Gfx::Font::Slant slant)</arglist>
     </member>
     <member kind="function">
-      <type>Gfx::Font</type>
-      <name>getFont</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelStyleOptions.html</anchorfile>
-      <anchor>afc6877a3de75da360b9ef15728ac748e</anchor>
-      <arglist>(const Gfx::Font &amp;base) const</arglist>
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a9dc290c06a8b203ee6ea5f4a8e171466</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;frameRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>ac1335e4b17122c95f0c913019fc29c5c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>abafcdddb3377a86bb3c819223bbd17a2</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const PanelState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a2938c7779227eefa1b6c469bffb495a7</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const PanelState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a89981ccecf1da4a7cf2a6bf0e3faacb0</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const String &amp;text, const Gfx::PointF &amp;pos, const PanelState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderIcon</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>ac461ad52a70162749f67ae7b0e208014</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Pixmap &amp;picture, const Gfx::PointF &amp;pos, const PanelState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a512f4435b002263ac1705dc8a9c01493</anchor>
+      <arglist>(PanelRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>ad7ab5eb210a489ec5908eb6157877142</anchor>
+      <arglist>(const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Gfx::Path</name>
+    <filename>classPt_1_1Gfx_1_1Path.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>ElementType</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a16b11be27a8e9362dd122c4d879e01ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Path</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>aaa44fef284bec9041f7eb22b921c6174</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Path</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a8a9bc0426066fde6bd5dd96d46e8d578</anchor>
+      <arglist>(const Path &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>Path &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a90267ac729a7254004ba17b949abb8e5</anchor>
+      <arglist>(const Path &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Path</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>acfd0244996e3e07a440376ea55285ee0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ade1601ccf1fa3bcf050867f0852ca4e5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEmpty</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>acf82f9b2937375c7b1cf3dccb3df3312</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Iterator</type>
+      <name>begin</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a09dd208593b9721a30a83ed978ede577</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Iterator</type>
+      <name>end</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a62469461ed7c932afba3808f4da0fe3d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ac8bb3912a3ce86b15842e79d0b421204</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>RectF</type>
+      <name>boundingRect</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>aff05d7f13955cac6ba37412749387f1c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab0470e3a5ff00bf1df3ba1d8d28b3191</anchor>
+      <arglist>(const PointF &amp;point, FillRule rule=FillRule::NonZero) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>aeda2d86833d9f61923f16f3a266250b8</anchor>
+      <arglist>(const RectF &amp;rect, FillRule rule=FillRule::NonZero) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>intersects</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a9214b6db27653259af1bd678f35c80b7</anchor>
+      <arglist>(const RectF &amp;rect, FillRule rule=FillRule::NonZero) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const PointF &amp;</type>
+      <name>currentPosition</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>adbc7bbe06a1b67feff8f433510dccacf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>moveTo</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>aeca187f09ddccfd8c8967af0c88f200a</anchor>
+      <arglist>(const PointF &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lineTo</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a609bd37eade2d3ec45dd05c7ff1a6725</anchor>
+      <arglist>(const PointF &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>quadTo</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a05e369fe75fdfa1b83679cbe4d36efa4</anchor>
+      <arglist>(const PointF &amp;cp, const PointF &amp;to)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cubicTo</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a18c29f5b380de75d16e4776a6732882d</anchor>
+      <arglist>(const PointF &amp;cp1, const PointF &amp;cp2, const PointF &amp;to)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>arcTo</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>adb97da9ecd41a938c66d32a2d2839264</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPath</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ada0f33d0716a9804c339d61dafa9978e</anchor>
+      <arglist>(const Path &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addRect</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a074f4999bb62278489a7e6cd74a2ccf1</anchor>
+      <arglist>(const RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addRoundedRect</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a9e72e7825b87f6b1b9a84d2bdf62d0d2</anchor>
+      <arglist>(const RectF &amp;rect, double radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addRoundedRect</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ada2cfd84dcf831947e97ffb5dbc1948b</anchor>
+      <arglist>(const RectF &amp;rect, double rx, double ry)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addEllipse</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a80fa62ff84119dfaf84f4d52e6852104</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addArc</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a7ac98b817741f7b3111d1366244063d2</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPie</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab83f7d70fa808389462922d3844681cf</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChord</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a504db45470426d008a338530db5149f8</anchor>
+      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPolyline</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab86d7d3d857a4f540915bb735a24a23b</anchor>
+      <arglist>(const PointF *points, std::size_t count)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPolygon</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ae8478c8dcdcb54f15b9f07f5ae0f92d5</anchor>
+      <arglist>(const PointF *points, std::size_t count)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>transform</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>aa023782d9cf59942db4e044b912b953e</anchor>
+      <arglist>(const Transform &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>toTransformed</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>a8471773f5e95a2ea2bff3bb6ace89c4e</anchor>
+      <arglist>(const Transform &amp;transform) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Iterator</type>
+      <name>getPolygon</name>
+      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
+      <anchor>ab26d5f94f2f799affbd635fd139d0383</anchor>
+      <arglist>(Iterator it, Polygon &amp;polygon, float tolerance=0.25f) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29023,248 +29972,6 @@
       <anchorfile>classPt_1_1System_1_1Path.html</anchorfile>
       <anchor>aff5f32a3ecb7cc733ed9c59779c1c55e</anchor>
       <arglist>(const Path &amp;a, const Path &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Gfx::Path</name>
-    <filename>classPt_1_1Gfx_1_1Path.html</filename>
-    <member kind="enumeration">
-      <type></type>
-      <name>ElementType</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a16b11be27a8e9362dd122c4d879e01ae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Path</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>aaa44fef284bec9041f7eb22b921c6174</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Path</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a8a9bc0426066fde6bd5dd96d46e8d578</anchor>
-      <arglist>(const Path &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Path &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a90267ac729a7254004ba17b949abb8e5</anchor>
-      <arglist>(const Path &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Path</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>acfd0244996e3e07a440376ea55285ee0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>size</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ade1601ccf1fa3bcf050867f0852ca4e5</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isEmpty</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>acf82f9b2937375c7b1cf3dccb3df3312</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>begin</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a09dd208593b9721a30a83ed978ede577</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>end</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a62469461ed7c932afba3808f4da0fe3d</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>clear</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ac8bb3912a3ce86b15842e79d0b421204</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>RectF</type>
-      <name>boundingRect</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>aff05d7f13955cac6ba37412749387f1c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>contains</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ab0470e3a5ff00bf1df3ba1d8d28b3191</anchor>
-      <arglist>(const PointF &amp;point, FillRule rule=FillRule::NonZero) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>contains</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>aeda2d86833d9f61923f16f3a266250b8</anchor>
-      <arglist>(const RectF &amp;rect, FillRule rule=FillRule::NonZero) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>intersects</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a9214b6db27653259af1bd678f35c80b7</anchor>
-      <arglist>(const RectF &amp;rect, FillRule rule=FillRule::NonZero) const</arglist>
-    </member>
-    <member kind="function">
-      <type>const PointF &amp;</type>
-      <name>currentPosition</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>adbc7bbe06a1b67feff8f433510dccacf</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>moveTo</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>aeca187f09ddccfd8c8967af0c88f200a</anchor>
-      <arglist>(const PointF &amp;p)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>lineTo</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a609bd37eade2d3ec45dd05c7ff1a6725</anchor>
-      <arglist>(const PointF &amp;p)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>quadTo</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a05e369fe75fdfa1b83679cbe4d36efa4</anchor>
-      <arglist>(const PointF &amp;cp, const PointF &amp;to)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cubicTo</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a18c29f5b380de75d16e4776a6732882d</anchor>
-      <arglist>(const PointF &amp;cp1, const PointF &amp;cp2, const PointF &amp;to)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>arcTo</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>adb97da9ecd41a938c66d32a2d2839264</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>close</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addPath</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ada0f33d0716a9804c339d61dafa9978e</anchor>
-      <arglist>(const Path &amp;p)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addRect</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a074f4999bb62278489a7e6cd74a2ccf1</anchor>
-      <arglist>(const RectF &amp;rect)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addRoundedRect</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a9e72e7825b87f6b1b9a84d2bdf62d0d2</anchor>
-      <arglist>(const RectF &amp;rect, double radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addRoundedRect</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ada2cfd84dcf831947e97ffb5dbc1948b</anchor>
-      <arglist>(const RectF &amp;rect, double rx, double ry)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addEllipse</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a80fa62ff84119dfaf84f4d52e6852104</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addArc</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a7ac98b817741f7b3111d1366244063d2</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addPie</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ab83f7d70fa808389462922d3844681cf</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addChord</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a504db45470426d008a338530db5149f8</anchor>
-      <arglist>(const PointF &amp;topLeft, const SizeF &amp;size, double degBegin, double degEnd)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addPolyline</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ab86d7d3d857a4f540915bb735a24a23b</anchor>
-      <arglist>(const PointF *points, std::size_t count)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>addPolygon</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ae8478c8dcdcb54f15b9f07f5ae0f92d5</anchor>
-      <arglist>(const PointF *points, std::size_t count)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>transform</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>aa023782d9cf59942db4e044b912b953e</anchor>
-      <arglist>(const Transform &amp;transform)</arglist>
-    </member>
-    <member kind="function">
-      <type>Path</type>
-      <name>toTransformed</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>a8471773f5e95a2ea2bff3bb6ace89c4e</anchor>
-      <arglist>(const Transform &amp;transform) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Iterator</type>
-      <name>getPolygon</name>
-      <anchorfile>classPt_1_1Gfx_1_1Path.html</anchorfile>
-      <anchor>ab26d5f94f2f799affbd635fd139d0383</anchor>
-      <arglist>(Iterator it, Polygon &amp;polygon, float tolerance=0.25f) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29707,6 +30414,11 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::PlaceholderTextColorOption</name>
+    <filename>classPt_1_1Forms_1_1PlaceholderTextColorOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
     <name>Pt::System::Plugin</name>
     <filename>classPt_1_1System_1_1Plugin.html</filename>
     <templarg></templarg>
@@ -30122,6 +30834,16 @@
       <anchor>aa4377c938fe183435f7f4cfaa5227073</anchor>
       <arglist>(void *p, std::size_t size)</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::PopupBackgroundOption</name>
+    <filename>classPt_1_1Forms_1_1PopupBackgroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::PopupTextColorOption</name>
+    <filename>classPt_1_1Forms_1_1PopupTextColorOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="class">
     <name>Pt::JsonRpc::ProcedureDeclaration</name>
@@ -30597,6 +31319,261 @@
       <anchorfile>classPt_1_1Xml_1_1ProcessingInstruction.html</anchorfile>
       <anchor>ae5a3454bad90cf985fe4a1dffa84aecd</anchor>
       <arglist>(const Node &amp;node)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ProgressBarRenderer</name>
+    <filename>classPt_1_1Forms_1_1ProgressBarRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual ProgressBarRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarRenderer.html</anchorfile>
+      <anchor>a2efbd39fe3305496ffe778c548346653</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ProgressBarStyler</name>
+    <filename>classPt_1_1Forms_1_1ProgressBarStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>ProgressBarStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a9247e77a806ad57ae829b43c5582346d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>foreground</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a6d159aeeaa0870b520a6ea415a80a157</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setForeground</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a57d1d8e1cb5c2f071d2d745c6cd00e7f</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureBar</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a21fc2c1dcf80c7442c26b293f28cace9</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ae393c8c7d70d3cbadb5c32ae49b84e3e</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutBar</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a6de64bea592838927731767ae4ada12d</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ac1335e4b17122c95f0c913019fc29c5c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a613c8072794fff86a4f387415677b595</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const String &amp;text, const Gfx::PointF &amp;textPos, const ProgressBarState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderBar</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a9758a7a786cd4bf04731445c7e9f2abe</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const ProgressBarState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderTrack</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a4ab7cfb9c83d00a08939b9db8f81799a</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;trackRect, const ProgressBarState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChunk</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a81541006e36f5e802b0c869b59aef883</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;chunkRect, const ProgressBarState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ab209c8cf5d14c4dbe9f60c7a0011e580</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const String &amp;text, const Gfx::PointF &amp;textPos, const ProgressBarState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a5259d3b79a8492d0b24b0ed86f7af406</anchor>
+      <arglist>(ProgressBarRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>ad7ab5eb210a489ec5908eb6157877142</anchor>
+      <arglist>(const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31372,6 +32349,31 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::Renderer</name>
+    <filename>classPt_1_1Forms_1_1Renderer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Renderer</name>
+      <anchorfile>classPt_1_1Forms_1_1Renderer.html</anchorfile>
+      <anchor>a87f42a7e5ca5cc3cb1921703309ef3d7</anchor>
+      <arglist>(const std::type_info &amp;ti, std::size_t refs=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>Renderer *</type>
+      <name>create</name>
+      <anchorfile>classPt_1_1Forms_1_1Renderer.html</anchorfile>
+      <anchor>a740b53192d41177710d03a32a9f56214</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual Renderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1Renderer.html</anchorfile>
+      <anchor>aaf86215d02a0f15784a3ac63435d1711</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Http::Reply</name>
     <filename>classPt_1_1Http_1_1Reply.html</filename>
     <base>Pt::Http::Message</base>
@@ -31779,22 +32781,29 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Remoting::Responder</name>
-    <filename>classPt_1_1Remoting_1_1Responder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
+    <name>Pt::XmlRpc::Responder</name>
+    <filename>classPt_1_1XmlRpc_1_1Responder.html</filename>
+    <base>Pt::Remoting::Responder</base>
     <member kind="function">
       <type></type>
       <name>Responder</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a7b4c7e57995aa5d89fa22bcc5aa2a223</anchor>
-      <arglist>(ServiceDefinition &amp;serviceDef)</arglist>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>a0bd11f26fccc61f16371f8b2bbb1d666</anchor>
+      <arglist>(Remoting::ServiceDefinition &amp;service)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Responder</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
       <anchor>a441672d587b7f355d7308b08fa208633</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isFailed</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -31809,6 +32818,83 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReady</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>aa37ece2e002c960665a87c6a8b6034e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onFault</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>ae9f91c14b52a03ef226f2cf76e459c35</anchor>
+      <arglist>(const Fault &amp;fault)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>aee417c3d369444f3b503dae87408e433</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>a537b3e57a18bb9bd4afd13a9a1473992</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>parseMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>ab6259f3aa062e47ff5031fd719568f1f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishMessage</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>afd116018fdb0c20871fd780fde5107fe</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>beginResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>a72ed5f0a66ebd08fbfcc70f98f75ee7f</anchor>
+      <arglist>(std::ostream &amp;os)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>advanceResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>ab2fdaedbf3d7262a04889d8160480973</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finishResult</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>ad90571f447c822ee89516b908ec4d1c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setFault</name>
+      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
+      <arglist>(int rc, const char *msg)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>Pt::Composer **</type>
@@ -31837,20 +32923,6 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onReady</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a83bc093f10b38b3429883892e9a72f87</anchor>
-      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32239,29 +33311,22 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::XmlRpc::Responder</name>
-    <filename>classPt_1_1XmlRpc_1_1Responder.html</filename>
-    <base>Pt::Remoting::Responder</base>
+    <name>Pt::Remoting::Responder</name>
+    <filename>classPt_1_1Remoting_1_1Responder.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
     <member kind="function">
       <type></type>
       <name>Responder</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>a0bd11f26fccc61f16371f8b2bbb1d666</anchor>
-      <arglist>(Remoting::ServiceDefinition &amp;service)</arglist>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a7b4c7e57995aa5d89fa22bcc5aa2a223</anchor>
+      <arglist>(ServiceDefinition &amp;serviceDef)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Responder</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a441672d587b7f355d7308b08fa208633</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isFailed</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>adb4c45a56f5aca569ab9a2719de8f4f8</anchor>
-      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -32276,83 +33341,6 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
       <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReady</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>aa37ece2e002c960665a87c6a8b6034e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onFault</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>ae9f91c14b52a03ef226f2cf76e459c35</anchor>
-      <arglist>(const Fault &amp;fault)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>aee417c3d369444f3b503dae87408e433</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>a537b3e57a18bb9bd4afd13a9a1473992</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>parseMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>ab6259f3aa062e47ff5031fd719568f1f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishMessage</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>afd116018fdb0c20871fd780fde5107fe</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>a72ed5f0a66ebd08fbfcc70f98f75ee7f</anchor>
-      <arglist>(std::ostream &amp;os)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>advanceResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>ab2fdaedbf3d7262a04889d8160480973</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finishResult</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>ad90571f447c822ee89516b908ec4d1c1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setFault</name>
-      <anchorfile>classPt_1_1XmlRpc_1_1Responder.html</anchorfile>
-      <anchor>aaddcbb05736d6012a6412f5a8aa798b4</anchor>
-      <arglist>(int rc, const char *msg)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>Pt::Composer **</type>
@@ -32381,6 +33369,20 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a83bc093f10b38b3429883892e9a72f87</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32789,6 +33791,144 @@
   <compound kind="class">
     <name>Pt::Forms::Screen</name>
     <filename>classPt_1_1Forms_1_1Screen.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ScrollBarStyler</name>
+    <filename>classPt_1_1Forms_1_1ScrollBarStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>ScrollBarStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a8c78143fe36247dae23574d9171f9090</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>foreground</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a6d159aeeaa0870b520a6ea415a80a157</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setForeground</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a57d1d8e1cb5c2f071d2d745c6cd00e7f</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>abb56121ee237ae6e0ac46f6b48897e58</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize, Direction direction) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureButton</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a023afb924ac8ef0d3f3d0ce4f118a4f8</anchor>
+      <arglist>(PaintSurface &amp;surface, Direction direction) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a47da5e48aad983fb9592b088243f3cda</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;rect, Direction direction, const Gfx::SizeF &amp;buttonSize, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;decreaseRect, Gfx::RectF &amp;increaseRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutHandle</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>ac607fb62459616f1d9820de7c8046461</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;trackRect, Direction direction, float fraction, float viewProportion, Gfx::RectF &amp;handleRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>ad8ba273301959d5480ad75db4e8d82d5</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, Direction direction, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;handleRect, const Gfx::RectF &amp;decreaseRect, const Gfx::RectF &amp;increaseRect, const ScrollBarState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a8b878f9b174054421a21d386e5b6673f</anchor>
+      <arglist>(ScrollBarRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1ScrollBarStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::System::Selectable</name>
@@ -37291,6 +38431,254 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::SliderRenderer</name>
+    <filename>classPt_1_1Forms_1_1SliderRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type>SliderRenderer *</type>
+      <name>create</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
+      <anchor>a1269713cd4ee3cbe4f8bee0020468dd7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
+      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual SliderRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
+      <anchor>a2777ed7f8b5b5b1826b6037dde9c6760</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onPrepare</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
+      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::SliderStyler</name>
+    <filename>classPt_1_1Forms_1_1SliderStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>SliderStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>aca417d5e62e542eb5398af5371b05776</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>foreground</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a6d159aeeaa0870b520a6ea415a80a157</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setForeground</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a57d1d8e1cb5c2f071d2d745c6cd00e7f</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureTrack</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ac74185eb6043679454a1712a861ef10c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureHandle</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a557088a5db0ae4bb541c88f693c120cc</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a0eb384fc70600ac398100d71df7a2a1b</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;trackSize, const Gfx::SizeF &amp;handleSize, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;handleRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutHandle</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>adc54d28232713d68b82eb35bd87d7966</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;trackRect, float fraction, Gfx::RectF &amp;handleRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a607c6bdcd1fc55e51691397888f71d8d</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;handleRect, const SliderState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a0d2ee9c3533324d3e73b1093e32adf40</anchor>
+      <arglist>(SliderRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1SliderStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Slot</name>
     <filename>classPt_1_1Slot.html</filename>
     <member kind="function" virtualness="virtual">
@@ -38551,68 +39939,247 @@
   <compound kind="class">
     <name>Pt::Forms::SpinBoxRenderer</name>
     <filename>classPt_1_1Forms_1_1SpinBoxRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type>SpinBoxRenderer *</type>
+      <name>create</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
+      <anchor>a4e435acbdf5ed469945bf3f3dba6b6b9</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
+      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual SpinBoxRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
+      <anchor>a41f10f600eb35a95e8ad934ff4d9b0e2</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onPrepare</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
+      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Forms::SpinBoxState</name>
     <filename>classPt_1_1Forms_1_1SpinBoxState.html</filename>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::SpinBoxStyle</name>
-    <filename>classPt_1_1Forms_1_1SpinBoxStyle.html</filename>
-    <base>StyleBinder&lt; SpinBoxRenderer, SpinBoxStyleOptions &gt;</base>
+    <name>Pt::Forms::SpinBoxStyler</name>
+    <filename>classPt_1_1Forms_1_1SpinBoxStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
     <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const SpinBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(SpinBoxRenderer &amp;renderer, const StyleOptions &amp;options, const SpinBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const SpinBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
+      <type></type>
+      <name>SpinBoxStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a6cf4d506fa1062441455e92a2b35a852</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const SpinBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
       <arglist>() const</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Forms::SpinBoxStyleOptions</name>
-    <filename>classPt_1_1Forms_1_1SpinBoxStyleOptions.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>foreground</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a6d159aeeaa0870b520a6ea415a80a157</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setForeground</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a57d1d8e1cb5c2f071d2d745c6cd00e7f</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureFrame</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>aa549995abdc6a886d0b51cdd8c3eae52</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::SizeF &amp;contentSize) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>layoutChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a9137eb36388a160415a4dface5f2e29d</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;rect, Gfx::RectF &amp;entryRect, Gfx::RectF &amp;upButtonRect, Gfx::RectF &amp;downButtonRect, Gfx::RectF &amp;textRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ac1335e4b17122c95f0c913019fc29c5c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>aa85a1df2da2cda970a3b9f8f651c5c50</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;entryRect, const Gfx::RectF &amp;upButtonRect, const Gfx::RectF &amp;downButtonRect, const SpinBoxState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderText</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a4dba555643b0fbd73c318867a67df26d</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;textRect, const String &amp;text, const Gfx::PointF &amp;textPos, const Gfx::RectF &amp;cursor, const SpinBoxState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ae89236e5717b4d814975555293462c2b</anchor>
+      <arglist>(SpinBoxRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1SpinBoxStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::System::SpinLock</name>
@@ -40626,836 +42193,40 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Forms::StyleBinder</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>RendererT *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const OptionsT &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>RendererT *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(RendererT &amp;renderer, const StyleOptions &amp;options, const OptionsT &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>RendererT *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const OptionsT &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>RendererT *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const RendererT *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; ButtonRenderer, ButtonStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ButtonStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ButtonRenderer &amp;renderer, const StyleOptions &amp;options, const ButtonStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ButtonStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ButtonRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ButtonRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; CheckBoxRenderer, CheckBoxStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(CheckBoxRenderer &amp;renderer, const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const CheckBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>CheckBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const CheckBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; ComboBoxRenderer, ComboBoxStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ComboBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ComboBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ComboBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ComboBoxRenderer &amp;renderer, const StyleOptions &amp;options, const ComboBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ComboBoxRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ComboBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ComboBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ComboBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; LineEditRenderer, LineEditStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>LineEditRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const LineEditStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>LineEditRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(LineEditRenderer &amp;renderer, const StyleOptions &amp;options, const LineEditStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>LineEditRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const LineEditStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>LineEditRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const LineEditRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; ListBoxRenderer, ListBoxStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ListBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ListBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ListBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ListBoxRenderer &amp;renderer, const StyleOptions &amp;options, const ListBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ListBoxRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ListBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ListBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ListBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; ListItemRenderer, ListItemStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ListItemRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ListItemStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ListItemRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ListItemRenderer &amp;renderer, const StyleOptions &amp;options, const ListItemStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ListItemRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ListItemStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ListItemRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ListItemRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; PanelRenderer, PanelStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const PanelStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(PanelRenderer &amp;renderer, const StyleOptions &amp;options, const PanelStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const PanelStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>PanelRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const PanelRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; ProgressBarRenderer, ProgressBarStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ProgressBarRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ProgressBarStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ProgressBarRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ProgressBarRenderer &amp;renderer, const StyleOptions &amp;options, const ProgressBarStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ProgressBarRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ProgressBarStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ProgressBarRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ProgressBarRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; ScrollBarRenderer, ScrollBarStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ScrollBarRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ScrollBarStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ScrollBarRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(ScrollBarRenderer &amp;renderer, const StyleOptions &amp;options, const ScrollBarStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ScrollBarRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const ScrollBarStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>ScrollBarRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ScrollBarRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; SliderRenderer, SliderStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>SliderRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const SliderStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SliderRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(SliderRenderer &amp;renderer, const StyleOptions &amp;options, const SliderStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SliderRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const SliderStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SliderRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const SliderRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; SpinBoxRenderer, SpinBoxStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const SpinBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(SpinBoxRenderer &amp;renderer, const StyleOptions &amp;options, const SpinBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const SpinBoxStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>SpinBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const SpinBoxRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>StyleBinder&lt; TabViewRenderer, TabViewStyleOptions &gt;</name>
-    <filename>classPt_1_1Forms_1_1StyleBinder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>StyleBinder</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a7befc8b2f2d7ff13821e5e1ff4796e4c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isBound</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isCustom</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a8565263a85fdff5681395ec45e0369ae</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>TabViewRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3a5f2c7f1505f00f08f691a064c6d531</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const TabViewStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>TabViewRenderer *</type>
-      <name>bind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>ad6e6ea3f22857bcfe2e58385198d03d1</anchor>
-      <arglist>(TabViewRenderer &amp;renderer, const StyleOptions &amp;options, const TabViewStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>TabViewRenderer *</type>
-      <name>rebind</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a3f30f418b0642866357ffa0fc46dc59c</anchor>
-      <arglist>(const Pt::Forms::Style &amp;style, const StyleOptions &amp;options, const TabViewStyleOptions &amp;localOptions)</arglist>
-    </member>
-    <member kind="function">
-      <type>TabViewRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a16df8c8b89851e54cb5cbf5ddb10fe30</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const TabViewRenderer *</type>
-      <name>renderer</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleBinder.html</anchorfile>
-      <anchor>a43a975cb35c578924d514fd587e8c4da</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::Forms::StyleOption</name>
     <filename>classPt_1_1Forms_1_1StyleOption.html</filename>
-    <member kind="function">
-      <type>const char *</type>
-      <name>name</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a8c4da4b626748f746b1f9fdbe885edfb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const std::type_info &amp;</type>
-      <name>typeInfo</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a7370d854a3a71b207517c4a814af8c30</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const Pt::Any &amp;</type>
-      <name>get</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>a6d6130f7c873c8762dcd22f73dfdc6eb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>set</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOption.html</anchorfile>
-      <anchor>afd1422cada6dc48fafd13855ada0ab84</anchor>
-      <arglist>(const Pt::Any &amp;v)=0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Forms::StyleOptions</name>
     <filename>classPt_1_1Forms_1_1StyleOptions.html</filename>
-    <class kind="class">Pt::Forms::StyleOptions::Iterator</class>
+    <member kind="function">
+      <type></type>
+      <name>StyleOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a1ad3502376c131a469cd31823fe2ad1f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>StyleOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>ad63ffd76912ca39b136ec1818f966ec3</anchor>
+      <arglist>(const StyleOptions &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~StyleOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>aef26ff42d8b382b1fd5c8d48281791f2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>ac3dc603590f99d431fc99252857cb2ee</anchor>
+      <arglist>(const StyleOptions &amp;o)</arglist>
+    </member>
     <member kind="function">
       <type>std::size_t</type>
       <name>generation</name>
@@ -41464,39 +42235,135 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Iterator</type>
-      <name>begin</name>
+      <type>bool</type>
+      <name>hasOptions</name>
       <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
-      <anchor>a09dd208593b9721a30a83ed978ede577</anchor>
+      <anchor>a609b5defa170df9379019ef0cec7a497</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Iterator</type>
-      <name>end</name>
+      <type>bool</type>
+      <name>isDefault</name>
       <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
-      <anchor>a62469461ed7c932afba3808f4da0fe3d</anchor>
+      <anchor>ac64aa109c4dbb086515e1170a72c9aed</anchor>
+      <arglist>(const StyleOptions &amp;base) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a94c5a0ca647980c80b12376fafee853f</anchor>
+      <arglist>(const StyleOptions *inherited)</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a91b8379bcace4c1b12ed13745cf333c8</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const StyleOption *</type>
+      <type>const T *</type>
+      <name>findLocal</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a164fa7590183c17a08dfb7810a116e94</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const T *</type>
       <name>find</name>
       <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
-      <anchor>a3b2d977e50aaf12a9f12914c2565f63d</anchor>
-      <arglist>(const char *name) const</arglist>
+      <anchor>a4d44b572e66d058435a1bf5fd0109a95</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const T &amp;</type>
+      <name>get</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a6267bcdb023abb48bd5bec6036443418</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>set</name>
       <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
-      <anchor>a385ee5965b5a18c0786d18188126efb4</anchor>
-      <arglist>(const char *name, const Pt::Any &amp;value)</arglist>
+      <anchor>a8cbbcde34aa157a262c803c353b1f791</anchor>
+      <arglist>(const T &amp;option)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a9fc26c3f9822eea20457a8e6fde4f060</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static StyleOptions</type>
+      <name>defaults</name>
+      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
+      <anchor>a6e258ee689d77db09515e35fe67a7fcc</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::Styler</name>
+    <filename>classPt_1_1Forms_1_1Styler.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
+    <member kind="function">
+      <type></type>
+      <name>Styler</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>aa364cb2d967d85c77dbffe0a081d01c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Styler</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>ad6da924a228e238c3101b7112b98af05</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>registerOption</name>
-      <anchorfile>classPt_1_1Forms_1_1StyleOptions.html</anchorfile>
-      <anchor>aea35130543a6e2856b7ced689a1805d1</anchor>
-      <arglist>(StyleOption *opt)</arglist>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a73a3b47d4d0205107b9cf1972f8bdee4</anchor>
+      <arglist>(const StyleOptions &amp;global)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a71eb82a3dfe74284d42946dc20456788</anchor>
+      <arglist>(const Style &amp;style)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a95692d708066d671d2ca9307f136be17</anchor>
+      <arglist>(const Style &amp;style)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41666,6 +42533,13 @@
     <name>Pt::Forms::TabView</name>
     <filename>classPt_1_1Forms_1_1TabView.html</filename>
     <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1TabView.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>setAccentColor</name>
       <anchorfile>classPt_1_1Forms_1_1TabView.html</anchorfile>
@@ -41676,6 +42550,261 @@
   <compound kind="class">
     <name>Pt::Forms::TabViewItem</name>
     <filename>classPt_1_1Forms_1_1TabViewItem.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::TabViewRenderer</name>
+    <filename>classPt_1_1Forms_1_1TabViewRenderer.html</filename>
+    <base>Pt::Forms::Renderer</base>
+    <member kind="function">
+      <type></type>
+      <name>TabViewRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
+      <anchor>a9c13f00a3d78973c25287f464bff798b</anchor>
+      <arglist>(std::size_t refs=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>TabViewRenderer *</type>
+      <name>create</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
+      <anchor>aa2d60ae8913aba44a40ba8cb97fac620</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prepare</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
+      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
+      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual TabViewRenderer *</type>
+      <name>onCreate</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
+      <anchor>aa449e8b4cb59d3f72e3c09d443991c2b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onPrepare</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
+      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::TabViewStyler</name>
+    <filename>classPt_1_1Forms_1_1TabViewStyler.html</filename>
+    <base>Pt::Forms::Styler</base>
+    <member kind="function">
+      <type></type>
+      <name>TabViewStyler</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a9663e713adb410a0bacd3fd19d20d560</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Brush &amp;</type>
+      <name>background</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>acb306d7048570c2dcab972e2accea77f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a95564aff9a3df88ce2c902c09a37f0b1</anchor>
+      <arglist>(const Gfx::Brush &amp;brush)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Pen &amp;</type>
+      <name>contour</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a113fe779fd6e2ee01d08190829d2f293</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContour</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ac9143b7c87f8dfa181347d080a3f126e</anchor>
+      <arglist>(const Gfx::Pen &amp;pen)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>textColor</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a13d9e68a5d4d8654e59ef6da7febcf84</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTextColor</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ac24598c93a713c95d97205c65dfccbfc</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::Color &amp;</type>
+      <name>accentColor</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a6a90758a42549498261effe29a3843a8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setAccentColor</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>af194e5bfd813c293867cf0769a3eed7d</anchor>
+      <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::Font</type>
+      <name>font</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a5e39b7242b7786c27bbe48d0675e2d08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFont</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ac77626da8a7306cd079b1dd18558c9eb</anchor>
+      <arglist>(const Gfx::Font &amp;font)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSize</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>af9848b494ebdcaa5a497aa3504a4507b</anchor>
+      <arglist>(std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontWeight</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ae25e5c2d8699fd7c56e7c4547bad68a9</anchor>
+      <arglist>(Gfx::Font::Weight weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFontSlant</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>afb7efbf3edf499b8e918c921e94b08cb</anchor>
+      <arglist>(Gfx::Font::Slant slant)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::SizeF</type>
+      <name>measureTab</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a5049e421b62d653345dbce637d940ca2</anchor>
+      <arglist>(PaintSurface &amp;surface, const Pt::String &amp;text) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::RectF</type>
+      <name>layoutTab</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a777592e67a776c24f8e299583b0b0397</anchor>
+      <arglist>(PaintSurface &amp;surface, const Gfx::RectF &amp;tabRect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Painter *</type>
+      <name>textPainter</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ac1335e4b17122c95f0c913019fc29c5c</anchor>
+      <arglist>(PaintSurface &amp;surface) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderBackground</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a6bf6022ab18926020f3a15af8e1920f4</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;contentRect, const TabViewState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderChrome</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a845f7537cde5741c730717734a6d4363</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;contentRect, const Gfx::RectF &amp;activeTabRect, const TabViewState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renderTab</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>adae50a4785ccc00bc7c2693ced49b179</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;tabRect, const Pt::String &amp;text, const Gfx::PointF &amp;textPos, const TabViewItemState &amp;state) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a78c9fb93778201db5c9ba369905d8971</anchor>
+      <arglist>(TabViewRenderer *renderer=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ac33cc640ad29cbccd3735aa9fabd9eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a878d8845d08b04f5d598d9361ffff4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>bind</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a36be2eaef48ddc0bd3fff591fa5dfbed</anchor>
+      <arglist>(const Style &amp;style, const StyleOptions &amp;styleOptions)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBound</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a05476a754529dc56ab358f6383346cae</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual StyleOptions &amp;</type>
+      <name>onBindOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>ae7f1d28f4fb23fcf649716d4096545c8</anchor>
+      <arglist>(const StyleOptions &amp;global)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onStyleRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>a0b554f9fb039ae25ac932ff4965a15d6</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Renderer *</type>
+      <name>onCreateRenderer</name>
+      <anchorfile>classPt_1_1Forms_1_1TabViewStyler.html</anchorfile>
+      <anchor>abf5f1938a5deb8ae484bd5e70ec3cafe</anchor>
+      <arglist>(const Style &amp;style)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classPt_1_1Forms_1_1Styler.html</anchorfile>
+      <anchor>a7aff0eab1f97e9e7a0600a28b5aa9124</anchor>
+      <arglist>(Renderer *renderer)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::System::TarEntry</name>
@@ -43113,6 +44242,11 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::TextBackgroundOption</name>
+    <filename>classPt_1_1Forms_1_1TextBackgroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
     <name>Pt::TextBuffer</name>
     <filename>classPt_1_1TextBuffer.html</filename>
   </compound>
@@ -43207,10 +44341,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; char, char &gt;</name>
+    <name>TextCodec&lt; Char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>char</type>
+      <type>Char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -43242,14 +44376,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -43295,10 +44429,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TextCodec&lt; Char, char &gt;</name>
+    <name>TextCodec&lt; char, char &gt;</name>
     <filename>classPt_1_1TextCodec.html</filename>
     <member kind="typedef">
-      <type>Char</type>
+      <type>char</type>
       <name>intern_type</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a4c1baecb8416953874c2f18b9162390c</anchor>
@@ -43330,14 +44464,14 @@
       <name>in</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a6bc7b08042214e98fcea6a04b3356361</anchor>
-      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, Char *tbeg, Char *tend, Char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;s, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
       <name>out</name>
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>a9f16d2fa95465dcfe471de1132df3a53</anchor>
-      <arglist>(MBState &amp;state, const Char *fbeg, const Char *fend, const Char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
+      <arglist>(MBState &amp;state, const char *fbeg, const char *fend, const char *&amp;fnext, char *tbeg, char *tend, char *&amp;tnext) const</arglist>
     </member>
     <member kind="function">
       <type>result</type>
@@ -43469,6 +44603,11 @@
       <anchor>acf4ae2584a64317e5efa3ba0bb96bd7e</anchor>
       <arglist>()</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::TextColorOption</name>
+    <filename>classPt_1_1Forms_1_1TextColorOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="class">
     <name>Pt::Mcp::TextContent</name>
@@ -45905,6 +47044,11 @@
       <anchor>a67340a522c0a669a6b40e7d20b801d3b</anchor>
       <arglist>(const Utf8Iterator &amp;other) const</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::ViewBackgroundOption</name>
+    <filename>classPt_1_1Forms_1_1ViewBackgroundOption.html</filename>
+    <base>Pt::Forms::StyleOption</base>
   </compound>
   <compound kind="struct">
     <name>Pt::Void</name>
@@ -48669,37 +49813,62 @@
   <compound kind="namespace">
     <name>Pt::Forms</name>
     <filename>namespacePt_1_1Forms.html</filename>
-    <class kind="class">Pt::Forms::BasicStyleOption</class>
+    <class kind="class">Pt::Forms::AccentColorOption</class>
+    <class kind="class">Pt::Forms::AlternateViewBackgroundOption</class>
+    <class kind="class">Pt::Forms::BackgroundOption</class>
     <class kind="class">Pt::Forms::ButtonRenderer</class>
     <class kind="class">Pt::Forms::ButtonState</class>
-    <class kind="class">Pt::Forms::ButtonStyle</class>
-    <class kind="class">Pt::Forms::ButtonStyleOptions</class>
+    <class kind="class">Pt::Forms::ButtonStyler</class>
     <class kind="class">Pt::Forms::CheckBoxRenderer</class>
     <class kind="class">Pt::Forms::CheckBoxState</class>
-    <class kind="class">Pt::Forms::CheckBoxStyle</class>
-    <class kind="class">Pt::Forms::CheckBoxStyleOptions</class>
+    <class kind="class">Pt::Forms::CheckBoxStyler</class>
+    <class kind="class">Pt::Forms::ComboBoxRenderer</class>
+    <class kind="class">Pt::Forms::ComboBoxStyler</class>
+    <class kind="class">Pt::Forms::ContourOption</class>
     <class kind="class">Pt::Forms::FontOption</class>
+    <class kind="class">Pt::Forms::ForegroundOption</class>
     <class kind="class">Pt::Forms::GraphicsBackend</class>
+    <class kind="class">Pt::Forms::HighlightColorOption</class>
+    <class kind="class">Pt::Forms::HighlightedTextColorOption</class>
+    <class kind="class">Pt::Forms::HoverBackgroundOption</class>
     <class kind="class">Pt::Forms::IPixmapImpl</class>
+    <class kind="class">Pt::Forms::LineEditRenderer</class>
+    <class kind="class">Pt::Forms::LineEditStyler</class>
+    <class kind="class">Pt::Forms::ListBoxRenderer</class>
+    <class kind="class">Pt::Forms::ListBoxStyler</class>
+    <class kind="class">Pt::Forms::ListItemRenderer</class>
+    <class kind="class">Pt::Forms::ListItemStyler</class>
     <class kind="class">Pt::Forms::PaintContext</class>
     <class kind="class">Pt::Forms::Painter</class>
     <class kind="class">Pt::Forms::PaintSurface</class>
     <class kind="class">Pt::Forms::PanelRenderer</class>
     <class kind="class">Pt::Forms::PanelState</class>
-    <class kind="class">Pt::Forms::PanelStyle</class>
-    <class kind="class">Pt::Forms::PanelStyleOptions</class>
+    <class kind="class">Pt::Forms::PanelStyler</class>
     <class kind="class">Pt::Forms::Pixmap</class>
+    <class kind="class">Pt::Forms::PlaceholderTextColorOption</class>
+    <class kind="class">Pt::Forms::PopupBackgroundOption</class>
+    <class kind="class">Pt::Forms::PopupTextColorOption</class>
+    <class kind="class">Pt::Forms::ProgressBarRenderer</class>
+    <class kind="class">Pt::Forms::ProgressBarStyler</class>
+    <class kind="class">Pt::Forms::Renderer</class>
     <class kind="class">Pt::Forms::Screen</class>
+    <class kind="class">Pt::Forms::ScrollBarStyler</class>
+    <class kind="class">Pt::Forms::SliderRenderer</class>
+    <class kind="class">Pt::Forms::SliderStyler</class>
     <class kind="class">Pt::Forms::SpinBoxRenderer</class>
     <class kind="class">Pt::Forms::SpinBoxState</class>
-    <class kind="class">Pt::Forms::SpinBoxStyle</class>
-    <class kind="class">Pt::Forms::SpinBoxStyleOptions</class>
+    <class kind="class">Pt::Forms::SpinBoxStyler</class>
     <class kind="class">Pt::Forms::Style</class>
-    <class kind="class">Pt::Forms::StyleBinder</class>
     <class kind="class">Pt::Forms::StyleOption</class>
     <class kind="class">Pt::Forms::StyleOptions</class>
+    <class kind="class">Pt::Forms::Styler</class>
     <class kind="class">Pt::Forms::TabView</class>
     <class kind="class">Pt::Forms::TabViewItem</class>
+    <class kind="class">Pt::Forms::TabViewRenderer</class>
+    <class kind="class">Pt::Forms::TabViewStyler</class>
+    <class kind="class">Pt::Forms::TextBackgroundOption</class>
+    <class kind="class">Pt::Forms::TextColorOption</class>
+    <class kind="class">Pt::Forms::ViewBackgroundOption</class>
     <class kind="class">Pt::Forms::Window</class>
   </compound>
   <compound kind="namespace">

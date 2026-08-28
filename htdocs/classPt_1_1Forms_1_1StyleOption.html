@@ -80,8 +80,6 @@
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">StyleOption Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
@@ -89,32 +87,12 @@
 
 <p><code>#include &lt;<a class="el" href="StyleOptions_8h_source.html">Pt/Forms/StyleOptions.h</a>&gt;</code></p>
 
-<p>Non-template base for a single named style option.  
+<p>Non-template base for a typed style option.  
  <a href="classPt_1_1Forms_1_1StyleOption.html#details">More...</a></p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Forms_1_1BasicStyleOption.html">BasicStyleOption&lt; Pt::Gfx::Brush &gt;</a>, <a class="el" href="classPt_1_1Forms_1_1BasicStyleOption.html">BasicStyleOption&lt; Pt::Gfx::Color &gt;</a>, <a class="el" href="classPt_1_1Forms_1_1BasicStyleOption.html">BasicStyleOption&lt; Pt::Gfx::Font &gt;</a>, <a class="el" href="classPt_1_1Forms_1_1BasicStyleOption.html">BasicStyleOption&lt; Pt::Gfx::Pen &gt;</a>, and <a class="el" href="classPt_1_1Forms_1_1BasicStyleOption.html">BasicStyleOption&lt; T &gt;</a>.</p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c4da4b626748f746b1f9fdbe885edfb"><td class="memItemLeft" align="right" valign="top"><a id="a8c4da4b626748f746b1f9fdbe885edfb"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#a8c4da4b626748f746b1f9fdbe885edfb">name</a> () const</td></tr>
-<tr class="memdesc:a8c4da4b626748f746b1f9fdbe885edfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the option name. <br /></td></tr>
-<tr class="separator:a8c4da4b626748f746b1f9fdbe885edfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7370d854a3a71b207517c4a814af8c30"><td class="memItemLeft" align="right" valign="top"><a id="a7370d854a3a71b207517c4a814af8c30"></a>
-virtual const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#a7370d854a3a71b207517c4a814af8c30">typeInfo</a> () const =0</td></tr>
-<tr class="memdesc:a7370d854a3a71b207517c4a814af8c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type of the stored value. <br /></td></tr>
-<tr class="separator:a7370d854a3a71b207517c4a814af8c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d6130f7c873c8762dcd22f73dfdc6eb"><td class="memItemLeft" align="right" valign="top"><a id="a6d6130f7c873c8762dcd22f73dfdc6eb"></a>
-virtual const <a class="el" href="classPt_1_1Any.html">Pt::Any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#a6d6130f7c873c8762dcd22f73dfdc6eb">get</a> () const =0</td></tr>
-<tr class="memdesc:a6d6130f7c873c8762dcd22f73dfdc6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value wrapped in an <a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Any</a>. <br /></td></tr>
-<tr class="separator:a6d6130f7c873c8762dcd22f73dfdc6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd1422cada6dc48fafd13855ada0ab84"><td class="memItemLeft" align="right" valign="top"><a id="afd1422cada6dc48fafd13855ada0ab84"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#afd1422cada6dc48fafd13855ada0ab84">set</a> (const <a class="el" href="classPt_1_1Any.html">Pt::Any</a> &amp;v)=0</td></tr>
-<tr class="memdesc:afd1422cada6dc48fafd13855ada0ab84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value from an <a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Any</a>; throws std::bad_cast on type mismatch. <br /></td></tr>
-<tr class="separator:afd1422cada6dc48fafd13855ada0ab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p>Inherited by <a class="el" href="classPt_1_1Forms_1_1AccentColorOption.html">AccentColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1AlternateViewBackgroundOption.html">AlternateViewBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1BackgroundOption.html">BackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1ContourOption.html">ContourOption</a>, <a class="el" href="classPt_1_1Forms_1_1FontOption.html">FontOption</a>, <a class="el" href="classPt_1_1Forms_1_1ForegroundOption.html">ForegroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1HighlightColorOption.html">HighlightColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1HighlightedTextColorOption.html">HighlightedTextColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1HoverBackgroundOption.html">HoverBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1PlaceholderTextColorOption.html">PlaceholderTextColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1PopupBackgroundOption.html">PopupBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1PopupTextColorOption.html">PopupTextColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1TextBackgroundOption.html">TextBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1TextColorOption.html">TextColorOption</a>, and <a class="el" href="classPt_1_1Forms_1_1ViewBackgroundOption.html">ViewBackgroundOption</a>.</p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides name- and type-based access via <a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Pt::Any</a> so that tooling can inspect and mutate options without knowing their concrete types. </p>
+<div class="textblock"><p>Each concrete option type implements clone(), typeId(), and name(). The lookup key is the option class, not the stored value type. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

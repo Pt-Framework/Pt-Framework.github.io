@@ -84,14 +84,14 @@
 <div class="title">Label.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner </span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">   Copyright (C) 2015 Laurentiu-Gheorghe Crisan</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  modify it under the terms of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  License as published by the Free Software Foundation; either</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  As a special exception, you may use this file as part of a free</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  software library without restriction. Specifically, if other files</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  instantiate templates or use macros or inline functions from this</span></div>
@@ -101,12 +101,12 @@
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  License. This exception does not however invalidate any other</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  reasons why the executable file might be covered by the GNU Library</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  General Public License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  This library is distributed in the hope that it will be useful,</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  You should have received a copy of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  License along with this library; if not, write to the Free Software</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,</span></div>
@@ -119,7 +119,7 @@
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/Control.h&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/Alignment.h&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/Adjustment.h&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/PanelStyle.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/PanelStyler.h&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/TextBlock.h&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/PixmapSurface.h&gt;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;Pt/Forms/Icon.h&gt;</span></div>
@@ -139,7 +139,7 @@
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        Label();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">virtual</span> ~Label(); </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">virtual</span> ~Label();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        Alignment alignment() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
@@ -194,7 +194,7 @@
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onInvalidate();</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintContext&amp; context, </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintContext&amp; context,</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                             <span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaintBackground(PaintContext&amp; context,</div>
@@ -231,19 +231,18 @@
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        Gfx::SizeF  _measuredIconSize;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">bool</span>        _iconInvalid;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        PanelStyle        _panelStyle;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        PanelStyleOptions _panelStyleOptions;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">bool</span>              _hasBackground;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">bool</span>              _hasFrame;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        Gfx::RectF        _contentRect;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        Pixmap            _pixmap;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;};</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        PanelStyler       _styler;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">bool</span>              _hasBackground;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">bool</span>              _hasFrame;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        Gfx::RectF        _contentRect;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        Pixmap            _pixmap;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;};</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Font_html_ab98ae24797c90e4aeecf0c84fe158d44"><div class="ttname"><a href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Pt::Gfx::Font::Slant</a></div><div class="ttdeci">Slant</div><div class="ttdoc">Describes the requested font slant.</div><div class="ttdef"><b>Definition:</b> Font.h:76</div></div>

@@ -81,9 +81,8 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">StyleOptions Class Reference</div>  </div>
 </div><!--header-->
@@ -91,54 +90,120 @@
 
 <p><code>#include &lt;<a class="el" href="StyleOptions_8h_source.html">Pt/Forms/StyleOptions.h</a>&gt;</code></p>
 
-<p>Stores the global theme option values shared across styles.  
+<p><a class="el" href="classPt_1_1Forms_1_1Style.html" title="Style for widgets.">Style</a> options container.  
  <a href="classPt_1_1Forms_1_1StyleOptions.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions_1_1Iterator.html">Iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward iterator over all <a class="el" href="classPt_1_1Forms_1_1StyleOption.html" title="Non-template base for a single named style option.">StyleOption</a> entries.  <a href="classPt_1_1Forms_1_1StyleOptions_1_1Iterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a1ad3502376c131a469cd31823fe2ad1f"><td class="memItemLeft" align="right" valign="top"><a id="a1ad3502376c131a469cd31823fe2ad1f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a1ad3502376c131a469cd31823fe2ad1f">StyleOptions</a> ()</td></tr>
+<tr class="memdesc:a1ad3502376c131a469cd31823fe2ad1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty container. <br /></td></tr>
+<tr class="separator:a1ad3502376c131a469cd31823fe2ad1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63ffd76912ca39b136ec1818f966ec3"><td class="memItemLeft" align="right" valign="top"><a id="ad63ffd76912ca39b136ec1818f966ec3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#ad63ffd76912ca39b136ec1818f966ec3">StyleOptions</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;o)</td></tr>
+<tr class="memdesc:ad63ffd76912ca39b136ec1818f966ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor. <br /></td></tr>
+<tr class="separator:ad63ffd76912ca39b136ec1818f966ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef26ff42d8b382b1fd5c8d48281791f2"><td class="memItemLeft" align="right" valign="top"><a id="aef26ff42d8b382b1fd5c8d48281791f2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#aef26ff42d8b382b1fd5c8d48281791f2">~StyleOptions</a> ()</td></tr>
+<tr class="memdesc:aef26ff42d8b382b1fd5c8d48281791f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:aef26ff42d8b382b1fd5c8d48281791f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3dc603590f99d431fc99252857cb2ee"><td class="memItemLeft" align="right" valign="top"><a id="ac3dc603590f99d431fc99252857cb2ee"></a>
+<a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#ac3dc603590f99d431fc99252857cb2ee">operator=</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;o)</td></tr>
+<tr class="memdesc:ac3dc603590f99d431fc99252857cb2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns style options. <br /></td></tr>
+<tr class="separator:ac3dc603590f99d431fc99252857cb2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27a67d1d644d2d8f28e92ced9a1d4a5"><td class="memItemLeft" align="right" valign="top"><a id="aa27a67d1d644d2d8f28e92ced9a1d4a5"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#aa27a67d1d644d2d8f28e92ced9a1d4a5">generation</a> () const</td></tr>
 <tr class="memdesc:aa27a67d1d644d2d8f28e92ced9a1d4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current change generation. <br /></td></tr>
 <tr class="separator:aa27a67d1d644d2d8f28e92ced9a1d4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09dd208593b9721a30a83ed978ede577"><td class="memItemLeft" align="right" valign="top"><a id="a09dd208593b9721a30a83ed978ede577"></a>
-<a class="el" href="classPt_1_1Forms_1_1StyleOptions_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a09dd208593b9721a30a83ed978ede577">begin</a> () const</td></tr>
-<tr class="memdesc:a09dd208593b9721a30a83ed978ede577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the first option. <br /></td></tr>
-<tr class="separator:a09dd208593b9721a30a83ed978ede577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62469461ed7c932afba3808f4da0fe3d"><td class="memItemLeft" align="right" valign="top"><a id="a62469461ed7c932afba3808f4da0fe3d"></a>
-<a class="el" href="classPt_1_1Forms_1_1StyleOptions_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a62469461ed7c932afba3808f4da0fe3d">end</a> () const</td></tr>
-<tr class="memdesc:a62469461ed7c932afba3808f4da0fe3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator past the last option. <br /></td></tr>
-<tr class="separator:a62469461ed7c932afba3808f4da0fe3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b2d977e50aaf12a9f12914c2565f63d"><td class="memItemLeft" align="right" valign="top"><a id="a3b2d977e50aaf12a9f12914c2565f63d"></a>
-const <a class="el" href="classPt_1_1Forms_1_1StyleOption.html">StyleOption</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a3b2d977e50aaf12a9f12914c2565f63d">find</a> (const char *name) const</td></tr>
-<tr class="memdesc:a3b2d977e50aaf12a9f12914c2565f63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an option by name, or returns 0 if not found. <br /></td></tr>
-<tr class="separator:a3b2d977e50aaf12a9f12914c2565f63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a385ee5965b5a18c0786d18188126efb4"><td class="memItemLeft" align="right" valign="top"><a id="a385ee5965b5a18c0786d18188126efb4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a385ee5965b5a18c0786d18188126efb4">set</a> (const char *name, const <a class="el" href="classPt_1_1Any.html">Pt::Any</a> &amp;value)</td></tr>
-<tr class="memdesc:a385ee5965b5a18c0786d18188126efb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an option by name from an <a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Any</a> value; no-op if name is unknown. <br /></td></tr>
-<tr class="separator:a385ee5965b5a18c0786d18188126efb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609b5defa170df9379019ef0cec7a497"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a609b5defa170df9379019ef0cec7a497">hasOptions</a> () const</td></tr>
+<tr class="memdesc:a609b5defa170df9379019ef0cec7a497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the container contains any local option.  <a href="classPt_1_1Forms_1_1StyleOptions.html#a609b5defa170df9379019ef0cec7a497">More...</a><br /></td></tr>
+<tr class="separator:a609b5defa170df9379019ef0cec7a497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64aa109c4dbb086515e1170a72c9aed"><td class="memItemLeft" align="right" valign="top"><a id="ac64aa109c4dbb086515e1170a72c9aed"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#ac64aa109c4dbb086515e1170a72c9aed">isDefault</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;base) const</td></tr>
+<tr class="memdesc:ac64aa109c4dbb086515e1170a72c9aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if no options override <em>base</em>. <br /></td></tr>
+<tr class="separator:ac64aa109c4dbb086515e1170a72c9aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c5a0ca647980c80b12376fafee853f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a94c5a0ca647980c80b12376fafee853f">bind</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> *inherited)</td></tr>
+<tr class="memdesc:a94c5a0ca647980c80b12376fafee853f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds local options to <em>inherited</em> and materializes effective values.  <a href="classPt_1_1Forms_1_1StyleOptions.html#a94c5a0ca647980c80b12376fafee853f">More...</a><br /></td></tr>
+<tr class="separator:a94c5a0ca647980c80b12376fafee853f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b8379bcace4c1b12ed13745cf333c8"><td class="memItemLeft" align="right" valign="top"><a id="a91b8379bcace4c1b12ed13745cf333c8"></a>
+const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a91b8379bcace4c1b12ed13745cf333c8">parent</a> () const</td></tr>
+<tr class="memdesc:a91b8379bcace4c1b12ed13745cf333c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parent container that provides inherited options, or 0. <br /></td></tr>
+<tr class="separator:a91b8379bcace4c1b12ed13745cf333c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a164fa7590183c17a08dfb7810a116e94"><td class="memTemplParams" colspan="2"><a id="a164fa7590183c17a08dfb7810a116e94"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a164fa7590183c17a08dfb7810a116e94"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a164fa7590183c17a08dfb7810a116e94">findLocal</a> () const</td></tr>
+<tr class="memdesc:a164fa7590183c17a08dfb7810a116e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local option of type T, or 0 if absent. <br /></td></tr>
+<tr class="separator:a164fa7590183c17a08dfb7810a116e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d44b572e66d058435a1bf5fd0109a95"><td class="memTemplParams" colspan="2"><a id="a4d44b572e66d058435a1bf5fd0109a95"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4d44b572e66d058435a1bf5fd0109a95"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a4d44b572e66d058435a1bf5fd0109a95">find</a> () const</td></tr>
+<tr class="memdesc:a4d44b572e66d058435a1bf5fd0109a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local or inherited option of type T, or 0 if absent. <br /></td></tr>
+<tr class="separator:a4d44b572e66d058435a1bf5fd0109a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6267bcdb023abb48bd5bec6036443418"><td class="memTemplParams" colspan="2"><a id="a6267bcdb023abb48bd5bec6036443418"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6267bcdb023abb48bd5bec6036443418"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a6267bcdb023abb48bd5bec6036443418">get</a> () const</td></tr>
+<tr class="memdesc:a6267bcdb023abb48bd5bec6036443418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local or inherited option of type T. <br /></td></tr>
+<tr class="separator:a6267bcdb023abb48bd5bec6036443418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbbcde34aa157a262c803c353b1f791"><td class="memTemplParams" colspan="2"><a id="a8cbbcde34aa157a262c803c353b1f791"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8cbbcde34aa157a262c803c353b1f791"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">set</a> (const T &amp;option)</td></tr>
+<tr class="memdesc:a8cbbcde34aa157a262c803c353b1f791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or replaces the local option of type T. <br /></td></tr>
+<tr class="separator:a8cbbcde34aa157a262c803c353b1f791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc26c3f9822eea20457a8e6fde4f060"><td class="memTemplParams" colspan="2"><a id="a9fc26c3f9822eea20457a8e6fde4f060"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9fc26c3f9822eea20457a8e6fde4f060"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a9fc26c3f9822eea20457a8e6fde4f060">reset</a> ()</td></tr>
+<tr class="memdesc:a9fc26c3f9822eea20457a8e6fde4f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the local option of type T if present. <br /></td></tr>
+<tr class="separator:a9fc26c3f9822eea20457a8e6fde4f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aea35130543a6e2856b7ced689a1805d1"><td class="memItemLeft" align="right" valign="top"><a id="aea35130543a6e2856b7ced689a1805d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#aea35130543a6e2856b7ced689a1805d1">registerOption</a> (<a class="el" href="classPt_1_1Forms_1_1StyleOption.html">StyleOption</a> *opt)</td></tr>
-<tr class="memdesc:aea35130543a6e2856b7ced689a1805d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a <a class="el" href="classPt_1_1Forms_1_1StyleOption.html" title="Non-template base for a single named style option.">StyleOption</a> into the polymorphic vector for iteration. <br /></td></tr>
-<tr class="separator:aea35130543a6e2856b7ced689a1805d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6e258ee689d77db09515e35fe67a7fcc"><td class="memItemLeft" align="right" valign="top"><a id="a6e258ee689d77db09515e35fe67a7fcc"></a>
+static <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a6e258ee689d77db09515e35fe67a7fcc">defaults</a> ()</td></tr>
+<tr class="memdesc:a6e258ee689d77db09515e35fe67a7fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a complete container with the built-in default options. <br /></td></tr>
+<tr class="separator:a6e258ee689d77db09515e35fe67a7fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Application owns the live global StyleOptions object. Widgets use the generation counter during invalidation to decide whether cached theme data must be refreshed. Theme-specific geometry and look details that are not part of a cross-style contract stay in the concrete style implementation instead of the global StyleOptions object.</p>
-<p>TODO: background foreground textColor placeholderTextColor</p>
-<p>highlightColor hoverBackground highlightedTextBackground highlightedTextColor</p>
-<p>accentColor selectedColor activeColor</p>
-<p>textBackground viewBackground alternateTextBackground alternateViewBackground</p>
-<p>tooltipBackground / popupBackground tooltipForeground / popupForeground tooltipTextColor / popupTextColor</p>
-<p>common standard-widget candidates: selectionBackground selectionTextColor focusColor disabledBackground disabledTextColor separatorColor caretColor </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>Contains local style options such as ForegroundOption or FontOption. The default constructor creates an empty container. defaults() returns a container populated with the built-in default options.</p>
+<p>bind() associates an inherited container and materializes local partial options against its effective values. find() and get() consider both local and inherited options. findLocal() and hasOptions() only consider locally stored options. set() and reset() modify the local options. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a609b5defa170df9379019ef0cec7a497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609b5defa170df9379019ef0cec7a497">&#9670;&nbsp;</a></span>hasOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasOptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO: remove this in favour of isDefault </p>
+
+</div>
+</div>
+<a id="a94c5a0ca647980c80b12376fafee853f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c5a0ca647980c80b12376fafee853f">&#9670;&nbsp;</a></span>bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bind </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> *&#160;</td>
+          <td class="paramname"><em>inherited</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rebinding with unchanged local and inherited generations performs no option traversal. Passing 0 removes the inherited container. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

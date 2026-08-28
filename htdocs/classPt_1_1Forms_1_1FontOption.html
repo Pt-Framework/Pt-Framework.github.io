@@ -89,8 +89,10 @@
 
 <p><code>#include &lt;<a class="el" href="StyleOptions_8h_source.html">Pt/Forms/StyleOptions.h</a>&gt;</code></p>
 
-<p>Composable font override slice for widget-local style options.  
- <a href="classPt_1_1Forms_1_1FontOption.html#details">More...</a></p>
+<p>Font option.  
+</p>
+
+<p>Inherits <a class="el" href="classPt_1_1Forms_1_1StyleOption.html">StyleOption</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,16 +100,16 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#a663a4a6a6bda3ec0351b5fcfd61d6d4c">FontOption</a> ()</td></tr>
 <tr class="memdesc:a663a4a6a6bda3ec0351b5fcfd61d6d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty font option. <br /></td></tr>
 <tr class="separator:a663a4a6a6bda3ec0351b5fcfd61d6d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa398fae1fb49c375c7c0f967c565d089"><td class="memItemLeft" align="right" valign="top"><a id="aa398fae1fb49c375c7c0f967c565d089"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#aa398fae1fb49c375c7c0f967c565d089">hasOverride</a> () const</td></tr>
-<tr class="memdesc:aa398fae1fb49c375c7c0f967c565d089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if any font override is set. <br /></td></tr>
-<tr class="separator:aa398fae1fb49c375c7c0f967c565d089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75820d7f491993221bb52b0285ab29a"><td class="memItemLeft" align="right" valign="top"><a id="ad75820d7f491993221bb52b0285ab29a"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#ad75820d7f491993221bb52b0285ab29a">font</a> () const</td></tr>
-<tr class="memdesc:ad75820d7f491993221bb52b0285ab29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local font override or 0 if none is set. <br /></td></tr>
-<tr class="separator:ad75820d7f491993221bb52b0285ab29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479da8bc6c27c908ec0c5c460fb26a4a"><td class="memItemLeft" align="right" valign="top"><a id="a479da8bc6c27c908ec0c5c460fb26a4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#a479da8bc6c27c908ec0c5c460fb26a4a">isSet</a> () const</td></tr>
+<tr class="memdesc:a479da8bc6c27c908ec0c5c460fb26a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if any font override is set. <br /></td></tr>
+<tr class="separator:a479da8bc6c27c908ec0c5c460fb26a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce26d458b7a5cbaacc2151b125b95e0"><td class="memItemLeft" align="right" valign="top"><a id="afce26d458b7a5cbaacc2151b125b95e0"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#afce26d458b7a5cbaacc2151b125b95e0">value</a> () const</td></tr>
+<tr class="memdesc:afce26d458b7a5cbaacc2151b125b95e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective font. <br /></td></tr>
+<tr class="separator:afce26d458b7a5cbaacc2151b125b95e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft" align="right" valign="top"><a id="ac77626da8a7306cd079b1dd18558c9eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#ac77626da8a7306cd079b1dd18558c9eb">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;<a class="el" href="classPt_1_1Forms_1_1FontOption.html#ad75820d7f491993221bb52b0285ab29a">font</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#ac77626da8a7306cd079b1dd18558c9eb">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
 <tr class="memdesc:ac77626da8a7306cd079b1dd18558c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the complete local font override. <br /></td></tr>
 <tr class="separator:ac77626da8a7306cd079b1dd18558c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a82d384a6c7e0002e30e96784eed190"><td class="memItemLeft" align="right" valign="top"><a id="a4a82d384a6c7e0002e30e96784eed190"></a>
@@ -122,32 +124,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#a25a76775309e2b8d0b310c5574ac7cae">setSlant</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
 <tr class="memdesc:a25a76775309e2b8d0b310c5574ac7cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the local font slant override. <br /></td></tr>
 <tr class="separator:a25a76775309e2b8d0b310c5574ac7cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6877a3de75da360b9ef15728ac748e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#afc6877a3de75da360b9ef15728ac748e">getFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;base) const</td></tr>
-<tr class="memdesc:afc6877a3de75da360b9ef15728ac748e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves the effective font against the given base font.  <a href="classPt_1_1Forms_1_1FontOption.html#afc6877a3de75da360b9ef15728ac748e">More...</a><br /></td></tr>
-<tr class="separator:afc6877a3de75da360b9ef15728ac748e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad423eba3e0e3b1eb77f8c15b6120ec48"><td class="memItemLeft" align="right" valign="top"><a id="ad423eba3e0e3b1eb77f8c15b6120ec48"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1FontOption.html#ad423eba3e0e3b1eb77f8c15b6120ec48">getFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;baseFont) const</td></tr>
+<tr class="memdesc:ad423eba3e0e3b1eb77f8c15b6120ec48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local font overrides merged with <em>baseFont</em>. <br /></td></tr>
+<tr class="separator:ad423eba3e0e3b1eb77f8c15b6120ec48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores an optional local font plus four partial-override bits (All, Size, Weight, Slant). Enclosing widget-local options classes delegate their font setters and resolver to this helper and bump their own override bit after each mutation. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="afc6877a3de75da360b9ef15728ac748e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc6877a3de75da360b9ef15728ac748e">&#9670;&nbsp;</a></span>getFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> getFont </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;&#160;</td>
-          <td class="paramname"><em>base</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns base unchanged when no override is set. A full font override replaces base entirely; partial overrides for size, weight, and slant are merged into base. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
