@@ -7721,13 +7721,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function">
       <type>Gfx::SizeF</type>
       <name>measureContent</name>
       <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
@@ -7811,19 +7804,19 @@
       <anchor>acdceb4e9a70d97abdb7a5aeeb05423d1</anchor>
       <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Pixmap &amp;picture, const Gfx::PointF &amp;pos, const ButtonState &amp;state)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReset</name>
-      <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
-      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual ButtonRenderer *</type>
       <name>onCreate</name>
       <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
       <anchor>a25b4b0f471c7ac786cdc5063e7493cfe</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1ButtonRenderer.html</anchorfile>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9261,13 +9254,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function">
       <type>Gfx::SizeF</type>
       <name>measureIndicator</name>
       <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
@@ -9337,19 +9323,19 @@
       <anchor>adc8382085afa8dd8c13306c826a3bd88</anchor>
       <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;mnemonic, const CheckBoxState &amp;state)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReset</name>
-      <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
-      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual CheckBoxRenderer *</type>
       <name>onCreate</name>
       <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
       <anchor>a97b29eb0bcc62c189e44218888c78268</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1CheckBoxRenderer.html</anchorfile>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10440,13 +10426,6 @@
       <anchor>a94c1fd692d50c065a708818f4b4fca8a</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual ComboBoxRenderer *</type>
       <name>onCreate</name>
@@ -10456,9 +10435,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onPrepare</name>
+      <name>onReset</name>
       <anchorfile>classPt_1_1Forms_1_1ComboBoxRenderer.html</anchorfile>
-      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
       <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
@@ -24167,13 +24146,6 @@
     <filename>classPt_1_1Forms_1_1LineEditRenderer.html</filename>
     <base>Pt::Forms::Renderer</base>
     <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function">
       <type>const Painter &amp;</type>
       <name>textPainter</name>
       <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
@@ -24186,6 +24158,13 @@
       <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
       <anchor>ab804cb154949925b3b39c9a54f3eec06</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1LineEditRenderer.html</anchorfile>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24379,19 +24358,19 @@
       <anchor>a198878ae9bdb11fd8f946f2ec49c7442</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1ListBoxRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual ListBoxRenderer *</type>
       <name>onCreate</name>
       <anchorfile>classPt_1_1Forms_1_1ListBoxRenderer.html</anchorfile>
       <anchor>a1c339f2e499fc5c5bf964077362ecd9d</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1ListBoxRenderer.html</anchorfile>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24517,13 +24496,6 @@
     <base>Pt::Forms::Renderer</base>
     <member kind="function">
       <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
       <name>renderHighlight</name>
       <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
       <anchor>a340beaea5a7b5df20b0a6790c80b0e35</anchor>
@@ -24538,9 +24510,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onPrepare</name>
+      <name>onReset</name>
       <anchorfile>classPt_1_1Forms_1_1ListItemRenderer.html</anchorfile>
-      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
       <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
@@ -29096,13 +29068,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function">
       <type>Gfx::SizeF</type>
       <name>measureFrame</name>
       <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
@@ -29151,19 +29116,19 @@
       <anchor>aa179a56014e50ceea3913c2571a266b0</anchor>
       <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;rect, const Pixmap &amp;picture, const Gfx::PointF &amp;pos, const PanelState &amp;state)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReset</name>
-      <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
-      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual PanelRenderer *</type>
       <name>onCreate</name>
       <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
       <anchor>a114f3b7e6cd440fbc7266af60cb6e351</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1PanelRenderer.html</anchorfile>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31325,19 +31290,19 @@
     <name>Pt::Forms::ProgressBarRenderer</name>
     <filename>classPt_1_1Forms_1_1ProgressBarRenderer.html</filename>
     <base>Pt::Forms::Renderer</base>
-    <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1ProgressBarRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual ProgressBarRenderer *</type>
       <name>onCreate</name>
       <anchorfile>classPt_1_1Forms_1_1ProgressBarRenderer.html</anchorfile>
       <anchor>a2efbd39fe3305496ffe778c548346653</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReset</name>
+      <anchorfile>classPt_1_1Forms_1_1ProgressBarRenderer.html</anchorfile>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
+      <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38441,20 +38406,6 @@
       <anchor>a1269713cd4ee3cbe4f8bee0020468dd7</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReset</name>
-      <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
-      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual SliderRenderer *</type>
       <name>onCreate</name>
@@ -38464,9 +38415,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onPrepare</name>
+      <name>onReset</name>
       <anchorfile>classPt_1_1Forms_1_1SliderRenderer.html</anchorfile>
-      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
       <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
@@ -39947,20 +39898,6 @@
       <anchor>a4e435acbdf5ed469945bf3f3dba6b6b9</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReset</name>
-      <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
-      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual SpinBoxRenderer *</type>
       <name>onCreate</name>
@@ -39970,9 +39907,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onPrepare</name>
+      <name>onReset</name>
       <anchorfile>classPt_1_1Forms_1_1SpinBoxRenderer.html</anchorfile>
-      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
       <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
@@ -42569,20 +42506,6 @@
       <anchor>aa2d60ae8913aba44a40ba8cb97fac620</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>prepare</name>
-      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
-      <anchor>a009a5bd85706a847f4dcc951f20cedf2</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReset</name>
-      <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
-      <anchor>a4c8a53af3d9e6a381525ee241cd8ea61</anchor>
-      <arglist>(const StyleOptions &amp;options)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual TabViewRenderer *</type>
       <name>onCreate</name>
@@ -42592,9 +42515,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onPrepare</name>
+      <name>onReset</name>
       <anchorfile>classPt_1_1Forms_1_1TabViewRenderer.html</anchorfile>
-      <anchor>af45a96c8b36dbc86ac4f4c48d40ff759</anchor>
+      <anchor>adefda73de91a015f122ff2904604a77a</anchor>
       <arglist>(const StyleOptions &amp;options)=0</arglist>
     </member>
   </compound>
@@ -51396,6 +51319,18 @@
     <name>jam-language</name>
     <title>Jam Language Features</title>
     <filename>jam-language.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>jam-prebuilt-page</name>
+    <title>Prebuilt Dependencies</title>
+    <filename>jam-prebuilt-page.html</filename>
+    <docanchor file="jam-prebuilt-page.html" title="Using Prebuilt Dependencies">jam-prebuilt-page-Using</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="Layout">jam-prebuilt-page-Layout</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="packages.jam">jam-prebuilt-page-Manifest</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="Configure Integration">jam-prebuilt-page-Configure</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="Jam Rules">jam-prebuilt-page-API</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="Deployment">jam-prebuilt-page-Deploy</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="Creating Prebuilt Dependencies">jam-prebuilt-page-Produce</docanchor>
   </compound>
   <compound kind="page">
     <name>jam-usage</name>

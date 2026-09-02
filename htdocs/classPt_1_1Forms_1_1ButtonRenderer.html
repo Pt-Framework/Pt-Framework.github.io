@@ -103,9 +103,6 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a9aecfda8d8aed85bcd181eeca6268aba">create</a> () const</td></tr>
 <tr class="memdesc:a9aecfda8d8aed85bcd181eeca6268aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
 <tr class="separator:a9aecfda8d8aed85bcd181eeca6268aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009a5bd85706a847f4dcc951f20cedf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a009a5bd85706a847f4dcc951f20cedf2">prepare</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a009a5bd85706a847f4dcc951f20cedf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the button style options to this renderer.  <a href="classPt_1_1Forms_1_1ButtonRenderer.html#a009a5bd85706a847f4dcc951f20cedf2">More...</a><br /></td></tr>
-<tr class="separator:a009a5bd85706a847f4dcc951f20cedf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55db4d843c2e4a032fca27968c6471d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a55db4d843c2e4a032fca27968c6471d1">measureContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, Direction direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize)</td></tr>
 <tr class="memdesc:a55db4d843c2e4a032fca27968c6471d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the combined content size for icon and text arranged by direction.  <a href="classPt_1_1Forms_1_1ButtonRenderer.html#a55db4d843c2e4a032fca27968c6471d1">More...</a><br /></td></tr>
 <tr class="separator:a55db4d843c2e4a032fca27968c6471d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,52 +150,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:acdceb4e9a70d97abdb7a5aeeb05423d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memItemLeft" align="right" valign="top"><a id="ab86c1a0860cbf78ea7e1d3a571c48b38"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the facet to the given global style options. <br /></td></tr>
+<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
 <tr class="separator:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4c8a53af3d9e6a381525ee241cd8ea61"><td class="memItemLeft" align="right" valign="top"><a id="a4c8a53af3d9e6a381525ee241cd8ea61"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a4c8a53af3d9e6a381525ee241cd8ea61">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a4c8a53af3d9e6a381525ee241cd8ea61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the shared button renderer to global defaults. <br /></td></tr>
-<tr class="separator:a4c8a53af3d9e6a381525ee241cd8ea61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="memItemLeft" align="right" valign="top"><a id="a25b4b0f471c7ac786cdc5063e7493cfe"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a25b4b0f471c7ac786cdc5063e7493cfe">onCreate</a> () const =0</td></tr>
 <tr class="memdesc:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook that allocates a new renderer of the same concrete type. <br /></td></tr>
 <tr class="separator:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
+<tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides rendering primitives for button surfaces, text, mnemonic underlines, and icons. Subclasses override the protected virtuals. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a009a5bd85706a847f4dcc951f20cedf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a009a5bd85706a847f4dcc951f20cedf2">&#9670;&nbsp;</a></span>prepare()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void prepare </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This is the explicit synchronization point for the button slice. The supplied options already include the widget-local overlay via the parent lookup of StyleOptions. Implementations resolve tokens with StyleOptions::get(). </p>
-
-<p>Implements <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
-
-</div>
-</div>
 <a id="a55db4d843c2e4a032fca27968c6471d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55db4d843c2e4a032fca27968c6471d1">&#9670;&nbsp;</a></span>measureContent()</h2>
 
@@ -331,6 +297,32 @@ virtual <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRende
       </table>
 </div><div class="memdoc">
 <p>Only fills if an explicit background is needed. Otherwise the call is a no-op, leaving the widget transparent. </p>
+
+</div>
+</div>
+<a id="adefda73de91a015f122ff2904604a77a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&nbsp;</a></span>onReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onReset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

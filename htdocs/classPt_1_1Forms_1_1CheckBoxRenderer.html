@@ -103,9 +103,6 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a525c26841536a559d2d13d8b71d8ad16">create</a> () const</td></tr>
 <tr class="memdesc:a525c26841536a559d2d13d8b71d8ad16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
 <tr class="separator:a525c26841536a559d2d13d8b71d8ad16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009a5bd85706a847f4dcc951f20cedf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a009a5bd85706a847f4dcc951f20cedf2">prepare</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a009a5bd85706a847f4dcc951f20cedf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effective check box style options to this renderer.  <a href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a009a5bd85706a847f4dcc951f20cedf2">More...</a><br /></td></tr>
-<tr class="separator:a009a5bd85706a847f4dcc951f20cedf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1167dfe190277d3610bc5f1b0c49578"><td class="memItemLeft" align="right" valign="top"><a id="ac1167dfe190277d3610bc5f1b0c49578"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#ac1167dfe190277d3610bc5f1b0c49578">measureIndicator</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
 <tr class="memdesc:ac1167dfe190277d3610bc5f1b0c49578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the natural size of the check indicator on surface. <br /></td></tr>
@@ -148,25 +145,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:adc8382085afa8dd8c13306c826a3bd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memItemLeft" align="right" valign="top"><a id="ab86c1a0860cbf78ea7e1d3a571c48b38"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the facet to the given global style options. <br /></td></tr>
+<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
 <tr class="separator:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4c8a53af3d9e6a381525ee241cd8ea61"><td class="memItemLeft" align="right" valign="top"><a id="a4c8a53af3d9e6a381525ee241cd8ea61"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a4c8a53af3d9e6a381525ee241cd8ea61">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a4c8a53af3d9e6a381525ee241cd8ea61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the shared check box renderer to global defaults. <br /></td></tr>
-<tr class="separator:a4c8a53af3d9e6a381525ee241cd8ea61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b29eb0bcc62c189e44218888c78268"><td class="memItemLeft" align="right" valign="top"><a id="a97b29eb0bcc62c189e44218888c78268"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a97b29eb0bcc62c189e44218888c78268">onCreate</a> () const =0</td></tr>
 <tr class="memdesc:a97b29eb0bcc62c189e44218888c78268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook that allocates a new renderer of the same concrete type. <br /></td></tr>
 <tr class="separator:a97b29eb0bcc62c189e44218888c78268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
+<tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides rendering primitives for the check indicator, label text, and mnemonic underline. Subclasses override the protected virtuals. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a009a5bd85706a847f4dcc951f20cedf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a009a5bd85706a847f4dcc951f20cedf2">&#9670;&nbsp;</a></span>prepare()</h2>
+<a id="adefda73de91a015f122ff2904604a77a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&nbsp;</a></span>onReset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +170,7 @@ virtual <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxR
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void prepare </td>
+          <td class="memname">virtual void onReset </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td>
           <td class="paramname"><em>options</em></td><td>)</td>
@@ -184,13 +179,10 @@ virtual <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxR
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This is the explicit synchronization point for the check box slice. </p>
-
-<p>Implements <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
 
 </div>
 </div>
