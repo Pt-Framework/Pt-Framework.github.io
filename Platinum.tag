@@ -51325,8 +51325,8 @@
     <title>Prebuilt Dependencies</title>
     <filename>jam-prebuilt-page.html</filename>
     <docanchor file="jam-prebuilt-page.html" title="Using Prebuilt Dependencies">jam-prebuilt-page-Using</docanchor>
-    <docanchor file="jam-prebuilt-page.html" title="Layout">jam-prebuilt-page-Layout</docanchor>
-    <docanchor file="jam-prebuilt-page.html" title="packages.jam">jam-prebuilt-page-Manifest</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="Bundle Directory Layout">jam-prebuilt-page-Layout</docanchor>
+    <docanchor file="jam-prebuilt-page.html" title="The packages.jam Manifest">jam-prebuilt-page-Manifest</docanchor>
     <docanchor file="jam-prebuilt-page.html" title="Configure Integration">jam-prebuilt-page-Configure</docanchor>
     <docanchor file="jam-prebuilt-page.html" title="Jam Rules">jam-prebuilt-page-API</docanchor>
     <docanchor file="jam-prebuilt-page.html" title="Deployment">jam-prebuilt-page-Deploy</docanchor>

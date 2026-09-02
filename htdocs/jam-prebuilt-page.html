@@ -131,7 +131,7 @@ System / compiler paths / pkg-config
 Sources in the tree
 </pre><p>When prebuilt libraries are selected, the system is not consulted for packages listed in the bundle. When they are not selected, <code>prebuilt</code> is not consulted at all. There is no fallback from one platform folder to another. If the chosen folder is missing, configure reports an error. If a package probe against the bundle fails, that package falls back to sources in the tree.</p>
 <h1><a class="anchor" id="jam-prebuilt-page-Layout"></a>
-Layout</h1>
+Bundle Directory Layout</h1>
 <p>One platform is one directory and one zip. Each library lives in its own subdirectory, named after <code>PREBUILT_PACKAGES</code> (<code>zlib</code>, <code>png</code>, <code>jpeg</code>, <code>freetype</code>, <code>openssl</code>).</p>
 <pre class="fragment">prebuilt/&lt;name&gt;/
   jam/
@@ -166,7 +166,7 @@ Layout</h1>
 <p><code>PREBUILT_PACKAGE_INCLUDES</code>. is set only when that layout is not enough (FreeType's <code>include/freetype2</code>). The native <code>lib/</code> and <code>bin/</code> directories are kept complete. There are no version directories and no <code>debug/</code> folder inside an <code>md</code> tree. Library names stay the same for a given platform folder (<code>zlib.lib</code> in both <code>md</code> and <code>mdd</code>).</p>
 <p>The directory can be moved as a whole because it contains no absolute paths. The project sets <code>PREBUILT_ROOT</code> before including <code>jam/packages.jam</code>.</p>
 <h1><a class="anchor" id="jam-prebuilt-page-Manifest"></a>
-packages.jam</h1>
+The packages.jam Manifest</h1>
 <p>Each bundle contains one Jam data file at <code>jam/packages.jam</code>. It assigns variables only: no rules and no toolset flags. The rules that use those variables live in <code>jam/prebuilt.jam</code>.</p>
 <p>Names that describe the whole bundle use the prefix <code>PREBUILT_</code>. Names that vary by package use <code>PREBUILT_PACKAGE_</code> plus a dotted package name, for example <code>PREBUILT_PACKAGE_LIBS.zlib</code>, which is read as <code>$</code>(PREBUILT_PACKAGE_LIBS.).</p>
 <p>Bundle-wide variables:</p>
