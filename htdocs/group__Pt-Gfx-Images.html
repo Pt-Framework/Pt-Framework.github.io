@@ -83,8 +83,11 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The Pt::Gfx image API provides classes for storing image data, accessing pixels and working with image formats. Images own their pixel data and support a range of pixel formats such as Argb32, Rgb32, Rgb16 and Yuv12. Views and pixel views provide lightweight, non-owning access to regions of image data without copying.</p>
-<p>Each pixel format has a concrete pixel type for direct, format-aware pixel access and a generic pixel type for runtime-polymorphic access via ImageFormat. </p>
+<p>Images own pixel data. A typed image binds its pixel format at compile time: Argb32Image, Rgb32Image, Rgb16Image, and Yuv12Image are specializations of BasicImage with a concrete format type. Their views expose the matching concrete pixel type, such as Argb32Pixel. Use a typed image when its format is known by the calling code.</p>
+<p>Image and ImageF select their format at runtime through the abstract ImageFormat interface. Image exposes Pixel&lt;Color&gt;, while ImageF exposes Pixel&lt;ColorF&gt;. Use these images when the format is chosen by an image decoder, caller, or other runtime input. The generic pixels use the selected ImageFormat for their pixel operations.</p>
+<p>Both image families provide the same non-owning views. Use view() to access a rectangular region, pixelView() to traverse individual pixels, and lineView() to traverse rows as pixel spans. Each view preserves the source image's compile-time or runtime pixel behavior and does not copy pixel data.</p>
+<p>Pixel objects refer to a position in an image or view. Their copy-assignment operator is deleted to prevent accidentally rebinding a position. Call reset() to bind a pixel to another position. Write a color with its color assignment operator or assign().</p>
+<p>Add a format by deriving it from ImageFormat, implementing its pixel storage operations, and providing the matching concrete pixel types and ImageTraits specialization. The runtime image API then uses the format through ImageFormat, while typed images use it through BasicImage. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
