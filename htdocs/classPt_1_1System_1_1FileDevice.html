@@ -228,18 +228,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileDevice.html#a7fe59135336edd8f09a32b668217688b">onRun</a> ()</td></tr>
 <tr class="memdesc:a7fe59135336edd8f09a32b668217688b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if ready and run. <br /></td></tr>
 <tr class="separator:a7fe59135336edd8f09a32b668217688b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1141038e4a86e9f5d333cbc82d433bb"><td class="memItemLeft" align="right" valign="top"><a id="af1141038e4a86e9f5d333cbc82d433bb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IODevice.html#af1141038e4a86e9f5d333cbc82d433bb">onAttach</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a> &amp;<a class="el" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>)</td></tr>
-<tr class="memdesc:af1141038e4a86e9f5d333cbc82d433bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attached to loop. <br /></td></tr>
-<tr class="separator:af1141038e4a86e9f5d333cbc82d433bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12bff0388fed9a6acf0b126e52f8e666"><td class="memItemLeft" align="right" valign="top"><a id="a12bff0388fed9a6acf0b126e52f8e666"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IODevice.html#a12bff0388fed9a6acf0b126e52f8e666">onDetach</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a> &amp;<a class="el" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>)</td></tr>
-<tr class="memdesc:a12bff0388fed9a6acf0b126e52f8e666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detached from loop. <br /></td></tr>
-<tr class="separator:a12bff0388fed9a6acf0b126e52f8e666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcca23e6afadfade8c5d63ee62b49bfd"><td class="memItemLeft" align="right" valign="top"><a id="abcca23e6afadfade8c5d63ee62b49bfd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Selectable.html#abcca23e6afadfade8c5d63ee62b49bfd">post</a> ()</td></tr>
 <tr class="memdesc:abcca23e6afadfade8c5d63ee62b49bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts this selectable to its event loop from any thread. <br /></td></tr>
 <tr class="separator:abcca23e6afadfade8c5d63ee62b49bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b9bccdc539f288798e568e71c7ef67"><td class="memItemLeft" align="right" valign="top"><a id="ad2b9bccdc539f288798e568e71c7ef67"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Selectable.html#ad2b9bccdc539f288798e568e71c7ef67">onAttach</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a> &amp;)</td></tr>
+<tr class="memdesc:ad2b9bccdc539f288798e568e71c7ef67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attached to loop. <br /></td></tr>
+<tr class="separator:ad2b9bccdc539f288798e568e71c7ef67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d2eb7450432fa029e8a874cbd2900d"><td class="memItemLeft" align="right" valign="top"><a id="a96d2eb7450432fa029e8a874cbd2900d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Selectable.html#a96d2eb7450432fa029e8a874cbd2900d">onDetach</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a> &amp;)</td></tr>
+<tr class="memdesc:a96d2eb7450432fa029e8a874cbd2900d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detached from loop. <br /></td></tr>
+<tr class="separator:a96d2eb7450432fa029e8a874cbd2900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="classPt_1_1System_1_1FileDevice.html" title="Read and write to files.">Pt::System::FileDevice</a> reads and writes files in the filesystem either synchronously or asynchronously. If used synchronously, it offers similar functionality like a std::fstream or the file I/O functions from the C library (fopen...). However, most applications need to perform input and output asynchronously, which makes using a FileDevice attractive. Since it inherits <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">Pt::System::IODevice</a>, it can be used as the endpoint of an <a class="el" href="classPt_1_1System_1_1IOStream.html" title="Input/Output stream for I/O devices.">Pt::System::IOStream</a> or <a class="el" href="classPt_1_1System_1_1IOBuffer.html" title="Implements std::streambuf for I/O devices.">Pt::System::IOBuffer</a>, respectively. If no buffering is required, a FileDevice can be used on its own, as shown in the following example:</p>

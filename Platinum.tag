@@ -583,6 +583,200 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::Application</name>
+    <filename>classPt_1_1Forms_1_1Application.html</filename>
+    <base>Pt::System::Application</base>
+    <member kind="function">
+      <type>const Style &amp;</type>
+      <name>style</name>
+      <anchorfile>classPt_1_1Forms_1_1Application.html</anchorfile>
+      <anchor>a73b9e4c10870b4f65b4387749c5cbad1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setStyle</name>
+      <anchorfile>classPt_1_1Forms_1_1Application.html</anchorfile>
+      <anchor>ad7c53bcdebef5245c64920886cc279b0</anchor>
+      <arglist>(const Style &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>const StyleOptions &amp;</type>
+      <name>styleOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1Application.html</anchorfile>
+      <anchor>aac31c058d44223b08a944d2feecbb96c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setStyleOptions</name>
+      <anchorfile>classPt_1_1Forms_1_1Application.html</anchorfile>
+      <anchor>a970f2523988a3ebb114f0d8d0ef8308d</anchor>
+      <arglist>(const StyleOptions &amp;options)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sendKeyEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Application.html</anchorfile>
+      <anchor>a46d50602b0ce49d638cb2dcd4191b33c</anchor>
+      <arglist>(const KeyEvent &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sendMouseEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Application.html</anchorfile>
+      <anchor>ae3169b70258fbac19c3291208b65c159</anchor>
+      <arglist>(const MouseEvent &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>EventLoop &amp;</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a9d27135050e141db298170c2e94735e1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a13a43e6d814de94978c515cb084873b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>exit</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a358d2e2397ca11ccd17553e3c40e7901</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ignoreSystemSignal</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a4f25fa12b95c5f6ac15ec899bb0e2bb8</anchor>
+      <arglist>(int sig)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>catchSystemSignal</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a4ef882542c4efc27d6db24864e18d9a6</anchor>
+      <arglist>(int sig)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>raiseSystemSignal</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a26e25a2d0480041b94a4b1f1a254af8c</anchor>
+      <arglist>(int sig)</arglist>
+    </member>
+    <member kind="function">
+      <type>Signal&lt; int &gt; &amp;</type>
+      <name>systemSignal</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>ad24a020c870250b7974e0ee6aeed2389</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int &amp;</type>
+      <name>argc</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a21bbdefc47b31740ee985fab76fea5a0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>char **</type>
+      <name>argv</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a8023cd42b8eff221ecab65afb89dd743</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setArgs</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>ac02b1cd65d03f60ba8d7bf13abcc54b0</anchor>
+      <arglist>(int &amp;argc, char **argv)</arglist>
+    </member>
+    <member kind="function">
+      <type>Arg&lt; T &gt;</type>
+      <name>getArg</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a765dbf7a3c31e368e729bfe8937559f3</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Arg&lt; T &gt;</type>
+      <name>getArg</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>aecc70eb98968ee64c0141b0f918e30a5</anchor>
+      <arglist>(const char *name, const T &amp;def)</arglist>
+    </member>
+    <member kind="function">
+      <type>Arg&lt; T &gt;</type>
+      <name>getArg</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a4e1f9345fc69fb7a89815a1313b20a23</anchor>
+      <arglist>(const char name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Arg&lt; T &gt;</type>
+      <name>getArg</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a84642fbd3acf863439c19e799ec3d4d9</anchor>
+      <arglist>(const char name, const T &amp;def)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>chdir</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a3c029a7b3367bfa67e971551c8961e85</anchor>
+      <arglist>(const Path &amp;path)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Path</type>
+      <name>cwd</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a1ccb1a4a2ffedd4423baa0502c4e32b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Path</type>
+      <name>rootdir</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a630231c4cfb70eddc8f660ae1d0c5e96</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Path</type>
+      <name>tmpdir</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a624d141f1c17a396c031b06a53c3c045</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>setEnvVar</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a2e0500fcab2b98cb50a10a02a001fb53</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;value)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>unsetEnvVar</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>ad5ba67f5af6558d228759dff0b489316</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::string</type>
+      <name>getEnvVar</name>
+      <anchorfile>classPt_1_1System_1_1Application.html</anchorfile>
+      <anchor>a64c09000d1ddeadec96ec98e876b5c65</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Arg</name>
     <filename>classPt_1_1Arg.html</filename>
     <templarg></templarg>
@@ -10308,6 +10502,20 @@
   <compound kind="class">
     <name>Pt::Gfx::ColorF</name>
     <filename>classPt_1_1Gfx_1_1ColorF.html</filename>
+    <member kind="function" static="yes">
+      <type>static float</type>
+      <name>toChannelF</name>
+      <anchorfile>classPt_1_1Gfx_1_1ColorF.html</anchorfile>
+      <anchor>a6bafa84472a01e544b60f30ff81da98a</anchor>
+      <arglist>(Pt::uint8_t c)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Pt::uint8_t</type>
+      <name>toChannel8</name>
+      <anchorfile>classPt_1_1Gfx_1_1ColorF.html</anchorfile>
+      <anchor>ac69c48335815d72bd123fc01bb843c1d</anchor>
+      <arglist>(float c)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Gfx::ColorStop</name>
@@ -13014,6 +13222,249 @@
     <name>Pt::Forms::ContourOption</name>
     <filename>classPt_1_1Forms_1_1ContourOption.html</filename>
     <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::Control</name>
+    <filename>classPt_1_1Forms_1_1Control.html</filename>
+    <base>Pt::Forms::View</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::ConversionError</name>
@@ -16501,106 +16952,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::JsonRpc::Fault</name>
-    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
-    <base>Pt::Remoting::Fault</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>ErrorCodes</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ParseError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidRequest</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MethodNotFound</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InvalidParameters</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InternalError</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
-      <arglist>(const std::string &amp;msg, int ec)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
-      <arglist>(const char *msg, int rc)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Fault</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>code</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
-      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::XmlRpc::Fault</name>
     <filename>classPt_1_1XmlRpc_1_1Fault.html</filename>
     <base>Pt::Remoting::Fault</base>
@@ -16757,6 +17108,106 @@
       <name>rc</name>
       <anchorfile>classPt_1_1XmlRpc_1_1Fault.html</anchorfile>
       <anchor>ac66b30f37d7df8c9bccc0b913d90bf16</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::JsonRpc::Fault</name>
+    <filename>classPt_1_1JsonRpc_1_1Fault.html</filename>
+    <base>Pt::Remoting::Fault</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorCodes</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ParseError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3aa3d32cd06318a977a4371605d6a4d84c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidRequest</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3a8eb67fdd9b1c9791efa9d6d616c2df58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MethodNotFound</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ab9ddaf2e245eade5feb3f69690ddc197</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InvalidParameters</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ad15de59081005e988f13dea8462e5d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InternalError</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a3878e89dc5c88d823f4f923ef90dbcb3ae696511a49921d2a6536428898e3977d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>ad82f67122902b6a5fe0396a4dd7c0e16</anchor>
+      <arglist>(const std::string &amp;msg, int ec)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a0cd0153b701e1232310e41f9dfb33896</anchor>
+      <arglist>(const char *msg, int rc)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Fault</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a346830741b2df867577b9b854e3f84eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>code</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1Fault.html</anchorfile>
+      <anchor>a4aebcfaf2368eb240cf5111cc6fc140b</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -17073,26 +17524,26 @@
       <anchor>a7fe59135336edd8f09a32b668217688b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onAttach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>af1141038e4a86e9f5d333cbc82d433bb</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>a12bff0388fed9a6acf0b126e52f8e666</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>post</name>
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
       <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ad2b9bccdc539f288798e568e71c7ef67</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a96d2eb7450432fa029e8a874cbd2900d</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18239,6 +18690,249 @@
     <name>Pt::Forms::ForegroundOption</name>
     <filename>classPt_1_1Forms_1_1ForegroundOption.html</filename>
     <base>Pt::Forms::StyleOption</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::Form</name>
+    <filename>classPt_1_1Forms_1_1Form.html</filename>
+    <base>Pt::Forms::View</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::JsonRpc::Formatter</name>
@@ -20627,53 +21321,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::JsonRpc::HttpService</name>
-    <filename>classPt_1_1JsonRpc_1_1HttpService.html</filename>
-    <base>Pt::Http::Service</base>
-    <member kind="function">
-      <type></type>
-      <name>HttpService</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
-      <anchor>a706135cd8804685c8b71cd8242e39c8e</anchor>
-      <arglist>(const ServiceDeclaration &amp;decl, Remoting::ServiceDefinition &amp;def)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~HttpService</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
-      <anchor>a8568cb4f69a384616625164d03a835e1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Responder *</type>
-      <name>getResponder</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
-      <arglist>(const Request &amp;)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>releaseResponder</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
-      <arglist>(Responder *)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual Http::Responder *</type>
-      <name>onGetResponder</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
-      <anchor>a39d2acca58a1a563cdfa2aa66dc06606</anchor>
-      <arglist>(const Http::Request &amp;request)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onReleaseResponder</name>
-      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
-      <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
-      <arglist>(Http::Responder *resp)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::XmlRpc::HttpService</name>
     <filename>classPt_1_1XmlRpc_1_1HttpService.html</filename>
     <base>Pt::Http::Service</base>
@@ -20716,6 +21363,53 @@
       <type>virtual void</type>
       <name>onReleaseResponder</name>
       <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
+      <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
+      <arglist>(Http::Responder *resp)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::JsonRpc::HttpService</name>
+    <filename>classPt_1_1JsonRpc_1_1HttpService.html</filename>
+    <base>Pt::Http::Service</base>
+    <member kind="function">
+      <type></type>
+      <name>HttpService</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
+      <anchor>a706135cd8804685c8b71cd8242e39c8e</anchor>
+      <arglist>(const ServiceDeclaration &amp;decl, Remoting::ServiceDefinition &amp;def)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HttpService</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
+      <anchor>a8568cb4f69a384616625164d03a835e1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Responder *</type>
+      <name>getResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>releaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
+      <arglist>(Responder *)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Http::Responder *</type>
+      <name>onGetResponder</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
+      <anchor>a39d2acca58a1a563cdfa2aa66dc06606</anchor>
+      <arglist>(const Http::Request &amp;request)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReleaseResponder</name>
+      <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
       <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
       <arglist>(Http::Responder *resp)</arglist>
     </member>
@@ -22180,20 +22874,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>onAttach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>af1141038e4a86e9f5d333cbc82d433bb</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>a12bff0388fed9a6acf0b126e52f8e666</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>onCancel</name>
       <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
       <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
@@ -22205,6 +22885,20 @@
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
       <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ad2b9bccdc539f288798e568e71c7ef67</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a96d2eb7450432fa029e8a874cbd2900d</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -24030,6 +24724,249 @@
       <anchorfile>classPt_1_1TextCodec.html</anchorfile>
       <anchor>acc9990e3e10a48856f54d402949f23dc</anchor>
       <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Forms::Layout</name>
+    <filename>classPt_1_1Forms_1_1Layout.html</filename>
+    <base>Pt::Forms::Control</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32891,6 +33828,87 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Http::Responder</name>
+    <filename>classPt_1_1Http_1_1Responder.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Responder</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a63d50035309ce5e9d88850cc910d8255</anchor>
+      <arglist>(Service &amp;s)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Responder</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>readRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ac42e9083a591870e368f493985579698</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onBeginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onWriteReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Soap::Responder</name>
     <filename>classPt_1_1Soap_1_1Responder.html</filename>
     <base>Pt::Remoting::Responder</base>
@@ -33036,84 +34054,78 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Http::Responder</name>
-    <filename>classPt_1_1Http_1_1Responder.html</filename>
+    <name>Pt::Remoting::Responder</name>
+    <filename>classPt_1_1Remoting_1_1Responder.html</filename>
+    <base protection="private">Pt::NonCopyable</base>
     <member kind="function">
       <type></type>
       <name>Responder</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a63d50035309ce5e9d88850cc910d8255</anchor>
-      <arglist>(Service &amp;s)</arglist>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a7b4c7e57995aa5d89fa22bcc5aa2a223</anchor>
+      <arglist>(ServiceDefinition &amp;serviceDef)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Responder</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a441672d587b7f355d7308b08fa208633</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Service &amp;</type>
-      <name>service</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const Service &amp;</type>
-      <name>service</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
+      <type>const ServiceProcedure *</type>
+      <name>activeProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    <member kind="function" protection="protected">
+      <type>Pt::Composer **</type>
+      <name>setProcedure</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>ab51b6b1e9f0e9789e6387a20203d30a9</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
     </member>
-    <member kind="function">
+    <member kind="function" protection="protected">
       <type>void</type>
-      <name>readRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+      <name>beginCall</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>acaa96f8c157ef50d9d5448831c4bdc89</anchor>
+      <arglist>(System::EventLoop &amp;loop)</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>beginReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    <member kind="function" protection="protected">
+      <type>Pt::Decomposer *</type>
+      <name>endCall</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>writeReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    <member kind="function" protection="protected">
+      <type>Pt::Decomposer *</type>
+      <name>call</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onBeginRequest</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>ac42e9083a591870e368f493985579698</anchor>
-      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
+      <arglist>()=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
-      <name>onBeginReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onWriteReply</name>
-      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
-      <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
-      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+      <name>onReady</name>
+      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
+      <anchor>a83bc093f10b38b3429883892e9a72f87</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33273,81 +34285,6 @@
       <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
       <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Remoting::Responder</name>
-    <filename>classPt_1_1Remoting_1_1Responder.html</filename>
-    <base protection="private">Pt::NonCopyable</base>
-    <member kind="function">
-      <type></type>
-      <name>Responder</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a7b4c7e57995aa5d89fa22bcc5aa2a223</anchor>
-      <arglist>(ServiceDefinition &amp;serviceDef)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Responder</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a441672d587b7f355d7308b08fa208633</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ServiceProcedure *</type>
-      <name>activeProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a5976caf10ac92119110db5dd4fafaf74</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Composer **</type>
-      <name>setProcedure</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>ab51b6b1e9f0e9789e6387a20203d30a9</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>beginCall</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>acaa96f8c157ef50d9d5448831c4bdc89</anchor>
-      <arglist>(System::EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Decomposer *</type>
-      <name>endCall</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a30e75d742c603e25f3294e1053782f55</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Pt::Decomposer *</type>
-      <name>call</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a041d6c9ef8b2768d2a63839a8ddbfa10</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onCancel</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a5c669ec9685e2b6d83321fe70c660156</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>onReady</name>
-      <anchorfile>classPt_1_1Remoting_1_1Responder.html</anchorfile>
-      <anchor>a83bc093f10b38b3429883892e9a72f87</anchor>
-      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33756,6 +34693,321 @@
   <compound kind="class">
     <name>Pt::Forms::Screen</name>
     <filename>classPt_1_1Forms_1_1Screen.html</filename>
+    <base>Pt::Forms::Widget</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Lua::Script</name>
+    <filename>classPt_1_1Lua_1_1Script.html</filename>
+    <base>Pt::System::Selectable</base>
+    <base>Pt::Connectable</base>
+    <member kind="function">
+      <type>void</type>
+      <name>setActive</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a931676e60334ab733b848fa90dcb6dda</anchor>
+      <arglist>(EventLoop &amp;parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>detach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ac295bade8aee589f6718dfa79edc2a34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>run</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a149ad6701e3e2414cb566bb414029841</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>EventLoop *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a36ddcfd5046634b9b4fa5c5bc00b29bb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>onRun</name>
+      <anchorfile>classPt_1_1Lua_1_1Script.html</anchorfile>
+      <anchor>a5e5d5bdb3c480dacbbe91f5113485b31</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1Lua_1_1Script.html</anchorfile>
+      <anchor>ad11a5332d6119e3af5fa0a73aa088828</anchor>
+      <arglist>(Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1Lua_1_1Script.html</anchorfile>
+      <anchor>aafa76a6b8c986114e86530c3736f6c91</anchor>
+      <arglist>(Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1Lua_1_1Script.html</anchorfile>
+      <anchor>a5a5a8c7638e17aa6d75298875b91a597</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>post</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Forms::ScrollBarStyler</name>
@@ -33955,19 +35207,19 @@
       <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onAttach</name>
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
-      <anchor>a48e400262ea918d32ec7a91f80ffc76c</anchor>
-      <arglist>(EventLoop &amp;loop)=0</arglist>
+      <anchor>ad2b9bccdc539f288798e568e71c7ef67</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>onDetach</name>
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
-      <anchor>a4aa6cbcb52c6cf6231611e34bc7ba84a</anchor>
-      <arglist>(EventLoop &amp;loop)=0</arglist>
+      <anchor>a96d2eb7450432fa029e8a874cbd2900d</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -34350,26 +35602,26 @@
       <anchor>a5e5d5bdb3c480dacbbe91f5113485b31</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onAttach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>af1141038e4a86e9f5d333cbc82d433bb</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>a12bff0388fed9a6acf0b126e52f8e666</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>post</name>
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
       <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ad2b9bccdc539f288798e568e71c7ef67</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a96d2eb7450432fa029e8a874cbd2900d</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36236,6 +37488,45 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Mcp::Service</name>
+    <filename>classPt_1_1Mcp_1_1Service.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Service</name>
+      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
+      <anchor>a2c363fbb032dae717715cc3ed5311c12</anchor>
+      <arglist>(Remoting::ServiceDefinition &amp;serviceDef, const ToolDeclaration &amp;decl)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Service</name>
+      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
+      <anchor>a3fa910779a00d2d84bf306d05689a26c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>readMessage</name>
+      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
+      <anchor>a67f17d9be94ca2d1e9d321b68b98b758</anchor>
+      <arglist>(std::istream &amp;is)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeMessage</name>
+      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
+      <anchor>a52a061f3e17f744bf0e20b0d5cb0ccfb</anchor>
+      <arglist>(std::ostream &amp;os, const std::string &amp;json)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>dispatch</name>
+      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
+      <anchor>a6c1245f281c8c9a57d9aac63bacf2729</anchor>
+      <arglist>(const std::string &amp;json)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Http::Service</name>
     <filename>classPt_1_1Http_1_1Service.html</filename>
     <base protection="private">Pt::NonCopyable</base>
@@ -36280,45 +37571,6 @@
       <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
       <anchor>a8e8d88c0fbe1d98fe87a2104bcc0690c</anchor>
       <arglist>(Responder *)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Pt::Mcp::Service</name>
-    <filename>classPt_1_1Mcp_1_1Service.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Service</name>
-      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
-      <anchor>a2c363fbb032dae717715cc3ed5311c12</anchor>
-      <arglist>(Remoting::ServiceDefinition &amp;serviceDef, const ToolDeclaration &amp;decl)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Service</name>
-      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
-      <anchor>a3fa910779a00d2d84bf306d05689a26c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
-      <name>readMessage</name>
-      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
-      <anchor>a67f17d9be94ca2d1e9d321b68b98b758</anchor>
-      <arglist>(std::istream &amp;is)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>writeMessage</name>
-      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
-      <anchor>a52a061f3e17f744bf0e20b0d5cb0ccfb</anchor>
-      <arglist>(std::ostream &amp;os, const std::string &amp;json)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
-      <name>dispatch</name>
-      <anchorfile>classPt_1_1Mcp_1_1Service.html</anchorfile>
-      <anchor>a6c1245f281c8c9a57d9aac63bacf2729</anchor>
-      <arglist>(const std::string &amp;json)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40640,6 +41892,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Json::String</name>
+    <filename>classPt_1_1Json_1_1String.html</filename>
+    <base>Pt::Json::Node</base>
+    <member kind="function">
+      <type></type>
+      <name>String</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>a8db865e64c3c3f65ec6a0b6fd8c09a94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Type</type>
+      <name>type</name>
+      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
+      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>String *</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>a47531c63b26049e4d47184ef6c41585c</anchor>
+      <arglist>(Node *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>const String *</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>ac9504fb3a1d233ad20e7f7357df09e62</anchor>
+      <arglist>(const Node *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>String &amp;</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>aa5529f10aa20b1cc104e618b5f58d3e8</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>const String &amp;</type>
+      <name>toString</name>
+      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
+      <anchor>ae1831e5810000c10a9c6346fb5080830</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::String</name>
     <filename>classPt_1_1String.html</filename>
     <member kind="function">
@@ -41841,53 +43140,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Pt::Json::String</name>
-    <filename>classPt_1_1Json_1_1String.html</filename>
-    <base>Pt::Json::Node</base>
-    <member kind="function">
-      <type></type>
-      <name>String</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>a8db865e64c3c3f65ec6a0b6fd8c09a94</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classPt_1_1Json_1_1Node.html</anchorfile>
-      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>String *</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>a47531c63b26049e4d47184ef6c41585c</anchor>
-      <arglist>(Node *node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const String *</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>ac9504fb3a1d233ad20e7f7357df09e62</anchor>
-      <arglist>(const Node *node)</arglist>
-    </member>
-    <member kind="function">
-      <type>String &amp;</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>aa5529f10aa20b1cc104e618b5f58d3e8</anchor>
-      <arglist>(Node &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const String &amp;</type>
-      <name>toString</name>
-      <anchorfile>classPt_1_1Json_1_1String.html</anchorfile>
-      <anchor>ae1831e5810000c10a9c6346fb5080830</anchor>
-      <arglist>(const Node &amp;node)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Pt::StringBuffer</name>
     <filename>classPt_1_1StringBuffer.html</filename>
     <base>BasicStreamBuffer&lt; Char &gt;</base>
@@ -42467,8 +43719,252 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::TableLayout2</name>
+    <filename>classPt_1_1Forms_1_1TableLayout2.html</filename>
+    <base>Pt::Forms::Layout</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Forms::TabView</name>
     <filename>classPt_1_1Forms_1_1TabView.html</filename>
+    <base>Pt::Forms::Control</base>
     <member kind="function">
       <type>Gfx::Font</type>
       <name>font</name>
@@ -42482,6 +43978,237 @@
       <anchorfile>classPt_1_1Forms_1_1TabView.html</anchorfile>
       <anchor>af194e5bfd813c293867cf0769a3eed7d</anchor>
       <arglist>(const Gfx::Color &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43633,26 +45360,26 @@
       <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onAttach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>af1141038e4a86e9f5d333cbc82d433bb</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>a12bff0388fed9a6acf0b126e52f8e666</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>post</name>
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
       <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ad2b9bccdc539f288798e568e71c7ef67</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a96d2eb7450432fa029e8a874cbd2900d</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46240,26 +47967,26 @@
       <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onAttach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>af1141038e4a86e9f5d333cbc82d433bb</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>onDetach</name>
-      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
-      <anchor>a12bff0388fed9a6acf0b126e52f8e666</anchor>
-      <arglist>(EventLoop &amp;loop)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>post</name>
       <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
       <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ad2b9bccdc539f288798e568e71c7ef67</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a96d2eb7450432fa029e8a874cbd2900d</anchor>
+      <arglist>(EventLoop &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46969,6 +48696,249 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::View</name>
+    <filename>classPt_1_1Forms_1_1View.html</filename>
+    <base>Pt::Forms::Widget</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Forms::ViewBackgroundOption</name>
     <filename>classPt_1_1Forms_1_1ViewBackgroundOption.html</filename>
     <base>Pt::Forms::StyleOption</base>
@@ -46978,8 +48948,504 @@
     <filename>structPt_1_1Void.html</filename>
   </compound>
   <compound kind="class">
+    <name>Pt::Forms::Widget</name>
+    <filename>classPt_1_1Forms_1_1Widget.html</filename>
+    <base>Pt::Connectable</base>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Forms::Window</name>
     <filename>classPt_1_1Forms_1_1Window.html</filename>
+    <base>Pt::Forms::Form</base>
+    <member kind="function">
+      <type>void</type>
+      <name>getBitmap</name>
+      <anchorfile>classPt_1_1Forms_1_1Window.html</anchorfile>
+      <anchor>a2b2f8065f9e025fcb8d0ab50efac4b2e</anchor>
+      <arglist>(Gfx::Bitmap &amp;bitmap) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getBitmap</name>
+      <anchorfile>classPt_1_1Forms_1_1Window.html</anchorfile>
+      <anchor>a893df3bd9ee2603fee26b8ba25a13523</anchor>
+      <arglist>(Gfx::Bitmap &amp;bitmap, const Gfx::RectF &amp;rect) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::uint64_t</type>
+      <name>id</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a66795bf927757b4118702a3f2f48484f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ad8227ba86a01f26e4f173cd5e219d5d1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setName</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a6050902b6e473ddea14c27707cf17ae7</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextResponder</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a84a4f54a81de58ff4bfee01c225a3ed0</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isConnected</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80178eafbc14f5434c65b0a8413c12c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac16a59ee651f807e54330bf6eebf9902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Screen *</type>
+      <name>screen</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a3aa78b91e39c0e3be4dbe6cc5a1b3dd1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a520a9957f011623bbc9a1164dbc54779</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Widget *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a2b616dbd0ceb679248aec1a4a4d08a4b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isDescendantOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0becd149d868ae137b286fe5bfea4ffc</anchor>
+      <arglist>(const Widget &amp;top) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAncestorOf</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aae6e34ef1c0070aaac2f5c9283e8a8ff</anchor>
+      <arglist>(const Widget &amp;child) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Widget *</type>
+      <name>hitTest</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a90396455db6f2ff8dcaf5af2c6e6285a</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a0d6dcfd807cfd9a4ef6fdab29b070d86</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromParent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ac8d20373f7695f23d4a4ffa6154a1d64</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>toGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a25ae73c8bddd43b99b7e85c64310505d</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Gfx::PointF</type>
+      <name>fromGlobal</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a313b4085c84956601fe40af200d6e321</anchor>
+      <arglist>(const Gfx::PointF &amp;pos) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>acd812426b3f670d42c7b8e84f17404da</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removePeer</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae5ed6554dcfd02b3f39f187daa608ba5</anchor>
+      <arglist>(Widget &amp;peer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>invalidate</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a893f1101c650c08c98612515c2b1a89c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab4e7d7371d3b5d14c9909a5b8bb7b8de</anchor>
+      <arglist>(const Gfx::RectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>repaint</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aefb538b7d90d1bf29616e1bd2eb6e531</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>scaleFactor</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a80911303cedbfba0aa20e9d811edf445</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isVisible</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a9d8a6cfb13917785c143e74d40e4e2be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>show</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ae618907c9d0f27ee1c0b1ae26e965f30</anchor>
+      <arglist>(bool b=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnabled</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aacb819fb241851fd9fc045271baa4034</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>enable</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a257f7974c93c8517e6d836e15215f465</anchor>
+      <arglist>(bool isEnable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::PointF &amp;</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a8a9600cacb7d95e914e77e16638e0f3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>aa98c282a1fd0435d8c054a02b3b07317</anchor>
+      <arglist>(const Gfx::PointF &amp;pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::SizeF &amp;</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a445bb5b5c4018463ef3a4604a8d69b7a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Gfx::RectF &amp;</type>
+      <name>bounds</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab6321e48a62bcedd0af0f9e0387a70b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a7d7472f6eed2f4f83a09417da8ee5bc5</anchor>
+      <arglist>(const Gfx::SizeF &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCapture</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a1471dc936dfa1e283f4e75d76e48f24a</anchor>
+      <arglist>(bool capture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processEvent</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>ab64c18828070a8ddb2ecac02d102d214</anchor>
+      <arglist>(const Pt::Event &amp;ev)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; const Pt::Event &amp; &gt; &amp;</type>
+      <name>eventReceived</name>
+      <anchorfile>classPt_1_1Forms_1_1Widget.html</anchorfile>
+      <anchor>a11851b7f05112eff04ee1410ca025a56</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::System::WriteLock</name>
@@ -49399,57 +51865,57 @@
     <member kind="typedef">
       <type>int_type</type>
       <name>int8_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaef44329758059c91c76d334e8fc09700</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>aef44329758059c91c76d334e8fc09700</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint8_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaba7bc1797add20fe3efdf37ced1182c5</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>aba7bc1797add20fe3efdf37ced1182c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int16_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaa343fa3b3d06292b959ffdd4c4703b06</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>aa343fa3b3d06292b959ffdd4c4703b06</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint16_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga273cf69d639a59973b6019625df33e30</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>a273cf69d639a59973b6019625df33e30</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int32_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>a32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint32_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga435d1572bf3f880d55459d9805097f62</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>a435d1572bf3f880d55459d9805097f62</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int64_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga312c7e8848187d110315ab83a7b3d4d0</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>a312c7e8848187d110315ab83a7b3d4d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint64_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaa232ecf786a74ce5363c36c10798d2b1</anchor>
+      <anchorfile>namespacePt.html</anchorfile>
+      <anchor>aa232ecf786a74ce5363c36c10798d2b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -49738,6 +52204,7 @@
     <filename>namespacePt_1_1Forms.html</filename>
     <class kind="class">Pt::Forms::AccentColorOption</class>
     <class kind="class">Pt::Forms::AlternateViewBackgroundOption</class>
+    <class kind="class">Pt::Forms::Application</class>
     <class kind="class">Pt::Forms::BackgroundOption</class>
     <class kind="class">Pt::Forms::ButtonRenderer</class>
     <class kind="class">Pt::Forms::ButtonState</class>
@@ -49748,13 +52215,16 @@
     <class kind="class">Pt::Forms::ComboBoxRenderer</class>
     <class kind="class">Pt::Forms::ComboBoxStyler</class>
     <class kind="class">Pt::Forms::ContourOption</class>
+    <class kind="class">Pt::Forms::Control</class>
     <class kind="class">Pt::Forms::FontOption</class>
     <class kind="class">Pt::Forms::ForegroundOption</class>
+    <class kind="class">Pt::Forms::Form</class>
     <class kind="class">Pt::Forms::GraphicsBackend</class>
     <class kind="class">Pt::Forms::HighlightColorOption</class>
     <class kind="class">Pt::Forms::HighlightedTextColorOption</class>
     <class kind="class">Pt::Forms::HoverBackgroundOption</class>
     <class kind="class">Pt::Forms::IPixmapImpl</class>
+    <class kind="class">Pt::Forms::Layout</class>
     <class kind="class">Pt::Forms::LineEditRenderer</class>
     <class kind="class">Pt::Forms::LineEditStyler</class>
     <class kind="class">Pt::Forms::ListBoxRenderer</class>
@@ -49785,13 +52255,16 @@
     <class kind="class">Pt::Forms::StyleOption</class>
     <class kind="class">Pt::Forms::StyleOptions</class>
     <class kind="class">Pt::Forms::Styler</class>
+    <class kind="class">Pt::Forms::TableLayout2</class>
     <class kind="class">Pt::Forms::TabView</class>
     <class kind="class">Pt::Forms::TabViewItem</class>
     <class kind="class">Pt::Forms::TabViewRenderer</class>
     <class kind="class">Pt::Forms::TabViewStyler</class>
     <class kind="class">Pt::Forms::TextBackgroundOption</class>
     <class kind="class">Pt::Forms::TextColorOption</class>
+    <class kind="class">Pt::Forms::View</class>
     <class kind="class">Pt::Forms::ViewBackgroundOption</class>
+    <class kind="class">Pt::Forms::Widget</class>
     <class kind="class">Pt::Forms::Window</class>
   </compound>
   <compound kind="namespace">
@@ -50297,6 +52770,7 @@
     <name>Pt::Lua</name>
     <filename>namespacePt_1_1Lua.html</filename>
     <class kind="class">Pt::Lua::Context</class>
+    <class kind="class">Pt::Lua::Script</class>
   </compound>
   <compound kind="namespace">
     <name>Pt::Mcp</name>
@@ -50630,75 +53104,9 @@
     <class kind="class">Pt::PoolAllocator</class>
   </compound>
   <compound kind="group">
-    <name>Pt-Basics</name>
-    <title>Basic Types</title>
-    <filename>group__Pt-Basics.html</filename>
-    <class kind="class">Pt::Any</class>
-    <class kind="class">Pt::InvalidDate</class>
-    <class kind="class">Pt::Date</class>
-    <class kind="class">Pt::DateTime</class>
-    <class kind="class">Pt::Event</class>
-    <class kind="class">Pt::InvalidTime</class>
-    <class kind="class">Pt::Time</class>
-    <class kind="class">Pt::Timespan</class>
-    <class kind="struct">Pt::Void</class>
-    <class kind="class">Pt::atomic_t</class>
-    <member kind="typedef">
-      <type>int_type</type>
-      <name>int8_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaef44329758059c91c76d334e8fc09700</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>uint_type</type>
-      <name>uint8_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaba7bc1797add20fe3efdf37ced1182c5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>int_type</type>
-      <name>int16_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaa343fa3b3d06292b959ffdd4c4703b06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>uint_type</type>
-      <name>uint16_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga273cf69d639a59973b6019625df33e30</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>int_type</type>
-      <name>int32_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>uint_type</type>
-      <name>uint32_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga435d1572bf3f880d55459d9805097f62</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>int_type</type>
-      <name>int64_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>ga312c7e8848187d110315ab83a7b3d4d0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>uint_type</type>
-      <name>uint64_t</name>
-      <anchorfile>group__Pt-Basics.html</anchorfile>
-      <anchor>gaa232ecf786a74ce5363c36c10798d2b1</anchor>
-      <arglist></arglist>
-    </member>
+    <name>Pt-Forms-Basics</name>
+    <title>Application Basics</title>
+    <filename>group__Pt-Forms-Basics.html</filename>
   </compound>
   <compound kind="group">
     <name>Pt-System-Concurrency</name>
@@ -50817,6 +53225,19 @@
     <class kind="class">Pt::System::FileDevice</class>
     <class kind="class">Pt::System::FileInfo</class>
     <class kind="class">Pt::System::Path</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Forms-Architecture</name>
+    <title>Forms Architecture</title>
+    <filename>group__Pt-Forms-Architecture.html</filename>
+    <class kind="class">Pt::Forms::Application</class>
+    <class kind="class">Pt::Forms::Control</class>
+    <class kind="class">Pt::Forms::Form</class>
+    <class kind="class">Pt::Forms::Layout</class>
+    <class kind="class">Pt::Forms::Screen</class>
+    <class kind="class">Pt::Forms::View</class>
+    <class kind="class">Pt::Forms::Widget</class>
+    <class kind="class">Pt::Forms::Window</class>
   </compound>
   <compound kind="group">
     <name>Pt-Gfx-Images</name>
@@ -51378,10 +53799,22 @@
     <docanchor file="pt_contents.html" title="Core Library">pt_core</docanchor>
     <docanchor file="pt_contents.html" title="System Programming">pt_system</docanchor>
     <docanchor file="pt_contents.html" title="Graphics">pt_gfx</docanchor>
+    <docanchor file="pt_contents.html" title="Graphical User Interface">pt_forms</docanchor>
     <docanchor file="pt_contents.html" title="HTTP Clients and Servers">pt_http</docanchor>
     <docanchor file="pt_contents.html" title="Secure Communication">pt_ssl</docanchor>
     <docanchor file="pt_contents.html" title="XML-RPC Communication">pt_xmlrpc</docanchor>
     <docanchor file="pt_contents.html" title="Unit Testing">pt_unit</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>Pt-Forms-Architecture-Page</name>
+    <title>Forms Architecture</title>
+    <filename>Pt-Forms-Architecture-Page.html</filename>
+    <docanchor file="Pt-Forms-Architecture-Page.html" title="Application">Pt-Forms-Architecture-Page-Application</docanchor>
+    <docanchor file="Pt-Forms-Architecture-Page.html" title="Screen">Pt-Forms-Architecture-Page-Screen</docanchor>
+    <docanchor file="Pt-Forms-Architecture-Page.html" title="Widget">Pt-Forms-Architecture-Page-Widget</docanchor>
+    <docanchor file="Pt-Forms-Architecture-Page.html" title="View">Pt-Forms-Architecture-Page-View</docanchor>
+    <docanchor file="Pt-Forms-Architecture-Page.html" title="Form">Pt-Forms-Architecture-Page-Form</docanchor>
+    <docanchor file="Pt-Forms-Architecture-Page.html" title="Control">Pt-Forms-Architecture-Page-Control</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-Gfx-Drawing-Page</name>

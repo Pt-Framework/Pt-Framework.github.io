@@ -174,10 +174,10 @@
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">bool</span>        _isPressed;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1TabView.html">   95</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1TabView.html">TabView</a> : <span class="keyword">public</span> Control</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1TabView.html">   95</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1TabView.html">TabView</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">typedef</span> Control Base;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a> <a class="code" href="classPt_1_1Forms_1_1View.html">Base</a>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1TabView.html">TabView</a>();</div>
@@ -188,7 +188,7 @@
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        std::size_t size() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">void</span> addTab(Control&amp; control, <span class="keyword">const</span> <a class="code" href="classPt_1_1String.html">Pt::String</a>&amp; title);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">void</span> addTab(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control, <span class="keyword">const</span> <a class="code" href="classPt_1_1String.html">Pt::String</a>&amp; title);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> removeTab(std::size_t n);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
@@ -288,8 +288,10 @@
 <div class="ttc" id="aclassPt_1_1Forms_1_1PaintContext_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a></div><div class="ttdoc">Paint context.</div><div class="ttdef"><b>Definition:</b> PaintContext.h:45</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Point with floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Control_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Control.html">Pt::Forms::Control</a></div><div class="ttdoc">A view that can be attached as application content.</div><div class="ttdef"><b>Definition:</b> Control.h:84</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1TabViewRenderer_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TabViewRenderer.html">Pt::Forms::TabViewRenderer</a></div><div class="ttdoc">Renders tab view chrome and tab items.</div><div class="ttdef"><b>Definition:</b> TabViewStyler.h:89</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Font_html_add354b854a8899ddb39fc9d57bbe22e3"><div class="ttname"><a href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Pt::Gfx::Font::Weight</a></div><div class="ttdeci">Weight</div><div class="ttdoc">Describes the requested font weight.</div><div class="ttdef"><b>Definition:</b> Font.h:61</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1View_html"><div class="ttname"><a href="classPt_1_1Forms_1_1View.html">Pt::Forms::View</a></div><div class="ttdoc">A widget that connects controls to a paint surface.</div><div class="ttdef"><b>Definition:</b> View.h:66</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Font_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Font.html">Pt::Gfx::Font</a></div><div class="ttdoc">Font request used for text drawing and measurement.</div><div class="ttdef"><b>Definition:</b> Font.h:56</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">Standard color type.</div><div class="ttdef"><b>Definition:</b> Color.h:47</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1TabView_html_a5e39b7242b7786c27bbe48d0675e2d08"><div class="ttname"><a href="classPt_1_1Forms_1_1TabView.html#a5e39b7242b7786c27bbe48d0675e2d08">Pt::Forms::TabView::font</a></div><div class="ttdeci">Gfx::Font font() const</div><div class="ttdoc">Returns the effective tab view font.</div></div>

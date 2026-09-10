@@ -86,12 +86,12 @@
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2006-2013 Marc Boris Duerner</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * As a special exception, you may use this file as part of a free</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * software library without restriction. Specifically, if other files</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * instantiate templates or use macros or inline functions from this</span></div>
@@ -101,12 +101,12 @@
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * License. This exception does not however invalidate any other</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * reasons why the executable file might be covered by the GNU Library</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * General Public License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * This library is distributed in the hope that it will be useful,</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * License along with this library; if not, write to the Free Software</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA</span></div>
@@ -195,7 +195,7 @@
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _wavail; }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
 <div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">  200</a></span>&#160;        <a class="code" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a>* <a class="code" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">         </span>{ <span class="keywordflow">return</span> _loop; }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">         </span>{ <span class="keywordflow">return</span> parent(); }</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classPt_1_1System_1_1IODevice.html#a891923d7e1329539b94a301fcaa9e3fe">  205</a></span>&#160;        <a class="code" href="classPt_1_1System_1_1IODevice.html#a891923d7e1329539b94a301fcaa9e3fe">IODevice</a>();</div>
@@ -230,33 +230,28 @@
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordtype">void</span> setEof(<span class="keywordtype">bool</span> eof);</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="classPt_1_1System_1_1IODevice.html#af1141038e4a86e9f5d333cbc82d433bb">  237</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1System_1_1IODevice.html#af1141038e4a86e9f5d333cbc82d433bb">onAttach</a>(<a class="code" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a>&amp; loop);</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="classPt_1_1System_1_1IODevice.html#a493685a908b7d52b3d8a0ccc98c53b0c">  237</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1System_1_1IODevice.html#a493685a908b7d52b3d8a0ccc98c53b0c">onCancel</a>();</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classPt_1_1System_1_1IODevice.html#a12bff0388fed9a6acf0b126e52f8e666">  239</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1System_1_1IODevice.html#a12bff0388fed9a6acf0b126e52f8e666">onDetach</a>(<a class="code" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a>&amp; loop);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classPt_1_1System_1_1IODevice.html#a493685a908b7d52b3d8a0ccc98c53b0c">  241</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1System_1_1IODevice.html#a493685a908b7d52b3d8a0ccc98c53b0c">onCancel</a>();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a>* _loop;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordtype">char</span>* _rbuf;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        std::size_t _rbuflen;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        std::size_t _ravail;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* _wbuf;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        std::size_t _wbuflen;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        std::size_t _wavail;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Signal&lt;IODevice&amp;&gt;</a> _inputReady;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Signal&lt;IODevice&amp;&gt;</a> _outputReady;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        Pt::varint_t _reserved;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordtype">bool</span> _eof;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;};</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;} <span class="comment">// namespace System</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;} <span class="comment">// namespace Pt</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#endif // Pt_System_IODevice_h</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordtype">char</span>* _rbuf;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        std::size_t _rbuflen;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        std::size_t _ravail;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* _wbuf;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        std::size_t _wbuflen;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        std::size_t _wavail;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Signal&lt;IODevice&amp;&gt;</a> _inputReady;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Signal&lt;IODevice&amp;&gt;</a> _outputReady;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        Pt::varint_t _reserved;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">bool</span> _eof;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;};</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;} <span class="comment">// namespace System</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;} <span class="comment">// namespace Pt</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#endif // Pt_System_IODevice_h</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a0f6819a4971e612ac6d0cb54c4d41306"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">Pt::System::IODevice::beginWrite</a></div><div class="ttdeci">void beginWrite(const char *buffer, std::size_t n)</div><div class="ttdoc">Begins to write data.</div></div>
@@ -284,9 +279,7 @@
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a8c4ee9c81e1c1d588edc57043f44b677"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a8c4ee9c81e1c1d588edc57043f44b677">Pt::System::IODevice::peek</a></div><div class="ttdeci">std::size_t peek(char *buffer, std::size_t n)</div><div class="ttdoc">Peek data from I/O device without consuming them.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_aaf874b410407f8e3ecf47cb27630f514"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#aaf874b410407f8e3ecf47cb27630f514">Pt::System::IODevice::position</a></div><div class="ttdeci">pos_type position()</div><div class="ttdoc">Returns the current I/O position.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ad1585484cec92cacd15885c798456205"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ad1585484cec92cacd15885c798456205">Pt::System::IODevice::isReading</a></div><div class="ttdeci">bool isReading() const</div><div class="ttdoc">Returns true if the device is reading.</div><div class="ttdef"><b>Definition:</b> IODevice.h:172</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_af1141038e4a86e9f5d333cbc82d433bb"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#af1141038e4a86e9f5d333cbc82d433bb">Pt::System::IODevice::onAttach</a></div><div class="ttdeci">virtual void onAttach(EventLoop &amp;loop)</div><div class="ttdoc">Attached to loop.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a181a6a67a97d760db63a2c3294ed22e3"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a181a6a67a97d760db63a2c3294ed22e3">Pt::System::IODevice::isWriting</a></div><div class="ttdeci">bool isWriting() const</div><div class="ttdoc">Returns true if the device is writing.</div><div class="ttdef"><b>Definition:</b> IODevice.h:177</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a12bff0388fed9a6acf0b126e52f8e666"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a12bff0388fed9a6acf0b126e52f8e666">Pt::System::IODevice::onDetach</a></div><div class="ttdeci">virtual void onDetach(EventLoop &amp;loop)</div><div class="ttdoc">Detached from loop.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a5ec7d50df5d6301755f0f1580c75935b"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a5ec7d50df5d6301755f0f1580c75935b">Pt::System::IODevice::endWrite</a></div><div class="ttdeci">std::size_t endWrite()</div><div class="ttdoc">Ends writing data.</div></div>
 
 <div class="clear">&nbsp;</div>
