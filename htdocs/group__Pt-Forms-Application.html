@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>Forms Application</title>
+  <title>Forms Applications</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -79,26 +79,26 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Forms Application</div>  </div>
+<div class="title">Forms Applications</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>A Forms application creates windows and controls, shows the visual hierarchy, and runs the event loop. The inherited event loop also supports I/O, timers, and asynchronous operations.</p>
-<p>Application is the starting point of a Forms user interface and must be constructed before forms, windows, or controls. It provides the primary Screen and WindowManager, dispatches platform events, and supplies shared services such as scaling, styles, fonts, and input methods.</p>
+<p>Application is the starting point and must be constructed before forms, windows, or controls. It is not a Widget. It provides the primary Screen and WindowManager, dispatches platform events, and supplies shared services such as scaling, styles, fonts, and input methods.</p>
 <p>Forms distinguishes the class hierarchy from the visual hierarchy. The following diagram shows the C++ inheritance relationship. It does not show which objects display or contain other objects.</p>
 <div class="fragment"><div class="line">Widget</div>
 <div class="line">    Screen</div>
+<div class="line">    WindowManager</div>
 <div class="line">    View</div>
 <div class="line">        Form</div>
 <div class="line">            Window</div>
 <div class="line">        Control</div>
-</div><!-- fragment --><p>The visual hierarchy describes how Forms objects appear together. A Screen represents a display and provides the top-level WindowManager. A Window belongs to that manager and is itself a Form. A form displays one content Control, and controls display child controls, including layouts. A Workspace follows the same principle within an ordinary control: it contains a window manager that presents several windows in its bounds.</p>
+</div><!-- fragment --><p>The visual hierarchy describes how Forms objects appear together. The same non-owning host pattern repeats at each level: Application provides the Screen, a WindowManager attaches Window objects, a Form attaches one content Control, and a Control attaches child controls, including layouts. A Workspace follows the same principle inside an ordinary control: it contains a window manager that presents several windows in its bounds.</p>
 <div class="fragment"><div class="line">Application -&gt; Screen -&gt; WindowManager -&gt; Window (Form) -&gt; content Control -&gt; child Controls</div>
-</div><!-- fragment --><p>Forms does not take ownership of a window or control when it becomes part of the visual hierarchy. The code that creates an application object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
-<p>Screen and View inherit the common Widget base class. A widget supplies identity, screen connection, parent relationships, geometry, visibility, enabled state, scaling, coordinate conversion, repaint requests, event dispatch, and pointer capture. Every widget is also a Responder, which lets input events travel through the responder chain. The platform backend submits events to the application event loop, which dispatches them into the connected hierarchy.</p>
-<p>A View is the boundary between controls and a PaintSurface. It provides the surface and converts coordinates between its own space and each attached control. Form and Control are the normal view implementations. A form is the layout root for its content tree, while a control is responsible for the geometry of its direct children. Measurement determines the preferred size for a SizePolicy; layout then assigns geometry within the available rectangle.</p>
-<p>When a control becomes part of a form that is shown on a screen, it gains access to the screen, scaling, coordinate mapping, and paint surface. Removing it reverses that relationship. Changes to visual state, geometry, or drawing request an update through the containing views to the window. Painting then travels back down through visible content after the window frame makes a paint surface available.</p>
-<p>Derive custom visual content from Control. Derive from View only when a custom content host needs different paint-surface or coordinate behavior. WindowManager, WindowFrame, and GraphicsBackend support platform and embedded-window implementations; applications normally use the window manager provided by a Screen or Workspace. See the Layouts, Input, Windows and Workspaces, Styles and Renderers, and Painting documentation for those specialized mechanisms.</p>
+</div><!-- fragment --><p>Forms does not take ownership of a window or control when it becomes part of the visual hierarchy. The code that creates an object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
+<p>Every visual object is a Widget. Screen and WindowManager are widgets but not views. Form and Control are the usual View implementations; a view is the host and paint-surface boundary for controls. When a control joins a form that is shown on a screen, the screen, scaling, coordinates, and paint surface become available. Removing it reverses that relationship. Measurement determines the preferred size for a SizePolicy; layout then assigns geometry within the available rectangle. Changes to visual state, geometry, or drawing request an update through the containing views to the window. Painting then travels back down through visible content after the window frame makes a paint surface available.</p>
+<p>Derive custom visual content from Control. Derive from View only when a custom content host needs different paint-surface or coordinate behavior. WindowManager, WindowFrame, and GraphicsBackend support platform and embedded-window implementations; applications normally use the window manager provided by a Screen or Workspace.</p>
+<p>This overview places the types, the two hierarchies, and the host chain. Read Application for the runtime. Read Widget for the shared visual contract: parent, connection, request versus event, and peers. Read View, Form, and Control to build content. Read Window, Screen, and WindowManager for how a form appears on a display. See the Layouts, Input, Windows and Workspaces, Styles and Renderers, and Painting documentation for those specialized mechanisms.</p>
 <p>The following example creates the smallest useful visual hierarchy: a window, its content layout, and a control displayed by that layout.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
 <div class="line">{</div>
@@ -122,28 +122,34 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Application.html">Application</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main element of a Pt::Forms graphical user interface.  <a href="classPt_1_1Forms_1_1Application.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime root of a <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> user interface.  <a href="classPt_1_1Forms_1_1Application.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A view that can be attached as application content.  <a href="classPt_1_1Forms_1_1Control.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reusable view used as application content.  <a href="classPt_1_1Forms_1_1Control.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Form.html">Form</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1View.html" title="Widget that hosts controls on a paint surface.">View</a> that hosts one content control.  <a href="classPt_1_1Forms_1_1Form.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html">Screen</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1Screen.html" title="Screen of a display.">Screen</a> of a display.  <a href="classPt_1_1Forms_1_1Screen.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display root for top-level windows.  <a href="classPt_1_1Forms_1_1Screen.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1View.html">View</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A widget that connects controls to a paint surface.  <a href="classPt_1_1Forms_1_1View.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1Widget.html" title="Common type of every visual Forms object.">Widget</a> that hosts controls on a paint surface.  <a href="classPt_1_1Forms_1_1View.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base for objects that participate in the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> runtime.  <a href="classPt_1_1Forms_1_1Widget.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common type of every visual <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> object.  <a href="classPt_1_1Forms_1_1Widget.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1Window.html" title="Window base class.">Window</a> base class.  <a href="classPt_1_1Forms_1_1Window.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1Form.html" title="View that hosts one content control.">Form</a> presented by a window manager.  <a href="classPt_1_1Forms_1_1Window.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host that attaches windows to a screen or workspace.  <a href="classPt_1_1Forms_1_1WindowManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ae618907c9d0f27ee1c0b1ae26e965f30"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ae618907c9d0f27ee1c0b1ae26e965f30">Pt::Forms::Widget::show</a></div><div class="ttdeci">virtual void show(bool b=true)</div><div class="ttdoc">Requests that the widget be shown or hidden.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Window base class.</div><div class="ttdef"><b>Definition:</b> Window.h:105</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Main element of a Pt::Forms graphical user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:89</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Form presented by a window manager.</div><div class="ttdef"><b>Definition:</b> Window.h:96</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Runtime root of a Forms user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:89</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Form_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Form::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Replaces the content root with control.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Window_html_abc79cf0667bbb5c93fca3f01b52c7b57"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">Pt::Forms::Window::setTitle</a></div><div class="ttdeci">void setTitle(const std::string &amp;title)</div><div class="ttdoc">Sets the window title to title.</div></div>
 

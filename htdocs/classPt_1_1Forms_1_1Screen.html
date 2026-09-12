@@ -84,19 +84,56 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Screen Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms-Application.html">Forms Application</a></div></div>  </div>
+<div class="title">Screen Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms-Application.html">Forms Applications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Screen_8h_source.html">Pt/Forms/Screen.h</a>&gt;</code></p>
 
-<p><a class="el" href="classPt_1_1Forms_1_1Screen.html" title="Screen of a display.">Screen</a> of a display.  
+<p>Display root for top-level windows.  
  <a href="classPt_1_1Forms_1_1Screen.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a258b668a0a4ceff968110895afa0c4cf"><td class="memItemLeft" align="right" valign="top"><a id="a258b668a0a4ceff968110895afa0c4cf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a258b668a0a4ceff968110895afa0c4cf">Screen</a> (ApplicationImpl &amp;app)</td></tr>
+<tr class="memdesc:a258b668a0a4ceff968110895afa0c4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the screen and connects it to <em>app</em>. <br /></td></tr>
+<tr class="separator:a258b668a0a4ceff968110895afa0c4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af619ef90f83b17ddf512dee76ff7928d"><td class="memItemLeft" align="right" valign="top"><a id="af619ef90f83b17ddf512dee76ff7928d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#af619ef90f83b17ddf512dee76ff7928d">~Screen</a> ()</td></tr>
+<tr class="memdesc:af619ef90f83b17ddf512dee76ff7928d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:af619ef90f83b17ddf512dee76ff7928d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53462bd65aded016eed73e65713121e"><td class="memItemLeft" align="right" valign="top"><a id="aa53462bd65aded016eed73e65713121e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#aa53462bd65aded016eed73e65713121e">addWindow</a> (<a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> &amp;w)</td></tr>
+<tr class="memdesc:aa53462bd65aded016eed73e65713121e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches <em>w</em> to this screen's window manager. <br /></td></tr>
+<tr class="separator:aa53462bd65aded016eed73e65713121e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefa0c6a88fac35664041a2427ea6d04"><td class="memItemLeft" align="right" valign="top"><a id="afefa0c6a88fac35664041a2427ea6d04"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#afefa0c6a88fac35664041a2427ea6d04">removeWindow</a> (<a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> &amp;w)</td></tr>
+<tr class="memdesc:afefa0c6a88fac35664041a2427ea6d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches <em>w</em> from this screen's window manager. <br /></td></tr>
+<tr class="separator:afefa0c6a88fac35664041a2427ea6d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a50b8ad7d9332d1be150b439813dba"><td class="memItemLeft" align="right" valign="top"><a id="a73a50b8ad7d9332d1be150b439813dba"></a>
+const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a73a50b8ad7d9332d1be150b439813dba">windows</a> () const</td></tr>
+<tr class="memdesc:a73a50b8ad7d9332d1be150b439813dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the windows currently attached to this screen. <br /></td></tr>
+<tr class="separator:a73a50b8ad7d9332d1be150b439813dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0505d93f3255f1aac67d4a2897f781e"><td class="memItemLeft" align="right" valign="top"><a id="aa0505d93f3255f1aac67d4a2897f781e"></a>
+<a class="el" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#aa0505d93f3255f1aac67d4a2897f781e">windowManager</a> ()</td></tr>
+<tr class="memdesc:aa0505d93f3255f1aac67d4a2897f781e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the window manager that presents this screen's windows. <br /></td></tr>
+<tr class="separator:aa0505d93f3255f1aac67d4a2897f781e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0430bf6e280c26c04afcddb02df8a89e"><td class="memItemLeft" align="right" valign="top"><a id="a0430bf6e280c26c04afcddb02df8a89e"></a>
+<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a0430bf6e280c26c04afcddb02df8a89e">underPointer</a> ()</td></tr>
+<tr class="memdesc:a0430bf6e280c26c04afcddb02df8a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the widget currently under the pointer, or null. <br /></td></tr>
+<tr class="separator:a0430bf6e280c26c04afcddb02df8a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d6dc62d282396379a058b851c08d95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad1d6dc62d282396379a058b851c08d95">setPointer</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *widget)</td></tr>
+<tr class="memdesc:ad1d6dc62d282396379a058b851c08d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes <em>widget</em> the widget under the pointer.  <a href="classPt_1_1Forms_1_1Screen.html#ad1d6dc62d282396379a058b851c08d95">More...</a><br /></td></tr>
+<tr class="separator:ad1d6dc62d282396379a058b851c08d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966c55992abb6ffb3a6673309a4c1d59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a966c55992abb6ffb3a6673309a4c1d59">setPointer</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;widget, bool isPointer)</td></tr>
+<tr class="memdesc:a966c55992abb6ffb3a6673309a4c1d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or clears <em>widget</em> as the widget under the pointer.  <a href="classPt_1_1Forms_1_1Screen.html#a966c55992abb6ffb3a6673309a4c1d59">More...</a><br /></td></tr>
+<tr class="separator:a966c55992abb6ffb3a6673309a4c1d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c0d24920b6fcf3beefb7e2befadac0"><td class="memItemLeft" align="right" valign="top">ScreenImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a17c0d24920b6fcf3beefb7e2befadac0">impl</a> ()</td></tr>
+<tr class="memdesc:a17c0d24920b6fcf3beefb7e2befadac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the platform implementation backing this screen.  <a href="classPt_1_1Forms_1_1Screen.html#a17c0d24920b6fcf3beefb7e2befadac0">More...</a><br /></td></tr>
+<tr class="separator:a17c0d24920b6fcf3beefb7e2befadac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66795bf927757b4118702a3f2f48484f"><td class="memItemLeft" align="right" valign="top"><a id="a66795bf927757b4118702a3f2f48484f"></a>
 <a class="el" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a66795bf927757b4118702a3f2f48484f">id</a> () const</td></tr>
 <tr class="memdesc:a66795bf927757b4118702a3f2f48484f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the application-unique ID of this live widget. <br /></td></tr>
@@ -151,13 +188,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#ac8d20373f7695f23d4a4ffa6154a1d64">fromParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
 <tr class="memdesc:ac8d20373f7695f23d4a4ffa6154a1d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts parent position <em>pos</em> to local coordinates. <br /></td></tr>
 <tr class="separator:ac8d20373f7695f23d4a4ffa6154a1d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ae73c8bddd43b99b7e85c64310505d"><td class="memItemLeft" align="right" valign="top"><a id="a25ae73c8bddd43b99b7e85c64310505d"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">toGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a25ae73c8bddd43b99b7e85c64310505d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates. <br /></td></tr>
+<tr class="memitem:a25ae73c8bddd43b99b7e85c64310505d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">toGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a25ae73c8bddd43b99b7e85c64310505d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates.  <a href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">More...</a><br /></td></tr>
 <tr class="separator:a25ae73c8bddd43b99b7e85c64310505d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a313b4085c84956601fe40af200d6e321"><td class="memItemLeft" align="right" valign="top"><a id="a313b4085c84956601fe40af200d6e321"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">fromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a313b4085c84956601fe40af200d6e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates. <br /></td></tr>
+<tr class="memitem:a313b4085c84956601fe40af200d6e321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">fromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a313b4085c84956601fe40af200d6e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates.  <a href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">More...</a><br /></td></tr>
 <tr class="separator:a313b4085c84956601fe40af200d6e321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd812426b3f670d42c7b8e84f17404da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#acd812426b3f670d42c7b8e84f17404da">addPeer</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;peer)</td></tr>
 <tr class="memdesc:acd812426b3f670d42c7b8e84f17404da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a bidirectional, non-owning peer association with <em>peer</em>.  <a href="classPt_1_1Forms_1_1Widget.html#acd812426b3f670d42c7b8e84f17404da">More...</a><br /></td></tr>
@@ -272,82 +307,110 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a590fb851def1fcaf881d26007239a792"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a590fb851def1fcaf881d26007239a792">onHitTest</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos)</td></tr>
-<tr class="memdesc:a590fb851def1fcaf881d26007239a792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the descendant hit at local position <em>pos</em>.  <a href="classPt_1_1Forms_1_1Screen.html#a590fb851def1fcaf881d26007239a792">More...</a><br /></td></tr>
+<tr class="memitem:abcbe7b57f66c9eeef70c0c9fc5088859"><td class="memItemLeft" align="right" valign="top"><a id="abcbe7b57f66c9eeef70c0c9fc5088859"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#abcbe7b57f66c9eeef70c0c9fc5088859">onInit</a> (ScreenImpl &amp;s)</td></tr>
+<tr class="memdesc:abcbe7b57f66c9eeef70c0c9fc5088859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the platform implementation <em>s</em> has connected. <br /></td></tr>
+<tr class="separator:abcbe7b57f66c9eeef70c0c9fc5088859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c28276b16883eed68f08755e6ca63b1"><td class="memItemLeft" align="right" valign="top"><a id="a7c28276b16883eed68f08755e6ca63b1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a7c28276b16883eed68f08755e6ca63b1">onRelease</a> (ScreenImpl &amp;s)</td></tr>
+<tr class="memdesc:a7c28276b16883eed68f08755e6ca63b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the platform implementation <em>s</em> disconnects. <br /></td></tr>
+<tr class="separator:a7c28276b16883eed68f08755e6ca63b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2317a9731a861ed3f007ad34929c74"><td class="memItemLeft" align="right" valign="top"><a id="a5e2317a9731a861ed3f007ad34929c74"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a5e2317a9731a861ed3f007ad34929c74">onResize</a> (ScreenImpl &amp;s, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;<a class="el" href="classPt_1_1Forms_1_1Widget.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a>)</td></tr>
+<tr class="memdesc:a5e2317a9731a861ed3f007ad34929c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a ResizeEvent for a platform resize of <em>s</em> to <em>size</em>. <br /></td></tr>
+<tr class="separator:a5e2317a9731a861ed3f007ad34929c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4807b3ea225c69f1ffe14a531ac73d3b"><td class="memItemLeft" align="right" valign="top"><a id="a4807b3ea225c69f1ffe14a531ac73d3b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a4807b3ea225c69f1ffe14a531ac73d3b">onShow</a> (ScreenImpl &amp;s, bool isShow)</td></tr>
+<tr class="memdesc:a4807b3ea225c69f1ffe14a531ac73d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a ShowEvent for a platform visibility change of <em>s</em>. <br /></td></tr>
+<tr class="separator:a4807b3ea225c69f1ffe14a531ac73d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590fb851def1fcaf881d26007239a792"><td class="memItemLeft" align="right" valign="top"><a id="a590fb851def1fcaf881d26007239a792"></a>
+virtual <a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a590fb851def1fcaf881d26007239a792">onHitTest</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos)</td></tr>
+<tr class="memdesc:a590fb851def1fcaf881d26007239a792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the deepest widget at <em>pos</em>, or this screen if none. <br /></td></tr>
 <tr class="separator:a590fb851def1fcaf881d26007239a792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7e1633411b9900a449324cf9ce5640f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#af7e1633411b9900a449324cf9ce5640f">onToParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:af7e1633411b9900a449324cf9ce5640f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to parent coordinates.  <a href="classPt_1_1Forms_1_1Screen.html#af7e1633411b9900a449324cf9ce5640f">More...</a><br /></td></tr>
+<tr class="memitem:af7e1633411b9900a449324cf9ce5640f"><td class="memItemLeft" align="right" valign="top"><a id="af7e1633411b9900a449324cf9ce5640f"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#af7e1633411b9900a449324cf9ce5640f">onToParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:af7e1633411b9900a449324cf9ce5640f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>pos</em> unchanged; the screen has no parent. <br /></td></tr>
 <tr class="separator:af7e1633411b9900a449324cf9ce5640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cb2fbbe88a8e42b43095717456436e1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a7cb2fbbe88a8e42b43095717456436e1">onFromParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a7cb2fbbe88a8e42b43095717456436e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts parent position <em>pos</em> to local coordinates.  <a href="classPt_1_1Forms_1_1Screen.html#a7cb2fbbe88a8e42b43095717456436e1">More...</a><br /></td></tr>
+<tr class="memitem:a7cb2fbbe88a8e42b43095717456436e1"><td class="memItemLeft" align="right" valign="top"><a id="a7cb2fbbe88a8e42b43095717456436e1"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a7cb2fbbe88a8e42b43095717456436e1">onFromParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a7cb2fbbe88a8e42b43095717456436e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>pos</em> unchanged; the screen has no parent. <br /></td></tr>
 <tr class="separator:a7cb2fbbe88a8e42b43095717456436e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7940249fe8f6e7b1c06b89f1f7c2253"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad7940249fe8f6e7b1c06b89f1f7c2253">onToGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:ad7940249fe8f6e7b1c06b89f1f7c2253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates.  <a href="classPt_1_1Forms_1_1Screen.html#ad7940249fe8f6e7b1c06b89f1f7c2253">More...</a><br /></td></tr>
+<tr class="memitem:ad7940249fe8f6e7b1c06b89f1f7c2253"><td class="memItemLeft" align="right" valign="top"><a id="ad7940249fe8f6e7b1c06b89f1f7c2253"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad7940249fe8f6e7b1c06b89f1f7c2253">onToGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:ad7940249fe8f6e7b1c06b89f1f7c2253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>pos</em> unchanged; screen coordinates are global. <br /></td></tr>
 <tr class="separator:ad7940249fe8f6e7b1c06b89f1f7c2253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8a7e7b3697fc0d19ecb3f9afae8d6ef"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad8a7e7b3697fc0d19ecb3f9afae8d6ef">onFromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:ad8a7e7b3697fc0d19ecb3f9afae8d6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates.  <a href="classPt_1_1Forms_1_1Screen.html#ad8a7e7b3697fc0d19ecb3f9afae8d6ef">More...</a><br /></td></tr>
+<tr class="memitem:ad8a7e7b3697fc0d19ecb3f9afae8d6ef"><td class="memItemLeft" align="right" valign="top"><a id="ad8a7e7b3697fc0d19ecb3f9afae8d6ef"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad8a7e7b3697fc0d19ecb3f9afae8d6ef">onFromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:ad8a7e7b3697fc0d19ecb3f9afae8d6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>pos</em> unchanged; screen coordinates are global. <br /></td></tr>
 <tr class="separator:ad8a7e7b3697fc0d19ecb3f9afae8d6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55a59288877617307452fd2e510ea82"><td class="memItemLeft" align="right" valign="top"><a id="ad55a59288877617307452fd2e510ea82"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad55a59288877617307452fd2e510ea82">onProcessEvent</a> (const <a class="el" href="classPt_1_1Event.html">Event</a> &amp;ev)</td></tr>
-<tr class="memdesc:ad55a59288877617307452fd2e510ea82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends <em>ev</em> to the widget event dispatcher. <br /></td></tr>
+<tr class="memdesc:ad55a59288877617307452fd2e510ea82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget event processing. <br /></td></tr>
 <tr class="separator:ad55a59288877617307452fd2e510ea82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde698c14b2274a4c02b8d5b41fb1ff5"><td class="memItemLeft" align="right" valign="top"><a id="acde698c14b2274a4c02b8d5b41fb1ff5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#acde698c14b2274a4c02b8d5b41fb1ff5">onRequestRepaint</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
-<tr class="memdesc:acde698c14b2274a4c02b8d5b41fb1ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a repaint request for local rectangle <em>rect</em>. <br /></td></tr>
+<tr class="memitem:acde698c14b2274a4c02b8d5b41fb1ff5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#acde698c14b2274a4c02b8d5b41fb1ff5">onRequestRepaint</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
+<tr class="memdesc:acde698c14b2274a4c02b8d5b41fb1ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unifies <em>rect</em> into the pending update and schedules one paint pass.  <a href="classPt_1_1Forms_1_1Screen.html#acde698c14b2274a4c02b8d5b41fb1ff5">More...</a><br /></td></tr>
 <tr class="separator:acde698c14b2274a4c02b8d5b41fb1ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ddc3f983810bbdcf0d4c14336974d0"><td class="memItemLeft" align="right" valign="top"><a id="a17ddc3f983810bbdcf0d4c14336974d0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a17ddc3f983810bbdcf0d4c14336974d0">onProcessRescaleEvent</a> (const RescaleEvent &amp;ev)</td></tr>
-<tr class="memdesc:a17ddc3f983810bbdcf0d4c14336974d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a rescale event. <br /></td></tr>
+<tr class="memdesc:a17ddc3f983810bbdcf0d4c14336974d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget, then to the platform implementation. <br /></td></tr>
 <tr class="separator:a17ddc3f983810bbdcf0d4c14336974d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a254ac917bc0951e878ecd7f710fbe2c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a254ac917bc0951e878ecd7f710fbe2c2">onRescaleEvent</a> (const RescaleEvent &amp;ev)</td></tr>
-<tr class="memdesc:a254ac917bc0951e878ecd7f710fbe2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a rescale event.  <a href="classPt_1_1Forms_1_1Screen.html#a254ac917bc0951e878ecd7f710fbe2c2">More...</a><br /></td></tr>
+<tr class="memitem:a254ac917bc0951e878ecd7f710fbe2c2"><td class="memItemLeft" align="right" valign="top"><a id="a254ac917bc0951e878ecd7f710fbe2c2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a254ac917bc0951e878ecd7f710fbe2c2">onRescaleEvent</a> (const RescaleEvent &amp;ev)</td></tr>
+<tr class="memdesc:a254ac917bc0951e878ecd7f710fbe2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget event handling. <br /></td></tr>
 <tr class="separator:a254ac917bc0951e878ecd7f710fbe2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf075346d79eef3d548d4bf4ac537cd"><td class="memItemLeft" align="right" valign="top"><a id="adbf075346d79eef3d548d4bf4ac537cd"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#adbf075346d79eef3d548d4bf4ac537cd">onRescale</a> (double <a class="el" href="classPt_1_1Forms_1_1Widget.html#a913b33ea0ff12559bd6967a2b6830635">scaling</a>)</td></tr>
-<tr class="memdesc:adbf075346d79eef3d548d4bf4ac537cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the local scaling to <em>scaling</em>. <br /></td></tr>
+<tr class="memdesc:adbf075346d79eef3d548d4bf4ac537cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>scaling</em> to the base Widget event handling. <br /></td></tr>
 <tr class="separator:adbf075346d79eef3d548d4bf4ac537cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const PaintEvent &amp;ev)</td></tr>
-<tr class="memdesc:ad62f36a3254f4389b12c85ca448dd3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters and dispatches a paint event.  <a href="classPt_1_1Forms_1_1Screen.html#ad62f36a3254f4389b12c85ca448dd3f8">More...</a><br /></td></tr>
+<tr class="memdesc:ad62f36a3254f4389b12c85ca448dd3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards the last coalesced update in <em>ev</em> to the platform implementation.  <a href="classPt_1_1Forms_1_1Screen.html#ad62f36a3254f4389b12c85ca448dd3f8">More...</a><br /></td></tr>
 <tr class="separator:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memItemLeft" align="right" valign="top"><a id="ad4f23d0135dce0096cc4f8e79da28fbd"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad4f23d0135dce0096cc4f8e79da28fbd">onPaintEvent</a> (const PaintEvent &amp;ev)</td></tr>
-<tr class="memdesc:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a paint event with a non-empty dirty rectangle. <br /></td></tr>
+<tr class="memdesc:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget, then calls onPaint(). <br /></td></tr>
 <tr class="separator:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27ad0e519ac85369ab7bcc72d8c4843"><td class="memItemLeft" align="right" valign="top"><a id="ac27ad0e519ac85369ab7bcc72d8c4843"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ac27ad0e519ac85369ab7bcc72d8c4843">onPaint</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
+<tr class="memdesc:ac27ad0e519ac85369ab7bcc72d8c4843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extension point for painting <em>rect</em>; does nothing by default. <br /></td></tr>
+<tr class="separator:ac27ad0e519ac85369ab7bcc72d8c4843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f57f6103cc20dd147238bf7840140ea"><td class="memItemLeft" align="right" valign="top"><a id="a5f57f6103cc20dd147238bf7840140ea"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a5f57f6103cc20dd147238bf7840140ea">onProcessResizeEvent</a> (const ResizeEvent &amp;ev)</td></tr>
-<tr class="memdesc:a5f57f6103cc20dd147238bf7840140ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a resize event. <br /></td></tr>
+<tr class="memdesc:a5f57f6103cc20dd147238bf7840140ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget, then to the platform implementation. <br /></td></tr>
 <tr class="separator:a5f57f6103cc20dd147238bf7840140ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a587eddc586c2f27c7c5a2aa1b971dbe0"><td class="memItemLeft" align="right" valign="top"><a id="a587eddc586c2f27c7c5a2aa1b971dbe0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a587eddc586c2f27c7c5a2aa1b971dbe0">onResizeEvent</a> (const ResizeEvent &amp;ev)</td></tr>
-<tr class="memdesc:a587eddc586c2f27c7c5a2aa1b971dbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the local size and bounds from a resize event. <br /></td></tr>
+<tr class="memdesc:a587eddc586c2f27c7c5a2aa1b971dbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget event handling. <br /></td></tr>
 <tr class="separator:a587eddc586c2f27c7c5a2aa1b971dbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d194138a8461965b65b73b1b6eef066"><td class="memItemLeft" align="right" valign="top"><a id="a7d194138a8461965b65b73b1b6eef066"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a7d194138a8461965b65b73b1b6eef066">onProcessMouseEvent</a> (const MouseEvent &amp;ev)</td></tr>
-<tr class="memdesc:a7d194138a8461965b65b73b1b6eef066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates pointer tracking and delivers a mouse event. <br /></td></tr>
+<tr class="memdesc:a7d194138a8461965b65b73b1b6eef066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the platform implementation for hit-test routing. <br /></td></tr>
 <tr class="separator:a7d194138a8461965b65b73b1b6eef066"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e74f395664c3b2738f031df9d9bf07"><td class="memItemLeft" align="right" valign="top"><a id="ae5e74f395664c3b2738f031df9d9bf07"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ae5e74f395664c3b2738f031df9d9bf07">onProcessTouchEvent</a> (const TouchEvent &amp;ev)</td></tr>
-<tr class="memdesc:ae5e74f395664c3b2738f031df9d9bf07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates pointer tracking and delivers a touch event. <br /></td></tr>
+<tr class="memdesc:ae5e74f395664c3b2738f031df9d9bf07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the platform implementation for hit-test routing. <br /></td></tr>
 <tr class="separator:ae5e74f395664c3b2738f031df9d9bf07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa605d471ad3077980e033adb850520e"><td class="memItemLeft" align="right" valign="top"><a id="aaa605d471ad3077980e033adb850520e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#aaa605d471ad3077980e033adb850520e">onProcessScrollEvent</a> (const ScrollEvent &amp;ev)</td></tr>
-<tr class="memdesc:aaa605d471ad3077980e033adb850520e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers a scroll event through the responder chain. <br /></td></tr>
+<tr class="memitem:aaa605d471ad3077980e033adb850520e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#aaa605d471ad3077980e033adb850520e">onProcessScrollEvent</a> (const ScrollEvent &amp;ev)</td></tr>
+<tr class="memdesc:aaa605d471ad3077980e033adb850520e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routes <em>ev</em> to the widget under the pointer, or to the platform implementation.  <a href="classPt_1_1Forms_1_1Screen.html#aaa605d471ad3077980e033adb850520e">More...</a><br /></td></tr>
 <tr class="separator:aaa605d471ad3077980e033adb850520e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3db6e397c2fc7a504129fb9a220bebe"><td class="memItemLeft" align="right" valign="top"><a id="ae3db6e397c2fc7a504129fb9a220bebe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ae3db6e397c2fc7a504129fb9a220bebe">onProcessKeyEvent</a> (const KeyEvent &amp;ev)</td></tr>
-<tr class="memdesc:ae3db6e397c2fc7a504129fb9a220bebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers a key event through the responder chain. <br /></td></tr>
+<tr class="memdesc:ae3db6e397c2fc7a504129fb9a220bebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the platform implementation for routing to the focused widget. <br /></td></tr>
 <tr class="separator:ae3db6e397c2fc7a504129fb9a220bebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00b4fb0d0830a05d8e9284202b808c54"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a00b4fb0d0830a05d8e9284202b808c54">onMouseEvent</a> (const MouseEvent &amp;ev)</td></tr>
-<tr class="memdesc:a00b4fb0d0830a05d8e9284202b808c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse event in local coordinates.  <a href="classPt_1_1Forms_1_1Screen.html#a00b4fb0d0830a05d8e9284202b808c54">More...</a><br /></td></tr>
+<tr class="memitem:a00b4fb0d0830a05d8e9284202b808c54"><td class="memItemLeft" align="right" valign="top"><a id="a00b4fb0d0830a05d8e9284202b808c54"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a00b4fb0d0830a05d8e9284202b808c54">onMouseEvent</a> (const MouseEvent &amp;ev)</td></tr>
+<tr class="memdesc:a00b4fb0d0830a05d8e9284202b808c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget responder chain. <br /></td></tr>
 <tr class="separator:a00b4fb0d0830a05d8e9284202b808c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2723f45dc09e09359e656adf936b063c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a2723f45dc09e09359e656adf936b063c">onTouchEvent</a> (const TouchEvent &amp;ev)</td></tr>
-<tr class="memdesc:a2723f45dc09e09359e656adf936b063c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a touch event in local coordinates.  <a href="classPt_1_1Forms_1_1Screen.html#a2723f45dc09e09359e656adf936b063c">More...</a><br /></td></tr>
+<tr class="memitem:a2723f45dc09e09359e656adf936b063c"><td class="memItemLeft" align="right" valign="top"><a id="a2723f45dc09e09359e656adf936b063c"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#a2723f45dc09e09359e656adf936b063c">onTouchEvent</a> (const TouchEvent &amp;ev)</td></tr>
+<tr class="memdesc:a2723f45dc09e09359e656adf936b063c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget responder chain. <br /></td></tr>
 <tr class="separator:a2723f45dc09e09359e656adf936b063c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad29e16b77cc387dcef5b5c52dd54041b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad29e16b77cc387dcef5b5c52dd54041b">onScrollEvent</a> (const ScrollEvent &amp;ev)</td></tr>
-<tr class="memdesc:ad29e16b77cc387dcef5b5c52dd54041b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a scroll event.  <a href="classPt_1_1Forms_1_1Screen.html#ad29e16b77cc387dcef5b5c52dd54041b">More...</a><br /></td></tr>
+<tr class="memitem:ad29e16b77cc387dcef5b5c52dd54041b"><td class="memItemLeft" align="right" valign="top"><a id="ad29e16b77cc387dcef5b5c52dd54041b"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ad29e16b77cc387dcef5b5c52dd54041b">onScrollEvent</a> (const ScrollEvent &amp;ev)</td></tr>
+<tr class="memdesc:ad29e16b77cc387dcef5b5c52dd54041b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget responder chain. <br /></td></tr>
 <tr class="separator:ad29e16b77cc387dcef5b5c52dd54041b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab79f688e909214d5271a89d6ed3d415e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ab79f688e909214d5271a89d6ed3d415e">onKeyEvent</a> (const KeyEvent &amp;ev)</td></tr>
-<tr class="memdesc:ab79f688e909214d5271a89d6ed3d415e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a key event.  <a href="classPt_1_1Forms_1_1Screen.html#ab79f688e909214d5271a89d6ed3d415e">More...</a><br /></td></tr>
+<tr class="memitem:ab79f688e909214d5271a89d6ed3d415e"><td class="memItemLeft" align="right" valign="top"><a id="ab79f688e909214d5271a89d6ed3d415e"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ab79f688e909214d5271a89d6ed3d415e">onKeyEvent</a> (const KeyEvent &amp;ev)</td></tr>
+<tr class="memdesc:ab79f688e909214d5271a89d6ed3d415e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards <em>ev</em> to the base Widget responder chain. <br /></td></tr>
 <tr class="separator:ab79f688e909214d5271a89d6ed3d415e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae14f58a4be52d541798348dd56af0647"><td class="memItemLeft" align="right" valign="top"><a id="ae14f58a4be52d541798348dd56af0647"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Screen.html#ae14f58a4be52d541798348dd56af0647">onShow</a> (bool visible)</td></tr>
@@ -457,11 +520,77 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Screen is the runtime root for the top-level windows on one display. Application provides the primary screen and connects it to the platform. The screen tracks attached Window objects, routes input to the widget below the pointer, and requests drawing of changed regions. Applications normally use the screen through Application::screen() rather than creating one directly.</p>
 <p>A screen provides the top-level WindowManager for its display. Showing an unparented Window attaches it through that manager. The manager and screen use non-owning relationships to the windows, so the application must keep every attached window alive and detach it before destruction. Use a Workspace when an application needs a window manager within a control instead of another platform display.</p>
-<p><a class="el" href="classPt_1_1Forms_1_1Screen.html" title="Screen of a display.">Screen</a> coordinates are global <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> coordinates. The screen hit-tests windows and their content to choose the input target. When that target changes, setPointer() delivers a leave event to the old widget before an enter event is delivered to the new one. Pointer capture and transient popups can override normal hit-test routing through Application.</p>
+<p><a class="el" href="classPt_1_1Forms_1_1Screen.html" title="Display root for top-level windows.">Screen</a> coordinates are global <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> coordinates. The screen hit-tests windows and their content to choose the input target. When that target changes, setPointer() delivers a leave event to the old widget before an enter event is delivered to the new one. Pointer capture and transient popups can override normal hit-test routing through Application.</p>
 <p>Repaint requests from the hierarchy reach the screen as dirty rectangles. The screen combines pending rectangles and schedules one paint pass, then passes the resulting update to the platform implementation. Screen is a backend extension point; applications should use its window manager and should not call its protected event and platform hooks. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a590fb851def1fcaf881d26007239a792"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a590fb851def1fcaf881d26007239a792">&#9670;&nbsp;</a></span>onHitTest()</h2>
+<a id="ad1d6dc62d282396379a058b851c08d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d6dc62d282396379a058b851c08d95">&#9670;&nbsp;</a></span>setPointer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPointer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td>
+          <td class="paramname"><em>widget</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sends a leave event to the previous widget under the pointer, if any, then makes <em>widget</em> the new one and sends it an enter event. Pass null to clear the widget under the pointer. </p>
+
+</div>
+</div>
+<a id="a966c55992abb6ffb3a6673309a4c1d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966c55992abb6ffb3a6673309a4c1d59">&#9670;&nbsp;</a></span>setPointer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPointer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPointer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Equivalent to calling setPointer(&amp;widget) when <em>isPointer</em> is true, or clearing the widget under the pointer when it is <em>widget</em> and <em>isPointer</em> is false. </p>
+
+</div>
+</div>
+<a id="a17c0d24920b6fcf3beefb7e2befadac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c0d24920b6fcf3beefb7e2befadac0">&#9670;&nbsp;</a></span>impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScreenImpl* impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intended for backend and platform implementation code, not for application use. </p>
+
+</div>
+</div>
+<a id="acde698c14b2274a4c02b8d5b41fb1ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde698c14b2274a4c02b8d5b41fb1ff5">&#9670;&nbsp;</a></span>onRequestRepaint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,10 +599,10 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a>* onHitTest </td>
+          <td class="memname">virtual void onRequestRepaint </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -483,154 +612,9 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The base implementation returns 0. Derived containers define their child hit-testing order, visibility rules, and coordinate mapping. </p>
+<p>Accumulated rectangles from repeated calls are merged into a single dirty area, and a PaintEvent is committed to the application loop for each call. onProcessPaintEvent() later collapses the resulting coalesced events into one paint pass. </p>
 
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a590fb851def1fcaf881d26007239a792">Widget</a>.</p>
-
-</div>
-</div>
-<a id="af7e1633411b9900a449324cf9ce5640f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7e1633411b9900a449324cf9ce5640f">&#9670;&nbsp;</a></span>onToParent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> onToParent </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Every direct Widget subclass must implement this mapping. </p>
-
-<p>Implements <a class="el" href="classPt_1_1Forms_1_1Widget.html#adb4f100f85b39c9a565283cb993fc6ed">Widget</a>.</p>
-
-</div>
-</div>
-<a id="a7cb2fbbe88a8e42b43095717456436e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cb2fbbe88a8e42b43095717456436e1">&#9670;&nbsp;</a></span>onFromParent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> onFromParent </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Every direct Widget subclass must implement this mapping. </p>
-
-<p>Implements <a class="el" href="classPt_1_1Forms_1_1Widget.html#ab3a9686981b4657dea7fdde0aaa4a961">Widget</a>.</p>
-
-</div>
-</div>
-<a id="ad7940249fe8f6e7b1c06b89f1f7c2253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7940249fe8f6e7b1c06b89f1f7c2253">&#9670;&nbsp;</a></span>onToGlobal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> onToGlobal </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The base implementation walks the parent chain through onToParent(). </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#ad7940249fe8f6e7b1c06b89f1f7c2253">Widget</a>.</p>
-
-</div>
-</div>
-<a id="ad8a7e7b3697fc0d19ecb3f9afae8d6ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8a7e7b3697fc0d19ecb3f9afae8d6ef">&#9670;&nbsp;</a></span>onFromGlobal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> onFromGlobal </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The base implementation walks the parent chain through onFromParent(). </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#ad8a7e7b3697fc0d19ecb3f9afae8d6ef">Widget</a>.</p>
-
-</div>
-</div>
-<a id="a254ac917bc0951e878ecd7f710fbe2c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a254ac917bc0951e878ecd7f710fbe2c2">&#9670;&nbsp;</a></span>onRescaleEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRescaleEvent </td>
-          <td>(</td>
-          <td class="paramtype">const RescaleEvent &amp;&#160;</td>
-          <td class="paramname"><em>ev</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The base implementation calls onRescale() with the event scale. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a254ac917bc0951e878ecd7f710fbe2c2">Widget</a>.</p>
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#acde698c14b2274a4c02b8d5b41fb1ff5">Widget</a>.</p>
 
 </div>
 </div>
@@ -657,14 +641,14 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Empty dirty rectangles are ignored. </p>
+<p>Every onRequestRepaint() call commits one event to the loop, but only the last of a batch of coalesced events reaches this method with pending updates; earlier ones are skipped here. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#ad62f36a3254f4389b12c85ca448dd3f8">Widget</a>.</p>
 
 </div>
 </div>
-<a id="a00b4fb0d0830a05d8e9284202b808c54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00b4fb0d0830a05d8e9284202b808c54">&#9670;&nbsp;</a></span>onMouseEvent()</h2>
+<a id="aaa605d471ad3077980e033adb850520e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa605d471ad3077980e033adb850520e">&#9670;&nbsp;</a></span>onProcessScrollEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -673,65 +657,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool onMouseEvent </td>
-          <td>(</td>
-          <td class="paramtype">const MouseEvent &amp;&#160;</td>
-          <td class="paramname"><em>ev</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return true to consume it. Returning false forwards the original event to the next responder. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a00b4fb0d0830a05d8e9284202b808c54">Widget</a>.</p>
-
-</div>
-</div>
-<a id="a2723f45dc09e09359e656adf936b063c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2723f45dc09e09359e656adf936b063c">&#9670;&nbsp;</a></span>onTouchEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool onTouchEvent </td>
-          <td>(</td>
-          <td class="paramtype">const TouchEvent &amp;&#160;</td>
-          <td class="paramname"><em>ev</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return true to consume it. Returning false forwards the original event to the next responder. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a2723f45dc09e09359e656adf936b063c">Widget</a>.</p>
-
-</div>
-</div>
-<a id="ad29e16b77cc387dcef5b5c52dd54041b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad29e16b77cc387dcef5b5c52dd54041b">&#9670;&nbsp;</a></span>onScrollEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool onScrollEvent </td>
+          <td class="memname">virtual void onProcessScrollEvent </td>
           <td>(</td>
           <td class="paramtype">const ScrollEvent &amp;&#160;</td>
           <td class="paramname"><em>ev</em></td><td>)</td>
@@ -744,38 +670,9 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return true to consume it; otherwise it is forwarded to the next responder. </p>
+<p>Unlike other input events, a scroll event bypasses the platform hit test when a widget is currently under the pointer. </p>
 
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#ad29e16b77cc387dcef5b5c52dd54041b">Widget</a>.</p>
-
-</div>
-</div>
-<a id="ab79f688e909214d5271a89d6ed3d415e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab79f688e909214d5271a89d6ed3d415e">&#9670;&nbsp;</a></span>onKeyEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool onKeyEvent </td>
-          <td>(</td>
-          <td class="paramtype">const KeyEvent &amp;&#160;</td>
-          <td class="paramname"><em>ev</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return true to consume it; otherwise it is forwarded to the next responder. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#ab79f688e909214d5271a89d6ed3d415e">Widget</a>.</p>
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#aaa605d471ad3077980e033adb850520e">Widget</a>.</p>
 
 </div>
 </div>
@@ -833,6 +730,60 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
+<a id="a25ae73c8bddd43b99b7e85c64310505d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ae73c8bddd43b99b7e85c64310505d">&#9670;&nbsp;</a></span>toGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> toGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default conversion walks the parent chain. </p>
+
+</div>
+</div>
+<a id="a313b4085c84956601fe40af200d6e321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313b4085c84956601fe40af200d6e321">&#9670;&nbsp;</a></span>fromGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> fromGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default conversion walks the parent chain. </p>
+
+</div>
+</div>
 <a id="acd812426b3f670d42c7b8e84f17404da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd812426b3f670d42c7b8e84f17404da">&#9670;&nbsp;</a></span>addPeer()</h2>
 
@@ -856,7 +807,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a relationship only once. Both endpoints receive onAttachPeer(). </p>
+<p>Peers are not a parent, child, or screen connection and do not transfer ownership. Add a relationship only once. Both endpoints receive onAttachPeer(). </p>
 
 </div>
 </div>
@@ -1257,7 +1208,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pass 0 to remove the override. The cursor is copied, so the caller retains ownership of <em>c</em>. When this widget is under the pointer, the platform cursor is updated immediately. </p>
+<p>Pass 0 to remove the override and restore the default cursor. The cursor is copied, so the caller retains ownership of <em>c</em>. When this widget is under the pointer, the platform cursor is updated immediately. </p>
 
 </div>
 </div>
@@ -1366,7 +1317,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>A container calls this when the hierarchy joins a screen. Overrides that retain the base connection state must call this implementation. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a6a7abfca3d5ed85be46608ab1c81c8fe">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1WindowManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">WindowManager</a>, <a class="el" href="classPt_1_1Forms_1_1Window.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a6a7abfca3d5ed85be46608ab1c81c8fe">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Control</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1345,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>A container calls this when the hierarchy leaves its screen. Overrides that retain the base connection state must call this implementation. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a2541c99cc5ac13a10964ec7d3e9f1a49">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1WindowManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">WindowManager</a>, <a class="el" href="classPt_1_1Forms_1_1Window.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a2541c99cc5ac13a10964ec7d3e9f1a49">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Control</a>.</p>
 
 </div>
 </div>

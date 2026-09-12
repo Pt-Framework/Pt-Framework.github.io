@@ -85,13 +85,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Control Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms-Application.html">Forms Application</a></div></div>  </div>
+<div class="title">Control Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms-Application.html">Forms Applications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Control_8h_source.html">Pt/Forms/Control.h</a>&gt;</code></p>
 
-<p>A view that can be attached as application content.  
+<p>Reusable view used as application content.  
  <a href="classPt_1_1Forms_1_1Control.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1View.html">View</a>.</p>
@@ -128,9 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c9c176216ba7bf39c8f8766b0bb1af3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a1c9c176216ba7bf39c8f8766b0bb1af3">add</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
 <tr class="memdesc:a1c9c176216ba7bf39c8f8766b0bb1af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches <em>control</em> as a direct child.  <a href="classPt_1_1Forms_1_1Control.html#a1c9c176216ba7bf39c8f8766b0bb1af3">More...</a><br /></td></tr>
 <tr class="separator:a1c9c176216ba7bf39c8f8766b0bb1af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af22d77ebabc932380d13790109f84c90"><td class="memItemLeft" align="right" valign="top"><a id="af22d77ebabc932380d13790109f84c90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#af22d77ebabc932380d13790109f84c90">remove</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
-<tr class="memdesc:af22d77ebabc932380d13790109f84c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches direct child <em>control</em> without destroying it. <br /></td></tr>
+<tr class="memitem:af22d77ebabc932380d13790109f84c90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#af22d77ebabc932380d13790109f84c90">remove</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
+<tr class="memdesc:af22d77ebabc932380d13790109f84c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches direct child <em>control</em> without destroying it.  <a href="classPt_1_1Forms_1_1Control.html#af22d77ebabc932380d13790109f84c90">More...</a><br /></td></tr>
 <tr class="separator:af22d77ebabc932380d13790109f84c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae434ace06fc82dc95e800e7ffc039e"><td class="memItemLeft" align="right" valign="top"><a id="afae434ace06fc82dc95e800e7ffc039e"></a>
 const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#afae434ace06fc82dc95e800e7ffc039e">controls</a> () const</td></tr>
@@ -319,13 +318,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#ac8d20373f7695f23d4a4ffa6154a1d64">fromParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
 <tr class="memdesc:ac8d20373f7695f23d4a4ffa6154a1d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts parent position <em>pos</em> to local coordinates. <br /></td></tr>
 <tr class="separator:ac8d20373f7695f23d4a4ffa6154a1d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ae73c8bddd43b99b7e85c64310505d"><td class="memItemLeft" align="right" valign="top"><a id="a25ae73c8bddd43b99b7e85c64310505d"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">toGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a25ae73c8bddd43b99b7e85c64310505d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates. <br /></td></tr>
+<tr class="memitem:a25ae73c8bddd43b99b7e85c64310505d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">toGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a25ae73c8bddd43b99b7e85c64310505d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates.  <a href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">More...</a><br /></td></tr>
 <tr class="separator:a25ae73c8bddd43b99b7e85c64310505d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a313b4085c84956601fe40af200d6e321"><td class="memItemLeft" align="right" valign="top"><a id="a313b4085c84956601fe40af200d6e321"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">fromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a313b4085c84956601fe40af200d6e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates. <br /></td></tr>
+<tr class="memitem:a313b4085c84956601fe40af200d6e321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">fromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a313b4085c84956601fe40af200d6e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates.  <a href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">More...</a><br /></td></tr>
 <tr class="separator:a313b4085c84956601fe40af200d6e321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd812426b3f670d42c7b8e84f17404da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#acd812426b3f670d42c7b8e84f17404da">addPeer</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;peer)</td></tr>
 <tr class="memdesc:acd812426b3f670d42c7b8e84f17404da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a bidirectional, non-owning peer association with <em>peer</em>.  <a href="classPt_1_1Forms_1_1Widget.html#acd812426b3f670d42c7b8e84f17404da">More...</a><br /></td></tr>
@@ -735,12 +732,11 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="separator:a9a12a3fdba81e17e16ae2f3243844593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Control is the reusable building block of a <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> user interface. It can be the content of a Form or the child of another view, and it can attach child controls of its own. Attachment is non-owning: a parent stores control pointers but does not destroy its children. A control participates in its form's measurement, layout, focus traversal, shortcuts, mnemonics, painting, and input routing.</p>
-<p>Derive a control to implement custom content. Override the protected measurement, layout, painting, and event hooks that define its behavior; use add() and remove() to manage its child controls.</p>
-<p>A control's parent is a View, and its direct children are controls. The hierarchy does not transfer ownership. add() first detaches a child from any old parent, while remove() detaches it without destroying it. When the tree joins a connected form, the connection, form association, responder chain, scaling, and paint surface are propagated through all descendants. Removing a control reverses those runtime relationships. Keep every attached control alive until it has been removed or its parent is gone.</p>
-<p>The parent paints children in their stacking order and hit-tests them from front to back. raise() moves a direct child to the front of that order. Controls forward repaint and relayout requests to their parent, which converts the requested local region to its own coordinates. A control measures under the supplied SizePolicy and caches the preferred size until content, policy, limits, or scaling invalidate it. Its layout hook assigns geometry to its direct children.</p>
-<p>Once associated with a form, a control may participate in focus traversal, action keys, shortcuts, and mnemonics. focus() requests focus only when the focus policy permits it. Pointer and touch presses delivered to the control request focus and capture input until release. Implement custom controls by overriding onMeasure(), onLayout(), onPaint(), and the protected input hooks as required; use state-changing public APIs so changes travel through the parent hierarchy.</p>
-<p>The default measurement returns an empty size and the default layout does not assign child geometry. A derived container measures its content in onMeasure() and places each child with move() and resize() in onLayout(). Call relayout() after a content change that affects size or geometry and invalidate() after a visual-only change. </p>
+<div class="textblock"><p>A Control is the building block of a <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> user interface. Derive from it to implement custom content. It can be the content of a Form or the child of another view, and it can attach child controls of its own. Attachment is non-owning: a parent stores control pointers but does not destroy its children.</p>
+<p>A control's parent is a View, and its direct children are controls. add() first detaches a child from any old parent; remove() detaches it without destroying it. When the tree joins a connected form, connection, form association, responder chain, scaling, and paint surface propagate through all descendants. Removing a control reverses those runtime relationships. Keep every attached control alive until it has been removed or its parent is gone.</p>
+<p>The parent paints children in stacking order and hit-tests them from front to back. raise() moves a direct child to the front. Controls forward repaint and relayout requests to their parent, which converts the requested local region to its own coordinates. A control measures under the supplied SizePolicy and caches the preferred size until content, policy, limits, or scaling invalidate it. Its layout hook assigns geometry to its direct children.</p>
+<p>The default measurement returns an empty size and the default layout does not assign child geometry. A derived container measures its content in onMeasure() and places each child with move() and resize() in onLayout(). Call relayout() after a content change that affects size or geometry and invalidate() after a visual-only change.</p>
+<p>Once associated with a form, a control may take part in focus traversal, action keys, shortcuts, and mnemonics. Override onMeasure(), onLayout(), onPaint(), and the protected input hooks as required; use state-changing public APIs so changes travel through the parent hierarchy. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&nbsp;</a></span>FocusPolicy</h2>
@@ -871,6 +867,25 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
       </table>
 </div><div class="memdoc">
 <p>The child remains owned by its caller. Direct children paint in attachment order and are hit-tested in reverse order. </p>
+
+</div>
+</div>
+<a id="af22d77ebabc932380d13790109f84c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22d77ebabc932380d13790109f84c90">&#9670;&nbsp;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname"><em>control</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Detachment reverses the runtime relationships established during attachment. </p>
 
 </div>
 </div>
@@ -1891,6 +1906,60 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
+<a id="a25ae73c8bddd43b99b7e85c64310505d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ae73c8bddd43b99b7e85c64310505d">&#9670;&nbsp;</a></span>toGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> toGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default conversion walks the parent chain. </p>
+
+</div>
+</div>
+<a id="a313b4085c84956601fe40af200d6e321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313b4085c84956601fe40af200d6e321">&#9670;&nbsp;</a></span>fromGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> fromGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default conversion walks the parent chain. </p>
+
+</div>
+</div>
 <a id="acd812426b3f670d42c7b8e84f17404da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd812426b3f670d42c7b8e84f17404da">&#9670;&nbsp;</a></span>addPeer()</h2>
 
@@ -1914,7 +1983,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a relationship only once. Both endpoints receive onAttachPeer(). </p>
+<p>Peers are not a parent, child, or screen connection and do not transfer ownership. Add a relationship only once. Both endpoints receive onAttachPeer(). </p>
 
 </div>
 </div>
@@ -2315,7 +2384,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pass 0 to remove the override. The cursor is copied, so the caller retains ownership of <em>c</em>. When this widget is under the pointer, the platform cursor is updated immediately. </p>
+<p>Pass 0 to remove the override and restore the default cursor. The cursor is copied, so the caller retains ownership of <em>c</em>. When this widget is under the pointer, the platform cursor is updated immediately. </p>
 
 </div>
 </div>

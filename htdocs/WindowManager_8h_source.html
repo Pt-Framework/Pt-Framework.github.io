@@ -85,12 +85,12 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  modify it under the terms of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  License as published by the Free Software Foundation; either</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  As a special exception, you may use this file as part of a free</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  software library without restriction. Specifically, if other files</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  instantiate templates or use macros or inline functions from this</span></div>
@@ -100,15 +100,15 @@
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  License. This exception does not however invalidate any other</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  reasons why the executable file might be covered by the GNU Library</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  General Public License.</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  This library is distributed in the hope that it will be useful,</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">  Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">  You should have received a copy of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  License along with this library; if not, write to the Free Software</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  02110-1301 USA</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -126,94 +126,110 @@
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span>Window;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>WindowFrame;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>WindowManager : <span class="keyword">public</span> Widget</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>Window;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html#a4aecdb998b8b28b278843eaa1644998b">Widget</a> Base;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        WindowManager();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">virtual</span> ~WindowManager();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> relayout();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;Window&amp;&gt;</a>&amp; surfaceChanged()</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          <span class="keywordflow">return</span> _surfaceChanged;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// TODO:</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//void addWindow(Window&amp; w)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//{</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//    w.setParent(*this);</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//}</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//void removeWindow(Window&amp; w)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//{</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//    if(w.windowManager() == this)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//        w.unparent();</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//}</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">//std::vector&lt;Pt::Forms::Window*&gt;&amp; windows()</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">//{</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//  return _windows;</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//}</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">//Pt::Signal&lt;Window&amp;&gt;&amp; windowAdded()</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//{</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">//  return _windowAdded;</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//}</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//Pt::Signal&lt;Window&amp;&gt;&amp; windowRemoved()</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//{</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//  return _windowRemoved;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//}</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPt_1_1Forms_1_1Window.html">Window</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a> <a class="code" href="classPt_1_1Forms_1_1Widget.html">Base</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a8097859ebc6388feaa3d7c25647baa92">   77</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a8097859ebc6388feaa3d7c25647baa92">WindowManager</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a92d0c6e076d70e7f8742f5f109e2ff3a">   81</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a92d0c6e076d70e7f8742f5f109e2ff3a">~WindowManager</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a3499569e12c854b0b5e646c7b5b47ab1">   88</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a3499569e12c854b0b5e646c7b5b47ab1">relayout</a>();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onConnect(Screen&amp; screen);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onDisconnect();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRequestRelayout();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessPaintEvent(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a60fe6bb1a30c53712601b768752b2fe3">   96</a></span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;Window&amp;&gt;</a>&amp; <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a60fe6bb1a30c53712601b768752b2fe3">surfaceChanged</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          <span class="keywordflow">return</span> _surfaceChanged;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaintEvent(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// TODO:</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">virtual</span> WindowFrame* onAttach(Window&amp; w) = 0;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onDetach(WindowFrame&amp; w) = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//void addWindow(Window&amp; w)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">//    w.setParent(*this);</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">//}</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onInit(WindowFrame&amp; w) = 0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRelease(WindowFrame&amp; w) = 0;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">//virtual void onAutoCenter(WindowFrame&amp; w, bool enable) = 0;</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">//void removeWindow(Window&amp; w)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">//    if(w.windowManager() == this)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">//        w.unparent();</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">//}</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;Window&amp;&gt;</a> _surfaceChanged;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="comment">//std::vector&lt;Pt::Forms::Window*&gt; _windows;</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="comment">//Pt::Signal&lt;Window&amp;&gt;           _windowAdded;</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="comment">//Pt::Signal&lt;Window&amp;&gt;           _windowRemoved;</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">//std::vector&lt;Pt::Forms::Window*&gt;&amp; windows()</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">//  return _windows;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">//}</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">//Pt::Signal&lt;Window&amp;&gt;&amp; windowAdded()</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">//  return _windowAdded;</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">//}</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">//Pt::Signal&lt;Window&amp;&gt;&amp; windowRemoved()</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">//  return _windowRemoved;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">//}</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">  135</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">onConnect</a>(<a class="code" href="classPt_1_1Forms_1_1Screen.html">Screen</a>&amp; <a class="code" href="classPt_1_1Forms_1_1Widget.html#ac16a59ee651f807e54330bf6eebf9902">screen</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">  142</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">onDisconnect</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a4e6dfe6f7b483bd2e8edafefbecfc2a3">  149</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a4e6dfe6f7b483bd2e8edafefbecfc2a3">onRequestRelayout</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#ad62f36a3254f4389b12c85ca448dd3f8">  157</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a>(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#ad4f23d0135dce0096cc4f8e79da28fbd">  163</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#ad4f23d0135dce0096cc4f8e79da28fbd">onPaintEvent</a>(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a2d15b61a8c688574decd96ce501186f1">  173</a></span>&#160;        <span class="keyword">virtual</span> WindowFrame* <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a2d15b61a8c688574decd96ce501186f1">onAttach</a>(<a class="code" href="classPt_1_1Forms_1_1Window.html">Window</a>&amp; window) = 0;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a96e583fa1994ac330b1679682051bf99">  180</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a96e583fa1994ac330b1679682051bf99">onDetach</a>(WindowFrame&amp; frame) = 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#a022e17cdf77d2e34f6c94659d19fe228">  188</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a022e17cdf77d2e34f6c94659d19fe228">onInit</a>(WindowFrame&amp; frame) = 0;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WindowManager.html#ac6b86a92254fd2063554e7f416a0e897">  195</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#ac6b86a92254fd2063554e7f416a0e897">onRelease</a>(WindowFrame&amp; frame) = 0;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">//virtual void onAutoCenter(WindowFrame&amp; w, bool enable) = 0;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;Window&amp;&gt;</a> _surfaceChanged;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="comment">//std::vector&lt;Pt::Forms::Window*&gt; _windows;</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="comment">//Pt::Signal&lt;Window&amp;&gt;           _windowAdded;</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="comment">//Pt::Signal&lt;Window&amp;&gt;           _windowRemoved;</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;};</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a3499569e12c854b0b5e646c7b5b47ab1"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a3499569e12c854b0b5e646c7b5b47ab1">Pt::Forms::WindowManager::relayout</a></div><div class="ttdeci">void relayout()</div><div class="ttdoc">Requests a relayout of hosted windows.</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal</a></div><div class="ttdoc">Multicast Signal to call multiple slots.</div><div class="ttdef"><b>Definition:</b> Signal.h:190</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_a4aecdb998b8b28b278843eaa1644998b"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#a4aecdb998b8b28b278843eaa1644998b">Pt::Forms::Widget::Widget</a></div><div class="ttdeci">Widget()</div><div class="ttdoc">Creates and registers a widget with the Forms application.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a2d15b61a8c688574decd96ce501186f1"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a2d15b61a8c688574decd96ce501186f1">Pt::Forms::WindowManager::onAttach</a></div><div class="ttdeci">virtual WindowFrame * onAttach(Window &amp;window)=0</div><div class="ttdoc">Creates and registers a frame for window.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Form presented by a window manager.</div><div class="ttdef"><b>Definition:</b> Window.h:96</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a92d0c6e076d70e7f8742f5f109e2ff3a"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a92d0c6e076d70e7f8742f5f109e2ff3a">Pt::Forms::WindowManager::~WindowManager</a></div><div class="ttdeci">virtual ~WindowManager()</div><div class="ttdoc">Destroys the window host.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_ad62f36a3254f4389b12c85ca448dd3f8"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#ad62f36a3254f4389b12c85ca448dd3f8">Pt::Forms::WindowManager::onProcessPaintEvent</a></div><div class="ttdeci">virtual void onProcessPaintEvent(const PaintEvent &amp;ev)</div><div class="ttdoc">Processes a paint event through the Widget event path.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a></div><div class="ttdoc">Common type of every visual Forms object.</div><div class="ttdef"><b>Definition:</b> Widget.h:104</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a60fe6bb1a30c53712601b768752b2fe3"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a60fe6bb1a30c53712601b768752b2fe3">Pt::Forms::WindowManager::surfaceChanged</a></div><div class="ttdeci">Pt::Signal&lt; Window &amp; &gt; &amp; surfaceChanged()</div><div class="ttdoc">Returns the signal sent after a window backing pixmap is synchronized.</div><div class="ttdef"><b>Definition:</b> WindowManager.h:96</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a4e6dfe6f7b483bd2e8edafefbecfc2a3"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a4e6dfe6f7b483bd2e8edafefbecfc2a3">Pt::Forms::WindowManager::onRequestRelayout</a></div><div class="ttdeci">virtual void onRequestRelayout()</div><div class="ttdoc">Handles a request to relayout hosted windows.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ac16a59ee651f807e54330bf6eebf9902"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ac16a59ee651f807e54330bf6eebf9902">Pt::Forms::Widget::screen</a></div><div class="ttdeci">Screen * screen()</div><div class="ttdoc">Returns the connected screen, or 0 when disconnected.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Screen_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Screen.html">Pt::Forms::Screen</a></div><div class="ttdoc">Display root for top-level windows.</div><div class="ttdef"><b>Definition:</b> Screen.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a6a7abfca3d5ed85be46608ab1c81c8fe"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Pt::Forms::WindowManager::onConnect</a></div><div class="ttdeci">virtual void onConnect(Screen &amp;screen)</div><div class="ttdoc">Connects this host to screen.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a2541c99cc5ac13a10964ec7d3e9f1a49"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Pt::Forms::WindowManager::onDisconnect</a></div><div class="ttdeci">virtual void onDisconnect()</div><div class="ttdoc">Disconnects this host from its screen.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html">Pt::Forms::WindowManager</a></div><div class="ttdoc">Host that attaches windows to a screen or workspace.</div><div class="ttdef"><b>Definition:</b> WindowManager.h:68</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a022e17cdf77d2e34f6c94659d19fe228"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a022e17cdf77d2e34f6c94659d19fe228">Pt::Forms::WindowManager::onInit</a></div><div class="ttdeci">virtual void onInit(WindowFrame &amp;frame)=0</div><div class="ttdoc">Initializes frame after the frame initializes its window.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a8097859ebc6388feaa3d7c25647baa92"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a8097859ebc6388feaa3d7c25647baa92">Pt::Forms::WindowManager::WindowManager</a></div><div class="ttdeci">WindowManager()</div><div class="ttdoc">Creates a disconnected host for window frames.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_ac6b86a92254fd2063554e7f416a0e897"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#ac6b86a92254fd2063554e7f416a0e897">Pt::Forms::WindowManager::onRelease</a></div><div class="ttdeci">virtual void onRelease(WindowFrame &amp;frame)=0</div><div class="ttdoc">Releases frame before it is detached and deleted.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a96e583fa1994ac330b1679682051bf99"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a96e583fa1994ac330b1679682051bf99">Pt::Forms::WindowManager::onDetach</a></div><div class="ttdeci">virtual void onDetach(WindowFrame &amp;frame)=0</div><div class="ttdoc">Unregisters frame from this host.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_ad4f23d0135dce0096cc4f8e79da28fbd"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#ad4f23d0135dce0096cc4f8e79da28fbd">Pt::Forms::WindowManager::onPaintEvent</a></div><div class="ttdeci">virtual void onPaintEvent(const PaintEvent &amp;ev)</div><div class="ttdoc">Handles a paint event after standard processing.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

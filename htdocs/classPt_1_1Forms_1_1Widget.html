@@ -84,18 +84,18 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Widget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms-Application.html">Forms Application</a></div></div>  </div>
+<div class="title">Widget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms-Application.html">Forms Applications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Widget_8h_source.html">Pt/Forms/Widget.h</a>&gt;</code></p>
 
-<p>Abstract base for objects that participate in the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> runtime.  
+<p>Common type of every visual <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> object.  
  <a href="classPt_1_1Forms_1_1Widget.html#details">More...</a></p>
 
 <p>Inherits Responder, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Forms_1_1Screen.html">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1View.html">View</a>, WindowFrame, and WindowManager.</p>
+<p>Inherited by <a class="el" href="classPt_1_1Forms_1_1Screen.html">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1View.html">View</a>, WindowFrame, and <a class="el" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,13 +156,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#ac8d20373f7695f23d4a4ffa6154a1d64">fromParent</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
 <tr class="memdesc:ac8d20373f7695f23d4a4ffa6154a1d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts parent position <em>pos</em> to local coordinates. <br /></td></tr>
 <tr class="separator:ac8d20373f7695f23d4a4ffa6154a1d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ae73c8bddd43b99b7e85c64310505d"><td class="memItemLeft" align="right" valign="top"><a id="a25ae73c8bddd43b99b7e85c64310505d"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">toGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a25ae73c8bddd43b99b7e85c64310505d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates. <br /></td></tr>
+<tr class="memitem:a25ae73c8bddd43b99b7e85c64310505d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">toGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a25ae73c8bddd43b99b7e85c64310505d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts local position <em>pos</em> to global coordinates.  <a href="classPt_1_1Forms_1_1Widget.html#a25ae73c8bddd43b99b7e85c64310505d">More...</a><br /></td></tr>
 <tr class="separator:a25ae73c8bddd43b99b7e85c64310505d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a313b4085c84956601fe40af200d6e321"><td class="memItemLeft" align="right" valign="top"><a id="a313b4085c84956601fe40af200d6e321"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">fromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
-<tr class="memdesc:a313b4085c84956601fe40af200d6e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates. <br /></td></tr>
+<tr class="memitem:a313b4085c84956601fe40af200d6e321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">fromGlobal</a> (const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos) const</td></tr>
+<tr class="memdesc:a313b4085c84956601fe40af200d6e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts global position <em>pos</em> to local coordinates.  <a href="classPt_1_1Forms_1_1Widget.html#a313b4085c84956601fe40af200d6e321">More...</a><br /></td></tr>
 <tr class="separator:a313b4085c84956601fe40af200d6e321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd812426b3f670d42c7b8e84f17404da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#acd812426b3f670d42c7b8e84f17404da">addPeer</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;peer)</td></tr>
 <tr class="memdesc:acd812426b3f670d42c7b8e84f17404da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a bidirectional, non-owning peer association with <em>peer</em>.  <a href="classPt_1_1Forms_1_1Widget.html#acd812426b3f670d42c7b8e84f17404da">More...</a><br /></td></tr>
@@ -460,10 +458,11 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="separator:ab79f688e909214d5271a89d6ed3d415e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Widget supplies identity, screen connection, geometry, visibility, enabled state, coordinate conversion, repaint requests, event dispatch, and pointer capture. Derive ordinary visual content from Control. Derive directly from Widget only for a runtime or host base with its own parent coordinate system; derived classes must implement onToParent() and onFromParent().</p>
+<div class="textblock"><p>Every visual <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> object is a Widget. Application is not. A widget supplies identity, screen connection, parent relationships, geometry, visibility, enabled state, scaling, coordinate conversion, repaint requests, event dispatch, and pointer capture. Derive ordinary visual content from Control. Derive directly from Widget only for a runtime or host base with its own parent coordinate system; derived classes must implement onToParent() and onFromParent().</p>
 <p>Construct widgets only after an Application exists. The application gives each widget an ID, registers it for event routing, and removes that entry during destruction. A name is optional metadata, not an identifier. Parent and screen pointers are non-owning runtime relationships. A widget is connected when its parent hierarchy reaches a screen, independent of its visibility. Containers attach and detach widgets through their public APIs; callers keep attached widgets alive.</p>
 <p>Geometry uses logical coordinates. position() is in parent coordinates, while size() and bounds() are local and bounds() starts at the local origin. toParent(), fromParent(), toGlobal(), and fromGlobal() convert between these systems. The default global conversion walks the parent chain. Coordinate hooks must agree with hit testing, painting, and input delivery.</p>
-<p>show(), enable(), activate(), move(), and resize() are requests. A parent, frame, or backend confirms them by sending <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> events, which then update the observable state. In contrast, names, size limits, cursor overrides, and the next responder change local state immediately. invalidate() queues coalesced deferred work; repaint() asks to redraw a local dirty region. Widgets are responders: unhandled input continues to the next responder, with mouse and touch coordinates converted locally.</p>
+<p>show(), enable(), activate(), move(), and resize() are requests. A parent, frame, or backend confirms them by sending <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> events, which then update the observable state. Names, size limits, cursor overrides, and the next responder change local state immediately. invalidate() queues coalesced deferred work; repaint() asks to redraw a local dirty region.</p>
+<p>A widget is a Responder. Unhandled input continues to the next responder, with mouse and touch coordinates converted locally.</p>
 <p>Peers are non-hierarchical, bidirectional associations. They do not establish ownership, parenting, or screen connection. A widget can also provide a Cursor while it is under the pointer; clearing the override restores the default cursor. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af0ef273e47acd5ce75366b6b7a51057f"></a>
@@ -531,6 +530,44 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
+<a id="a25ae73c8bddd43b99b7e85c64310505d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ae73c8bddd43b99b7e85c64310505d">&#9670;&nbsp;</a></span>toGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> toGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The default conversion walks the parent chain. </p>
+
+</div>
+</div>
+<a id="a313b4085c84956601fe40af200d6e321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313b4085c84956601fe40af200d6e321">&#9670;&nbsp;</a></span>fromGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> fromGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The default conversion walks the parent chain. </p>
+
+</div>
+</div>
 <a id="acd812426b3f670d42c7b8e84f17404da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd812426b3f670d42c7b8e84f17404da">&#9670;&nbsp;</a></span>addPeer()</h2>
 
@@ -546,7 +583,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add a relationship only once. Both endpoints receive onAttachPeer(). </p>
+<p>Peers are not a parent, child, or screen connection and do not transfer ownership. Add a relationship only once. Both endpoints receive onAttachPeer(). </p>
 
 </div>
 </div>
@@ -867,7 +904,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pass 0 to remove the override. The cursor is copied, so the caller retains ownership of <em>c</em>. When this widget is under the pointer, the platform cursor is updated immediately. </p>
+<p>Pass 0 to remove the override and restore the default cursor. The cursor is copied, so the caller retains ownership of <em>c</em>. When this widget is under the pointer, the platform cursor is updated immediately. </p>
 
 </div>
 </div>
@@ -960,7 +997,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>A container calls this when the hierarchy joins a screen. Overrides that retain the base connection state must call this implementation. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a6a7abfca3d5ed85be46608ab1c81c8fe">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1WindowManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">WindowManager</a>, <a class="el" href="classPt_1_1Forms_1_1Window.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a6a7abfca3d5ed85be46608ab1c81c8fe">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Control</a>.</p>
 
 </div>
 </div>
@@ -988,7 +1025,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>A container calls this when the hierarchy leaves its screen. Overrides that retain the base connection state must call this implementation. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a2541c99cc5ac13a10964ec7d3e9f1a49">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1WindowManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">WindowManager</a>, <a class="el" href="classPt_1_1Forms_1_1Window.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Window</a>, <a class="el" href="classPt_1_1Forms_1_1View.html#a2541c99cc5ac13a10964ec7d3e9f1a49">View</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Control</a>.</p>
 
 </div>
 </div>
@@ -1312,7 +1349,7 @@ virtual Responder *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>Empty dirty rectangles are ignored. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#ace872883c55a5e78d1b373510bff6034">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#ad62f36a3254f4389b12c85ca448dd3f8">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#ad62f36a3254f4389b12c85ca448dd3f8">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#ace872883c55a5e78d1b373510bff6034">Window</a>, <a class="el" href="classPt_1_1Forms_1_1WindowManager.html#ad62f36a3254f4389b12c85ca448dd3f8">WindowManager</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#ad62f36a3254f4389b12c85ca448dd3f8">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#ad62f36a3254f4389b12c85ca448dd3f8">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">Control</a>.</p>
 
 </div>
 </div>
