@@ -134,197 +134,238 @@
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">class </span>Workspace;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">class </span>WorkspaceManager : <span class="keyword">public</span> WindowManager</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html#a8097859ebc6388feaa3d7c25647baa92">WindowManager</a> Base;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>Workspace;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>WorkspaceFrame;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        WorkspaceManager();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> ~WorkspaceManager();</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html">WorkspaceManager</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a> <a class="code" href="classPt_1_1Forms_1_1Widget.html">Base</a>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> setParent(Workspace* workspace);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//Gfx::PaintSurface&amp; surface();</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//const Gfx::PaintSurface&amp; surface() const;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPt_1_1Forms_1_1Workspace.html">Workspace</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>WorkspaceFrame;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html">WorkspaceManager</a>();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//void setSurface(Gfx::PaintSurface* surface, const Gfx::PointF&amp; pos);</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html">WorkspaceManager</a>();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">bool</span> processMouseEvent(<span class="keyword">const</span> MouseEvent&amp; ev);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> setParent(<a class="code" href="classPt_1_1Forms_1_1Workspace.html">Workspace</a>* workspace);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">bool</span> processTouchEvent(<span class="keyword">const</span> TouchEvent&amp; ev);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        Window* activeWindow();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">const</span> std::vector&lt;Window*&gt;&amp; windows() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">double</span> borderWidth()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> _borderWidth;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">double</span> titleHeight()<span class="keyword">  const</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> _titleHeight;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; inactiveColor()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> _inactiveColor;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; activeColor()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> _activeColor;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; textColor()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> _textColor;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">const</span> Gfx::Color&amp; inactiveTextColor()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span> _inactiveTextColor;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// layouting</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">protected</span>:      </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessLayoutEvent(<span class="keyword">const</span> LayoutEvent&amp; ev);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayoutEvent(<span class="keyword">const</span> LayoutEvent&amp; ev);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//Gfx::PaintSurface&amp; surface();</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">//const Gfx::PaintSurface&amp; surface() const;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//void setSurface(Gfx::PaintSurface* surface, const Gfx::PointF&amp; pos);</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">bool</span> processMouseEvent(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span> processTouchEvent(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Window.html">Window</a>* activeWindow();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> std::vector&lt;Window*&gt;&amp; windows() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">double</span> borderWidth()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">return</span> _borderWidth;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">double</span> titleHeight()<span class="keyword">  const</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> _titleHeight;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>&amp; inactiveColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> _inactiveColor;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>&amp; activeColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> _activeColor;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>&amp; textColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">return</span> _textColor;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>&amp; inactiveTextColor()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> _inactiveTextColor;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// layouting</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// WindowManager</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRequestRelayout();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">protected</span>:      </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessLayoutEvent(<span class="keyword">const</span> LayoutEvent&amp; ev);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayoutEvent(<span class="keyword">const</span> LayoutEvent&amp; ev);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">virtual</span> WindowFrame* onAttach(Window&amp; w);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onDetach(WindowFrame&amp; w);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onInit(WindowFrame&amp; w);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRelease(WindowFrame&amp; w);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        Gfx::PointF toFrame(<span class="keyword">const</span> WorkspaceFrame&amp; w, </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                            <span class="keyword">const</span> Gfx::PointF&amp; pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// WindowManager</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a4e6dfe6f7b483bd2e8edafefbecfc2a3">  132</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a4e6dfe6f7b483bd2e8edafefbecfc2a3">onRequestRelayout</a>();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a2b85d22fd6ed6459e58eaff988299a85">  135</a></span>&#160;        <span class="keyword">virtual</span> WindowFrame* <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a2b85d22fd6ed6459e58eaff988299a85">onAttach</a>(<a class="code" href="classPt_1_1Forms_1_1Window.html">Window</a>&amp; w);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a005043f21d3403ae08f0135573fa7de2">  137</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a005043f21d3403ae08f0135573fa7de2">onDetach</a>(WindowFrame&amp; w);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        Gfx::PointF fromFrame(<span class="keyword">const</span> WorkspaceFrame&amp; w, </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                              <span class="keyword">const</span> Gfx::PointF&amp; pos) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onSetAbove(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> above);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html#abccc8a0761f6f0907ef85977a7c77197">onSetSizeLimits</a>(WorkspaceFrame&amp; w, </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                     <span class="keyword">const</span> Gfx::SizeF&amp; minSize, </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                     <span class="keyword">const</span> Gfx::SizeF&amp; maxSize);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onAutoCenter(WindowFrame&amp; w, <span class="keyword">const</span> Gfx::SizeF* size);</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#abccb33cce998d47aa79051e09b80b8c2">  139</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#abccb33cce998d47aa79051e09b80b8c2">onInit</a>(WindowFrame&amp; w);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a962d9e7d07ecbdb9992c30ec99170019">  141</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a962d9e7d07ecbdb9992c30ec99170019">onRelease</a>(WindowFrame&amp; w);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> toFrame(<span class="keyword">const</span> WorkspaceFrame&amp; w, </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                            <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> fromFrame(<span class="keyword">const</span> WorkspaceFrame&amp; w, </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                              <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html#ae14f58a4be52d541798348dd56af0647">onShow</a>(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> visible);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onSetAbove(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> above);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onActivate(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> active); </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html#ab2ddae2d4127dc75a67bd59e3d718237">onEnable</a>(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onSetSizeLimits(WorkspaceFrame&amp; w, </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; minSize, </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                     <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; maxSize);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onMove(WorkspaceFrame&amp; w, <span class="keyword">const</span> Gfx::PointF&amp; to);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onAutoCenter(WindowFrame&amp; w, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>* <a class="code" href="classPt_1_1Forms_1_1Widget.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a>);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onResize(WorkspaceFrame&amp; w, <span class="keyword">const</span> Gfx::SizeF&amp; to);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onShow(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> visible);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onClose(WorkspaceFrame&amp; w);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onActivate(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> active); </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// Widget</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onConnect(Screen&amp; screen);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onEnable(WorkspaceFrame&amp; w, <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html#a257f7974c93c8517e6d836e15215f465">enable</a>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onMove(WorkspaceFrame&amp; w, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; to);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onResize(WorkspaceFrame&amp; w, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; to);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onDisconnect();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onClose(WorkspaceFrame&amp; w);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">virtual</span> Gfx::PointF onToParent(<span class="keyword">const</span> Gfx::PointF&amp; pos) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">virtual</span> Gfx::PointF onFromParent(<span class="keyword">const</span> Gfx::PointF&amp; pos) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html#a4aecdb998b8b28b278843eaa1644998b">Widget</a>* onHitTest(<span class="keyword">const</span> Gfx::PointF&amp; p);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRequestRepaint(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRequestActivate(<span class="keywordtype">bool</span> active);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRequestCapture(<span class="keywordtype">bool</span> capture);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessEvent(<span class="keyword">const</span> <a class="code" href="classPt_1_1Event.html">Pt::Event</a>&amp; ev);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessRescaleEvent(<span class="keyword">const</span> RescaleEvent&amp; ev);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessPaintEvent(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessEnableEvent(<span class="keyword">const</span> EnableEvent&amp; ev);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessResizeEvent(<span class="keyword">const</span> ResizeEvent&amp; ev);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">// Widget</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">  174</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">onConnect</a>(<a class="code" href="classPt_1_1Forms_1_1Screen.html">Screen</a>&amp; <a class="code" href="classPt_1_1Forms_1_1Widget.html#ac16a59ee651f807e54330bf6eebf9902">screen</a>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">  176</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">onDisconnect</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#af7e1633411b9900a449324cf9ce5640f">  179</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#af7e1633411b9900a449324cf9ce5640f">onToParent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7cb2fbbe88a8e42b43095717456436e1">  181</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7cb2fbbe88a8e42b43095717456436e1">onFromParent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7f6ccf6a8ca3ab773b7b18e06f256618">  183</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>* <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7f6ccf6a8ca3ab773b7b18e06f256618">onHitTest</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; p);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#acde698c14b2274a4c02b8d5b41fb1ff5">  186</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#acde698c14b2274a4c02b8d5b41fb1ff5">onRequestRepaint</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#aad2e226957b04286059c8d30fc29a24e">  188</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#aad2e226957b04286059c8d30fc29a24e">onRequestActivate</a>(<span class="keywordtype">bool</span> active);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#ac4410670c5a04c9b33ecf3bb6d15a7ec">  190</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#ac4410670c5a04c9b33ecf3bb6d15a7ec">onRequestCapture</a>(<span class="keywordtype">bool</span> capture);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a713267d462b1a570e362141a638c0a67">  193</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a713267d462b1a570e362141a638c0a67">onProcessEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Event.html">Pt::Event</a>&amp; ev);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onResizeEvent(<span class="keyword">const</span> ResizeEvent&amp; ev);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessMouseEvent(<span class="keyword">const</span> MouseEvent&amp; ev);    </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessTouchEvent(<span class="keyword">const</span> TouchEvent&amp; ev);</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a17ddc3f983810bbdcf0d4c14336974d0">  195</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a17ddc3f983810bbdcf0d4c14336974d0">onProcessRescaleEvent</a>(<span class="keyword">const</span> RescaleEvent&amp; ev);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#ad62f36a3254f4389b12c85ca448dd3f8">  197</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a>(<span class="keyword">const</span> PaintEvent&amp; ev);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#adc15cd937ac8184ee0b701a8df6615bb">  199</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#adc15cd937ac8184ee0b701a8df6615bb">onProcessEnableEvent</a>(<span class="keyword">const</span> EnableEvent&amp; ev);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessScrollEvent(<span class="keyword">const</span> ScrollEvent&amp; ev);</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a5f57f6103cc20dd147238bf7840140ea">  201</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a5f57f6103cc20dd147238bf7840140ea">onProcessResizeEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1ResizeEvent.html">ResizeEvent</a>&amp; ev);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessEnterEvent(<span class="keyword">const</span> EnterEvent&amp; ev);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessLeaveEvent(<span class="keyword">const</span> LeaveEvent&amp; ev);</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a587eddc586c2f27c7c5a2aa1b971dbe0">  203</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a587eddc586c2f27c7c5a2aa1b971dbe0">onResizeEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1ResizeEvent.html">ResizeEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7d194138a8461965b65b73b1b6eef066">  205</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7d194138a8461965b65b73b1b6eef066">onProcessMouseEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a>&amp; ev);    </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onProcessKeyEvent(<span class="keyword">const</span> KeyEvent&amp; ev);</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#ae5e74f395664c3b2738f031df9d9bf07">  207</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#ae5e74f395664c3b2738f031df9d9bf07">onProcessTouchEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a>&amp; ev);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        Workspace*                     _parent;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        std::vector&lt;Window*&gt;           _windows;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        std::vector&lt;Window*&gt;           _windowStack;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#aaa605d471ad3077980e033adb850520e">  209</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#aaa605d471ad3077980e033adb850520e">onProcessScrollEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1ScrollEvent.html">ScrollEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7e24a7fbf1cc7e51c6ac5d24d1c7e9d3">  211</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a7e24a7fbf1cc7e51c6ac5d24d1c7e9d3">onProcessEnterEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1EnterEvent.html">EnterEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#a00222929a9dfde20902cdefb93b115f8">  213</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#a00222929a9dfde20902cdefb93b115f8">onProcessLeaveEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html">LeaveEvent</a>&amp; ev);</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        Window*                        _activeWindow;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        Window*                        _topMostWindow;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        std::map&lt;Window*, Gfx::RectF&gt;  _autoCenter;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        Forms::Painter                 _painter;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordtype">double</span>                       _borderWidth;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordtype">double</span>                       _titleHeight;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        Gfx::Color                   _activeColor;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        Gfx::Color                   _inactiveColor;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        Gfx::Color                   _textColor;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        Gfx::Color                   _inactiveTextColor;  </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;};</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1WorkspaceManager.html#ae3db6e397c2fc7a504129fb9a220bebe">  215</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1WorkspaceManager.html#ae3db6e397c2fc7a504129fb9a220bebe">onProcessKeyEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1KeyEvent.html">KeyEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Workspace.html">Workspace</a>*                     _parent;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        std::vector&lt;Window*&gt;           _windows;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        std::vector&lt;Window*&gt;           _windowStack;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Window.html">Window</a>*                        _activeWindow;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Window.html">Window</a>*                        _topMostWindow;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        std::map&lt;Window*, Gfx::RectF&gt;  _autoCenter;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Painter.html">Forms::Painter</a>                 _painter;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordtype">double</span>                       _borderWidth;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">double</span>                       _titleHeight;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>                   _activeColor;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>                   _inactiveColor;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>                   _textColor;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a>                   _inactiveTextColor;  </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;};</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a7d194138a8461965b65b73b1b6eef066"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a7d194138a8461965b65b73b1b6eef066">Pt::Forms::WorkspaceManager::onProcessMouseEvent</a></div><div class="ttdeci">virtual void onProcessMouseEvent(const MouseEvent &amp;ev)</div><div class="ttdoc">Updates pointer tracking and delivers a mouse event.</div></div>
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ae14f58a4be52d541798348dd56af0647"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ae14f58a4be52d541798348dd56af0647">Pt::Forms::Widget::onShow</a></div><div class="ttdeci">virtual void onShow(bool visible)</div><div class="ttdoc">Updates the local visibility state to visible.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1KeyEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1KeyEvent.html">Pt::Forms::KeyEvent</a></div><div class="ttdoc">Key press or release.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TouchEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TouchEvent.html">Pt::Forms::TouchEvent</a></div><div class="ttdoc">Touch press, move, or release.</div><div class="ttdef"><b>Definition:</b> TouchEvent.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1EnterEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1EnterEvent.html">Pt::Forms::EnterEvent</a></div><div class="ttdoc">Pointer entered a widget.</div><div class="ttdef"><b>Definition:</b> EnterEvent.h:49</div></div>
 <div class="ttc" id="aclassPt_1_1Event_html"><div class="ttname"><a href="classPt_1_1Event.html">Pt::Event</a></div><div class="ttdoc">Base class for all event types.</div><div class="ttdef"><b>Definition:</b> Event.h:50</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_abccc8a0761f6f0907ef85977a7c77197"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#abccc8a0761f6f0907ef85977a7c77197">Pt::Forms::Widget::onSetSizeLimits</a></div><div class="ttdeci">virtual void onSetSizeLimits(const Gfx::SizeF &amp;minSize, const Gfx::SizeF &amp;maxSize)</div><div class="ttdoc">Notifies that locally stored size limits changed.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ab2ddae2d4127dc75a67bd59e3d718237"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ab2ddae2d4127dc75a67bd59e3d718237">Pt::Forms::Widget::onEnable</a></div><div class="ttdeci">virtual void onEnable(bool e)</div><div class="ttdoc">Performs behavior associated with enabled state e.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html_a8097859ebc6388feaa3d7c25647baa92"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html#a8097859ebc6388feaa3d7c25647baa92">Pt::Forms::WindowManager::WindowManager</a></div><div class="ttdeci">WindowManager()</div><div class="ttdoc">Creates a disconnected host for window frames.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_a4aecdb998b8b28b278843eaa1644998b"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#a4aecdb998b8b28b278843eaa1644998b">Pt::Forms::Widget::Widget</a></div><div class="ttdeci">Widget()</div><div class="ttdoc">Creates and registers a widget with the Forms application.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollEvent.html">Pt::Forms::ScrollEvent</a></div><div class="ttdoc">Scroll or wheel movement.</div><div class="ttdef"><b>Definition:</b> ScrollEvent.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_ae3db6e397c2fc7a504129fb9a220bebe"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#ae3db6e397c2fc7a504129fb9a220bebe">Pt::Forms::WorkspaceManager::onProcessKeyEvent</a></div><div class="ttdeci">virtual void onProcessKeyEvent(const KeyEvent &amp;ev)</div><div class="ttdoc">Delivers a key event through the responder chain.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a5f57f6103cc20dd147238bf7840140ea"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a5f57f6103cc20dd147238bf7840140ea">Pt::Forms::WorkspaceManager::onProcessResizeEvent</a></div><div class="ttdeci">virtual void onProcessResizeEvent(const ResizeEvent &amp;ev)</div><div class="ttdoc">Dispatches a resize event.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ResizeEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ResizeEvent.html">Pt::Forms::ResizeEvent</a></div><div class="ttdoc">Reports that a widget was resized.</div><div class="ttdef"><b>Definition:</b> ResizeEvent.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a2b85d22fd6ed6459e58eaff988299a85"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a2b85d22fd6ed6459e58eaff988299a85">Pt::Forms::WorkspaceManager::onAttach</a></div><div class="ttdeci">virtual WindowFrame * onAttach(Window &amp;w)</div><div class="ttdoc">Creates and registers a frame for window.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a713267d462b1a570e362141a638c0a67"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a713267d462b1a570e362141a638c0a67">Pt::Forms::WorkspaceManager::onProcessEvent</a></div><div class="ttdeci">virtual void onProcessEvent(const Pt::Event &amp;ev)</div><div class="ttdoc">Sends ev to the widget event dispatcher.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_aad2e226957b04286059c8d30fc29a24e"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#aad2e226957b04286059c8d30fc29a24e">Pt::Forms::WorkspaceManager::onRequestActivate</a></div><div class="ttdeci">virtual void onRequestActivate(bool active)</div><div class="ttdoc">Forwards a request to activate or deactivate the widget.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_acde698c14b2274a4c02b8d5b41fb1ff5"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#acde698c14b2274a4c02b8d5b41fb1ff5">Pt::Forms::WorkspaceManager::onRequestRepaint</a></div><div class="ttdeci">virtual void onRequestRepaint(const Gfx::RectF &amp;rect)</div><div class="ttdoc">Forwards a repaint request for local rectangle rect.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a4e6dfe6f7b483bd2e8edafefbecfc2a3"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a4e6dfe6f7b483bd2e8edafefbecfc2a3">Pt::Forms::WorkspaceManager::onRequestRelayout</a></div><div class="ttdeci">virtual void onRequestRelayout()</div><div class="ttdoc">Handles a request to relayout hosted windows.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Form presented by a window manager.</div><div class="ttdef"><b>Definition:</b> Window.h:100</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_aaa605d471ad3077980e033adb850520e"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#aaa605d471ad3077980e033adb850520e">Pt::Forms::WorkspaceManager::onProcessScrollEvent</a></div><div class="ttdeci">virtual void onProcessScrollEvent(const ScrollEvent &amp;ev)</div><div class="ttdoc">Delivers a scroll event through the responder chain.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Painter_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Painter.html">Pt::Forms::Painter</a></div><div class="ttdoc">2D painter for Forms paint surfaces.</div><div class="ttdef"><b>Definition:</b> Painter.h:46</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_ac4410670c5a04c9b33ecf3bb6d15a7ec"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#ac4410670c5a04c9b33ecf3bb6d15a7ec">Pt::Forms::WorkspaceManager::onRequestCapture</a></div><div class="ttdeci">virtual void onRequestCapture(bool capture)</div><div class="ttdoc">Requests application-managed pointer capture or release.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a7cb2fbbe88a8e42b43095717456436e1"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a7cb2fbbe88a8e42b43095717456436e1">Pt::Forms::WorkspaceManager::onFromParent</a></div><div class="ttdeci">virtual Gfx::PointF onFromParent(const Gfx::PointF &amp;pos) const</div><div class="ttdoc">Converts parent position pos to local coordinates.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_af7e1633411b9900a449324cf9ce5640f"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#af7e1633411b9900a449324cf9ce5640f">Pt::Forms::WorkspaceManager::onToParent</a></div><div class="ttdeci">virtual Gfx::PointF onToParent(const Gfx::PointF &amp;pos) const</div><div class="ttdoc">Converts local position pos to parent coordinates.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_adc15cd937ac8184ee0b701a8df6615bb"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#adc15cd937ac8184ee0b701a8df6615bb">Pt::Forms::WorkspaceManager::onProcessEnableEvent</a></div><div class="ttdeci">virtual void onProcessEnableEvent(const EnableEvent &amp;ev)</div><div class="ttdoc">Dispatches an enable event.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a></div><div class="ttdoc">Common type of every visual Forms object.</div><div class="ttdef"><b>Definition:</b> Widget.h:104</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Point with floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a17ddc3f983810bbdcf0d4c14336974d0"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a17ddc3f983810bbdcf0d4c14336974d0">Pt::Forms::WorkspaceManager::onProcessRescaleEvent</a></div><div class="ttdeci">virtual void onProcessRescaleEvent(const RescaleEvent &amp;ev)</div><div class="ttdoc">Dispatches a rescale event.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a005043f21d3403ae08f0135573fa7de2"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a005043f21d3403ae08f0135573fa7de2">Pt::Forms::WorkspaceManager::onDetach</a></div><div class="ttdeci">virtual void onDetach(WindowFrame &amp;w)</div><div class="ttdoc">Unregisters frame from this host.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a587eddc586c2f27c7c5a2aa1b971dbe0"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Pt::Forms::WorkspaceManager::onResizeEvent</a></div><div class="ttdeci">virtual void onResizeEvent(const ResizeEvent &amp;ev)</div><div class="ttdoc">Updates the local size and bounds from a resize event.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ac16a59ee651f807e54330bf6eebf9902"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ac16a59ee651f807e54330bf6eebf9902">Pt::Forms::Widget::screen</a></div><div class="ttdeci">Screen * screen()</div><div class="ttdoc">Returns the connected screen, or 0 when disconnected.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_a445bb5b5c4018463ef3a4604a8d69b7a"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#a445bb5b5c4018463ef3a4604a8d69b7a">Pt::Forms::Widget::size</a></div><div class="ttdeci">const Gfx::SizeF &amp; size() const</div><div class="ttdoc">Returns the size in local logical coordinates.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a962d9e7d07ecbdb9992c30ec99170019"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a962d9e7d07ecbdb9992c30ec99170019">Pt::Forms::WorkspaceManager::onRelease</a></div><div class="ttdeci">virtual void onRelease(WindowFrame &amp;w)</div><div class="ttdoc">Releases frame before it is detached and deleted.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_a257f7974c93c8517e6d836e15215f465"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#a257f7974c93c8517e6d836e15215f465">Pt::Forms::Widget::enable</a></div><div class="ttdeci">virtual void enable(bool isEnable=true)</div><div class="ttdoc">Requests that the widget be enabled or disabled.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Screen_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Screen.html">Pt::Forms::Screen</a></div><div class="ttdoc">Display root for top-level windows.</div><div class="ttdef"><b>Definition:</b> Screen.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a6a7abfca3d5ed85be46608ab1c81c8fe"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a6a7abfca3d5ed85be46608ab1c81c8fe">Pt::Forms::WorkspaceManager::onConnect</a></div><div class="ttdeci">virtual void onConnect(Screen &amp;screen)</div><div class="ttdoc">Connects this host to screen.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a00222929a9dfde20902cdefb93b115f8"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a00222929a9dfde20902cdefb93b115f8">Pt::Forms::WorkspaceManager::onProcessLeaveEvent</a></div><div class="ttdeci">virtual void onProcessLeaveEvent(const LeaveEvent &amp;ev)</div><div class="ttdoc">Delivers a leave event through the responder chain.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WindowManager_html"><div class="ttname"><a href="classPt_1_1Forms_1_1WindowManager.html">Pt::Forms::WindowManager</a></div><div class="ttdoc">Host that attaches windows to a screen or workspace.</div><div class="ttdef"><b>Definition:</b> WindowManager.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a2541c99cc5ac13a10964ec7d3e9f1a49"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a2541c99cc5ac13a10964ec7d3e9f1a49">Pt::Forms::WorkspaceManager::onDisconnect</a></div><div class="ttdeci">virtual void onDisconnect()</div><div class="ttdoc">Disconnects this host from its screen.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_ad62f36a3254f4389b12c85ca448dd3f8"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#ad62f36a3254f4389b12c85ca448dd3f8">Pt::Forms::WorkspaceManager::onProcessPaintEvent</a></div><div class="ttdeci">virtual void onProcessPaintEvent(const PaintEvent &amp;ev)</div><div class="ttdoc">Processes a paint event through the Widget event path.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html">Pt::Forms::LeaveEvent</a></div><div class="ttdoc">Pointer left a widget.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">Standard color type.</div><div class="ttdef"><b>Definition:</b> Color.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a7e24a7fbf1cc7e51c6ac5d24d1c7e9d3"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a7e24a7fbf1cc7e51c6ac5d24d1c7e9d3">Pt::Forms::WorkspaceManager::onProcessEnterEvent</a></div><div class="ttdeci">virtual void onProcessEnterEvent(const EnterEvent &amp;ev)</div><div class="ttdoc">Delivers an enter event through the responder chain.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html">Pt::Forms::WorkspaceManager</a></div><div class="ttdoc">Window manager embedded in a workspace.</div><div class="ttdef"><b>Definition:</b> WorkspaceManager.h:60</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Workspace_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Workspace.html">Pt::Forms::Workspace</a></div><div class="ttdoc">Control that presents windows in its own bounds.</div><div class="ttdef"><b>Definition:</b> Workspace.h:55</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_a7f6ccf6a8ca3ab773b7b18e06f256618"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#a7f6ccf6a8ca3ab773b7b18e06f256618">Pt::Forms::WorkspaceManager::onHitTest</a></div><div class="ttdeci">virtual Widget * onHitTest(const Gfx::PointF &amp;p)</div><div class="ttdoc">Returns the descendant hit at local position pos.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MouseEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MouseEvent.html">Pt::Forms::MouseEvent</a></div><div class="ttdoc">Pointer movement or button change.</div><div class="ttdef"><b>Definition:</b> MouseEvent.h:122</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_abccb33cce998d47aa79051e09b80b8c2"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#abccb33cce998d47aa79051e09b80b8c2">Pt::Forms::WorkspaceManager::onInit</a></div><div class="ttdeci">virtual void onInit(WindowFrame &amp;w)</div><div class="ttdoc">Initializes frame after the frame initializes its window.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1WorkspaceManager_html_ae5e74f395664c3b2738f031df9d9bf07"><div class="ttname"><a href="classPt_1_1Forms_1_1WorkspaceManager.html#ae5e74f395664c3b2738f031df9d9bf07">Pt::Forms::WorkspaceManager::onProcessTouchEvent</a></div><div class="ttdeci">virtual void onProcessTouchEvent(const TouchEvent &amp;ev)</div><div class="ttdoc">Updates pointer tracking and delivers a touch event.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
