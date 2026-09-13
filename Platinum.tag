@@ -66716,13 +66716,16 @@
     <title>Forms Applications</title>
     <filename>group__Pt-Forms-Application.html</filename>
     <class kind="class">Pt::Forms::Application</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Forms-Widgets</name>
+    <title>Forms Widgets and Views</title>
+    <filename>group__Pt-Forms-Widgets.html</filename>
     <class kind="class">Pt::Forms::Control</class>
     <class kind="class">Pt::Forms::Form</class>
     <class kind="class">Pt::Forms::Screen</class>
     <class kind="class">Pt::Forms::View</class>
     <class kind="class">Pt::Forms::Widget</class>
-    <class kind="class">Pt::Forms::Window</class>
-    <class kind="class">Pt::Forms::WindowManager</class>
   </compound>
   <compound kind="group">
     <name>Pt-Gfx-Images</name>
@@ -66786,7 +66789,7 @@
   </compound>
   <compound kind="group">
     <name>Pt-Forms-Input</name>
-    <title>Mouse, Touch, Keyboard Input</title>
+    <title>Pointer and Keyboard Input</title>
     <filename>group__Pt-Forms-Input.html</filename>
     <class kind="class">Pt::Forms::EnterEvent</class>
     <class kind="class">Pt::Forms::FocusEvent</class>
@@ -67319,7 +67322,7 @@
     <docanchor file="pt_contents.html" title="Core Library">pt_core</docanchor>
     <docanchor file="pt_contents.html" title="System Programming">pt_system</docanchor>
     <docanchor file="pt_contents.html" title="Graphics">pt_gfx</docanchor>
-    <docanchor file="pt_contents.html" title="Graphical User Interface">pt_forms</docanchor>
+    <docanchor file="pt_contents.html" title="Graphical User Interfaces">pt_forms</docanchor>
     <docanchor file="pt_contents.html" title="HTTP Clients and Servers">pt_http</docanchor>
     <docanchor file="pt_contents.html" title="Secure Communication">pt_ssl</docanchor>
     <docanchor file="pt_contents.html" title="XML-RPC Communication">pt_xmlrpc</docanchor>
@@ -67329,7 +67332,8 @@
     <name>Pt-Forms-Application-Page</name>
     <title>Application Lifecycle and Structure</title>
     <filename>Pt-Forms-Application-Page.html</filename>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Application Runtime">Pt-Forms-Application-Page-Application</docanchor>
+    <docanchor file="Pt-Forms-Application-Page.html" title="Application">Pt-Forms-Application-Page-Application</docanchor>
+    <docanchor file="Pt-Forms-Application-Page.html" title="Widgets and Views">Pt-Forms-Application-Page-Widgets</docanchor>
     <docanchor file="Pt-Forms-Application-Page.html" title="Widgets">Pt-Forms-Application-Page-Widget</docanchor>
     <docanchor file="Pt-Forms-Application-Page.html" title="Views">Pt-Forms-Application-Page-View</docanchor>
     <docanchor file="Pt-Forms-Application-Page.html" title="Forms">Pt-Forms-Application-Page-Form</docanchor>
@@ -67338,12 +67342,9 @@
     <docanchor file="Pt-Forms-Application-Page.html" title="Windows and Workspaces">Pt-Forms-Application-Page-Windows</docanchor>
     <docanchor file="Pt-Forms-Application-Page.html" title="Windows">Pt-Forms-Application-Page-Window</docanchor>
     <docanchor file="Pt-Forms-Application-Page.html" title="Window Managers">Pt-Forms-Application-Page-WindowManager</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>Pt-Forms-Input-Page</name>
-    <title>Mouse, Touch, Keyboard Input</title>
-    <filename>Pt-Forms-Input-Page.html</filename>
-    <docanchor file="Pt-Forms-Input-Page.html" title="Responders">Pt-Forms-Input-Page-Responder</docanchor>
+    <docanchor file="Pt-Forms-Application-Page.html" title="Pointer and Keyboard Input">Pt-Forms-Application-Page-Input</docanchor>
+    <docanchor file="Pt-Forms-Application-Page.html" title="Responders">Pt-Forms-Application-Page-Responder</docanchor>
+    <docanchor file="Pt-Forms-Application-Page.html" title="Input Methods">Pt-Forms-Application-Page-InputMethod</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-Gfx-Drawing-Page</name>
