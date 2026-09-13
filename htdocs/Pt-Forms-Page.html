@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>Application Lifecycle and Structure</title>
+  <title>Graphical User Interfaces</title>
   <meta content="Pt Reference Manual" name="description">
   <meta content="The Pt Development Team" name="author">
   <link rel="stylesheet" href="doxygen.css" type="text/css">
@@ -77,10 +77,10 @@
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Application Lifecycle and Structure </div>  </div>
+<div class="title">Graphical User Interfaces </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This page covers the application runtime, the widget and view object model, the display root, windows and workspaces, and input delivery.</p>
+<div class="textblock"><p>This chapter covers the application runtime, the widget and view object model, the display root, windows and workspaces, and input delivery.</p>
 <p>A Forms application creates windows and controls, shows the visual hierarchy, and runs the event loop. The inherited event loop also supports I/O, timers, and asynchronous operations.</p>
 <p>Application is the starting point and must be constructed before forms, windows, or controls. It is not a Widget. It provides the primary Screen and WindowManager, dispatches platform events, and supplies shared services such as scaling, styles, fonts, and input methods.</p>
 <p>Forms distinguishes the class hierarchy from the visual hierarchy. The following diagram shows the C++ inheritance relationship. It does not show which objects display or contain other objects.</p>

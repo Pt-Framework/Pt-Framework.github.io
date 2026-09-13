@@ -67335,7 +67335,7 @@
   </compound>
   <compound kind="page">
     <name>Pt-Forms-Page</name>
-    <title>Application Lifecycle and Structure</title>
+    <title>Graphical User Interfaces</title>
     <filename>Pt-Forms-Page.html</filename>
     <docanchor file="Pt-Forms-Page.html" title="Application">Pt-Forms-Page-Application</docanchor>
     <docanchor file="Pt-Forms-Page.html" title="Widgets and Views">Pt-Forms-Page-Widgets</docanchor>
