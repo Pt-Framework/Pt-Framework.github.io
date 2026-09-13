@@ -66594,212 +66594,6 @@
     <class kind="class">Pt::PoolAllocator</class>
   </compound>
   <compound kind="group">
-    <name>Pt-System-Concurrency</name>
-    <title>Concurrency</title>
-    <filename>group__Pt-System-Concurrency.html</filename>
-    <class kind="class">Pt::atomic_t</class>
-    <member kind="function">
-      <type>int</type>
-      <name>atomicGet</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>gad0729b77fd43f998cccf80171d578830</anchor>
-      <arglist>(volatile atomic_t &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>atomicSet</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>ga8b80549fe3fa12eee7081f6f0dd669f1</anchor>
-      <arglist>(volatile atomic_t &amp;val, int n)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>atomicIncrement</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>gafa41ce93d64b93ccadb3e502e2cbfd24</anchor>
-      <arglist>(volatile atomic_t &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>atomicDecrement</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>gaa1d59f5056e060e9dc2b2feeecd72c6c</anchor>
-      <arglist>(volatile atomic_t &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>atomicExchange</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>ga73f8334ef879b3d3b6a9f7ff8a88f01d</anchor>
-      <arglist>(volatile atomic_t &amp;val, int exch)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>atomicCompareExchange</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>ga5ef07ac96bad50ab18f0f981db36d756</anchor>
-      <arglist>(volatile atomic_t &amp;val, int exch, int comp)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>atomicExchangeAdd</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>ga5ba4ae2225861a3154f9e2a33da82af0</anchor>
-      <arglist>(volatile atomic_t &amp;val, int add)</arglist>
-    </member>
-    <member kind="function">
-      <type>void *</type>
-      <name>atomicExchange</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>gab58678307ec4e4677e7f1b75ac8a1323</anchor>
-      <arglist>(void *volatile &amp;val, void *exch)</arglist>
-    </member>
-    <member kind="function">
-      <type>void *</type>
-      <name>atomicCompareExchange</name>
-      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
-      <anchor>gad79b7e6699c7ddf27695b6877d8e3ebe</anchor>
-      <arglist>(void *volatile &amp;val, void *exch, void *comp)</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Gfx-Drawing</name>
-    <title>Drawing Graphics and Text</title>
-    <filename>group__Pt-Gfx-Drawing.html</filename>
-    <class kind="class">Pt::Gfx::Bitmap</class>
-    <class kind="class">Pt::Gfx::ColorStop</class>
-    <class kind="class">Pt::Gfx::ColorStops</class>
-    <class kind="class">Pt::Gfx::Brush</class>
-    <class kind="class">Pt::Gfx::Canvas</class>
-    <class kind="class">Pt::Gfx::CompositionMode</class>
-    <class kind="class">Pt::Gfx::Font</class>
-    <class kind="class">Pt::Gfx::FontMetrics</class>
-    <class kind="class">Pt::Gfx::Paint</class>
-    <class kind="class">Pt::Gfx::PaintContext</class>
-    <class kind="class">Pt::Gfx::Painter</class>
-    <class kind="class">Pt::Gfx::PainterBase</class>
-    <class kind="class">Pt::Gfx::PaintSurface</class>
-    <class kind="class">Pt::Gfx::Path</class>
-    <class kind="class">Pt::Gfx::PathElement</class>
-    <class kind="class">Pt::Gfx::PathIterator</class>
-    <class kind="class">Pt::Gfx::Pen</class>
-    <class kind="class">Pt::Gfx::Scaling</class>
-    <class kind="class">Pt::Gfx::TextMetrics</class>
-    <class kind="class">Pt::Gfx::Transform</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>FillRule</name>
-      <anchorfile>group__Pt-Gfx-Drawing.html</anchorfile>
-      <anchor>ga9a534b0377c9ca41983d53b0dae0d5a4</anchor>
-      <arglist></arglist>
-      <enumvalue file="group__Pt-Gfx-Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a3d0365a27a39c0af183445fc4d932a8a">NonZero</enumvalue>
-      <enumvalue file="group__Pt-Gfx-Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a8e586e4bd2c45e86222301f2e6e0e390">EvenOdd</enumvalue>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>Plugins</name>
-    <title>Dynamic Libraries and Plugins</title>
-    <filename>group__Plugins.html</filename>
-  </compound>
-  <compound kind="group">
-    <name>FileSystem</name>
-    <title>File System Access</title>
-    <filename>group__FileSystem.html</filename>
-    <class kind="class">Pt::AccessFailed</class>
-    <class kind="class">Pt::System::DirectoryIterator</class>
-    <class kind="class">Pt::System::FileDevice</class>
-    <class kind="class">Pt::System::FileInfo</class>
-    <class kind="class">Pt::System::Path</class>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Forms</name>
-    <title>Graphical User Interfaces</title>
-    <filename>group__Pt-Forms.html</filename>
-    <class kind="class">Pt::Forms::Application</class>
-    <class kind="class">Pt::Forms::GraphicsBackend</class>
-    <class kind="class">Pt::Forms::TableLayout2</class>
-    <subgroup>Pt-Forms-Input</subgroup>
-    <subgroup>Pt-Forms-Widgets</subgroup>
-    <subgroup>Pt-Forms-Windows</subgroup>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Gfx-Images</name>
-    <title>Images and Image Views</title>
-    <filename>group__Pt-Gfx-Images.html</filename>
-    <class kind="class">Pt::Gfx::Argb32Image</class>
-    <class kind="class">Pt::Gfx::Rgb32Image</class>
-  </compound>
-  <compound kind="group">
-    <name>Logging</name>
-    <title>Logging</title>
-    <filename>group__Logging.html</filename>
-    <class kind="class">Pt::System::LogChannel</class>
-    <class kind="class">Pt::System::Logger</class>
-    <class kind="class">Pt::System::LogMessage</class>
-    <class kind="class">Pt::System::LogRecord</class>
-    <class kind="class">Pt::System::LogTarget</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>LogLevel</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>gaca1fd1d8935433e6ba2e3918214e07f9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Fatal</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a24d54883f5403a81c97e5ce29ee031ba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Error</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Warn</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Info</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Debug</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Trace</name>
-      <anchorfile>group__Logging.html</anchorfile>
-      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a8af18ff6dfbaa47fadcc947a9f12602d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Forms-Input</name>
-    <title>Pointer and Keyboard Input</title>
-    <filename>group__Pt-Forms-Input.html</filename>
-    <class kind="class">Pt::Forms::EnterEvent</class>
-    <class kind="class">Pt::Forms::FocusEvent</class>
-    <class kind="class">Pt::Forms::InputMethod</class>
-    <class kind="class">Pt::Forms::Key</class>
-    <class kind="class">Pt::Forms::KeyEvent</class>
-    <class kind="class">Pt::Forms::LeaveEvent</class>
-    <class kind="class">Pt::Forms::MouseButton</class>
-    <class kind="class">Pt::Forms::MouseState</class>
-    <class kind="class">Pt::Forms::MouseEvent</class>
-    <class kind="class">Pt::Forms::Responder</class>
-    <class kind="class">Pt::Forms::ScrollEvent</class>
-    <class kind="class">Pt::Forms::TouchEvent</class>
-  </compound>
-  <compound kind="group">
     <name>Serialization</name>
     <title>Serialization</title>
     <filename>group__Serialization.html</filename>
@@ -66871,14 +66665,6 @@
     <class kind="class">Pt::BoundSlot</class>
   </compound>
   <compound kind="group">
-    <name>Pt-System-Tar</name>
-    <title>Tar Archive I/O</title>
-    <filename>group__Pt-System-Tar.html</filename>
-    <class kind="class">Pt::System::TarEntry</class>
-    <class kind="class">Pt::System::TarReader</class>
-    <class kind="class">Pt::System::TarWriter</class>
-  </compound>
-  <compound kind="group">
     <name>Unicode</name>
     <title>Text Processing</title>
     <filename>group__Unicode.html</filename>
@@ -66908,77 +66694,6 @@
     <class kind="class">Pt::TextIStream</class>
     <class kind="class">Pt::TextOStream</class>
     <class kind="class">Pt::TextStream</class>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Unit</name>
-    <title>Unit Testing</title>
-    <filename>group__Pt-Unit.html</filename>
-    <class kind="class">Pt::Unit::Application</class>
-    <class kind="class">Pt::Unit::Assertion</class>
-    <class kind="struct">Pt::Unit::RegisterTest</class>
-    <class kind="class">Pt::Unit::Reporter</class>
-    <class kind="class">Pt::Unit::Test</class>
-    <class kind="class">Pt::Unit::TestCase</class>
-    <class kind="class">Pt::Unit::TestContext</class>
-    <class kind="class">Pt::Unit::TestFixture</class>
-    <class kind="class">Pt::Unit::TestProtocol</class>
-    <class kind="class">Pt::Unit::TestSuite</class>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>gaa2a9f9a920fd54a49e1b8d8ec60cf8f5</anchor>
-      <arglist>(cond)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT_MSG</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>ga139b236155a65e48217dfacbc4e4e7d0</anchor>
-      <arglist>(cond, what)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT_EQUALS</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>ga2f193b97e6bcef318cc3dd063c810bcc</anchor>
-      <arglist>(value1, value2)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT_EQUAL</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>ga0ae0d5077c8653ab73af76bdc5243974</anchor>
-      <arglist>(value1, value2)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT_NEAR</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>gaf81fe90705f50213a1742d848ddfe8d5</anchor>
-      <arglist>(value1, value2)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT_THROW</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>ga15c791624c31d18ceaaa779aff252f13</anchor>
-      <arglist>(cond, EX)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_ASSERT_NOTHROW</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>gab5903d61d0e9a566b388df67efbc2874</anchor>
-      <arglist>(cond)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>PT_UNIT_FAIL</name>
-      <anchorfile>group__Pt-Unit.html</anchorfile>
-      <anchor>ga256dfa99f9df715a8632f5000735ef98</anchor>
-      <arglist>(what)</arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>Utilities</name>
@@ -67163,6 +66878,17 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>Pt-Forms</name>
+    <title>Graphical User Interfaces</title>
+    <filename>group__Pt-Forms.html</filename>
+    <class kind="class">Pt::Forms::Application</class>
+    <class kind="class">Pt::Forms::GraphicsBackend</class>
+    <class kind="class">Pt::Forms::TableLayout2</class>
+    <subgroup>Pt-Forms-Widgets</subgroup>
+    <subgroup>Pt-Forms-Windows</subgroup>
+    <subgroup>Pt-Forms-Input</subgroup>
+  </compound>
+  <compound kind="group">
     <name>Pt-Forms-Widgets</name>
     <title>Widgets and Views</title>
     <filename>group__Pt-Forms-Widgets.html</filename>
@@ -67189,6 +66915,280 @@
     <class kind="class">Pt::Forms::WindowState</class>
     <class kind="class">Pt::Forms::Workspace</class>
     <class kind="class">Pt::Forms::WorkspaceManager</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Forms-Input</name>
+    <title>Pointer and Keyboard Input</title>
+    <filename>group__Pt-Forms-Input.html</filename>
+    <class kind="class">Pt::Forms::EnterEvent</class>
+    <class kind="class">Pt::Forms::FocusEvent</class>
+    <class kind="class">Pt::Forms::InputMethod</class>
+    <class kind="class">Pt::Forms::Key</class>
+    <class kind="class">Pt::Forms::KeyEvent</class>
+    <class kind="class">Pt::Forms::LeaveEvent</class>
+    <class kind="class">Pt::Forms::MouseButton</class>
+    <class kind="class">Pt::Forms::MouseState</class>
+    <class kind="class">Pt::Forms::MouseEvent</class>
+    <class kind="class">Pt::Forms::Responder</class>
+    <class kind="class">Pt::Forms::ScrollEvent</class>
+    <class kind="class">Pt::Forms::TouchEvent</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Gfx-Drawing</name>
+    <title>Drawing Graphics and Text</title>
+    <filename>group__Pt-Gfx-Drawing.html</filename>
+    <class kind="class">Pt::Gfx::Bitmap</class>
+    <class kind="class">Pt::Gfx::ColorStop</class>
+    <class kind="class">Pt::Gfx::ColorStops</class>
+    <class kind="class">Pt::Gfx::Brush</class>
+    <class kind="class">Pt::Gfx::Canvas</class>
+    <class kind="class">Pt::Gfx::CompositionMode</class>
+    <class kind="class">Pt::Gfx::Font</class>
+    <class kind="class">Pt::Gfx::FontMetrics</class>
+    <class kind="class">Pt::Gfx::Paint</class>
+    <class kind="class">Pt::Gfx::PaintContext</class>
+    <class kind="class">Pt::Gfx::Painter</class>
+    <class kind="class">Pt::Gfx::PainterBase</class>
+    <class kind="class">Pt::Gfx::PaintSurface</class>
+    <class kind="class">Pt::Gfx::Path</class>
+    <class kind="class">Pt::Gfx::PathElement</class>
+    <class kind="class">Pt::Gfx::PathIterator</class>
+    <class kind="class">Pt::Gfx::Pen</class>
+    <class kind="class">Pt::Gfx::Scaling</class>
+    <class kind="class">Pt::Gfx::TextMetrics</class>
+    <class kind="class">Pt::Gfx::Transform</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>FillRule</name>
+      <anchorfile>group__Pt-Gfx-Drawing.html</anchorfile>
+      <anchor>ga9a534b0377c9ca41983d53b0dae0d5a4</anchor>
+      <arglist></arglist>
+      <enumvalue file="group__Pt-Gfx-Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a3d0365a27a39c0af183445fc4d932a8a">NonZero</enumvalue>
+      <enumvalue file="group__Pt-Gfx-Drawing.html" anchor="gga9a534b0377c9ca41983d53b0dae0d5a4a8e586e4bd2c45e86222301f2e6e0e390">EvenOdd</enumvalue>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Gfx-Images</name>
+    <title>Images and Image Views</title>
+    <filename>group__Pt-Gfx-Images.html</filename>
+    <class kind="class">Pt::Gfx::Argb32Image</class>
+    <class kind="class">Pt::Gfx::Rgb32Image</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-System-Concurrency</name>
+    <title>Concurrency</title>
+    <filename>group__Pt-System-Concurrency.html</filename>
+    <class kind="class">Pt::atomic_t</class>
+    <member kind="function">
+      <type>int</type>
+      <name>atomicGet</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>gad0729b77fd43f998cccf80171d578830</anchor>
+      <arglist>(volatile atomic_t &amp;val)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>atomicSet</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>ga8b80549fe3fa12eee7081f6f0dd669f1</anchor>
+      <arglist>(volatile atomic_t &amp;val, int n)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>atomicIncrement</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>gafa41ce93d64b93ccadb3e502e2cbfd24</anchor>
+      <arglist>(volatile atomic_t &amp;val)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>atomicDecrement</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>gaa1d59f5056e060e9dc2b2feeecd72c6c</anchor>
+      <arglist>(volatile atomic_t &amp;val)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>atomicExchange</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>ga73f8334ef879b3d3b6a9f7ff8a88f01d</anchor>
+      <arglist>(volatile atomic_t &amp;val, int exch)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>atomicCompareExchange</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>ga5ef07ac96bad50ab18f0f981db36d756</anchor>
+      <arglist>(volatile atomic_t &amp;val, int exch, int comp)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>atomicExchangeAdd</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>ga5ba4ae2225861a3154f9e2a33da82af0</anchor>
+      <arglist>(volatile atomic_t &amp;val, int add)</arglist>
+    </member>
+    <member kind="function">
+      <type>void *</type>
+      <name>atomicExchange</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>gab58678307ec4e4677e7f1b75ac8a1323</anchor>
+      <arglist>(void *volatile &amp;val, void *exch)</arglist>
+    </member>
+    <member kind="function">
+      <type>void *</type>
+      <name>atomicCompareExchange</name>
+      <anchorfile>group__Pt-System-Concurrency.html</anchorfile>
+      <anchor>gad79b7e6699c7ddf27695b6877d8e3ebe</anchor>
+      <arglist>(void *volatile &amp;val, void *exch, void *comp)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>FileSystem</name>
+    <title>File System Access</title>
+    <filename>group__FileSystem.html</filename>
+    <class kind="class">Pt::AccessFailed</class>
+    <class kind="class">Pt::System::DirectoryIterator</class>
+    <class kind="class">Pt::System::FileDevice</class>
+    <class kind="class">Pt::System::FileInfo</class>
+    <class kind="class">Pt::System::Path</class>
+  </compound>
+  <compound kind="group">
+    <name>Logging</name>
+    <title>Logging</title>
+    <filename>group__Logging.html</filename>
+    <class kind="class">Pt::System::LogChannel</class>
+    <class kind="class">Pt::System::Logger</class>
+    <class kind="class">Pt::System::LogMessage</class>
+    <class kind="class">Pt::System::LogRecord</class>
+    <class kind="class">Pt::System::LogTarget</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>LogLevel</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>gaca1fd1d8935433e6ba2e3918214e07f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Fatal</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a24d54883f5403a81c97e5ce29ee031ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Error</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Warn</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Info</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Debug</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Trace</name>
+      <anchorfile>group__Logging.html</anchorfile>
+      <anchor>ggaca1fd1d8935433e6ba2e3918214e07f9a8af18ff6dfbaa47fadcc947a9f12602d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Plugins</name>
+    <title>Dynamic Libraries and Plugins</title>
+    <filename>group__Plugins.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>Pt-System-Tar</name>
+    <title>Tar Archive I/O</title>
+    <filename>group__Pt-System-Tar.html</filename>
+    <class kind="class">Pt::System::TarEntry</class>
+    <class kind="class">Pt::System::TarReader</class>
+    <class kind="class">Pt::System::TarWriter</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Unit</name>
+    <title>Unit Testing</title>
+    <filename>group__Pt-Unit.html</filename>
+    <class kind="class">Pt::Unit::Application</class>
+    <class kind="class">Pt::Unit::Assertion</class>
+    <class kind="struct">Pt::Unit::RegisterTest</class>
+    <class kind="class">Pt::Unit::Reporter</class>
+    <class kind="class">Pt::Unit::Test</class>
+    <class kind="class">Pt::Unit::TestCase</class>
+    <class kind="class">Pt::Unit::TestContext</class>
+    <class kind="class">Pt::Unit::TestFixture</class>
+    <class kind="class">Pt::Unit::TestProtocol</class>
+    <class kind="class">Pt::Unit::TestSuite</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>gaa2a9f9a920fd54a49e1b8d8ec60cf8f5</anchor>
+      <arglist>(cond)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_MSG</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga139b236155a65e48217dfacbc4e4e7d0</anchor>
+      <arglist>(cond, what)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_EQUALS</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga2f193b97e6bcef318cc3dd063c810bcc</anchor>
+      <arglist>(value1, value2)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_EQUAL</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga0ae0d5077c8653ab73af76bdc5243974</anchor>
+      <arglist>(value1, value2)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_NEAR</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>gaf81fe90705f50213a1742d848ddfe8d5</anchor>
+      <arglist>(value1, value2)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_THROW</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga15c791624c31d18ceaaa779aff252f13</anchor>
+      <arglist>(cond, EX)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_ASSERT_NOTHROW</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>gab5903d61d0e9a566b388df67efbc2874</anchor>
+      <arglist>(cond)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PT_UNIT_FAIL</name>
+      <anchorfile>group__Pt-Unit.html</anchorfile>
+      <anchor>ga256dfa99f9df715a8632f5000735ef98</anchor>
+      <arglist>(what)</arglist>
+    </member>
   </compound>
   <compound kind="page">
     <name>allocators</name>
