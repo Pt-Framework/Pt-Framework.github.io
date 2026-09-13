@@ -122,44 +122,55 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>Forms {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">class </span>Direction</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">enum</span> Mode</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Left,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        Right,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        Top,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        Bottom</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Direction(Mode m = Left)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    : _mode(m)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Direction&amp; operator=(Mode m)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        _mode = m;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">operator</span> <a class="code" href="namespacePt.html#a435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> _mode;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="namespacePt.html#a435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> _mode;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911">   56</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">   60</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Left</a>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911ad48f7af8c070184f3774c8e85854eb66">   64</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911ad48f7af8c070184f3774c8e85854eb66">Right</a>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a47321105d20c4efd6c573a6d829e1ad9">   68</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a47321105d20c4efd6c573a6d829e1ad9">Top</a>,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a05cdd4fa6b505ee008f4e865acfecccb">Bottom</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a05cdd4fa6b505ee008f4e865acfecccb">   73</a></span>&#160;    };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a47ec83aad9cfd5a34b737db338dcedb0">   77</a></span>&#160;    <a class="code" href="classPt_1_1Forms_1_1Direction.html#a47ec83aad9cfd5a34b737db338dcedb0">Direction</a>(<a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> m = <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Left</a>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    : _mode(m)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#aa54150b07e354b2b8af135c606d7f375">   83</a></span>&#160;    <a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a>&amp; <a class="code" href="classPt_1_1Forms_1_1Direction.html#aa54150b07e354b2b8af135c606d7f375">operator=</a>(<a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> m)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        _mode = m;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1Direction.html#a0c3248d2f634b6c404e30d18578ccbf0">   91</a></span>&#160;    <span class="keyword">operator</span> <a class="code" href="namespacePt.html#a435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> _mode;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="namespacePt.html#a435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> _mode;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Direction::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdoc">Left to right.</div><div class="ttdef"><b>Definition:</b> Direction.h:60</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a47ec83aad9cfd5a34b737db338dcedb0"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a47ec83aad9cfd5a34b737db338dcedb0">Pt::Forms::Direction::Direction</a></div><div class="ttdeci">Direction(Mode m=Left)</div><div class="ttdoc">Creates a direction with mode m.</div><div class="ttdef"><b>Definition:</b> Direction.h:77</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911ad48f7af8c070184f3774c8e85854eb66"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911ad48f7af8c070184f3774c8e85854eb66">Pt::Forms::Direction::Right</a></div><div class="ttdeci">@ Right</div><div class="ttdoc">Right to left.</div><div class="ttdef"><b>Definition:</b> Direction.h:64</div></div>
 <div class="ttc" id="anamespacePt_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="namespacePt.html#a435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a></div><div class="ttdeci">uint_type uint32_t</div><div class="ttdoc">Unsigned 32-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Pt::Forms::Direction::Mode</a></div><div class="ttdeci">Mode</div><div class="ttdoc">Flow axis and sense.</div><div class="ttdef"><b>Definition:</b> Direction.h:57</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_aa54150b07e354b2b8af135c606d7f375"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#aa54150b07e354b2b8af135c606d7f375">Pt::Forms::Direction::operator=</a></div><div class="ttdeci">Direction &amp; operator=(Mode m)</div><div class="ttdoc">Sets the direction to m and returns this object.</div><div class="ttdef"><b>Definition:</b> Direction.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html">Pt::Forms::Direction</a></div><div class="ttdoc">Names a flow direction.</div><div class="ttdef"><b>Definition:</b> Direction.h:52</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911a47321105d20c4efd6c573a6d829e1ad9"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a47321105d20c4efd6c573a6d829e1ad9">Pt::Forms::Direction::Top</a></div><div class="ttdeci">@ Top</div><div class="ttdoc">Top to bottom.</div><div class="ttdef"><b>Definition:</b> Direction.h:68</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911a05cdd4fa6b505ee008f4e865acfecccb"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a05cdd4fa6b505ee008f4e865acfecccb">Pt::Forms::Direction::Bottom</a></div><div class="ttdeci">@ Bottom</div><div class="ttdoc">Bottom to top.</div><div class="ttdef"><b>Definition:</b> Direction.h:72</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

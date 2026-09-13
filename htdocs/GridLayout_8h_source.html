@@ -122,52 +122,67 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>Forms {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">class </span>PT_FORMS_API GridLayout : <span class="keyword">public</span> Layout</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">enum</span> Orientation</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            Horizontal = 0,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            Vertical = 1</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        };</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">explicit</span> GridLayout(Orientation o = Vertical, std::size_t span = 0);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">virtual</span> ~GridLayout();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> setOrientation(Orientation o, std::size_t span = 0);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> addItem(Control&amp; control);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> removeItem(Control&amp; control);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        Gfx::SizeF onMeasureVertical(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        Gfx::SizeF onMeasureHorizontal(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> onLayoutVertical(<span class="keyword">const</span> Gfx::SizeF&amp; itemSize, <span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> onLayoutHorizontal(<span class="keyword">const</span> Gfx::SizeF&amp; itemSize, <span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        Orientation _orientation;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::size_t _span;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html">   67</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1GridLayout.html">GridLayout</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1Layout.html">Layout</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58">   72</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58a7d5f78c516bedc0a066182a6fd606b8b">   76</a></span>&#160;            Horizontal = 0,</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            Vertical = 1</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600">   81</a></span>&#160;        };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#aa9b3137506c12f23e1e01279cd0dca70">   86</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#aa9b3137506c12f23e1e01279cd0dca70">GridLayout</a>(<a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> o = Vertical, std::size_t span = 0);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a89a236273edbc405b670e26f16e44173">   90</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a89a236273edbc405b670e26f16e44173">~GridLayout</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a80c557228b03f01b339666641ee1fac2">   94</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a80c557228b03f01b339666641ee1fac2">setOrientation</a>(<a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> o, std::size_t span = 0);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">  100</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a0b41906131b5d86d758001ea5604e303">  104</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a0b41906131b5d86d758001ea5604e303">removeItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a912210d8dfc33e555b12402ee47ac406">  109</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GridLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">  113</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasureVertical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasureHorizontal(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> onLayoutVertical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; itemSize, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> onLayoutHorizontal(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; itemSize, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> _orientation;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        std::size_t _span;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a871118a09520247c78a71ecd7b0abd58"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58">Pt::Forms::GridLayout::Orientation</a></div><div class="ttdeci">Orientation</div><div class="ttdoc">Wrapping axis of the grid.</div><div class="ttdef"><b>Definition:</b> GridLayout.h:73</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html">Pt::Forms::GridLayout</a></div><div class="ttdoc">Arranges children in uniform wrapping cells.</div><div class="ttdef"><b>Definition:</b> GridLayout.h:68</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a89a236273edbc405b670e26f16e44173"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a89a236273edbc405b670e26f16e44173">Pt::Forms::GridLayout::~GridLayout</a></div><div class="ttdeci">virtual ~GridLayout()</div><div class="ttdoc">Destroys the layout. Attached controls are not destroyed.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a0b41906131b5d86d758001ea5604e303"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a0b41906131b5d86d758001ea5604e303">Pt::Forms::GridLayout::removeItem</a></div><div class="ttdeci">void removeItem(Control &amp;control)</div><div class="ttdoc">Detaches control without destroying it.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Control_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Control.html">Pt::Forms::Control</a></div><div class="ttdoc">Reusable view used as application content.</div><div class="ttdef"><b>Definition:</b> Control.h:107</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a912210d8dfc33e555b12402ee47ac406"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a912210d8dfc33e555b12402ee47ac406">Pt::Forms::GridLayout::onMeasure</a></div><div class="ttdeci">virtual Gfx::SizeF onMeasure(const SizePolicy &amp;policy)</div><div class="ttdoc">Measures uniform cells from the largest preferred child.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_aa9b3137506c12f23e1e01279cd0dca70"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#aa9b3137506c12f23e1e01279cd0dca70">Pt::Forms::GridLayout::GridLayout</a></div><div class="ttdeci">GridLayout(Orientation o=Vertical, std::size_t span=0)</div><div class="ttdoc">Creates a grid with orientation o and wrap count span.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Layout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Layout.html">Pt::Forms::Layout</a></div><div class="ttdoc">Control that arranges child controls.</div><div class="ttdef"><b>Definition:</b> Layout.h:46</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a68d03b9b05b163ae71a33c9ffa418f84"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">Pt::Forms::GridLayout::onLayout</a></div><div class="ttdeci">virtual void onLayout(const Gfx::RectF &amp;rect)</div><div class="ttdoc">Places children in wrapping cells of uniform size.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::GridLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as the next grid item.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a80c557228b03f01b339666641ee1fac2"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a80c557228b03f01b339666641ee1fac2">Pt::Forms::GridLayout::setOrientation</a></div><div class="ttdeci">void setOrientation(Orientation o, std::size_t span=0)</div><div class="ttdoc">Sets the orientation to o and the wrap count to span.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

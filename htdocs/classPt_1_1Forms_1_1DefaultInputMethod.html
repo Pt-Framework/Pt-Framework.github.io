@@ -81,21 +81,30 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">DefaultInputMethod Class Reference</div>  </div>
+<div class="title">DefaultInputMethod Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Input.html">Pointer and Keyboard Input</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="InputMethod_8h_source.html">Pt/Forms/InputMethod.h</a>&gt;</code></p>
 
-<p>Application-owned default input method.  
+<p>Provides the application-owned default input method.  
 </p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1InputMethod.html">InputMethod</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae9e18d86bbadda6abbafe2b7563a78cd"><td class="memItemLeft" align="right" valign="top"><a id="ae9e18d86bbadda6abbafe2b7563a78cd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1DefaultInputMethod.html#ae9e18d86bbadda6abbafe2b7563a78cd">DefaultInputMethod</a> ()</td></tr>
+<tr class="memdesc:ae9e18d86bbadda6abbafe2b7563a78cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the default input method. <br /></td></tr>
+<tr class="separator:ae9e18d86bbadda6abbafe2b7563a78cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97aa19cfc92ddbed8b43739d633e92f1"><td class="memItemLeft" align="right" valign="top"><a id="a97aa19cfc92ddbed8b43739d633e92f1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1DefaultInputMethod.html#a97aa19cfc92ddbed8b43739d633e92f1">~DefaultInputMethod</a> ()</td></tr>
+<tr class="memdesc:a97aa19cfc92ddbed8b43739d633e92f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a97aa19cfc92ddbed8b43739d633e92f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d8a6cfb13917785c143e74d40e4e2be"><td class="memItemLeft" align="right" valign="top"><a id="a9d8a6cfb13917785c143e74d40e4e2be"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1InputMethod.html#a9d8a6cfb13917785c143e74d40e4e2be">isVisible</a> () const</td></tr>
 <tr class="memdesc:a9d8a6cfb13917785c143e74d40e4e2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when the method is showing UI. <br /></td></tr>
@@ -119,6 +128,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1InputMethod.html#aaf50e77097e128f71e180747cfaa604d">sendEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1KeyEvent.html">KeyEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:aaf50e77097e128f71e180747cfaa604d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends <em>ev</em> to the current receiver. <br /></td></tr>
 <tr class="separator:aaf50e77097e128f71e180747cfaa604d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2f96eda79d6f51a33baab29d01a38f7b"><td class="memItemLeft" align="right" valign="top"><a id="a2f96eda79d6f51a33baab29d01a38f7b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1DefaultInputMethod.html#a2f96eda79d6f51a33baab29d01a38f7b">onBegin</a> ()</td></tr>
+<tr class="memdesc:a2f96eda79d6f51a33baab29d01a38f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the platform or custom text-entry session. <br /></td></tr>
+<tr class="separator:a2f96eda79d6f51a33baab29d01a38f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64a1dd5cca31cca715815f6483166ec"><td class="memItemLeft" align="right" valign="top"><a id="ac64a1dd5cca31cca715815f6483166ec"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1DefaultInputMethod.html#ac64a1dd5cca31cca715815f6483166ec">onFinish</a> ()</td></tr>
+<tr class="memdesc:ac64a1dd5cca31cca715815f6483166ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finishes the platform or custom text-entry session. <br /></td></tr>
+<tr class="separator:ac64a1dd5cca31cca715815f6483166ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1690f09209caf1785406d2b31c0946"><td class="memItemLeft" align="right" valign="top"><a id="afb1690f09209caf1785406d2b31c0946"></a>
+virtual <a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1DefaultInputMethod.html#afb1690f09209caf1785406d2b31c0946">onActiveWindow</a> ()</td></tr>
+<tr class="memdesc:afb1690f09209caf1785406d2b31c0946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active text-entry window, or 0. <br /></td></tr>
+<tr class="separator:afb1690f09209caf1785406d2b31c0946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4cf67e92a4565e6a074a1f6feb9b933b"></a>

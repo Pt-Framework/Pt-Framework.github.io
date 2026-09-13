@@ -84,14 +84,14 @@
 <div class="title">CloseEvent.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner </span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Marc Boris Duerner</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">   Copyright (C) 2015 Laurentiu-Gheorghe Crisan</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  modify it under the terms of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  License as published by the Free Software Foundation; either</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  As a special exception, you may use this file as part of a free</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  software library without restriction. Specifically, if other files</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  instantiate templates or use macros or inline functions from this</span></div>
@@ -101,15 +101,15 @@
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  License. This exception does not however invalidate any other</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  reasons why the executable file might be covered by the GNU Library</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  General Public License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  This library is distributed in the hope that it will be useful,</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  You should have received a copy of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  License along with this library; if not, write to the Free Software</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">  MA 02110-1301 USA</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
@@ -128,41 +128,44 @@
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CloseEvent.html">   49</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1CloseEvent.html">CloseEvent</a> : <span class="keyword">public</span> Pt::BasicEvent&lt;CloseEvent&gt;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Forms_1_1CloseEvent.html">CloseEvent</a>(<a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>&amp; widget)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        : _widgetId_( widget.<a class="code" href="classPt_1_1Forms_1_1Widget.html#a66795bf927757b4118702a3f2f48484f">id</a>() )</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        , _widget(&amp;widget)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classPt_1_1Forms_1_1CloseEvent.html">CloseEvent</a>()</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> widgetId()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> _widgetId_;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>* widget()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> _widget;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> _widgetId_;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>*      _widget;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CloseEvent.html#a69e2be74b5230770aafeb4b89561f3a4">   54</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Forms_1_1CloseEvent.html#a69e2be74b5230770aafeb4b89561f3a4">CloseEvent</a>(<a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>&amp; widget)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        : _widgetId_( widget.id() )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        , _widget(&amp;widget)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CloseEvent.html#abf142a06384e74ee9e02daac5bd55787">   62</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1CloseEvent.html#abf142a06384e74ee9e02daac5bd55787">~CloseEvent</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CloseEvent.html#ac8213ddcc5496cd3188cb7fd9470e9bd">   68</a></span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> <a class="code" href="classPt_1_1Forms_1_1CloseEvent.html#ac8213ddcc5496cd3188cb7fd9470e9bd">widgetId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> _widgetId_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CloseEvent.html#a5c70372408e0d578cf75d05cdf336bb6">   75</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>* <a class="code" href="classPt_1_1Forms_1_1CloseEvent.html#a5c70372408e0d578cf75d05cdf336bb6">widget</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> _widget;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> _widgetId_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>*      _widget;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CloseEvent_html_a69e2be74b5230770aafeb4b89561f3a4"><div class="ttname"><a href="classPt_1_1Forms_1_1CloseEvent.html#a69e2be74b5230770aafeb4b89561f3a4">Pt::Forms::CloseEvent::CloseEvent</a></div><div class="ttdeci">CloseEvent(Widget &amp;widget)</div><div class="ttdoc">Creates a close event for widget.</div><div class="ttdef"><b>Definition:</b> CloseEvent.h:54</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1CloseEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CloseEvent.html">Pt::Forms::CloseEvent</a></div><div class="ttdoc">Reports that a widget is closing.</div><div class="ttdef"><b>Definition:</b> CloseEvent.h:50</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a></div><div class="ttdoc">Common type of every visual Forms object.</div><div class="ttdef"><b>Definition:</b> Widget.h:104</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_a66795bf927757b4118702a3f2f48484f"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#a66795bf927757b4118702a3f2f48484f">Pt::Forms::Widget::id</a></div><div class="ttdeci">Pt::uint64_t id() const</div><div class="ttdoc">Returns the application-unique ID of this live widget.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a></div><div class="ttdoc">Common type of every visual Forms object.</div><div class="ttdef"><b>Definition:</b> Widget.h:105</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CloseEvent_html_ac8213ddcc5496cd3188cb7fd9470e9bd"><div class="ttname"><a href="classPt_1_1Forms_1_1CloseEvent.html#ac8213ddcc5496cd3188cb7fd9470e9bd">Pt::Forms::CloseEvent::widgetId</a></div><div class="ttdeci">Pt::uint64_t widgetId() const</div><div class="ttdoc">Returns the ID of the affected widget.</div><div class="ttdef"><b>Definition:</b> CloseEvent.h:68</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CloseEvent_html_abf142a06384e74ee9e02daac5bd55787"><div class="ttname"><a href="classPt_1_1Forms_1_1CloseEvent.html#abf142a06384e74ee9e02daac5bd55787">Pt::Forms::CloseEvent::~CloseEvent</a></div><div class="ttdeci">virtual ~CloseEvent()</div><div class="ttdoc">Destroys the close event.</div><div class="ttdef"><b>Definition:</b> CloseEvent.h:62</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CloseEvent_html_a5c70372408e0d578cf75d05cdf336bb6"><div class="ttname"><a href="classPt_1_1Forms_1_1CloseEvent.html#a5c70372408e0d578cf75d05cdf336bb6">Pt::Forms::CloseEvent::widget</a></div><div class="ttdeci">Widget * widget() const</div><div class="ttdoc">Returns the affected widget.</div><div class="ttdef"><b>Definition:</b> CloseEvent.h:75</div></div>
 <div class="ttc" id="anamespacePt_html_aa232ecf786a74ce5363c36c10798d2b1"><div class="ttname"><a href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a></div><div class="ttdeci">uint_type uint64_t</div><div class="ttdoc">Unsigned 64-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:62</div></div>
 
 <div class="clear">&nbsp;</div>

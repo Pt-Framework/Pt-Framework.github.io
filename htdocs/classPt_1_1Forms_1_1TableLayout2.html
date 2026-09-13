@@ -85,19 +85,29 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TableLayout2 Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a></div></div>  </div>
+<div class="title">TableLayout2 Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Layouts.html">Layouts</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="TableLayout_8h_source.html">Pt/Forms/TableLayout.h</a>&gt;</code></p>
 
-<p>Table layout with two-phase measure for Fill and nested layouts.  
-</p>
+<p>Arranges children in row and column tracks.  
+ <a href="classPt_1_1Forms_1_1TableLayout2.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Layout.html">Layout</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:ab4b01f3da0a2276708526324bf66dbdb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdb">SizeMode</a> { <br />
+&#160;&#160;<a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Fill</a>, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Preferred</a>, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba8da0283267b1c9960b792a579407ff02">Fixed</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab4b01f3da0a2276708526324bf66dbdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sizing rule for a row or column track.  <a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdb">More...</a><br /></td></tr>
+<tr class="separator:ab4b01f3da0a2276708526324bf66dbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab55053d0a57be0d70df423df9c2b12cd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1View.html#ab55053d0a57be0d70df423df9c2b12cd">FocusPolicy</a> { <br />
 &#160;&#160;<a class="el" href="classPt_1_1Forms_1_1View.html#ab55053d0a57be0d70df423df9c2b12cda506647bdf445931594e9b2de731eeb88">NoFocus</a>, 
 <br />
@@ -111,6 +121,29 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a075a65743da59b120aded97e8ba7da12"><td class="memItemLeft" align="right" valign="top"><a id="a075a65743da59b120aded97e8ba7da12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a075a65743da59b120aded97e8ba7da12">TableLayout2</a> ()</td></tr>
+<tr class="memdesc:a075a65743da59b120aded97e8ba7da12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty table layout. <br /></td></tr>
+<tr class="separator:a075a65743da59b120aded97e8ba7da12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c93a7f4bad518fd96437bafb4fb392"><td class="memItemLeft" align="right" valign="top"><a id="a39c93a7f4bad518fd96437bafb4fb392"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a39c93a7f4bad518fd96437bafb4fb392">~TableLayout2</a> ()</td></tr>
+<tr class="memdesc:a39c93a7f4bad518fd96437bafb4fb392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the layout. Attached controls are not destroyed. <br /></td></tr>
+<tr class="separator:a39c93a7f4bad518fd96437bafb4fb392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0abc1448e972f339952d2ed3bf083690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control, std::size_t row, std::size_t column)</td></tr>
+<tr class="memdesc:a0abc1448e972f339952d2ed3bf083690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches <em>control</em> at <em>row</em> and <em>column</em>.  <a href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">More...</a><br /></td></tr>
+<tr class="separator:a0abc1448e972f339952d2ed3bf083690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b41906131b5d86d758001ea5604e303"><td class="memItemLeft" align="right" valign="top"><a id="a0b41906131b5d86d758001ea5604e303"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a0b41906131b5d86d758001ea5604e303">removeItem</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
+<tr class="memdesc:a0b41906131b5d86d758001ea5604e303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches <em>control</em> without destroying it. <br /></td></tr>
+<tr class="separator:a0b41906131b5d86d758001ea5604e303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6576e5f0222afd743840eaffd5c84cc"><td class="memItemLeft" align="right" valign="top"><a id="ac6576e5f0222afd743840eaffd5c84cc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a> (std::size_t col, <a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdb">SizeMode</a> mode, double <a class="el" href="classPt_1_1Forms_1_1Widget.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a>=0)</td></tr>
+<tr class="memdesc:ac6576e5f0222afd743840eaffd5c84cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets column <em>col</em> to <em>mode</em> and optional fixed <em>size</em>. <br /></td></tr>
+<tr class="separator:ac6576e5f0222afd743840eaffd5c84cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d1cf7ebe8a2ab0e6aa6dda875010ec"><td class="memItemLeft" align="right" valign="top"><a id="ad1d1cf7ebe8a2ab0e6aa6dda875010ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a> (std::size_t row, <a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdb">SizeMode</a> mode, double <a class="el" href="classPt_1_1Forms_1_1Widget.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a>=0)</td></tr>
+<tr class="memdesc:ad1d1cf7ebe8a2ab0e6aa6dda875010ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets row <em>row</em> to <em>mode</em> and optional fixed <em>size</em>. <br /></td></tr>
+<tr class="separator:ad1d1cf7ebe8a2ab0e6aa6dda875010ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39639f36997748377dfbbf5931b59cd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1View.html">View</a> &amp;<a class="el" href="classPt_1_1Forms_1_1Widget.html#a520a9957f011623bbc9a1164dbc54779">parent</a>)</td></tr>
 <tr class="memdesc:a39639f36997748377dfbbf5931b59cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches this control to <em>parent</em>.  <a href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">More...</a><br /></td></tr>
 <tr class="separator:a39639f36997748377dfbbf5931b59cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,28 +225,28 @@ const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td>
 <tr class="memdesc:ab5a8da52949572b7325932907bfef6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position and size in parent logical coordinates. <br /></td></tr>
 <tr class="separator:ab5a8da52949572b7325932907bfef6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a9f2218eb2b9a091fdf8a0037334edd"><td class="memItemLeft" align="right" valign="top"><a id="a0a9f2218eb2b9a091fdf8a0037334edd"></a>
-const SizePolicy &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a0a9f2218eb2b9a091fdf8a0037334edd">sizePolicy</a> () const</td></tr>
+const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a0a9f2218eb2b9a091fdf8a0037334edd">sizePolicy</a> () const</td></tr>
 <tr class="memdesc:a0a9f2218eb2b9a091fdf8a0037334edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this control's requested size policy. <br /></td></tr>
 <tr class="separator:a0a9f2218eb2b9a091fdf8a0037334edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bbabd6bb933e6b0557812f463cbb1ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a6bbabd6bb933e6b0557812f463cbb1ae">setSizePolicy</a> (const SizePolicy &amp;policy)</td></tr>
+<tr class="memitem:a6bbabd6bb933e6b0557812f463cbb1ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a6bbabd6bb933e6b0557812f463cbb1ae">setSizePolicy</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
 <tr class="memdesc:a6bbabd6bb933e6b0557812f463cbb1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this control's requested size policy and requests relayout.  <a href="classPt_1_1Forms_1_1Control.html#a6bbabd6bb933e6b0557812f463cbb1ae">More...</a><br /></td></tr>
 <tr class="separator:a6bbabd6bb933e6b0557812f463cbb1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c20ef8a2585db2db943034511492a0"><td class="memItemLeft" align="right" valign="top"><a id="a85c20ef8a2585db2db943034511492a0"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a85c20ef8a2585db2db943034511492a0">preferredSize</a> () const</td></tr>
 <tr class="memdesc:a85c20ef8a2585db2db943034511492a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the most recent measure() call. <br /></td></tr>
 <tr class="separator:a85c20ef8a2585db2db943034511492a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca083eb02e3c7fe7d0ad23b53a6102ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#aca083eb02e3c7fe7d0ad23b53a6102ec">measure</a> (const SizePolicy &amp;policy)</td></tr>
+<tr class="memitem:aca083eb02e3c7fe7d0ad23b53a6102ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#aca083eb02e3c7fe7d0ad23b53a6102ec">measure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
 <tr class="memdesc:aca083eb02e3c7fe7d0ad23b53a6102ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the preferred size under parent constraint <em>policy</em>.  <a href="classPt_1_1Forms_1_1Control.html#aca083eb02e3c7fe7d0ad23b53a6102ec">More...</a><br /></td></tr>
 <tr class="separator:aca083eb02e3c7fe7d0ad23b53a6102ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3499569e12c854b0b5e646c7b5b47ab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a3499569e12c854b0b5e646c7b5b47ab1">relayout</a> ()</td></tr>
 <tr class="memdesc:a3499569e12c854b0b5e646c7b5b47ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates this control's measurement and layout.  <a href="classPt_1_1Forms_1_1Control.html#a3499569e12c854b0b5e646c7b5b47ab1">More...</a><br /></td></tr>
 <tr class="separator:a3499569e12c854b0b5e646c7b5b47ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f113b7a190259491f5eab21318ab42a"><td class="memItemLeft" align="right" valign="top"><a id="a4f113b7a190259491f5eab21318ab42a"></a>
-const Spacing &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a4f113b7a190259491f5eab21318ab42a">margin</a> () const</td></tr>
+const <a class="el" href="classPt_1_1Forms_1_1Spacing.html">Spacing</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a4f113b7a190259491f5eab21318ab42a">margin</a> () const</td></tr>
 <tr class="memdesc:a4f113b7a190259491f5eab21318ab42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outer spacing requested around this control. <br /></td></tr>
 <tr class="separator:a4f113b7a190259491f5eab21318ab42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceff381829eb37638e3ae1995c33a896"><td class="memItemLeft" align="right" valign="top"><a id="aceff381829eb37638e3ae1995c33a896"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#aceff381829eb37638e3ae1995c33a896">setMargin</a> (const Spacing &amp;s)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#aceff381829eb37638e3ae1995c33a896">setMargin</a> (const <a class="el" href="classPt_1_1Forms_1_1Spacing.html">Spacing</a> &amp;s)</td></tr>
 <tr class="memdesc:aceff381829eb37638e3ae1995c33a896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the outer spacing to <em>s</em> and requests relayout. <br /></td></tr>
 <tr class="separator:aceff381829eb37638e3ae1995c33a896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b094a91e8eb0c52a3481ac3d57af7a8"><td class="memItemLeft" align="right" valign="top"><a id="a4b094a91e8eb0c52a3481ac3d57af7a8"></a>
@@ -225,11 +258,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:af5605ab6cf270a22d685b28d0e11cdd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets horizontal and vertical outer spacing and requests relayout. <br /></td></tr>
 <tr class="separator:af5605ab6cf270a22d685b28d0e11cdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9d8e2a650555b57a23a3dbe4acce56"><td class="memItemLeft" align="right" valign="top"><a id="acf9d8e2a650555b57a23a3dbe4acce56"></a>
-const Spacing &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#acf9d8e2a650555b57a23a3dbe4acce56">padding</a> () const</td></tr>
+const <a class="el" href="classPt_1_1Forms_1_1Spacing.html">Spacing</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#acf9d8e2a650555b57a23a3dbe4acce56">padding</a> () const</td></tr>
 <tr class="memdesc:acf9d8e2a650555b57a23a3dbe4acce56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inner spacing requested around this control's content. <br /></td></tr>
 <tr class="separator:acf9d8e2a650555b57a23a3dbe4acce56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac05d5b9d1282a2e3a1d56213eb4a91"><td class="memItemLeft" align="right" valign="top"><a id="a4ac05d5b9d1282a2e3a1d56213eb4a91"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a4ac05d5b9d1282a2e3a1d56213eb4a91">setPadding</a> (const Spacing &amp;p)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a4ac05d5b9d1282a2e3a1d56213eb4a91">setPadding</a> (const <a class="el" href="classPt_1_1Forms_1_1Spacing.html">Spacing</a> &amp;p)</td></tr>
 <tr class="memdesc:a4ac05d5b9d1282a2e3a1d56213eb4a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the inner spacing to <em>p</em> and requests relayout. <br /></td></tr>
 <tr class="separator:a4ac05d5b9d1282a2e3a1d56213eb4a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e72af0caff9636f3d167d924312f0e"><td class="memItemLeft" align="right" valign="top"><a id="a19e72af0caff9636f3d167d924312f0e"></a>
@@ -453,13 +486,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8a741e85b6d1289105032bcf39d42ac9"><td class="memItemLeft" align="right" valign="top"><a id="a8a741e85b6d1289105032bcf39d42ac9"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a8a741e85b6d1289105032bcf39d42ac9">onRemoveControl</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
-<tr class="memdesc:a8a741e85b6d1289105032bcf39d42ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies after <em>control</em> stops being a direct child. <br /></td></tr>
+<tr class="memdesc:a8a741e85b6d1289105032bcf39d42ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the cell that held <em>control</em>. <br /></td></tr>
 <tr class="separator:a8a741e85b6d1289105032bcf39d42ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const SizePolicy &amp;policy)</td></tr>
-<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures intrinsic content for effective policy <em>policy</em>.  <a href="classPt_1_1Forms_1_1TableLayout2.html#a912210d8dfc33e555b12402ee47ac406">More...</a><br /></td></tr>
+<tr class="memitem:a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft" align="right" valign="top"><a id="a912210d8dfc33e555b12402ee47ac406"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
+<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures tracks, then Fill cells at the resolved sizes. <br /></td></tr>
 <tr class="separator:a912210d8dfc33e555b12402ee47ac406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
-<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns geometry to direct children within <em>rect</em>.  <a href="classPt_1_1Forms_1_1TableLayout2.html#a68d03b9b05b163ae71a33c9ffa418f84">More...</a><br /></td></tr>
+<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft" align="right" valign="top"><a id="a68d03b9b05b163ae71a33c9ffa418f84"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
+<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns each visible cell its track rectangle. <br /></td></tr>
 <tr class="separator:a68d03b9b05b163ae71a33c9ffa418f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f730a8927941df92c4bb28ddbfa6270"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">onInvalidateEvent</a> (const InvalidateEvent &amp;ev)</td></tr>
 <tr class="memdesc:a9f730a8927941df92c4bb28ddbfa6270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the final coalesced invalidation event.  <a href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">More...</a><br /></td></tr>
@@ -467,10 +502,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
 <tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates derived state after invalidation.  <a href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">More...</a><br /></td></tr>
 <tr class="separator:ae95892a055053b2f35ed11e85287a8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const PaintEvent &amp;ev)</td></tr>
+<tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:ad62f36a3254f4389b12c85ca448dd3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a paint event and paints visible child controls.  <a href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">More...</a><br /></td></tr>
 <tr class="separator:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad4f23d0135dce0096cc4f8e79da28fbd">onPaintEvent</a> (const PaintEvent &amp;ev)</td></tr>
+<tr class="memitem:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad4f23d0135dce0096cc4f8e79da28fbd">onPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles this control's own paint event.  <a href="classPt_1_1Forms_1_1Control.html#ad4f23d0135dce0096cc4f8e79da28fbd">More...</a><br /></td></tr>
 <tr class="separator:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd52e91b6335df9f9f1172cac2c45cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
@@ -757,7 +792,46 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 <tr class="separator:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>addItem() places a child in a cell. setColumn() and setRow() set each track to Preferred, Fixed, or Fill. Preferred tracks use the largest preferred child on that track. Fixed tracks use the given size. Fill tracks share leftover space after preferred and fixed tracks. Measure resolves preferred and fixed tracks first so Fill cells and nested layouts see the resulting track size. <a class="el" href="classPt_1_1Forms_1_1Layout.html" title="Control that arranges child controls.">Layout</a> assigns each visible cell the track rectangle minus its margin.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Preferred</a> | <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Fill</a></div>
+<div class="line">+---------+---------------+</div>
+<div class="line">| <a class="code" href="classPt_1_1Forms_1_1Widget.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>    | edit          |  <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Preferred</a></div>
+<div class="line">+---------+---------------+</div>
+<div class="line">| notes   |               |  <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Fill</a></div>
+<div class="line">+---------+---------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1TableLayout2.html">Pt::Forms::TableLayout2</a> table;</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a>(0, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a>(1, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a>(0, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a>(1, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(<a class="code" href="classPt_1_1Forms_1_1Widget.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, 0, 0);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(edit, 0, 1);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(notes, 1, 0);</div>
+<div class="line">window.setContent(&amp;table);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ab4b01f3da0a2276708526324bf66dbdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b01f3da0a2276708526324bf66dbdb">&#9670;&nbsp;</a></span>SizeMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdb">SizeMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6"></a>Fill&#160;</td><td class="fielddoc"><p>The track shares leftover space. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a"></a>Preferred&#160;</td><td class="fielddoc"><p>The track uses the largest preferred child size. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4b01f3da0a2276708526324bf66dbdba8da0283267b1c9960b792a579407ff02"></a>Fixed&#160;</td><td class="fielddoc"><p>The track uses a fixed size. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&nbsp;</a></span>FocusPolicy</h2>
 
@@ -789,61 +863,38 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a912210d8dfc33e555b12402ee47ac406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912210d8dfc33e555b12402ee47ac406">&#9670;&nbsp;</a></span>onMeasure()</h2>
+<a id="a0abc1448e972f339952d2ed3bf083690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0abc1448e972f339952d2ed3bf083690">&#9670;&nbsp;</a></span>addItem()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasure </td>
+          <td class="memname">void addItem </td>
           <td>(</td>
-          <td class="paramtype">const SizePolicy &amp;&#160;</td>
-          <td class="paramname"><em>policy</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname"><em>control</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return the preferred local content size. The default implementation returns <code>(0, 0)</code>. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>.</p>
-
-</div>
-</div>
-<a id="a68d03b9b05b163ae71a33c9ffa418f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d03b9b05b163ae71a33c9ffa418f84">&#9670;&nbsp;</a></span>onLayout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">virtual void onLayout </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;&#160;</td>
-          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Use child move() and resize() requests. The default implementation does not lay out children. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>.</p>
+<p>The layout does not take ownership. Missing tracks are created. </p>
 
 </div>
 </div>
@@ -1330,7 +1381,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#ae95892a055053b2f35ed11e85287a8fd">Widget</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">TabView</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">TabView</a>, <a class="el" href="classPt_1_1Forms_1_1PushButton.html#ae95892a055053b2f35ed11e85287a8fd">PushButton</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#ae95892a055053b2f35ed11e85287a8fd">ProgressBar</a>, <a class="el" href="classPt_1_1Forms_1_1Panel.html#ae95892a055053b2f35ed11e85287a8fd">Panel</a>, <a class="el" href="classPt_1_1Forms_1_1Label.html#ae95892a055053b2f35ed11e85287a8fd">Label</a>, and <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#ae95892a055053b2f35ed11e85287a8fd">CheckBox</a>.</p>
 
 </div>
 </div>
@@ -1346,7 +1397,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">virtual void onProcessPaintEvent </td>
           <td>(</td>
-          <td class="paramtype">const PaintEvent &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>ev</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1377,7 +1428,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">virtual void onPaintEvent </td>
           <td>(</td>
-          <td class="paramtype">const PaintEvent &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>ev</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1431,7 +1482,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1View.html#a4bd52e91b6335df9f9f1172cac2c45cd">View</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1TabView.html#a169d5d7261571fb77c21873078a5e1d9">TabView</a>, and <a class="el" href="classPt_1_1Forms_1_1Workspace.html#a222903c67b0f6e0cec74000911312173">Workspace</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1TabView.html#a169d5d7261571fb77c21873078a5e1d9">TabView</a>, <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a169d5d7261571fb77c21873078a5e1d9">PushButton</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#a169d5d7261571fb77c21873078a5e1d9">ProgressBar</a>, <a class="el" href="classPt_1_1Forms_1_1Panel.html#a169d5d7261571fb77c21873078a5e1d9">Panel</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#a169d5d7261571fb77c21873078a5e1d9">CheckBox</a>, <a class="el" href="classPt_1_1Forms_1_1Label.html#a4bd52e91b6335df9f9f1172cac2c45cd">Label</a>, and <a class="el" href="classPt_1_1Forms_1_1Workspace.html#a222903c67b0f6e0cec74000911312173">Workspace</a>.</p>
 
 </div>
 </div>
@@ -1447,7 +1498,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">void setSizePolicy </td>
           <td>(</td>
-          <td class="paramtype">const SizePolicy &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;&#160;</td>
           <td class="paramname"><em>policy</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1474,7 +1525,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> measure </td>
           <td>(</td>
-          <td class="paramtype">const SizePolicy &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;&#160;</td>
           <td class="paramname"><em>policy</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1609,6 +1660,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 <p>The default implementation forwards <em>m</em> to the control selected by setMnemonicControl(). </p>
+
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Button.html#ac0c392c62b968a7418fb0f8bb2e0a222">Button</a>.</p>
 
 </div>
 </div>
@@ -1763,6 +1816,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a00b4fb0d0830a05d8e9284202b808c54">Widget</a>.</p>
 
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>.</p>
+
 </div>
 </div>
 <a id="a2723f45dc09e09359e656adf936b063c"></a>
@@ -1791,6 +1846,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>The default implementation requests focus on press and returns false to continue responder dispatch. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a2723f45dc09e09359e656adf936b063c">Widget</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>.</p>
 
 </div>
 </div>
@@ -2780,6 +2837,13 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a></div><div class="ttdeci">@ Preferred</div><div class="ttdoc">The track uses the largest preferred child size.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:156</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_a0abc1448e972f339952d2ed3bf083690"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">Pt::Forms::TableLayout2::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, std::size_t row, std::size_t column)</div><div class="ttdoc">Attaches control at row and column.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a></div><div class="ttdeci">@ Fill</div><div class="ttdoc">The track shares leftover space.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:152</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ad1d1cf7ebe8a2ab0e6aa6dda875010ec"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">Pt::Forms::TableLayout2::setRow</a></div><div class="ttdeci">void setRow(std::size_t row, SizeMode mode, double size=0)</div><div class="ttdoc">Sets row row to mode and optional fixed size.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ad8227ba86a01f26e4f173cd5e219d5d1"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ad8227ba86a01f26e4f173cd5e219d5d1">Pt::Forms::Widget::name</a></div><div class="ttdeci">const std::string &amp; name() const</div><div class="ttdoc">Returns the optional name.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html">Pt::Forms::TableLayout2</a></div><div class="ttdoc">Arranges children in row and column tracks.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:142</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ac6576e5f0222afd743840eaffd5c84cc"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">Pt::Forms::TableLayout2::setColumn</a></div><div class="ttdeci">void setColumn(std::size_t col, SizeMode mode, double size=0)</div><div class="ttdoc">Sets column col to mode and optional fixed size.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

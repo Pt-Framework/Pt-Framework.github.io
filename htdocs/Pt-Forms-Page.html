@@ -80,10 +80,10 @@
 <div class="title">Graphical User Interfaces </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This chapter covers the application runtime, the widget and view object model, the display root, windows and workspaces, and input delivery.</p>
-<p>A Forms application creates windows and controls, shows the visual hierarchy, and runs the event loop. The inherited event loop also supports I/O, timers, and asynchronous operations.</p>
-<p>Application is the starting point and must be constructed before forms, windows, or controls. It is not a Widget. It provides the primary Screen and WindowManager, dispatches platform events, and supplies shared services such as scaling, styles, fonts, and input methods.</p>
-<p>Forms distinguishes the class hierarchy from the visual hierarchy. The following diagram shows the C++ inheritance relationship. It does not show which objects display or contain other objects.</p>
+<div class="textblock"><p>This chapter covers the application runtime, the widget and view object model, the display root, windows and workspaces, layouting and painting, input delivery, layouts, buttons, displays, icons and textual content, and styles and renderers.</p>
+<p>A Forms application constructs its visual hierarchy, shows its windows, and runs the event loop. The inherited event loop also supports I/O, timers, and asynchronous operations.</p>
+<p>Application is the runtime root. Construct it before forms, windows, or controls. It is not a Widget. The application provides the primary Screen and its WindowManager, dispatches platform events, and owns the shared scaling, style, font, and input-method services.</p>
+<p>The C++ class hierarchy and the visual hierarchy describe different relationships. The following diagram shows inheritance only. It does not describe which objects display or contain other objects. In particular, Window derives from Form; it is not a direct child of View.</p>
 <div class="fragment"><div class="line">Widget</div>
 <div class="line">    Screen</div>
 <div class="line">    WindowManager</div>
@@ -91,19 +91,19 @@
 <div class="line">        Form</div>
 <div class="line">            Window</div>
 <div class="line">        Control</div>
-</div><!-- fragment --><p>The visual hierarchy describes how Forms objects appear together. The same non-owning host pattern repeats at each level: Application provides the Screen, a WindowManager attaches Window objects, a Form attaches one content Control, and a Control attaches child controls, including layouts. A Workspace follows the same principle inside an ordinary control: it contains a window manager that presents several windows in its bounds.</p>
+</div><!-- fragment --><p>The visual hierarchy describes how Forms objects appear together. Each level follows the same non-owning host pattern: Application provides the Screen, a WindowManager attaches Window objects, a Form attaches one content Control, and a Control attaches child controls, including layouts. A Workspace applies the same pattern inside an ordinary control: its window manager presents several windows within the workspace bounds.</p>
 <div class="fragment"><div class="line">Application -&gt; Screen -&gt; WindowManager -&gt; Window (Form) -&gt; content Control -&gt; child Controls</div>
-</div><!-- fragment --><p>Forms does not take ownership of a window or control when it becomes part of the visual hierarchy. The code that creates an object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
-<p>The following example creates the smallest useful visual hierarchy: a window, its content layout, and a control displayed by that layout.</p>
+</div><!-- fragment --><p>Attaching a window or control does not transfer ownership. The code that creates an object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
+<p>The following example creates a visual hierarchy with a window, its content layout, and a control displayed by that layout.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a> application(argc, argv);</div>
 <div class="line"> </div>
-<div class="line">    Pt::Forms::Label label;</div>
-<div class="line">    label.setText(<span class="stringliteral">&quot;Hello, Forms&quot;</span>);</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> label;</div>
+<div class="line">    label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Hello, Forms&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    Pt::Forms::FlowLayout content;</div>
-<div class="line">    content.addItem(label);</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a> content;</div>
+<div class="line">    content.<a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(label);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a> window;</div>
 <div class="line">    window.<a class="code" href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">setTitle</a>(<span class="stringliteral">&quot;Example&quot;</span>);</div>
@@ -115,16 +115,17 @@
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Application"></a>
 Application</h1>
-<p>Application is the Forms runtime. It is not a Widget. Construct one before any widget, then show the visual hierarchy and enter the inherited event loop with Pt::System::Application::run().</p>
-<p>The application owns its platform implementation, graphics backend, and primary Screen. It does not own the windows or controls that use them. Widgets remove themselves from their visual parent when they are destroyed. Each widget receives an ID while the application exists. findWidget() can resolve that ID only while the widget remains alive.</p>
-<p>Platform events first enter the inherited event loop and are then routed through the Forms event dispatcher to their target widget or the primary screen. State changes such as layout, invalidation, repainting, scaling, and window changes use the same dispatcher, which permits the hierarchy to coalesce deferred work. Applications normally request changes through widget APIs rather than calling processEvent() directly. The latter is useful only for code that deliberately supplies Forms events.</p>
-<p>The application provides shared services such as styles, style options, input methods, fonts, and scaling. setStyle() and setStyleOptions() reset the shared style and invalidate the registered widgets so their visual state is rebuilt. setScaleFactor() sends a rescale event through the primary screen. Configure these services before showing the user interface when possible. impl() and graphicsBackend() support Forms backend implementations; ordinary applications use the higher-level Forms APIs.</p>
+<p>Application provides the Forms runtime. It is not a Widget. Construct one before any widget, show the visual hierarchy, then enter the inherited event loop with Pt::System::Application::run().</p>
+<p>The application owns its platform implementation, graphics backend, and primary Screen. It does not own the windows or controls that use those services. Widgets remove themselves from their visual parent when they are destroyed. Each widget receives an ID while the application exists; findWidget() resolves that ID only while the widget remains alive.</p>
+<p>Platform events enter the inherited event loop and are routed through the Forms event dispatcher to their target widget or the primary screen. The same dispatcher handles layout, invalidation, repainting, scaling, and window changes. It permits the visual hierarchy to coalesce deferred work. Applications normally request changes through widget APIs. Use processEvent() only when deliberately supplying Forms events.</p>
+<p>The application provides shared styles, style options, input methods, fonts, and scaling. setStyle() and setStyleOptions() reset the shared style and invalidate registered widgets so that their visual state is rebuilt. setScaleFactor() sends a rescale event through the primary screen. Configure shared services before showing the user interface when possible. impl() and graphicsBackend() support Forms backend implementations; ordinary applications use the higher-level Forms APIs.</p>
 <h1><a class="anchor" id="Pt-Forms-Page-Widgets"></a>
 Widgets and Views</h1>
-<p>Every visual Forms object is a Widget. Screen and WindowManager are widgets but not views. Form and Control are the usual View implementations; a view is the host and paint-surface boundary for controls. When a control joins a form that is shown on a screen, the screen, scaling, coordinates, and paint surface become available. Removing it reverses that relationship. Measurement determines the preferred size for a SizePolicy; layout then assigns geometry within the available rectangle. Changes to visual state, geometry, or drawing request an update through the containing views to the window. Painting then travels back down through visible content after the window frame makes a paint surface available.</p>
-<p>Derive custom visual content from Control. Derive from View only when a custom content host needs different paint-surface or coordinate behavior. WindowManager, WindowFrame, and GraphicsBackend support platform and embedded-window implementations; applications normally use the window manager provided by a Screen or Workspace.</p>
+<p>Every visual Forms object is a Widget. A widget has a non-owning parent relationship and becomes connected when its parent hierarchy reaches a Screen. Connection is independent of visibility. It supplies logical coordinates, scaling, repaint and state-change requests, and input delivery. Attaching a control does not transfer ownership: the caller keeps every attached object alive until it is detached.</p>
+<p>Screen and WindowManager are widgets but not views. Form and Control are the usual View implementations. A view is the host and paint-surface boundary for controls. When a control joins a form that is shown on a screen, the screen, scaling, coordinates, and paint surface become available for the cycle in <a class="el" href="Pt-Forms-Page.html#Pt-Forms-Page-Updating">Layouting and Painting</a>. Removing it reverses that relationship.</p>
+<p>Derive custom visual content from Control. Derive from View only when a custom content host needs different paint-surface or coordinate behavior. WindowManager and WindowFrame support platform and embedded-window implementations; applications normally use the window manager provided by a Screen or Workspace.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-Widget"></a>
-Widgets</h2>
+Widget</h2>
 <p>Every visual Forms object is a Widget. Application is not. A widget supplies identity, screen connection, parent relationships, geometry, visibility, enabled state, scaling, coordinate conversion, repaint requests, event dispatch, and pointer capture. Derive ordinary visual content from Control. Derive directly from Widget only for a runtime or host base with its own parent coordinate system; derived classes must implement onToParent() and onFromParent().</p>
 <p>Construct widgets only after an Application exists. The application gives each widget an ID, registers it for event routing, and removes that entry during destruction. A name is optional metadata, not an identifier. Parent and screen pointers are non-owning runtime relationships. A widget is connected when its parent hierarchy reaches a screen, independent of its visibility. Containers attach and detach widgets through their public APIs; callers keep attached widgets alive.</p>
 <p>Geometry uses logical coordinates. position() is in parent coordinates, while size() and bounds() are local and bounds() starts at the local origin. toParent(), fromParent(), toGlobal(), and fromGlobal() convert between these systems. The default global conversion walks the parent chain. Coordinate hooks must agree with hit testing, painting, and input delivery.</p>
@@ -132,26 +133,26 @@ Widgets</h2>
 <p>A widget is a Responder. Unhandled input continues to the next responder, with mouse and touch coordinates converted locally.</p>
 <p>Peers are non-hierarchical, bidirectional associations. They do not establish ownership, parenting, or screen connection. A widget can also provide a Cursor while it is under the pointer; clearing the override restores the default cursor.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-View"></a>
-Views</h2>
+View</h2>
 <p>A View is a Widget that attaches controls to a PaintSurface. It establishes the surface and coordinate mapping for those controls and forwards their repaint, layout, visibility, geometry, and activation requests. Form and Control are the usual view implementations. Screen and WindowManager are widgets but not views.</p>
 <p>The view owns its surface adapter, not the PaintSurface assigned through setSurface(). The adapter presents the view's local size, scaling, and offset within the borrowed surface. When a control is initialized, the view gives it that surface with an offset derived from the control's position; release clears the control's surface. Form and Control extend this mechanism to their content and child controls.</p>
 <p>toControl() and fromControl() convert between view-local and attached control coordinates. Their default mapping uses the control position. View implementations align child move and resize requests to the active scaling before sending the corresponding Forms event. Override the protected mapping and forwarding hooks only when a custom host has a different coordinate system, surface arrangement, or request policy.</p>
 <p>View is an implementation boundary rather than the usual application base class. Derive visible application content from Control. Derive from View only when a custom content host needs different paint-surface or coordinate behavior. A custom view must arrange a complete attach, initialize, release, and detach lifecycle for every hosted control and must not retain a surface supplied by another view beyond that lifecycle.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-Form"></a>
-Forms</h2>
+Form</h2>
 <p>A Form attaches one content Control and is the point where the content hierarchy joins a window or another form host. It is the layout root of that tree. It delegates measuring and layout to that content, forwards view requests, and does not own the control. Use setContent() to replace the content; keep the control alive until it is detached. A form is often a Window, but other hosts can derive from Form.</p>
 <p>Attachment connects the complete tree to the screen, paint surface, responder chain, and form. Detachment reverses those links. Replacing the content detaches the old root before attaching the new one. The content root may itself contain an arbitrary control tree. These links are non-owning, so destruction order remains the caller's responsibility.</p>
 <p>relayout() queues a layout event only while the form is connected. Pending layout requests are combined before the form measures its content and then assigns it the available bounds. Controls request layout from their parent rather than laying out an enclosing form directly. Custom form hosts override the protected measuring and layout hooks when their content needs a different allocation rule.</p>
 <p>The form is the focus root for its content tree. It delivers focus changes as FocusEvent objects and handles Tab traversal, shortcuts, and Alt mnemonics before ordinary keyboard input reaches the focused control.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-Control"></a>
-Controls</h2>
+Control</h2>
 <p>A Control is the building block of a Forms user interface. Derive from it to implement custom content. It can be the content of a Form or the child of another view, and it can attach child controls of its own. Attachment is non-owning: a parent stores control pointers but does not destroy its children.</p>
 <p>A control's parent is a View, and its direct children are controls. add() first detaches a child from any old parent; remove() detaches it without destroying it. When the tree joins a connected form, connection, form association, responder chain, scaling, and paint surface propagate through all descendants. Removing a control reverses those runtime relationships. Keep every attached control alive until it has been removed or its parent is gone.</p>
 <p>The parent paints children in stacking order and hit-tests them from front to back. raise() moves a direct child to the front. Controls forward repaint and relayout requests to their parent, which converts the requested local region to its own coordinates. A control measures under the supplied SizePolicy and caches the preferred size until content, policy, limits, or scaling invalidate it. Its layout hook assigns geometry to its direct children.</p>
 <p>The default measurement returns an empty size and the default layout does not assign child geometry. A derived container measures its content in onMeasure() and places each child with move() and resize() in onLayout(). Call relayout() after a content change that affects size or geometry and invalidate() after a visual-only change.</p>
 <p>Once associated with a form, a control may take part in focus traversal, action keys, shortcuts, and mnemonics. Override onMeasure(), onLayout(), onPaint(), and the protected input hooks as required; use state-changing public APIs so changes travel through the parent hierarchy.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-Screen"></a>
-Screens</h2>
+Screen</h2>
 <p>A Screen is the runtime root for the top-level windows on one display. Application provides the primary screen and connects it to the platform. The screen tracks attached Window objects, routes input to the widget below the pointer, and requests drawing of changed regions. Applications normally use the screen through Application::screen() rather than creating one directly.</p>
 <p>A screen provides the top-level WindowManager for its display. Showing an unparented Window attaches it through that manager. The manager and screen use non-owning relationships to the windows, so the application must keep every attached window alive and detach it before destruction. Use a Workspace when an application needs a window manager within a control instead of another platform display.</p>
 <p>Screen coordinates are global Forms coordinates. The screen hit-tests windows and their content to choose the input target. When that target changes, setPointer() delivers a leave event to the old widget before an enter event is delivered to the new one. Pointer capture and transient popups can override normal hit-test routing through Application.</p>
@@ -161,7 +162,6 @@ Windows and Workspaces</h1>
 <p>Forms presents windows in two places: on a platform display, and inside a workspace. In both cases a Window is a Form attached to a WindowManager. The manager does not own the window. This is the same non-owning host pattern as Application with a Screen and Form with a content Control.</p>
 <p>A top-level window uses the primary Screen and a platform frame. A Workspace nests that windowing model inside a Control: ordinary background content plus a stack of windows in the control's bounds. It is not a second screen. A Popup is still a window, used for a short interaction tied to an opener, not a third model.</p>
 <p>A window joins a manager when it is shown, unless the application already selected a parent manager. Showing connects it to the screen and frame. Closing detaches it and does not destroy it. Geometry, visibility, and activation are requests confirmed by events, as with other widgets.</p>
-<p>WindowType and WindowState are presentation of a window, not separate object kinds.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-Window"></a>
 Windows</h2>
 <p>A Window is a Form shown by a WindowManager. Show it after attaching its content with setContent(). The window translates form requests for geometry, visibility, activation, repainting, and input into operations on the platform window. Its content remains owned by the caller and must outlive its attachment.</p>
@@ -173,27 +173,423 @@ Window Managers</h2>
 <p>A WindowManager is a Widget that attaches Window objects it does not own. Screen provides the manager for top-level platform windows, while Workspace uses a derived manager to present windows in its own bounds. Applications select a manager through a screen or workspace and attach windows through Window; they do not derive from this class.</p>
 <p>Backend implementations derive from WindowManager and implement the attachment and lifecycle hooks that create, initialize, release, and detach each internal WindowFrame. Window controls that lifecycle: it calls onAttach(), initializes the frame and then calls onInit(). During detachment it releases the frame, calls onRelease() and onDetach(), and finally deletes the frame. The returned frame is therefore owned by the window; a manager must not delete it.</p>
 <p>The default onInit() and onRelease() implementations connect and disconnect the frame and its window from the current screen. Derived managers must call the corresponding base implementation. The protected hooks are for backend implementations and are not an application customization API.</p>
-<h1><a class="anchor" id="Pt-Forms-Page-Input"></a>
+<h2><a class="anchor" id="Pt-Forms-Page-Popup"></a>
+Popups</h2>
+<p>A Popup is a Window shown for a short interaction such as a menu. setAnchor() relates it to the widget that opened it for popup input handling. The anchor does not position or size the popup. Move, size, raise, and show it explicitly.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Workspace"></a>
+Workspaces</h2>
+<p>A Workspace nests the windowing model inside a Control. It has ordinary background content and an embedded window stack. addWindow() attaches a window it does not own. Visible windows paint in stack order. The workspace hit-tests the frontmost window first, activates a window on a pointer or touch press, and sends keyboard and scroll input to its active window.</p>
+<h1><a class="anchor" id="Pt-Forms-Page-Updating"></a>
+Layouting and Painting</h1>
+<p>Visual content updates in one cycle: invalidate, layouting, then painting. Call Widget::invalidate() after a visual-only change. It coalesces and later calls onInvalidate() so the widget can rebuild derived visual state. Control::onInvalidate() also requests relayout. Call Control::relayout() after a content or policy change that affects size or geometry.</p>
+<p>Layouting has two passes, not two pipelines. Measure is inside-out: Control::measure() / onMeasure() compute a preferred size under a SizePolicy and cache it until content, policy, limits, or scaling invalidate it. Layout is outside-in: onLayout() assigns child geometry in the available rectangle with move() and resize(). A layout event then requests a repaint.</p>
+<p>Painting is not synchronous. Widget::repaint() queues a local dirty region. A PaintEvent carries that rectangle down visible content after the window frame makes a PaintSurface available. A View adapts that surface. onPaint() draws in local coordinates.</p>
+<p>PaintSurface, PaintContext, and Painter are one mechanism. A PaintSurface is the Forms render target; a view borrows it and does not own it. A PaintContext is the active session on that surface and the argument to onPaint(). A Painter binds to the surface or the context and issues drawing commands. It extends Gfx with pixmap drawing. A Pixmap is an off-screen PaintSurface used as a back buffer or as cached image content. Use <a class="el" href="Pt-Gfx-Drawing-Page.html">Drawing Graphics and Text</a> for pens, brushes, text, and paths.</p>
+<p>A styled control does not invent a second cycle. onInvalidate() binds the Styler. Layouting calls named measure then layout methods. Painting calls named render methods. <a class="el" href="Pt-Forms-Page.html#Pt-Forms-Page-Styling">Styles and Renderers</a> describes that implementation.</p>
+<p>GraphicsBackend and IPixmapImpl are platform integration. Ordinary applications do not call them.</p>
+<p>The following example implements the three update hooks on a custom control. onMeasure() returns the preferred size for the control. onLayout() places a child in the rectangle assigned by the parent. onPaint() constructs a Painter on the supplied PaintContext and fills the dirty rectangle. The painter does not own the context or the surface.</p>
+<div class="fragment"><div class="line">Gfx::SizeF MyControl::onMeasure(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a>&amp;)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> Gfx::SizeF(80, 24);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> MyControl::onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span>(_content)</div>
+<div class="line">    {</div>
+<div class="line">        _content-&gt;move(rect.topLeft());</div>
+<div class="line">        _content-&gt;resize(rect.size());</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> MyControl::onPaint(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a>&amp; context,</div>
+<div class="line">                        <span class="keyword">const</span> Gfx::RectF&amp; rect)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Painter.html">Pt::Forms::Painter</a> painter(context);</div>
+<div class="line">    painter.setBrush(<a class="code" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(240, 240, 240)));</div>
+<div class="line">    painter.fillRect(rect);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Input"></a>
 Pointer and Keyboard Input</h1>
-<p>Platform input enters the Application event loop and is then targeted into the connected visual hierarchy. Pointer, touch, and scroll use hit-testing: the Screen (or a workspace) finds the widget under the pointer. Keyboard input uses focus: the Form delivers keys to the focused Control. These are two targeting models, not two event loops.</p>
-<p>Every Widget is a Responder. A responder handles an event or forwards it. Returning true stops the chain; returning false continues to the next responder. Mouse and touch positions are converted to each responder's local coordinates. Pointer capture overrides hit-testing until release. When the pointer target changes, the previous widget receives a leave event before the new widget receives an enter event.</p>
-<p>A Form is the focus root of its content tree. It handles Tab traversal, shortcuts, and Alt mnemonics before ordinary keys reach the focused control. A Control may take part in that focus set; pointer and touch presses on a control typically request focus.</p>
-<p>An InputMethod is the extension for platform or custom text entry. It begins and finishes a session for a control, may show an active window, and sends KeyEvent objects to its current receiver. The application always has a default method.</p>
-<p>MouseEvent, TouchEvent, ScrollEvent, EnterEvent, LeaveEvent, KeyEvent, and FocusEvent carry the event data. Key identifies a key and its modifiers.</p>
+<p>Platform input enters the Application event loop and is targeted into the connected visual hierarchy. Pointer, touch, and scroll input are directed by hit testing, while keyboard input is directed by focus. The Screen or a workspace finds the widget below the pointer. These are two targeting models, not two event loops. Every Widget is a Responder. A responder handles an event by returning true; returning false continues delivery through the responder chain. Mouse and touch positions are converted to each responder's local coordinates before its handler runs.</p>
+<p>Hit testing selects the frontmost eligible widget below the pointer. Widget::setCapture() temporarily overrides hit testing and directs pointer input to the capturing widget until it releases capture. Forms sends a LeaveEvent before an EnterEvent when the pointer target changes. A MouseEvent reports movement and button state, a TouchEvent reports an individual touch and pressure, and a ScrollEvent reports the scroll axis and delta.</p>
+<p>A Form is the focus root for its content tree. A focused control receives key input, subject to the form's interaction rules: an active control is considered first, then registered shortcuts, Alt mnemonics, and Tab focus traversal, followed by the focused control and responder chain. A control can take part in that focus set; pointer and touch presses on a control typically request focus. A KeyEvent carries a Key, press or release action, and optional Unicode text. Controls register their focus policy, action key, shortcut, and mnemonic through their public APIs.</p>
+<p>InputMethod is the extension point for platform or custom text entry. It begins a session for a control, retains only a non-owning receiver, and sends KeyEvent objects to that receiver. Ordinary controls use the method installed on the application, which always provides a default method; derive an input method only to implement a text-entry interface.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-Responder"></a>
 Responders</h2>
 <p>A Responder is the unit of input delivery. Widget is the usual responder. Handle an event by returning true; return false to continue to the next responder. Mouse and touch positions are converted to the current responder's local coordinates before the handler runs.</p>
 <p>Applications derive visual content from Control, not from Responder. A custom responder must implement onNextResponder(), onToGlobal(), and onFromGlobal() and must not create a cycle in the chain.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-InputMethod"></a>
 Input Methods</h2>
-<p>An input method begins and finishes a session for a Control, may provide an active window, and sends KeyEvent objects to its current receiver. The caller does not own the receiver. Derive from this class only to implement a text-entry interface; ordinary controls use the method installed on Application. </p>
+<p>An input method begins and finishes a session for a Control, may provide an active window, and sends KeyEvent objects to its current receiver. The caller does not own the receiver. Derive from this class only to implement a text-entry interface; ordinary controls use the method installed on Application.</p>
+<h1><a class="anchor" id="Pt-Forms-Page-Layouts"></a>
+Layouts</h1>
+<p>A layout control derives the geometry of its children from a placement policy. It remains in the visual hierarchy: a form's content is often a layout, and a layout can nest other layouts. Attachment is non-owning. addItem() records the layout-specific placement and attaches the child; removeItem() detaches it. Control::add() attaches without that policy. Keep each child alive until it is detached.</p>
+<p>Layouting follows the cycle in <a class="el" href="Pt-Forms-Page.html#Pt-Forms-Page-Updating">Layouting and Painting</a>. Measure runs inside-out under a SizePolicy. Layout runs outside-in and assigns child geometry with move() and resize(). A layout implements those passes for its policy. Control::padding() is the inner inset of the layout. A child's Control::margin() is the outer gap around that child. Invisible children are skipped.</p>
+<p>Choose a layout by the arrangement it produces.</p>
+<div class="fragment"><div class="line">FlowLayout Left              DockingLayout</div>
+<div class="line">+------------------+         +------------------+</div>
+<div class="line">| [A] [B] [C]      |         | Top              |</div>
+<div class="line">+------------------+         +----+--------+----+</div>
+<div class="line">                             |Left| Fill   |Right|</div>
+<div class="line">GridLayout Vertical, 3       +----+--------+----+</div>
+<div class="line">+---+---+---+                | Bottom           |</div>
+<div class="line">| A | B | C |                +------------------+</div>
+<div class="line">+---+---+---+</div>
+<div class="line">| D | E |   |</div>
+<div class="line"> </div>
+<div class="line">TableLayout2                 StackLayout</div>
+<div class="line">+--------+--------+          +------------------+</div>
+<div class="line">| 0,0    | 0,1    |          | current          |</div>
+<div class="line">+--------+--------+          | (others hidden)  |</div>
+<div class="line">| 1,0    | 1,1    |          +------------------+</div>
+<div class="line">+--------+--------+</div>
+<div class="line"> </div>
+<div class="line">CanvasLayout                 ScrollLayout</div>
+<div class="line">+------------------+         +------------------+</div>
+<div class="line">| A@(x,y)          |         | content &gt; view   |</div>
+<div class="line">|        B@(x,y)   |         |            [====]|</div>
+<div class="line">+------------------+         +------------------+</div>
+</div><!-- fragment --><p>A flow places children on one axis. Docking consumes edges in add order and gives leftover space to Fill. A grid uses uniform cells and wrapping. A table assigns children to row and column tracks that can prefer, fix, or fill size. A stack shows one child at a time. A canvas uses stored positions. A scroll layout offsets children when content exceeds the viewport; it is not a scroll view with bars.</p>
+<p>Layout attributes refine placement without being layout controls. Spacing is the four-sided inset used as a control's margin or padding. Direction is the axis of a flow. Alignment places content in a rectangle. Adjustment aligns along one axis, typically a line of text.</p>
+<div class="fragment"><div class="line">Spacing                         Alignment</div>
+<div class="line">+------------------+            +---+---+---+</div>
+<div class="line">|      top         |            |TL | T |TR |</div>
+<div class="line">| left  [  ] right |            | L | C | R |</div>
+<div class="line">|     bottom       |            |BL | B |BR |</div>
+<div class="line">+------------------+            +---+---+---+</div>
+<div class="line"> </div>
+<div class="line">Direction                       Adjustment</div>
+<div class="line">Left --&gt;   Top |                Left   |text    |</div>
+<div class="line">&lt;-- Right      v                Center |  text  |</div>
+<div class="line">               Bottom           Right  |    text|</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-CanvasLayout"></a>
+Canvas Layout</h2>
+<p>Each child keeps the position and size given to addItem(). The canvas adds its padding to those positions. The preferred size is the bounding box of the stored rectangles plus padding.</p>
+<div class="fragment"><div class="line">+------------------+</div>
+<div class="line">| A@(16,16)        |</div>
+<div class="line">|        B@(80,40) |</div>
+<div class="line">+------------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html">Pt::Forms::CanvasLayout</a> canvas;</div>
+<div class="line">canvas.<a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">addItem</a>(a, Gfx::PointF(16, 16), Gfx::SizeF(80, 24));</div>
+<div class="line">canvas.<a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">addItem</a>(b, Gfx::PointF(80, 40), Gfx::SizeF(64, 24));</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;canvas);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-DockingLayout"></a>
+Docking Layout</h2>
+<p>Children are placed in add order. Left and Right take preferred width and the remaining height. Top and Bottom take preferred height and the remaining width. Each dock shrinks the leftover rectangle. Fill children share that leftover.</p>
+<div class="fragment"><div class="line">+------------------------+</div>
+<div class="line">| Top                    |</div>
+<div class="line">+------+----------+------+</div>
+<div class="line">| Left | Fill     | Right|</div>
+<div class="line">+------+----------+------+</div>
+<div class="line">| Bottom                 |</div>
+<div class="line">+------------------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1DockingLayout.html">Pt::Forms::DockingLayout</a> content;</div>
+<div class="line">content.<a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">addItem</a>(toolbar, <a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a47321105d20c4efd6c573a6d829e1ad9">Pt::Forms::DockingLayout::Top</a>);</div>
+<div class="line">content.<a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">addItem</a>(status, <a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a05cdd4fa6b505ee008f4e865acfecccb">Pt::Forms::DockingLayout::Bottom</a>);</div>
+<div class="line">content.<a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">addItem</a>(body, <a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::DockingLayout::Fill</a>);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;content);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-FlowLayout"></a>
+Flow Layout</h2>
+<p>Direction::Left and Direction::Right place children on a horizontal axis. Direction::Top and Direction::Bottom place them on a vertical axis. Each child keeps its preferred size on the flow axis and stretches on the cross axis. setCenter() packs the group in the remaining space. setReverse() visits children in reverse order along the same direction.</p>
+<div class="fragment"><div class="line">Direction::Left                 Direction::Top</div>
+<div class="line">+----------------------+        +--------+</div>
+<div class="line">| [A] [B] [C]          |        | [A]    |</div>
+<div class="line">+----------------------+        | [B]    |</div>
+<div class="line">                                | [C]    |</div>
+<div class="line">Left, centered                  +--------+</div>
+<div class="line">+----------------------+</div>
+<div class="line">|      [A] [B] [C]     |</div>
+<div class="line">+----------------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a> row(<a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Direction::Left</a>);</div>
+<div class="line">row.addItem(a);</div>
+<div class="line">row.addItem(b);</div>
+<div class="line">row.addItem(c);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;row);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-GridLayout"></a>
+Grid Layout</h2>
+<p>Cell size is the largest preferred child size. Vertical fills columns then wraps to the next row. Horizontal fills rows then wraps to the next column. The wrap count is the number of cells on that axis; <code>0</code> fits as many as the available size allows. Items keep their preferred size and are centered in their cells.</p>
+<div class="fragment"><div class="line">Vertical, span 3</div>
+<div class="line">+---+---+---+</div>
+<div class="line">| A | B | C |</div>
+<div class="line">+---+---+---+</div>
+<div class="line">| D | E | F |</div>
+<div class="line">+---+---+---+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1GridLayout.html">Pt::Forms::GridLayout</a> grid(<a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600">Pt::Forms::GridLayout::Vertical</a>, 3);</div>
+<div class="line">grid.addItem(a);</div>
+<div class="line">grid.addItem(b);</div>
+<div class="line">grid.addItem(c);</div>
+<div class="line">grid.addItem(d);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;grid);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-StackLayout"></a>
+Stack Layout</h2>
+<p>Added children are hidden until setCurrent() selects an index. The current child fills the padded bounds minus its margin. The preferred size is the largest preferred child size. current() is NoIndex until a child is selected.</p>
+<div class="fragment"><div class="line">+------------------+</div>
+<div class="line">| current child    |</div>
+<div class="line">| (others hidden)  |</div>
+<div class="line">+------------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1StackLayout.html">Pt::Forms::StackLayout</a> stack;</div>
+<div class="line">stack.<a class="code" href="classPt_1_1Forms_1_1StackLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(pageA);</div>
+<div class="line">stack.<a class="code" href="classPt_1_1Forms_1_1StackLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(pageB);</div>
+<div class="line">stack.<a class="code" href="classPt_1_1Forms_1_1StackLayout.html#a3b2097dbd6666ffe9cd7e28653059798">setCurrent</a>(0);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;stack);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-TableLayout"></a>
+Table Layout</h2>
+<p>addItem() places a child in a cell. setColumn() and setRow() set each track to Preferred, Fixed, or Fill. Preferred tracks use the largest preferred child on that track. Fixed tracks use the given size. Fill tracks share leftover space after preferred and fixed tracks. Measure resolves preferred and fixed tracks first so Fill cells and nested layouts see the resulting track size. Layout assigns each visible cell the track rectangle minus its margin.</p>
+<div class="fragment"><div class="line">Preferred | Fill</div>
+<div class="line">+---------+---------------+</div>
+<div class="line">| name    | edit          |  Preferred</div>
+<div class="line">+---------+---------------+</div>
+<div class="line">| notes   |               |  Fill</div>
+<div class="line">+---------+---------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1TableLayout2.html">Pt::Forms::TableLayout2</a> table;</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a>(0, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a>(1, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a>(0, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a>(1, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a>);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(name, 0, 0);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(edit, 0, 1);</div>
+<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(notes, 1, 0);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;table);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-ScrollLayout"></a>
+Scroll Layout</h2>
+<p>Children are measured with setContentMode() and placed at their preferred size. scrollX() and scrollY() move the content within the layout bounds. Offsets are clamped to the scrollable range. enableScrolling() selects which axes accept scroll input. This layout does not draw scroll bars.</p>
+<div class="fragment"><div class="line">+------------------+</div>
+<div class="line">| visible window   |</div>
+<div class="line">|            [====]|  content extends</div>
+<div class="line">+------------------+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1ScrollLayout.html">Pt::Forms::ScrollLayout</a> scroll;</div>
+<div class="line">scroll.<a class="code" href="classPt_1_1Forms_1_1ScrollLayout.html#aab58257809062a73e86cd5c273d6188f">enableScrolling</a>(<span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line">scroll.<a class="code" href="classPt_1_1Forms_1_1ScrollLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(content);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;scroll);</div>
+</div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Buttons"></a>
+Buttons</h1>
+<p>Use a button when the user should run a command or turn a choice on or off. A completed gesture runs a press, release, and cancel protocol and ends in clicked().</p>
+<p>Button is the shared interaction control. It is not a look. It holds the caption and hover, and is the type PushButton and CheckBox share.</p>
+<p>PushButton is a classic button: a caption on a clickable face, sometimes with an icon beside the text. Clicking it runs a command. As a toggle it stays visually pressed to show that a mode is on.</p>
+<p>CheckBox is a clickable choice with a caption beside a checkable area. The area shows whether the choice is on or off.</p>
+<p>Appearance follows the application style. On invalidate the control binds a family renderer through a styler. Widget-local brushes, pens, colors, fonts, and setRenderer() overlay that style without replacing it.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Button"></a>
+Button</h2>
+<p>A Button holds a caption and hover, and runs a press, release, and cancel protocol that ends in clicked(). It is not a look. Derive PushButton for a command or CheckBox for a boolean choice.</p>
+<p>setText() sets the caption and records a mnemonic from an ampersand. Pointer, touch, mnemonic, shortcut, and the action key all run the protocol. A release outside the widget, or a scroll during a press, cancels.</p>
+<p>Connect clicked() to handle a completed gesture. Override onPressed(), onReleased(), and onCanceled() in a subclass to implement the command or choice.</p>
+<div class="fragment"><div class="line">download.setText(<span class="stringliteral">&quot;&amp;Download&quot;</span>);</div>
+<div class="line">download.clicked() += Pt::slot(*<span class="keyword">this</span>, &amp;MainWindow::onStartDownload);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> MainWindow::onStartDownload()</div>
+<div class="line">{</div>
+<div class="line">    client.fetch(url);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-PushButton"></a>
+Push Buttons</h2>
+<p>A PushButton is a Button that presents a command. A completed click emits clicked() and, unless it is a toggle, returns to the unpressed look. setToggle() keeps the pressed state after release so the button can show an on/off command such as Bold.</p>
+<p>setIcon() places a picture next to the caption. setLayout() chooses the Direction of icon and text. setFlat() drops the framed face.</p>
+<p>The button owns a ButtonStyler. On invalidate it calls Styler::bind(). Appearance getters and setters read and write widget-local options. setRenderer() assigns a ButtonRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. ButtonState is the snapshot passed to paint layers.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a> send;</div>
+<div class="line">send.<a class="code" href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;&amp;Send&quot;</span>);</div>
+<div class="line">send.<a class="code" href="classPt_1_1Forms_1_1Button.html#ab5a6ad1af3b398dac329b35a860c6ae7">clicked</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;MailComposer::onSend);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> MailComposer::onSend()</div>
+<div class="line">{</div>
+<div class="line">    mailer.send(message);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-CheckBox"></a>
+Check Boxes</h2>
+<p>A CheckBox is a Button whose value is Unspecified, Checked, or Unchecked. setState() assigns the value. isChecked() is true only for Checked. A completed click toggles Checked and Unchecked, then emits clicked(). Unspecified becomes Checked on that click.</p>
+<p>The box owns a CheckBoxStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. setRenderer() assigns a CheckBoxRenderer. CheckBoxState is the snapshot passed to paint layers.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1CheckBox.html">Pt::Forms::CheckBox</a> remember;</div>
+<div class="line">remember.<a class="code" href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Remember me&quot;</span>);</div>
+<div class="line">remember.<a class="code" href="classPt_1_1Forms_1_1Button.html#ab5a6ad1af3b398dac329b35a860c6ae7">clicked</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;LoginDialog::onRememberToggled);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> LoginDialog::onRememberToggled()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span>( remember.<a class="code" href="classPt_1_1Forms_1_1CheckBox.html#ac8cada18b9357ff68b26e17f44294764">isChecked</a>() )</div>
+<div class="line">        storeCredentials();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Displays"></a>
+Displays</h1>
+<p>Use a display when the user should read information without editing it.</p>
+<p>Label is a caption or an icon in a layout. It has no chrome by default, so it reads as text or a picture on the parent surface. Alignment places it in its bounds.</p>
+<p>Panel is a surface that groups other controls. An optional fill and frame set it apart from the parent, like a banner or a well.</p>
+<p>ProgressBar shows how far a task has come. A track fills as the value moves through its range.</p>
+<p>Label and Panel share the panel appearance family. ProgressBar has its own. On invalidate the control binds a family renderer through a styler. Widget-local options overlay the application style without replacing it.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Label"></a>
+Labels</h2>
+<p>A Label presents a caption or a picture. It does not edit text. setText() sets the caption and clears any icon. setIcon() shows an icon instead of text. setAlignment() places the content in the label bounds.</p>
+<p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off without replacing the style.</p>
+<p>The label owns a PanelStyler and shares the panel appearance family with Panel. On invalidate it binds that styler. Measure, layout, and paint call typed methods on it. TextBlock lays out wrapped text. Icon supplies pictures. Neither is a widget.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> heading;</div>
+<div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Inbox&quot;</span>);</div>
+<div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#a327cb29689a0b041e25cce65bc58693e">setAlignment</a>(<a class="code" href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Alignment::Left</a>);</div>
+<div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#ae25e5c2d8699fd7c56e7c4547bad68a9">setFontWeight</a>(Pt::Gfx::Font::Weight::Bold);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> empty;</div>
+<div class="line">empty.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;No messages&quot;</span>);</div>
+<div class="line">empty.<a class="code" href="classPt_1_1Forms_1_1Label.html#a327cb29689a0b041e25cce65bc58693e">setAlignment</a>(<a class="code" href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389">Pt::Forms::Alignment::Center</a>);</div>
+<div class="line">empty.<a class="code" href="classPt_1_1Forms_1_1Label.html#ac24598c93a713c95d97205c65dfccbfc">setTextColor</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(120, 120, 120));</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-Panel"></a>
+Panels</h2>
+<p>A Panel presents one content control with an optional background, frame, and icon. setContent() attaches the child without taking ownership. Keep the child alive until it is detached. content() returns the attached control, or 0.</p>
+<p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off. setIcon() paints a picture aligned with the given Alignment.</p>
+<p>The panel owns a PanelStyler and shares that appearance family with Label. On invalidate it binds the styler. Measure, layout, and paint call typed methods on it. The content control is laid out in the inner rectangle after the frame.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> status;</div>
+<div class="line">status.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Ready&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1Panel.html">Pt::Forms::Panel</a> banner;</div>
+<div class="line">banner.<a class="code" href="classPt_1_1Forms_1_1Panel.html#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a>(<a class="code" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(240, 240, 240)));</div>
+<div class="line">banner.<a class="code" href="classPt_1_1Forms_1_1Panel.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;status);</div>
+<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;banner);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-ProgressBar"></a>
+Progress Bars</h2>
+<p>A ProgressBar maps an integer value between minimum() and maximum() to a ratio from 0 to 1. setRange() sets the bounds. setValue() clamps the value and emits valueChanged(). progress() returns the ratio used to fill the track. reset() returns to the minimum.</p>
+<p>The bar owns a ProgressBarStyler. On invalidate it binds that styler. Appearance getters and setters overlay the application style. setRenderer() assigns a ProgressBarRenderer. progressBarState() is the snapshot passed to paint layers.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> caption;</div>
+<div class="line">caption.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Copying photos...&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1ProgressBar.html">Pt::Forms::ProgressBar</a> copy;</div>
+<div class="line">copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#ab9eedccb53862a3577d79147b51946df">setRange</a>(0, photoCount);</div>
+<div class="line">copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#a6ce3b26c111a73fc0757dee808943f19">setValue</a>(0);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Album::onPhotoCopied()</div>
+<div class="line">{</div>
+<div class="line">    copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#a6ce3b26c111a73fc0757dee808943f19">setValue</a>(copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#a8702bf15d64240deb9b75903f38d9103">value</a>() + 1);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Icons"></a>
+Icons and Text</h1>
+<p>Controls use Icon and TextBlock to supply visual content. These types are not widgets and do not appear in the visual hierarchy. Derive custom visual content from Control, not from an icon or text block.</p>
+<p>An Icon associates one picture with images at one or more logical sizes. A control requests the image that fits the area it is about to display. Add images directly for the usual case. Implement IconProvider only when images must come from another source.</p>
+<p>A TextBlock converts a string into positioned TextLine objects. Controls such as Label use it to lay out text. A custom control configures the available width and alignment, calls TextBlock::layout(), and uses the resulting lines when it measures or paints wrapped text.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Icon"></a>
+Icons</h2>
+<p>An Icon is not a Widget. It supplies images to controls, which request an image for a layout area with getImage(). Label, PushButton, Panel, and list items accept an Icon through setIcon().</p>
+<p>A default icon uses a built-in provider. Icon(IconProvider&amp;) attaches a caller-owned provider that must outlive the icon. Copies share the same implementation until addImage() or clear() changes one copy.</p>
+<p>addImage() registers an image or file path at a logical size. Passing only an image uses its pixel size as the key. The logical size may differ from the pixel size. Images registered by path load as PNG on first use through Application::loadImage(). A missing path produces an empty image.</p>
+<p>getImage() returns the registered image for a requested area. The built-in provider selects the largest image that fits entirely in that area. An empty icon produces an empty image. minimumSize() and maximumSize() return the smallest and largest registered keys.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Icon.html">Pt::Forms::Icon</a> icon;</div>
+<div class="line">icon.<a class="code" href="classPt_1_1Forms_1_1Icon.html#aa8547ba44211c1e25959012febd1daa6">addImage</a>(<a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(16, 16), <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a>(<span class="stringliteral">&quot;app-16.png&quot;</span>));</div>
+<div class="line">icon.<a class="code" href="classPt_1_1Forms_1_1Icon.html#aa8547ba44211c1e25959012febd1daa6">addImage</a>(<a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(32, 32), <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a>(<span class="stringliteral">&quot;app-32.png&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> label;</div>
+<div class="line">label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a3d5ab28c5be995b1ee175b4573e51910">setIcon</a>(icon, <a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(16, 16));</div>
+<div class="line">label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Hello&quot;</span>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-IconProvider"></a>
+Icon Providers</h2>
+<p>Derive from IconProvider only to provide a custom image source. Ordinary code uses the built-in provider created by a default Icon. A custom provider implements every pure virtual function. Its getImage() function selects and, when needed, loads an image for the requested size.</p>
+<p>An Icon constructed with a provider does not own it. Keep the provider alive while an icon uses it. Destroying a provider detaches its remaining icons. Calling Icon::getImage() on a detached icon is invalid.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-TextBlock"></a>
+Text Blocks</h2>
+<p>A TextBlock is not a Widget and does not own a painter or control. Label and LineEditor use it. A custom control sets the maximum width, adjustment, and line spacing, calls layout(), then iterates the lines to measure or paint the text.</p>
+<p>layout() uses the painter's font metrics to wrap a string into TextLine objects. It replaces the previous lines and updates the block size. Wrapping is word-based: whitespace separates words, and explicit newlines are not hard breaks. Adjustment::Left, Adjustment::Right, and Adjustment::Center align each line within the maximum width. Adjustment::Justify is treated as left. The default adjustment is Center.</p>
+<p>position() is the block origin and each line position is relative to it. size() returns the laid-out width and height. Line spacing adds extra space between consecutive lines.</p>
+<h1><a class="anchor" id="Pt-Forms-Page-Styling"></a>
+Styles and Renderers</h1>
+<p>A Forms application has a Style and StyleOptions. The style is the look of the controls. The options are shared colors, pens, brushes, and the font. Application owns both and starts with PlatinumStyle.</p>
+<p>Change the theme on the application. A widget can overlay local options or assign a custom renderer without replacing the style.</p>
+<p>A Renderer implements layouting and painting for one control family. Named measure methods run inside-out. Named layout methods run outside-in. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry. <a class="el" href="Pt-Forms-Page.html#Pt-Forms-Page-Updating">Layouting and Painting</a> describes the cycle.</p>
+<p>Styler binds a control to the current style. Call Styler::bind() from onInvalidate(). Layouting and painting call typed methods on the derived styler. Derive a Style to install a different look. Derive a Renderer to draw a control family. Derive a Styler only when adding a new control family.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Style"></a>
+Styles</h2>
+<p>A Style stores one renderer facet per dynamic type. Use set() to register or replace a facet. Use get() to retrieve it. Use reset() to apply StyleOptions to every registered facet. generation() changes when the set of facets changes.</p>
+<p>Facets are reference counted. set() takes a reference. Pass a facet with a reference count of 0. Use Renderer::create() to allocate such an instance.</p>
+<p>Use Application::setStyle() to install a complete style. The application starts with PlatinumStyle. Derive Renderer, or another Facet, to add drawing for a control family.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-StyleOptions"></a>
+Style Options</h2>
+<p>A StyleOptions object contains named appearance options, such as the application background, text colors, accent color, contour pen, and default font. A Style uses these values when it prepares the renderers that paint controls.</p>
+<p>Application owns the global style options. It creates them from defaults() and uses them with the default PlatinumStyle. To change the application theme, create an options object, change the values that the application requires, and pass it to Application::setStyleOptions(). The application resets its renderers and invalidates its widgets so that the new appearance is applied.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1StyleOptions.html">Pt::Forms::StyleOptions</a> options = <a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a6e258ee689d77db09515e35fe67a7fcc">Pt::Forms::StyleOptions::defaults</a>();</div>
+<div class="line"> </div>
+<div class="line">options.<a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">set</a>(</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1AccentColorOption.html">Pt::Forms::AccentColorOption</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(20, 140, 250))</div>
+<div class="line">);</div>
+<div class="line">options.<a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">set</a>(</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1TextColorOption.html">Pt::Forms::TextColorOption</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(30, 30, 30))</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a>&amp; app = <a class="code" href="classPt_1_1Forms_1_1Application.html#a294a0851013e6ca75047af8fa0f8d8ed">Pt::Forms::Application::instance</a>();</div>
+<div class="line">app.<a class="code" href="classPt_1_1Forms_1_1Application.html#a970f2523988a3ebb114f0d8d0ef8308d">setStyleOptions</a>(options);</div>
+</div><!-- fragment --><p>The default constructor creates an empty options object. An empty object is useful as a local overlay for a control. A styler binds this overlay to the application options. A local option overrides the option of the same type in the application options, while an option that is not present locally continues to use the application value.</p>
+<p>findLocal() searches only this object. find() searches this object and then its bound parent. get() performs the same lookup and throws std::logic_error when the requested option is not available. set() adds or replaces a local option, and reset() removes a local option.</p>
+<p>FontOption supports complete and partial font overrides. A local option can change only the font size, weight, or slant while inheriting the font family and all remaining attributes from the application font.</p>
+<p>generation() changes when local options or their binding change. Stylers use the generation to detect that a renderer must prepare its drawing state again.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Styler"></a>
+Stylers</h2>
+<p>A Styler connects a control family to the current Style and StyleOptions. Widgets own a derived styler. Applications do not construct Styler. Derive from it only to add a styler for a new control family.</p>
+<p>Use bind() to associate the styler with a style and the application options. It returns true when the effective renderer or the effective options changed. Call bind() from onInvalidate() after the base implementation.</p>
+<p>When the overlay contains no local options, bind() uses the shared renderer from the style. When the overlay contains local options, it uses a private clone. A renderer assigned through the derived setRenderer() remains until it is cleared. Passing a null renderer falls back to the current style on the next bind().</p>
+<p>Styler does not provide a public renderer accessor. Measure, layout, and paint use typed methods on the derived styler.</p>
+<h2><a class="anchor" id="Pt-Forms-Page-Renderer"></a>
+Renderers</h2>
+<p>A Renderer is a Style::Facet that can clone itself. Shared instances remain in Style. Use reset() to apply application options. Use create() to allocate a new instance with a reference count of 0. FacetPtr and Style::set() take their own references.</p>
+<p>Named measure, layout, and render methods belong on derived renderer types.</p>
+<p>Derive a renderer for a control family and register it on a Style. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="aclassPt_1_1Forms_1_1StyleOptions_html_a8cbbcde34aa157a262c803c353b1f791"><div class="ttname"><a href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">Pt::Forms::StyleOptions::set</a></div><div class="ttdeci">void set(const T &amp;option)</div><div class="ttdoc">Adds or replaces the local option of type T.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:769</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html">Pt::Forms::CanvasLayout</a></div><div class="ttdoc">Arranges children at stored positions and sizes.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:64</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollLayout.html">Pt::Forms::ScrollLayout</a></div><div class="ttdoc">Offsets children when content exceeds the viewport.</div><div class="ttdef"><b>Definition:</b> ScrollLayout.h:66</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollLayout_html_aab58257809062a73e86cd5c273d6188f"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollLayout.html#aab58257809062a73e86cd5c273d6188f">Pt::Forms::ScrollLayout::enableScrolling</a></div><div class="ttdeci">void enableScrolling(bool scrollX, bool scrollY)</div><div class="ttdoc">Enables horizontal scrolling when scrollX is true and vertical scrolling when scrollY is true.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Icon_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Icon.html">Pt::Forms::Icon</a></div><div class="ttdoc">Represents an image at one or more logical sizes.</div><div class="ttdef"><b>Definition:</b> Icon.h:144</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1StackLayout_html_a3b2097dbd6666ffe9cd7e28653059798"><div class="ttname"><a href="classPt_1_1Forms_1_1StackLayout.html#a3b2097dbd6666ffe9cd7e28653059798">Pt::Forms::StackLayout::setCurrent</a></div><div class="ttdeci">void setCurrent(std::size_t n)</div><div class="ttdoc">Shows the child at index n and hides the previous child.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html">Pt::Forms::GridLayout</a></div><div class="ttdoc">Arranges children in uniform wrapping cells.</div><div class="ttdef"><b>Definition:</b> GridLayout.h:68</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a></div><div class="ttdeci">@ Preferred</div><div class="ttdoc">The track uses the largest preferred child size.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:156</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition:</b> Label.h:79</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html_a970f2523988a3ebb114f0d8d0ef8308d"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html#a970f2523988a3ebb114f0d8d0ef8308d">Pt::Forms::Application::setStyleOptions</a></div><div class="ttdeci">void setStyleOptions(const StyleOptions &amp;options)</div><div class="ttdoc">Replaces the style options for all widgets.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Button_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::Button::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div><div class="ttdoc">Sets the caption to t and records its mnemonic.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Direction::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdoc">Left to right.</div><div class="ttdef"><b>Definition:</b> Direction.h:60</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_a0abc1448e972f339952d2ed3bf083690"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">Pt::Forms::TableLayout2::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, std::size_t row, std::size_t column)</div><div class="ttdoc">Attaches control at row and column.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a></div><div class="ttdeci">@ Fill</div><div class="ttdoc">The track shares leftover space.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:152</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html">Pt::Forms::ProgressBar</a></div><div class="ttdoc">Control that shows a value within a range.</div><div class="ttdef"><b>Definition:</b> ProgressBar.h:70</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Button_html_ab5a6ad1af3b398dac329b35a860c6ae7"><div class="ttname"><a href="classPt_1_1Forms_1_1Button.html#ab5a6ad1af3b398dac329b35a860c6ae7">Pt::Forms::Button::clicked</a></div><div class="ttdeci">Signal &amp; clicked()</div><div class="ttdoc">Returns the signal emitted after a completed click.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_ac24598c93a713c95d97205c65dfccbfc"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#ac24598c93a713c95d97205c65dfccbfc">Pt::Forms::Label::setTextColor</a></div><div class="ttdeci">void setTextColor(const Gfx::Color &amp;color)</div><div class="ttdoc">Sets the widget-local text color to color.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ae618907c9d0f27ee1c0b1ae26e965f30"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ae618907c9d0f27ee1c0b1ae26e965f30">Pt::Forms::Widget::show</a></div><div class="ttdeci">virtual void show(bool b=true)</div><div class="ttdoc">Requests that the widget be shown or hidden.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_ad8ccf7b7ce76f6c257905bb1c5ebf855"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">Pt::Forms::CanvasLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, const LayoutParams &amp;params)</div><div class="ttdoc">Attaches control at the position and size in params.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Form presented by a window manager.</div><div class="ttdef"><b>Definition:</b> Window.h:99</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Runtime root of a Forms user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:89</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a6ce3b26c111a73fc0757dee808943f19"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html#a6ce3b26c111a73fc0757dee808943f19">Pt::Forms::ProgressBar::setValue</a></div><div class="ttdeci">void setValue(int n)</div><div class="ttdoc">Sets the value to n, clamped to the range, and emits valueChanged().</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1PushButton_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a></div><div class="ttdoc">Command button with optional toggle, icon, and caption.</div><div class="ttdef"><b>Definition:</b> PushButton.h:77</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a392f50a2ce6333f59929171fa21e3f61a05cdd4fa6b505ee008f4e865acfecccb"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a05cdd4fa6b505ee008f4e865acfecccb">Pt::Forms::DockingLayout::Bottom</a></div><div class="ttdeci">@ Bottom</div><div class="ttdoc">Docks to the bottom edge.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:95</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Painter_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Painter.html">Pt::Forms::Painter</a></div><div class="ttdoc">Draws on a Forms paint surface or paint context.</div><div class="ttdef"><b>Definition:</b> Painter.h:53</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1PaintContext_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a></div><div class="ttdoc">Active painting session on a Forms paint surface.</div><div class="ttdef"><b>Definition:</b> PaintContext.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1StackLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1StackLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::StackLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as a hidden stack page.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ad1d1cf7ebe8a2ab0e6aa6dda875010ec"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">Pt::Forms::TableLayout2::setRow</a></div><div class="ttdeci">void setRow(std::size_t row, SizeMode mode, double size=0)</div><div class="ttdoc">Sets row row to mode and optional fixed size.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Alignment_html_a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389"><div class="ttname"><a href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389">Pt::Forms::Alignment::Center</a></div><div class="ttdeci">@ Center</div><div class="ttdoc">Center of the rectangle.</div><div class="ttdef"><b>Definition:</b> Alignment.h:85</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600">Pt::Forms::GridLayout::Vertical</a></div><div class="ttdeci">@ Vertical</div><div class="ttdoc">Fills columns, then wraps to the next row.</div><div class="ttdef"><b>Definition:</b> GridLayout.h:80</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a3d5ab28c5be995b1ee175b4573e51910"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a3d5ab28c5be995b1ee175b4573e51910">Pt::Forms::Label::setIcon</a></div><div class="ttdeci">void setIcon(const Icon &amp;icon, const Gfx::SizeF &amp;iconSize)</div><div class="ttdoc">Shows icon instead of the caption.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a8702bf15d64240deb9b75903f38d9103"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html#a8702bf15d64240deb9b75903f38d9103">Pt::Forms::ProgressBar::value</a></div><div class="ttdeci">int value() const</div><div class="ttdoc">Returns the current value.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a510e1903e8b0f085c4766b5969b9b0f6"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">Pt::Forms::DockingLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, DockMode ds)</div><div class="ttdoc">Attaches control with dock mode ds.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_ab9eedccb53862a3577d79147b51946df"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html#ab9eedccb53862a3577d79147b51946df">Pt::Forms::ProgressBar::setRange</a></div><div class="ttdeci">void setRange(int minpos, int maxpos)</div><div class="ttdoc">Sets the range to minpos through maxpos.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Panel::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Attaches control as the content.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1StyleOptions_html_a6e258ee689d77db09515e35fe67a7fcc"><div class="ttname"><a href="classPt_1_1Forms_1_1StyleOptions.html#a6e258ee689d77db09515e35fe67a7fcc">Pt::Forms::StyleOptions::defaults</a></div><div class="ttdeci">static StyleOptions defaults()</div><div class="ttdoc">Returns options filled with the built-in default values.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Provides the runtime root of a Forms user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:87</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TextColorOption_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TextColorOption.html">Pt::Forms::TextColorOption</a></div><div class="ttdoc">Text color option.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:335</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1StackLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1StackLayout.html">Pt::Forms::StackLayout</a></div><div class="ttdoc">Shows one child at a time.</div><div class="ttdef"><b>Definition:</b> StackLayout.h:65</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Alignment_html_a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Alignment::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdoc">Left edge, vertically centered.</div><div class="ttdef"><b>Definition:</b> Alignment.h:81</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a></div><div class="ttdoc">Arranges children in a single row or column.</div><div class="ttdef"><b>Definition:</b> FlowLayout.h:72</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Form_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Form::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Replaces the content root with control.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html">Pt::Forms::Panel</a></div><div class="ttdoc">Surface that groups one child behind an optional fill and frame.</div><div class="ttdef"><b>Definition:</b> Panel.h:78</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CheckBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CheckBox.html">Pt::Forms::CheckBox</a></div><div class="ttdoc">Button that presents a boolean choice.</div><div class="ttdef"><b>Definition:</b> CheckBox.h:70</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html">Pt::Forms::DockingLayout</a></div><div class="ttdoc">Docks children to edges and fills leftover space.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Icon_html_aa8547ba44211c1e25959012febd1daa6"><div class="ttname"><a href="classPt_1_1Forms_1_1Icon.html#aa8547ba44211c1e25959012febd1daa6">Pt::Forms::Icon::addImage</a></div><div class="ttdeci">void addImage(const Gfx::Image &amp;image)</div><div class="ttdoc">Registers image using its pixel size as the key.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Path_html"><div class="ttname"><a href="classPt_1_1System_1_1Path.html">Pt::System::Path</a></div><div class="ttdoc">Represents a path in the file-system.</div><div class="ttdef"><b>Definition:</b> Path.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::FlowLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as a flow item.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1StyleOptions_html"><div class="ttname"><a href="classPt_1_1Forms_1_1StyleOptions.html">Pt::Forms::StyleOptions</a></div><div class="ttdoc">Stores named appearance options.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:637</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html_a294a0851013e6ca75047af8fa0f8d8ed"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html#a294a0851013e6ca75047af8fa0f8d8ed">Pt::Forms::Application::instance</a></div><div class="ttdeci">static Application &amp; instance()</div><div class="ttdoc">Returns the Forms application instance.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html">Pt::Forms::TableLayout2</a></div><div class="ttdoc">Arranges children in row and column tracks.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:142</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">Standard color type.</div><div class="ttdef"><b>Definition:</b> Color.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a392f50a2ce6333f59929171fa21e3f61a47321105d20c4efd6c573a6d829e1ad9"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a47321105d20c4efd6c573a6d829e1ad9">Pt::Forms::DockingLayout::Top</a></div><div class="ttdeci">@ Top</div><div class="ttdoc">Docks to the top edge.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:87</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_ae25e5c2d8699fd7c56e7c4547bad68a9"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#ae25e5c2d8699fd7c56e7c4547bad68a9">Pt::Forms::Label::setFontWeight</a></div><div class="ttdeci">void setFontWeight(Gfx::Font::Weight weight)</div><div class="ttdoc">Sets the widget-local font weight to weight.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1AccentColorOption_html"><div class="ttname"><a href="classPt_1_1Forms_1_1AccentColorOption.html">Pt::Forms::AccentColorOption</a></div><div class="ttdoc">Accent color option.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:188</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Brush_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a></div><div class="ttdoc">Fill description for shapes and text.</div><div class="ttdef"><b>Definition:</b> Brush.h:145</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a759a5fbd6e124e55f9a2596dc5f83393"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html#a759a5fbd6e124e55f9a2596dc5f83393">Pt::Forms::Panel::setBackground</a></div><div class="ttdeci">void setBackground(const Gfx::Brush &amp;b)</div><div class="ttdoc">Sets the widget-local background brush to b and enables the fill.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Window_html_abc79cf0667bbb5c93fca3f01b52c7b57"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">Pt::Forms::Window::setTitle</a></div><div class="ttdeci">void setTitle(const std::string &amp;title)</div><div class="ttdoc">Sets the window title to title.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CheckBox_html_ac8cada18b9357ff68b26e17f44294764"><div class="ttname"><a href="classPt_1_1Forms_1_1CheckBox.html#ac8cada18b9357ff68b26e17f44294764">Pt::Forms::CheckBox::isChecked</a></div><div class="ttdeci">bool isChecked() const</div><div class="ttdoc">Returns true if the choice is Checked.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::ScrollLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as scrollable content.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ac6576e5f0222afd743840eaffd5c84cc"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">Pt::Forms::TableLayout2::setColumn</a></div><div class="ttdeci">void setColumn(std::size_t col, SizeMode mode, double size=0)</div><div class="ttdoc">Sets column col to mode and optional fixed size.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a327cb29689a0b041e25cce65bc58693e"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a327cb29689a0b041e25cce65bc58693e">Pt::Forms::Label::setAlignment</a></div><div class="ttdeci">void setAlignment(Alignment a)</div><div class="ttdoc">Sets the alignment of the caption or icon to a.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a392f50a2ce6333f59929171fa21e3f61a09da1e90dad0e3ab24a83e66bac15da6"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::DockingLayout::Fill</a></div><div class="ttdeci">@ Fill</div><div class="ttdoc">Fills leftover space after edge docks.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:99</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

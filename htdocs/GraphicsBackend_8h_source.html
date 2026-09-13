@@ -127,33 +127,39 @@
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span>IPixmapImpl;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html">   48</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html">GraphicsBackend</a></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html">GraphicsBackend</a>()</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1IPixmapImpl.html">IPixmapImpl</a>* createPixmapImpl() = 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; defaultFont() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setDefaultFont(<span class="keyword">const</span> std::string&amp; family) = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> std::vector&lt;std::string&gt; fontFamilies() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">virtual</span> std::vector&lt;Gfx::FontFace&gt; fontFaces(<span class="keyword">const</span> std::string&amp; family) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html">   51</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html">GraphicsBackend</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html#ad3a24cc0067bb43942ed7511c75c744d">   56</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html#ad3a24cc0067bb43942ed7511c75c744d">~GraphicsBackend</a>()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html#a8450e7a663121b58b81d5015bfcbc051">   62</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1IPixmapImpl.html">IPixmapImpl</a>* <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html#a8450e7a663121b58b81d5015bfcbc051">createPixmapImpl</a>() = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html#a5bd8874ec1feca340fc9c9ca912e96e3">   66</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html#a5bd8874ec1feca340fc9c9ca912e96e3">defaultFont</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html#a60acd41d75923c730d3d55355f80490c">   70</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html#a60acd41d75923c730d3d55355f80490c">setDefaultFont</a>(<span class="keyword">const</span> std::string&amp; family) = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html#adac7a84e5864d9c696d435f9461edd94">   74</a></span>&#160;        <span class="keyword">virtual</span> std::vector&lt;std::string&gt; <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html#adac7a84e5864d9c696d435f9461edd94">fontFamilies</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1GraphicsBackend.html#a21d6ed6e4b89fa7901287d4377664363">   78</a></span>&#160;        <span class="keyword">virtual</span> std::vector&lt;Gfx::FontFace&gt; <a class="code" href="classPt_1_1Forms_1_1GraphicsBackend.html#a21d6ed6e4b89fa7901287d4377664363">fontFaces</a>(<span class="keyword">const</span> std::string&amp; family) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1IPixmapImpl_html"><div class="ttname"><a href="classPt_1_1Forms_1_1IPixmapImpl.html">Pt::Forms::IPixmapImpl</a></div><div class="ttdoc">Interface for the platform/backend-specific pixmap implementation.</div><div class="ttdef"><b>Definition:</b> Pixmap.h:49</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html">Pt::Forms::GraphicsBackend</a></div><div class="ttdoc">Graphics backend interface used by platform integration.</div><div class="ttdef"><b>Definition:</b> GraphicsBackend.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1IPixmapImpl_html"><div class="ttname"><a href="classPt_1_1Forms_1_1IPixmapImpl.html">Pt::Forms::IPixmapImpl</a></div><div class="ttdoc">Platform pixmap implementation.</div><div class="ttdef"><b>Definition:</b> Pixmap.h:54</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html_adac7a84e5864d9c696d435f9461edd94"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html#adac7a84e5864d9c696d435f9461edd94">Pt::Forms::GraphicsBackend::fontFamilies</a></div><div class="ttdeci">virtual std::vector&lt; std::string &gt; fontFamilies() const =0</div><div class="ttdoc">Returns the available font family names.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html_a21d6ed6e4b89fa7901287d4377664363"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html#a21d6ed6e4b89fa7901287d4377664363">Pt::Forms::GraphicsBackend::fontFaces</a></div><div class="ttdeci">virtual std::vector&lt; Gfx::FontFace &gt; fontFaces(const std::string &amp;family) const =0</div><div class="ttdoc">Returns the faces of font family family.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html">Pt::Forms::GraphicsBackend</a></div><div class="ttdoc">Graphics backend used by platform integration.</div><div class="ttdef"><b>Definition:</b> GraphicsBackend.h:52</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html_ad3a24cc0067bb43942ed7511c75c744d"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html#ad3a24cc0067bb43942ed7511c75c744d">Pt::Forms::GraphicsBackend::~GraphicsBackend</a></div><div class="ttdeci">virtual ~GraphicsBackend()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> GraphicsBackend.h:56</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html_a60acd41d75923c730d3d55355f80490c"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html#a60acd41d75923c730d3d55355f80490c">Pt::Forms::GraphicsBackend::setDefaultFont</a></div><div class="ttdeci">virtual void setDefaultFont(const std::string &amp;family)=0</div><div class="ttdoc">Sets the default font family to family.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html_a8450e7a663121b58b81d5015bfcbc051"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html#a8450e7a663121b58b81d5015bfcbc051">Pt::Forms::GraphicsBackend::createPixmapImpl</a></div><div class="ttdeci">virtual IPixmapImpl * createPixmapImpl()=0</div><div class="ttdoc">Creates a platform pixmap implementation.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1GraphicsBackend_html_a5bd8874ec1feca340fc9c9ca912e96e3"><div class="ttname"><a href="classPt_1_1Forms_1_1GraphicsBackend.html#a5bd8874ec1feca340fc9c9ca912e96e3">Pt::Forms::GraphicsBackend::defaultFont</a></div><div class="ttdeci">virtual const std::string &amp; defaultFont() const =0</div><div class="ttdoc">Returns the default font family.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

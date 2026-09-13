@@ -124,67 +124,87 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>Forms {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>PT_FORMS_API CanvasLayout : <span class="keyword">public</span> Layout</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">typedef</span> Layout Base;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">class </span>LayoutParams</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                LayoutParams()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                { }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                LayoutParams(<span class="keyword">const</span> Gfx::PointF&amp; pos,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                             <span class="keyword">const</span> Gfx::SizeF&amp; size)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                : _pos(pos)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                , _size(size)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                { }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keyword">const</span> Gfx::PointF&amp; position()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">                </span>{ <span class="keywordflow">return</span> _pos; }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keyword">const</span> Gfx::SizeF&amp;  size()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">                </span>{ <span class="keywordflow">return</span> _size; }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                Gfx::PointF _pos;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                Gfx::SizeF  _size;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        CanvasLayout();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">virtual</span> ~CanvasLayout();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> addItem(Control&amp; control, <span class="keyword">const</span> LayoutParams&amp; params);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> addItem(Control&amp; control, </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                     <span class="keyword">const</span> Gfx::PointF&amp; pos,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                     <span class="keyword">const</span> Gfx::SizeF&amp; size);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> removeItem(Control&amp; control);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRemoveControl(Control&amp; control);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">typedef</span> std::map&lt;Control*, LayoutParams&gt; ItemMap;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::map&lt;Control*, LayoutParams&gt; _items;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html">   63</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html">CanvasLayout</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1Layout.html">Layout</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1Layout.html">Layout</a> <a class="code" href="classPt_1_1Forms_1_1Layout.html">Base</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html">   70</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html">LayoutParams</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a4689fb641dec306a918cd0ba00bdf956">   75</a></span>&#160;                <a class="code" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a4689fb641dec306a918cd0ba00bdf956">LayoutParams</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                { }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a7fa3c43d0e1e575efaa8b9b232d2e5a2">   80</a></span>&#160;                <a class="code" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a7fa3c43d0e1e575efaa8b9b232d2e5a2">LayoutParams</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                             <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; size)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                : _pos(pos)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                , _size(size)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                { }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a8a9600cacb7d95e914e77e16638e0f3c">   88</a></span>&#160;                <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; <a class="code" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a8a9600cacb7d95e914e77e16638e0f3c">position</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">                </span>{ <span class="keywordflow">return</span> _pos; }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a445bb5b5c4018463ef3a4604a8d69b7a">   93</a></span>&#160;                <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp;  <a class="code" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a445bb5b5c4018463ef3a4604a8d69b7a">size</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">                </span>{ <span class="keywordflow">return</span> _size; }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> _pos;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>  _size;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#a439dc2e3c99be910b93795080018f863">  104</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#a439dc2e3c99be910b93795080018f863">CanvasLayout</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#af35b15e1ac7e6d848bd74776a5eca092">  108</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#af35b15e1ac7e6d848bd74776a5eca092">~CanvasLayout</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">  114</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">addItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control, <span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html">LayoutParams</a>&amp; params);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#ae899649aed499b066267dedbec234204">  120</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#ae899649aed499b066267dedbec234204">addItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control, </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                     <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                     <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&amp; size);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#a0b41906131b5d86d758001ea5604e303">  126</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#a0b41906131b5d86d758001ea5604e303">removeItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#a8a741e85b6d1289105032bcf39d42ac9">  131</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#a8a741e85b6d1289105032bcf39d42ac9">onRemoveControl</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#a912210d8dfc33e555b12402ee47ac406">  135</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1CanvasLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">  139</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keyword">typedef</span> std::map&lt;Control*, LayoutParams&gt; ItemMap;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        std::map&lt;Control*, LayoutParams&gt; _items;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams_html_a8a9600cacb7d95e914e77e16638e0f3c"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a8a9600cacb7d95e914e77e16638e0f3c">Pt::Forms::CanvasLayout::LayoutParams::position</a></div><div class="ttdeci">const Gfx::PointF &amp; position() const</div><div class="ttdoc">Returns the stored position.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:88</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html">Pt::Forms::CanvasLayout</a></div><div class="ttdoc">Arranges children at stored positions and sizes.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:64</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html">Pt::Forms::CanvasLayout::LayoutParams</a></div><div class="ttdoc">Position and size of a canvas child.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:71</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_ad8ccf7b7ce76f6c257905bb1c5ebf855"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">Pt::Forms::CanvasLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, const LayoutParams &amp;params)</div><div class="ttdoc">Attaches control at the position and size in params.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams_html_a7fa3c43d0e1e575efaa8b9b232d2e5a2"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a7fa3c43d0e1e575efaa8b9b232d2e5a2">Pt::Forms::CanvasLayout::LayoutParams::LayoutParams</a></div><div class="ttdeci">LayoutParams(const Gfx::PointF &amp;pos, const Gfx::SizeF &amp;size)</div><div class="ttdoc">Creates parameters for pos and size.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:80</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_a912210d8dfc33e555b12402ee47ac406"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#a912210d8dfc33e555b12402ee47ac406">Pt::Forms::CanvasLayout::onMeasure</a></div><div class="ttdeci">virtual Gfx::SizeF onMeasure(const SizePolicy &amp;policy)</div><div class="ttdoc">Measures the bounding box of stored child rectangles.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_af35b15e1ac7e6d848bd74776a5eca092"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#af35b15e1ac7e6d848bd74776a5eca092">Pt::Forms::CanvasLayout::~CanvasLayout</a></div><div class="ttdeci">virtual ~CanvasLayout()</div><div class="ttdoc">Destroys the layout. Attached controls are not destroyed.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Point with floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_a0b41906131b5d86d758001ea5604e303"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#a0b41906131b5d86d758001ea5604e303">Pt::Forms::CanvasLayout::removeItem</a></div><div class="ttdeci">void removeItem(Control &amp;control)</div><div class="ttdoc">Detaches control without destroying it.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Control_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Control.html">Pt::Forms::Control</a></div><div class="ttdoc">Reusable view used as application content.</div><div class="ttdef"><b>Definition:</b> Control.h:107</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams_html_a445bb5b5c4018463ef3a4604a8d69b7a"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a445bb5b5c4018463ef3a4604a8d69b7a">Pt::Forms::CanvasLayout::LayoutParams::size</a></div><div class="ttdeci">const Gfx::SizeF &amp; size() const</div><div class="ttdoc">Returns the stored size.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:93</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_a439dc2e3c99be910b93795080018f863"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#a439dc2e3c99be910b93795080018f863">Pt::Forms::CanvasLayout::CanvasLayout</a></div><div class="ttdeci">CanvasLayout()</div><div class="ttdoc">Creates an empty canvas layout.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams_html_a4689fb641dec306a918cd0ba00bdf956"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout_1_1LayoutParams.html#a4689fb641dec306a918cd0ba00bdf956">Pt::Forms::CanvasLayout::LayoutParams::LayoutParams</a></div><div class="ttdeci">LayoutParams()</div><div class="ttdoc">Creates empty parameters.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:75</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_a68d03b9b05b163ae71a33c9ffa418f84"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">Pt::Forms::CanvasLayout::onLayout</a></div><div class="ttdeci">virtual void onLayout(const Gfx::RectF &amp;rect)</div><div class="ttdoc">Places each child at its stored position and size.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Layout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Layout.html">Pt::Forms::Layout</a></div><div class="ttdoc">Control that arranges child controls.</div><div class="ttdef"><b>Definition:</b> Layout.h:46</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_a8a741e85b6d1289105032bcf39d42ac9"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#a8a741e85b6d1289105032bcf39d42ac9">Pt::Forms::CanvasLayout::onRemoveControl</a></div><div class="ttdeci">virtual void onRemoveControl(Control &amp;control)</div><div class="ttdoc">Removes the stored parameters for control.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_ae899649aed499b066267dedbec234204"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#ae899649aed499b066267dedbec234204">Pt::Forms::CanvasLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, const Gfx::PointF &amp;pos, const Gfx::SizeF &amp;size)</div><div class="ttdoc">Attaches control at pos with size.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

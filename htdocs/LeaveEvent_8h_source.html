@@ -85,12 +85,12 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2015 Laurentiu-Gheorghe Crisan</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> modify it under the terms of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> License as published by the Free Software Foundation; either</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> As a special exception, you may use this file as part of a free</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> software library without restriction. Specifically, if other files</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> instantiate templates or use macros or inline functions from this</span></div>
@@ -100,15 +100,15 @@
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> License. This exception does not however invalidate any other</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> reasons why the executable file might be covered by the GNU Library</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> General Public License.</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> This library is distributed in the hope that it will be useful,</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> You should have received a copy of the GNU Lesser General Public</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> License along with this library; if not, write to the Free Software</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> 02110-1301  USA</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -127,51 +127,56 @@
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html">   48</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html">LeaveEvent</a> : <span class="keyword">public</span> Pt::BasicEvent&lt;LeaveEvent&gt;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html">LeaveEvent</a>(<a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>&amp; widget)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        : _widgetId_( widget.<a class="code" href="classPt_1_1Forms_1_1Widget.html#a66795bf927757b4118702a3f2f48484f">id</a>() )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        , _widget(&amp;widget)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        , _reserved0(0)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        , _reserved1(0)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html">LeaveEvent</a>()</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> widgetId()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> _widgetId_;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>* widget()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> _widget;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span>* r0()</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        { <span class="keywordflow">return</span> _reserved0; }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> r1()</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        { <span class="keywordflow">return</span> _reserved1; }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> _widgetId_;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>*      _widget;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span>*        _reserved0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> _reserved1;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html#a48c7ae636cb3651adb0aa9ed3636dd86">   53</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html#a48c7ae636cb3651adb0aa9ed3636dd86">LeaveEvent</a>(<a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>&amp; widget)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        : _widgetId_( widget.id() )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        , _widget(&amp;widget)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        , _reserved0(0)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        , _reserved1(0)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html#a187d9e90b113be469fd21df7f9885090">   63</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html#a187d9e90b113be469fd21df7f9885090">~LeaveEvent</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html#ac8213ddcc5496cd3188cb7fd9470e9bd">   69</a></span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html#ac8213ddcc5496cd3188cb7fd9470e9bd">widgetId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> _widgetId_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html#a5c70372408e0d578cf75d05cdf336bb6">   76</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>* <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html#a5c70372408e0d578cf75d05cdf336bb6">widget</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> _widget;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html#a5859281b76433e79a9944a993cdd9093">   83</a></span>&#160;        <span class="keywordtype">void</span>* <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html#a5859281b76433e79a9944a993cdd9093">r0</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        { <span class="keywordflow">return</span> _reserved0; }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1LeaveEvent.html#a3d07ce232749a6b9df8c7ec62c2f37fd">   88</a></span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html#a3d07ce232749a6b9df8c7ec62c2f37fd">r1</a>()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        { <span class="keywordflow">return</span> _reserved1; }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> _widgetId_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Widget.html">Widget</a>*      _widget;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span>*        _reserved0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> _reserved1;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a></div><div class="ttdoc">Common type of every visual Forms object.</div><div class="ttdef"><b>Definition:</b> Widget.h:104</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html_a5859281b76433e79a9944a993cdd9093"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html#a5859281b76433e79a9944a993cdd9093">Pt::Forms::LeaveEvent::r0</a></div><div class="ttdeci">void * r0()</div><div class="ttdoc">Returns reserved extension storage.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a></div><div class="ttdoc">Common type of every visual Forms object.</div><div class="ttdef"><b>Definition:</b> Widget.h:105</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html_ac8213ddcc5496cd3188cb7fd9470e9bd"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html#ac8213ddcc5496cd3188cb7fd9470e9bd">Pt::Forms::LeaveEvent::widgetId</a></div><div class="ttdeci">Pt::uint64_t widgetId() const</div><div class="ttdoc">Returns the ID of the widget that lost the pointer.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html_a3d07ce232749a6b9df8c7ec62c2f37fd"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html#a3d07ce232749a6b9df8c7ec62c2f37fd">Pt::Forms::LeaveEvent::r1</a></div><div class="ttdeci">Pt::uint64_t r1()</div><div class="ttdoc">Returns reserved extension storage.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:88</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html_a5c70372408e0d578cf75d05cdf336bb6"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html#a5c70372408e0d578cf75d05cdf336bb6">Pt::Forms::LeaveEvent::widget</a></div><div class="ttdeci">Widget * widget() const</div><div class="ttdoc">Returns the widget that lost the pointer.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:76</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html_a48c7ae636cb3651adb0aa9ed3636dd86"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html#a48c7ae636cb3651adb0aa9ed3636dd86">Pt::Forms::LeaveEvent::LeaveEvent</a></div><div class="ttdeci">LeaveEvent(Widget &amp;widget)</div><div class="ttdoc">Creates an event for pointer departure from widget.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:53</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html">Pt::Forms::LeaveEvent</a></div><div class="ttdoc">Pointer left a widget.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:49</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_a66795bf927757b4118702a3f2f48484f"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#a66795bf927757b4118702a3f2f48484f">Pt::Forms::Widget::id</a></div><div class="ttdeci">Pt::uint64_t id() const</div><div class="ttdoc">Returns the application-unique ID of this live widget.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html_a187d9e90b113be469fd21df7f9885090"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html#a187d9e90b113be469fd21df7f9885090">Pt::Forms::LeaveEvent::~LeaveEvent</a></div><div class="ttdeci">virtual ~LeaveEvent()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:63</div></div>
 <div class="ttc" id="anamespacePt_html_aa232ecf786a74ce5363c36c10798d2b1"><div class="ttname"><a href="namespacePt.html#aa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a></div><div class="ttdeci">uint_type uint64_t</div><div class="ttdoc">Unsigned 64-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:62</div></div>
 
 <div class="clear">&nbsp;</div>

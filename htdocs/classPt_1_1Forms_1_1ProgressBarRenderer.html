@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ProgressBarRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ProgressBarRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Displays.html">Displays</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ProgressBarStyler_8h_source.html">Pt/Forms/ProgressBarStyler.h</a>&gt;</code></p>
 
-<p>Renders the visual appearance of a progress bar.  
-</p>
+<p>Renders the look of a progress bar.  
+ <a href="classPt_1_1Forms_1_1ProgressBarRenderer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
 
@@ -99,21 +99,129 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae42c6e6ba7f0ce759f4f7b86e410dc42"><td class="memItemLeft" align="right" valign="top"><a id="ae42c6e6ba7f0ce759f4f7b86e410dc42"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> (std::size_t refs=0)</td></tr>
+<tr class="memdesc:ae42c6e6ba7f0ce759f4f7b86e410dc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer with reference count <em>refs</em>. <br /></td></tr>
+<tr class="separator:ae42c6e6ba7f0ce759f4f7b86e410dc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac37a528b461ed79c73a95aa87b77e72"><td class="memItemLeft" align="right" valign="top"><a id="aac37a528b461ed79c73a95aa87b77e72"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#aac37a528b461ed79c73a95aa87b77e72">~ProgressBarRenderer</a> ()</td></tr>
+<tr class="memdesc:aac37a528b461ed79c73a95aa87b77e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the renderer. <br /></td></tr>
+<tr class="separator:aac37a528b461ed79c73a95aa87b77e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fceae5ba9afd69ef5347967676bf389"><td class="memItemLeft" align="right" valign="top"><a id="a2fceae5ba9afd69ef5347967676bf389"></a>
+<a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a2fceae5ba9afd69ef5347967676bf389">create</a> () const</td></tr>
+<tr class="memdesc:a2fceae5ba9afd69ef5347967676bf389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
+<tr class="separator:a2fceae5ba9afd69ef5347967676bf389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2937d7b5508889f628308d933ab5473e"><td class="memItemLeft" align="right" valign="top"><a id="a2937d7b5508889f628308d933ab5473e"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a2937d7b5508889f628308d933ab5473e">measureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)</td></tr>
+<tr class="memdesc:a2937d7b5508889f628308d933ab5473e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outer size including the frame for <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a2937d7b5508889f628308d933ab5473e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadabe29a770c88b2d79334f5a5fb1360"><td class="memItemLeft" align="right" valign="top"><a id="aadabe29a770c88b2d79334f5a5fb1360"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#aadabe29a770c88b2d79334f5a5fb1360">measureBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
+<tr class="memdesc:aadabe29a770c88b2d79334f5a5fb1360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the natural size of the track. <br /></td></tr>
+<tr class="separator:aadabe29a770c88b2d79334f5a5fb1360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c8efca054f3f220cc908baada33751"><td class="memItemLeft" align="right" valign="top"><a id="ad6c8efca054f3f220cc908baada33751"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ad6c8efca054f3f220cc908baada33751">layoutChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;barSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;barRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect)</td></tr>
+<tr class="memdesc:ad6c8efca054f3f220cc908baada33751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and text rectangles in <em>rect</em>. <br /></td></tr>
+<tr class="separator:ad6c8efca054f3f220cc908baada33751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419f2cf0e2a6e560e62b96810e4eeb62"><td class="memItemLeft" align="right" valign="top"><a id="a419f2cf0e2a6e560e62b96810e4eeb62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a419f2cf0e2a6e560e62b96810e4eeb62">layoutBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;barRect, float progressRatio, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect)</td></tr>
+<tr class="memdesc:a419f2cf0e2a6e560e62b96810e4eeb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and filled portion for <em>progressRatio</em>. <br /></td></tr>
+<tr class="separator:a419f2cf0e2a6e560e62b96810e4eeb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9deed02dcbe69a706bc9515156d49f6d"><td class="memItemLeft" align="right" valign="top"><a id="a9deed02dcbe69a706bc9515156d49f6d"></a>
+const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a9deed02dcbe69a706bc9515156d49f6d">textPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
+<tr class="memdesc:a9deed02dcbe69a706bc9515156d49f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="separator:a9deed02dcbe69a706bc9515156d49f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9862c9ec55eb7c64e40bfd58573cbf9e"><td class="memItemLeft" align="right" valign="top"><a id="a9862c9ec55eb7c64e40bfd58573cbf9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a9862c9ec55eb7c64e40bfd58573cbf9e">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a9862c9ec55eb7c64e40bfd58573cbf9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints track, filled portion, and text for <em>state</em>. <br /></td></tr>
+<tr class="separator:a9862c9ec55eb7c64e40bfd58573cbf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac199f2f01e127a4d6017d627570bbe50"><td class="memItemLeft" align="right" valign="top"><a id="ac199f2f01e127a4d6017d627570bbe50"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ac199f2f01e127a4d6017d627570bbe50">renderBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:ac199f2f01e127a4d6017d627570bbe50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track and filled portion for <em>state</em>. <br /></td></tr>
+<tr class="separator:ac199f2f01e127a4d6017d627570bbe50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f585eb711da05455c237efc4ff36863"><td class="memItemLeft" align="right" valign="top"><a id="a4f585eb711da05455c237efc4ff36863"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a4f585eb711da05455c237efc4ff36863">renderTrack</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a4f585eb711da05455c237efc4ff36863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track for <em>state</em>. <br /></td></tr>
+<tr class="separator:a4f585eb711da05455c237efc4ff36863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ae625148f94eebd50502d8942ec231"><td class="memItemLeft" align="right" valign="top"><a id="a10ae625148f94eebd50502d8942ec231"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a10ae625148f94eebd50502d8942ec231">renderChunk</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a10ae625148f94eebd50502d8942ec231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the filled portion for <em>state</em>. <br /></td></tr>
+<tr class="separator:a10ae625148f94eebd50502d8942ec231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f40467fbe89f8b314f1d14028969a0"><td class="memItemLeft" align="right" valign="top"><a id="a22f40467fbe89f8b314f1d14028969a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a22f40467fbe89f8b314f1d14028969a0">renderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a22f40467fbe89f8b314f1d14028969a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>text</em> at <em>textPos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:a22f40467fbe89f8b314f1d14028969a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3213a81560a537d2ff8a22bf3807953"><td class="memItemLeft" align="right" valign="top"><a id="ac3213a81560a537d2ff8a22bf3807953"></a>
+const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ac3213a81560a537d2ff8a22bf3807953">typeId</a> () const</td></tr>
+<tr class="memdesc:ac3213a81560a537d2ff8a22bf3807953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
+<tr class="separator:ac3213a81560a537d2ff8a22bf3807953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memItemLeft" align="right" valign="top"><a id="ae84429cc5d55e687f3abbd5c0bfe7430"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ae84429cc5d55e687f3abbd5c0bfe7430">ref</a> ()</td></tr>
+<tr class="memdesc:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one reference. <br /></td></tr>
+<tr class="separator:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d0b246df42acf97a570e0218ca338b"><td class="memItemLeft" align="right" valign="top"><a id="a76d0b246df42acf97a570e0218ca338b"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a76d0b246df42acf97a570e0218ca338b">unref</a> ()</td></tr>
+<tr class="memdesc:a76d0b246df42acf97a570e0218ca338b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one reference and returns the remaining count. <br /></td></tr>
+<tr class="separator:a76d0b246df42acf97a570e0218ca338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memItemLeft" align="right" valign="top"><a id="ab86c1a0860cbf78ea7e1d3a571c48b38"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ab86c1a0860cbf78ea7e1d3a571c48b38">reset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>. <br /></td></tr>
 <tr class="separator:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2efbd39fe3305496ffe778c548346653"><td class="memItemLeft" align="right" valign="top"><a id="a2efbd39fe3305496ffe778c548346653"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a2efbd39fe3305496ffe778c548346653">onCreate</a> () const =0</td></tr>
-<tr class="memdesc:a2efbd39fe3305496ffe778c548346653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook that allocates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memdesc:a2efbd39fe3305496ffe778c548346653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the same concrete type. <br /></td></tr>
 <tr class="separator:a2efbd39fe3305496ffe778c548346653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
+<tr class="memdesc:adefda73de91a015f122ff2904604a77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>.  <a href="classPt_1_1Forms_1_1ProgressBarRenderer.html#adefda73de91a015f122ff2904604a77a">More...</a><br /></td></tr>
 <tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft" align="right" valign="top"><a id="a636e3794525900b85feb533efd7c2af2"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a636e3794525900b85feb533efd7c2af2">onMeasureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)=0</td></tr>
+<tr class="memdesc:a636e3794525900b85feb533efd7c2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a636e3794525900b85feb533efd7c2af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa978e6fdc19094cb8bdbb30fc5380bc6"><td class="memItemLeft" align="right" valign="top"><a id="aa978e6fdc19094cb8bdbb30fc5380bc6"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#aa978e6fdc19094cb8bdbb30fc5380bc6">onMeasureBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:aa978e6fdc19094cb8bdbb30fc5380bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the natural size of the track. <br /></td></tr>
+<tr class="separator:aa978e6fdc19094cb8bdbb30fc5380bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40588b2dfaa2bf790a462b690933bcca"><td class="memItemLeft" align="right" valign="top"><a id="a40588b2dfaa2bf790a462b690933bcca"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a40588b2dfaa2bf790a462b690933bcca">onLayoutChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;barSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;barRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect)=0</td></tr>
+<tr class="memdesc:a40588b2dfaa2bf790a462b690933bcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and text rectangles in <em>rect</em>. <br /></td></tr>
+<tr class="separator:a40588b2dfaa2bf790a462b690933bcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea67dcb4d560e6f3ccd809aec4418eb5"><td class="memItemLeft" align="right" valign="top"><a id="aea67dcb4d560e6f3ccd809aec4418eb5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#aea67dcb4d560e6f3ccd809aec4418eb5">onLayoutBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;barRect, float progressRatio, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect)=0</td></tr>
+<tr class="memdesc:aea67dcb4d560e6f3ccd809aec4418eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and filled portion for <em>progressRatio</em>. <br /></td></tr>
+<tr class="separator:aea67dcb4d560e6f3ccd809aec4418eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75200212677716a68ede029f9c6ee760"><td class="memItemLeft" align="right" valign="top"><a id="a75200212677716a68ede029f9c6ee760"></a>
+virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a75200212677716a68ede029f9c6ee760">onGetTextPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:a75200212677716a68ede029f9c6ee760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="separator:a75200212677716a68ede029f9c6ee760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad86e98d88f6983f7ab93a942a84286"><td class="memItemLeft" align="right" valign="top"><a id="afad86e98d88f6983f7ab93a942a84286"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#afad86e98d88f6983f7ab93a942a84286">onRenderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:afad86e98d88f6983f7ab93a942a84286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints track, filled portion, and text for <em>state</em>. <br /></td></tr>
+<tr class="separator:afad86e98d88f6983f7ab93a942a84286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a4e7f610b258f0c9bd1430e23b43bc"><td class="memItemLeft" align="right" valign="top"><a id="ab6a4e7f610b258f0c9bd1430e23b43bc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ab6a4e7f610b258f0c9bd1430e23b43bc">onRenderBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:ab6a4e7f610b258f0c9bd1430e23b43bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track and filled portion for <em>state</em>. <br /></td></tr>
+<tr class="separator:ab6a4e7f610b258f0c9bd1430e23b43bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1488a8311acfa4f9d3cfead03fab059"><td class="memItemLeft" align="right" valign="top"><a id="ab1488a8311acfa4f9d3cfead03fab059"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ab1488a8311acfa4f9d3cfead03fab059">onRenderTrack</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:ab1488a8311acfa4f9d3cfead03fab059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track for <em>state</em>. <br /></td></tr>
+<tr class="separator:ab1488a8311acfa4f9d3cfead03fab059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b659cda6a6ff8bc1f953adb9c300fd"><td class="memItemLeft" align="right" valign="top"><a id="ab0b659cda6a6ff8bc1f953adb9c300fd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ab0b659cda6a6ff8bc1f953adb9c300fd">onRenderChunk</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:ab0b659cda6a6ff8bc1f953adb9c300fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the filled portion for <em>state</em>. <br /></td></tr>
+<tr class="separator:ab0b659cda6a6ff8bc1f953adb9c300fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0fe292e1e575b44bcc6f5507592ff5"><td class="memItemLeft" align="right" valign="top"><a id="abc0fe292e1e575b44bcc6f5507592ff5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#abc0fe292e1e575b44bcc6f5507592ff5">onRenderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:abc0fe292e1e575b44bcc6f5507592ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>text</em> at <em>textPos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:abc0fe292e1e575b44bcc6f5507592ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A ProgressBarRenderer is a Style::Facet for the progress-bar family. Named measure methods run inside-out. Named layout methods run outside-in. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<p>Derive a renderer to change the look of progress bars. Register it on a Style, or assign it with ProgressBar::setRenderer(). </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adefda73de91a015f122ff2904604a77a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&nbsp;</a></span>onReset()</h2>
 
@@ -137,6 +245,8 @@ virtual <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">Progre
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
 
 </div>
 </div>

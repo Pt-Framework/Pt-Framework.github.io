@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ButtonRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ButtonRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Buttons.html">Buttons</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ButtonStyler_8h_source.html">Pt/Forms/ButtonStyler.h</a>&gt;</code></p>
 
-<p>Renders the visual appearance of a push button.  
+<p>Renders the look of a push button.  
  <a href="classPt_1_1Forms_1_1ButtonRenderer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
@@ -99,11 +99,19 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a62b3ddf269f84818abeeb220899ecb84"><td class="memItemLeft" align="right" valign="top"><a id="a62b3ddf269f84818abeeb220899ecb84"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a62b3ddf269f84818abeeb220899ecb84">ButtonRenderer</a> (std::size_t refs=0)</td></tr>
+<tr class="memdesc:a62b3ddf269f84818abeeb220899ecb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer with reference count <em>refs</em>. <br /></td></tr>
+<tr class="separator:a62b3ddf269f84818abeeb220899ecb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10943688a7e4f420c066db4de8459337"><td class="memItemLeft" align="right" valign="top"><a id="a10943688a7e4f420c066db4de8459337"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a10943688a7e4f420c066db4de8459337">~ButtonRenderer</a> ()</td></tr>
+<tr class="memdesc:a10943688a7e4f420c066db4de8459337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the renderer. <br /></td></tr>
+<tr class="separator:a10943688a7e4f420c066db4de8459337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aecfda8d8aed85bcd181eeca6268aba"><td class="memItemLeft" align="right" valign="top"><a id="a9aecfda8d8aed85bcd181eeca6268aba"></a>
 <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a9aecfda8d8aed85bcd181eeca6268aba">create</a> () const</td></tr>
 <tr class="memdesc:a9aecfda8d8aed85bcd181eeca6268aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
 <tr class="separator:a9aecfda8d8aed85bcd181eeca6268aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55db4d843c2e4a032fca27968c6471d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a55db4d843c2e4a032fca27968c6471d1">measureContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, Direction direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize)</td></tr>
+<tr class="memitem:a55db4d843c2e4a032fca27968c6471d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a55db4d843c2e4a032fca27968c6471d1">measureContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, <a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize)</td></tr>
 <tr class="memdesc:a55db4d843c2e4a032fca27968c6471d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the combined content size for icon and text arranged by direction.  <a href="classPt_1_1Forms_1_1ButtonRenderer.html#a55db4d843c2e4a032fca27968c6471d1">More...</a><br /></td></tr>
 <tr class="separator:a55db4d843c2e4a032fca27968c6471d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2937d7b5508889f628308d933ab5473e"><td class="memItemLeft" align="right" valign="top"><a id="a2937d7b5508889f628308d933ab5473e"></a>
@@ -122,7 +130,7 @@ Public Member Functions</h2></td></tr>
 const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a9deed02dcbe69a706bc9515156d49f6d">textPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
 <tr class="memdesc:a9deed02dcbe69a706bc9515156d49f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color applied for surface. <br /></td></tr>
 <tr class="separator:a9deed02dcbe69a706bc9515156d49f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75e955fa1384bf171f296943bbd011f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a75e955fa1384bf171f296943bbd011f9">layoutContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, Direction direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;iconRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect)</td></tr>
+<tr class="memitem:a75e955fa1384bf171f296943bbd011f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a75e955fa1384bf171f296943bbd011f9">layoutContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, <a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;iconRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect)</td></tr>
 <tr class="memdesc:a75e955fa1384bf171f296943bbd011f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the icon and text sub-rectangles within the content rect.  <a href="classPt_1_1Forms_1_1ButtonRenderer.html#a75e955fa1384bf171f296943bbd011f9">More...</a><br /></td></tr>
 <tr class="separator:a75e955fa1384bf171f296943bbd011f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a461690b83a8a46278381907f562a8373"><td class="memItemLeft" align="right" valign="top"><a id="a461690b83a8a46278381907f562a8373"></a>
@@ -148,22 +156,84 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#acdceb4e9a70d97abdb7a5aeeb05423d1">renderIcon</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;picture, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)</td></tr>
 <tr class="memdesc:acdceb4e9a70d97abdb7a5aeeb05423d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws picture at pos, clipped to the button bounding rect. <br /></td></tr>
 <tr class="separator:acdceb4e9a70d97abdb7a5aeeb05423d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3213a81560a537d2ff8a22bf3807953"><td class="memItemLeft" align="right" valign="top"><a id="ac3213a81560a537d2ff8a22bf3807953"></a>
+const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ac3213a81560a537d2ff8a22bf3807953">typeId</a> () const</td></tr>
+<tr class="memdesc:ac3213a81560a537d2ff8a22bf3807953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
+<tr class="separator:ac3213a81560a537d2ff8a22bf3807953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memItemLeft" align="right" valign="top"><a id="ae84429cc5d55e687f3abbd5c0bfe7430"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ae84429cc5d55e687f3abbd5c0bfe7430">ref</a> ()</td></tr>
+<tr class="memdesc:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one reference. <br /></td></tr>
+<tr class="separator:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d0b246df42acf97a570e0218ca338b"><td class="memItemLeft" align="right" valign="top"><a id="a76d0b246df42acf97a570e0218ca338b"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a76d0b246df42acf97a570e0218ca338b">unref</a> ()</td></tr>
+<tr class="memdesc:a76d0b246df42acf97a570e0218ca338b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one reference and returns the remaining count. <br /></td></tr>
+<tr class="separator:a76d0b246df42acf97a570e0218ca338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memItemLeft" align="right" valign="top"><a id="ab86c1a0860cbf78ea7e1d3a571c48b38"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ab86c1a0860cbf78ea7e1d3a571c48b38">reset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>. <br /></td></tr>
 <tr class="separator:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="memItemLeft" align="right" valign="top"><a id="a25b4b0f471c7ac786cdc5063e7493cfe"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a25b4b0f471c7ac786cdc5063e7493cfe">onCreate</a> () const =0</td></tr>
-<tr class="memdesc:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook that allocates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memdesc:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the same concrete type. <br /></td></tr>
 <tr class="separator:a25b4b0f471c7ac786cdc5063e7493cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
+<tr class="memdesc:adefda73de91a015f122ff2904604a77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>.  <a href="classPt_1_1Forms_1_1ButtonRenderer.html#adefda73de91a015f122ff2904604a77a">More...</a><br /></td></tr>
 <tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft" align="right" valign="top"><a id="a636e3794525900b85feb533efd7c2af2"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a636e3794525900b85feb533efd7c2af2">onMeasureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)=0</td></tr>
+<tr class="memdesc:a636e3794525900b85feb533efd7c2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a636e3794525900b85feb533efd7c2af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d154f09a3fbb05960e72400441285d"><td class="memItemLeft" align="right" valign="top"><a id="a98d154f09a3fbb05960e72400441285d"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a98d154f09a3fbb05960e72400441285d">onMeasureContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, <a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize)=0</td></tr>
+<tr class="memdesc:a98d154f09a3fbb05960e72400441285d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures icon and text arranged by <em>direction</em>. <br /></td></tr>
+<tr class="separator:a98d154f09a3fbb05960e72400441285d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8caae86cd2131abbbc4e4607dbe317b8"><td class="memItemLeft" align="right" valign="top"><a id="a8caae86cd2131abbbc4e4607dbe317b8"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a8caae86cd2131abbbc4e4607dbe317b8">onLayoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;frameRect)=0</td></tr>
+<tr class="memdesc:a8caae86cd2131abbbc4e4607dbe317b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content rectangle within <em>frameRect</em>. <br /></td></tr>
+<tr class="separator:a8caae86cd2131abbbc4e4607dbe317b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3985732ba5bcea994f1a9dbe8ff653b7"><td class="memItemLeft" align="right" valign="top"><a id="a3985732ba5bcea994f1a9dbe8ff653b7"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a3985732ba5bcea994f1a9dbe8ff653b7">onLayoutMnemonic</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html">Gfx::FontMetrics</a> &amp;fontMetrics, String::size_type mnemonicIndex)=0</td></tr>
+<tr class="memdesc:a3985732ba5bcea994f1a9dbe8ff653b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mnemonic underline rectangle. <br /></td></tr>
+<tr class="separator:a3985732ba5bcea994f1a9dbe8ff653b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75200212677716a68ede029f9c6ee760"><td class="memItemLeft" align="right" valign="top"><a id="a75200212677716a68ede029f9c6ee760"></a>
+virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a75200212677716a68ede029f9c6ee760">onGetTextPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:a75200212677716a68ede029f9c6ee760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="separator:a75200212677716a68ede029f9c6ee760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af783ebb552ae30f33d09520f63436c23"><td class="memItemLeft" align="right" valign="top"><a id="af783ebb552ae30f33d09520f63436c23"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#af783ebb552ae30f33d09520f63436c23">onLayoutContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, <a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> direction, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;iconSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;iconRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect)=0</td></tr>
+<tr class="memdesc:af783ebb552ae30f33d09520f63436c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions <em>contentRect</em> into icon and text rectangles. <br /></td></tr>
+<tr class="separator:af783ebb552ae30f33d09520f63436c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6758f7d2603f93f4a28ab402b3d4c869"><td class="memItemLeft" align="right" valign="top"><a id="a6758f7d2603f93f4a28ab402b3d4c869"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a6758f7d2603f93f4a28ab402b3d4c869">onRenderBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a6758f7d2603f93f4a28ab402b3d4c869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the background fill for <em>state</em>. <br /></td></tr>
+<tr class="separator:a6758f7d2603f93f4a28ab402b3d4c869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5493e93996da2a0cbbda4ed01bd9d33"><td class="memItemLeft" align="right" valign="top"><a id="ae5493e93996da2a0cbbda4ed01bd9d33"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#ae5493e93996da2a0cbbda4ed01bd9d33">onPrepareIcon</a> (const <a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">Gfx::Image</a> &amp;icon, <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;picture, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state) const =0</td></tr>
+<tr class="memdesc:ae5493e93996da2a0cbbda4ed01bd9d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares <em>picture</em> from <em>icon</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:ae5493e93996da2a0cbbda4ed01bd9d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13db52e211f79536ef722d492ee3bb5c"><td class="memItemLeft" align="right" valign="top"><a id="a13db52e211f79536ef722d492ee3bb5c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a13db52e211f79536ef722d492ee3bb5c">onRenderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a13db52e211f79536ef722d492ee3bb5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the button chrome for <em>state</em>. <br /></td></tr>
+<tr class="separator:a13db52e211f79536ef722d492ee3bb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5ea43316c4d7b3808529db2081f414"><td class="memItemLeft" align="right" valign="top"><a id="abb5ea43316c4d7b3808529db2081f414"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#abb5ea43316c4d7b3808529db2081f414">onRenderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:abb5ea43316c4d7b3808529db2081f414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>text</em> at <em>pos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:abb5ea43316c4d7b3808529db2081f414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16238825fae488a7d5f234691c81dea6"><td class="memItemLeft" align="right" valign="top"><a id="a16238825fae488a7d5f234691c81dea6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a16238825fae488a7d5f234691c81dea6">onRenderMnemonic</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;mnemonic, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a16238825fae488a7d5f234691c81dea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the mnemonic underline for <em>state</em>. <br /></td></tr>
+<tr class="separator:a16238825fae488a7d5f234691c81dea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf3559931e5c131df6d987bc859bd03"><td class="memItemLeft" align="right" valign="top"><a id="a4bf3559931e5c131df6d987bc859bd03"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a4bf3559931e5c131df6d987bc859bd03">onRenderIcon</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;picture, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a4bf3559931e5c131df6d987bc859bd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>picture</em> at <em>pos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:a4bf3559931e5c131df6d987bc859bd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides rendering primitives for button surfaces, text, mnemonic underlines, and icons. Subclasses override the protected virtuals. </p>
+<div class="textblock"><p>A ButtonRenderer is a Style::Facet for the push-button family. Named measure methods run inside-out: content, then frame. Named layout methods run outside-in: frame, then content and mnemonic. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<p>Derive a renderer to change the look of push buttons. Register it on a Style, or assign it to a widget with PushButton::setRenderer(). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a55db4d843c2e4a032fca27968c6471d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55db4d843c2e4a032fca27968c6471d1">&#9670;&nbsp;</a></span>measureContent()</h2>
@@ -180,7 +250,7 @@ virtual <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRende
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Direction&#160;</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a>&#160;</td>
           <td class="paramname"><em>direction</em>, </td>
         </tr>
         <tr>
@@ -227,7 +297,7 @@ virtual <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRende
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Direction&#160;</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a>&#160;</td>
           <td class="paramname"><em>direction</em>, </td>
         </tr>
         <tr>
@@ -323,6 +393,8 @@ virtual <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRende
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
 
 </div>
 </div>

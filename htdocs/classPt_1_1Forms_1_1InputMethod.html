@@ -81,7 +81,8 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">InputMethod Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Input.html">Pointer and Keyboard Input</a></div></div>  </div>
 </div><!--header-->
@@ -127,6 +128,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1InputMethod.html#aaf50e77097e128f71e180747cfaa604d">sendEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1KeyEvent.html">KeyEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:aaf50e77097e128f71e180747cfaa604d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends <em>ev</em> to the current receiver. <br /></td></tr>
 <tr class="separator:aaf50e77097e128f71e180747cfaa604d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a85f332c45005037f9bbcb58a39f5ef82"><td class="memItemLeft" align="right" valign="top"><a id="a85f332c45005037f9bbcb58a39f5ef82"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1InputMethod.html#a85f332c45005037f9bbcb58a39f5ef82">onBegin</a> ()=0</td></tr>
+<tr class="memdesc:a85f332c45005037f9bbcb58a39f5ef82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the platform or custom text-entry session. <br /></td></tr>
+<tr class="separator:a85f332c45005037f9bbcb58a39f5ef82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef200f77a155c73fff25a83b105c1ed"><td class="memItemLeft" align="right" valign="top"><a id="acef200f77a155c73fff25a83b105c1ed"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1InputMethod.html#acef200f77a155c73fff25a83b105c1ed">onFinish</a> ()=0</td></tr>
+<tr class="memdesc:acef200f77a155c73fff25a83b105c1ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finishes the platform or custom text-entry session. <br /></td></tr>
+<tr class="separator:acef200f77a155c73fff25a83b105c1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4e2ec7eb1095bf517155cb5f88a496"><td class="memItemLeft" align="right" valign="top"><a id="a4f4e2ec7eb1095bf517155cb5f88a496"></a>
+virtual <a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1InputMethod.html#a4f4e2ec7eb1095bf517155cb5f88a496">onActiveWindow</a> ()=0</td></tr>
+<tr class="memdesc:a4f4e2ec7eb1095bf517155cb5f88a496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active text-entry window, or 0. <br /></td></tr>
+<tr class="separator:a4f4e2ec7eb1095bf517155cb5f88a496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An input method begins and finishes a session for a Control, may provide an active window, and sends KeyEvent objects to its current receiver. The caller does not own the receiver. Derive from this class only to implement a text-entry interface; ordinary controls use the method installed on Application. </p>

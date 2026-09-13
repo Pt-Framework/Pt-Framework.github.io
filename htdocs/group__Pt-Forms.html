@@ -84,9 +84,9 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>A Forms application creates windows and controls, shows the visual hierarchy, and runs the event loop. The inherited event loop also supports I/O, timers, and asynchronous operations.</p>
-<p>Application is the starting point and must be constructed before forms, windows, or controls. It is not a Widget. It provides the primary Screen and WindowManager, dispatches platform events, and supplies shared services such as scaling, styles, fonts, and input methods.</p>
-<p>Forms distinguishes the class hierarchy from the visual hierarchy. The following diagram shows the C++ inheritance relationship. It does not show which objects display or contain other objects.</p>
+<p>A Forms application constructs its visual hierarchy, shows its windows, and runs the event loop. The inherited event loop also supports I/O, timers, and asynchronous operations.</p>
+<p>Application is the runtime root. Construct it before forms, windows, or controls. It is not a Widget. The application provides the primary Screen and its WindowManager, dispatches platform events, and owns the shared scaling, style, font, and input-method services.</p>
+<p>The C++ class hierarchy and the visual hierarchy describe different relationships. The following diagram shows inheritance only. It does not describe which objects display or contain other objects. In particular, Window derives from Form; it is not a direct child of View.</p>
 <div class="fragment"><div class="line">Widget</div>
 <div class="line">    Screen</div>
 <div class="line">    WindowManager</div>
@@ -94,19 +94,19 @@
 <div class="line">        Form</div>
 <div class="line">            Window</div>
 <div class="line">        Control</div>
-</div><!-- fragment --><p>The visual hierarchy describes how Forms objects appear together. The same non-owning host pattern repeats at each level: Application provides the Screen, a WindowManager attaches Window objects, a Form attaches one content Control, and a Control attaches child controls, including layouts. A Workspace follows the same principle inside an ordinary control: it contains a window manager that presents several windows in its bounds.</p>
+</div><!-- fragment --><p>The visual hierarchy describes how Forms objects appear together. Each level follows the same non-owning host pattern: Application provides the Screen, a WindowManager attaches Window objects, a Form attaches one content Control, and a Control attaches child controls, including layouts. A Workspace applies the same pattern inside an ordinary control: its window manager presents several windows within the workspace bounds.</p>
 <div class="fragment"><div class="line">Application -&gt; Screen -&gt; WindowManager -&gt; Window (Form) -&gt; content Control -&gt; child Controls</div>
-</div><!-- fragment --><p>Forms does not take ownership of a window or control when it becomes part of the visual hierarchy. The code that creates an object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
-<p>The following example creates the smallest useful visual hierarchy: a window, its content layout, and a control displayed by that layout.</p>
+</div><!-- fragment --><p>Attaching a window or control does not transfer ownership. The code that creates an object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
+<p>The following example creates a visual hierarchy with a window, its content layout, and a control displayed by that layout.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a> application(argc, argv);</div>
 <div class="line"> </div>
-<div class="line">    Pt::Forms::Label label;</div>
-<div class="line">    label.setText(<span class="stringliteral">&quot;Hello, Forms&quot;</span>);</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> label;</div>
+<div class="line">    label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Hello, Forms&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    Pt::Forms::FlowLayout content;</div>
-<div class="line">    content.addItem(label);</div>
+<div class="line">    <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a> content;</div>
+<div class="line">    content.<a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(label);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a> window;</div>
 <div class="line">    window.<a class="code" href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">setTitle</a>(<span class="stringliteral">&quot;Example&quot;</span>);</div>
@@ -120,13 +120,7 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Application.html">Application</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime root of a <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> user interface.  <a href="classPt_1_1Forms_1_1Application.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html">GraphicsBackend</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics backend interface used by platform integration.  <a href="classPt_1_1Forms_1_1GraphicsBackend.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TableLayout2.html">TableLayout2</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table layout with two-phase measure for Fill and nested layouts.  <a href="classPt_1_1Forms_1_1TableLayout2.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the runtime root of a <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> user interface.  <a href="classPt_1_1Forms_1_1Application.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
@@ -135,17 +129,39 @@ Modules</h2></td></tr>
 <tr class="memdesc:group__Pt-Forms-Widgets"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget and view object model. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__Pt-Forms-Windows"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Windows.html">Windows and Workspaces</a></td></tr>
-<tr class="memdesc:group__Pt-Forms-Windows"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows and windows management. <br /></td></tr>
+<tr class="memdesc:group__Pt-Forms-Windows"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows and workspace management. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Forms-Updating"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Updating.html">Layouting and Painting</a></td></tr>
+<tr class="memdesc:group__Pt-Forms-Updating"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate, layouting, and painting of visual content. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__Pt-Forms-Input"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Input.html">Pointer and Keyboard Input</a></td></tr>
-<tr class="memdesc:group__Pt-Forms-Input"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer, keyboard, focus, and text input to controls. <br /></td></tr>
+<tr class="memdesc:group__Pt-Forms-Input"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer, keyboard, and text-entry input. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Forms-Layouts"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Layouts.html">Layouts</a></td></tr>
+<tr class="memdesc:group__Pt-Forms-Layouts"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrangement of child controls. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Forms-Buttons"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Buttons.html">Buttons</a></td></tr>
+<tr class="memdesc:group__Pt-Forms-Buttons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commands and boolean choices. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Forms-Displays"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Displays.html">Displays</a></td></tr>
+<tr class="memdesc:group__Pt-Forms-Displays"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text, panels, and progress without editing. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Forms-Icons"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Icons.html">Icons and Text</a></td></tr>
+<tr class="memdesc:group__Pt-Forms-Icons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Icons and textual content for controls. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Forms-Styling"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Forms-Styling.html">Styles and Renderers</a></td></tr>
+<tr class="memdesc:group__Pt-Forms-Styling"><td class="mdescLeft">&#160;</td><td class="mdescRight">Styles, options, and renderers for widget appearance. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition:</b> Label.h:79</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ae618907c9d0f27ee1c0b1ae26e965f30"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ae618907c9d0f27ee1c0b1ae26e965f30">Pt::Forms::Widget::show</a></div><div class="ttdeci">virtual void show(bool b=true)</div><div class="ttdoc">Requests that the widget be shown or hidden.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Form presented by a window manager.</div><div class="ttdef"><b>Definition:</b> Window.h:99</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Runtime root of a Forms user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:89</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Provides the runtime root of a Forms user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:87</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a></div><div class="ttdoc">Arranges children in a single row or column.</div><div class="ttdef"><b>Definition:</b> FlowLayout.h:72</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Form_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Form::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Replaces the content root with control.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::FlowLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as a flow item.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Window_html_abc79cf0667bbb5c93fca3f01b52c7b57"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">Pt::Forms::Window::setTitle</a></div><div class="ttdeci">void setTitle(const std::string &amp;title)</div><div class="ttdoc">Sets the window title to title.</div></div>
 
 <div class="clear">&nbsp;</div>

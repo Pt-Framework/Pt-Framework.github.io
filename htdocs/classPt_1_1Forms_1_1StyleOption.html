@@ -80,20 +80,75 @@
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">StyleOption Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">StyleOption Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Styling.html">Styles and Renderers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="StyleOptions_8h_source.html">Pt/Forms/StyleOptions.h</a>&gt;</code></p>
 
-<p>Non-template base for a typed style option.  
+<p>Defines the base type of a named appearance option.  
  <a href="classPt_1_1Forms_1_1StyleOption.html#details">More...</a></p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1AccentColorOption.html">AccentColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1AlternateViewBackgroundOption.html">AlternateViewBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1BackgroundOption.html">BackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1ContourOption.html">ContourOption</a>, <a class="el" href="classPt_1_1Forms_1_1FontOption.html">FontOption</a>, <a class="el" href="classPt_1_1Forms_1_1ForegroundOption.html">ForegroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1HighlightColorOption.html">HighlightColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1HighlightedTextColorOption.html">HighlightedTextColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1HoverBackgroundOption.html">HoverBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1PlaceholderTextColorOption.html">PlaceholderTextColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1PopupBackgroundOption.html">PopupBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1PopupTextColorOption.html">PopupTextColorOption</a>, <a class="el" href="classPt_1_1Forms_1_1TextBackgroundOption.html">TextBackgroundOption</a>, <a class="el" href="classPt_1_1Forms_1_1TextColorOption.html">TextColorOption</a>, and <a class="el" href="classPt_1_1Forms_1_1ViewBackgroundOption.html">ViewBackgroundOption</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac0f7637c681884791f84e6f63da2323e"><td class="memItemLeft" align="right" valign="top"><a id="ac0f7637c681884791f84e6f63da2323e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#ac0f7637c681884791f84e6f63da2323e">~StyleOption</a> ()</td></tr>
+<tr class="memdesc:ac0f7637c681884791f84e6f63da2323e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:ac0f7637c681884791f84e6f63da2323e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86691070e06ed432c2b229e09c332c9a"><td class="memItemLeft" align="right" valign="top"><a id="a86691070e06ed432c2b229e09c332c9a"></a>
+virtual <a class="el" href="classPt_1_1Forms_1_1StyleOption.html">StyleOption</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#a86691070e06ed432c2b229e09c332c9a">clone</a> () const =0</td></tr>
+<tr class="memdesc:a86691070e06ed432c2b229e09c332c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this option. <br /></td></tr>
+<tr class="separator:a86691070e06ed432c2b229e09c332c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97bc0543c29c3dd61d553737355c7f9"><td class="memItemLeft" align="right" valign="top"><a id="ac97bc0543c29c3dd61d553737355c7f9"></a>
+virtual const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#ac97bc0543c29c3dd61d553737355c7f9">typeId</a> () const =0</td></tr>
+<tr class="memdesc:ac97bc0543c29c3dd61d553737355c7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the option class used as the lookup key. <br /></td></tr>
+<tr class="separator:ac97bc0543c29c3dd61d553737355c7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a30ad8f276a2310571c36239554831a"><td class="memItemLeft" align="right" valign="top"><a id="a1a30ad8f276a2310571c36239554831a"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#a1a30ad8f276a2310571c36239554831a">name</a> () const =0</td></tr>
+<tr class="memdesc:a1a30ad8f276a2310571c36239554831a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the option name. <br /></td></tr>
+<tr class="separator:a1a30ad8f276a2310571c36239554831a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67b7392f85a3678fc7b05dab7d74c5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1StyleOption.html#ae67b7392f85a3678fc7b05dab7d74c5e">bind</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> *)</td></tr>
+<tr class="memdesc:ae67b7392f85a3678fc7b05dab7d74c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materializes this option against <em>inherited</em>.  <a href="classPt_1_1Forms_1_1StyleOption.html#ae67b7392f85a3678fc7b05dab7d74c5e">More...</a><br /></td></tr>
+<tr class="separator:ae67b7392f85a3678fc7b05dab7d74c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Each concrete option type implements clone(), typeId(), and name(). The lookup key is the option class, not the stored value type. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>Each concrete option type implements clone(), typeId(), and name(). The lookup key is the option class, not the stored value type. Applications use the built-in option types. Derive only to add a new token to the contract. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae67b7392f85a3678fc7b05dab7d74c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67b7392f85a3678fc7b05dab7d74c5e">&#9670;&nbsp;</a></span>bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void bind </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Partial options such as FontOption merge with the inherited value. Passing 0 clears the inherited value. </p>
+
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1FontOption.html#ac0f161d423f3571b46ab87e26f07b15b">FontOption</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

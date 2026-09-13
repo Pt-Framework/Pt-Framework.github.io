@@ -84,19 +84,69 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">WorkspaceManager Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Windows.html">Windows and Workspaces</a></div></div>  </div>
+<div class="title">WorkspaceManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="WorkspaceManager_8h_source.html">Pt/Forms/WorkspaceManager.h</a>&gt;</code></p>
 
-<p><a class="el" href="classPt_1_1Forms_1_1Window.html" title="Form presented by a window manager.">Window</a> manager embedded in a workspace.  
+<p>Internal window manager used by a workspace.  
  <a href="classPt_1_1Forms_1_1WorkspaceManager.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1WindowManager.html">WindowManager</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8c159f5179c73234c8a721e6005b56c7"><td class="memItemLeft" align="right" valign="top"><a id="a8c159f5179c73234c8a721e6005b56c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a8c159f5179c73234c8a721e6005b56c7">WorkspaceManager</a> ()</td></tr>
+<tr class="memdesc:a8c159f5179c73234c8a721e6005b56c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a detached workspace window manager. <br /></td></tr>
+<tr class="separator:a8c159f5179c73234c8a721e6005b56c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ee7efc7f0b4a239fea33c4a82d5d34"><td class="memItemLeft" align="right" valign="top"><a id="a01ee7efc7f0b4a239fea33c4a82d5d34"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a01ee7efc7f0b4a239fea33c4a82d5d34">~WorkspaceManager</a> ()</td></tr>
+<tr class="memdesc:a01ee7efc7f0b4a239fea33c4a82d5d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the workspace window manager. <br /></td></tr>
+<tr class="separator:a01ee7efc7f0b4a239fea33c4a82d5d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd23060afbcd2e087bf84ff13085f0f"><td class="memItemLeft" align="right" valign="top"><a id="a3dd23060afbcd2e087bf84ff13085f0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a3dd23060afbcd2e087bf84ff13085f0f">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1Workspace.html">Workspace</a> *workspace)</td></tr>
+<tr class="memdesc:a3dd23060afbcd2e087bf84ff13085f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the workspace that contains this manager. <br /></td></tr>
+<tr class="separator:a3dd23060afbcd2e087bf84ff13085f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea6eedaf33d8784ec55e21baf3a51bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a9ea6eedaf33d8784ec55e21baf3a51bd">processMouseEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a> &amp;ev)</td></tr>
+<tr class="memdesc:a9ea6eedaf33d8784ec55e21baf3a51bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes <em>ev</em> for the hosted windows.  <a href="classPt_1_1Forms_1_1WorkspaceManager.html#a9ea6eedaf33d8784ec55e21baf3a51bd">More...</a><br /></td></tr>
+<tr class="separator:a9ea6eedaf33d8784ec55e21baf3a51bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033dc8b2214a4eeaf2274c98d617b9f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a033dc8b2214a4eeaf2274c98d617b9f4">processTouchEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a> &amp;ev)</td></tr>
+<tr class="memdesc:a033dc8b2214a4eeaf2274c98d617b9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes <em>ev</em> for the hosted windows.  <a href="classPt_1_1Forms_1_1WorkspaceManager.html#a033dc8b2214a4eeaf2274c98d617b9f4">More...</a><br /></td></tr>
+<tr class="separator:a033dc8b2214a4eeaf2274c98d617b9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a33ed85bf8cd359ec27dbc19da21ac1"><td class="memItemLeft" align="right" valign="top"><a id="a2a33ed85bf8cd359ec27dbc19da21ac1"></a>
+<a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a2a33ed85bf8cd359ec27dbc19da21ac1">activeWindow</a> ()</td></tr>
+<tr class="memdesc:a2a33ed85bf8cd359ec27dbc19da21ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active hosted window, or null. <br /></td></tr>
+<tr class="separator:a2a33ed85bf8cd359ec27dbc19da21ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a50b8ad7d9332d1be150b439813dba"><td class="memItemLeft" align="right" valign="top"><a id="a73a50b8ad7d9332d1be150b439813dba"></a>
+const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a73a50b8ad7d9332d1be150b439813dba">windows</a> () const</td></tr>
+<tr class="memdesc:a73a50b8ad7d9332d1be150b439813dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the windows attached to this workspace. <br /></td></tr>
+<tr class="separator:a73a50b8ad7d9332d1be150b439813dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478b51edf3ac38b3cb66d0cae250cd04"><td class="memItemLeft" align="right" valign="top"><a id="a478b51edf3ac38b3cb66d0cae250cd04"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a478b51edf3ac38b3cb66d0cae250cd04">borderWidth</a> () const</td></tr>
+<tr class="memdesc:a478b51edf3ac38b3cb66d0cae250cd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of each workspace window border. <br /></td></tr>
+<tr class="separator:a478b51edf3ac38b3cb66d0cae250cd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3148abae0ca72cf65cdd4c4f8243e69"><td class="memItemLeft" align="right" valign="top"><a id="ac3148abae0ca72cf65cdd4c4f8243e69"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#ac3148abae0ca72cf65cdd4c4f8243e69">titleHeight</a> () const</td></tr>
+<tr class="memdesc:ac3148abae0ca72cf65cdd4c4f8243e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of each workspace window title area. <br /></td></tr>
+<tr class="separator:ac3148abae0ca72cf65cdd4c4f8243e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f736b7e33c1c452cb705e65b4cb4fe8"><td class="memItemLeft" align="right" valign="top"><a id="a0f736b7e33c1c452cb705e65b4cb4fe8"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a0f736b7e33c1c452cb705e65b4cb4fe8">inactiveColor</a> () const</td></tr>
+<tr class="memdesc:a0f736b7e33c1c452cb705e65b4cb4fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the border color of an inactive workspace window. <br /></td></tr>
+<tr class="separator:a0f736b7e33c1c452cb705e65b4cb4fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f2097413acf58acb9bd99c6a965b75"><td class="memItemLeft" align="right" valign="top"><a id="a22f2097413acf58acb9bd99c6a965b75"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a22f2097413acf58acb9bd99c6a965b75">activeColor</a> () const</td></tr>
+<tr class="memdesc:a22f2097413acf58acb9bd99c6a965b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the border color of the active workspace window. <br /></td></tr>
+<tr class="separator:a22f2097413acf58acb9bd99c6a965b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d9e68a5d4d8654e59ef6da7febcf84"><td class="memItemLeft" align="right" valign="top"><a id="a13d9e68a5d4d8654e59ef6da7febcf84"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a13d9e68a5d4d8654e59ef6da7febcf84">textColor</a> () const</td></tr>
+<tr class="memdesc:a13d9e68a5d4d8654e59ef6da7febcf84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the title text color of the active workspace window. <br /></td></tr>
+<tr class="separator:a13d9e68a5d4d8654e59ef6da7febcf84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97479802bb2686e26d2bea2fd4af6e9b"><td class="memItemLeft" align="right" valign="top"><a id="a97479802bb2686e26d2bea2fd4af6e9b"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a97479802bb2686e26d2bea2fd4af6e9b">inactiveTextColor</a> () const</td></tr>
+<tr class="memdesc:a97479802bb2686e26d2bea2fd4af6e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the title text color of an inactive workspace window. <br /></td></tr>
+<tr class="separator:a97479802bb2686e26d2bea2fd4af6e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3499569e12c854b0b5e646c7b5b47ab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WindowManager.html#a3499569e12c854b0b5e646c7b5b47ab1">relayout</a> ()</td></tr>
 <tr class="memdesc:a3499569e12c854b0b5e646c7b5b47ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests a relayout of hosted windows.  <a href="classPt_1_1Forms_1_1WindowManager.html#a3499569e12c854b0b5e646c7b5b47ab1">More...</a><br /></td></tr>
 <tr class="separator:a3499569e12c854b0b5e646c7b5b47ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -348,7 +398,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#a17ddc3f983810bbdcf0d4c14336974d0">onProcessRescaleEvent</a> (const RescaleEvent &amp;ev)</td></tr>
 <tr class="memdesc:a17ddc3f983810bbdcf0d4c14336974d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a rescale event. <br /></td></tr>
 <tr class="separator:a17ddc3f983810bbdcf0d4c14336974d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const PaintEvent &amp;ev)</td></tr>
+<tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:ad62f36a3254f4389b12c85ca448dd3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a paint event through the Widget event path.  <a href="classPt_1_1Forms_1_1WorkspaceManager.html#ad62f36a3254f4389b12c85ca448dd3f8">More...</a><br /></td></tr>
 <tr class="separator:ad62f36a3254f4389b12c85ca448dd3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc15cd937ac8184ee0b701a8df6615bb"><td class="memItemLeft" align="right" valign="top"><a id="adc15cd937ac8184ee0b701a8df6615bb"></a>
@@ -387,7 +437,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html#ae3db6e397c2fc7a504129fb9a220bebe">onProcessKeyEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1KeyEvent.html">KeyEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:ae3db6e397c2fc7a504129fb9a220bebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers a key event through the responder chain. <br /></td></tr>
 <tr class="separator:ae3db6e397c2fc7a504129fb9a220bebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WindowManager.html#ad4f23d0135dce0096cc4f8e79da28fbd">onPaintEvent</a> (const PaintEvent &amp;ev)</td></tr>
+<tr class="memitem:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WindowManager.html#ad4f23d0135dce0096cc4f8e79da28fbd">onPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
 <tr class="memdesc:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a paint event after standard processing.  <a href="classPt_1_1Forms_1_1WindowManager.html#ad4f23d0135dce0096cc4f8e79da28fbd">More...</a><br /></td></tr>
 <tr class="separator:ad4f23d0135dce0096cc4f8e79da28fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b41f7521b6c6decadeff75fe406411"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#ab3b41f7521b6c6decadeff75fe406411">onSetParent</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *<a class="el" href="classPt_1_1Forms_1_1Widget.html#a520a9957f011623bbc9a1164dbc54779">parent</a>)</td></tr>
@@ -503,8 +553,46 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A WorkspaceManager presents windows inside a Workspace. Applications attach windows through Workspace or Window, not by deriving from this class. </p>
+<div class="textblock"><p>A WorkspaceManager presents windows inside its Workspace. Applications use the workspace to attach and manage windows; they do not derive from this class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ea6eedaf33d8784ec55e21baf3a51bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea6eedaf33d8784ec55e21baf3a51bd">&#9670;&nbsp;</a></span>processMouseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool processMouseEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if a hosted window consumes the event. </p>
+
+</div>
+</div>
+<a id="a033dc8b2214a4eeaf2274c98d617b9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033dc8b2214a4eeaf2274c98d617b9f4">&#9670;&nbsp;</a></span>processTouchEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool processTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if a hosted window consumes the event. </p>
+
+</div>
+</div>
 <a id="a4e6dfe6f7b483bd2e8edafefbecfc2a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e6dfe6f7b483bd2e8edafefbecfc2a3">&#9670;&nbsp;</a></span>onRequestRelayout()</h2>
 
@@ -805,7 +893,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">virtual void onProcessPaintEvent </td>
           <td>(</td>
-          <td class="paramtype">const PaintEvent &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>ev</em></td><td>)</td>
           <td></td>
         </tr>
@@ -886,7 +974,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">virtual void onPaintEvent </td>
           <td>(</td>
-          <td class="paramtype">const PaintEvent &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>ev</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1731,7 +1819,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>The base implementation clears pending invalidation bookkeeping. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#ae95892a055053b2f35ed11e85287a8fd">Window</a>, <a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">TabView</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#ae95892a055053b2f35ed11e85287a8fd">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#ae95892a055053b2f35ed11e85287a8fd">Window</a>, <a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">TabView</a>, <a class="el" href="classPt_1_1Forms_1_1PushButton.html#ae95892a055053b2f35ed11e85287a8fd">PushButton</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#ae95892a055053b2f35ed11e85287a8fd">ProgressBar</a>, <a class="el" href="classPt_1_1Forms_1_1Panel.html#ae95892a055053b2f35ed11e85287a8fd">Panel</a>, <a class="el" href="classPt_1_1Forms_1_1Label.html#ae95892a055053b2f35ed11e85287a8fd">Label</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#ae95892a055053b2f35ed11e85287a8fd">Form</a>, <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>, and <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#ae95892a055053b2f35ed11e85287a8fd">CheckBox</a>.</p>
 
 </div>
 </div>
@@ -1760,7 +1848,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>The base implementation calls onRescale() with the event scale. </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a254ac917bc0951e878ecd7f710fbe2c2">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#a254ac917bc0951e878ecd7f710fbe2c2">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a254ac917bc0951e878ecd7f710fbe2c2">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a254ac917bc0951e878ecd7f710fbe2c2">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a254ac917bc0951e878ecd7f710fbe2c2">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#a254ac917bc0951e878ecd7f710fbe2c2">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a254ac917bc0951e878ecd7f710fbe2c2">PushButton</a>, <a class="el" href="classPt_1_1Forms_1_1Panel.html#a254ac917bc0951e878ecd7f710fbe2c2">Panel</a>, <a class="el" href="classPt_1_1Forms_1_1Label.html#a254ac917bc0951e878ecd7f710fbe2c2">Label</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a254ac917bc0951e878ecd7f710fbe2c2">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a254ac917bc0951e878ecd7f710fbe2c2">Control</a>.</p>
 
 </div>
 </div>
@@ -1849,7 +1937,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Responder.html#a00b4fb0d0830a05d8e9284202b808c54">Responder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a00b4fb0d0830a05d8e9284202b808c54">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#a00b4fb0d0830a05d8e9284202b808c54">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a00b4fb0d0830a05d8e9284202b808c54">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a00b4fb0d0830a05d8e9284202b808c54">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a00b4fb0d0830a05d8e9284202b808c54">Window</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#a00b4fb0d0830a05d8e9284202b808c54">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a00b4fb0d0830a05d8e9284202b808c54">Form</a>, <a class="el" href="classPt_1_1Forms_1_1Control.html#a00b4fb0d0830a05d8e9284202b808c54">Control</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>.</p>
 
 </div>
 </div>
@@ -1880,7 +1968,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Responder.html#a2723f45dc09e09359e656adf936b063c">Responder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a2723f45dc09e09359e656adf936b063c">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#a2723f45dc09e09359e656adf936b063c">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a2723f45dc09e09359e656adf936b063c">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a2723f45dc09e09359e656adf936b063c">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a2723f45dc09e09359e656adf936b063c">Window</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#a2723f45dc09e09359e656adf936b063c">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a2723f45dc09e09359e656adf936b063c">Form</a>, <a class="el" href="classPt_1_1Forms_1_1Control.html#a2723f45dc09e09359e656adf936b063c">Control</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>.</p>
 
 </div>
 </div>
@@ -1911,7 +1999,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Responder.html#ad29e16b77cc387dcef5b5c52dd54041b">Responder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#ad29e16b77cc387dcef5b5c52dd54041b">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#ad29e16b77cc387dcef5b5c52dd54041b">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#ad29e16b77cc387dcef5b5c52dd54041b">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#ad29e16b77cc387dcef5b5c52dd54041b">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#ad29e16b77cc387dcef5b5c52dd54041b">Window</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#ad29e16b77cc387dcef5b5c52dd54041b">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1Screen.html#ad29e16b77cc387dcef5b5c52dd54041b">Screen</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#ad29e16b77cc387dcef5b5c52dd54041b">Form</a>, <a class="el" href="classPt_1_1Forms_1_1Control.html#ad29e16b77cc387dcef5b5c52dd54041b">Control</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#ad29e16b77cc387dcef5b5c52dd54041b">Button</a>.</p>
 
 </div>
 </div>
@@ -1942,7 +2030,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Responder.html#a529b3c04fd9976fb4e50e710d240701d">Responder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a529b3c04fd9976fb4e50e710d240701d">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a529b3c04fd9976fb4e50e710d240701d">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a529b3c04fd9976fb4e50e710d240701d">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a529b3c04fd9976fb4e50e710d240701d">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a529b3c04fd9976fb4e50e710d240701d">Form</a>, <a class="el" href="classPt_1_1Forms_1_1Control.html#a529b3c04fd9976fb4e50e710d240701d">Control</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a529b3c04fd9976fb4e50e710d240701d">Button</a>.</p>
 
 </div>
 </div>
@@ -1973,7 +2061,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Responder.html#a9d6315dcf9234993eca6cae77ff85373">Responder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a9d6315dcf9234993eca6cae77ff85373">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a9d6315dcf9234993eca6cae77ff85373">Form</a>, and <a class="el" href="classPt_1_1Forms_1_1Control.html#a9d6315dcf9234993eca6cae77ff85373">Control</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Window.html#a9d6315dcf9234993eca6cae77ff85373">Window</a>, <a class="el" href="classPt_1_1Forms_1_1Form.html#a9d6315dcf9234993eca6cae77ff85373">Form</a>, <a class="el" href="classPt_1_1Forms_1_1Control.html#a9d6315dcf9234993eca6cae77ff85373">Control</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a9d6315dcf9234993eca6cae77ff85373">Button</a>.</p>
 
 </div>
 </div>

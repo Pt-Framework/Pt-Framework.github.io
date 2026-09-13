@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">CheckBoxRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">CheckBoxRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Buttons.html">Buttons</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="CheckBoxStyler_8h_source.html">Pt/Forms/CheckBoxStyler.h</a>&gt;</code></p>
 
-<p>Renders the visual appearance of a check box widget.  
+<p>Renders the look of a check box.  
  <a href="classPt_1_1Forms_1_1CheckBoxRenderer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
@@ -99,6 +99,14 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa7391067888d13c27849dd0959ac4e88"><td class="memItemLeft" align="right" valign="top"><a id="aa7391067888d13c27849dd0959ac4e88"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#aa7391067888d13c27849dd0959ac4e88">CheckBoxRenderer</a> (std::size_t refs=0)</td></tr>
+<tr class="memdesc:aa7391067888d13c27849dd0959ac4e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer with reference count <em>refs</em>. <br /></td></tr>
+<tr class="separator:aa7391067888d13c27849dd0959ac4e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c8a7dea1be4ff6a78226f4e25b9dfe"><td class="memItemLeft" align="right" valign="top"><a id="ac1c8a7dea1be4ff6a78226f4e25b9dfe"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#ac1c8a7dea1be4ff6a78226f4e25b9dfe">~CheckBoxRenderer</a> ()</td></tr>
+<tr class="memdesc:ac1c8a7dea1be4ff6a78226f4e25b9dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the renderer. <br /></td></tr>
+<tr class="separator:ac1c8a7dea1be4ff6a78226f4e25b9dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a525c26841536a559d2d13d8b71d8ad16"><td class="memItemLeft" align="right" valign="top"><a id="a525c26841536a559d2d13d8b71d8ad16"></a>
 <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a525c26841536a559d2d13d8b71d8ad16">create</a> () const</td></tr>
 <tr class="memdesc:a525c26841536a559d2d13d8b71d8ad16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
@@ -143,22 +151,76 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#adc8382085afa8dd8c13306c826a3bd88">renderMnemonic</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;mnemonic, const <a class="el" href="classPt_1_1Forms_1_1CheckBoxState.html">CheckBoxState</a> &amp;state)</td></tr>
 <tr class="memdesc:adc8382085afa8dd8c13306c826a3bd88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the mnemonic underline within mnemonic, clipped to the widget rect. <br /></td></tr>
 <tr class="separator:adc8382085afa8dd8c13306c826a3bd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3213a81560a537d2ff8a22bf3807953"><td class="memItemLeft" align="right" valign="top"><a id="ac3213a81560a537d2ff8a22bf3807953"></a>
+const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ac3213a81560a537d2ff8a22bf3807953">typeId</a> () const</td></tr>
+<tr class="memdesc:ac3213a81560a537d2ff8a22bf3807953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
+<tr class="separator:ac3213a81560a537d2ff8a22bf3807953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memItemLeft" align="right" valign="top"><a id="ae84429cc5d55e687f3abbd5c0bfe7430"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ae84429cc5d55e687f3abbd5c0bfe7430">ref</a> ()</td></tr>
+<tr class="memdesc:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one reference. <br /></td></tr>
+<tr class="separator:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d0b246df42acf97a570e0218ca338b"><td class="memItemLeft" align="right" valign="top"><a id="a76d0b246df42acf97a570e0218ca338b"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a76d0b246df42acf97a570e0218ca338b">unref</a> ()</td></tr>
+<tr class="memdesc:a76d0b246df42acf97a570e0218ca338b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one reference and returns the remaining count. <br /></td></tr>
+<tr class="separator:a76d0b246df42acf97a570e0218ca338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memItemLeft" align="right" valign="top"><a id="ab86c1a0860cbf78ea7e1d3a571c48b38"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ab86c1a0860cbf78ea7e1d3a571c48b38">reset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>. <br /></td></tr>
 <tr class="separator:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a97b29eb0bcc62c189e44218888c78268"><td class="memItemLeft" align="right" valign="top"><a id="a97b29eb0bcc62c189e44218888c78268"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a97b29eb0bcc62c189e44218888c78268">onCreate</a> () const =0</td></tr>
-<tr class="memdesc:a97b29eb0bcc62c189e44218888c78268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook that allocates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memdesc:a97b29eb0bcc62c189e44218888c78268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the same concrete type. <br /></td></tr>
 <tr class="separator:a97b29eb0bcc62c189e44218888c78268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
+<tr class="memdesc:adefda73de91a015f122ff2904604a77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>.  <a href="classPt_1_1Forms_1_1CheckBoxRenderer.html#adefda73de91a015f122ff2904604a77a">More...</a><br /></td></tr>
 <tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2190ee8c05b733ce785c11ce552bccca"><td class="memItemLeft" align="right" valign="top"><a id="a2190ee8c05b733ce785c11ce552bccca"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a2190ee8c05b733ce785c11ce552bccca">onMeasureIndicator</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:a2190ee8c05b733ce785c11ce552bccca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the natural size of the checkable area. <br /></td></tr>
+<tr class="separator:a2190ee8c05b733ce785c11ce552bccca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c187bf27e6de2fe968d92f0844839c"><td class="memItemLeft" align="right" valign="top"><a id="af3c187bf27e6de2fe968d92f0844839c"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#af3c187bf27e6de2fe968d92f0844839c">onMeasureContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;indicatorSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize)=0</td></tr>
+<tr class="memdesc:af3c187bf27e6de2fe968d92f0844839c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the combined size of the checkable area and caption. <br /></td></tr>
+<tr class="separator:af3c187bf27e6de2fe968d92f0844839c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft" align="right" valign="top"><a id="a636e3794525900b85feb533efd7c2af2"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a636e3794525900b85feb533efd7c2af2">onMeasureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)=0</td></tr>
+<tr class="memdesc:a636e3794525900b85feb533efd7c2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a636e3794525900b85feb533efd7c2af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8caae86cd2131abbbc4e4607dbe317b8"><td class="memItemLeft" align="right" valign="top"><a id="a8caae86cd2131abbbc4e4607dbe317b8"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a8caae86cd2131abbbc4e4607dbe317b8">onLayoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;frameRect)=0</td></tr>
+<tr class="memdesc:a8caae86cd2131abbbc4e4607dbe317b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content rectangle within <em>frameRect</em>. <br /></td></tr>
+<tr class="separator:a8caae86cd2131abbbc4e4607dbe317b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c4dcbaae84ce1383f7a03a72db21e2"><td class="memItemLeft" align="right" valign="top"><a id="a43c4dcbaae84ce1383f7a03a72db21e2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a43c4dcbaae84ce1383f7a03a72db21e2">onLayoutContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;indicatorSize, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;textSize, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;indicatorRect, <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect)=0</td></tr>
+<tr class="memdesc:a43c4dcbaae84ce1383f7a03a72db21e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions <em>contentRect</em> into checkable area and caption. <br /></td></tr>
+<tr class="separator:a43c4dcbaae84ce1383f7a03a72db21e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3985732ba5bcea994f1a9dbe8ff653b7"><td class="memItemLeft" align="right" valign="top"><a id="a3985732ba5bcea994f1a9dbe8ff653b7"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a3985732ba5bcea994f1a9dbe8ff653b7">onLayoutMnemonic</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html">Gfx::FontMetrics</a> &amp;fontMetrics, String::size_type mnemonicIndex)=0</td></tr>
+<tr class="memdesc:a3985732ba5bcea994f1a9dbe8ff653b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mnemonic underline rectangle. <br /></td></tr>
+<tr class="separator:a3985732ba5bcea994f1a9dbe8ff653b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75200212677716a68ede029f9c6ee760"><td class="memItemLeft" align="right" valign="top"><a id="a75200212677716a68ede029f9c6ee760"></a>
+virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a75200212677716a68ede029f9c6ee760">onGetTextPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:a75200212677716a68ede029f9c6ee760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="separator:a75200212677716a68ede029f9c6ee760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35174cb45eab8ca23b614c73f9a71585"><td class="memItemLeft" align="right" valign="top"><a id="a35174cb45eab8ca23b614c73f9a71585"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a35174cb45eab8ca23b614c73f9a71585">onRenderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;boxRect, const <a class="el" href="classPt_1_1Forms_1_1CheckBoxState.html">CheckBoxState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a35174cb45eab8ca23b614c73f9a71585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the checkable area for <em>state</em>. <br /></td></tr>
+<tr class="separator:a35174cb45eab8ca23b614c73f9a71585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66b3b2fbb46e7876a8d415aee0713705"><td class="memItemLeft" align="right" valign="top"><a id="a66b3b2fbb46e7876a8d415aee0713705"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a66b3b2fbb46e7876a8d415aee0713705">onRenderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;pos, const <a class="el" href="classPt_1_1Forms_1_1CheckBoxState.html">CheckBoxState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a66b3b2fbb46e7876a8d415aee0713705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>text</em> at <em>pos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:a66b3b2fbb46e7876a8d415aee0713705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79546f5fd1927babe6c502e903d10d6"><td class="memItemLeft" align="right" valign="top"><a id="ab79546f5fd1927babe6c502e903d10d6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#ab79546f5fd1927babe6c502e903d10d6">onRenderMnemonic</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;mnemonic, const <a class="el" href="classPt_1_1Forms_1_1CheckBoxState.html">CheckBoxState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:ab79546f5fd1927babe6c502e903d10d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the mnemonic underline for <em>state</em>. <br /></td></tr>
+<tr class="separator:ab79546f5fd1927babe6c502e903d10d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides rendering primitives for the check indicator, label text, and mnemonic underline. Subclasses override the protected virtuals. </p>
+<div class="textblock"><p>A CheckBoxRenderer is a Style::Facet for the check-box family. Named measure methods run inside-out: indicator, content, then frame. Named layout methods run outside-in: frame, then content and mnemonic. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<p>Derive a renderer to change the look of check boxes. Register it on a Style, or assign it to a widget with CheckBox::setRenderer(). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adefda73de91a015f122ff2904604a77a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&nbsp;</a></span>onReset()</h2>
@@ -183,6 +245,8 @@ virtual <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxR
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
 
 </div>
 </div>

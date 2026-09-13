@@ -80,16 +80,48 @@
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">GraphicsBackend Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a></div></div>  </div>
+<div class="title">GraphicsBackend Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Updating.html">Layouting and Painting</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="GraphicsBackend_8h_source.html">Pt/Forms/GraphicsBackend.h</a>&gt;</code></p>
 
-<p>Graphics backend interface used by platform integration.  
-</p>
-</div><!-- contents -->
+<p>Graphics backend used by platform integration.  
+ <a href="classPt_1_1Forms_1_1GraphicsBackend.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad3a24cc0067bb43942ed7511c75c744d"><td class="memItemLeft" align="right" valign="top"><a id="ad3a24cc0067bb43942ed7511c75c744d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html#ad3a24cc0067bb43942ed7511c75c744d">~GraphicsBackend</a> ()</td></tr>
+<tr class="memdesc:ad3a24cc0067bb43942ed7511c75c744d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:ad3a24cc0067bb43942ed7511c75c744d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8450e7a663121b58b81d5015bfcbc051"><td class="memItemLeft" align="right" valign="top"><a id="a8450e7a663121b58b81d5015bfcbc051"></a>
+virtual <a class="el" href="classPt_1_1Forms_1_1IPixmapImpl.html">IPixmapImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html#a8450e7a663121b58b81d5015bfcbc051">createPixmapImpl</a> ()=0</td></tr>
+<tr class="memdesc:a8450e7a663121b58b81d5015bfcbc051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a platform pixmap implementation. <br /></td></tr>
+<tr class="separator:a8450e7a663121b58b81d5015bfcbc051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd8874ec1feca340fc9c9ca912e96e3"><td class="memItemLeft" align="right" valign="top"><a id="a5bd8874ec1feca340fc9c9ca912e96e3"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html#a5bd8874ec1feca340fc9c9ca912e96e3">defaultFont</a> () const =0</td></tr>
+<tr class="memdesc:a5bd8874ec1feca340fc9c9ca912e96e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default font family. <br /></td></tr>
+<tr class="separator:a5bd8874ec1feca340fc9c9ca912e96e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60acd41d75923c730d3d55355f80490c"><td class="memItemLeft" align="right" valign="top"><a id="a60acd41d75923c730d3d55355f80490c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html#a60acd41d75923c730d3d55355f80490c">setDefaultFont</a> (const std::string &amp;family)=0</td></tr>
+<tr class="memdesc:a60acd41d75923c730d3d55355f80490c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default font family to <em>family</em>. <br /></td></tr>
+<tr class="separator:a60acd41d75923c730d3d55355f80490c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac7a84e5864d9c696d435f9461edd94"><td class="memItemLeft" align="right" valign="top"><a id="adac7a84e5864d9c696d435f9461edd94"></a>
+virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html#adac7a84e5864d9c696d435f9461edd94">fontFamilies</a> () const =0</td></tr>
+<tr class="memdesc:adac7a84e5864d9c696d435f9461edd94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the available font family names. <br /></td></tr>
+<tr class="separator:adac7a84e5864d9c696d435f9461edd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d6ed6e4b89fa7901287d4377664363"><td class="memItemLeft" align="right" valign="top"><a id="a21d6ed6e4b89fa7901287d4377664363"></a>
+virtual std::vector&lt; Gfx::FontFace &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1GraphicsBackend.html#a21d6ed6e4b89fa7901287d4377664363">fontFaces</a> (const std::string &amp;family) const =0</td></tr>
+<tr class="memdesc:a21d6ed6e4b89fa7901287d4377664363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the faces of font family <em>family</em>. <br /></td></tr>
+<tr class="separator:a21d6ed6e4b89fa7901287d4377664363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Application owns the backend. It creates pixmap implementations and enumerates fonts. Ordinary applications do not call this API. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

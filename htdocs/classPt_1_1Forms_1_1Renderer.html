@@ -84,16 +84,16 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Renderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Renderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Styling.html">Styles and Renderers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Renderer_8h_source.html">Pt/Forms/Renderer.h</a>&gt;</code></p>
 
-<p>Cloneable style facet used by widget renderers.  
+<p>Provides cloneable drawing for one control family.  
  <a href="classPt_1_1Forms_1_1Renderer.html#details">More...</a></p>
 
-<p>Inherits Style::Facet.</p>
+<p>Inherits <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html">Style::Facet</a>.</p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html">ComboBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html">ListItemRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html">PanelRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a>, ScrollBarRenderer, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html">SliderRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html">SpinBoxRenderer</a>, and <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a>.</p>
 <table class="memberdecls">
@@ -101,30 +101,44 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="memItemLeft" align="right" valign="top"><a id="a87f42a7e5ca5cc3cb1921703309ef3d7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Renderer.html#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> (const std::type_info &amp;ti, std::size_t refs=0)</td></tr>
-<tr class="memdesc:a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer facet of the given dynamic type. <br /></td></tr>
+<tr class="memdesc:a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a740b53192d41177710d03a32a9f56214"><td class="memItemLeft" align="right" valign="top"><a id="a740b53192d41177710d03a32a9f56214"></a>
 <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Renderer.html#a740b53192d41177710d03a32a9f56214">create</a> () const</td></tr>
-<tr class="memdesc:a740b53192d41177710d03a32a9f56214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
+<tr class="memdesc:a740b53192d41177710d03a32a9f56214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance with a reference count of 0. <br /></td></tr>
 <tr class="separator:a740b53192d41177710d03a32a9f56214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3213a81560a537d2ff8a22bf3807953"><td class="memItemLeft" align="right" valign="top"><a id="ac3213a81560a537d2ff8a22bf3807953"></a>
+const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ac3213a81560a537d2ff8a22bf3807953">typeId</a> () const</td></tr>
+<tr class="memdesc:ac3213a81560a537d2ff8a22bf3807953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
+<tr class="separator:ac3213a81560a537d2ff8a22bf3807953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memItemLeft" align="right" valign="top"><a id="ae84429cc5d55e687f3abbd5c0bfe7430"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ae84429cc5d55e687f3abbd5c0bfe7430">ref</a> ()</td></tr>
+<tr class="memdesc:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one reference. <br /></td></tr>
+<tr class="separator:ae84429cc5d55e687f3abbd5c0bfe7430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d0b246df42acf97a570e0218ca338b"><td class="memItemLeft" align="right" valign="top"><a id="a76d0b246df42acf97a570e0218ca338b"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a76d0b246df42acf97a570e0218ca338b">unref</a> ()</td></tr>
+<tr class="memdesc:a76d0b246df42acf97a570e0218ca338b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one reference and returns the remaining count. <br /></td></tr>
+<tr class="separator:a76d0b246df42acf97a570e0218ca338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memItemLeft" align="right" valign="top"><a id="ab86c1a0860cbf78ea7e1d3a571c48b38"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ab86c1a0860cbf78ea7e1d3a571c48b38">reset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>. <br /></td></tr>
 <tr class="separator:ab86c1a0860cbf78ea7e1d3a571c48b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aaf86215d02a0f15784a3ac63435d1711"><td class="memItemLeft" align="right" valign="top"><a id="aaf86215d02a0f15784a3ac63435d1711"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Renderer.html#aaf86215d02a0f15784a3ac63435d1711">onCreate</a> () const =0</td></tr>
-<tr class="memdesc:aaf86215d02a0f15784a3ac63435d1711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook that allocates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memdesc:aaf86215d02a0f15784a3ac63435d1711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new renderer of the same concrete type. <br /></td></tr>
 <tr class="separator:aaf86215d02a0f15784a3ac63435d1711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09acb44ed364ddd0c97f583c828003f1"><td class="memItemLeft" align="right" valign="top"><a id="a09acb44ed364ddd0c97f583c828003f1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onReset</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;)</td></tr>
-<tr class="memdesc:a09acb44ed364ddd0c97f583c828003f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets with new style options. <br /></td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;)</td></tr>
+<tr class="memdesc:a09acb44ed364ddd0c97f583c828003f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>. <br /></td></tr>
 <tr class="separator:a09acb44ed364ddd0c97f583c828003f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Extends Style::Facet with a prototype clone operation. create() returns a freshly allocated instance with a reference count of 0. Shared theme instances stay in Style and are synchronized through reset(), not by cloning. </p>
+<div class="textblock"><p>A Renderer is a Style::Facet that can clone itself. Shared instances remain in Style. Use reset() to apply application options. Use create() to allocate a new instance with a reference count of 0. FacetPtr and Style::set() take their own references.</p>
+<p>Named measure, layout, and render methods belong on derived renderer types.</p>
+<p>Derive a renderer for a control family and register it on a Style. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

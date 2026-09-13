@@ -124,62 +124,74 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>Forms {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>PT_FORMS_API FlowLayout : <span class="keyword">public</span> Layout</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">typedef</span> Layout Base;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// Horizontal          use all space in row, same size for elements</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// HorizontalCenter    place elements accoring to size</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// Vertical            use all space in row, same size for elements</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// VerticalCenter      place elements accoring to size</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">explicit</span> FlowLayout(Direction d = Direction::Left);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">virtual</span> ~FlowLayout();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> setDirection(Direction d);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> setCenter(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> setReverse(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> addItem(Control&amp; control);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> removeItem(Control&amp; control);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">virtual</span> Gfx::SizeF onMeasure(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Gfx::SizeF onMeasureHorizontal(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        Gfx::SizeF onMeasureVertical(<span class="keyword">const</span> SizePolicy&amp; policy);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> onLayoutLeft(<span class="keyword">const</span> Gfx::RectF&amp; rect, <span class="keywordtype">bool</span> center);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> onLayoutRight(<span class="keyword">const</span> Gfx::RectF&amp; rect, <span class="keywordtype">bool</span> center);</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html">   71</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html">FlowLayout</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1Layout.html">Layout</a></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1Layout.html">Layout</a> <a class="code" href="classPt_1_1Forms_1_1View.html">Base</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#ae05a2b7d9c53d239a068f26fde28cc8b">   78</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#ae05a2b7d9c53d239a068f26fde28cc8b">FlowLayout</a>(<a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a> d = <a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Direction::Left</a>);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> onLayoutTop(<span class="keyword">const</span> Gfx::RectF&amp; rect, <span class="keywordtype">bool</span> center);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> onLayoutBottom(<span class="keyword">const</span> Gfx::RectF&amp; rect, <span class="keywordtype">bool</span> center);</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#a2db7352f826ef96dc28eba6dc35bc0d9">   82</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a2db7352f826ef96dc28eba6dc35bc0d9">~FlowLayout</a>();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        Direction _direction;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">bool</span>      _center;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">bool</span>      _reverse;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#af6f40ab38667ba5e049026a3902e9dd8">   86</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#af6f40ab38667ba5e049026a3902e9dd8">setDirection</a>(<a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a> d);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#a1361f93a9c4823f02a47bf0a3145af6c">   90</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a1361f93a9c4823f02a47bf0a3145af6c">setCenter</a>(<span class="keywordtype">bool</span> b);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#abd68b4edc29fb24dbe02cccc7d089c3b">   94</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#abd68b4edc29fb24dbe02cccc7d089c3b">setReverse</a>(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">  100</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#a0b41906131b5d86d758001ea5604e303">  104</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a0b41906131b5d86d758001ea5604e303">removeItem</a>(<a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a>&amp; control);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#a912210d8dfc33e555b12402ee47ac406">  109</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1FlowLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">  113</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasureHorizontal(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasureVertical(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> onLayoutLeft(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect, <span class="keywordtype">bool</span> center);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> onLayoutRight(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect, <span class="keywordtype">bool</span> center);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> onLayoutTop(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect, <span class="keywordtype">bool</span> center);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> onLayoutBottom(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect, <span class="keywordtype">bool</span> center);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a> _direction;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">bool</span>      _center;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">bool</span>      _reverse;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a2db7352f826ef96dc28eba6dc35bc0d9"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a2db7352f826ef96dc28eba6dc35bc0d9">Pt::Forms::FlowLayout::~FlowLayout</a></div><div class="ttdeci">virtual ~FlowLayout()</div><div class="ttdoc">Destroys the layout. Attached controls are not destroyed.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a1361f93a9c4823f02a47bf0a3145af6c"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a1361f93a9c4823f02a47bf0a3145af6c">Pt::Forms::FlowLayout::setCenter</a></div><div class="ttdeci">void setCenter(bool b)</div><div class="ttdoc">Sets whether items are packed as a centered group.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Direction::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdoc">Left to right.</div><div class="ttdef"><b>Definition:</b> Direction.h:60</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_af6f40ab38667ba5e049026a3902e9dd8"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#af6f40ab38667ba5e049026a3902e9dd8">Pt::Forms::FlowLayout::setDirection</a></div><div class="ttdeci">void setDirection(Direction d)</div><div class="ttdoc">Sets the flow direction to d and requests relayout.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Control_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Control.html">Pt::Forms::Control</a></div><div class="ttdoc">Reusable view used as application content.</div><div class="ttdef"><b>Definition:</b> Control.h:107</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html">Pt::Forms::Direction</a></div><div class="ttdoc">Names a flow direction.</div><div class="ttdef"><b>Definition:</b> Direction.h:52</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a></div><div class="ttdoc">Arranges children in a single row or column.</div><div class="ttdef"><b>Definition:</b> FlowLayout.h:72</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1View_html"><div class="ttname"><a href="classPt_1_1Forms_1_1View.html">Pt::Forms::View</a></div><div class="ttdoc">Widget that hosts controls on a paint surface.</div><div class="ttdef"><b>Definition:</b> View.h:86</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::FlowLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as a flow item.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a0b41906131b5d86d758001ea5604e303"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a0b41906131b5d86d758001ea5604e303">Pt::Forms::FlowLayout::removeItem</a></div><div class="ttdeci">void removeItem(Control &amp;control)</div><div class="ttdoc">Detaches control without destroying it.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Layout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Layout.html">Pt::Forms::Layout</a></div><div class="ttdoc">Control that arranges child controls.</div><div class="ttdef"><b>Definition:</b> Layout.h:46</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_ae05a2b7d9c53d239a068f26fde28cc8b"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#ae05a2b7d9c53d239a068f26fde28cc8b">Pt::Forms::FlowLayout::FlowLayout</a></div><div class="ttdeci">FlowLayout(Direction d=Direction::Left)</div><div class="ttdoc">Creates a flow layout in direction d.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a912210d8dfc33e555b12402ee47ac406"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a912210d8dfc33e555b12402ee47ac406">Pt::Forms::FlowLayout::onMeasure</a></div><div class="ttdeci">virtual Gfx::SizeF onMeasure(const SizePolicy &amp;policy)</div><div class="ttdoc">Measures children along the flow axis.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a68d03b9b05b163ae71a33c9ffa418f84"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">Pt::Forms::FlowLayout::onLayout</a></div><div class="ttdeci">virtual void onLayout(const Gfx::RectF &amp;rect)</div><div class="ttdoc">Places children along the flow direction.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_abd68b4edc29fb24dbe02cccc7d089c3b"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#abd68b4edc29fb24dbe02cccc7d089c3b">Pt::Forms::FlowLayout::setReverse</a></div><div class="ttdeci">void setReverse(bool b)</div><div class="ttdoc">Sets whether children are visited in reverse order.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

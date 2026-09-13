@@ -189,13 +189,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a878d8845d08b04f5d598d9361ffff4e3">options</a> () const</td></tr>
 <tr class="memdesc:a878d8845d08b04f5d598d9361ffff4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective tab view options. <br /></td></tr>
 <tr class="separator:a878d8845d08b04f5d598d9361ffff4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="memItemLeft" align="right" valign="top"><a id="a36be2eaef48ddc0bd3fff591fa5dfbed"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a36be2eaef48ddc0bd3fff591fa5dfbed">bind</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style, const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;styleOptions)</td></tr>
-<tr class="memdesc:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds or rebinds to a style and global style options. <br /></td></tr>
+<tr class="memitem:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a36be2eaef48ddc0bd3fff591fa5dfbed">bind</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style, const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;styleOptions)</td></tr>
+<tr class="memdesc:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this styler to <em>style</em> and <em>styleOptions</em>.  <a href="classPt_1_1Forms_1_1Styler.html#a36be2eaef48ddc0bd3fff591fa5dfbed">More...</a><br /></td></tr>
 <tr class="separator:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05476a754529dc56ab358f6383346cae"><td class="memItemLeft" align="right" valign="top"><a id="a05476a754529dc56ab358f6383346cae"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a05476a754529dc56ab358f6383346cae">isBound</a> () const</td></tr>
-<tr class="memdesc:a05476a754529dc56ab358f6383346cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if bound. <br /></td></tr>
+<tr class="memdesc:a05476a754529dc56ab358f6383346cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a renderer is bound. <br /></td></tr>
 <tr class="separator:a05476a754529dc56ab358f6383346cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -212,11 +211,75 @@ virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#1
 virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#abf5f1938a5deb8ae484bd5e70ec3cafe">onCreateRenderer</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
 <tr class="memdesc:abf5f1938a5deb8ae484bd5e70ec3cafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a tab view renderer clone from <em>style</em>. <br /></td></tr>
 <tr class="separator:abf5f1938a5deb8ae484bd5e70ec3cafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="memItemLeft" align="right" valign="top"><a id="a7aff0eab1f97e9e7a0600a28b5aa9124"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a7aff0eab1f97e9e7a0600a28b5aa9124">init</a> (<a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *renderer)</td></tr>
-<tr class="memdesc:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes with a specific renderer. <br /></td></tr>
+<tr class="memitem:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a7aff0eab1f97e9e7a0600a28b5aa9124">init</a> (<a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *renderer)</td></tr>
+<tr class="memdesc:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the bound renderer with <em>renderer</em>.  <a href="classPt_1_1Forms_1_1Styler.html#a7aff0eab1f97e9e7a0600a28b5aa9124">More...</a><br /></td></tr>
 <tr class="separator:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a36be2eaef48ddc0bd3fff591fa5dfbed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36be2eaef48ddc0bd3fff591fa5dfbed">&#9670;&nbsp;</a></span>bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bind </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;&#160;</td>
+          <td class="paramname"><em>style</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>styleOptions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true when the effective renderer or the effective options changed. </p>
+
+</div>
+</div>
+<a id="a7aff0eab1f97e9e7a0600a28b5aa9124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aff0eab1f97e9e7a0600a28b5aa9124">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A non-null <em>renderer</em> is a custom renderer. bind() keeps it until init() is called with 0, which falls back to the current style. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

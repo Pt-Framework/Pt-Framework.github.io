@@ -85,8 +85,7 @@
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Forms presents windows in two places: on a platform display, and inside a workspace. In both cases a Window is a Form attached to a WindowManager. The manager does not own the window. This is the same non-owning host pattern as Application with a Screen and Form with a content Control.</p>
 <p>A top-level window uses the primary Screen and a platform frame. A Workspace nests that windowing model inside a Control: ordinary background content plus a stack of windows in the control's bounds. It is not a second screen. A Popup is still a window, used for a short interaction tied to an opener, not a third model.</p>
-<p>A window joins a manager when it is shown, unless the application already selected a parent manager. Showing connects it to the screen and frame. Closing detaches it and does not destroy it. Geometry, visibility, and activation are requests confirmed by events, as with other widgets.</p>
-<p>WindowType and WindowState are presentation of a window, not separate object kinds. </p>
+<p>A window joins a manager when it is shown, unless the application already selected a parent manager. Showing connects it to the screen and frame. Closing detaches it and does not destroy it. Geometry, visibility, and activation are requests confirmed by events, as with other widgets. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -125,9 +124,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Workspace.html">Workspace</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1Control.html" title="Reusable view used as application content.">Control</a> that presents windows in its own bounds.  <a href="classPt_1_1Forms_1_1Workspace.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1WorkspaceManager.html">WorkspaceManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Forms_1_1Window.html" title="Form presented by a window manager.">Window</a> manager embedded in a workspace.  <a href="classPt_1_1Forms_1_1WorkspaceManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
