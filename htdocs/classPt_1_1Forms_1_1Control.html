@@ -85,7 +85,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Control Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms-Widgets.html">Forms Widgets and Views</a></div></div>  </div>
+<div class="title">Control Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Forms</a> &raquo; <a class="el" href="group__Pt-Forms-Widgets.html">Widgets and Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -766,7 +766,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Control is the building block of a <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> user interface. Derive from it to implement custom content. It can be the content of a Form or the child of another view, and it can attach child controls of its own. Attachment is non-owning: a parent stores control pointers but does not destroy its children.</p>
+<div class="textblock"><p>A Control is the building block of a <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> user interface. Derive from it to implement custom content. It can be the content of a Form or the child of another view, and it can attach child controls of its own. Attachment is non-owning: a parent stores control pointers but does not destroy its children.</p>
 <p>A control's parent is a View, and its direct children are controls. add() first detaches a child from any old parent; remove() detaches it without destroying it. When the tree joins a connected form, connection, form association, responder chain, scaling, and paint surface propagate through all descendants. Removing a control reverses those runtime relationships. Keep every attached control alive until it has been removed or its parent is gone.</p>
 <p>The parent paints children in stacking order and hit-tests them from front to back. raise() moves a direct child to the front. Controls forward repaint and relayout requests to their parent, which converts the requested local region to its own coordinates. A control measures under the supplied SizePolicy and caches the preferred size until content, policy, limits, or scaling invalidate it. Its layout hook assigns geometry to its direct children.</p>
 <p>The default measurement returns an empty size and the default layout does not assign child geometry. A derived container measures its content in onMeasure() and places each child with move() and resize() in onLayout(). Call relayout() after a content change that affects size or geometry and invalidate() after a visual-only change.</p>
@@ -1089,7 +1089,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> call this after matching a registered shortcut. Applications normally register shortcuts with setShortcut() instead of calling this method directly. </p>
+<p><a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> call this after matching a registered shortcut. Applications normally register shortcuts with setShortcut() instead of calling this method directly. </p>
 
 </div>
 </div>
@@ -1108,7 +1108,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> call this after matching an Alt mnemonic. Applications normally register mnemonics with setMnemonic() instead of calling this method directly. </p>
+<p><a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> call this after matching an Alt mnemonic. Applications normally register mnemonics with setMnemonic() instead of calling this method directly. </p>
 
 </div>
 </div>
@@ -2080,7 +2080,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
+<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
 
 </div>
 </div>
@@ -2401,7 +2401,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> runtime. </p>
+<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime. </p>
 
 </div>
 </div>

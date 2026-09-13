@@ -66712,20 +66712,15 @@
     <class kind="class">Pt::System::Path</class>
   </compound>
   <compound kind="group">
-    <name>Pt-Forms-Application</name>
-    <title>Forms Applications</title>
-    <filename>group__Pt-Forms-Application.html</filename>
+    <name>Pt-Forms</name>
+    <title>Forms</title>
+    <filename>group__Pt-Forms.html</filename>
     <class kind="class">Pt::Forms::Application</class>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Forms-Widgets</name>
-    <title>Forms Widgets and Views</title>
-    <filename>group__Pt-Forms-Widgets.html</filename>
-    <class kind="class">Pt::Forms::Control</class>
-    <class kind="class">Pt::Forms::Form</class>
-    <class kind="class">Pt::Forms::Screen</class>
-    <class kind="class">Pt::Forms::View</class>
-    <class kind="class">Pt::Forms::Widget</class>
+    <class kind="class">Pt::Forms::GraphicsBackend</class>
+    <class kind="class">Pt::Forms::TableLayout2</class>
+    <subgroup>Pt-Forms-Input</subgroup>
+    <subgroup>Pt-Forms-Widgets</subgroup>
+    <subgroup>Pt-Forms-Windows</subgroup>
   </compound>
   <compound kind="group">
     <name>Pt-Gfx-Images</name>
@@ -67168,6 +67163,16 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>Pt-Forms-Widgets</name>
+    <title>Widgets and Views</title>
+    <filename>group__Pt-Forms-Widgets.html</filename>
+    <class kind="class">Pt::Forms::Control</class>
+    <class kind="class">Pt::Forms::Form</class>
+    <class kind="class">Pt::Forms::Screen</class>
+    <class kind="class">Pt::Forms::View</class>
+    <class kind="class">Pt::Forms::Widget</class>
+  </compound>
+  <compound kind="group">
     <name>Pt-Forms-Windows</name>
     <title>Windows and Workspaces</title>
     <filename>group__Pt-Forms-Windows.html</filename>
@@ -67329,22 +67334,22 @@
     <docanchor file="pt_contents.html" title="Unit Testing">pt_unit</docanchor>
   </compound>
   <compound kind="page">
-    <name>Pt-Forms-Application-Page</name>
+    <name>Pt-Forms-Page</name>
     <title>Application Lifecycle and Structure</title>
-    <filename>Pt-Forms-Application-Page.html</filename>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Application">Pt-Forms-Application-Page-Application</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Widgets and Views">Pt-Forms-Application-Page-Widgets</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Widgets">Pt-Forms-Application-Page-Widget</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Views">Pt-Forms-Application-Page-View</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Forms">Pt-Forms-Application-Page-Form</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Controls">Pt-Forms-Application-Page-Control</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Screens">Pt-Forms-Application-Page-Screen</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Windows and Workspaces">Pt-Forms-Application-Page-Windows</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Windows">Pt-Forms-Application-Page-Window</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Window Managers">Pt-Forms-Application-Page-WindowManager</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Pointer and Keyboard Input">Pt-Forms-Application-Page-Input</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Responders">Pt-Forms-Application-Page-Responder</docanchor>
-    <docanchor file="Pt-Forms-Application-Page.html" title="Input Methods">Pt-Forms-Application-Page-InputMethod</docanchor>
+    <filename>Pt-Forms-Page.html</filename>
+    <docanchor file="Pt-Forms-Page.html" title="Application">Pt-Forms-Page-Application</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Widgets and Views">Pt-Forms-Page-Widgets</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Widgets">Pt-Forms-Page-Widget</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Views">Pt-Forms-Page-View</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Forms">Pt-Forms-Page-Form</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Controls">Pt-Forms-Page-Control</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Screens">Pt-Forms-Page-Screen</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Windows and Workspaces">Pt-Forms-Page-Windows</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Windows">Pt-Forms-Page-Window</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Window Managers">Pt-Forms-Page-WindowManager</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Pointer and Keyboard Input">Pt-Forms-Page-Input</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Responders">Pt-Forms-Page-Responder</docanchor>
+    <docanchor file="Pt-Forms-Page.html" title="Input Methods">Pt-Forms-Page-InputMethod</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-Gfx-Drawing-Page</name>

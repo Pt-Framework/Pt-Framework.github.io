@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Screen Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms-Widgets.html">Forms Widgets and Views</a></div></div>  </div>
+<div class="title">Screen Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Forms</a> &raquo; <a class="el" href="group__Pt-Forms-Widgets.html">Widgets and Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -554,7 +554,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Screen is the runtime root for the top-level windows on one display. Application provides the primary screen and connects it to the platform. The screen tracks attached Window objects, routes input to the widget below the pointer, and requests drawing of changed regions. Applications normally use the screen through Application::screen() rather than creating one directly.</p>
 <p>A screen provides the top-level WindowManager for its display. Showing an unparented Window attaches it through that manager. The manager and screen use non-owning relationships to the windows, so the application must keep every attached window alive and detach it before destruction. Use a Workspace when an application needs a window manager within a control instead of another platform display.</p>
-<p><a class="el" href="classPt_1_1Forms_1_1Screen.html" title="Display root for top-level windows.">Screen</a> coordinates are global <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> coordinates. The screen hit-tests windows and their content to choose the input target. When that target changes, setPointer() delivers a leave event to the old widget before an enter event is delivered to the new one. Pointer capture and transient popups can override normal hit-test routing through Application.</p>
+<p><a class="el" href="classPt_1_1Forms_1_1Screen.html" title="Display root for top-level windows.">Screen</a> coordinates are global <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> coordinates. The screen hit-tests windows and their content to choose the input target. When that target changes, setPointer() delivers a leave event to the old widget before an enter event is delivered to the new one. Pointer capture and transient popups can override normal hit-test routing through Application.</p>
 <p>Repaint requests from the hierarchy reach the screen as dirty rectangles. The screen combines pending rectangles and schedules one paint pass, then passes the resulting update to the platform implementation. Screen is a backend extension point; applications should use its window manager and should not call its protected event and platform hooks. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad1d6dc62d282396379a058b851c08d95"></a>
@@ -894,7 +894,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
+<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
 
 </div>
 </div>
@@ -1215,7 +1215,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> runtime. </p>
+<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime. </p>
 
 </div>
 </div>

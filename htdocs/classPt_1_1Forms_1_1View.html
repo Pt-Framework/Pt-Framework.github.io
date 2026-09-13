@@ -85,7 +85,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">View Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms-Widgets.html">Forms Widgets and Views</a></div></div>  </div>
+<div class="title">View Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Forms</a> &raquo; <a class="el" href="group__Pt-Forms-Widgets.html">Widgets and Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -572,7 +572,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A View is a Widget that attaches controls to a PaintSurface. It establishes the surface and coordinate mapping for those controls and forwards their repaint, layout, visibility, geometry, and activation requests. Form and Control are the usual view implementations. Screen and WindowManager are widgets but not views.</p>
 <p>The view owns its surface adapter, not the PaintSurface assigned through setSurface(). The adapter presents the view's local size, scaling, and offset within the borrowed surface. When a control is initialized, the view gives it that surface with an offset derived from the control's position; release clears the control's surface. Form and Control extend this mechanism to their content and child controls.</p>
-<p>toControl() and fromControl() convert between view-local and attached control coordinates. Their default mapping uses the control position. <a class="el" href="classPt_1_1Forms_1_1View.html" title="Widget that hosts controls on a paint surface.">View</a> implementations align child move and resize requests to the active scaling before sending the corresponding <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> event. Override the protected mapping and forwarding hooks only when a custom host has a different coordinate system, surface arrangement, or request policy.</p>
+<p>toControl() and fromControl() convert between view-local and attached control coordinates. Their default mapping uses the control position. <a class="el" href="classPt_1_1Forms_1_1View.html" title="Widget that hosts controls on a paint surface.">View</a> implementations align child move and resize requests to the active scaling before sending the corresponding <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> event. Override the protected mapping and forwarding hooks only when a custom host has a different coordinate system, surface arrangement, or request policy.</p>
 <p>View is an implementation boundary rather than the usual application base class. Derive visible application content from Control. Derive from View only when a custom content host needs different paint-surface or coordinate behavior. A custom view must arrange a complete attach, initialize, release, and detach lifecycle for every hosted control and must not retain a surface supplied by another view beyond that lifecycle. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd"></a>
@@ -1527,7 +1527,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
+<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
 
 </div>
 </div>
@@ -1848,7 +1848,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> runtime. </p>
+<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime. </p>
 
 </div>
 </div>

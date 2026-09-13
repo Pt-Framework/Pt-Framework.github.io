@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Widget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms-Widgets.html">Forms Widgets and Views</a></div></div>  </div>
+<div class="title">Widget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Forms</a> &raquo; <a class="el" href="group__Pt-Forms-Widgets.html">Widgets and Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Widget_8h_source.html">Pt/Forms/Widget.h</a>&gt;</code></p>
 
-<p>Common type of every visual <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> object.  
+<p>Common type of every visual <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> object.  
  <a href="classPt_1_1Forms_1_1Widget.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Responder.html">Responder</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
@@ -299,7 +299,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4aecdb998b8b28b278843eaa1644998b"><td class="memItemLeft" align="right" valign="top"><a id="a4aecdb998b8b28b278843eaa1644998b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#a4aecdb998b8b28b278843eaa1644998b">Widget</a> ()</td></tr>
-<tr class="memdesc:a4aecdb998b8b28b278843eaa1644998b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and registers a widget with the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> application. <br /></td></tr>
+<tr class="memdesc:a4aecdb998b8b28b278843eaa1644998b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and registers a widget with the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> application. <br /></td></tr>
 <tr class="separator:a4aecdb998b8b28b278843eaa1644998b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b41f7521b6c6decadeff75fe406411"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Widget.html#ab3b41f7521b6c6decadeff75fe406411">onSetParent</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *<a class="el" href="classPt_1_1Forms_1_1Widget.html#a520a9957f011623bbc9a1164dbc54779">parent</a>)</td></tr>
 <tr class="memdesc:ab3b41f7521b6c6decadeff75fe406411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records the non-owning parent relationship.  <a href="classPt_1_1Forms_1_1Widget.html#ab3b41f7521b6c6decadeff75fe406411">More...</a><br /></td></tr>
@@ -492,10 +492,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Every visual <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> object is a Widget. Application is not. A widget supplies identity, screen connection, parent relationships, geometry, visibility, enabled state, scaling, coordinate conversion, repaint requests, event dispatch, and pointer capture. Derive ordinary visual content from Control. Derive directly from Widget only for a runtime or host base with its own parent coordinate system; derived classes must implement onToParent() and onFromParent().</p>
+<div class="textblock"><p>Every visual <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> object is a Widget. Application is not. A widget supplies identity, screen connection, parent relationships, geometry, visibility, enabled state, scaling, coordinate conversion, repaint requests, event dispatch, and pointer capture. Derive ordinary visual content from Control. Derive directly from Widget only for a runtime or host base with its own parent coordinate system; derived classes must implement onToParent() and onFromParent().</p>
 <p>Construct widgets only after an Application exists. The application gives each widget an ID, registers it for event routing, and removes that entry during destruction. A name is optional metadata, not an identifier. Parent and screen pointers are non-owning runtime relationships. A widget is connected when its parent hierarchy reaches a screen, independent of its visibility. Containers attach and detach widgets through their public APIs; callers keep attached widgets alive.</p>
 <p>Geometry uses logical coordinates. position() is in parent coordinates, while size() and bounds() are local and bounds() starts at the local origin. toParent(), fromParent(), toGlobal(), and fromGlobal() convert between these systems. The default global conversion walks the parent chain. Coordinate hooks must agree with hit testing, painting, and input delivery.</p>
-<p>show(), enable(), activate(), move(), and resize() are requests. A parent, frame, or backend confirms them by sending <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> events, which then update the observable state. Names, size limits, cursor overrides, and the next responder change local state immediately. invalidate() queues coalesced deferred work; repaint() asks to redraw a local dirty region.</p>
+<p>show(), enable(), activate(), move(), and resize() are requests. A parent, frame, or backend confirms them by sending <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> events, which then update the observable state. Names, size limits, cursor overrides, and the next responder change local state immediately. invalidate() queues coalesced deferred work; repaint() asks to redraw a local dirty region.</p>
 <p>A widget is a Responder. Unhandled input continues to the next responder, with mouse and touch coordinates converted locally.</p>
 <p>Peers are non-hierarchical, bidirectional associations. They do not establish ownership, parenting, or screen connection. A widget can also provide a Cursor while it is under the pointer; clearing the override restores the default cursor. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -521,7 +521,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The widget unregisters itself from the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> application. It does not destroy a parent, screen, peer, or next responder. </p>
+<p>The widget unregisters itself from the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> application. It does not destroy a parent, screen, peer, or next responder. </p>
 
 </div>
 </div>
@@ -654,7 +654,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
+<p>The <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> event loop eventually calls onInvalidateEvent() after all pending invalidation requests for this widget have coalesced. </p>
 
 </div>
 </div>
@@ -919,7 +919,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Build graphical user interfaces with windows and controls.">Forms</a> runtime. </p>
+<p>The returned cursor is always non-null and is owned by the widget or the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime. </p>
 
 </div>
 </div>
