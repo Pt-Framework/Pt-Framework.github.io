@@ -66713,7 +66713,7 @@
   </compound>
   <compound kind="group">
     <name>Pt-Forms</name>
-    <title>Forms</title>
+    <title>Graphical User Interfaces</title>
     <filename>group__Pt-Forms.html</filename>
     <class kind="class">Pt::Forms::Application</class>
     <class kind="class">Pt::Forms::GraphicsBackend</class>
