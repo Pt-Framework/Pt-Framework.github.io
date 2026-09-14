@@ -233,6 +233,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A ButtonRenderer is a Style::Facet for the push-button family. Named measure methods run inside-out: content, then frame. Named layout methods run outside-in: frame, then content and mnemonic. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<p>Caption, icon, and mnemonic underline are independent layers. layoutContent() returns the text and icon rectangles. renderText() paints the caption in the text rectangle. renderIcon() paints the picture. renderMnemonic() paints the underline.</p>
 <p>Derive a renderer to change the look of push buttons. Register it on a Style, or assign it to a widget with PushButton::setRenderer(). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a55db4d843c2e4a032fca27968c6471d1"></a>
@@ -393,6 +394,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Resolves tokens from <em>options</em> and stores the painter and metric state used later by measure, layout, and render. Shared facets are reset when the application applies global options. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
 

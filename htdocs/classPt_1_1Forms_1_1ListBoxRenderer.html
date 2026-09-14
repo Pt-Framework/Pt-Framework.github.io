@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ListBoxRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ListBoxRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Collections.html">Collections</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ListBoxStyler_8h_source.html">Pt/Forms/ListBoxStyler.h</a>&gt;</code></p>
 
-<p>Renders the visual appearance of a list box container.  
-</p>
+<p>Renders the look of a list box.  
+ <a href="classPt_1_1Forms_1_1ListBoxRenderer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
 
@@ -99,10 +99,34 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a427c7082f36cb52d2457c4227dd2203f"><td class="memItemLeft" align="right" valign="top"><a id="a427c7082f36cb52d2457c4227dd2203f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a427c7082f36cb52d2457c4227dd2203f">ListBoxRenderer</a> (std::size_t refs=0)</td></tr>
+<tr class="memdesc:a427c7082f36cb52d2457c4227dd2203f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer with reference count <em>refs</em>. <br /></td></tr>
+<tr class="separator:a427c7082f36cb52d2457c4227dd2203f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5189cc0e861fffe38ad2c1f636a6004"><td class="memItemLeft" align="right" valign="top"><a id="ad5189cc0e861fffe38ad2c1f636a6004"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#ad5189cc0e861fffe38ad2c1f636a6004">~ListBoxRenderer</a> ()</td></tr>
+<tr class="memdesc:ad5189cc0e861fffe38ad2c1f636a6004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the renderer. <br /></td></tr>
+<tr class="separator:ad5189cc0e861fffe38ad2c1f636a6004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a198878ae9bdb11fd8f946f2ec49c7442"><td class="memItemLeft" align="right" valign="top"><a id="a198878ae9bdb11fd8f946f2ec49c7442"></a>
 <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a198878ae9bdb11fd8f946f2ec49c7442">create</a> () const</td></tr>
-<tr class="memdesc:a198878ae9bdb11fd8f946f2ec49c7442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed renderer instance. <br /></td></tr>
+<tr class="memdesc:a198878ae9bdb11fd8f946f2ec49c7442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
 <tr class="separator:a198878ae9bdb11fd8f946f2ec49c7442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2937d7b5508889f628308d933ab5473e"><td class="memItemLeft" align="right" valign="top"><a id="a2937d7b5508889f628308d933ab5473e"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a2937d7b5508889f628308d933ab5473e">measureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)</td></tr>
+<tr class="memdesc:a2937d7b5508889f628308d933ab5473e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outer size including the frame for <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a2937d7b5508889f628308d933ab5473e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6576374e07add995252fef5cf76c9a41"><td class="memItemLeft" align="right" valign="top"><a id="a6576374e07add995252fef5cf76c9a41"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a6576374e07add995252fef5cf76c9a41">layoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
+<tr class="memdesc:a6576374e07add995252fef5cf76c9a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content rectangle within <em>rect</em>. <br /></td></tr>
+<tr class="separator:a6576374e07add995252fef5cf76c9a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e900f8d83a949f98603664c10ffbaf"><td class="memItemLeft" align="right" valign="top"><a id="ac5e900f8d83a949f98603664c10ffbaf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#ac5e900f8d83a949f98603664c10ffbaf">renderBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state)</td></tr>
+<tr class="memdesc:ac5e900f8d83a949f98603664c10ffbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the background for <em>state</em>. <br /></td></tr>
+<tr class="separator:ac5e900f8d83a949f98603664c10ffbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27545f4fdf5d87073b9db8d4c7f14013"><td class="memItemLeft" align="right" valign="top"><a id="a27545f4fdf5d87073b9db8d4c7f14013"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a27545f4fdf5d87073b9db8d4c7f14013">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state)</td></tr>
+<tr class="memdesc:a27545f4fdf5d87073b9db8d4c7f14013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the frame for <em>state</em>. <br /></td></tr>
+<tr class="separator:a27545f4fdf5d87073b9db8d4c7f14013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3213a81560a537d2ff8a22bf3807953"><td class="memItemLeft" align="right" valign="top"><a id="ac3213a81560a537d2ff8a22bf3807953"></a>
 const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ac3213a81560a537d2ff8a22bf3807953">typeId</a> () const</td></tr>
 <tr class="memdesc:ac3213a81560a537d2ff8a22bf3807953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
@@ -124,13 +148,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1c339f2e499fc5c5bf964077362ecd9d"><td class="memItemLeft" align="right" valign="top"><a id="a1c339f2e499fc5c5bf964077362ecd9d"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a1c339f2e499fc5c5bf964077362ecd9d">onCreate</a> () const =0</td></tr>
-<tr class="memdesc:a1c339f2e499fc5c5bf964077362ecd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memdesc:a1c339f2e499fc5c5bf964077362ecd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the same concrete type. <br /></td></tr>
 <tr class="separator:a1c339f2e499fc5c5bf964077362ecd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
 <tr class="memdesc:adefda73de91a015f122ff2904604a77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>.  <a href="classPt_1_1Forms_1_1ListBoxRenderer.html#adefda73de91a015f122ff2904604a77a">More...</a><br /></td></tr>
 <tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft" align="right" valign="top"><a id="a636e3794525900b85feb533efd7c2af2"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a636e3794525900b85feb533efd7c2af2">onMeasureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)=0</td></tr>
+<tr class="memdesc:a636e3794525900b85feb533efd7c2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a636e3794525900b85feb533efd7c2af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4266deea0cc02e9cb0a762aec6fa06b3"><td class="memItemLeft" align="right" valign="top"><a id="a4266deea0cc02e9cb0a762aec6fa06b3"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a4266deea0cc02e9cb0a762aec6fa06b3">onLayoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)=0</td></tr>
+<tr class="memdesc:a4266deea0cc02e9cb0a762aec6fa06b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content rectangle within <em>rect</em>. <br /></td></tr>
+<tr class="separator:a4266deea0cc02e9cb0a762aec6fa06b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e982245e937baebc97b0e395f63cf0"><td class="memItemLeft" align="right" valign="top"><a id="a15e982245e937baebc97b0e395f63cf0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a15e982245e937baebc97b0e395f63cf0">onRenderBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a15e982245e937baebc97b0e395f63cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the background for <em>state</em>. <br /></td></tr>
+<tr class="separator:a15e982245e937baebc97b0e395f63cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400440a5a149a632d9f935f61c802ec5"><td class="memItemLeft" align="right" valign="top"><a id="a400440a5a149a632d9f935f61c802ec5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a400440a5a149a632d9f935f61c802ec5">onRenderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a400440a5a149a632d9f935f61c802ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the frame for <em>state</em>. <br /></td></tr>
+<tr class="separator:a400440a5a149a632d9f935f61c802ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A ListBoxRenderer is a Style::Facet for the list-box family. Named measure methods run inside-out. Named layout methods run outside-in. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<p>This renderer paints the list chrome. ListItemRenderer paints each item.</p>
+<p>Derive a renderer to change the look of list boxes. Register it on a Style, or assign it to a widget with ListBox::setRenderer(). </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adefda73de91a015f122ff2904604a77a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&nbsp;</a></span>onReset()</h2>
 
@@ -154,6 +198,7 @@ virtual <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRen
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Resolves tokens from <em>options</em> and stores the painter and metric state used later by measure, layout, and render. Shared facets are reset when the application applies global options. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
 

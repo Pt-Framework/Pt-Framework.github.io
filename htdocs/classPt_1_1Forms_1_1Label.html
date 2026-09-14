@@ -553,9 +553,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Label.html#a6a7abfca3d5ed85be46608ab1c81c8fe">onConnect</a> (<a class="el" href="classPt_1_1Forms_1_1Screen.html">Screen</a> &amp;<a class="el" href="classPt_1_1Forms_1_1Widget.html#ac16a59ee651f807e54330bf6eebf9902">screen</a>)</td></tr>
 <tr class="memdesc:a6a7abfca3d5ed85be46608ab1c81c8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards the screen connection to the base control. <br /></td></tr>
 <tr class="separator:a6a7abfca3d5ed85be46608ab1c81c8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft" align="right" valign="top"><a id="ae95892a055053b2f35ed11e85287a8fd"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Label.html#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
-<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler and prepares the icon. <br /></td></tr>
+<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Label.html#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
+<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler and prepares the icon.  <a href="classPt_1_1Forms_1_1Label.html#ae95892a055053b2f35ed11e85287a8fd">More...</a><br /></td></tr>
 <tr class="separator:ae95892a055053b2f35ed11e85287a8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd52e91b6335df9f9f1172cac2c45cd"><td class="memItemLeft" align="right" valign="top"><a id="a4bd52e91b6335df9f9f1172cac2c45cd"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Label.html#a4bd52e91b6335df9f9f1172cac2c45cd">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
@@ -857,7 +856,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Label presents a caption or a picture. It does not edit text. setText() sets the caption and clears any icon. setIcon() shows an icon instead of text. setAlignment() places the content in the label bounds.</p>
-<p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off without replacing the style.</p>
+<p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off without replacing the style. Whether the fill or frame is on is a widget setting, not a style option.</p>
 <p>The label owns a PanelStyler and shares the panel appearance family with Panel. On invalidate it binds that styler. Measure, layout, and paint call typed methods on it. TextBlock lays out wrapped text. Icon supplies pictures. Neither is a widget.</p>
 <div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> heading;</div>
 <div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Inbox&quot;</span>);</div>
@@ -944,7 +943,35 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A null renderer falls back to the current style on the next bind. </p>
+<p>Passing 0 uses the renderer from the current style. The change takes effect before this function returns. </p>
+
+</div>
+</div>
+<a id="ae95892a055053b2f35ed11e85287a8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95892a055053b2f35ed11e85287a8fd">&#9670;&nbsp;</a></span>onInvalidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onInvalidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calls the base implementation, then Styler::bind(). When bind returns true, refreshes widget-owned caches such as icon pixmaps. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
 
 </div>
 </div>
@@ -1812,7 +1839,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>The default implementation forwards <em>m</em> to the control selected by setMnemonicControl(). </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Button.html#ac0c392c62b968a7418fb0f8bb2e0a222">Button</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">MenuSubItem</a>, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">MenuMenuItem</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">ListBoxItem</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#ac0c392c62b968a7418fb0f8bb2e0a222">Button</a>.</p>
 
 </div>
 </div>
@@ -1905,7 +1932,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a7d194138a8461965b65b73b1b6eef066">Widget</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Workspace.html#a7d194138a8461965b65b73b1b6eef066">Workspace</a>, and <a class="el" href="classPt_1_1Forms_1_1TabView.html#a7d194138a8461965b65b73b1b6eef066">TabView</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a202c58805fcb5f747035115668e2d952">MenuBar</a>, <a class="el" href="classPt_1_1Forms_1_1Workspace.html#a7d194138a8461965b65b73b1b6eef066">Workspace</a>, <a class="el" href="classPt_1_1Forms_1_1TabView.html#a7d194138a8461965b65b73b1b6eef066">TabView</a>, and <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a7d194138a8461965b65b73b1b6eef066">ComboBox</a>.</p>
 
 </div>
 </div>
@@ -1967,7 +1994,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a00b4fb0d0830a05d8e9284202b808c54">Widget</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#abd4346659bd6b667a35e560a8a972aa8">MenuItemBase</a>, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#abd4346659bd6b667a35e560a8a972aa8">MenuBar</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a00b4fb0d0830a05d8e9284202b808c54">SpinBox</a>, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a00b4fb0d0830a05d8e9284202b808c54">Slider</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollBar</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a00b4fb0d0830a05d8e9284202b808c54">ListBoxItem</a>, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a00b4fb0d0830a05d8e9284202b808c54">LineEdit</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a00b4fb0d0830a05d8e9284202b808c54">ComboBox</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>.</p>
 
 </div>
 </div>
@@ -1998,7 +2025,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a2723f45dc09e09359e656adf936b063c">Widget</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a2723f45dc09e09359e656adf936b063c">SpinBox</a>, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a2723f45dc09e09359e656adf936b063c">Slider</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a2723f45dc09e09359e656adf936b063c">ScrollBar</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a2723f45dc09e09359e656adf936b063c">ListBoxItem</a>, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a2723f45dc09e09359e656adf936b063c">LineEdit</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a2723f45dc09e09359e656adf936b063c">ComboBox</a>, <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a2909f468d42dc5bb5f4ffac5502d0e13">MenuItemBase</a>, and <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a2909f468d42dc5bb5f4ffac5502d0e13">MenuBar</a>.</p>
 
 </div>
 </div>
@@ -2988,7 +3015,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition:</b> Label.h:79</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition:</b> Label.h:80</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_ac24598c93a713c95d97205c65dfccbfc"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#ac24598c93a713c95d97205c65dfccbfc">Pt::Forms::Label::setTextColor</a></div><div class="ttdeci">void setTextColor(const Gfx::Color &amp;color)</div><div class="ttdoc">Sets the widget-local text color to color.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Alignment_html_a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389"><div class="ttname"><a href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389">Pt::Forms::Alignment::Center</a></div><div class="ttdeci">@ Center</div><div class="ttdoc">Center of the rectangle.</div><div class="ttdef"><b>Definition:</b> Alignment.h:85</div></div>

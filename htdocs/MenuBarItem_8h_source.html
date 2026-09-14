@@ -128,27 +128,34 @@
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>MenuBar;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">class </span>PT_FORMS_API MenuBarItem : <span class="keyword">public</span> MenuSubItem</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        MenuBarItem();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">virtual</span> ~MenuBarItem();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a> onMeasure(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a>&amp; policy);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintContext&amp; context, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::RectF</a>&amp; updateRect);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}}</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1MenuBarItem.html">   53</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html">MenuBarItem</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1MenuBarItem.html#aa6472ceaaa06774b5aa38b60b281a2b8">   58</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html#aa6472ceaaa06774b5aa38b60b281a2b8">MenuBarItem</a>();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1MenuBarItem.html#ad7d15c5e1ee251e107f8e39a2cd2467d">   62</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html#ad7d15c5e1ee251e107f8e39a2cd2467d">~MenuBarItem</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1MenuBarItem.html#aa999890482d7772729416cca61297294">   65</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a> <a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html#aa999890482d7772729416cca61297294">onMeasure</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a>&amp; policy);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1MenuBarItem.html#a36098be7e767e221c156a7d5fae9ea45">   67</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html#a36098be7e767e221c156a7d5fae9ea45">onPaint</a>(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a>&amp; context, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::RectF</a>&amp; updateRect);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBarItem_html_aa999890482d7772729416cca61297294"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBarItem.html#aa999890482d7772729416cca61297294">Pt::Forms::MenuBarItem::onMeasure</a></div><div class="ttdeci">virtual Pt::Gfx::SizeF onMeasure(const Pt::Forms::SizePolicy &amp;policy)</div><div class="ttdoc">Measures intrinsic content for effective policy policy.</div></div>
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBarItem_html_ad7d15c5e1ee251e107f8e39a2cd2467d"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBarItem.html#ad7d15c5e1ee251e107f8e39a2cd2467d">Pt::Forms::MenuBarItem::~MenuBarItem</a></div><div class="ttdeci">virtual ~MenuBarItem()</div><div class="ttdoc">Destroys the top-level menu entry.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1PaintContext_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a></div><div class="ttdoc">Active painting session on a Forms paint surface.</div><div class="ttdef"><b>Definition:</b> PaintContext.h:51</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MenuSubItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuSubItem.html">Pt::Forms::MenuSubItem</a></div><div class="ttdoc">Represents a menu item that opens a nested menu.</div><div class="ttdef"><b>Definition:</b> MenuSubItem.h:57</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBarItem_html_a36098be7e767e221c156a7d5fae9ea45"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBarItem.html#a36098be7e767e221c156a7d5fae9ea45">Pt::Forms::MenuBarItem::onPaint</a></div><div class="ttdeci">virtual void onPaint(PaintContext &amp;context, const Pt::Gfx::RectF &amp;updateRect)</div><div class="ttdoc">Paints custom content in local coordinates.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBarItem_html_aa6472ceaaa06774b5aa38b60b281a2b8"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBarItem.html#aa6472ceaaa06774b5aa38b60b281a2b8">Pt::Forms::MenuBarItem::MenuBarItem</a></div><div class="ttdeci">MenuBarItem()</div><div class="ttdoc">Creates an empty top-level menu entry.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBarItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBarItem.html">Pt::Forms::MenuBarItem</a></div><div class="ttdoc">Represents a top-level entry in a menu bar.</div><div class="ttdef"><b>Definition:</b> MenuBarItem.h:54</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

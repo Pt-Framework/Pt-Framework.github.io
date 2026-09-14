@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">LineEditRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">LineEditRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Editors.html">Editors and Selectors</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="LineEditStyler_8h_source.html">Pt/Forms/LineEditStyler.h</a>&gt;</code></p>
 
-<p>Renders the visual appearance of a line edit.  
-</p>
+<p>Renders the look of a line edit.  
+ <a href="classPt_1_1Forms_1_1LineEditRenderer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
 
@@ -99,10 +99,50 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab69b3a5249ba22c15d66141d8e5c0341"><td class="memItemLeft" align="right" valign="top"><a id="ab69b3a5249ba22c15d66141d8e5c0341"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#ab69b3a5249ba22c15d66141d8e5c0341">LineEditRenderer</a> (std::size_t refs=0)</td></tr>
+<tr class="memdesc:ab69b3a5249ba22c15d66141d8e5c0341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer with reference count <em>refs</em>. <br /></td></tr>
+<tr class="separator:ab69b3a5249ba22c15d66141d8e5c0341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b835aea28b460d4fd20574f7c861a6"><td class="memItemLeft" align="right" valign="top"><a id="a98b835aea28b460d4fd20574f7c861a6"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a98b835aea28b460d4fd20574f7c861a6">~LineEditRenderer</a> ()</td></tr>
+<tr class="memdesc:a98b835aea28b460d4fd20574f7c861a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the renderer. <br /></td></tr>
+<tr class="separator:a98b835aea28b460d4fd20574f7c861a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca53d88f795499d0435b27111fad774"><td class="memItemLeft" align="right" valign="top"><a id="a8ca53d88f795499d0435b27111fad774"></a>
+<a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a8ca53d88f795499d0435b27111fad774">create</a> () const</td></tr>
+<tr class="memdesc:a8ca53d88f795499d0435b27111fad774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
+<tr class="separator:a8ca53d88f795499d0435b27111fad774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2937d7b5508889f628308d933ab5473e"><td class="memItemLeft" align="right" valign="top"><a id="a2937d7b5508889f628308d933ab5473e"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a2937d7b5508889f628308d933ab5473e">measureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)</td></tr>
+<tr class="memdesc:a2937d7b5508889f628308d933ab5473e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outer size including the frame for <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a2937d7b5508889f628308d933ab5473e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6576374e07add995252fef5cf76c9a41"><td class="memItemLeft" align="right" valign="top"><a id="a6576374e07add995252fef5cf76c9a41"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a6576374e07add995252fef5cf76c9a41">layoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
+<tr class="memdesc:a6576374e07add995252fef5cf76c9a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content rectangle within <em>rect</em>. <br /></td></tr>
+<tr class="separator:a6576374e07add995252fef5cf76c9a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9deed02dcbe69a706bc9515156d49f6d"><td class="memItemLeft" align="right" valign="top"><a id="a9deed02dcbe69a706bc9515156d49f6d"></a>
 const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a9deed02dcbe69a706bc9515156d49f6d">textPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
-<tr class="memdesc:a9deed02dcbe69a706bc9515156d49f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the prepared text painter for <em>surface</em>. <br /></td></tr>
+<tr class="memdesc:a9deed02dcbe69a706bc9515156d49f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
 <tr class="separator:a9deed02dcbe69a706bc9515156d49f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f77c88c61ec21877380e98a8a5e41a4"><td class="memItemLeft" align="right" valign="top"><a id="a3f77c88c61ec21877380e98a8a5e41a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a3f77c88c61ec21877380e98a8a5e41a4">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;cursor, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;selection, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)</td></tr>
+<tr class="memdesc:a3f77c88c61ec21877380e98a8a5e41a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints entry, selection, text, and caret for <em>state</em>. <br /></td></tr>
+<tr class="separator:a3f77c88c61ec21877380e98a8a5e41a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236faf8eb85c60ed4c1dc9cb2cbebc3f"><td class="memItemLeft" align="right" valign="top"><a id="a236faf8eb85c60ed4c1dc9cb2cbebc3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a236faf8eb85c60ed4c1dc9cb2cbebc3f">renderEntry</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)</td></tr>
+<tr class="memdesc:a236faf8eb85c60ed4c1dc9cb2cbebc3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the entry for <em>state</em>. <br /></td></tr>
+<tr class="separator:a236faf8eb85c60ed4c1dc9cb2cbebc3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591fa5994e7eb7109bf98780824be09c"><td class="memItemLeft" align="right" valign="top"><a id="a591fa5994e7eb7109bf98780824be09c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a591fa5994e7eb7109bf98780824be09c">renderSelection</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;selection, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)</td></tr>
+<tr class="memdesc:a591fa5994e7eb7109bf98780824be09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the selection for <em>state</em>. <br /></td></tr>
+<tr class="separator:a591fa5994e7eb7109bf98780824be09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1221e2074b62ccdcb6dada2e9a0d79d"><td class="memItemLeft" align="right" valign="top"><a id="ae1221e2074b62ccdcb6dada2e9a0d79d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#ae1221e2074b62ccdcb6dada2e9a0d79d">renderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)</td></tr>
+<tr class="memdesc:ae1221e2074b62ccdcb6dada2e9a0d79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>text</em> at <em>textPos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:ae1221e2074b62ccdcb6dada2e9a0d79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef5c2324fbd20aa70080b704e398a0e"><td class="memItemLeft" align="right" valign="top"><a id="a4ef5c2324fbd20aa70080b704e398a0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a4ef5c2324fbd20aa70080b704e398a0e">renderCursor</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;cursor, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)</td></tr>
+<tr class="memdesc:a4ef5c2324fbd20aa70080b704e398a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the caret for <em>state</em>. <br /></td></tr>
+<tr class="separator:a4ef5c2324fbd20aa70080b704e398a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3213a81560a537d2ff8a22bf3807953"><td class="memItemLeft" align="right" valign="top"><a id="ac3213a81560a537d2ff8a22bf3807953"></a>
 const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#ac3213a81560a537d2ff8a22bf3807953">typeId</a> () const</td></tr>
 <tr class="memdesc:ac3213a81560a537d2ff8a22bf3807953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
@@ -124,13 +164,48 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab804cb154949925b3b39c9a54f3eec06"><td class="memItemLeft" align="right" valign="top"><a id="ab804cb154949925b3b39c9a54f3eec06"></a>
 virtual <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#ab804cb154949925b3b39c9a54f3eec06">onCreate</a> () const =0</td></tr>
-<tr class="memdesc:ab804cb154949925b3b39c9a54f3eec06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memdesc:ab804cb154949925b3b39c9a54f3eec06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the same concrete type. <br /></td></tr>
 <tr class="separator:ab804cb154949925b3b39c9a54f3eec06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adefda73de91a015f122ff2904604a77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
 <tr class="memdesc:adefda73de91a015f122ff2904604a77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>.  <a href="classPt_1_1Forms_1_1LineEditRenderer.html#adefda73de91a015f122ff2904604a77a">More...</a><br /></td></tr>
 <tr class="separator:adefda73de91a015f122ff2904604a77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft" align="right" valign="top"><a id="a636e3794525900b85feb533efd7c2af2"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a636e3794525900b85feb533efd7c2af2">onMeasureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;contentSize)=0</td></tr>
+<tr class="memdesc:a636e3794525900b85feb533efd7c2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em>contentSize</em>. <br /></td></tr>
+<tr class="separator:a636e3794525900b85feb533efd7c2af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4266deea0cc02e9cb0a762aec6fa06b3"><td class="memItemLeft" align="right" valign="top"><a id="a4266deea0cc02e9cb0a762aec6fa06b3"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a4266deea0cc02e9cb0a762aec6fa06b3">onLayoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)=0</td></tr>
+<tr class="memdesc:a4266deea0cc02e9cb0a762aec6fa06b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content rectangle within <em>rect</em>. <br /></td></tr>
+<tr class="separator:a4266deea0cc02e9cb0a762aec6fa06b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75200212677716a68ede029f9c6ee760"><td class="memItemLeft" align="right" valign="top"><a id="a75200212677716a68ede029f9c6ee760"></a>
+virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a75200212677716a68ede029f9c6ee760">onGetTextPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:a75200212677716a68ede029f9c6ee760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="separator:a75200212677716a68ede029f9c6ee760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1665df1dc24a114ec0925086eea02b38"><td class="memItemLeft" align="right" valign="top"><a id="a1665df1dc24a114ec0925086eea02b38"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a1665df1dc24a114ec0925086eea02b38">onRenderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;cursor, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;selection, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)</td></tr>
+<tr class="memdesc:a1665df1dc24a114ec0925086eea02b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints entry, selection, text, and caret for <em>state</em>. <br /></td></tr>
+<tr class="separator:a1665df1dc24a114ec0925086eea02b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb8674b43bd585eeee3678f7b8cabfd"><td class="memItemLeft" align="right" valign="top"><a id="acbb8674b43bd585eeee3678f7b8cabfd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#acbb8674b43bd585eeee3678f7b8cabfd">onRenderEntry</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:acbb8674b43bd585eeee3678f7b8cabfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the entry for <em>state</em>. <br /></td></tr>
+<tr class="separator:acbb8674b43bd585eeee3678f7b8cabfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77958ca94d3e5f44176f7e27379632df"><td class="memItemLeft" align="right" valign="top"><a id="a77958ca94d3e5f44176f7e27379632df"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a77958ca94d3e5f44176f7e27379632df">onRenderSelection</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;selection, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:a77958ca94d3e5f44176f7e27379632df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the selection for <em>state</em>. <br /></td></tr>
+<tr class="separator:a77958ca94d3e5f44176f7e27379632df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea88cbed9dab7624d9fed48e428f4a9b"><td class="memItemLeft" align="right" valign="top"><a id="aea88cbed9dab7624d9fed48e428f4a9b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#aea88cbed9dab7624d9fed48e428f4a9b">onRenderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:aea88cbed9dab7624d9fed48e428f4a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em>text</em> at <em>textPos</em> for <em>state</em>. <br /></td></tr>
+<tr class="separator:aea88cbed9dab7624d9fed48e428f4a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb7fdf223e96d22c354ed403bbe5a5b4"><td class="memItemLeft" align="right" valign="top"><a id="abb7fdf223e96d22c354ed403bbe5a5b4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#abb7fdf223e96d22c354ed403bbe5a5b4">onRenderCursor</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;textRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;cursor, const <a class="el" href="classPt_1_1Forms_1_1LineEditState.html">LineEditState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:abb7fdf223e96d22c354ed403bbe5a5b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the caret for <em>state</em>. <br /></td></tr>
+<tr class="separator:abb7fdf223e96d22c354ed403bbe5a5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A LineEditRenderer is a Style::Facet for the line-edit family. Named measure methods run inside-out. Named layout methods run outside-in. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<p>Derive a renderer to change the look of line edits. Register it on a Style, or assign it to a widget with LineEdit::setRenderer(). </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adefda73de91a015f122ff2904604a77a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&nbsp;</a></span>onReset()</h2>
 
@@ -154,6 +229,7 @@ virtual <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditR
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Resolves tokens from <em>options</em> and stores the painter and metric state used later by measure, layout, and render. Shared facets are reset when the application applies global options. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
 

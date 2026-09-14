@@ -95,7 +95,7 @@
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html">Style::Facet</a>.</p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html">ComboBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html">ListItemRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html">PanelRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a>, ScrollBarRenderer, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html">SliderRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html">SpinBoxRenderer</a>, and <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a>.</p>
+<p>Inherited by <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html">ComboBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html">ListItemRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html">PanelRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html">ScrollBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html">SliderRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html">SpinBoxRenderer</a>, and <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -130,16 +130,46 @@ Protected Member Functions</h2></td></tr>
 virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Renderer.html#aaf86215d02a0f15784a3ac63435d1711">onCreate</a> () const =0</td></tr>
 <tr class="memdesc:aaf86215d02a0f15784a3ac63435d1711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new renderer of the same concrete type. <br /></td></tr>
 <tr class="separator:aaf86215d02a0f15784a3ac63435d1711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09acb44ed364ddd0c97f583c828003f1"><td class="memItemLeft" align="right" valign="top"><a id="a09acb44ed364ddd0c97f583c828003f1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;)</td></tr>
-<tr class="memdesc:a09acb44ed364ddd0c97f583c828003f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>. <br /></td></tr>
+<tr class="memitem:a09acb44ed364ddd0c97f583c828003f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;)</td></tr>
+<tr class="memdesc:a09acb44ed364ddd0c97f583c828003f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em>options</em>.  <a href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">More...</a><br /></td></tr>
 <tr class="separator:a09acb44ed364ddd0c97f583c828003f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Renderer is a Style::Facet that can clone itself. Shared instances remain in Style. Use reset() to apply application options. Use create() to allocate a new instance with a reference count of 0. FacetPtr and Style::set() take their own references.</p>
-<p>Named measure, layout, and render methods belong on derived renderer types.</p>
+<p>Named measure, layout, and render methods belong on derived renderer types. Use Facet::onReset() to read style options and store drawing state for those methods.</p>
+<p>A renderer may store a Painter. That painter keeps its brush, pen, font, clip, and composition after begin(). onReset() assigns the default attributes. A render method that changes them assigns the defaults again before it returns.</p>
 <p>Derive a renderer for a control family and register it on a Style. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a09acb44ed364ddd0c97f583c828003f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09acb44ed364ddd0c97f583c828003f1">&#9670;&nbsp;</a></span>onReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onReset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resolves tokens from <em>options</em> and stores the painter and metric state used later by measure, layout, and render. Shared facets are reset when the application applies global options. </p>
+
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#adefda73de91a015f122ff2904604a77a">TabViewRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#adefda73de91a015f122ff2904604a77a">SpinBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#adefda73de91a015f122ff2904604a77a">SliderRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#adefda73de91a015f122ff2904604a77a">ScrollBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#adefda73de91a015f122ff2904604a77a">ProgressBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#adefda73de91a015f122ff2904604a77a">PanelRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#adefda73de91a015f122ff2904604a77a">ListItemRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#adefda73de91a015f122ff2904604a77a">ListBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#adefda73de91a015f122ff2904604a77a">LineEditRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#adefda73de91a015f122ff2904604a77a">ComboBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#adefda73de91a015f122ff2904604a77a">CheckBoxRenderer</a>, and <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#adefda73de91a015f122ff2904604a77a">ButtonRenderer</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

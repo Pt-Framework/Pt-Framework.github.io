@@ -133,7 +133,7 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Styler connects a control family to the current Style and StyleOptions. Widgets own a derived styler. Applications do not construct Styler. Derive from it only to add a styler for a new control family.</p>
 <p>Use bind() to associate the styler with a style and the application options. It returns true when the effective renderer or the effective options changed. Call bind() from onInvalidate() after the base implementation.</p>
-<p>When the overlay contains no local options, bind() uses the shared renderer from the style. When the overlay contains local options, it uses a private clone. A renderer assigned through the derived setRenderer() remains until it is cleared. Passing a null renderer falls back to the current style on the next bind().</p>
+<p>When the overlay contains no local options, bind() uses the shared renderer from the style and does not reset it. When the overlay contains local options, it uses a private clone and resets that clone with the overlay. A renderer assigned through the derived setRenderer() remains until it is cleared. Passing a null renderer falls back to the current style on the next bind().</p>
 <p>Styler does not provide a public renderer accessor. Measure, layout, and paint use typed methods on the derived styler. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a36be2eaef48ddc0bd3fff591fa5dfbed"></a>

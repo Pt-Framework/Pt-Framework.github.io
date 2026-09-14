@@ -86,6 +86,7 @@
 <li>onActionKey()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a8aafcd3ee37394de63c185b46df6701b">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a8aafcd3ee37394de63c185b46df6701b">Control</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a8aafcd3ee37394de63c185b46df6701b">ListBoxItem</a>
 </li>
 <li>onActivate()
 : <a class="el" href="classPt_1_1Cosmo_1_1IActivate.html#a9abb59dc25abce07a294f9dd2cd36f4c">IActivate</a>
@@ -123,6 +124,7 @@
 <li>onAddControl()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#a6d50ab6edaf55db8437502ec1b4550d4">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1DockingLayout.html#a6d50ab6edaf55db8437502ec1b4550d4">DockingLayout</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxLayout.html#a6d50ab6edaf55db8437502ec1b4550d4">ListBoxLayout</a>
 </li>
 <li>onAddDouble()
 : <a class="el" href="classPt_1_1Formatter.html#a9ffbb772c98cf981465ba764395f4019">Formatter</a>
@@ -364,7 +366,9 @@
 <li>onCanceled()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a4faa596f82ad2f873fa9ca67f0c8a612">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#a4faa596f82ad2f873fa9ca67f0c8a612">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a4faa596f82ad2f873fa9ca67f0c8a612">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a4faa596f82ad2f873fa9ca67f0c8a612">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxButton.html#a4faa596f82ad2f873fa9ca67f0c8a612">SpinBoxButton</a>
 </li>
 <li>onClear()
 : <a class="el" href="classPt_1_1SerializationContext.html#aee5bc5978267b4417ab076de56c36091">SerializationContext</a>
@@ -377,7 +381,8 @@
 : <a class="el" href="classPt_1_1System_1_1LogChannel.html#ac92aac8031b33474af687b6ce0b0263e">LogChannel</a>
 </li>
 <li>onCloseEvent()
-: <a class="el" href="classPt_1_1Forms_1_1Popup.html#a88c110ca92a00ca9da69a9065f5d063b">Popup</a>
+: <a class="el" href="classPt_1_1Forms_1_1Menu.html#acb1fbb8257deff01dc7429cae37b2c37">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1Popup.html#a88c110ca92a00ca9da69a9065f5d063b">Popup</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a88c110ca92a00ca9da69a9065f5d063b">Window</a>
 </li>
 <li>onCommitEvent()
@@ -421,6 +426,7 @@
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a114f3b7e6cd440fbc7266af60cb6e351">PanelRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a2efbd39fe3305496ffe778c548346653">ProgressBarRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1Renderer.html#aaf86215d02a0f15784a3ac63435d1711">Renderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#ab69b9c2a9aa45cd37cea2289304098d0">ScrollBarRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#a2777ed7f8b5b5b1826b6037dde9c6760">SliderRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a41f10f600eb35a95e8ad934ff4d9b0e2">SpinBoxRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#aa449e8b4cb59d3f72e3c09d443991c2b">TabViewRenderer</a>
@@ -455,7 +461,7 @@
 </li>
 <li>onDetach()
 : <a class="el" href="classPt_1_1Cosmo_1_1ComponentPlugin.html#aed5f3bcd8c63618d9de245e87a1cbfe5">ComponentPlugin&lt; T, Factory &gt;</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1IComponentPlugin.html#af95ba548ca26e3174321817e6c527263">IComponentPlugin</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1IComponentPlugin.html#a9e072a3a4f813d677fd30abdf3d4b9f5">IComponentPlugin</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a86dbc5a1c06d71ffcea059a3776becaf">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a86dbc5a1c06d71ffcea059a3776becaf">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1View.html#a86dbc5a1c06d71ffcea059a3776becaf">View</a>
@@ -525,9 +531,17 @@
 </li>
 <li>onEnterEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a529b3c04fd9976fb4e50e710d240701d">Button</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a529b3c04fd9976fb4e50e710d240701d">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a529b3c04fd9976fb4e50e710d240701d">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a529b3c04fd9976fb4e50e710d240701d">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a529b3c04fd9976fb4e50e710d240701d">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a529b3c04fd9976fb4e50e710d240701d">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#a4c249af52176a7fe4590c1449747cc7f">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a4c249af52176a7fe4590c1449747cc7f">MenuItemBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1Responder.html#a529b3c04fd9976fb4e50e710d240701d">Responder</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a529b3c04fd9976fb4e50e710d240701d">ScrollBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a529b3c04fd9976fb4e50e710d240701d">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a529b3c04fd9976fb4e50e710d240701d">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#a529b3c04fd9976fb4e50e710d240701d">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a529b3c04fd9976fb4e50e710d240701d">Window</a>
 </li>
@@ -600,7 +614,10 @@
 </li>
 <li>onFocusEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a1dfac44ac53afeba1e5e8385f70e031d">Button</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a1dfac44ac53afeba1e5e8385f70e031d">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a1dfac44ac53afeba1e5e8385f70e031d">Control</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a1dfac44ac53afeba1e5e8385f70e031d">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a1dfac44ac53afeba1e5e8385f70e031d">SpinBox</a>
 </li>
 <li>onFormat()
 : <a class="el" href="classPt_1_1BasicDecomposer.html#ad32dbdfe18b472377143b30b3280e6d9">BasicDecomposer&lt; T &gt;</a>
@@ -668,6 +685,8 @@
 </li>
 <li>onGetMnemonics()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#aa525b89333b4dbe6e035005f0fdd4b6a">Control</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#a43baecd083e819d0126da33a4a51ebfd">MenuMenuItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#a43baecd083e819d0126da33a4a51ebfd">MenuSubItem</a>
 </li>
 <li>onGetMode()
 : <a class="el" href="classPt_1_1Cosmo_1_1ComponentPlugin.html#a6f1378eaa2382a0713620a5d3dc6b3df">ComponentPlugin&lt; T, Factory &gt;</a>
@@ -685,6 +704,8 @@
 </li>
 <li>onGetShortcuts()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#a5bf9e6d93ea6e891748340822952f82c">Control</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#a5bf9e6d93ea6e891748340822952f82c">MenuMenuItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#a5bf9e6d93ea6e891748340822952f82c">MenuSubItem</a>
 </li>
 <li>onGetSize()
 : <a class="el" href="classPt_1_1Forms_1_1Pixmap.html#ae237c46a8db31e021207e9896eda3259">Pixmap</a>
@@ -694,8 +715,13 @@
 <li>onGetTextPainter()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a75200212677716a68ede029f9c6ee760">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a75200212677716a68ede029f9c6ee760">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#a75200212677716a68ede029f9c6ee760">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a75200212677716a68ede029f9c6ee760">LineEditRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a75200212677716a68ede029f9c6ee760">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a75200212677716a68ede029f9c6ee760">PanelRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a75200212677716a68ede029f9c6ee760">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a75200212677716a68ede029f9c6ee760">SpinBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#a75200212677716a68ede029f9c6ee760">TabViewRenderer</a>
 </li>
 <li>onHasFeatureId()
 : <a class="el" href="classPt_1_1Cosmo_1_1ComponentPlugin.html#a03f1c8eec0e4ee893bdae043beaaf5a4">ComponentPlugin&lt; T, Factory &gt;</a>
@@ -742,14 +768,28 @@
 <li>onInitialize()
 : <a class="el" href="classPt_1_1Cosmo_1_1Component.html#af14204770e86ed16ba6c1d51a13de136">Component</a>
 </li>
+<li>onInput()
+: <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a5d3da8730a7e7539def74cd0ad5efaf8">SpinBox</a>
+</li>
 <li>onInvalidate()
 : <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#ae95892a055053b2f35ed11e85287a8fd">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#ae95892a055053b2f35ed11e85287a8fd">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#ae95892a055053b2f35ed11e85287a8fd">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1Label.html#ae95892a055053b2f35ed11e85287a8fd">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#ae95892a055053b2f35ed11e85287a8fd">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBox.html#ae95892a055053b2f35ed11e85287a8fd">ListBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ae95892a055053b2f35ed11e85287a8fd">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#ae95892a055053b2f35ed11e85287a8fd">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#ae95892a055053b2f35ed11e85287a8fd">MenuBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae95892a055053b2f35ed11e85287a8fd">MenuItemBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#ae95892a055053b2f35ed11e85287a8fd">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#ae95892a055053b2f35ed11e85287a8fd">ProgressBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#ae95892a055053b2f35ed11e85287a8fd">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#ae95892a055053b2f35ed11e85287a8fd">ScrollBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#ae95892a055053b2f35ed11e85287a8fd">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#ae95892a055053b2f35ed11e85287a8fd">SpinBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxButton.html#ae95892a055053b2f35ed11e85287a8fd">SpinBoxButton</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">TabView</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#ae95892a055053b2f35ed11e85287a8fd">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#ae95892a055053b2f35ed11e85287a8fd">Window</a>
@@ -773,10 +813,13 @@
 : <a class="el" href="classPt_1_1Cosmo_1_1IConnect.html#a4c2745d308178ed0503b0c490e6641af">IConnect</a>
 </li>
 <li>onKeyEvent()
-: <a class="el" href="classPt_1_1Forms_1_1Control.html#ab79f688e909214d5271a89d6ed3d415e">Control</a>
+: <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#ab79f688e909214d5271a89d6ed3d415e">ComboBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1Control.html#ab79f688e909214d5271a89d6ed3d415e">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#ab79f688e909214d5271a89d6ed3d415e">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#ab79f688e909214d5271a89d6ed3d415e">LineEdit</a>
 , <a class="el" href="classPt_1_1Forms_1_1Responder.html#ab79f688e909214d5271a89d6ed3d415e">Responder</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#ab79f688e909214d5271a89d6ed3d415e">Screen</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#ab79f688e909214d5271a89d6ed3d415e">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#ab79f688e909214d5271a89d6ed3d415e">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#ab79f688e909214d5271a89d6ed3d415e">Window</a>
 </li>
@@ -786,16 +829,25 @@
 <li>onLayout()
 : <a class="el" href="classPt_1_1Forms_1_1CanvasLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">CanvasLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#a68d03b9b05b163ae71a33c9ffa418f84">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a68d03b9b05b163ae71a33c9ffa418f84">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1DockingLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">DockingLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1FlowLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">FlowLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a68d03b9b05b163ae71a33c9ffa418f84">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1GridLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">GridLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1Label.html#a68d03b9b05b163ae71a33c9ffa418f84">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a68d03b9b05b163ae71a33c9ffa418f84">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBox.html#a68d03b9b05b163ae71a33c9ffa418f84">ListBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a68d03b9b05b163ae71a33c9ffa418f84">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a1c979a270ea7fd443058abacd2edcdb2">MenuBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#a68d03b9b05b163ae71a33c9ffa418f84">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#a68d03b9b05b163ae71a33c9ffa418f84">ProgressBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a68d03b9b05b163ae71a33c9ffa418f84">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a68d03b9b05b163ae71a33c9ffa418f84">ScrollBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">ScrollLayout</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollView.html#a68d03b9b05b163ae71a33c9ffa418f84">ScrollView</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a68d03b9b05b163ae71a33c9ffa418f84">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a68d03b9b05b163ae71a33c9ffa418f84">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1StackLayout.html#a68d03b9b05b163ae71a33c9ffa418f84">StackLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a68d03b9b05b163ae71a33c9ffa418f84">TableLayout2</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabView.html#a68d03b9b05b163ae71a33c9ffa418f84">TabView</a>
@@ -806,11 +858,20 @@
 : <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#aea67dcb4d560e6f3ccd809aec4418eb5">ProgressBarRenderer</a>
 </li>
 <li>onLayoutChrome()
-: <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a40588b2dfaa2bf790a462b690933bcca">ProgressBarRenderer</a>
+: <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#ad79c1383abc85f077debf3ffa8778093">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a40588b2dfaa2bf790a462b690933bcca">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a2f146545c4463cbcc68cc1a14adf179f">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#ad0080c51987825c064570770437f6a44">SliderRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a17e60bea5af34bd21becb684e6c5821c">SpinBoxRenderer</a>
 </li>
 <li>onLayoutContent()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#af783ebb552ae30f33d09520f63436c23">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a43c4dcbaae84ce1383f7a03a72db21e2">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#aaf5bfbdd313a7da452860c0ee4deb18a">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a78117b60974300b535303ae9fa003e56">ListItemRenderer</a>
+</li>
+<li>onLayoutEntry()
+: <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a9a6a4bb70120a8f72fda9b48aa00a1fb">SpinBoxRenderer</a>
 </li>
 <li>onLayoutEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#ab899aac080e06a0cef58e69fc0617490">Control</a>
@@ -818,17 +879,35 @@
 <li>onLayoutFrame()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a8caae86cd2131abbbc4e4607dbe317b8">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a8caae86cd2131abbbc4e4607dbe317b8">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a4266deea0cc02e9cb0a762aec6fa06b3">LineEditRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a4266deea0cc02e9cb0a762aec6fa06b3">ListBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a4266deea0cc02e9cb0a762aec6fa06b3">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a8caae86cd2131abbbc4e4607dbe317b8">PanelRenderer</a>
+</li>
+<li>onLayoutHandle()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a355c770bd3116236d243241e7b5ff7eb">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#ae752a250b34b9dd851df8c2d99449d3c">SliderRenderer</a>
 </li>
 <li>onLayoutMnemonic()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a3985732ba5bcea994f1a9dbe8ff653b7">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a3985732ba5bcea994f1a9dbe8ff653b7">CheckBoxRenderer</a>
 </li>
+<li>onLayoutTab()
+: <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#a9eec24dba5872323fa8a72d63cfebd57">TabViewRenderer</a>
+</li>
 <li>onLeaveEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a9d6315dcf9234993eca6cae77ff85373">Button</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a9d6315dcf9234993eca6cae77ff85373">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a9d6315dcf9234993eca6cae77ff85373">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a9d6315dcf9234993eca6cae77ff85373">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a9d6315dcf9234993eca6cae77ff85373">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a9d6315dcf9234993eca6cae77ff85373">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#aa9bb836ee6f6ac0aaddf67ec5723b247">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#aa9bb836ee6f6ac0aaddf67ec5723b247">MenuItemBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1Responder.html#a9d6315dcf9234993eca6cae77ff85373">Responder</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a9d6315dcf9234993eca6cae77ff85373">ScrollBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a9d6315dcf9234993eca6cae77ff85373">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a9d6315dcf9234993eca6cae77ff85373">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#a9d6315dcf9234993eca6cae77ff85373">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a9d6315dcf9234993eca6cae77ff85373">Window</a>
 </li>
@@ -845,16 +924,27 @@
 <li>onMeasure()
 : <a class="el" href="classPt_1_1Forms_1_1CanvasLayout.html#a912210d8dfc33e555b12402ee47ac406">CanvasLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#a912210d8dfc33e555b12402ee47ac406">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a912210d8dfc33e555b12402ee47ac406">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1DockingLayout.html#a912210d8dfc33e555b12402ee47ac406">DockingLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1FlowLayout.html#a912210d8dfc33e555b12402ee47ac406">FlowLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a912210d8dfc33e555b12402ee47ac406">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1GridLayout.html#a912210d8dfc33e555b12402ee47ac406">GridLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1Label.html#a912210d8dfc33e555b12402ee47ac406">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a912210d8dfc33e555b12402ee47ac406">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBox.html#a912210d8dfc33e555b12402ee47ac406">ListBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#af46f7e4917e76a2f6f45e4f4aed40ab1">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#aa999890482d7772729416cca61297294">MenuBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBarItem.html#aa999890482d7772729416cca61297294">MenuBarItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#aa999890482d7772729416cca61297294">MenuItemBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#a912210d8dfc33e555b12402ee47ac406">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#a912210d8dfc33e555b12402ee47ac406">ProgressBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a912210d8dfc33e555b12402ee47ac406">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a67203b1ff1a949bb9b666b61e41f71da">ScrollBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a912210d8dfc33e555b12402ee47ac406">ScrollLayout</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollView.html#a912210d8dfc33e555b12402ee47ac406">ScrollView</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a912210d8dfc33e555b12402ee47ac406">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a912210d8dfc33e555b12402ee47ac406">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1StackLayout.html#a912210d8dfc33e555b12402ee47ac406">StackLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a912210d8dfc33e555b12402ee47ac406">TableLayout2</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabView.html#a912210d8dfc33e555b12402ee47ac406">TabView</a>
@@ -864,30 +954,76 @@
 <li>onMeasureBar()
 : <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#aa978e6fdc19094cb8bdbb30fc5380bc6">ProgressBarRenderer</a>
 </li>
+<li>onMeasureButton()
+: <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#ac2b2400a71a00152680dfce067b136eb">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a6a47a27081b6f3ebbc858241b14116c4">ScrollBarRenderer</a>
+</li>
 <li>onMeasureContent()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a98d154f09a3fbb05960e72400441285d">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#af3c187bf27e6de2fe968d92f0844839c">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#aa4344c53f0ebff05a094bd2256ddd113">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a34787566ca8ce9ffa56c5137ed5f9976">ListItemRenderer</a>
+</li>
+<li>onMeasureEntry()
+: <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a6620c9795a02b269a590dc98f4f1c2c0">SpinBoxRenderer</a>
 </li>
 <li>onMeasureFrame()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a636e3794525900b85feb533efd7c2af2">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a636e3794525900b85feb533efd7c2af2">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#a636e3794525900b85feb533efd7c2af2">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a636e3794525900b85feb533efd7c2af2">LineEditRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a636e3794525900b85feb533efd7c2af2">ListBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a636e3794525900b85feb533efd7c2af2">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a636e3794525900b85feb533efd7c2af2">PanelRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#a636e3794525900b85feb533efd7c2af2">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a02a032d3f08b5df9d0cc5d000adc0868">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#a636e3794525900b85feb533efd7c2af2">SliderRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a636e3794525900b85feb533efd7c2af2">SpinBoxRenderer</a>
+</li>
+<li>onMeasureHandle()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#ac6dbfa24d4939979749a62e9a9921898">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#aed42034955c02c8a5ff6379259bde590">SliderRenderer</a>
+</li>
+<li>onMeasureIcon()
+: <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#aadcfe494b6169b15c1a4977cdf2c6ca6">ListBoxItem</a>
 </li>
 <li>onMeasureIndicator()
 : <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a2190ee8c05b733ce785c11ce552bccca">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a2190ee8c05b733ce785c11ce552bccca">SpinBoxRenderer</a>
+</li>
+<li>onMeasureTab()
+: <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#af3e4ae72a70ef4f5b7186a40c28a9baf">TabViewRenderer</a>
+</li>
+<li>onMeasureText()
+: <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ac979cb611651b69e9d061cd506f9d504">ListBoxItem</a>
+</li>
+<li>onMeasureTrack()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#adb79add5e3dd2ac1903acbd0ca2b284d">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#a8fbe9f3760434e6ad34cb423b99252ca">SliderRenderer</a>
 </li>
 <li>onMnemonic()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#ac0c392c62b968a7418fb0f8bb2e0a222">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#ac0c392c62b968a7418fb0f8bb2e0a222">Control</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">MenuMenuItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">MenuSubItem</a>
 </li>
 <li>onMouseEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a00b4fb0d0830a05d8e9284202b808c54">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a00b4fb0d0830a05d8e9284202b808c54">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a00b4fb0d0830a05d8e9284202b808c54">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a00b4fb0d0830a05d8e9284202b808c54">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a00b4fb0d0830a05d8e9284202b808c54">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#abd4346659bd6b667a35e560a8a972aa8">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#abd4346659bd6b667a35e560a8a972aa8">MenuBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#abd4346659bd6b667a35e560a8a972aa8">MenuItemBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1Responder.html#a00b4fb0d0830a05d8e9284202b808c54">Responder</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#a00b4fb0d0830a05d8e9284202b808c54">Screen</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a00b4fb0d0830a05d8e9284202b808c54">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a00b4fb0d0830a05d8e9284202b808c54">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#a00b4fb0d0830a05d8e9284202b808c54">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a00b4fb0d0830a05d8e9284202b808c54">Window</a>
 </li>
@@ -921,12 +1057,25 @@
 </li>
 <li>onPaint()
 : <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#a169d5d7261571fb77c21873078a5e1d9">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a169d5d7261571fb77c21873078a5e1d9">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Label.html#a4bd52e91b6335df9f9f1172cac2c45cd">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a4bd52e91b6335df9f9f1172cac2c45cd">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBox.html#a169d5d7261571fb77c21873078a5e1d9">ListBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a169d5d7261571fb77c21873078a5e1d9">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#a208dbdf31fc365eacb92fc1736b0aa26">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a1842d2ed1a59339a60db485ac739d017">MenuBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBarItem.html#a36098be7e767e221c156a7d5fae9ea45">MenuBarItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a36098be7e767e221c156a7d5fae9ea45">MenuItemBase</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#a36098be7e767e221c156a7d5fae9ea45">MenuSubItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#a169d5d7261571fb77c21873078a5e1d9">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#a169d5d7261571fb77c21873078a5e1d9">ProgressBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a169d5d7261571fb77c21873078a5e1d9">PushButton</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#ac27ad0e519ac85369ab7bcc72d8c4843">Screen</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a4bd52e91b6335df9f9f1172cac2c45cd">ScrollBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a169d5d7261571fb77c21873078a5e1d9">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a4bd52e91b6335df9f9f1172cac2c45cd">SpinBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxButton.html#a4bd52e91b6335df9f9f1172cac2c45cd">SpinBoxButton</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabView.html#a169d5d7261571fb77c21873078a5e1d9">TabView</a>
 , <a class="el" href="classPt_1_1Forms_1_1View.html#a4bd52e91b6335df9f9f1172cac2c45cd">View</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a4bd52e91b6335df9f9f1172cac2c45cd">Window</a>
@@ -934,15 +1083,24 @@
 </li>
 <li>onPaintBackground()
 : <a class="el" href="classPt_1_1Forms_1_1Label.html#a362eb1a90b96c4d30bbb9eae48826607">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#aad3afc8c9c0b087af57a8c397d7ef380">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#a362eb1a90b96c4d30bbb9eae48826607">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#ab1bc223248d41dc79d4beb5f52d6d3ca">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1TabView.html#a696362412a0fe66b76a27b76a4cd20ba">TabView</a>
 </li>
 <li>onPaintChrome()
 : <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#ad20710fcb542a37c9ef7fce72940c404">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a9c5384da7079456415631050c981d3ec">ComboBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a3c26a5187ae769cf8bcd18ef588cb41f">LineEdit</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBar.html#a18eaf5ead7f19703cce2c8ed670b9bef">ProgressBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#aca9d898b24c91de7ca0b532dda6512ca">ScrollBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#aac072ed88ea8fa143658db124585f603">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#aad0b66b661b97afedc5970bfe493e54d">SpinBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1TabView.html#ad935c256bfeb223c484ddc62daa0a8ae">TabView</a>
 </li>
 <li>onPaintContent()
-: <a class="el" href="classPt_1_1Forms_1_1Panel.html#a4d35f0696b85736da5f3802c86e0c5b2">Panel</a>
+: <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#aa3f6ba9024078ab03a41dc66a1794fca">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1Panel.html#a4d35f0696b85736da5f3802c86e0c5b2">Panel</a>
 </li>
 <li>onPaintEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#ad4f23d0135dce0096cc4f8e79da28fbd">Control</a>
@@ -957,8 +1115,12 @@
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#a5410192208ac0e6e65710014066853ab">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#aff916d3e8432dadf9a6b67c2da4ef9be">PushButton</a>
 </li>
+<li>onPaintHighlight()
+: <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ac48ca1c3515a57d3b8c6cd55159e1e59">ListBoxItem</a>
+</li>
 <li>onPaintIcon()
 : <a class="el" href="classPt_1_1Forms_1_1Label.html#a80ce4be85ffcceb71ea93299f8086f78">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a6e5368d67c6086490287490df231bad7">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a5d3035f20cf59b5bdb2c7a418149a895">PushButton</a>
 </li>
 <li>onPaintMnemonic()
@@ -967,8 +1129,11 @@
 </li>
 <li>onPaintText()
 : <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#ac0353130dd9c84d30867b1a30fdce5b9">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a4b7e02da66f9148de4d863bfb40a1d9e">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Label.html#a8879a80023f1db7b65307af33793fc53">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a4e2ea4bb7de71f8c7aa23d3fc2a0fd63">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#af23212d2930c271a6394d919add6347b">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a991de25f21495458598dd95e739b92f4">SpinBox</a>
 </li>
 <li>onParse()
 : <a class="el" href="classPt_1_1Formatter.html#aacffbdcf3f3ac70d521a826a916f9a3b">Formatter</a>
@@ -996,7 +1161,9 @@
 <li>onPressed()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a6c967e7b144eb6f86ce33e9fab4884d1">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#a6c967e7b144eb6f86ce33e9fab4884d1">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a6c967e7b144eb6f86ce33e9fab4884d1">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#a6c967e7b144eb6f86ce33e9fab4884d1">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxButton.html#a6c967e7b144eb6f86ce33e9fab4884d1">SpinBoxButton</a>
 </li>
 <li>onProcessActivateEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Window.html#a0f1ad786943327aaeeb2a57d9dd250be">Window</a>
@@ -1065,8 +1232,11 @@
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a91d1afb135654076fd59d505fda1ea7c">Window</a>
 </li>
 <li>onProcessMouseEvent()
-: <a class="el" href="classPt_1_1Forms_1_1Control.html#a7d194138a8461965b65b73b1b6eef066">Control</a>
+: <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a7d194138a8461965b65b73b1b6eef066">ComboBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1Control.html#a7d194138a8461965b65b73b1b6eef066">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a7d194138a8461965b65b73b1b6eef066">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#a202c58805fcb5f747035115668e2d952">Menu</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a202c58805fcb5f747035115668e2d952">MenuBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1Popup.html#a7d194138a8461965b65b73b1b6eef066">Popup</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#a7d194138a8461965b65b73b1b6eef066">Screen</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabView.html#a7d194138a8461965b65b73b1b6eef066">TabView</a>
@@ -1194,7 +1364,9 @@
 <li>onReleased()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#af9efe949c903461f25dc74e8d74cbee6">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBox.html#af9efe949c903461f25dc74e8d74cbee6">CheckBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#af9efe949c903461f25dc74e8d74cbee6">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1PushButton.html#af9efe949c903461f25dc74e8d74cbee6">PushButton</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxButton.html#af9efe949c903461f25dc74e8d74cbee6">SpinBoxButton</a>
 </li>
 <li>onReleaseInput()
 : <a class="el" href="classPt_1_1Xml_1_1XmlResolver.html#a792311982f906ddac3d202aa1593a9b2">XmlResolver</a>
@@ -1208,6 +1380,7 @@
 : <a class="el" href="classPt_1_1Forms_1_1CanvasLayout.html#a8a741e85b6d1289105032bcf39d42ac9">CanvasLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a8a741e85b6d1289105032bcf39d42ac9">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1DockingLayout.html#a8a741e85b6d1289105032bcf39d42ac9">DockingLayout</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxLayout.html#a8a741e85b6d1289105032bcf39d42ac9">ListBoxLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#a8a741e85b6d1289105032bcf39d42ac9">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1StackLayout.html#a8a741e85b6d1289105032bcf39d42ac9">StackLayout</a>
 , <a class="el" href="classPt_1_1Forms_1_1TableLayout2.html#a8a741e85b6d1289105032bcf39d42ac9">TableLayout2</a>
@@ -1218,41 +1391,91 @@
 </li>
 <li>onRenderBackground()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a6758f7d2603f93f4a28ab402b3d4c869">ButtonRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a15e982245e937baebc97b0e395f63cf0">ListBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a87a62b8e89715d16e91323bbf82babec">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a452d5a6ceabd5669209a074f0d17e333">PanelRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#aebca65b4228218e05ed88153f8f72c9b">TabViewRenderer</a>
 </li>
 <li>onRenderBar()
 : <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ab6a4e7f610b258f0c9bd1430e23b43bc">ProgressBarRenderer</a>
 </li>
+<li>onRenderButton()
+: <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#a733d40a92aff4967d91be32ee7a7cfc4">ComboBoxRenderer</a>
+</li>
 <li>onRenderChrome()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a13db52e211f79536ef722d492ee3bb5c">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a35174cb45eab8ca23b614c73f9a71585">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#afe71143119afbcb4ad53bbe0441f01cb">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a1665df1dc24a114ec0925086eea02b38">LineEditRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#a400440a5a149a632d9f935f61c802ec5">ListBoxRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#afad86e98d88f6983f7ab93a942a84286">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a24644e4e9231dd6b7db1cfe7dbe8f77d">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#a82bb39f951ea1044cebe801b4b1d926e">SliderRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a2ddcac3f2bbb6afb7eab9a3fecbace68">SpinBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#a7764d3c322b854c230eb025c5d523fe3">TabViewRenderer</a>
 </li>
 <li>onRenderChunk()
 : <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ab0b659cda6a6ff8bc1f953adb9c300fd">ProgressBarRenderer</a>
 </li>
+<li>onRenderCursor()
+: <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#abb7fdf223e96d22c354ed403bbe5a5b4">LineEditRenderer</a>
+</li>
+<li>onRenderDecreaseButton()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a014af1b76c5b92ba282e830db2896865">ScrollBarRenderer</a>
+</li>
+<li>onRenderDownButton()
+: <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a57e8602e4679a69d4f1826573c208e68">SpinBoxRenderer</a>
+</li>
+<li>onRenderEntry()
+: <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#a510bd213b9a8e7b1ba053e5ba3f57d61">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#acbb8674b43bd585eeee3678f7b8cabfd">LineEditRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#ad5e35de3ff05df61fe9e6d0844a10389">SpinBoxRenderer</a>
+</li>
 <li>onRenderFrame()
 : <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#aa932b050a4ddbe67d5d7d354e8f97a00">PanelRenderer</a>
+</li>
+<li>onRenderHandle()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a1fa5313ffa2a48902a4c94d97907965f">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#aa35a408186cf5a0cccb203884b371ffb">SliderRenderer</a>
 </li>
 <li>onRenderHighlight()
 : <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#ab6a64fadb2498636181737d8101546df">ListItemRenderer</a>
 </li>
 <li>onRenderIcon()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a4bf3559931e5c131df6d987bc859bd03">ButtonRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#ac27a4e631f6078461d11a3070fd7ea17">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a66dca3fe4dbf4fdb249d37b58fd06c3f">PanelRenderer</a>
+</li>
+<li>onRenderIncreaseButton()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#a6c0791a810b8f58bae64cc4308056ec4">ScrollBarRenderer</a>
 </li>
 <li>onRenderMnemonic()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a16238825fae488a7d5f234691c81dea6">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#ab79546f5fd1927babe6c502e903d10d6">CheckBoxRenderer</a>
 </li>
+<li>onRenderSelection()
+: <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#a77958ca94d3e5f44176f7e27379632df">LineEditRenderer</a>
+</li>
+<li>onRenderTab()
+: <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#a85152f6d4a4d4c46bf43610b688ffd10">TabViewRenderer</a>
+</li>
 <li>onRenderText()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#abb5ea43316c4d7b3808529db2081f414">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a66b3b2fbb46e7876a8d415aee0713705">CheckBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#a60523e621c4380fe4b93219ad8324c55">ComboBoxRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#aea88cbed9dab7624d9fed48e428f4a9b">LineEditRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a15f913812b93054aed87cf2b16e1d5bf">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a4b00a2f0ffbd3a2984e5b8f5f1a03478">PanelRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#abc0fe292e1e575b44bcc6f5507592ff5">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#af58809f84c8cd10998c2afa85d412ef2">SpinBoxRenderer</a>
 </li>
 <li>onRenderTrack()
 : <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ab1488a8311acfa4f9d3cfead03fab059">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#ae7a70b6f26ce4c0575e475b465e96f6e">ScrollBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#acd2af3a8a2231f3d9d604c20eacd5cce">SliderRenderer</a>
+</li>
+<li>onRenderUpButton()
+: <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a9763d33790f9f7ba5689ab0b4e74e400">SpinBoxRenderer</a>
 </li>
 <li>onRepaintRequest()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#a6daf5063653e2f03001e7c96517c556a">Control</a>
@@ -1335,6 +1558,7 @@
 , <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#adefda73de91a015f122ff2904604a77a">ListItemRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#adefda73de91a015f122ff2904604a77a">PanelRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#adefda73de91a015f122ff2904604a77a">ProgressBarRenderer</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#adefda73de91a015f122ff2904604a77a">ScrollBarRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#adefda73de91a015f122ff2904604a77a">SliderRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#adefda73de91a015f122ff2904604a77a">SpinBoxRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>
@@ -1344,9 +1568,11 @@
 : <a class="el" href="classPt_1_1Forms_1_1Screen.html#a5e2317a9731a861ed3f007ad34929c74">Screen</a>
 </li>
 <li>onResizeEvent()
-: <a class="el" href="classPt_1_1Forms_1_1Control.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Control</a>
+: <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a587eddc586c2f27c7c5a2aa1b971dbe0">ComboBox</a>
+, <a class="el" href="classPt_1_1Forms_1_1Control.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1Label.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Label</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a587eddc586c2f27c7c5a2aa1b971dbe0">LineEdit</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Screen</a>
 , <a class="el" href="classPt_1_1Forms_1_1View.html#a943a0fde06fa6633ce9ed00adbf4d93a">View</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#a587eddc586c2f27c7c5a2aa1b971dbe0">Widget</a>
@@ -1378,10 +1604,23 @@
 , <a class="el" href="classPt_1_1System_1_1Selectable.html#a3fc677f388552a08fec9fcc6f378074d">Selectable</a>
 , <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a5e5d5bdb3c480dacbbe91f5113485b31">SerialDevice</a>
 </li>
+<li>onScrollBarX()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollView.html#abf4e09da39445e88227248b67193a533">ScrollView</a>
+</li>
+<li>onScrollBarY()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollView.html#aafefe02ec42ce0e101cdc5ff6881fcf0">ScrollView</a>
+</li>
+<li>onScrolledX()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollView.html#abea890eac4839b5da69d328dd19e06b7">ScrollView</a>
+</li>
+<li>onScrolledY()
+: <a class="el" href="classPt_1_1Forms_1_1ScrollView.html#a0f79c2cb6231afac60fe3f8beabafa3e">ScrollView</a>
+</li>
 <li>onScrollEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#ad29e16b77cc387dcef5b5c52dd54041b">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#ad29e16b77cc387dcef5b5c52dd54041b">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#ad29e16b77cc387dcef5b5c52dd54041b">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ad29e16b77cc387dcef5b5c52dd54041b">ListBoxItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1Responder.html#ad29e16b77cc387dcef5b5c52dd54041b">Responder</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#ad29e16b77cc387dcef5b5c52dd54041b">Screen</a>
 , <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#ad29e16b77cc387dcef5b5c52dd54041b">ScrollLayout</a>
@@ -1470,6 +1709,10 @@
 <li>onShortcut()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a989762a187e9a5587cbbb2c96730cf0f">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#ab98c0606e07e30116c8750b5def8639e">Control</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a989762a187e9a5587cbbb2c96730cf0f">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a72095491e6d41515f85e99de3fa7fa9f">MenuItemBase</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#a989762a187e9a5587cbbb2c96730cf0f">MenuMenuItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#a989762a187e9a5587cbbb2c96730cf0f">MenuSubItem</a>
 </li>
 <li>onShow()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#ae14f58a4be52d541798348dd56af0647">Control</a>
@@ -1481,6 +1724,7 @@
 <li>onShowEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#a76bc2d2c8123e0c6ff349902b7d8e11f">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a76bc2d2c8123e0c6ff349902b7d8e11f">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1Menu.html#a5cf92cfae28522c53c4b22e37592ee58">Menu</a>
 , <a class="el" href="classPt_1_1Forms_1_1Popup.html#a76bc2d2c8123e0c6ff349902b7d8e11f">Popup</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#a76bc2d2c8123e0c6ff349902b7d8e11f">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a8eee98d0b6f811cfa0c24ec8574c8777">Window</a>
@@ -1489,6 +1733,9 @@
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#a55f622ac5bf2978f3447d06f402691f4">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a55f622ac5bf2978f3447d06f402691f4">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1View.html#a55f622ac5bf2978f3447d06f402691f4">View</a>
+</li>
+<li>onStep()
+: <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#af484e800719aa00a34ffcd90cff1f774">SpinBox</a>
 </li>
 <li>onStyleRenderer()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonStyler.html#a0b554f9fb039ae25ac932ff4965a15d6">ButtonStyler</a>
@@ -1529,11 +1776,19 @@
 </li>
 <li>onTouchEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a2723f45dc09e09359e656adf936b063c">ComboBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a2723f45dc09e09359e656adf936b063c">Control</a>
 , <a class="el" href="classPt_1_1Forms_1_1Form.html#a2723f45dc09e09359e656adf936b063c">Form</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a2723f45dc09e09359e656adf936b063c">LineEdit</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a2723f45dc09e09359e656adf936b063c">ListBoxItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a2909f468d42dc5bb5f4ffac5502d0e13">MenuBar</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a2909f468d42dc5bb5f4ffac5502d0e13">MenuItemBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1Responder.html#a2723f45dc09e09359e656adf936b063c">Responder</a>
 , <a class="el" href="classPt_1_1Forms_1_1Screen.html#a2723f45dc09e09359e656adf936b063c">Screen</a>
+, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a2723f45dc09e09359e656adf936b063c">ScrollBar</a>
 , <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>
+, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a2723f45dc09e09359e656adf936b063c">Slider</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a2723f45dc09e09359e656adf936b063c">SpinBox</a>
 , <a class="el" href="classPt_1_1Forms_1_1Widget.html#a2723f45dc09e09359e656adf936b063c">Widget</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a2723f45dc09e09359e656adf936b063c">Window</a>
 </li>
@@ -1566,10 +1821,15 @@
 , <a class="el" href="classPt_1_1System_1_1FileDevice.html#a0511b039b7147bcba600af86c7633c63">FileDevice</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#ade62d61bbd25a95e018f338f9800889e">Library</a>
 , <a class="el" href="classPt_1_1System_1_1LogChannel.html#a2d9d44b590c3e536ff604622f974cab7">LogChannel</a>
-, <a class="el" href="classPt_1_1System_1_1SerialDevice.html#ab168eeeab0fd7fd53964cf1a3e36997f">SerialDevice</a>
+, <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a155c236276455e8c769976e9b4b5de1b">SerialDevice</a>
 </li>
 <li>opened()
 : <a class="el" href="classPt_1_1System_1_1FileDevice.html#a8947b83e69aeab270e98d4395af337d0">FileDevice</a>
+</li>
+<li>openMenu()
+: <a class="el" href="classPt_1_1Forms_1_1MenuBase.html#abf5cef11bd36450f4a6eb096da87929d">MenuBase</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#ae0b1861d934f61491fad3142725daf56">MenuMenuItem</a>
+, <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#ae0b1861d934f61491fad3142725daf56">MenuSubItem</a>
 </li>
 <li>operator AutoPtrRef&lt; Y &gt;()
 : <a class="el" href="classPt_1_1AutoPtr.html#ad940da666d3c0af39bc98355e48ef544">AutoPtr&lt; T, Destroy &gt;</a>
@@ -1614,11 +1874,11 @@
 , <a class="el" href="classPt_1_1System_1_1LogMessage.html#a61efd4196a96540ee018fee8791f3f10">LogMessage</a>
 </li>
 <li>operator!=()
-: <a class="el" href="classPt_1_1AutoPtr.html#add90d6008a7a896254b69609a316f510">AutoPtr&lt; T, Destroy &gt;</a>
+: <a class="el" href="classPt_1_1AutoPtr.html#a029ad275f7da4acf1af855a23922236a">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a71ddf830bc504cfc31ee4eab2842a1ca">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#afd179446ef2a78265104038e26b5174b">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a3887764124eb590ec7c7bd63263b5dcc">DateTime</a>
-, <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#ae2327ba2bc9ce6b3a1fe54f2e416b05d">Key::Modifiers</a>
+, <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#aeb8e153aecc6a0551463e338314836ab">Key::Modifiers</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key.html#a6aa1ea5c60678d8a812ba4644162ce2e">Key</a>
 , <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html#aed480fe5fd83d4055f926ac3c8069965">SizePolicy</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Font.html#abc1cf90c3fce9365a10d128914a3a545">Font</a>
@@ -1662,7 +1922,7 @@
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Forms_1_1FacetPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">FacetPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#ab90825cd285e28cbdb2c6323747fc32a">PathIterator</a>
-, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2bae581b78b4b75255ec1384c494631c">Transform</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac317590e57062cbc89b4c45e7387ae69">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a9598d34b024cd6dfe9ef65656439af81">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#ab8668a0afd4e98308473f5d8a96dbd8f">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a25602f5d8391df8b352dfe6f3dba3922">Document::Element</a>
@@ -1683,15 +1943,15 @@
 <li>operator+()
 : <a class="el" href="classPt_1_1Date.html#a8e148dce315438d02f0ea92a687fa5d0">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a289a53eb21b6e9b31ee9f7d7c792d35a">DateTime</a>
-, <a class="el" href="classPt_1_1SourceInfo.html#a3802216ce44990ddd945a5add5a5d30c">SourceInfo</a>
-, <a class="el" href="classPt_1_1String.html#aca94d44e89f7b90dc9703a41c6e564c6">String</a>
+, <a class="el" href="classPt_1_1SourceInfo.html#a3185ff6b223da9dda5ed22f2f4f9f4e3">SourceInfo</a>
+, <a class="el" href="classPt_1_1String.html#af02046b120a46a4fe9d031d1e4320091">String</a>
 , <a class="el" href="classPt_1_1Time.html#a9bf26b37f981815c6faf1fb88188fcb2">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ab827785c810b8b244d78f707674a6c09">Timespan</a>
 </li>
 <li>operator++()
 : <a class="el" href="classPt_1_1Date.html#ae6a991aa97305857a8f1f3ce86e56a8e">Date</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a288c2d9f6cd186acc1574b3ceb654ccd">PathIterator</a>
-, <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#ab7eab0ba59cfdc636f6acdd4c86ed8f8">MessageHeader::ConstIterator</a>
+, <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a858a8f58b67c9fc79d628f5ebef436b3">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#a6cc9e26cb15598521f807c872456d60c">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#ae03db7e3bab6887d136b9df289793e61">Document::Element</a>
 , <a class="el" href="classPt_1_1Json_1_1InputIterator.html#a5aca15d82412956581232e2578603725">InputIterator</a>
@@ -1700,7 +1960,7 @@
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a858a8f58b67c9fc79d628f5ebef436b3">CertificateStore::ConstIterator</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#a7f367e9244a3ade0c4bd23f35679adc3">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1PluginManager_1_1Iterator.html#aef12ef33726bc591f569f822c7b5ac41">PluginManager&lt; IfaceT, PluginT &gt;::Iterator</a>
-, <a class="el" href="classPt_1_1Utf8Appender.html#aac4f3963282711d1cc1515f752e90194">Utf8Appender</a>
+, <a class="el" href="classPt_1_1Utf8Appender.html#ad229715df8a568188ffa311bac9fe8a8">Utf8Appender</a>
 , <a class="el" href="classPt_1_1Utf8Iterator.html#a10fa8d53cb97db91dc4f30dc4a5e45bd">Utf8Iterator</a>
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#a5aca15d82412956581232e2578603725">InputIterator</a>
 </li>
@@ -1709,17 +1969,17 @@
 , <a class="el" href="classPt_1_1DateTime.html#a9ab1750e4d8bf705f23c16ce6d24f33f">DateTime</a>
 , <a class="el" href="classPt_1_1Delegate.html#aa53c69b236efc457195b407e18974d8b">Delegate&lt; R, As &gt;</a>
 , <a class="el" href="classPt_1_1Signal.html#ab8fecc96a05ee330b44ebac6a6603232">Signal&lt; As &gt;</a>
-, <a class="el" href="classPt_1_1String.html#a8c09167d2a0ffed51ebea0865b3e16e9">String</a>
+, <a class="el" href="classPt_1_1String.html#a1b978d07dcdb723bb937642eb0b95b57">String</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#a9cd17d49ca71aacd113b1d219ca71cc6">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a35690e01f94ba7fcf0302860cfa7217a">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ad08a656c69fe27b00a6154439444bd81">Timespan</a>
 </li>
 <li>operator-()
 : <a class="el" href="classPt_1_1Date.html#ae50bde3a2c9b7934b310e90bd58c4a1d">Date</a>
-, <a class="el" href="classPt_1_1DateTime.html#a4f505e44abfb29c398a1ee766800f5ad">DateTime</a>
+, <a class="el" href="classPt_1_1DateTime.html#a1ef0d8d965acb14d9abe257dd9fe6550">DateTime</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Point.html#a2db556feb8013b54a7b1691995013606">Point</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PointI.html#a51ab470d45315f3fc25310c0c8f02111">PointI</a>
-, <a class="el" href="classPt_1_1Time.html#a92f2c65093b194bf6a4f517bb0b132c6">Time</a>
+, <a class="el" href="classPt_1_1Time.html#af0562f5ada270b837ed6a3466e67eaef">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ad376270ca48daa1b3c463678b8e96dfe">Timespan</a>
 </li>
 <li>operator--()
@@ -1753,11 +2013,11 @@
 : <a class="el" href="classPt_1_1System_1_1Path.html#a1c2caca40c883528a1fdd73c73b0fe2a">Path</a>
 </li>
 <li>operator/=()
-: <a class="el" href="classPt_1_1System_1_1Path.html#a3c68eba76c226cf160d83b2df29930d7">Path</a>
+: <a class="el" href="classPt_1_1System_1_1Path.html#a72d0ab6904981ddb7eab45d04a43f66a">Path</a>
 </li>
 <li>operator&lt;()
-: <a class="el" href="classPt_1_1AutoPtr.html#a0b0ce333ca0dfafcceb3a05f9f29d811">AutoPtr&lt; T, Destroy &gt;</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a8a5402ed32d7a952d094748b65bc752f">AutoPtr&lt; T &gt;</a>
+: <a class="el" href="classPt_1_1AutoPtr.html#a148a5cba3dee2bb708a56fce8409bd87">AutoPtr&lt; T, Destroy &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7642c673da0a33702d5e749fb5a81c99">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a900297f0a1d5018e0c30d2e8fa6a99c6">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#aaec41bb6ed721384b089c34fd87e0085">DateTime</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#a71fb6f5a6019e703f95fb11cc2d28282">Key::Modifiers</a>
@@ -1766,7 +2026,7 @@
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a934dfb3d1c9065c4abb878991a01cdc0">PathIterator</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a68757a602b586b16e632a51d8e61395f">Scaling</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#ac3a00e770145fe57ece2ba4763b0bef3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
-, <a class="el" href="classPt_1_1String.html#a7e4145726533e95318e00842a46c375b">String</a>
+, <a class="el" href="classPt_1_1String.html#a202baf3b75d0117ce2e1762a7c3d8ac0">String</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#abc4f1649f9430830c2ebf74b2294327c">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#aff5f32a3ecb7cc733ed9c59779c1c55e">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a2176bf97f6b18969bb71b7c3f2e56234">Time</a>
@@ -1777,30 +2037,30 @@
 <li>operator&lt;&lt;()
 : <a class="el" href="classPt_1_1Arg.html#a4bf8e8df7e0ce9b07dd95a06b2a5480d">Arg&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1String.html#a54e7c59a4c450a81fe60ee7753d91444">String</a>
-, <a class="el" href="classPt_1_1System_1_1LogMessage.html#ae39c4a8b61f6a9e17a8937669fd1006a">LogMessage</a>
+, <a class="el" href="classPt_1_1System_1_1LogMessage.html#a7100b2556ac5c17f6ac2c5ea7f274d50">LogMessage</a>
 , <a class="el" href="classPt_1_1System_1_1LogRecord.html#acae6ac9a0084925facd1dc0d847698c3">LogRecord</a>
 </li>
 <li>operator&lt;&lt;=()
 : <a class="el" href="classPt_1_1Date.html#abb486a3a4ba29e5e1425f37dad28ff79">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#ad6ec544ced0e04e69a7427c6404bb0b7">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a46d425d33885f3a9caef4ab4d17f83af">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#aad88e57895af1e1d8ec8e8091c5e7b11">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a06b41188437d96b459699fcbd69ba6b7">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#ab220dae46e89b7286c6dfd93b1a22aa8">Time</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="classPt_1_1Date.html#a54e8d7e0bf2a62a64edbf0163b916964">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#abf9627c22b617dd531e214056bc67f92">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#acb4858fab3298ad3ef2d3c64ea208f56">String</a>
+, <a class="el" href="classPt_1_1String.html#a8638fd388b111b7fa7b43d29db7379df">String</a>
 , <a class="el" href="classPt_1_1Time.html#a6a0cd3c0e9278655b3751210ee91ab22">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#a22b73b37156a4f6beed7dacbb4e80964">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#ae6865e5a731ebd557b801c5b10948edb">TypeInfo</a>
 </li>
 <li>operator=()
-: <a class="el" href="classPt_1_1Any.html#a57db7ebd4b66b495fd2247f7b58b5644">Any</a>
+: <a class="el" href="classPt_1_1Any.html#ab4d44217ed9be67418872968ca366e94">Any</a>
 , <a class="el" href="classPt_1_1AutoPtr.html#a7e432e9cab07c3bd710fd8da4c71aee1">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Connectable.html#abcf9a8b573a667282e80d5182f7f0c46">Connectable</a>
 , <a class="el" href="classPt_1_1Connection.html#a860bddd3a410500f868051e4d97af3e7">Connection</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7e432e9cab07c3bd710fd8da4c71aee1">AutoPtr&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a54e662d19098857cab2f939c8d5fe973">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1Component.html#a434f8325fcbaf9af8e40169c30dfacd4">Component</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1ComponentInfo.html#a16818d632cb4bf39974ef521f0a2344a">ComponentInfo</a>
 , <a class="el" href="classPt_1_1Date.html#a8a58ec4c1a43410f8b7fb190daa75c1e">Date</a>
@@ -1833,18 +2093,18 @@
 , <a class="el" href="classPt_1_1String.html#aa7694556e438408131523c949aeecdd0">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#ad4fbf13550fdca8eae388e8f40daa391">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a1e476f19923f26dd9fe90e8ce3e8eaba">Library</a>
-, <a class="el" href="classPt_1_1System_1_1Path.html#aabdad23ab07a625023972a679a40f4e4">Path</a>
+, <a class="el" href="classPt_1_1System_1_1Path.html#a464b26b993b5bf06107a7fbc31c4cacc">Path</a>
 , <a class="el" href="classPt_1_1System_1_1TarEntry.html#a42b1db701d4977779a13d4724f8503e4">TarEntry</a>
 , <a class="el" href="classPt_1_1Time.html#acb9b42de1a5b9b7dbb7b013dfc372ada">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#aec03ed9fcb9723e8e81506cadbd74c85">Timespan</a>
-, <a class="el" href="classPt_1_1Utf8Appender.html#ac8062e6216b6962718709941565977ef">Utf8Appender</a>
+, <a class="el" href="classPt_1_1Utf8Appender.html#a9697fcb43030fa1478e9038762709774">Utf8Appender</a>
 , <a class="el" href="classPt_1_1Utf8Iterator.html#aef23d502fda6b68f539fc59c4da710f5">Utf8Iterator</a>
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#a75426e8cb2f5ef29ad0a59df52104455">InputIterator</a>
 </li>
 <li>operator==()
-: <a class="el" href="classPt_1_1AutoPtr.html#aadf5d4a0b6e47fe277b62d40ac36cafa">AutoPtr&lt; T, Destroy &gt;</a>
+: <a class="el" href="classPt_1_1AutoPtr.html#a8362c744dadb40fbed1027cdfeb7f632">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1ConstMethod.html#aee3b7d3465f814822ced92b202ae072f">ConstMethod&lt; R, ClassT, As &gt;</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7a45f757bd45a50886a01a0f72c3be53">AutoPtr&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a38ca026ee98863972e1968c5a6288633">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a9cfaaa2dd5867578b32c02fd8bc16339">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a15ab62ed982a1d04015c4e94597e225e">DateTime</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#a0bbe1923318776097a4259ed92eb6d38">Key::Modifiers</a>
@@ -1863,7 +2123,7 @@
 , <a class="el" href="classPt_1_1Method.html#a6f911644e75a12711cb934f6693f808c">Method&lt; R, ClassT, As &gt;</a>
 , <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#a2812064fabad1a5209c433e18a60be55">Settings::ConstEntry</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a5dc3af8dc225a06f0159b9d15693ca68">Settings::Entry</a>
-, <a class="el" href="classPt_1_1SmartPtr.html#a4b50a58375f69e6824a9cf89f7978ebc">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
+, <a class="el" href="classPt_1_1SmartPtr.html#acee5bd0aef8a58e85792205bc6225b83">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a19e4c4bfe35c5d933d7b25f7bfb243eb">CertificateStore::ConstIterator</a>
 , <a class="el" href="classPt_1_1String.html#a4c528050f322dbaf326e012349c3cd34">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#a782fd50847dd704b91ddae9f0132a0c7">DirectoryIterator</a>
@@ -1888,7 +2148,7 @@
 <li>operator&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a97555d84e3c89d8d27146e61a875a7f6">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a5a1cc8417dca4698082acedf1edb07cf">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#adb9f97fc15e7b4e012d674b0980460fb">String</a>
+, <a class="el" href="classPt_1_1String.html#a3ec3bc4940d1de076f23d467de60710d">String</a>
 , <a class="el" href="classPt_1_1Time.html#a4c81c1c1150b34a04ec6951f24e830ae">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#afa53e8488c0c139e4864d7040bc1700b">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#afb1695e93b8783aa5af661cb7f44ee7c">TypeInfo</a>
@@ -1896,7 +2156,7 @@
 <li>operator&gt;&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a808244de45ec52b6fa77e3d8a17854b5">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#afc1517c44d2c4427905054c505be94b5">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a78743201ce95c15fb19b2d42396254de">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a381a3fc476b42b5c227ac9718ba91426">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a5086a18d7e6423ff5647f7defab8ea6b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#aefa2b547256e14ed0cb125c60b88ccd1">Time</a>
 </li>
@@ -1904,11 +2164,11 @@
 : <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html#aeef1b0103701898b7d3dd1b58b06ca4b">ColorStops</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#aa64f356b25448f42a892ce48bd1bd5d5">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a38ddf700deb69da473dfda2705d7a027">Document::Element</a>
-, <a class="el" href="classPt_1_1Json_1_1Document.html#aa64f356b25448f42a892ce48bd1bd5d5">Document</a>
-, <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#afa69993ac24702fbc591d47cfec3cb3e">Settings::ConstEntry</a>
+, <a class="el" href="classPt_1_1Json_1_1Document.html#aaad18846f5f2e539f58fb51bdde5d139">Document</a>
+, <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#a45c3214120b6ca60fbccd20a5257c530">Settings::ConstEntry</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a0f33e887f8ae68ab0d8ce39d07a3b7fe">Settings::Entry</a>
-, <a class="el" href="classPt_1_1Settings.html#afa69993ac24702fbc591d47cfec3cb3e">Settings</a>
-, <a class="el" href="classPt_1_1String.html#ab2dcd7f3085e06f35ff2ba6f05f6a469">String</a>
+, <a class="el" href="classPt_1_1Settings.html#a45c3214120b6ca60fbccd20a5257c530">Settings</a>
+, <a class="el" href="classPt_1_1String.html#ab91aea6636bccee368f5d405f9940aaf">String</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a0f0624726fef324c78e32f87fd1dd4be">Library</a>
 </li>
 <li>operator^()
@@ -1925,13 +2185,13 @@
 : <a class="el" href="classPt_1_1System_1_1FileInfo.html#abd0af58d2793b71a17ad2dc6c035284d">FileInfo</a>
 </li>
 <li>options()
-: <a class="el" href="classPt_1_1Forms_1_1ButtonStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ButtonStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1CheckBoxStyler.html#a878d8845d08b04f5d598d9361ffff4e3">CheckBoxStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1ComboBoxStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ComboBoxStyler</a>
+: <a class="el" href="classPt_1_1Forms_1_1ButtonStyler.html#a878d8845d08b04f5d598d9361ffff4e3">ButtonStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1CheckBoxStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">CheckBoxStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1ComboBoxStyler.html#a878d8845d08b04f5d598d9361ffff4e3">ComboBoxStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1LineEditStyler.html#a878d8845d08b04f5d598d9361ffff4e3">LineEditStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1ListItemStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ListItemStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemStyler.html#a878d8845d08b04f5d598d9361ffff4e3">ListItemStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">PanelStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1ProgressBarStyler.html#a878d8845d08b04f5d598d9361ffff4e3">ProgressBarStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1ProgressBarStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ProgressBarStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1SliderStyler.html#a878d8845d08b04f5d598d9361ffff4e3">SliderStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1SpinBoxStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">SpinBoxStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">TabViewStyler</a>
@@ -1944,7 +2204,7 @@
 </li>
 <li>out()
 : <a class="el" href="classPt_1_1SaveInfo.html#a7833bee8ef27bf29a78d7b1b3553902c">SaveInfo</a>
-, <a class="el" href="classPt_1_1System_1_1Pipe.html#a6f0c1f4665770de0f8c039f0664a53d9">Pipe</a>
+, <a class="el" href="classPt_1_1System_1_1Pipe.html#a1adb2b6d97e3db01e1ee4f13b14d480f">Pipe</a>
 , <a class="el" href="classPt_1_1TextCodec.html#a9f16d2fa95465dcfe471de1132df3a53">TextCodec&lt; CharT, ByteT &gt;</a>
 </li>
 <li>out_avail()

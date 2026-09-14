@@ -154,7 +154,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ad423eba3e0e3b1eb77f8c15b6120ec48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A FontOption can replace the whole font, or change only the size, weight, or slant. The remaining attributes then come from the application font. value() is the effective font after bind(). getFont() merges the local overrides with <em>baseFont</em>. </p>
+<div class="textblock"><p>A FontOption can replace the whole font, or change only the size, weight, or slant. The remaining attributes then come from the application font. value() is the effective font after bind(). getFont() merges the local overrides with <em>baseFont</em>. Use StyleOptions::findLocal() to detect a local overlay, then getFont() to merge it with a base font. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

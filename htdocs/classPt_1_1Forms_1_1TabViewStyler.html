@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TabViewStyler Class Reference</div>  </div>
+<div class="title">TabViewStyler Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Collections.html">Collections</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="TabViewStyler_8h_source.html">Pt/Forms/TabViewStyler.h</a>&gt;</code></p>
 
-<p>Binds tab view renderers and local style options.  
-</p>
+<p>Binds a tab view to the current style renderer.  
+ <a href="classPt_1_1Forms_1_1TabViewStyler.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Styler.html">Styler</a>.</p>
 <table class="memberdecls">
@@ -166,20 +166,19 @@ const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> *&#160;<
 <tr class="memdesc:ac1335e4b17122c95f0c913019fc29c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a tab-label painter for <em>surface</em>, or 0 when unavailable. <br /></td></tr>
 <tr class="separator:ac1335e4b17122c95f0c913019fc29c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf6022ab18926020f3a15af8e1920f4"><td class="memItemLeft" align="right" valign="top"><a id="a6bf6022ab18926020f3a15af8e1920f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a6bf6022ab18926020f3a15af8e1920f4">renderBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const TabViewState &amp;state) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a6bf6022ab18926020f3a15af8e1920f4">renderBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const <a class="el" href="classPt_1_1Forms_1_1TabViewState.html">TabViewState</a> &amp;state) const</td></tr>
 <tr class="memdesc:a6bf6022ab18926020f3a15af8e1920f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the tab view background for <em>state</em>. <br /></td></tr>
 <tr class="separator:a6bf6022ab18926020f3a15af8e1920f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a845f7537cde5741c730717734a6d4363"><td class="memItemLeft" align="right" valign="top"><a id="a845f7537cde5741c730717734a6d4363"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a845f7537cde5741c730717734a6d4363">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;activeTabRect, const TabViewState &amp;state) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a845f7537cde5741c730717734a6d4363">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;activeTabRect, const <a class="el" href="classPt_1_1Forms_1_1TabViewState.html">TabViewState</a> &amp;state) const</td></tr>
 <tr class="memdesc:a845f7537cde5741c730717734a6d4363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the tab view frame for <em>state</em>. <br /></td></tr>
 <tr class="separator:a845f7537cde5741c730717734a6d4363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae50a4785ccc00bc7c2693ced49b179"><td class="memItemLeft" align="right" valign="top"><a id="adae50a4785ccc00bc7c2693ced49b179"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#adae50a4785ccc00bc7c2693ced49b179">renderTab</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;tabRect, const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const TabViewItemState &amp;state) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#adae50a4785ccc00bc7c2693ced49b179">renderTab</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;tabRect, const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;text, const <a class="el" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a> &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1TabViewItemState.html">TabViewItemState</a> &amp;state) const</td></tr>
 <tr class="memdesc:adae50a4785ccc00bc7c2693ced49b179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders a tab item for <em>state</em>. <br /></td></tr>
 <tr class="separator:adae50a4785ccc00bc7c2693ced49b179"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78c9fb93778201db5c9ba369905d8971"><td class="memItemLeft" align="right" valign="top"><a id="a78c9fb93778201db5c9ba369905d8971"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a78c9fb93778201db5c9ba369905d8971">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a> *renderer=0)</td></tr>
-<tr class="memdesc:a78c9fb93778201db5c9ba369905d8971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a specific tab view renderer. <br /></td></tr>
+<tr class="memitem:a78c9fb93778201db5c9ba369905d8971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a78c9fb93778201db5c9ba369905d8971">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a> *renderer=0)</td></tr>
+<tr class="memdesc:a78c9fb93778201db5c9ba369905d8971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a specific tab view renderer.  <a href="classPt_1_1Forms_1_1TabViewStyler.html#a78c9fb93778201db5c9ba369905d8971">More...</a><br /></td></tr>
 <tr class="separator:a78c9fb93778201db5c9ba369905d8971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac33cc640ad29cbccd3735aa9fabd9eb0"><td class="memItemLeft" align="right" valign="top"><a id="ac33cc640ad29cbccd3735aa9fabd9eb0"></a>
 <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">options</a> ()</td></tr>
@@ -215,7 +214,29 @@ virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#1
 <tr class="memdesc:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the bound renderer with <em>renderer</em>.  <a href="classPt_1_1Forms_1_1Styler.html#a7aff0eab1f97e9e7a0600a28b5aa9124">More...</a><br /></td></tr>
 <tr class="separator:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A TabView owns a TabViewStyler. Applications do not construct one. Call Styler::bind() from onInvalidate(). When the overlay has no local options, bind uses the shared renderer from the style. Local options use a private clone. setRenderer() keeps an assigned renderer until it is cleared. A null renderer falls back on the next bind.</p>
+<p>Appearance getters return effective tokens after bind. Setters write widget-local options. Measure, layout, and paint call the typed methods on this styler, not a public renderer accessor. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a78c9fb93778201db5c9ba369905d8971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c9fb93778201db5c9ba369905d8971">&#9670;&nbsp;</a></span>setRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a> *&#160;</td>
+          <td class="paramname"><em>renderer</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A null renderer falls back to the current style on the next bind. </p>
+
+</div>
+</div>
 <a id="a36be2eaef48ddc0bd3fff591fa5dfbed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36be2eaef48ddc0bd3fff591fa5dfbed">&#9670;&nbsp;</a></span>bind()</h2>
 

@@ -125,126 +125,174 @@
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>Forms {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span>PT_FORMS_API ScrollBar : <span class="keyword">public</span> Control</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> Control Base;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">enum</span> Orientation</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            Horizontal = 0,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            Vertical = 1</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">explicit</span> ScrollBar(Orientation o);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ~ScrollBar();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> setRange(<span class="keywordtype">double</span> minpos, <span class="keywordtype">double</span> maxpos);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> setStepping(<span class="keywordtype">double</span> scroll, <span class="keywordtype">double</span> page);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">double</span> minimumPosition() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">double</span> maximumPosition() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">double</span> position() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> setPosition(<span class="keywordtype">double</span> pos);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> scroll(<span class="keywordtype">double</span> pos);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        Signal&lt;double&gt;&amp; changed()</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        { <span class="keywordflow">return</span> _changed; }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> Gfx::Brush&amp; background() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> setBackground(<span class="keyword">const</span> Gfx::Brush&amp; b);</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html">   75</a></span>&#160;<span class="keyword">class </span>PT_FORMS_API <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html">ScrollBar</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Forms_1_1Control.html">Control</a> <a class="code" href="classPt_1_1Forms_1_1View.html">Base</a>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">const</span> Gfx::Brush&amp; foreground() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> setForeground(<span class="keyword">const</span> Gfx::Brush&amp; b);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> Gfx::Pen&amp; contour() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> setContour(<span class="keyword">const</span> Gfx::Pen&amp; p);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> setRenderer(ScrollBarRenderer* renderer);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        ScrollBarState scrollBarState() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58">   82</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58a7d5f78c516bedc0a066182a6fd606b8b">   86</a></span>&#160;            Horizontal = 0,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            Vertical = 1</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600">   91</a></span>&#160;        };</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onInvalidate();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaint(PaintContext&amp; context, <span class="keyword">const</span> Gfx::RectF&amp; rect);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPaintChrome(PaintContext&amp; context,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                   <span class="keyword">const</span> Gfx::RectF&amp; rect,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                   Direction direction,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                   <span class="keyword">const</span> Gfx::RectF&amp; trackRect,</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                   <span class="keyword">const</span> Gfx::RectF&amp; handleRect,</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                   <span class="keyword">const</span> Gfx::RectF&amp; decreaseRect,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                   <span class="keyword">const</span> Gfx::RectF&amp; increaseRect,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                   <span class="keyword">const</span> ScrollBarState&amp; state);</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a278a23177dcf29d325dccfaceb6424d0">   95</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a278a23177dcf29d325dccfaceb6424d0">ScrollBar</a>(<a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> o);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a688d63ea5a01d40ddc613937bd22f750">   99</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a688d63ea5a01d40ddc613937bd22f750">~ScrollBar</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a869a4f2125a0cc415d06fdd5224d4b2f">  103</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a869a4f2125a0cc415d06fdd5224d4b2f">setRange</a>(<span class="keywordtype">double</span> minpos, <span class="keywordtype">double</span> maxpos);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#aa24471ed1b60835a19bc5ef477eace7d">  107</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#aa24471ed1b60835a19bc5ef477eace7d">setStepping</a>(<span class="keywordtype">double</span> scroll, <span class="keywordtype">double</span> page);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        Gfx::SizeF onMeasure(<span class="keyword">const</span> SizePolicy&amp; s);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onMouseEvent(<span class="keyword">const</span> MouseEvent&amp; ev);</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#ac1f5b9264d8780c057e7bd8f9c0c892a">  111</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#ac1f5b9264d8780c057e7bd8f9c0c892a">minimumPosition</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onTouchEvent(<span class="keyword">const</span> TouchEvent&amp; ev);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onEnterEvent(<span class="keyword">const</span> EnterEvent&amp; ev);</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a388016319c6e919565dbf05de889a801">  115</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a388016319c6e919565dbf05de889a801">maximumPosition</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onLeaveEvent(<span class="keyword">const</span> LeaveEvent&amp; ev);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">enum</span> HotZone</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            NoZone = 0,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            TrackZone,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            HandleZone,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            DecreaseZone,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            IncreaseZone</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        };</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#af75183b7d1bb0fed828509fe2fdbd440">  119</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#af75183b7d1bb0fed828509fe2fdbd440">position</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a127f227c989a9b5b5ca23dfb05f6a45e">  123</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a127f227c989a9b5b5ca23dfb05f6a45e">setPosition</a>(<span class="keywordtype">double</span> pos);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#abe1c054f960ef1914c7258faa91909d3">  127</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#abe1c054f960ef1914c7258faa91909d3">scroll</a>(<span class="keywordtype">double</span> pos);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        Direction direction() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">float</span> fraction() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">float</span> viewProportion() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        HotZone hitTest(<span class="keyword">const</span> Gfx::PointF&amp; pos);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        Gfx::RectF currentHandleRect();</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#afff233519d8159f266d7dcfd0fe2c7a9">  131</a></span>&#160;        <a class="code" href="classPt_1_1Signal.html">Signal&lt;double&gt;</a>&amp; <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#afff233519d8159f266d7dcfd0fe2c7a9">changed</a>()</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        { <span class="keywordflow">return</span> _changed; }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#acb306d7048570c2dcab972e2accea77f">  137</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a>&amp; <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#acb306d7048570c2dcab972e2accea77f">background</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        Orientation              _orientation;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">double</span>                   _minPos;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">double</span>                   _maxPos;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">double</span>                   _pageStep;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">double</span>                   _scrollStep;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">double</span>                   _position;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">bool</span>                     _dragging;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        Signal&lt;double&gt;           _changed;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        ScrollBarStyler          _styler;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        Gfx::RectF               _trackRect;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        Gfx::RectF               _decreaseRect;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        Gfx::RectF               _increaseRect;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        HotZone                  _hoveredZone;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        HotZone                  _pressedZone;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a759a5fbd6e124e55f9a2596dc5f83393">  141</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a>&amp; b);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a6d159aeeaa0870b520a6ea415a80a157">  145</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a>&amp; <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a6d159aeeaa0870b520a6ea415a80a157">foreground</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a51e5e13c91886ce59275c2f791202ab2">  149</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a51e5e13c91886ce59275c2f791202ab2">setForeground</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a>&amp; b);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a113fe779fd6e2ee01d08190829d2f293">  153</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a>&amp; <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a113fe779fd6e2ee01d08190829d2f293">contour</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a8ee47c90b0a1e2917e1a096bdfefc393">  157</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a8ee47c90b0a1e2917e1a096bdfefc393">setContour</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a>&amp; p);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#ad865ccfbd19c23f0e3c575a53b20a75e">  163</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#ad865ccfbd19c23f0e3c575a53b20a75e">setRenderer</a>(<a class="code" href="classPt_1_1Forms_1_1ScrollBarRenderer.html">ScrollBarRenderer</a>* renderer);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a2f670bf87721247e24d9c55c963107e4">  167</a></span>&#160;        <a class="code" href="classPt_1_1Forms_1_1ScrollBarState.html">ScrollBarState</a> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a2f670bf87721247e24d9c55c963107e4">scrollBarState</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#ae95892a055053b2f35ed11e85287a8fd">  172</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a68d03b9b05b163ae71a33c9ffa418f84">  176</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a4bd52e91b6335df9f9f1172cac2c45cd">  180</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a4bd52e91b6335df9f9f1172cac2c45cd">onPaint</a>(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a>&amp; context, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#aca9d898b24c91de7ca0b532dda6512ca">  184</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#aca9d898b24c91de7ca0b532dda6512ca">onPaintChrome</a>(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a>&amp; context,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; rect,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                   <a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a> direction,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; trackRect,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; handleRect,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; decreaseRect,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>&amp; increaseRect,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBarState.html">ScrollBarState</a>&amp; state);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a67203b1ff1a949bb9b666b61e41f71da">  195</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a67203b1ff1a949bb9b666b61e41f71da">onMeasure</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a>&amp; s);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a00b4fb0d0830a05d8e9284202b808c54">  199</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a00b4fb0d0830a05d8e9284202b808c54">onMouseEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a2723f45dc09e09359e656adf936b063c">  203</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a2723f45dc09e09359e656adf936b063c">onTouchEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a529b3c04fd9976fb4e50e710d240701d">  207</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a529b3c04fd9976fb4e50e710d240701d">onEnterEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1EnterEvent.html">EnterEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classPt_1_1Forms_1_1ScrollBar.html#a9d6315dcf9234993eca6cae77ff85373">  211</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a9d6315dcf9234993eca6cae77ff85373">onLeaveEvent</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1LeaveEvent.html">LeaveEvent</a>&amp; ev);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keyword">enum</span> HotZone</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            NoZone = 0,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            TrackZone,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            HandleZone,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            DecreaseZone,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            IncreaseZone</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        };</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1Direction.html">Direction</a> direction() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">float</span> fraction() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">float</span> viewProportion() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        HotZone hitTest(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Point.html">Gfx::PointF</a>&amp; pos);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> currentHandleRect();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        Orientation              _orientation;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordtype">double</span>                   _minPos;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordtype">double</span>                   _maxPos;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordtype">double</span>                   _pageStep;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordtype">double</span>                   _scrollStep;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">double</span>                   _position;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordtype">bool</span>                     _dragging;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Signal&lt;double&gt;</a>           _changed;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="classPt_1_1Forms_1_1ScrollBarStyler.html">ScrollBarStyler</a>          _styler;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>               _trackRect;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>               _decreaseRect;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a>               _increaseRect;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        HotZone                  _hoveredZone;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        HotZone                  _pressedZone;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;};</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a4bd52e91b6335df9f9f1172cac2c45cd"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a4bd52e91b6335df9f9f1172cac2c45cd">Pt::Forms::ScrollBar::onPaint</a></div><div class="ttdeci">virtual void onPaint(PaintContext &amp;context, const Gfx::RectF &amp;rect)</div><div class="ttdoc">Paints the track, handle, and buttons.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TouchEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TouchEvent.html">Pt::Forms::TouchEvent</a></div><div class="ttdoc">Touch press, move, or release.</div><div class="ttdef"><b>Definition:</b> TouchEvent.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a759a5fbd6e124e55f9a2596dc5f83393"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a759a5fbd6e124e55f9a2596dc5f83393">Pt::Forms::ScrollBar::setBackground</a></div><div class="ttdeci">void setBackground(const Gfx::Brush &amp;b)</div><div class="ttdoc">Sets the widget-local background brush to b.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1EnterEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1EnterEvent.html">Pt::Forms::EnterEvent</a></div><div class="ttdoc">Pointer entered a widget.</div><div class="ttdef"><b>Definition:</b> EnterEvent.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a6d159aeeaa0870b520a6ea415a80a157"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a6d159aeeaa0870b520a6ea415a80a157">Pt::Forms::ScrollBar::foreground</a></div><div class="ttdeci">const Gfx::Brush &amp; foreground() const</div><div class="ttdoc">Returns the effective foreground brush.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Pen_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Pen.html">Pt::Gfx::Pen</a></div><div class="ttdoc">Attributes for the drawing of outlines.</div><div class="ttdef"><b>Definition:</b> Pen.h:54</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBarState_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBarState.html">Pt::Forms::ScrollBarState</a></div><div class="ttdoc">Transient visual state of a scroll bar.</div><div class="ttdef"><b>Definition:</b> ScrollBarStyler.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a388016319c6e919565dbf05de889a801"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a388016319c6e919565dbf05de889a801">Pt::Forms::ScrollBar::maximumPosition</a></div><div class="ttdeci">double maximumPosition() const</div><div class="ttdoc">Returns the upper bound of the range.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_abe1c054f960ef1914c7258faa91909d3"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#abe1c054f960ef1914c7258faa91909d3">Pt::Forms::ScrollBar::scroll</a></div><div class="ttdeci">void scroll(double pos)</div><div class="ttdoc">Sets the position to pos, clamped to the range, and emits changed().</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_ae95892a055053b2f35ed11e85287a8fd"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#ae95892a055053b2f35ed11e85287a8fd">Pt::Forms::ScrollBar::onInvalidate</a></div><div class="ttdeci">virtual void onInvalidate()</div><div class="ttdoc">Binds the styler.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a2723f45dc09e09359e656adf936b063c"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a2723f45dc09e09359e656adf936b063c">Pt::Forms::ScrollBar::onTouchEvent</a></div><div class="ttdeci">virtual bool onTouchEvent(const TouchEvent &amp;ev)</div><div class="ttdoc">Updates the position from a touch press or drag.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a68d03b9b05b163ae71a33c9ffa418f84"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a68d03b9b05b163ae71a33c9ffa418f84">Pt::Forms::ScrollBar::onLayout</a></div><div class="ttdeci">virtual void onLayout(const Gfx::RectF &amp;rect)</div><div class="ttdoc">Places the track, handle, and buttons in rect.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a67203b1ff1a949bb9b666b61e41f71da"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a67203b1ff1a949bb9b666b61e41f71da">Pt::Forms::ScrollBar::onMeasure</a></div><div class="ttdeci">Gfx::SizeF onMeasure(const SizePolicy &amp;s)</div><div class="ttdoc">Measures the track, handle, and buttons.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a2f670bf87721247e24d9c55c963107e4"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a2f670bf87721247e24d9c55c963107e4">Pt::Forms::ScrollBar::scrollBarState</a></div><div class="ttdeci">ScrollBarState scrollBarState() const</div><div class="ttdoc">Returns the transient visual state for the current paint pass.</div></div>
+<div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a9d6315dcf9234993eca6cae77ff85373"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a9d6315dcf9234993eca6cae77ff85373">Pt::Forms::ScrollBar::onLeaveEvent</a></div><div class="ttdeci">virtual bool onLeaveEvent(const LeaveEvent &amp;ev)</div><div class="ttdoc">Clears the highlight when the pointer leaves.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a00b4fb0d0830a05d8e9284202b808c54"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a00b4fb0d0830a05d8e9284202b808c54">Pt::Forms::ScrollBar::onMouseEvent</a></div><div class="ttdeci">virtual bool onMouseEvent(const MouseEvent &amp;ev)</div><div class="ttdoc">Updates the position from a pointer press or drag.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1PaintContext_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a></div><div class="ttdoc">Active painting session on a Forms paint surface.</div><div class="ttdef"><b>Definition:</b> PaintContext.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a278a23177dcf29d325dccfaceb6424d0"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a278a23177dcf29d325dccfaceb6424d0">Pt::Forms::ScrollBar::ScrollBar</a></div><div class="ttdeci">ScrollBar(Orientation o)</div><div class="ttdoc">Creates a scroll bar with o orientation.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a51e5e13c91886ce59275c2f791202ab2"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a51e5e13c91886ce59275c2f791202ab2">Pt::Forms::ScrollBar::setForeground</a></div><div class="ttdeci">void setForeground(const Gfx::Brush &amp;b)</div><div class="ttdoc">Sets the widget-local foreground brush to b.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Point with floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a529b3c04fd9976fb4e50e710d240701d"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a529b3c04fd9976fb4e50e710d240701d">Pt::Forms::ScrollBar::onEnterEvent</a></div><div class="ttdeci">virtual bool onEnterEvent(const EnterEvent &amp;ev)</div><div class="ttdoc">Highlights a hot zone when the pointer enters.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Control_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Control.html">Pt::Forms::Control</a></div><div class="ttdoc">Reusable view used as application content.</div><div class="ttdef"><b>Definition:</b> Control.h:107</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBarRenderer_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBarRenderer.html">Pt::Forms::ScrollBarRenderer</a></div><div class="ttdoc">Renders the look of a scroll bar.</div><div class="ttdef"><b>Definition:</b> ScrollBarStyler.h:149</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a871118a09520247c78a71ecd7b0abd58"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58">Pt::Forms::ScrollBar::Orientation</a></div><div class="ttdeci">Orientation</div><div class="ttdoc">Direction of the track.</div><div class="ttdef"><b>Definition:</b> ScrollBar.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBarStyler_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBarStyler.html">Pt::Forms::ScrollBarStyler</a></div><div class="ttdoc">Binds a scroll bar to the current style renderer.</div><div class="ttdef"><b>Definition:</b> ScrollBarStyler.h:349</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a113fe779fd6e2ee01d08190829d2f293"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a113fe779fd6e2ee01d08190829d2f293">Pt::Forms::ScrollBar::contour</a></div><div class="ttdeci">const Gfx::Pen &amp; contour() const</div><div class="ttdoc">Returns the effective contour pen.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_acb306d7048570c2dcab972e2accea77f"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#acb306d7048570c2dcab972e2accea77f">Pt::Forms::ScrollBar::background</a></div><div class="ttdeci">const Gfx::Brush &amp; background() const</div><div class="ttdoc">Returns the effective background brush.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a8ee47c90b0a1e2917e1a096bdfefc393"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a8ee47c90b0a1e2917e1a096bdfefc393">Pt::Forms::ScrollBar::setContour</a></div><div class="ttdeci">void setContour(const Gfx::Pen &amp;p)</div><div class="ttdoc">Sets the widget-local contour pen to p.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a869a4f2125a0cc415d06fdd5224d4b2f"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a869a4f2125a0cc415d06fdd5224d4b2f">Pt::Forms::ScrollBar::setRange</a></div><div class="ttdeci">void setRange(double minpos, double maxpos)</div><div class="ttdoc">Sets the range to minpos through maxpos.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html">Pt::Forms::Direction</a></div><div class="ttdoc">Names a flow direction.</div><div class="ttdef"><b>Definition:</b> Direction.h:52</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_ad865ccfbd19c23f0e3c575a53b20a75e"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#ad865ccfbd19c23f0e3c575a53b20a75e">Pt::Forms::ScrollBar::setRenderer</a></div><div class="ttdeci">void setRenderer(ScrollBarRenderer *renderer)</div><div class="ttdoc">Assigns renderer as the family renderer.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_aa24471ed1b60835a19bc5ef477eace7d"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#aa24471ed1b60835a19bc5ef477eace7d">Pt::Forms::ScrollBar::setStepping</a></div><div class="ttdeci">void setStepping(double scroll, double page)</div><div class="ttdoc">Sets the step to scroll and the page step to page.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_aca9d898b24c91de7ca0b532dda6512ca"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#aca9d898b24c91de7ca0b532dda6512ca">Pt::Forms::ScrollBar::onPaintChrome</a></div><div class="ttdeci">virtual void onPaintChrome(PaintContext &amp;context, const Gfx::RectF &amp;rect, Direction direction, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;handleRect, const Gfx::RectF &amp;decreaseRect, const Gfx::RectF &amp;increaseRect, const ScrollBarState &amp;state)</div><div class="ttdoc">Paints the scroll bar chrome for state.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1View_html"><div class="ttname"><a href="classPt_1_1Forms_1_1View.html">Pt::Forms::View</a></div><div class="ttdoc">Widget that hosts controls on a paint surface.</div><div class="ttdef"><b>Definition:</b> View.h:86</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html">Pt::Forms::ScrollBar</a></div><div class="ttdoc">Position in a range shown by a handle on a track.</div><div class="ttdef"><b>Definition:</b> ScrollBar.h:76</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a688d63ea5a01d40ddc613937bd22f750"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a688d63ea5a01d40ddc613937bd22f750">Pt::Forms::ScrollBar::~ScrollBar</a></div><div class="ttdeci">~ScrollBar()</div><div class="ttdoc">Destroys the scroll bar.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1LeaveEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1LeaveEvent.html">Pt::Forms::LeaveEvent</a></div><div class="ttdoc">Pointer left a widget.</div><div class="ttdef"><b>Definition:</b> LeaveEvent.h:49</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_af75183b7d1bb0fed828509fe2fdbd440"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#af75183b7d1bb0fed828509fe2fdbd440">Pt::Forms::ScrollBar::position</a></div><div class="ttdeci">double position() const</div><div class="ttdoc">Returns the current position.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_ac1f5b9264d8780c057e7bd8f9c0c892a"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#ac1f5b9264d8780c057e7bd8f9c0c892a">Pt::Forms::ScrollBar::minimumPosition</a></div><div class="ttdeci">double minimumPosition() const</div><div class="ttdoc">Returns the lower bound of the range.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Brush_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a></div><div class="ttdoc">Fill description for shapes and text.</div><div class="ttdef"><b>Definition:</b> Brush.h:145</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Rect with floating-point coordinates.</div><div class="ttdef"><b>Definition:</b> Rect.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_afff233519d8159f266d7dcfd0fe2c7a9"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#afff233519d8159f266d7dcfd0fe2c7a9">Pt::Forms::ScrollBar::changed</a></div><div class="ttdeci">Signal&lt; double &gt; &amp; changed()</div><div class="ttdoc">Returns the signal emitted when scroll() changes the position.</div><div class="ttdef"><b>Definition:</b> ScrollBar.h:131</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a127f227c989a9b5b5ca23dfb05f6a45e"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a127f227c989a9b5b5ca23dfb05f6a45e">Pt::Forms::ScrollBar::setPosition</a></div><div class="ttdeci">void setPosition(double pos)</div><div class="ttdoc">Sets the position to pos, clamped to the range.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1MouseEvent_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MouseEvent.html">Pt::Forms::MouseEvent</a></div><div class="ttdoc">Pointer movement or button change.</div><div class="ttdef"><b>Definition:</b> MouseEvent.h:134</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

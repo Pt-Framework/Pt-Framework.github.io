@@ -85,14 +85,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TabView Class Reference</div>  </div>
+<div class="title">TabView Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Collections.html">Collections</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="TabView_8h_source.html">Pt/Forms/TabView.h</a>&gt;</code></p>
 
-<p>Tabbed view for controls.  
-</p>
+<p>Pages selected by tabs.  
+ <a href="classPt_1_1Forms_1_1TabView.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a>.</p>
 <table class="memberdecls">
@@ -111,14 +111,89 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad5f33109cf8619f06a5c1c31202d6c08"><td class="memItemLeft" align="right" valign="top"><a id="ad5f33109cf8619f06a5c1c31202d6c08"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ad5f33109cf8619f06a5c1c31202d6c08">TabView</a> ()</td></tr>
+<tr class="memdesc:ad5f33109cf8619f06a5c1c31202d6c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty tab view. <br /></td></tr>
+<tr class="separator:ad5f33109cf8619f06a5c1c31202d6c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441f3677f339cf388ec8f258f82a45ec"><td class="memItemLeft" align="right" valign="top"><a id="a441f3677f339cf388ec8f258f82a45ec"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a441f3677f339cf388ec8f258f82a45ec">~TabView</a> ()</td></tr>
+<tr class="memdesc:a441f3677f339cf388ec8f258f82a45ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the tab view. Attached controls are not destroyed. <br /></td></tr>
+<tr class="separator:a441f3677f339cf388ec8f258f82a45ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top"><a id="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
+<tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the view has no tabs. <br /></td></tr>
+<tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="memItemLeft" align="right" valign="top"><a id="ade1601ccf1fa3bcf050867f0852ca4e5"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ade1601ccf1fa3bcf050867f0852ca4e5">size</a> () const</td></tr>
+<tr class="memdesc:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of tabs. <br /></td></tr>
+<tr class="separator:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680731f5ebef71753c8ac2d71505cf18"><td class="memItemLeft" align="right" valign="top"><a id="a680731f5ebef71753c8ac2d71505cf18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">addTab</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control, const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;title)</td></tr>
+<tr class="memdesc:a680731f5ebef71753c8ac2d71505cf18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds caller-owned <em>control</em> as a tab with <em>title</em>. <br /></td></tr>
+<tr class="separator:a680731f5ebef71753c8ac2d71505cf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216110acd0c11ed6d8e8963cd45497ea"><td class="memItemLeft" align="right" valign="top"><a id="a216110acd0c11ed6d8e8963cd45497ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a216110acd0c11ed6d8e8963cd45497ea">removeTab</a> (std::size_t n)</td></tr>
+<tr class="memdesc:a216110acd0c11ed6d8e8963cd45497ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the tab at index <em>n</em>. <br /></td></tr>
+<tr class="separator:a216110acd0c11ed6d8e8963cd45497ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c7ca177f1db05da3d89f9d0d1a228e"><td class="memItemLeft" align="right" valign="top"><a id="ac2c7ca177f1db05da3d89f9d0d1a228e"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ac2c7ca177f1db05da3d89f9d0d1a228e">current</a> () const</td></tr>
+<tr class="memdesc:ac2c7ca177f1db05da3d89f9d0d1a228e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the current tab. <br /></td></tr>
+<tr class="separator:ac2c7ca177f1db05da3d89f9d0d1a228e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2097dbd6666ffe9cd7e28653059798"><td class="memItemLeft" align="right" valign="top"><a id="a3b2097dbd6666ffe9cd7e28653059798"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a3b2097dbd6666ffe9cd7e28653059798">setCurrent</a> (std::size_t n)</td></tr>
+<tr class="memdesc:a3b2097dbd6666ffe9cd7e28653059798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows the tab at index <em>n</em>. <br /></td></tr>
+<tr class="separator:a3b2097dbd6666ffe9cd7e28653059798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ce2908bb3a7bf1fbc754a43f4f696a"><td class="memItemLeft" align="right" valign="top"><a id="af7ce2908bb3a7bf1fbc754a43f4f696a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#af7ce2908bb3a7bf1fbc754a43f4f696a">setText</a> (std::size_t n, const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;title)</td></tr>
+<tr class="memdesc:af7ce2908bb3a7bf1fbc754a43f4f696a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title of the tab at index <em>n</em> to <em>title</em>. <br /></td></tr>
+<tr class="separator:af7ce2908bb3a7bf1fbc754a43f4f696a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft" align="right" valign="top"><a id="a759a5fbd6e124e55f9a2596dc5f83393"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memdesc:a759a5fbd6e124e55f9a2596dc5f83393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local background brush to <em>b</em>. <br /></td></tr>
+<tr class="separator:a759a5fbd6e124e55f9a2596dc5f83393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4fb2e25549269e6f80164bf38c07769"><td class="memItemLeft" align="right" valign="top"><a id="ac4fb2e25549269e6f80164bf38c07769"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ac4fb2e25549269e6f80164bf38c07769">setBackground</a> (bool <a class="el" href="classPt_1_1Forms_1_1Widget.html#a257f7974c93c8517e6d836e15215f465">enable</a>)</td></tr>
+<tr class="memdesc:ac4fb2e25549269e6f80164bf38c07769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the view paints a background. <br /></td></tr>
+<tr class="separator:ac4fb2e25549269e6f80164bf38c07769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee47c90b0a1e2917e1a096bdfefc393"><td class="memItemLeft" align="right" valign="top"><a id="a8ee47c90b0a1e2917e1a096bdfefc393"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a8ee47c90b0a1e2917e1a096bdfefc393">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;p)</td></tr>
+<tr class="memdesc:a8ee47c90b0a1e2917e1a096bdfefc393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local contour pen to <em>p</em>. <br /></td></tr>
+<tr class="separator:a8ee47c90b0a1e2917e1a096bdfefc393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ae89f3e885782a8bb16a9b95b39733"><td class="memItemLeft" align="right" valign="top"><a id="a68ae89f3e885782a8bb16a9b95b39733"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a68ae89f3e885782a8bb16a9b95b39733">setFrame</a> (bool <a class="el" href="classPt_1_1Forms_1_1Widget.html#a257f7974c93c8517e6d836e15215f465">enable</a>)</td></tr>
+<tr class="memdesc:a68ae89f3e885782a8bb16a9b95b39733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the view paints a frame. <br /></td></tr>
+<tr class="separator:a68ae89f3e885782a8bb16a9b95b39733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft" align="right" valign="top"><a id="a5e39b7242b7786c27bbe48d0675e2d08"></a>
 <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a5e39b7242b7786c27bbe48d0675e2d08">font</a> () const</td></tr>
-<tr class="memdesc:a5e39b7242b7786c27bbe48d0675e2d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective tab view font. <br /></td></tr>
+<tr class="memdesc:a5e39b7242b7786c27bbe48d0675e2d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective font. <br /></td></tr>
 <tr class="separator:a5e39b7242b7786c27bbe48d0675e2d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft" align="right" valign="top"><a id="ac77626da8a7306cd079b1dd18558c9eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ac77626da8a7306cd079b1dd18558c9eb">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;<a class="el" href="classPt_1_1Forms_1_1TabView.html#a5e39b7242b7786c27bbe48d0675e2d08">font</a>)</td></tr>
+<tr class="memdesc:ac77626da8a7306cd079b1dd18558c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font to <em>font</em>. <br /></td></tr>
+<tr class="separator:ac77626da8a7306cd079b1dd18558c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft" align="right" valign="top"><a id="af9848b494ebdcaa5a497aa3504a4507b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#af9848b494ebdcaa5a497aa3504a4507b">setFontSize</a> (std::size_t <a class="el" href="classPt_1_1Forms_1_1TabView.html#ade1601ccf1fa3bcf050867f0852ca4e5">size</a>)</td></tr>
+<tr class="memdesc:af9848b494ebdcaa5a497aa3504a4507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font size to <em>size</em>. <br /></td></tr>
+<tr class="separator:af9848b494ebdcaa5a497aa3504a4507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft" align="right" valign="top"><a id="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ae25e5c2d8699fd7c56e7c4547bad68a9">setFontWeight</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
+<tr class="memdesc:ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font weight to <em>weight</em>. <br /></td></tr>
+<tr class="separator:ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft" align="right" valign="top"><a id="afb7efbf3edf499b8e918c921e94b08cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#afb7efbf3edf499b8e918c921e94b08cb">setFontSlant</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memdesc:afb7efbf3edf499b8e918c921e94b08cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font slant to <em>slant</em>. <br /></td></tr>
+<tr class="separator:afb7efbf3edf499b8e918c921e94b08cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft" align="right" valign="top"><a id="ac24598c93a713c95d97205c65dfccbfc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ac24598c93a713c95d97205c65dfccbfc">setTextColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memdesc:ac24598c93a713c95d97205c65dfccbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local text color to <em>color</em>. <br /></td></tr>
+<tr class="separator:ac24598c93a713c95d97205c65dfccbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af194e5bfd813c293867cf0769a3eed7d"><td class="memItemLeft" align="right" valign="top"><a id="af194e5bfd813c293867cf0769a3eed7d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#af194e5bfd813c293867cf0769a3eed7d">setAccentColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
-<tr class="memdesc:af194e5bfd813c293867cf0769a3eed7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the local accent color for the active tab. <br /></td></tr>
+<tr class="memdesc:af194e5bfd813c293867cf0769a3eed7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local accent color to <em>color</em>. <br /></td></tr>
 <tr class="separator:af194e5bfd813c293867cf0769a3eed7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ccdc49965668040f2d7b494f466484"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a56ccdc49965668040f2d7b494f466484">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a> *renderer)</td></tr>
+<tr class="memdesc:a56ccdc49965668040f2d7b494f466484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns <em>renderer</em> as the family renderer.  <a href="classPt_1_1Forms_1_1TabView.html#a56ccdc49965668040f2d7b494f466484">More...</a><br /></td></tr>
+<tr class="separator:a56ccdc49965668040f2d7b494f466484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39639f36997748377dfbbf5931b59cd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1View.html">View</a> &amp;<a class="el" href="classPt_1_1Forms_1_1Widget.html#a520a9957f011623bbc9a1164dbc54779">parent</a>)</td></tr>
 <tr class="memdesc:a39639f36997748377dfbbf5931b59cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches this control to <em>parent</em>.  <a href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">More...</a><br /></td></tr>
 <tr class="separator:a39639f36997748377dfbbf5931b59cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -455,24 +530,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a7d194138a8461965b65b73b1b6eef066"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a7d194138a8461965b65b73b1b6eef066">onProcessMouseEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a> &amp;ev)</td></tr>
-<tr class="memdesc:a7d194138a8461965b65b73b1b6eef066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routes mouse input to the frontmost eligible child or this control.  <a href="classPt_1_1Forms_1_1TabView.html#a7d194138a8461965b65b73b1b6eef066">More...</a><br /></td></tr>
+<tr class="memitem:a7d194138a8461965b65b73b1b6eef066"><td class="memItemLeft" align="right" valign="top"><a id="a7d194138a8461965b65b73b1b6eef066"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a7d194138a8461965b65b73b1b6eef066">onProcessMouseEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a> &amp;ev)</td></tr>
+<tr class="memdesc:a7d194138a8461965b65b73b1b6eef066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects a tab from a pointer press. <br /></td></tr>
 <tr class="separator:a7d194138a8461965b65b73b1b6eef066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e74f395664c3b2738f031df9d9bf07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ae5e74f395664c3b2738f031df9d9bf07">onProcessTouchEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a> &amp;ev)</td></tr>
-<tr class="memdesc:ae5e74f395664c3b2738f031df9d9bf07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routes touch input to the frontmost eligible child or this control.  <a href="classPt_1_1Forms_1_1TabView.html#ae5e74f395664c3b2738f031df9d9bf07">More...</a><br /></td></tr>
+<tr class="memitem:ae5e74f395664c3b2738f031df9d9bf07"><td class="memItemLeft" align="right" valign="top"><a id="ae5e74f395664c3b2738f031df9d9bf07"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ae5e74f395664c3b2738f031df9d9bf07">onProcessTouchEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a> &amp;ev)</td></tr>
+<tr class="memdesc:ae5e74f395664c3b2738f031df9d9bf07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects a tab from a touch press. <br /></td></tr>
 <tr class="separator:ae5e74f395664c3b2738f031df9d9bf07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
-<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates derived state after invalidation.  <a href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">More...</a><br /></td></tr>
+<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft" align="right" valign="top"><a id="ae95892a055053b2f35ed11e85287a8fd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
+<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler. <br /></td></tr>
 <tr class="separator:ae95892a055053b2f35ed11e85287a8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
-<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures intrinsic content for effective policy <em>policy</em>.  <a href="classPt_1_1Forms_1_1TabView.html#a912210d8dfc33e555b12402ee47ac406">More...</a><br /></td></tr>
+<tr class="memitem:a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft" align="right" valign="top"><a id="a912210d8dfc33e555b12402ee47ac406"></a>
+virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
+<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the tabs and current page. <br /></td></tr>
 <tr class="separator:a912210d8dfc33e555b12402ee47ac406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
-<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns geometry to direct children within <em>rect</em>.  <a href="classPt_1_1Forms_1_1TabView.html#a68d03b9b05b163ae71a33c9ffa418f84">More...</a><br /></td></tr>
+<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft" align="right" valign="top"><a id="a68d03b9b05b163ae71a33c9ffa418f84"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;rect)</td></tr>
+<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the tabs and current page in <em>rect</em>. <br /></td></tr>
 <tr class="separator:a68d03b9b05b163ae71a33c9ffa418f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a169d5d7261571fb77c21873078a5e1d9">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;updateRect)</td></tr>
-<tr class="memdesc:a169d5d7261571fb77c21873078a5e1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints custom content in local coordinates.  <a href="classPt_1_1Forms_1_1TabView.html#a169d5d7261571fb77c21873078a5e1d9">More...</a><br /></td></tr>
+<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft" align="right" valign="top"><a id="a169d5d7261571fb77c21873078a5e1d9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a169d5d7261571fb77c21873078a5e1d9">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;updateRect)</td></tr>
+<tr class="memdesc:a169d5d7261571fb77c21873078a5e1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the background, frame, and tabs. <br /></td></tr>
 <tr class="separator:a169d5d7261571fb77c21873078a5e1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696362412a0fe66b76a27b76a4cd20ba"><td class="memItemLeft" align="right" valign="top"><a id="a696362412a0fe66b76a27b76a4cd20ba"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#a696362412a0fe66b76a27b76a4cd20ba">onPaintBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const <a class="el" href="classPt_1_1Forms_1_1TabViewState.html">TabViewState</a> &amp;state)</td></tr>
+<tr class="memdesc:a696362412a0fe66b76a27b76a4cd20ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the tab view background for <em>state</em>. <br /></td></tr>
+<tr class="separator:a696362412a0fe66b76a27b76a4cd20ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad935c256bfeb223c484ddc62daa0a8ae"><td class="memItemLeft" align="right" valign="top"><a id="ad935c256bfeb223c484ddc62daa0a8ae"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1TabView.html#ad935c256bfeb223c484ddc62daa0a8ae">onPaintChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;contentRect, const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;activeTabRect, const <a class="el" href="classPt_1_1Forms_1_1TabViewState.html">TabViewState</a> &amp;state)</td></tr>
+<tr class="memdesc:ad935c256bfeb223c484ddc62daa0a8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the tab view frame for <em>state</em>. <br /></td></tr>
+<tr class="separator:ad935c256bfeb223c484ddc62daa0a8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f730a8927941df92c4bb28ddbfa6270"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">onInvalidateEvent</a> (const InvalidateEvent &amp;ev)</td></tr>
 <tr class="memdesc:a9f730a8927941df92c4bb28ddbfa6270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the final coalesced invalidation event.  <a href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">More...</a><br /></td></tr>
 <tr class="separator:a9f730a8927941df92c4bb28ddbfa6270"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -706,7 +795,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a884de773e8b74aeabcf36c6698da355a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a direct child's move request to the parent view. <br /></td></tr>
 <tr class="separator:a884de773e8b74aeabcf36c6698da355a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc5a98014dd78912f233cc0b9455f725"><td class="memItemLeft" align="right" valign="top"><a id="abc5a98014dd78912f233cc0b9455f725"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#abc5a98014dd78912f233cc0b9455f725">onResizeRequest</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;size)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Forms_1_1Control.html#abc5a98014dd78912f233cc0b9455f725">onResizeRequest</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control, const <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> &amp;<a class="el" href="classPt_1_1Forms_1_1TabView.html#ade1601ccf1fa3bcf050867f0852ca4e5">size</a>)</td></tr>
 <tr class="memdesc:abc5a98014dd78912f233cc0b9455f725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a direct child's resize request to the parent view. <br /></td></tr>
 <tr class="separator:abc5a98014dd78912f233cc0b9455f725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43d406729df4b113500ee2388a77080"><td class="memItemLeft" align="right" valign="top"><a id="ad43d406729df4b113500ee2388a77080"></a>
@@ -761,7 +850,20 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 <tr class="separator:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A TabView presents several caller-owned content controls, one at a time. Use addTab() to add a control with a title. Keep each control alive until removeTab() detaches it. setCurrent() shows that page. Choosing a tab shows its page. setText() changes a tab title. The view owns the titles, the current tab, tab geometry, and tab input. There is no separate tab-bar widget.</p>
+<p>The view owns a TabViewStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. Use setRenderer() to assign a TabViewRenderer until it is cleared. Measure, layout, and paint operations call typed methods on the styler.</p>
+<p>Pages live in a StackLayout.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> general;</div>
+<div class="line">general.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;General settings&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> network;</div>
+<div class="line">network.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Network settings&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Forms_1_1TabView.html">Pt::Forms::TabView</a> settings;</div>
+<div class="line">settings.<a class="code" href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">addTab</a>(general, <span class="stringliteral">&quot;General&quot;</span>);</div>
+<div class="line">settings.<a class="code" href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">addTab</a>(network, <span class="stringliteral">&quot;Network&quot;</span>);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&nbsp;</a></span>FocusPolicy</h2>
 
@@ -793,186 +895,22 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7d194138a8461965b65b73b1b6eef066"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d194138a8461965b65b73b1b6eef066">&#9670;&nbsp;</a></span>onProcessMouseEvent()</h2>
+<a id="a56ccdc49965668040f2d7b494f466484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ccdc49965668040f2d7b494f466484">&#9670;&nbsp;</a></span>setRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onProcessMouseEvent </td>
+          <td class="memname">void setRenderer </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1MouseEvent.html">MouseEvent</a> &amp;&#160;</td>
-          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a> *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>A press delivered to this control requests pointer capture until release. Overrides that retain child routing must call the base implementation. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a7d194138a8461965b65b73b1b6eef066">Control</a>.</p>
-
-</div>
-</div>
-<a id="ae5e74f395664c3b2738f031df9d9bf07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e74f395664c3b2738f031df9d9bf07">&#9670;&nbsp;</a></span>onProcessTouchEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onProcessTouchEvent </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1TouchEvent.html">TouchEvent</a> &amp;&#160;</td>
-          <td class="paramname"><em>ev</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A press delivered to this control requests pointer capture until release. Overrides that retain child routing must call the base implementation. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae5e74f395664c3b2738f031df9d9bf07">Control</a>.</p>
-
-</div>
-</div>
-<a id="ae95892a055053b2f35ed11e85287a8fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95892a055053b2f35ed11e85287a8fd">&#9670;&nbsp;</a></span>onInvalidate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onInvalidate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The default implementation requests relayout because changed control content may affect its preferred size. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
-
-</div>
-</div>
-<a id="a912210d8dfc33e555b12402ee47ac406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912210d8dfc33e555b12402ee47ac406">&#9670;&nbsp;</a></span>onMeasure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Gfx_1_1Size.html">Gfx::SizeF</a> onMeasure </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;&#160;</td>
-          <td class="paramname"><em>policy</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return the preferred local content size. The default implementation returns <code>(0, 0)</code>. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>.</p>
-
-</div>
-</div>
-<a id="a68d03b9b05b163ae71a33c9ffa418f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d03b9b05b163ae71a33c9ffa418f84">&#9670;&nbsp;</a></span>onLayout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onLayout </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;&#160;</td>
-          <td class="paramname"><em>rect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Use child move() and resize() requests. The default implementation does not lay out children. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>.</p>
-
-</div>
-</div>
-<a id="a169d5d7261571fb77c21873078a5e1d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a169d5d7261571fb77c21873078a5e1d9">&#9670;&nbsp;</a></span>onPaint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onPaint </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Gfx::RectF</a> &amp;&#160;</td>
-          <td class="paramname"><em>rect</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><em>rect</em> is the local dirty rectangle. The default implementation does not draw. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">Control</a>.</p>
+<p>A null renderer falls back to the current style on the next bind. </p>
 
 </div>
 </div>
@@ -1668,7 +1606,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <p>The default implementation forwards <em>m</em> to the control selected by setMnemonicControl(). </p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1Button.html#ac0c392c62b968a7418fb0f8bb2e0a222">Button</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">MenuSubItem</a>, <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">MenuMenuItem</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#ac0c392c62b968a7418fb0f8bb2e0a222">ListBoxItem</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#ac0c392c62b968a7418fb0f8bb2e0a222">Button</a>.</p>
 
 </div>
 </div>
@@ -1761,7 +1699,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a00b4fb0d0830a05d8e9284202b808c54">Widget</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#abd4346659bd6b667a35e560a8a972aa8">MenuItemBase</a>, <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#abd4346659bd6b667a35e560a8a972aa8">MenuBar</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a00b4fb0d0830a05d8e9284202b808c54">SpinBox</a>, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a00b4fb0d0830a05d8e9284202b808c54">Slider</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a00b4fb0d0830a05d8e9284202b808c54">ScrollBar</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a00b4fb0d0830a05d8e9284202b808c54">ListBoxItem</a>, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a00b4fb0d0830a05d8e9284202b808c54">LineEdit</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a00b4fb0d0830a05d8e9284202b808c54">ComboBox</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a00b4fb0d0830a05d8e9284202b808c54">Button</a>.</p>
 
 </div>
 </div>
@@ -1792,7 +1730,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Widget.html#a2723f45dc09e09359e656adf936b063c">Widget</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>, and <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>.</p>
+<p>Reimplemented in <a class="el" href="classPt_1_1Forms_1_1SpinBox.html#a2723f45dc09e09359e656adf936b063c">SpinBox</a>, <a class="el" href="classPt_1_1Forms_1_1Slider.html#a2723f45dc09e09359e656adf936b063c">Slider</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollLayout.html#a2723f45dc09e09359e656adf936b063c">ScrollLayout</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBar.html#a2723f45dc09e09359e656adf936b063c">ScrollBar</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html#a2723f45dc09e09359e656adf936b063c">ListBoxItem</a>, <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#a2723f45dc09e09359e656adf936b063c">LineEdit</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBox.html#a2723f45dc09e09359e656adf936b063c">ComboBox</a>, <a class="el" href="classPt_1_1Forms_1_1Button.html#a2723f45dc09e09359e656adf936b063c">Button</a>, <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a2909f468d42dc5bb5f4ffac5502d0e13">MenuItemBase</a>, and <a class="el" href="classPt_1_1Forms_1_1MenuBar.html#a2909f468d42dc5bb5f4ffac5502d0e13">MenuBar</a>.</p>
 
 </div>
 </div>
@@ -2782,6 +2720,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Forms_1_1TabView_html_a680731f5ebef71753c8ac2d71505cf18"><div class="ttname"><a href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">Pt::Forms::TabView::addTab</a></div><div class="ttdeci">void addTab(Control &amp;control, const Pt::String &amp;title)</div><div class="ttdoc">Adds caller-owned control as a tab with title.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition:</b> Label.h:80</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1TabView_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TabView.html">Pt::Forms::TabView</a></div><div class="ttdoc">Pages selected by tabs.</div><div class="ttdef"><b>Definition:</b> TabView.h:155</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

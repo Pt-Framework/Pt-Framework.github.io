@@ -142,7 +142,8 @@ template&lt;typename FacetT &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Style stores one renderer facet per dynamic type. Use set() to register or replace a facet. Use get() to retrieve it. Use reset() to apply StyleOptions to every registered facet. generation() changes when the set of facets changes.</p>
 <p>Facets are reference counted. set() takes a reference. Pass a facet with a reference count of 0. Use Renderer::create() to allocate such an instance.</p>
-<p>Use Application::setStyle() to install a complete style. The application starts with PlatinumStyle. Derive Renderer, or another Facet, to add drawing for a control family. </p>
+<p>Use Application::setStyle() to install a complete style. The application starts with PlatinumStyle. Derive Renderer, or another Facet, to add drawing for a control family.</p>
+<p>Shared facets receive global options only through reset(). Look- specific metrics stay in the derived renderer, not on Style. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="addf128a9823295a86d3c2bf21869ab44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addf128a9823295a86d3c2bf21869ab44">&#9670;&nbsp;</a></span>set()</h2>
