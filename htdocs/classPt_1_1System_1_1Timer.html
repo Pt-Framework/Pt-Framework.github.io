@@ -132,6 +132,9 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a56c611dce085c482763cf72e18284146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Signal.html">Signal</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">timeout</a> ()</td></tr>
 <tr class="memdesc:a56c611dce085c482763cf72e18284146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies about interval timeouts.  <a href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">More...</a><br /></td></tr>
 <tr class="separator:a56c611dce085c482763cf72e18284146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb211720d739411559e4288623edc13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1System_1_1AsyncWait.html">AsyncWait</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Timer.html#adbb211720d739411559e4288623edc13">waitAsync</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:adbb211720d739411559e4288623edc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a one-shot timer delay as a C++20 awaitable.  <a href="classPt_1_1System_1_1Timer.html#adbb211720d739411559e4288623edc13">More...</a><br /></td></tr>
+<tr class="separator:adbb211720d739411559e4288623edc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Timers can be used to be notified if a time interval expires. It usually works with an event loop, where the Timer needs to be registered. Timers send the timeout signal in given intervals, to which the interested clients connect. The interval can be changed at any time and timers can switch between an active and inactive state.</p>
@@ -268,6 +271,33 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
       </table>
 </div><div class="memdoc">
 <p>This signal is sent if the interval time has expired. </p>
+
+</div>
+</div>
+<a id="adbb211720d739411559e4288623edc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb211720d739411559e4288623edc13">&#9670;&nbsp;</a></span>waitAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1System_1_1AsyncWait.html">AsyncWait</a> waitAsync </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns an awaitable that suspends the coroutine until the timer fires after the specified duration. The timer is automatically stopped when the awaitable completes or is cancelled.</p>
+<p>The Timer must be registered with an event loop via <a class="el" href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6" title="Sets the used event loop.">setActive()</a> before awaiting.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>Delay duration in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Awaitable that suspends until timeout or cancellation. </dd></dl>
 
 </div>
 </div>

@@ -97,6 +97,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ac9b455425b45a655f2dd4b310cd999ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1Script.html#ac9b455425b45a655f2dd4b310cd999ad">advanceAsync</a> ()</td></tr>
+<tr class="memdesc:ac9b455425b45a655f2dd4b310cd999ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronously advance the <a class="el" href="namespacePt_1_1Lua.html" title="Lua Runtime and Bindiungs.">Lua</a> script as a C++20 awaitable.  <a href="classPt_1_1Lua_1_1Script.html#ac9b455425b45a655f2dd4b310cd999ad">More...</a><br /></td></tr>
+<tr class="separator:ac9b455425b45a655f2dd4b310cd999ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931676e60334ab733b848fa90dcb6dda"><td class="memItemLeft" align="right" valign="top"><a id="a931676e60334ab733b848fa90dcb6dda"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a> (EventLoop &amp;<a class="el" href="classPt_1_1System_1_1Selectable.html#a36ddcfd5046634b9b4fa5c5bc00b29bb">parent</a>)</td></tr>
 <tr class="memdesc:a931676e60334ab733b848fa90dcb6dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent loop, so that operations can be run. <br /></td></tr>
@@ -141,6 +144,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:abcca23e6afadfade8c5d63ee62b49bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts this selectable to its event loop from any thread. <br /></td></tr>
 <tr class="separator:abcca23e6afadfade8c5d63ee62b49bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac9b455425b45a655f2dd4b310cd999ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b455425b45a655f2dd4b310cd999ad">&#9670;&nbsp;</a></span>advanceAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a> advanceAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns an awaitable for use with co_await. Wraps beginAdvance() / endAdvance() / advanced(). </p>
+
+</div>
+</div>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

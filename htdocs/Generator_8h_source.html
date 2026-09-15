@@ -197,7 +197,7 @@
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">class </span>Generator : <span class="keyword">public</span> AwaiterBase</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html">  162</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Generator.html">Generator</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1AwaiterBase.html">AwaiterBase</a></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keyword">class </span>Promise : <span class="keyword">public</span> GeneratorResult&lt;T&gt;</div>
@@ -206,9 +206,9 @@
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                std::exception_ptr _exception;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                Generator get_return_object()</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <a class="code" href="classPt_1_1Generator.html">Generator</a> get_return_object()</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    <span class="keywordflow">return</span> Generator(std::coroutine_handle&lt;Promise&gt;::from_promise(*<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Generator</a>(std::coroutine_handle&lt;Promise&gt;::from_promise(*<span class="keyword">this</span>));</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                std::suspend_always initial_suspend() noexcept</div>
@@ -230,9 +230,9 @@
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    <span class="keywordflow">return</span> AwaiterProxy&lt;A&gt;{ std::forward&lt;A&gt;(a), <span class="keyword">this</span> };</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                YieldAwaiter yield_value(T value) noexcept</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                YieldAwaiter yield_value(T <a class="code" href="classPt_1_1Generator.html#a35cbddae445b41e7fca89827efecf90c">value</a>) noexcept</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    this-&gt;set(std::forward&lt;T&gt;(value));</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    this-&gt;set(std::forward&lt;T&gt;(<a class="code" href="classPt_1_1Generator.html#a35cbddae445b41e7fca89827efecf90c">value</a>));</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    <span class="keywordflow">return</span> {};</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                }</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        };</div>
@@ -240,32 +240,32 @@
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keyword">using</span> promise_type = Promise;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">using</span> handle_type = std::coroutine_handle&lt;promise_type&gt;;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keyword">class </span>NextAwaiter : <span class="keyword">public</span> AwaiterBase</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html">  216</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html">NextAwaiter</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1AwaiterBase.html">AwaiterBase</a></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <span class="keyword">explicit</span> NextAwaiter(Generator&amp; generator)</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html#af04ee9faaa63ea4b2610058b9783faa1">  221</a></span>&#160;                <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html#af04ee9faaa63ea4b2610058b9783faa1">NextAwaiter</a>(<a class="code" href="classPt_1_1Generator.html">Generator</a>&amp; generator)</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                : _generator(&amp;generator)</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                , _handle(generator._handle)</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                , _isPending(false)</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                {}</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                ~NextAwaiter()</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html#ad472f34b1433192ea09ef189016309c2">  229</a></span>&#160;                <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html#ad472f34b1433192ea09ef189016309c2">~NextAwaiter</a>()</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                {</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    <span class="keywordflow">if</span>(_generator &amp;&amp; _isPending)</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        _generator-&gt;detachAwaiter(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordtype">void</span> cancel()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html#a74f085a8831b0100cd85229d3d226114">  237</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html#a74f085a8831b0100cd85229d3d226114">cancel</a>()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">                </span>{</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    <span class="keywordflow">if</span>( _handle &amp;&amp; ! _handle.done() )</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        _handle.promise().cancel();</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                }</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordtype">bool</span> await_ready() const noexcept</div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html#a3a4221f9d558f4c787b0305583d47c04">  245</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html#a3a4221f9d558f4c787b0305583d47c04">await_ready</a>() const noexcept</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                { <span class="keywordflow">return</span> ! _handle || _handle.done(); }</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keyword">template</span>&lt;<span class="keyword">typename</span> FormP&gt;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                std::coroutine_handle&lt;&gt; await_suspend(std::coroutine_handle&lt;FormP&gt; outer)</div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html#aea1a4a9fa2dae276b95da2ae04ae5486">  253</a></span>&#160;                std::coroutine_handle&lt;&gt; <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html#aea1a4a9fa2dae276b95da2ae04ae5486">await_suspend</a>(std::coroutine_handle&lt;FormP&gt; outer)</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                {</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    _generator-&gt;attachAwaiter(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    _isPending = <span class="keyword">true</span>;</div>
@@ -278,7 +278,7 @@
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    <span class="keywordflow">return</span> _handle;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordtype">bool</span> await_resume()</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classPt_1_1Generator_1_1NextAwaiter.html#a29dc8dabf1c5db5042c30a4ace07fd08">  270</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html#a29dc8dabf1c5db5042c30a4ace07fd08">await_resume</a>()</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                {</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    <span class="keywordflow">if</span>(_generator &amp;&amp; _isPending)</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    {</div>
@@ -296,7 +296,7 @@
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                }</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keyword">friend</span> <span class="keyword">class </span>Generator;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPt_1_1Generator.html">Generator</a>;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="keywordtype">void</span> onDetach()</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                {</div>
@@ -305,28 +305,28 @@
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    _isPending = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                }</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                Generator* _generator;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <a class="code" href="classPt_1_1Generator.html">Generator</a>* _generator;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                handle_type _handle;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordtype">bool</span> _isPending;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        };</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">explicit</span> Generator(handle_type h)</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">  305</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Generator</a>(handle_type h)</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        : _handle(h)</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        {}</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        Generator(Generator&amp;&amp; other) noexcept</div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html#acbe50186dd9314a302aaa8d0625d5f49">  311</a></span>&#160;        <a class="code" href="classPt_1_1Generator.html#acbe50186dd9314a302aaa8d0625d5f49">Generator</a>(<a class="code" href="classPt_1_1Generator.html">Generator</a>&amp;&amp; other) noexcept</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        : _handle(other._handle)</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            other._handle = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        ~Generator()</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html#abcff0538f94b5968044f0b2fe8e348e3">  319</a></span>&#160;        <a class="code" href="classPt_1_1Generator.html#abcff0538f94b5968044f0b2fe8e348e3">~Generator</a>()</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            cancel();</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="classPt_1_1Generator.html#a74f085a8831b0100cd85229d3d226114">cancel</a>();</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordtype">void</span> cancel()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html#a74f085a8831b0100cd85229d3d226114">  329</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Generator.html#a74f085a8831b0100cd85229d3d226114">cancel</a>()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">if</span>(_awaiter)</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            {</div>
@@ -342,12 +342,12 @@
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        }</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        NextAwaiter next()</div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html#a5c59070ff5d922e744cc4c9d09787e1b">  350</a></span>&#160;        <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html">NextAwaiter</a> <a class="code" href="classPt_1_1Generator.html#a5c59070ff5d922e744cc4c9d09787e1b">next</a>()</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">return</span> NextAwaiter(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classPt_1_1Generator_1_1NextAwaiter.html">NextAwaiter</a>(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        }</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        T value()</div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="classPt_1_1Generator.html#a35cbddae445b41e7fca89827efecf90c">  359</a></span>&#160;        T <a class="code" href="classPt_1_1Generator.html#a35cbddae445b41e7fca89827efecf90c">value</a>()</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        {</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">return</span> _handle.promise().get();</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
@@ -367,8 +367,8 @@
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                _awaiter = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        }</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        Generator(<span class="keyword">const</span> Generator&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        Generator&amp; operator=(<span class="keyword">const</span> Generator&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <a class="code" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Generator</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Generator</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Generator</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Generator</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        handle_type _handle;</div>
@@ -382,6 +382,21 @@
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">#endif // PT_GENERATOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html_a3a4221f9d558f4c787b0305583d47c04"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html#a3a4221f9d558f4c787b0305583d47c04">Pt::Generator::NextAwaiter::await_ready</a></div><div class="ttdeci">bool await_ready() const noexcept</div><div class="ttdoc">Returns true if the generator has already finished.</div><div class="ttdef"><b>Definition:</b> Generator.h:245</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html_acbe50186dd9314a302aaa8d0625d5f49"><div class="ttname"><a href="classPt_1_1Generator.html#acbe50186dd9314a302aaa8d0625d5f49">Pt::Generator::Generator</a></div><div class="ttdeci">Generator(Generator &amp;&amp;other) noexcept</div><div class="ttdoc">Moves the coroutine frame from other.</div><div class="ttdef"><b>Definition:</b> Generator.h:311</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html">Pt::Generator::NextAwaiter</a></div><div class="ttdoc">Provides the awaitable returned by Generator::next().</div><div class="ttdef"><b>Definition:</b> Generator.h:217</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html"><div class="ttname"><a href="classPt_1_1Generator.html">Pt::Generator</a></div><div class="ttdoc">Represents a coroutine that yields a sequence of values and may itself co_await.</div><div class="ttdef"><b>Definition:</b> Generator.h:163</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html_a35cbddae445b41e7fca89827efecf90c"><div class="ttname"><a href="classPt_1_1Generator.html#a35cbddae445b41e7fca89827efecf90c">Pt::Generator::value</a></div><div class="ttdeci">T value()</div><div class="ttdoc">Returns the last yielded value.</div><div class="ttdef"><b>Definition:</b> Generator.h:359</div></div>
+<div class="ttc" id="aclassPt_1_1AwaiterBase_html"><div class="ttname"><a href="classPt_1_1AwaiterBase.html">Pt::AwaiterBase</a></div><div class="ttdoc">Defines the cancellation interface for a pending awaitable.</div><div class="ttdef"><b>Definition:</b> Coroutine.h:54</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html_aea1a4a9fa2dae276b95da2ae04ae5486"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html#aea1a4a9fa2dae276b95da2ae04ae5486">Pt::Generator::NextAwaiter::await_suspend</a></div><div class="ttdeci">std::coroutine_handle await_suspend(std::coroutine_handle&lt; FormP &gt; outer)</div><div class="ttdoc">Suspends the consumer and resumes the generator.</div><div class="ttdef"><b>Definition:</b> Generator.h:253</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html_af04ee9faaa63ea4b2610058b9783faa1"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html#af04ee9faaa63ea4b2610058b9783faa1">Pt::Generator::NextAwaiter::NextAwaiter</a></div><div class="ttdeci">NextAwaiter(Generator &amp;generator)</div><div class="ttdoc">Constructs a next-awaiter for generator.</div><div class="ttdef"><b>Definition:</b> Generator.h:221</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html_a1f5731fc6f9583b0627459c3545163e7"><div class="ttname"><a href="classPt_1_1Generator.html#a1f5731fc6f9583b0627459c3545163e7">Pt::Generator::Generator</a></div><div class="ttdeci">Generator(handle_type h)</div><div class="ttdoc">Constructs a generator that takes ownership of h.</div><div class="ttdef"><b>Definition:</b> Generator.h:305</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html_a5c59070ff5d922e744cc4c9d09787e1b"><div class="ttname"><a href="classPt_1_1Generator.html#a5c59070ff5d922e744cc4c9d09787e1b">Pt::Generator::next</a></div><div class="ttdeci">NextAwaiter next()</div><div class="ttdoc">Returns an awaitable that produces the next value.</div><div class="ttdef"><b>Definition:</b> Generator.h:350</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html_a29dc8dabf1c5db5042c30a4ace07fd08"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html#a29dc8dabf1c5db5042c30a4ace07fd08">Pt::Generator::NextAwaiter::await_resume</a></div><div class="ttdeci">bool await_resume()</div><div class="ttdoc">Returns true if a yielded value is available.</div><div class="ttdef"><b>Definition:</b> Generator.h:270</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html_a74f085a8831b0100cd85229d3d226114"><div class="ttname"><a href="classPt_1_1Generator.html#a74f085a8831b0100cd85229d3d226114">Pt::Generator::cancel</a></div><div class="ttdeci">void cancel() override</div><div class="ttdoc">Cancels the generator.</div><div class="ttdef"><b>Definition:</b> Generator.h:329</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html_abcff0538f94b5968044f0b2fe8e348e3"><div class="ttname"><a href="classPt_1_1Generator.html#abcff0538f94b5968044f0b2fe8e348e3">Pt::Generator::~Generator</a></div><div class="ttdeci">~Generator()</div><div class="ttdoc">Cancels the generator if it still owns a coroutine frame.</div><div class="ttdef"><b>Definition:</b> Generator.h:319</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html_a74f085a8831b0100cd85229d3d226114"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html#a74f085a8831b0100cd85229d3d226114">Pt::Generator::NextAwaiter::cancel</a></div><div class="ttdeci">void cancel() override</div><div class="ttdoc">Cancels the generator's pending operation.</div><div class="ttdef"><b>Definition:</b> Generator.h:237</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_1_1NextAwaiter_html_ad472f34b1433192ea09ef189016309c2"><div class="ttname"><a href="classPt_1_1Generator_1_1NextAwaiter.html#ad472f34b1433192ea09ef189016309c2">Pt::Generator::NextAwaiter::~NextAwaiter</a></div><div class="ttdeci">~NextAwaiter()</div><div class="ttdoc">Detaches from the generator if still pending.</div><div class="ttdef"><b>Definition:</b> Generator.h:229</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

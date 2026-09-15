@@ -129,6 +129,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1Signal.html">Signal</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#af1b39b81e3436334064918c805e97c56">exited</a> ()</td></tr>
 <tr class="memdesc:af1b39b81e3436334064918c805e97c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emited when the eventloop is exited. <br /></td></tr>
 <tr class="separator:af1b39b81e3436334064918c805e97c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e99e13beeacd50b6e6fe630f4e0243d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1System_1_1AsyncYield.html">AsyncYield</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a1e99e13beeacd50b6e6fe630f4e0243d">yieldAsync</a> ()</td></tr>
+<tr class="memdesc:a1e99e13beeacd50b6e6fe630f4e0243d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses a coroutine and delegates execution back to the loop.  <a href="classPt_1_1System_1_1EventLoop.html#a1e99e13beeacd50b6e6fe630f4e0243d">More...</a><br /></td></tr>
+<tr class="separator:a1e99e13beeacd50b6e6fe630f4e0243d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d3302e0356744a0461035a9aafa45cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a6d3302e0356744a0461035a9aafa45cc">post</a> (<a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a> &amp;s)</td></tr>
 <tr class="memdesc:a6d3302e0356744a0461035a9aafa45cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts the loop to run a selectable.  <a href="classPt_1_1System_1_1EventLoop.html#a6d3302e0356744a0461035a9aafa45cc">More...</a><br /></td></tr>
 <tr class="separator:a6d3302e0356744a0461035a9aafa45cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +187,32 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1e99e13beeacd50b6e6fe630f4e0243d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e99e13beeacd50b6e6fe630f4e0243d">&#9670;&nbsp;</a></span>yieldAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1System_1_1AsyncYield.html">AsyncYield</a> yieldAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>C++20 awaitable yielding execution to the loop processing queue. </dd></dl>
+
+</div>
+</div>
 <a id="a6d3302e0356744a0461035a9aafa45cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d3302e0356744a0461035a9aafa45cc">&#9670;&nbsp;</a></span>post()</h2>
 

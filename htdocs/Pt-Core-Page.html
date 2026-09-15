@@ -243,10 +243,10 @@ Coroutines</h1>
 <p>Destroying a task or calling Task::cancel() aborts the pending awaitable and destroys the coroutine frame. Nested tasks cancel the inner pending operation the same way. A generator cancels in the same manner.</p>
 <p>Exceptions that leave a coroutine body are stored. They are rethrown by Task::result() and by co_await of that task.</p>
 <p>The following example starts a task that waits for a timer and then exits the loop:</p>
-<div class="fragment"><div class="line">Pt::Task&lt;&gt; delayThenExit(<a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop,</div>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Task.html">Pt::Task&lt;&gt;</a> delayThenExit(<a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop,</div>
 <div class="line">                         <a class="code" href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a>&amp; timer)</div>
 <div class="line">{</div>
-<div class="line">    co_await timer.waitAsync(1000);</div>
+<div class="line">    co_await timer.<a class="code" href="classPt_1_1System_1_1Timer.html#adbb211720d739411559e4288623edc13">waitAsync</a>(1000);</div>
 <div class="line">    loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">exit</a>();</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -257,17 +257,85 @@ Coroutines</h1>
 <div class="line">    <a class="code" href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a> timer;</div>
 <div class="line">    timer.<a class="code" href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">setActive</a>(loop);</div>
 <div class="line"> </div>
-<div class="line">    Pt::Task&lt;&gt; task = delayThenExit(loop, timer);</div>
-<div class="line">    task.run();</div>
+<div class="line">    <a class="code" href="classPt_1_1Task.html">Pt::Task&lt;&gt;</a> task = delayThenExit(loop, timer);</div>
+<div class="line">    task.<a class="code" href="classPt_1_1Task.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Core-Page-Task"></a>
 Tasks</h2>
+<p>A Task is move-only and owns the coroutine frame. A default-constructed task is empty; Task::operator bool() is false until a coroutine is assigned. Move assignment cancels the current task first.</p>
+<p>Task&lt;void&gt; produces no value. Task&lt;T&amp;&gt; returns a reference; that object must outlive the consumer.</p>
+<p>An outer coroutine can co_await an inner Task. The co_await expression is the inner result:</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Task.html">Pt::Task&lt;int&gt;</a> inner()</div>
+<div class="line">{</div>
+<div class="line">    co_return 41;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Task.html">Pt::Task&lt;int&gt;</a> outer()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> n = co_await inner();</div>
+<div class="line">    co_return n + 1;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Task::run() and awaiting a task that is already pending throw std::logic_error.</p>
 <h2><a class="anchor" id="Pt-Core-Page-Awaitables"></a>
 Awaitables</h2>
+<p>Derive from Awaiter to wrap an asynchronous operation so a Task or Generator can suspend until it completes. Implement Awaiter::onBegin() to subscribe to completion and start the work. Implement Awaiter::onCancel() to abort that work. Call Awaiter::setReady() when the operation finishes; that resumes the waiting coroutine.</p>
+<p>Implement await_resume() in the subclass to deliver the result, or derive from BasicAwaiter when the awaitable only needs to produce a value through BasicAwaiter::onReady().</p>
+<p>The following awaiter starts a device operation and resumes when the device signals completion:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>AsyncOp : <span class="keyword">public</span> <a class="code" href="classPt_1_1Awaiter.html">Pt::Awaiter</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        <span class="keyword">explicit</span> AsyncOp(Device&amp; device)</div>
+<div class="line">        : _device(device)</div>
+<div class="line">        {}</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">int</span> await_resume()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> _device.endOp();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span>:</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Awaiter.html#a85f332c45005037f9bbcb58a39f5ef82">onBegin</a>()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">        </span>{</div>
+<div class="line">            _device.finished() += Pt::slot(*<span class="keyword">this</span>, &amp;AsyncOp::setReady);</div>
+<div class="line">            _device.beginOp();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Awaiter.html#a5c669ec9685e2b6d83321fe70c660156">onCancel</a>()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">        </span>{</div>
+<div class="line">            _device.cancel();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span>:</div>
+<div class="line">        Device&amp; _device;</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>Use BasicAwaiter instead of Awaiter when the awaitable only needs to produce a value, or to complete with no value. Subclasses still implement Awaiter::onBegin() and Awaiter::onCancel(). Implement BasicAwaiter::onReady() to return the result. The co_await expression is that return value.</p>
+<p>BasicAwaiter&lt;void&gt; is the specialization for operations that do not produce a result. Its BasicAwaiter::onReady() returns nothing and can finalize or clean up the operation.</p>
 <h2><a class="anchor" id="Pt-Core-Page-Generators"></a>
 Generators</h2>
-<h1><a class="anchor" id="Pt-Core-Page-Allocator"></a>
+<p>A Generator produces values lazily with co_yield. Unlike a synchronous generator, its body may also co_await.</p>
+<p>Consume a generator from a Task. Await Generator::next() until it returns false and read each value with Generator::value().</p>
+<p>A Generator is move-only and owns the coroutine frame. Generator&lt;T&amp;&gt; yields a reference. That object must remain valid until the next Generator::next() or until the generator is destroyed.</p>
+<p>Only one Generator::next() may be pending. Awaiting next() while another next() is already pending throws std::logic_error.</p>
+<p>Exceptions that leave the coroutine body are rethrown from the Generator::next() await.</p>
+<p>The following task sums the values of a generator:</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Generator.html">Pt::Generator&lt;int&gt;</a> squares(<span class="keywordtype">int</span> n)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; ++i)</div>
+<div class="line">        co_yield i * i;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Task.html">Pt::Task&lt;int&gt;</a> sumSquares(<span class="keywordtype">int</span> n)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">auto</span> gen = squares(n);</div>
+<div class="line">    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span>( co_await gen.next() )</div>
+<div class="line">        sum += gen.value();</div>
+<div class="line"> </div>
+<div class="line">    co_return sum;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="Pt-Core-Page-Allocator"></a>
 Allocators</h1>
 <p>The <a class="el" href="classPt_1_1Allocator.html" title="Allocator interface.">Pt::Allocator</a> interface can be used to optimize or customize allocation strategies. Two allocators are provided, which can be approached by the Allocator interface, a pool based allocator and a page based allocator. A pool based allocator is beneficial in all cases where many small objects of small sizes are created. This is for example used to optimize memory usage during serialization. The page based allocator simply places data consecutively in memory and frees the whole block when its no longer in use. This is useful in situations where chunks of memory or objects are created and destroyed at the same time.</p>
 <h2><a class="anchor" id="Pt-Core-Page-AllocatorInterface"></a>
@@ -723,7 +791,9 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a56c611dce085c482763cf72e18284146"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">Pt::System::Timer::timeout</a></div><div class="ttdeci">Signal &amp; timeout()</div><div class="ttdoc">Notifies about interval timeouts.</div><div class="ttdef"><b>Definition:</b> Timer.h:161</div></div>
 <div class="ttc" id="aclassPt_1_1Date_html_abb486a3a4ba29e5e1425f37dad28ff79"><div class="ttname"><a href="classPt_1_1Date.html#abb486a3a4ba29e5e1425f37dad28ff79">Pt::Date::operator&lt;&lt;=</a></div><div class="ttdeci">void operator&lt;&lt;=(SerializationInfo &amp;si, const Date &amp;date)</div><div class="ttdoc">Serialize a date.</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_html_ae73562d96ab1e249b02b6026c3accfa5"><div class="ttname"><a href="classPt_1_1Settings.html#ae73562d96ab1e249b02b6026c3accfa5">Pt::Settings::load</a></div><div class="ttdeci">void load(std::basic_istream&lt; Pt::Char &gt; &amp;is)</div><div class="ttdoc">Loads settings from a input stream.</div></div>
+<div class="ttc" id="aclassPt_1_1Task_html"><div class="ttname"><a href="classPt_1_1Task.html">Pt::Task</a></div><div class="ttdoc">Represents a cancellable C++20 coroutine that produces a single result.</div><div class="ttdef"><b>Definition:</b> Coroutine.h:436</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
+<div class="ttc" id="aclassPt_1_1Generator_html"><div class="ttname"><a href="classPt_1_1Generator.html">Pt::Generator</a></div><div class="ttdoc">Represents a coroutine that yields a sequence of values and may itself co_await.</div><div class="ttdef"><b>Definition:</b> Generator.h:163</div></div>
 <div class="ttc" id="aclassPt_1_1PageAllocator_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classPt_1_1PageAllocator.html#ac8bb3912a3ce86b15842e79d0b421204">Pt::PageAllocator::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Releases all memory.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:79</div></div>
 <div class="ttc" id="astructPt_1_1Char_html_aedf2799de331bdecfc9f3b30218f0f19"><div class="ttname"><a href="structPt_1_1Char.html#aedf2799de331bdecfc9f3b30218f0f19">Pt::Char::isalpha</a></div><div class="ttdeci">int isalpha(const Char &amp;ch)</div><div class="ttdoc">Checks whether ch is a alphabetic character.</div><div class="ttdef"><b>Definition:</b> String.h:147</div></div>
@@ -735,6 +805,7 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1Arg_html"><div class="ttname"><a href="classPt_1_1Arg.html">Pt::Arg</a></div><div class="ttdoc">Read and extract command-line options.</div><div class="ttdef"><b>Definition:</b> Arg.h:200</div></div>
 <div class="ttc" id="astructPt_1_1Char_html_a882b1a31c1671a3febe092bb52fc7a80"><div class="ttname"><a href="structPt_1_1Char.html#a882b1a31c1671a3febe092bb52fc7a80">Pt::Char::toupper</a></div><div class="ttdeci">Char toupper(const Char &amp;ch)</div><div class="ttdoc">Convert a character to upper case.</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal&lt; int &gt;</a></div></div>
+<div class="ttc" id="aclassPt_1_1Awaiter_html_a85f332c45005037f9bbcb58a39f5ef82"><div class="ttname"><a href="classPt_1_1Awaiter.html#a85f332c45005037f9bbcb58a39f5ef82">Pt::Awaiter::onBegin</a></div><div class="ttdeci">virtual void onBegin()=0</div><div class="ttdoc">Starts the asynchronous operation.</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_html_aa48fd86bc80333a8d8349f5401c58302"><div class="ttname"><a href="classPt_1_1Settings.html#aa48fd86bc80333a8d8349f5401c58302">Pt::Settings::save</a></div><div class="ttdeci">void save(std::basic_ostream&lt; Pt::Char &gt; &amp;os) const</div><div class="ttdoc">Saves settings to a output stream.</div></div>
 <div class="ttc" id="aclassPt_1_1SerializationInfo_html_ae82877730fc266e5693db05e4643e978"><div class="ttname"><a href="classPt_1_1SerializationInfo.html#ae82877730fc266e5693db05e4643e978">Pt::SerializationInfo::addMember</a></div><div class="ttdeci">SerializationInfo &amp; addMember(const std::string &amp;name)</div><div class="ttdoc">Add a struct member.</div><div class="ttdef"><b>Definition:</b> SerializationInfo.h:449</div></div>
 <div class="ttc" id="aclassPt_1_1Date_html_a1b5cb174b9b809888ca1cadfb32791f4"><div class="ttname"><a href="classPt_1_1Date.html#a1b5cb174b9b809888ca1cadfb32791f4">Pt::Date::year</a></div><div class="ttdeci">int year() const</div><div class="ttdoc">Returns the year-part of the date.</div><div class="ttdef"><b>Definition:</b> Date.h:503</div></div>
@@ -742,12 +813,14 @@ Serialization</h1>
 <div class="ttc" id="agroup__Pt-Convert_html_ga83bc0daa86a89543b86dbae165ab9a4c"><div class="ttname"><a href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c">Pt::beToHost</a></div><div class="ttdeci">T beToHost(const T &amp;value)</div><div class="ttdoc">Converts a value from big-endian to host-byteorder.</div><div class="ttdef"><b>Definition:</b> Byteorder.h:254</div></div>
 <div class="ttc" id="aclassPt_1_1PoolAllocator_html"><div class="ttname"><a href="classPt_1_1PoolAllocator.html">Pt::PoolAllocator</a></div><div class="ttdoc">Pool based allocator.</div><div class="ttdef"><b>Definition:</b> PoolAllocator.h:247</div></div>
 <div class="ttc" id="aclassPt_1_1Allocator_html_a6af3b3e52c8986cc067b47cf0be378c2"><div class="ttname"><a href="classPt_1_1Allocator.html#a6af3b3e52c8986cc067b47cf0be378c2">Pt::Allocator::allocate</a></div><div class="ttdeci">virtual void * allocate(std::size_t size)</div><div class="ttdoc">Allocates size bytes of memory.</div><div class="ttdef"><b>Definition:</b> Allocator.h:96</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Timer_html_adbb211720d739411559e4288623edc13"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#adbb211720d739411559e4288623edc13">Pt::System::Timer::waitAsync</a></div><div class="ttdeci">AsyncWait waitAsync(std::size_t ms)</div><div class="ttdoc">Start a one-shot timer delay as a C++20 awaitable.</div></div>
 <div class="ttc" id="astructPt_1_1Char_html_af65123f3eb14bc425760eb2ca615065d"><div class="ttname"><a href="structPt_1_1Char.html#af65123f3eb14bc425760eb2ca615065d">Pt::Char::isupper</a></div><div class="ttdeci">int isupper(const Char &amp;ch)</div><div class="ttdoc">Checks whether ch is upper case.</div><div class="ttdef"><b>Definition:</b> String.h:219</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_1_1ConstEntry_html_a294f2af41e3587ee2566498c08c17ddc"><div class="ttname"><a href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">Pt::Settings::ConstEntry::get</a></div><div class="ttdeci">bool get(T &amp;value) const</div><div class="ttdoc">Gets the value.</div><div class="ttdef"><b>Definition:</b> Settings.h:417</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a1d0ec20a053d1eb6d987d1741e31e7b6"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">Pt::System::Timer::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;loop)</div><div class="ttdoc">Sets the used event loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Date_html_a977717c12712a8a13578e317573c5398"><div class="ttname"><a href="classPt_1_1Date.html#a977717c12712a8a13578e317573c5398">Pt::Date::fromIsoString</a></div><div class="ttdeci">static Date fromIsoString(const std::string &amp;s)</div><div class="ttdoc">Interprets a string as a date-string in ISO-format.</div><div class="ttdef"><b>Definition:</b> Date.h:359</div></div>
 <div class="ttc" id="astructPt_1_1Char_html"><div class="ttname"><a href="structPt_1_1Char.html">Pt::Char</a></div><div class="ttdoc">Unicode character type.</div><div class="ttdef"><b>Definition:</b> String.h:67</div></div>
 <div class="ttc" id="aclassPt_1_1SerializationInfo_html_a4728d34c77d4ad130fc016aa6acf3f26"><div class="ttname"><a href="classPt_1_1SerializationInfo.html#a4728d34c77d4ad130fc016aa6acf3f26">Pt::SerializationInfo::getMember</a></div><div class="ttdeci">const SerializationInfo &amp; getMember(const std::string &amp;name) const</div><div class="ttdoc">Get a struct member.</div><div class="ttdef"><b>Definition:</b> SerializationInfo.h:496</div></div>
+<div class="ttc" id="aclassPt_1_1Awaiter_html_a5c669ec9685e2b6d83321fe70c660156"><div class="ttname"><a href="classPt_1_1Awaiter.html#a5c669ec9685e2b6d83321fe70c660156">Pt::Awaiter::onCancel</a></div><div class="ttdeci">virtual void onCancel()=0</div><div class="ttdoc">Aborts the in-flight operation.</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_html"><div class="ttname"><a href="classPt_1_1Settings.html">Pt::Settings</a></div><div class="ttdoc">Store application settings.</div><div class="ttdef"><b>Definition:</b> Settings.h:173</div></div>
 <div class="ttc" id="aclassPt_1_1BasicTextIStream_html"><div class="ttname"><a href="classPt_1_1BasicTextIStream.html">Pt::BasicTextIStream&lt; Char, char &gt;</a></div></div>
 <div class="ttc" id="aclassPt_1_1Regex_html"><div class="ttname"><a href="classPt_1_1Regex.html">Pt::Regex</a></div><div class="ttdoc">Regular Expressions for Unicode Strings.</div><div class="ttdef"><b>Definition:</b> Regex.h:174</div></div>
@@ -773,6 +846,7 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1String_html"><div class="ttname"><a href="classPt_1_1String.html">Pt::String</a></div><div class="ttdoc">Unicode capable basic_string.</div><div class="ttdef"><b>Definition:</b> Api-String.h:63</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">Pt::Connection::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the connection.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html"><div class="ttname"><a href="classPt_1_1System_1_1Application.html">Pt::System::Application</a></div><div class="ttdoc">Console applications without a GUI.</div><div class="ttdef"><b>Definition:</b> Application.h:55</div></div>
+<div class="ttc" id="aclassPt_1_1Task_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1Task.html#a13a43e6d814de94978c515cb084873b1">Pt::Task::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts execution of the coroutine.</div><div class="ttdef"><b>Definition:</b> Coroutine.h:518</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:67</div></div>
 <div class="ttc" id="aclassPt_1_1Time_html_a540b8ca7e1ba4702338644495a3cddc3"><div class="ttname"><a href="classPt_1_1Time.html#a540b8ca7e1ba4702338644495a3cddc3">Pt::Time::fromIsoString</a></div><div class="ttdeci">static Time fromIsoString(const std::string &amp;s)</div><div class="ttdoc">Convert from an ISO time string.</div><div class="ttdef"><b>Definition:</b> Time.h:273</div></div>
 <div class="ttc" id="aclassPt_1_1SerializationInfo_html"><div class="ttname"><a href="classPt_1_1SerializationInfo.html">Pt::SerializationInfo</a></div><div class="ttdoc">Represents arbitrary types during serialization.</div><div class="ttdef"><b>Definition:</b> SerializationInfo.h:59</div></div>
@@ -784,6 +858,7 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a84dfa917d34f43228ab9472a2a5d0455"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a84dfa917d34f43228ab9472a2a5d0455">Pt::System::Timer::start</a></div><div class="ttdeci">void start(std::size_t interval)</div><div class="ttdoc">Starts the timer.</div></div>
 <div class="ttc" id="agroup__Pt-Convert_html_gad34360b7939bd54bea4c42b3df0283ab"><div class="ttname"><a href="group__Pt-Convert.html#gad34360b7939bd54bea4c42b3df0283ab">Pt::parseInt</a></div><div class="ttdeci">InIterT parseInt(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</div><div class="ttdoc">Parses an integer value in a given format.</div><div class="ttdef"><b>Definition:</b> Convert.h:871</div></div>
 <div class="ttc" id="astructPt_1_1Char_html_ab9bf6945169c1b63b26d646a0b1218b4"><div class="ttname"><a href="structPt_1_1Char.html#ab9bf6945169c1b63b26d646a0b1218b4">Pt::Char::islower</a></div><div class="ttdeci">int islower(const Char &amp;ch)</div><div class="ttdoc">Checks whether ch is lower case.</div><div class="ttdef"><b>Definition:</b> String.h:210</div></div>
+<div class="ttc" id="aclassPt_1_1Awaiter_html"><div class="ttname"><a href="classPt_1_1Awaiter.html">Pt::Awaiter</a></div><div class="ttdoc">Provides the base class for I/O-driven co_await-able operations.</div><div class="ttdef"><b>Definition:</b> Coroutine.h:126</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

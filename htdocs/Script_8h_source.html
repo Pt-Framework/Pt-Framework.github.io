@@ -177,7 +177,7 @@
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    AsyncAdvance advanceAsync();</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1Script.html#ac9b455425b45a655f2dd4b310cd999ad">  102</a></span>&#160;    <a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a> <a class="code" href="classPt_1_1Lua_1_1Script.html#ac9b455425b45a655f2dd4b310cd999ad">advanceAsync</a>();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">protected</span>:</div>
@@ -194,11 +194,11 @@
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1Script.html">Script</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classPt_1_1Lua_1_1Script.html">Script</a>&amp;);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>AsyncAdvance;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> attachAwaiter(AsyncAdvance&amp; awaiter);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> attachAwaiter(<a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>&amp; awaiter);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> detachAwaiter(AsyncAdvance&amp; awaiter);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> detachAwaiter(<a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>&amp; awaiter);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">bool</span> onCall();</div>
@@ -232,19 +232,19 @@
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    AsyncCall*    _activeAsyncCall;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">  #if __cplusplus &gt;= 202002L</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    AsyncAdvance* _awaiter = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>* _awaiter = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">  #endif</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">class </span>PT_LUA_API AsyncAdvance : <span class="keyword">public</span> Pt::Awaiter</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1AsyncAdvance.html">  170</a></span>&#160;<span class="keyword">class </span>PT_LUA_API <a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1Awaiter.html">Pt::Awaiter</a></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                              , <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    AsyncAdvance(<a class="code" href="classPt_1_1Lua_1_1Script.html">Script</a>&amp; script);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>(<a class="code" href="classPt_1_1Lua_1_1Script.html">Script</a>&amp; script);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    ~AsyncAdvance();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    ~<a class="code" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a>();</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Script::Status await_resume();</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
@@ -276,8 +276,10 @@
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal</a></div><div class="ttdoc">Multicast Signal to call multiple slots.</div><div class="ttdef"><b>Definition:</b> Signal.h:190</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Context_html"><div class="ttname"><a href="classPt_1_1Lua_1_1Context.html">Pt::Lua::Context</a></div><div class="ttdoc">Scripting context.</div><div class="ttdef"><b>Definition:</b> Context.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1Script_html_ac9b455425b45a655f2dd4b310cd999ad"><div class="ttname"><a href="classPt_1_1Lua_1_1Script.html#ac9b455425b45a655f2dd4b310cd999ad">Pt::Lua::Script::advanceAsync</a></div><div class="ttdeci">AsyncAdvance advanceAsync()</div><div class="ttdoc">Asynchronously advance the Lua script as a C++20 awaitable.</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Script_html_a5a5a8c7638e17aa6d75298875b91a597"><div class="ttname"><a href="classPt_1_1Lua_1_1Script.html#a5a5a8c7638e17aa6d75298875b91a597">Pt::Lua::Script::onCancel</a></div><div class="ttdeci">void onCancel()</div><div class="ttdoc">Blocks until operation has cancelled.</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Script_html_a5e5d5bdb3c480dacbbe91f5113485b31"><div class="ttname"><a href="classPt_1_1Lua_1_1Script.html#a5e5d5bdb3c480dacbbe91f5113485b31">Pt::Lua::Script::onRun</a></div><div class="ttdeci">bool onRun()</div><div class="ttdoc">Check if ready and run.</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1AsyncAdvance_html"><div class="ttname"><a href="classPt_1_1Lua_1_1AsyncAdvance.html">Pt::Lua::AsyncAdvance</a></div><div class="ttdoc">Awaitable for async advance of a Lua Script.</div><div class="ttdef"><b>Definition:</b> Script.h:172</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Script_html_ad11a5332d6119e3af5fa0a73aa088828"><div class="ttname"><a href="classPt_1_1Lua_1_1Script.html#ad11a5332d6119e3af5fa0a73aa088828">Pt::Lua::Script::onAttach</a></div><div class="ttdeci">void onAttach(Pt::System::EventLoop &amp;loop)</div><div class="ttdoc">Attached to loop.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Selectable_html"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html">Pt::System::Selectable</a></div><div class="ttdoc">Dispatches operations through an event loop.</div><div class="ttdef"><b>Definition:</b> Selectable.h:45</div></div>
@@ -285,6 +287,7 @@
 <div class="ttc" id="aclassPt_1_1Any_html"><div class="ttname"><a href="classPt_1_1Any.html">Pt::Any</a></div><div class="ttdoc">Contains an arbitrary type.</div><div class="ttdef"><b>Definition:</b> Any.h:64</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Script_html_aafa76a6b8c986114e86530c3736f6c91"><div class="ttname"><a href="classPt_1_1Lua_1_1Script.html#aafa76a6b8c986114e86530c3736f6c91">Pt::Lua::Script::onDetach</a></div><div class="ttdeci">void onDetach(Pt::System::EventLoop &amp;loop)</div><div class="ttdoc">Detached from loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Lua_1_1Script_html"><div class="ttname"><a href="classPt_1_1Lua_1_1Script.html">Pt::Lua::Script</a></div><div class="ttdoc">Lua script.</div><div class="ttdef"><b>Definition:</b> Script.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Awaiter_html"><div class="ttname"><a href="classPt_1_1Awaiter.html">Pt::Awaiter</a></div><div class="ttdoc">Provides the base class for I/O-driven co_await-able operations.</div><div class="ttdef"><b>Definition:</b> Coroutine.h:126</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
