@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Base64Codec Class Reference<div class="ingroups"><a class="el" href="group__Unicode.html">Text Processing</a></div></div>  </div>
+<div class="title">Base64Codec Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Text.html">Text Processing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Base64Codec_8h_source.html">Pt/Base64Codec.h</a>&gt;</code></p>
 
 <p>A codec for base-64 encoding.  
-</p>
+ <a href="classPt_1_1Base64Codec.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1TextCodec.html">TextCodec&lt; char, char &gt;</a>.</p>
 <table class="memberdecls">
@@ -149,7 +149,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memdesc:acc9990e3e10a48856f54d402949f23dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum length of an external sequence if one character is encoded. <br /></td></tr>
 <tr class="separator:acc9990e3e10a48856f54d402949f23dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The base-64 encoding scheme is not a character encoding in the classical sense, but works very similar to other types of encodings. Base64Codec can be used with the basic text stream templates, where the internal and external character types are both <code>char</code>. The following example shows how text is converted to base-64:</p>
+<div class="fragment"><div class="line">std::ostringstream oss;</div>
+<div class="line"> </div>
+<div class="line">BasicTextOStream&lt;char, char&gt; b64(oss, <span class="keyword">new</span> <a class="code" href="classPt_1_1Base64Codec.html#ab64b42901fc98392243cd1e34e295772">Base64Codec</a>());</div>
+<div class="line">b64 &lt;&lt; <span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
+<div class="line">b64.flush();</div>
+</div><!-- fragment --><p>The string stream serves as the output for the base-64 encoded text. It is important to terminate the output sequence by calling flush(), because the base-64 format requires padding at the end. Inserting std::endl also terminates the base-64 sequence. </p>
+</div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Base64Codec_html_ab64b42901fc98392243cd1e34e295772"><div class="ttname"><a href="classPt_1_1Base64Codec.html#ab64b42901fc98392243cd1e34e295772">Pt::Base64Codec::Base64Codec</a></div><div class="ttdeci">Base64Codec(std::size_t ref=0)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> Base64Codec.h:66</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

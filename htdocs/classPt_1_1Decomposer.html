@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Decomposer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Serialization.html">Serialization</a></div></div>  </div>
+<div class="title">Decomposer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Serialization.html">Serialization</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Decomposer_8h_source.html">Pt/Decomposer.h</a>&gt;</code></p>
 
 <p>Manages the decomposition of types during serialization.  
-</p>
+ <a href="classPt_1_1Decomposer.html#details">More...</a></p>
 
 <p>Inherited by <a class="el" href="classPt_1_1BasicDecomposer.html">BasicDecomposer&lt; A &gt;</a>, <a class="el" href="classPt_1_1BasicDecomposer.html">BasicDecomposer&lt; ValueType&lt; R &gt; &gt;</a>, and <a class="el" href="classPt_1_1BasicDecomposer.html">BasicDecomposer&lt; T &gt;</a>.</p>
 <table class="memberdecls">
@@ -141,7 +141,64 @@ virtual <a class="el" href="classPt_1_1Decomposer.html">Decomposer</a> *&#160;</
 <tr class="memdesc:a0533648f6d97e733fed30479cd0358b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance formatting the type. <br /></td></tr>
 <tr class="separator:a0533648f6d97e733fed30479cd0358b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An alternative to the serialization operators is to specialize <a class="el" href="classPt_1_1BasicDecomposer.html" title="Manages the decomposition of types during serialization.">Pt::BasicDecomposer</a>, normally for container types where driving output directly to a <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Formatter</a> is preferable to building a complete tree of <a class="el" href="classPt_1_1SerializationInfo.html" title="Represents arbitrary types during serialization.">SerializationInfo</a> objects in memory. The following example shows a specialization for std::vector:</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">class </span>BasicDecomposer&lt; std::vector&lt;T&gt; &gt; : <span class="keyword">public</span> <a class="code" href="classPt_1_1Decomposer.html#aeea39bfe2d235eb687bd46b1ead77f7d">Decomposer</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        BasicDecomposer(SerializationContext* context = 0)</div>
+<div class="line">        : _type(0)</div>
+<div class="line">        {</div>
+<div class="line">            _elemDecomposer.setParent(<span class="keyword">this</span>);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> begin(<span class="keyword">const</span> std::vector&lt;T&gt;&amp; type, <span class="keyword">const</span> <span class="keywordtype">char</span>* name)</div>
+<div class="line">        {</div>
+<div class="line">            _type = &amp;type;</div>
+<div class="line">            _name = name;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span>:</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Decomposer.html#a50c7a10c00d2abba617b1d2fc8937769">onBeginFormat</a>(Formatter&amp; formatter)</div>
+<div class="line">        {</div>
+<div class="line">            formatter.beginSequence(_name.c_str(), <span class="stringliteral">&quot;std::vector&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">            _it = _type-&gt;begin();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <a class="code" href="classPt_1_1Decomposer.html#aeea39bfe2d235eb687bd46b1ead77f7d">Decomposer</a>* <a class="code" href="classPt_1_1Decomposer.html#a0533648f6d97e733fed30479cd0358b8">onAdvanceFormat</a>(Formatter&amp; formatter)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span>( _it != _type-&gt;begin() )</div>
+<div class="line">            {</div>
+<div class="line">                formatter.finishElement();</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span>( _it == _type-&gt;end() )</div>
+<div class="line">            {</div>
+<div class="line">                formatter.finishSequence();</div>
+<div class="line">                <span class="keywordflow">return</span> this-&gt;<a class="code" href="classPt_1_1Decomposer.html#a2c391d8e8c4873431dc5b4ed64fa1de7">parent</a>();</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            formatter.beginElement();</div>
+<div class="line">            _elemDecomposer.begin(*_it, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">            _elemDecomposer.beginFormat(formatter);</div>
+<div class="line">            ++_it;</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">return</span> &amp;_elemDecomposer;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span>:</div>
+<div class="line">        std::string _name;</div>
+<div class="line">        <span class="keyword">const</span> std::vector&lt;T&gt;* _type;</div>
+<div class="line">        BasicDecomposer&lt;T&gt; _elemDecomposer;</div>
+<div class="line">        <span class="keyword">typename</span> std::vector&lt;T&gt;::const_iterator _it;</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>A specialized BasicDecomposer requires a constructor that optionally takes a reference to a <a class="el" href="classPt_1_1SerializationContext.html" title="Context for the serialization of types.">SerializationContext</a> and a begin() function to set up the decomposer to start decomposing a value by name. The virtual functions <a class="el" href="classPt_1_1Decomposer.html#a50c7a10c00d2abba617b1d2fc8937769" title="Begin formatting the type.">onBeginFormat()</a> and <a class="el" href="classPt_1_1Decomposer.html#a0533648f6d97e733fed30479cd0358b8" title="Advance formatting the type.">onAdvanceFormat()</a> are overridden to react to formatting events. <a class="el" href="classPt_1_1Decomposer.html#a50c7a10c00d2abba617b1d2fc8937769" title="Begin formatting the type.">onBeginFormat()</a> is called when the vector should start being formatted; here <a class="el" href="classPt_1_1Formatter.html#a40ac858247ebb3452f81940a6ccf920f" title="Formats the begin of an array.">Pt::Formatter::beginSequence()</a> formats the beginning of the sequence and an iterator to the begin of the vector is kept. <a class="el" href="classPt_1_1Decomposer.html#a0533648f6d97e733fed30479cd0358b8" title="Advance formatting the type.">onAdvanceFormat()</a> is called when the next element can be formatted: it finishes the current element with <a class="el" href="classPt_1_1Formatter.html#a5c06d4a635c77f67ca2378315aa2c8f8" title="Formats the end of an array element.">Pt::Formatter::finishElement()</a>, starts the next one with <a class="el" href="classPt_1_1Formatter.html#aff59bd3122e1d4462f749477a59b9227" title="Formats the begin of an array element.">Pt::Formatter::beginElement()</a>, or finishes the sequence with <a class="el" href="classPt_1_1Formatter.html#a5a031fd700f98734bca1febefa08a1ad" title="Formats the end of an array.">Pt::Formatter::finishSequence()</a> once the end of the vector is reached. It returns a decomposer, either for the current vector element or the parent decomposer if all elements were decomposed. A decomposer may delegate to other decomposers, which might or might not be specialized; here the decomposer for the element type is used, which works for a vector of vectors right away. </p>
+</div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Decomposer_html_a0533648f6d97e733fed30479cd0358b8"><div class="ttname"><a href="classPt_1_1Decomposer.html#a0533648f6d97e733fed30479cd0358b8">Pt::Decomposer::onAdvanceFormat</a></div><div class="ttdeci">virtual Decomposer * onAdvanceFormat(Formatter &amp;formatter)=0</div><div class="ttdoc">Advance formatting the type.</div></div>
+<div class="ttc" id="aclassPt_1_1Decomposer_html_a2c391d8e8c4873431dc5b4ed64fa1de7"><div class="ttname"><a href="classPt_1_1Decomposer.html#a2c391d8e8c4873431dc5b4ed64fa1de7">Pt::Decomposer::parent</a></div><div class="ttdeci">Decomposer * parent() const</div><div class="ttdoc">Returns the parent.</div><div class="ttdef"><b>Definition:</b> Decomposer.h:132</div></div>
+<div class="ttc" id="aclassPt_1_1Decomposer_html_aeea39bfe2d235eb687bd46b1ead77f7d"><div class="ttname"><a href="classPt_1_1Decomposer.html#aeea39bfe2d235eb687bd46b1ead77f7d">Pt::Decomposer::Decomposer</a></div><div class="ttdeci">Decomposer()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> Decomposer.h:153</div></div>
+<div class="ttc" id="aclassPt_1_1Decomposer_html_a50c7a10c00d2abba617b1d2fc8937769"><div class="ttname"><a href="classPt_1_1Decomposer.html#a50c7a10c00d2abba617b1d2fc8937769">Pt::Decomposer::onBeginFormat</a></div><div class="ttdeci">virtual void onBeginFormat(Formatter &amp;formatter)=0</div><div class="ttdoc">Begin formatting the type.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

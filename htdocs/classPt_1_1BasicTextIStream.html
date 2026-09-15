@@ -84,7 +84,7 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">BasicTextIStream&lt; CharT, ByteT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Unicode.html">Text Processing</a></div></div>  </div>
+<div class="title">BasicTextIStream&lt; CharT, ByteT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Text.html">Text Processing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -191,7 +191,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="textblock"><h3>template&lt;typename CharT, typename ByteT&gt;<br />
 class Pt::BasicTextIStream&lt; CharT, ByteT &gt;</h3>
 
-<p>This stream decodes an external character sequence using a codec. Reading from the stream will convert from the the encoding of external characters. </p>
+<p>This stream decodes an external character sequence using a codec. Reading from the stream will convert from the the encoding of external characters.</p>
+<p>Text streams do not only convert between text encodings, but also between character types of different size. The first template parameter <em>CharT</em> is the character type of the decoded text and the second one <em>ByteT</em> is the character type of the encoded text. They are also called the internal and external character types and may be of the same type. The internal character type is used as the character type of the standard C++ stream base class.</p>
+<p>A text stream always works with another stream as input or output. This stream works with another std::basic_istream to read the encoded input, using the external character type. A text stream can be constructed with an underlying stream and a codec, but both can also be set or reset later. If no codec is set, the stream will directly assign characters, instead of converting them. If no target stream is set, the text stream will always be EOF.</p>
+<p>The following example demonstrates how a string stream is used as the input for a text stream, which uses a <a class="el" href="classPt_1_1Utf8Codec.html" title="Convert between unicode and UTF-8.">Pt::Utf8Codec</a> to decode UTF-8 encoded text:</p>
+<div class="fragment"><div class="line">std::istringstream iss(<span class="stringliteral">&quot;UTF-8 encoded text&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1String.html">Pt::String</a> s;</div>
+<div class="line"><a class="code" href="classPt_1_1BasicTextIStream.html">Pt::TextIStream</a> tis(iss, <span class="keyword">new</span> <a class="code" href="classPt_1_1Utf8Codec.html">Pt::Utf8Codec</a>());</div>
+<div class="line">std::getline(tis, s);</div>
+</div><!-- fragment --><p>The std::getline() function reads all input into a <a class="el" href="classPt_1_1String.html" title="Unicode capable basic_string.">Pt::String</a>. The extraction operator can also be used, for example to directly read numbers from the stream. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4a4452c79b07302d83817f2d1040495b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a4452c79b07302d83817f2d1040495b">&#9670;&nbsp;</a></span>BasicTextIStream() <span class="overload">[1/2]</span></h2>
@@ -283,8 +292,7 @@ class Pt::BasicTextIStream&lt; CharT, ByteT &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The target is detached and the buffer content is discarded. The codec is kept, if one was set previously. <br  />
- </p>
+<p>The target is detached and the buffer content is discarded. The codec is kept, if one was set previously. </p>
 
 </div>
 </div>
@@ -345,6 +353,9 @@ class Pt::BasicTextIStream&lt; CharT, ByteT &gt;</h3>
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Utf8Codec_html"><div class="ttname"><a href="classPt_1_1Utf8Codec.html">Pt::Utf8Codec</a></div><div class="ttdoc">Convert between unicode and UTF-8.</div><div class="ttdef"><b>Definition:</b> Utf8Codec.h:44</div></div>
+<div class="ttc" id="aclassPt_1_1BasicTextIStream_html"><div class="ttname"><a href="classPt_1_1BasicTextIStream.html">Pt::BasicTextIStream&lt; Char, char &gt;</a></div></div>
+<div class="ttc" id="aclassPt_1_1String_html"><div class="ttname"><a href="classPt_1_1String.html">Pt::String</a></div><div class="ttdoc">Unicode capable basic_string.</div><div class="ttdef"><b>Definition:</b> Api-String.h:63</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

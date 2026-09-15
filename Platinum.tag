@@ -29164,14 +29164,14 @@
     <member kind="function">
       <type>void</type>
       <name>fixup</name>
-      <anchorfile>group__Serialization.html</anchorfile>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
       <anchor>ga94803b7e0e5de37051427698562204fd</anchor>
       <arglist>(const FixupInfo &amp;fixup, T *&amp;fixme)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>fixup</name>
-      <anchorfile>group__Serialization.html</anchorfile>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
       <anchor>ga103e9b18930790f774bef478ea051a86</anchor>
       <arglist>(const FixupInfo &amp;fixup, T &amp;fixme)</arglist>
     </member>
@@ -50416,7 +50416,7 @@
     <member kind="function">
       <type>void</type>
       <name>load</name>
-      <anchorfile>group__Serialization.html</anchorfile>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
       <anchor>ga19730d3273cf30e460ec56ccf4e23d8e</anchor>
       <arglist>(const LoadInfo &amp;li, T &amp;type)</arglist>
     </member>
@@ -76892,7 +76892,7 @@
     <member kind="function">
       <type>void</type>
       <name>save</name>
-      <anchorfile>group__Serialization.html</anchorfile>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
       <anchor>ga5edd65df57aaf2830f7d1c862ed4ad29</anchor>
       <arglist>(SaveInfo &amp;si, const T &amp;type)</arglist>
     </member>
@@ -115116,224 +115116,224 @@
     <member kind="typedef">
       <type>int_type</type>
       <name>int8_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>aef44329758059c91c76d334e8fc09700</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaef44329758059c91c76d334e8fc09700</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint8_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>aba7bc1797add20fe3efdf37ced1182c5</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaba7bc1797add20fe3efdf37ced1182c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int16_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>aa343fa3b3d06292b959ffdd4c4703b06</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaa343fa3b3d06292b959ffdd4c4703b06</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint16_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>a273cf69d639a59973b6019625df33e30</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga273cf69d639a59973b6019625df33e30</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int32_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>a32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint32_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>a435d1572bf3f880d55459d9805097f62</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga435d1572bf3f880d55459d9805097f62</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>int_type</type>
       <name>int64_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>a312c7e8848187d110315ab83a7b3d4d0</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga312c7e8848187d110315ab83a7b3d4d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>uint_type</type>
       <name>uint64_t</name>
-      <anchorfile>namespacePt.html</anchorfile>
-      <anchor>aa232ecf786a74ce5363c36c10798d2b1</anchor>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaa232ecf786a74ce5363c36c10798d2b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>int8_t</type>
       <name>swab</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga630b14e1adebb2ab0e59ea1af2f7c3ac</anchor>
       <arglist>(int32_t value)</arglist>
     </member>
     <member kind="function">
       <type>uint8_t</type>
       <name>swab</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga1d7b5495153de1da275cb5d65c80fc6b</anchor>
       <arglist>(uint32_t value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isBigEndian</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga03063b48cbfb1477cb08c345be8aee6f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isLittleEndian</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga26e842f5bdd6e6a7bd50716fa480c774</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>hostToLe</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga1edda5ac54b0a328707546e32d8af2c5</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>leToHost</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gae052a9e568c7a59117411e25f191ef49</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>hostToBe</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gab2008e7b981ad12830b00e2115b3d063</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>beToHost</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga83bc0daa86a89543b86dbae165ab9a4c</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>narrow</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga7c5b9a08aceaff4a18ad274153c02c1a</anchor>
       <arglist>(T from)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga3d34599303e3da18e9d1004b858e498e</anchor>
       <arglist>(OutIterT it, T i, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gaf10bbd249e60491bae4638bfe4b234d7</anchor>
       <arglist>(OutIterT it, T i)</arglist>
     </member>
     <member kind="function">
       <type>CharT *</type>
       <name>formatInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga844786d15d4b45441ee525595ccedb04</anchor>
       <arglist>(CharT *buf, std::size_t buflen, T si, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gab8c23f359723f97773055b3c68f76f5d</anchor>
       <arglist>(OutIterT it, T d, const FormatT &amp;fmt, int precision, bool fixed=false)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga99f788db40c040c4fe941ef60863424d</anchor>
       <arglist>(OutIterT it, T d)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gaccb799b23453f1a86a7a554b18689b12</anchor>
       <arglist>(OutIterT it, T d, int precision, bool fixed=false)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gad34360b7939bd54bea4c42b3df0283ab</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga230b9ad31d4cd1d46cdceed1b6e4786b</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga692c32e1b9639bcf60a1ae65ea6c2afc</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga2b576d20431853611480a22939b515b1</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga407cbf267d6b900075f57382f3d6362f</anchor>
       <arglist>(InIter it, InIter end)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga9ca4001d8fc13efc5917f2ac1058c69c</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gafe21a278b62305eec677ccfaec57f48a</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga47cbf7cc5fde802f81c0368261821003</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga7198137bf531df6395e35b2eb5a736b3</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n)</arglist>
     </member>
@@ -116432,89 +116432,132 @@
     <class kind="class">Pt::XmlRpc::Responder</class>
   </compound>
   <compound kind="group">
-    <name>Allocator</name>
+    <name>Pt-Core</name>
+    <title>Core Module</title>
+    <filename>group__Pt-Core.html</filename>
+    <subgroup>Pt-Basics</subgroup>
+    <subgroup>Pt-IntTypes</subgroup>
+    <subgroup>Pt-DateTime</subgroup>
+    <subgroup>Pt-Atomics</subgroup>
+    <subgroup>Pt-Coroutines</subgroup>
+    <subgroup>Pt-Allocator</subgroup>
+    <subgroup>Pt-Text</subgroup>
+    <subgroup>Pt-Signals</subgroup>
+    <subgroup>Pt-TypeTraits</subgroup>
+    <subgroup>Pt-Convert</subgroup>
+    <subgroup>Pt-Serialization</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Basics</name>
+    <title>Basic Types</title>
+    <filename>group__Pt-Basics.html</filename>
+    <class kind="class">Pt::Any</class>
+    <class kind="class">Pt::Arg</class>
+    <class kind="class">Pt::Event</class>
+    <class kind="class">Pt::NonCopyable</class>
+    <class kind="class">Pt::SettingsError</class>
+    <class kind="class">Pt::Settings</class>
+    <class kind="class">Pt::Singleton</class>
+    <class kind="struct">Pt::Void</class>
+    <subgroup>Pt-Atomics</subgroup>
+    <subgroup>Pt-IntTypes</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>Pt-IntTypes</name>
+    <title>Fixed-Size Integers</title>
+    <filename>group__Pt-IntTypes.html</filename>
+    <member kind="typedef">
+      <type>int_type</type>
+      <name>int8_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaef44329758059c91c76d334e8fc09700</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint_type</type>
+      <name>uint8_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaba7bc1797add20fe3efdf37ced1182c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int_type</type>
+      <name>int16_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaa343fa3b3d06292b959ffdd4c4703b06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint_type</type>
+      <name>uint16_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga273cf69d639a59973b6019625df33e30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int_type</type>
+      <name>int32_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga32f2e37ee053cf2ce8ca28d1f74630e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint_type</type>
+      <name>uint32_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga435d1572bf3f880d55459d9805097f62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int_type</type>
+      <name>int64_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>ga312c7e8848187d110315ab83a7b3d4d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint_type</type>
+      <name>uint64_t</name>
+      <anchorfile>group__Pt-IntTypes.html</anchorfile>
+      <anchor>gaa232ecf786a74ce5363c36c10798d2b1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Pt-DateTime</name>
+    <title>Dates and Times</title>
+    <filename>group__Pt-DateTime.html</filename>
+    <class kind="class">Pt::InvalidDate</class>
+    <class kind="class">Pt::Date</class>
+    <class kind="class">Pt::DateTime</class>
+    <class kind="class">Pt::InvalidTime</class>
+    <class kind="class">Pt::Time</class>
+    <class kind="class">Pt::Timespan</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Atomics</name>
+    <title>Atomic Operations</title>
+    <filename>group__Pt-Atomics.html</filename>
+    <class kind="class">Pt::atomic_t</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Coroutines</name>
+    <title>Coroutines</title>
+    <filename>group__Pt-Coroutines.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Allocator</name>
     <title>Allocators</title>
-    <filename>group__Allocator.html</filename>
+    <filename>group__Pt-Allocator.html</filename>
     <class kind="class">Pt::Allocator</class>
     <class kind="class">Pt::PageAllocator</class>
     <class kind="class">Pt::MemoryPool</class>
     <class kind="class">Pt::PoolAllocator</class>
   </compound>
   <compound kind="group">
-    <name>Serialization</name>
-    <title>Serialization</title>
-    <filename>group__Serialization.html</filename>
-    <class kind="class">Pt::SerializationContext</class>
-    <class kind="class">Pt::Composer</class>
-    <class kind="class">Pt::BasicComposer</class>
-    <class kind="class">Pt::BasicComposer&lt; Pt::SerializationInfo &gt;</class>
-    <class kind="class">Pt::Decomposer</class>
-    <class kind="class">Pt::BasicDecomposer</class>
-    <class kind="class">Pt::Deserializer</class>
-    <class kind="class">Pt::FixupInfo</class>
-    <class kind="class">Pt::Formatter</class>
-    <class kind="class">Pt::SerializationError</class>
-    <class kind="class">Pt::SerializationInfo</class>
-    <class kind="class">Pt::SaveInfo</class>
-    <class kind="class">Pt::LoadInfo</class>
-    <class kind="class">Pt::Serializer</class>
-    <member kind="function">
-      <type>void</type>
-      <name>fixup</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>ga94803b7e0e5de37051427698562204fd</anchor>
-      <arglist>(const FixupInfo &amp;fixup, T *&amp;fixme)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>fixup</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>ga103e9b18930790f774bef478ea051a86</anchor>
-      <arglist>(const FixupInfo &amp;fixup, T &amp;fixme)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>save</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>ga5edd65df57aaf2830f7d1c862ed4ad29</anchor>
-      <arglist>(SaveInfo &amp;si, const T &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>load</name>
-      <anchorfile>group__Serialization.html</anchorfile>
-      <anchor>ga19730d3273cf30e460ec56ccf4e23d8e</anchor>
-      <arglist>(const LoadInfo &amp;li, T &amp;type)</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>Pt-Signals</name>
-    <title>Signals and Delegates</title>
-    <filename>group__Pt-Signals.html</filename>
-    <class kind="class">Pt::Callable</class>
-    <class kind="class">Pt::Connectable</class>
-    <class kind="class">Pt::Connection</class>
-    <class kind="class">Pt::ConstMethod</class>
-    <class kind="class">Pt::ConstMethodSlot</class>
-    <class kind="class">Pt::Delegate</class>
-    <class kind="class">Pt::DelegateSlot</class>
-    <class kind="class">Pt::Function</class>
-    <class kind="class">Pt::FunctionSlot</class>
-    <class kind="class">Pt::Invokable</class>
-    <class kind="class">Pt::Lambda</class>
-    <class kind="class">Pt::LambdaSlot</class>
-    <class kind="class">Pt::Method</class>
-    <class kind="class">Pt::MethodSlot</class>
-    <class kind="class">Pt::Signal</class>
-    <class kind="class">Pt::SignalSlot</class>
-    <class kind="class">Pt::Slot</class>
-    <class kind="class">Pt::BasicSlot</class>
-    <class kind="class">Pt::BoundSlot</class>
-  </compound>
-  <compound kind="group">
-    <name>Unicode</name>
+    <name>Pt-Text</name>
     <title>Text Processing</title>
-    <filename>group__Unicode.html</filename>
+    <filename>group__Pt-Text.html</filename>
     <class kind="class">Pt::String</class>
     <class kind="class">Pt::TextCodec</class>
     <class kind="class">Pt::Base64Codec</class>
@@ -116543,185 +116586,256 @@
     <class kind="class">Pt::TextStream</class>
   </compound>
   <compound kind="group">
-    <name>Utilities</name>
-    <title>Utilities</title>
-    <filename>group__Utilities.html</filename>
+    <name>Pt-Signals</name>
+    <title>Signals and Delegates</title>
+    <filename>group__Pt-Signals.html</filename>
+    <class kind="class">Pt::Callable</class>
+    <class kind="class">Pt::Connectable</class>
+    <class kind="class">Pt::Connection</class>
+    <class kind="class">Pt::ConstMethod</class>
+    <class kind="class">Pt::ConstMethodSlot</class>
+    <class kind="class">Pt::Delegate</class>
+    <class kind="class">Pt::DelegateSlot</class>
+    <class kind="class">Pt::Function</class>
+    <class kind="class">Pt::FunctionSlot</class>
+    <class kind="class">Pt::Invokable</class>
+    <class kind="class">Pt::Lambda</class>
+    <class kind="class">Pt::LambdaSlot</class>
+    <class kind="class">Pt::Method</class>
+    <class kind="class">Pt::MethodSlot</class>
+    <class kind="class">Pt::Signal</class>
+    <class kind="class">Pt::SignalSlot</class>
+    <class kind="class">Pt::Slot</class>
+    <class kind="class">Pt::BasicSlot</class>
+    <class kind="class">Pt::BoundSlot</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-TypeTraits</name>
+    <title>Type Traits and Information</title>
+    <filename>group__Pt-TypeTraits.html</filename>
     <class kind="struct">Pt::TypeTraits</class>
-    <class kind="class">Pt::Arg</class>
-    <class kind="class">Pt::ConversionError</class>
-    <class kind="class">Pt::NonCopyable</class>
-    <class kind="class">Pt::SettingsError</class>
-    <class kind="class">Pt::Settings</class>
-    <class kind="class">Pt::Singleton</class>
     <class kind="class">Pt::SourceInfo</class>
     <class kind="class">Pt::TypeInfo</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Convert</name>
+    <title>Conversions</title>
+    <filename>group__Pt-Convert.html</filename>
+    <class kind="class">Pt::ConversionError</class>
     <member kind="function">
       <type>int8_t</type>
       <name>swab</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga630b14e1adebb2ab0e59ea1af2f7c3ac</anchor>
       <arglist>(int32_t value)</arglist>
     </member>
     <member kind="function">
       <type>uint8_t</type>
       <name>swab</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga1d7b5495153de1da275cb5d65c80fc6b</anchor>
       <arglist>(uint32_t value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isBigEndian</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga03063b48cbfb1477cb08c345be8aee6f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isLittleEndian</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga26e842f5bdd6e6a7bd50716fa480c774</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>hostToLe</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga1edda5ac54b0a328707546e32d8af2c5</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>leToHost</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gae052a9e568c7a59117411e25f191ef49</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>hostToBe</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gab2008e7b981ad12830b00e2115b3d063</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>beToHost</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga83bc0daa86a89543b86dbae165ab9a4c</anchor>
       <arglist>(const T &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>narrow</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga7c5b9a08aceaff4a18ad274153c02c1a</anchor>
       <arglist>(T from)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga3d34599303e3da18e9d1004b858e498e</anchor>
       <arglist>(OutIterT it, T i, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gaf10bbd249e60491bae4638bfe4b234d7</anchor>
       <arglist>(OutIterT it, T i)</arglist>
     </member>
     <member kind="function">
       <type>CharT *</type>
       <name>formatInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga844786d15d4b45441ee525595ccedb04</anchor>
       <arglist>(CharT *buf, std::size_t buflen, T si, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gab8c23f359723f97773055b3c68f76f5d</anchor>
       <arglist>(OutIterT it, T d, const FormatT &amp;fmt, int precision, bool fixed=false)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga99f788db40c040c4fe941ef60863424d</anchor>
       <arglist>(OutIterT it, T d)</arglist>
     </member>
     <member kind="function">
       <type>OutIterT</type>
       <name>formatFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gaccb799b23453f1a86a7a554b18689b12</anchor>
       <arglist>(OutIterT it, T d, int precision, bool fixed=false)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gad34360b7939bd54bea4c42b3df0283ab</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga230b9ad31d4cd1d46cdceed1b6e4786b</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga692c32e1b9639bcf60a1ae65ea6c2afc</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga2b576d20431853611480a22939b515b1</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
       <name>parseInt</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga407cbf267d6b900075f57382f3d6362f</anchor>
       <arglist>(InIter it, InIter end)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga9ca4001d8fc13efc5917f2ac1058c69c</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>gafe21a278b62305eec677ccfaec57f48a</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga47cbf7cc5fde802f81c0368261821003</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n, bool &amp;ok)</arglist>
     </member>
     <member kind="function">
       <type>InIterT</type>
       <name>parseFloat</name>
-      <anchorfile>group__Utilities.html</anchorfile>
+      <anchorfile>group__Pt-Convert.html</anchorfile>
       <anchor>ga7198137bf531df6395e35b2eb5a736b3</anchor>
       <arglist>(InIterT it, InIterT end, T &amp;n)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Serialization</name>
+    <title>Serialization</title>
+    <filename>group__Pt-Serialization.html</filename>
+    <class kind="class">Pt::SerializationContext</class>
+    <class kind="class">Pt::Composer</class>
+    <class kind="class">Pt::BasicComposer</class>
+    <class kind="class">Pt::BasicComposer&lt; Pt::SerializationInfo &gt;</class>
+    <class kind="class">Pt::Decomposer</class>
+    <class kind="class">Pt::BasicDecomposer</class>
+    <class kind="class">Pt::Deserializer</class>
+    <class kind="class">Pt::FixupInfo</class>
+    <class kind="class">Pt::Formatter</class>
+    <class kind="class">Pt::SerializationError</class>
+    <class kind="class">Pt::SerializationInfo</class>
+    <class kind="class">Pt::SaveInfo</class>
+    <class kind="class">Pt::LoadInfo</class>
+    <class kind="class">Pt::Serializer</class>
+    <member kind="function">
+      <type>void</type>
+      <name>fixup</name>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
+      <anchor>ga94803b7e0e5de37051427698562204fd</anchor>
+      <arglist>(const FixupInfo &amp;fixup, T *&amp;fixme)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fixup</name>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
+      <anchor>ga103e9b18930790f774bef478ea051a86</anchor>
+      <arglist>(const FixupInfo &amp;fixup, T &amp;fixme)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>save</name>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
+      <anchor>ga5edd65df57aaf2830f7d1c862ed4ad29</anchor>
+      <arglist>(SaveInfo &amp;si, const T &amp;type)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>group__Pt-Serialization.html</anchorfile>
+      <anchor>ga19730d3273cf30e460ec56ccf4e23d8e</anchor>
+      <arglist>(const LoadInfo &amp;li, T &amp;type)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -117203,14 +117317,6 @@
     </member>
   </compound>
   <compound kind="page">
-    <name>allocators</name>
-    <title>Allocators</title>
-    <filename>allocators.html</filename>
-    <docanchor file="allocators.html" title="The Allocator Interface">allocators_Interface</docanchor>
-    <docanchor file="allocators.html" title="Pool Allocation">allocators_Pool</docanchor>
-    <docanchor file="allocators.html" title="Page Allocation">allocators_Page</docanchor>
-  </compound>
-  <compound kind="page">
     <name>faq</name>
     <title>Frequently Asked Questions</title>
     <filename>faq.html</filename>
@@ -117325,14 +117431,6 @@
     <docanchor file="plugins.html" title="Loading Plugins">plugins_LoadingPlugins</docanchor>
   </compound>
   <compound kind="page">
-    <name>Pt-Basics-Page</name>
-    <title>Basic Types</title>
-    <filename>Pt-Basics-Page.html</filename>
-    <docanchor file="Pt-Basics-Page.html" title="Fixed Size Integers">Pt-Basics-Page-FixedInt</docanchor>
-    <docanchor file="Pt-Basics-Page.html" title="Dates and Times">Pt-Basics-Page-DateTime</docanchor>
-    <docanchor file="Pt-Basics-Page.html" title="The Any Class">Pt-Basics-Page-Any</docanchor>
-  </compound>
-  <compound kind="page">
     <name>pt_contents</name>
     <title>The Platinum C++ Framework</title>
     <filename>pt_contents.html</filename>
@@ -117344,6 +117442,41 @@
     <docanchor file="pt_contents.html" title="Secure Communication">pt_ssl</docanchor>
     <docanchor file="pt_contents.html" title="XML-RPC Communication">pt_xmlrpc</docanchor>
     <docanchor file="pt_contents.html" title="Unit Testing">pt_unit</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>Pt-Core-Page</name>
+    <title>Core Module</title>
+    <filename>Pt-Core-Page.html</filename>
+    <docanchor file="Pt-Core-Page.html" title="Basic Types">Pt-Core-Page-Basics</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Events">Pt-Core-Page-Event</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Command Line Arguments">Pt-Core-Page-Arg</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Application Settings">Pt-Core-Page-Settings</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Fixed-Size Integers">Pt-Core-Page-IntTypes</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Atomic Operations">Pt-Core-Page-Atomics</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Dates and Times">Pt-Core-Page-DateTime</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Timespan">Pt-Core-Page-Timespan</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Date">Pt-Core-Page-Date</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Time">Pt-Core-Page-Time</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="DateTime">Pt-Core-Page-DateTimeClass</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Coroutines">Pt-Core-Page-Coroutines</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Tasks">Pt-Core-Page-Task</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Generators">Pt-Core-Page-Generators</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Allocators">Pt-Core-Page-Allocator</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="The Allocator Interface">Pt-Core-Page-AllocatorInterface</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Pool Allocation">Pt-Core-Page-Pool</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Page Allocation">Pt-Core-Page-Page</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Text Processing">Pt-Core-Page-Text</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Characters and Strings">Pt-Core-Page-Characters</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Text Streams and Codecs">Pt-Core-Page-TextStreams</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Base-64 Encoding">Pt-Core-Page-Base64</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Regular Expressions">Pt-Core-Page-Regex</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Signals and Delegates">Pt-Core-Page-Signals</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Signals">Pt-Core-Page-Signal</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Delegates">Pt-Core-Page-Delegate</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Type Traits and Information">Pt-Core-Page-TypeTraits</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Type Information">Pt-Core-Page-TypeInfo</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Conversions">Pt-Core-Page-Convert</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Serialization">Pt-Core-Page-Serialization</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-Forms-Page</name>
@@ -117416,13 +117549,6 @@
     <docanchor file="Pt-Gfx-Drawing-Page.html" title="Text and FontMetrics">Pt-Gfx-Drawing-Page-Text</docanchor>
   </compound>
   <compound kind="page">
-    <name>Pt-Signals-Page</name>
-    <title>Signals and Delegates</title>
-    <filename>Pt-Signals-Page.html</filename>
-    <docanchor file="Pt-Signals-Page.html" title="Signals">Pt-Signals-Page-Signals</docanchor>
-    <docanchor file="Pt-Signals-Page.html" title="Delegates">Pt-Signals-Page-Delegates</docanchor>
-  </compound>
-  <compound kind="page">
     <name>Pt-System-Concurrency-Page</name>
     <title>Concurrency</title>
     <filename>Pt-System-Concurrency-Page.html</filename>
@@ -117467,14 +117593,6 @@
     <docanchor file="requirements.html" title="Required Tools">requirements_tools</docanchor>
   </compound>
   <compound kind="page">
-    <name>serialization</name>
-    <title>Serialization</title>
-    <filename>serialization.html</filename>
-    <docanchor file="serialization.html" title="Serialization of Value Types">serialization_ValueTypes</docanchor>
-    <docanchor file="serialization.html" title="Serialization of Pointers">serialization_Pointers</docanchor>
-    <docanchor file="serialization.html" title="Serialization of Containers">serialization_Containers</docanchor>
-  </compound>
-  <compound kind="page">
     <name>ssl</name>
     <title>Secure Communication</title>
     <filename>ssl.html</filename>
@@ -117485,34 +117603,12 @@
     <docanchor file="ssl.html" title="Connection Shutdown">ssl_Shutdown</docanchor>
   </compound>
   <compound kind="page">
-    <name>text</name>
-    <title>Text Processing</title>
-    <filename>text.html</filename>
-    <docanchor file="text.html" title="Character Encodings">text_Encodings</docanchor>
-    <docanchor file="text.html" title="Characters and Strings">text_Characters</docanchor>
-    <docanchor file="text.html" title="Text Streams and Codecs">text_TextStreams</docanchor>
-    <docanchor file="text.html" title="Regular Expressions">text_Regex</docanchor>
-    <docanchor file="text.html" title="Base-64 Encoding">text_Base64</docanchor>
-  </compound>
-  <compound kind="page">
     <name>tutorial</name>
     <title>Jam Tutorial</title>
     <filename>tutorial.html</filename>
     <docanchor file="tutorial.html" title="Adding Jam Support">JamTutorialJambase</docanchor>
     <docanchor file="tutorial.html" title="Building Programs">JamTutorialBuildPrograms</docanchor>
     <docanchor file="tutorial.html" title="Cleaning the Build">JamTutorialClean</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>utilities</name>
-    <title>Utilities</title>
-    <filename>utilities.html</filename>
-    <docanchor file="utilities.html" title="String Conversions">utilities_StringConv</docanchor>
-    <docanchor file="utilities.html" title="Numeric Conversions">utilities_NumConv</docanchor>
-    <docanchor file="utilities.html" title="Byte Order Conversion">utilities_ByteOrder</docanchor>
-    <docanchor file="utilities.html" title="Command Line Arguments">utilities_Arg</docanchor>
-    <docanchor file="utilities.html" title="Application Settings">utilities_Settings</docanchor>
-    <docanchor file="utilities.html" title="Source Information">utilities_SourceInfo</docanchor>
-    <docanchor file="utilities.html" title="Type Information">utilities_TypeInfo</docanchor>
   </compound>
   <compound kind="page">
     <name>xmlrpc</name>

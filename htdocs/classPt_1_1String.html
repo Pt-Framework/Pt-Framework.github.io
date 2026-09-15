@@ -85,7 +85,7 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#related">Related Functions</a>  </div>
   <div class="headertitle">
-<div class="title">String Class Reference<div class="ingroups"><a class="el" href="group__Unicode.html">Text Processing</a></div></div>  </div>
+<div class="title">String Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Text.html">Text Processing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -792,8 +792,14 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class <a class="el" href="classPt_1_1String.html" title="Unicode capable basic_string.">Pt::String</a> is not yet another unicode string class, but it is a specialization of the std::basic_string template for the unicode character type <a class="el" href="structPt_1_1Char.html" title="Unicode character type.">Pt::Char</a>:</p>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> std::basic_string&lt;Pt::Char&gt; <a class="code" href="classPt_1_1String.html#ac2f2fdce82713c12638ae9cf1d1d924c">String</a>;</div>
-</div><!-- fragment --><p>It offers all the functionality of the std::basic_string template. This has the advantage, that all generic algorithms that work with std::basic_string should also work with <a class="el" href="classPt_1_1String.html" title="Unicode capable basic_string.">Pt::String</a>. Please refer to a standard c++ manual for a complete overview. Additional methods make it easier to work with other character types. For example, the relational operators are also overloaded for char and wchar_t. <br  />
- </p>
+</div><!-- fragment --><p>It offers all the functionality of the std::basic_string template. This has the advantage, that all generic algorithms that work with std::basic_string should also work with <a class="el" href="classPt_1_1String.html" title="Unicode capable basic_string.">Pt::String</a>. Please refer to a standard c++ manual for a complete overview. Additional methods make it easier to work with other character types. For example, the relational operators are also overloaded for char and wchar_t.</p>
+<p>Since a specialization of std::char_traits is also provided, the C++ iostreams can be instantiated for Pt::Char, including the string streams. Three typedefs provide shorter names for the unicode capable string streams:</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> std::basic_istringstream&lt;Pt::Char&gt; IStringStream;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> std::basic_ostringstream&lt;Pt::Char&gt; OStringStream;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> std::basic_stringstream&lt;Pt::Char&gt; StringStream;</div>
+</div><!-- fragment --><p>The insertion and extraction operators (&lt;&lt; and &gt;&gt;) for iostreams require certain localization facets to be present in the std::locale. Pt will install specializations of std::num_put, std::num_get, std::numpunct and std::ctype for Pt::Char. This means that all other facilities that use localization facets will also work. </p>
 </div></div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1String_html_ac2f2fdce82713c12638ae9cf1d1d924c"><div class="ttname"><a href="classPt_1_1String.html#ac2f2fdce82713c12638ae9cf1d1d924c">Pt::String::String</a></div><div class="ttdeci">String(const allocator_type &amp;a=allocator_type())</div><div class="ttdoc">Default Constructor.</div></div>
 

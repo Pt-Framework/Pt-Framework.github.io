@@ -84,7 +84,7 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">BasicTextOStream&lt; CharT, ByteT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Unicode.html">Text Processing</a></div></div>  </div>
+<div class="title">BasicTextOStream&lt; CharT, ByteT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Text.html">Text Processing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -192,7 +192,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="textblock"><h3>template&lt;typename CharT, typename ByteT&gt;<br />
 class Pt::BasicTextOStream&lt; CharT, ByteT &gt;</h3>
 
-<p>This stream encodes an external character sequence using a codec. Writing to the stream will convert the written characters to the external character types in the external encoding. </p>
+<p>This stream encodes an external character sequence using a codec. Writing to the stream will convert the written characters to the external character types in the external encoding.</p>
+<p>The following example shows how to encode text to an UTF-8 byte sequence:</p>
+<div class="fragment"><div class="line">std::ostringstream oss;</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1String.html">Pt::String</a> s = L<span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
+<div class="line"><a class="code" href="classPt_1_1BasicTextOStream.html">Pt::TextOStream</a> tos(oss, <span class="keyword">new</span> <a class="code" href="classPt_1_1Utf8Codec.html">Pt::Utf8Codec</a>());</div>
+<div class="line">tos &lt;&lt; s;</div>
+<div class="line">tos.flush();</div>
+</div><!-- fragment --><p>The string stream serves as the output of the text stream, which uses a <a class="el" href="classPt_1_1Utf8Codec.html" title="Convert between unicode and UTF-8.">Pt::Utf8Codec</a> to encode text to UTF-8. The insertion operator can be used for strings or to format numbers. When all data has been written to the text stream, flush() needs to be called to finish off the output byte sequence. This is especially important for encodings with shift states. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae6d0d853fe63c822e1181e53d42b3a6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6d0d853fe63c822e1181e53d42b3a6c">&#9670;&nbsp;</a></span>BasicTextOStream() <span class="overload">[1/2]</span></h2>
@@ -284,8 +292,7 @@ class Pt::BasicTextOStream&lt; CharT, ByteT &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The target is detached and the buffer content is discarded. The codec is kept, if one was set previously. <br  />
- </p>
+<p>The target is detached and the buffer content is discarded. The codec is kept, if one was set previously. </p>
 
 </div>
 </div>
@@ -309,6 +316,9 @@ class Pt::BasicTextOStream&lt; CharT, ByteT &gt;</h3>
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Utf8Codec_html"><div class="ttname"><a href="classPt_1_1Utf8Codec.html">Pt::Utf8Codec</a></div><div class="ttdoc">Convert between unicode and UTF-8.</div><div class="ttdef"><b>Definition:</b> Utf8Codec.h:44</div></div>
+<div class="ttc" id="aclassPt_1_1BasicTextOStream_html"><div class="ttname"><a href="classPt_1_1BasicTextOStream.html">Pt::BasicTextOStream&lt; Char, char &gt;</a></div></div>
+<div class="ttc" id="aclassPt_1_1String_html"><div class="ttname"><a href="classPt_1_1String.html">Pt::String</a></div><div class="ttdoc">Unicode capable basic_string.</div><div class="ttdef"><b>Definition:</b> Api-String.h:63</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
