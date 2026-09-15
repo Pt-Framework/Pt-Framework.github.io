@@ -47791,8 +47791,8 @@
       <type>virtual void</type>
       <name>onPaintIcon</name>
       <anchorfile>classPt_1_1Forms_1_1ListBoxItem.html</anchorfile>
-      <anchor>a6e5368d67c6086490287490df231bad7</anchor>
-      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;iconRect, const PixmapSurface &amp;picture, const Gfx::PointF &amp;iconPos, const ListItemState &amp;state)</arglist>
+      <anchor>abd7f03a3cafa64090d82fa6ac69f41dc</anchor>
+      <arglist>(PaintContext &amp;context, const Gfx::RectF &amp;iconRect, const Pixmap &amp;picture, const Gfx::PointF &amp;iconPos, const ListItemState &amp;state)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -115596,13 +115596,6 @@
     <class kind="class">Pt::Forms::WindowType</class>
     <class kind="class">Pt::Forms::Workspace</class>
     <class kind="class">Pt::Forms::WorkspaceManager</class>
-    <member kind="typedef">
-      <type>Pixmap</type>
-      <name>PixmapSurface</name>
-      <anchorfile>namespacePt_1_1Forms.html</anchorfile>
-      <anchor>ab659bad416404a1faccfc63921c6ee26</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>Key::Modifiers</type>
       <name>operator|</name>
