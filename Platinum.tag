@@ -117460,6 +117460,7 @@
     <docanchor file="Pt-Core-Page.html" title="DateTime">Pt-Core-Page-DateTimeClass</docanchor>
     <docanchor file="Pt-Core-Page.html" title="Coroutines">Pt-Core-Page-Coroutines</docanchor>
     <docanchor file="Pt-Core-Page.html" title="Tasks">Pt-Core-Page-Task</docanchor>
+    <docanchor file="Pt-Core-Page.html" title="Awaitables">Pt-Core-Page-Awaitables</docanchor>
     <docanchor file="Pt-Core-Page.html" title="Generators">Pt-Core-Page-Generators</docanchor>
     <docanchor file="Pt-Core-Page.html" title="Allocators">Pt-Core-Page-Allocator</docanchor>
     <docanchor file="Pt-Core-Page.html" title="The Allocator Interface">Pt-Core-Page-AllocatorInterface</docanchor>

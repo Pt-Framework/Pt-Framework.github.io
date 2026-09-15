@@ -80,8 +80,39 @@
 <div class="title">Coroutines<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Pt::Task and Pt::Generator build on the C++20 coroutine facilities to provide cancellable, co_await-able tasks and lazily produced value sequences that integrate with the event loop; Pt::Awaiter and Pt::BasicAwaiter are the base classes used to implement custom co_await-able operations. </p>
-</div><!-- contents -->
+<p>A Task is a C++20 coroutine that produces a single result and can be cancelled while it is suspended. A Generator yields a sequence of values and may also suspend. Both types integrate with the event loop: awaitable operations resume the coroutine when I/O, timers or other loop-driven work complete.</p>
+<p>These types are available when the program is compiled as C++20 or later.</p>
+<p>Use a function that returns Task as an asynchronous unit of work. The coroutine starts suspended. Use Task::run() to begin execution on the current thread. After the task has finished, Task::done() is true and Task::result() returns the value.</p>
+<p>Inside a task, co_await suspends until an awaitable operation completes. Framework types already provide awaitables, for example Pt::System::Timer::waitAsync() for a one-shot delay. Custom operations derive from Awaiter or BasicAwaiter.</p>
+<p>I/O awaitables typically resume from the event loop. The usual pairing is to start the task with Task::run() and then run the loop so completions can resume the coroutine.</p>
+<p>Destroying a task or calling Task::cancel() aborts the pending awaitable and destroys the coroutine frame. Nested tasks cancel the inner pending operation the same way. A generator cancels in the same manner.</p>
+<p>Exceptions that leave a coroutine body are stored. They are rethrown by Task::result() and by co_await of that task.</p>
+<p>The following example starts a task that waits for a timer and then exits the loop:</p>
+<div class="fragment"><div class="line">Pt::Task&lt;&gt; delayThenExit(<a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop,</div>
+<div class="line">                         <a class="code" href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a>&amp; timer)</div>
+<div class="line">{</div>
+<div class="line">    co_await timer.waitAsync(1000);</div>
+<div class="line">    loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">exit</a>();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a> timer;</div>
+<div class="line">    timer.<a class="code" href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">setActive</a>(loop);</div>
+<div class="line"> </div>
+<div class="line">    Pt::Task&lt;&gt; task = delayThenExit(loop, timer);</div>
+<div class="line">    task.run();</div>
+<div class="line">    <span class="keywordflow">return</span> loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:79</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a1d0ec20a053d1eb6d987d1741e31e7b6"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">Pt::System::Timer::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;loop)</div><div class="ttdoc">Sets the used event loop.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a358d2e2397ca11ccd17553e3c40e7901"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">Pt::System::EventLoop::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">Stops the loop.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> EventLoop.h:83</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:67</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

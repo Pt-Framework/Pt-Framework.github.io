@@ -80,20 +80,18 @@
 <div class="title">Core Module </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This chapter covers program options, application settings and events, fixed-size integers, dates and times, atomic operations, coroutines, the core module's custom allocators, its unicode text processing, its signal and delegate callback mechanism, its type traits and conversion utilities, and its serialization framework.</p>
-<p>The core module is the basis for all other modules of the framework. It has no dependency on any system specific libraries except the standard C++ library. Applications and other modules build on the areas covered by the core module:</p>
+<div class="textblock"><p>The core module is the basis for all other modules of the framework. It has no dependency on any system specific libraries except the standard C++ library.</p>
+<p>This chapter covers program options, application settings and events, fixed-size integers, dates and times, atomic operations, coroutines, the core module's custom allocators, its unicode text processing, its signal and delegate callback mechanism, its type traits and conversion utilities, and its serialization framework.</p>
 <ul>
-<li><a class="el" href="group__Pt-Basics.html">Basic Types</a> provides program options, application settings, a type-safe event base class and a few general-purpose helper types.</li>
-<li><a class="el" href="group__Pt-IntTypes.html">Fixed-Size Integers</a> provides fixed-size, platform-independent integer types.</li>
-<li><a class="el" href="group__Pt-DateTime.html">Dates and Times</a> provides durations and points in calendar time.</li>
-<li><a class="el" href="group__Pt-Atomics.html">Atomic Operations</a> provides lock-free atomic integer and pointer operations.</li>
-<li><a class="el" href="group__Pt-Coroutines.html">Coroutines</a> provides cancellable, co_await-able tasks and lazily produced value sequences.</li>
-<li><a class="el" href="group__Pt-Allocator.html">Allocators</a> provides custom allocation strategies for optimized memory management.</li>
-<li><a class="el" href="group__Pt-Text.html">Text Processing</a> extends the string and localization support of the C++ standard library to work with unicode characters, strings, encodings and regular expressions.</li>
-<li><a class="el" href="group__Pt-Signals.html">Signals and Delegates</a> provides a type-safe callback mechanism for connecting signals to slots and delegates.</li>
-<li><a class="el" href="group__Pt-TypeTraits.html">Type Traits and Information</a> provides compile-time type traits and runtime type information.</li>
-<li><a class="el" href="group__Pt-Convert.html">Conversions</a> provides conversion between strings, numbers and byte orders.</li>
-<li><a class="el" href="group__Pt-Serialization.html">Serialization</a> composes and decomposes types to text or binary formats.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Basics">Basic Types</a> covers program options, application settings, events, fixed-size integers and atomic operations.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-DateTime">Dates and Times</a> covers dates and times.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Coroutines">Coroutines</a> covers tasks, awaitables and generators.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Allocator">Allocators</a> covers custom allocation strategies.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Text">Text Processing</a> covers unicode text processing and regular expressions.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Signals">Signals and Delegates</a> covers signals, slots and delegates.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-TypeTraits">Type Traits and Information</a> covers type traits and type information.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Convert">Conversions</a> covers conversion utilities.</li>
+<li><a class="el" href="Pt-Core-Page.html#Pt-Core-Page-Serialization">Serialization</a> covers serialization.</li>
 </ul>
 <h1><a class="anchor" id="Pt-Core-Page-Basics"></a>
 Basic Types</h1>
@@ -237,9 +235,36 @@ DateTime</h2>
 <p>Pt::DateTime combines a <a class="el" href="classPt_1_1Date.html" title="Date expressed in year, month, and day.">Pt::Date</a> and a <a class="el" href="classPt_1_1Time.html" title="Time expressed in hours, minutes, seconds and milliseconds.">Pt::Time</a> object into one instance. It can either be constructed from the corrsponding numeric values or a string in ISO format. The date and time parts can be accessed with date() and time(). When two DateTimes are compared, one is considered less, if its date is earlier or if the time is earlier in case of equal dates. A Pt::Timespan can be added or subtracted from a DateTime and this is also the result when two DateTimes are subtracted. To avoid the exceptions thrown by the underlying time and date, isValid() can be used to check numeric date and time values.</p>
 <h1><a class="anchor" id="Pt-Core-Page-Coroutines"></a>
 Coroutines</h1>
-<p>Pt::Task and Pt::Generator build on the C++20 coroutine facilities to provide cancellable, co_await-able tasks and lazily produced value sequences that integrate with the event loop; Pt::Awaiter and Pt::BasicAwaiter are the base classes used to implement custom co_await-able operations.</p>
-<h2><a class="anchor" id="Pt-Core-Page-Task"></a>
+<p>A Task is a C++20 coroutine that produces a single result and can be cancelled while it is suspended. A Generator yields a sequence of values and may also suspend. Both types integrate with the event loop: awaitable operations resume the coroutine when I/O, timers or other loop-driven work complete.</p>
+<p>These types are available when the program is compiled as C++20 or later.</p>
+<p>Use a function that returns Task as an asynchronous unit of work. The coroutine starts suspended. Use Task::run() to begin execution on the current thread. After the task has finished, Task::done() is true and Task::result() returns the value.</p>
+<p>Inside a task, co_await suspends until an awaitable operation completes. Framework types already provide awaitables, for example Pt::System::Timer::waitAsync() for a one-shot delay. Custom operations derive from Awaiter or BasicAwaiter.</p>
+<p>I/O awaitables typically resume from the event loop. The usual pairing is to start the task with Task::run() and then run the loop so completions can resume the coroutine.</p>
+<p>Destroying a task or calling Task::cancel() aborts the pending awaitable and destroys the coroutine frame. Nested tasks cancel the inner pending operation the same way. A generator cancels in the same manner.</p>
+<p>Exceptions that leave a coroutine body are stored. They are rethrown by Task::result() and by co_await of that task.</p>
+<p>The following example starts a task that waits for a timer and then exits the loop:</p>
+<div class="fragment"><div class="line">Pt::Task&lt;&gt; delayThenExit(<a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop,</div>
+<div class="line">                         <a class="code" href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a>&amp; timer)</div>
+<div class="line">{</div>
+<div class="line">    co_await timer.waitAsync(1000);</div>
+<div class="line">    loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">exit</a>();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a> timer;</div>
+<div class="line">    timer.<a class="code" href="classPt_1_1System_1_1Timer.html#a1d0ec20a053d1eb6d987d1741e31e7b6">setActive</a>(loop);</div>
+<div class="line"> </div>
+<div class="line">    Pt::Task&lt;&gt; task = delayThenExit(loop, timer);</div>
+<div class="line">    task.run();</div>
+<div class="line">    <span class="keywordflow">return</span> loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="Pt-Core-Page-Task"></a>
 Tasks</h2>
+<h2><a class="anchor" id="Pt-Core-Page-Awaitables"></a>
+Awaitables</h2>
 <h2><a class="anchor" id="Pt-Core-Page-Generators"></a>
 Generators</h2>
 <h1><a class="anchor" id="Pt-Core-Page-Allocator"></a>
@@ -698,6 +723,7 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html_a56c611dce085c482763cf72e18284146"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html#a56c611dce085c482763cf72e18284146">Pt::System::Timer::timeout</a></div><div class="ttdeci">Signal &amp; timeout()</div><div class="ttdoc">Notifies about interval timeouts.</div><div class="ttdef"><b>Definition:</b> Timer.h:161</div></div>
 <div class="ttc" id="aclassPt_1_1Date_html_abb486a3a4ba29e5e1425f37dad28ff79"><div class="ttname"><a href="classPt_1_1Date.html#abb486a3a4ba29e5e1425f37dad28ff79">Pt::Date::operator&lt;&lt;=</a></div><div class="ttdeci">void operator&lt;&lt;=(SerializationInfo &amp;si, const Date &amp;date)</div><div class="ttdoc">Serialize a date.</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_html_ae73562d96ab1e249b02b6026c3accfa5"><div class="ttname"><a href="classPt_1_1Settings.html#ae73562d96ab1e249b02b6026c3accfa5">Pt::Settings::load</a></div><div class="ttdeci">void load(std::basic_istream&lt; Pt::Char &gt; &amp;is)</div><div class="ttdoc">Loads settings from a input stream.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
 <div class="ttc" id="aclassPt_1_1PageAllocator_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classPt_1_1PageAllocator.html#ac8bb3912a3ce86b15842e79d0b421204">Pt::PageAllocator::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Releases all memory.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:79</div></div>
 <div class="ttc" id="astructPt_1_1Char_html_aedf2799de331bdecfc9f3b30218f0f19"><div class="ttname"><a href="structPt_1_1Char.html#aedf2799de331bdecfc9f3b30218f0f19">Pt::Char::isalpha</a></div><div class="ttdeci">int isalpha(const Char &amp;ch)</div><div class="ttdoc">Checks whether ch is a alphabetic character.</div><div class="ttdef"><b>Definition:</b> String.h:147</div></div>
@@ -727,6 +753,7 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1Regex_html"><div class="ttname"><a href="classPt_1_1Regex.html">Pt::Regex</a></div><div class="ttdoc">Regular Expressions for Unicode Strings.</div><div class="ttdef"><b>Definition:</b> Regex.h:174</div></div>
 <div class="ttc" id="aclassPt_1_1RegexSMatch_html_a49fcd5cf828f06dfe0aa8abdcd440952"><div class="ttname"><a href="classPt_1_1RegexSMatch.html#a49fcd5cf828f06dfe0aa8abdcd440952">Pt::RegexSMatch::str</a></div><div class="ttdeci">Pt::String str(std::size_t n=0) const</div><div class="ttdoc">Returns the nth match.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a358d2e2397ca11ccd17553e3c40e7901"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">Pt::System::EventLoop::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">Stops the loop.</div></div>
 <div class="ttc" id="aclassPt_1_1SerializationInfo_html_aad8ed82abfa87fd7cf07acaad78f7a64"><div class="ttname"><a href="classPt_1_1SerializationInfo.html#aad8ed82abfa87fd7cf07acaad78f7a64">Pt::SerializationInfo::setUInt32</a></div><div class="ttdeci">void setUInt32(Pt::uint32_t n)</div><div class="ttdoc">Set to 32-bit unsigned integer value.</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html_a7652e7cc10c31f0df5d5b27a1d5389c8"><div class="ttname"><a href="classPt_1_1Signal.html#a7652e7cc10c31f0df5d5b27a1d5389c8">Pt::Signal::send</a></div><div class="ttdeci">void send(As... args)</div><div class="ttdoc">Invlokes all slots.</div><div class="ttdef"><b>Definition:</b> Signal.h:237</div></div>
 <div class="ttc" id="agroup__Pt-Convert_html_ga630b14e1adebb2ab0e59ea1af2f7c3ac"><div class="ttname"><a href="group__Pt-Convert.html#ga630b14e1adebb2ab0e59ea1af2f7c3ac">Pt::swab</a></div><div class="ttdeci">int8_t swab(int8_t value)</div><div class="ttdoc">Swaps the byteorder of an int32_t.</div><div class="ttdef"><b>Definition:</b> Byteorder.h:133</div></div>
@@ -737,6 +764,7 @@ Serialization</h1>
 <div class="ttc" id="agroup__Pt-Convert_html_gab8c23f359723f97773055b3c68f76f5d"><div class="ttname"><a href="group__Pt-Convert.html#gab8c23f359723f97773055b3c68f76f5d">Pt::formatFloat</a></div><div class="ttdeci">OutIterT formatFloat(OutIterT it, T d, const FormatT &amp;fmt, int precision, bool fixed=false)</div><div class="ttdoc">Formats a floating point value in a given format.</div><div class="ttdef"><b>Definition:</b> Convert.h:733</div></div>
 <div class="ttc" id="aclassPt_1_1Timespan_html"><div class="ttname"><a href="classPt_1_1Timespan.html">Pt::Timespan</a></div><div class="ttdoc">Represents time spans in microsecond resolution.</div><div class="ttdef"><b>Definition:</b> Timespan.h:63</div></div>
 <div class="ttc" id="aclassPt_1_1Allocator_html"><div class="ttname"><a href="classPt_1_1Allocator.html">Pt::Allocator</a></div><div class="ttdoc">Allocator interface.</div><div class="ttdef"><b>Definition:</b> Allocator.h:82</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> EventLoop.h:83</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_html_a727e31ed03ce7b16588df67c1c41d91b"><div class="ttname"><a href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">Pt::Settings::entry</a></div><div class="ttdeci">ConstEntry entry(const std::string &amp;name) const</div><div class="ttdoc">Returns a top level entry.</div><div class="ttdef"><b>Definition:</b> Settings.h:591</div></div>
 <div class="ttc" id="agroup__Pt-Convert_html_ga9ca4001d8fc13efc5917f2ac1058c69c"><div class="ttname"><a href="group__Pt-Convert.html#ga9ca4001d8fc13efc5917f2ac1058c69c">Pt::parseFloat</a></div><div class="ttdeci">InIterT parseFloat(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</div><div class="ttdoc">Parses a floating point value in a given format.</div><div class="ttdef"><b>Definition:</b> Convert.h:942</div></div>
 <div class="ttc" id="aclassPt_1_1String_html_a7fbef4df9f9ad1197feb4965b6d7ab30"><div class="ttname"><a href="classPt_1_1String.html#a7fbef4df9f9ad1197feb4965b6d7ab30">Pt::String::narrow</a></div><div class="ttdeci">std::string narrow(char dfault='?') const</div><div class="ttdoc">Narrow string to 8-bit.</div></div>
@@ -745,6 +773,7 @@ Serialization</h1>
 <div class="ttc" id="aclassPt_1_1String_html"><div class="ttname"><a href="classPt_1_1String.html">Pt::String</a></div><div class="ttdoc">Unicode capable basic_string.</div><div class="ttdef"><b>Definition:</b> Api-String.h:63</div></div>
 <div class="ttc" id="aclassPt_1_1Connection_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">Pt::Connection::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the connection.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Application_html"><div class="ttname"><a href="classPt_1_1System_1_1Application.html">Pt::System::Application</a></div><div class="ttdoc">Console applications without a GUI.</div><div class="ttdef"><b>Definition:</b> Application.h:55</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:67</div></div>
 <div class="ttc" id="aclassPt_1_1Time_html_a540b8ca7e1ba4702338644495a3cddc3"><div class="ttname"><a href="classPt_1_1Time.html#a540b8ca7e1ba4702338644495a3cddc3">Pt::Time::fromIsoString</a></div><div class="ttdeci">static Time fromIsoString(const std::string &amp;s)</div><div class="ttdoc">Convert from an ISO time string.</div><div class="ttdef"><b>Definition:</b> Time.h:273</div></div>
 <div class="ttc" id="aclassPt_1_1SerializationInfo_html"><div class="ttname"><a href="classPt_1_1SerializationInfo.html">Pt::SerializationInfo</a></div><div class="ttdoc">Represents arbitrary types during serialization.</div><div class="ttdef"><b>Definition:</b> SerializationInfo.h:59</div></div>
 <div class="ttc" id="aclassPt_1_1Delegate_html_abd3f354e905203c9d25f76b549a59aea"><div class="ttname"><a href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">Pt::Delegate::call</a></div><div class="ttdeci">R call(As... args)</div><div class="ttdoc">Calls the slot connected to the Delegate.</div><div class="ttdef"><b>Definition:</b> Delegate.h:236</div></div>
