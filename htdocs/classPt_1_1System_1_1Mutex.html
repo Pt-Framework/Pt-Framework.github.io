@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Mutex Class Reference</div>  </div>
+<div class="title">Mutex Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,8 +118,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:adde362fbd72cd153b248482d6eb00c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Mutex is a mutual exclusion device. It is used to synchronize the access to data which is accessed by more than one thread or process at the same time. Mutexes are not recursive, that is the same thread can not lock a mutex multiple times without deadlocking. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>Mutex serializes access to shared data. <a class="el" href="classPt_1_1System_1_1Mutex.html#aa81aed607133209dade63a226818224d" title="Lock the mutex.">lock()</a> waits if another thread holds it. The same thread must not lock it again. The mutex must be unlocked when it is destroyed.</p>
+<p>MutexLock locks in the constructor and unlocks in the destructor, including during stack unwinding.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Counter</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        Counter()</div>
+<div class="line">        : _value(0)</div>
+<div class="line">        { }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> increment()</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code" href="classPt_1_1System_1_1MutexLock.html">Pt::System::MutexLock</a> <a class="code" href="classPt_1_1System_1_1Mutex.html#aa81aed607133209dade63a226818224d">lock</a>(_mutex);</div>
+<div class="line">            ++_value;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span>:</div>
+<div class="line">        <a class="code" href="classPt_1_1System_1_1Mutex.html">Pt::System::Mutex</a> _mutex;</div>
+<div class="line">        <span class="keywordtype">int</span> _value;</div>
+<div class="line">};</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a205e2c334b25cb96e4f1303a4fde6b0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a205e2c334b25cb96e4f1303a4fde6b0c">&#9670;&nbsp;</a></span>~Mutex()</h2>
 
@@ -194,6 +212,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1System_1_1MutexLock_html"><div class="ttname"><a href="classPt_1_1System_1_1MutexLock.html">Pt::System::MutexLock</a></div><div class="ttdoc">Scoped lock for a Mutex.</div><div class="ttdef"><b>Definition:</b> Mutex.h:127</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Mutex_html"><div class="ttname"><a href="classPt_1_1System_1_1Mutex.html">Pt::System::Mutex</a></div><div class="ttdoc">Mutual exclusion device.</div><div class="ttdef"><b>Definition:</b> Mutex.h:73</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Mutex_html_aa81aed607133209dade63a226818224d"><div class="ttname"><a href="classPt_1_1System_1_1Mutex.html#aa81aed607133209dade63a226818224d">Pt::System::Mutex::lock</a></div><div class="ttdeci">void lock()</div><div class="ttdoc">Lock the mutex.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

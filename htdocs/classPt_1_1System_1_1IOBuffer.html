@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">IOBuffer Class Reference</div>  </div>
+<div class="title">IOBuffer Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-IO.html">I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="IOBuffer_8h_source.html">Pt/System/IOBuffer.h</a>&gt;</code></p>
 
-<p>Implements std::streambuf for I/O devices.  
-</p>
+<p>Stream buffer for an IODevice.  
+ <a href="classPt_1_1System_1_1IOBuffer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1BasicStreamBuffer.html">BasicStreamBuffer&lt; char &gt;</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 <table class="memberdecls">
@@ -149,6 +149,10 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IOBuffer.html#a27d15dc56498ede0bb029d7a17c1f4e9">beginWrite</a> ()</td></tr>
 <tr class="memdesc:a27d15dc56498ede0bb029d7a17c1f4e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins to write buffered data to the I/O device. <br /></td></tr>
 <tr class="separator:a27d15dc56498ede0bb029d7a17c1f4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec7d50df5d6301755f0f1580c75935b"><td class="memItemLeft" align="right" valign="top"><a id="a5ec7d50df5d6301755f0f1580c75935b"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IOBuffer.html#a5ec7d50df5d6301755f0f1580c75935b">endWrite</a> ()</td></tr>
+<tr class="memdesc:a5ec7d50df5d6301755f0f1580c75935b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends writing buffered data to the I/O device. <br /></td></tr>
+<tr class="separator:a5ec7d50df5d6301755f0f1580c75935b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1585484cec92cacd15885c798456205"><td class="memItemLeft" align="right" valign="top"><a id="ad1585484cec92cacd15885c798456205"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IOBuffer.html#ad1585484cec92cacd15885c798456205">isReading</a> () const</td></tr>
 <tr class="memdesc:ad1585484cec92cacd15885c798456205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a read operation is running. <br /></td></tr>
@@ -173,7 +177,11 @@ virtual std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a5d4baca65e539138ca8fd821779d1484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of characters buffered for output. <br /></td></tr>
 <tr class="separator:a5d4baca65e539138ca8fd821779d1484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>IOBuffer is a std::streambuf that reads and writes an IODevice. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#ac895ebdebc8c755de6bb6aa83029b7e8" title="Attach to I/O device.">attach()</a> binds the buffer to a device. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#ac295bade8aee589f6718dfa79edc2a34" title="Detach from I/O device.">detach()</a> unbinds it. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#a482de369e242eac519fd5e208a37320c" title="Discards the buffer.">discard()</a> drops buffered bytes. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#ad20897c5c8bd47f5d4005989bead0e55" title="Discards and detaches.">reset()</a> discards and detaches.</p>
+<p><a class="el" href="classPt_1_1System_1_1IOBuffer.html#a3949fef47b46b258d04173ad17b19a17" title="Begins to read from the I/O device into the buffer.">beginRead()</a> fills the get area from the device. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#a27d15dc56498ede0bb029d7a17c1f4e9" title="Begins to write buffered data to the I/O device.">beginWrite()</a> drains the put area to the device. Those transfers run through the device's EventLoop. inputReady and outputReady fire when a transfer finishes. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#a178c8460c175bc35851ae0d4903c6e75" title="Ends to read.">endRead()</a> and <a class="el" href="classPt_1_1System_1_1IOBuffer.html#a5ec7d50df5d6301755f0f1580c75935b" title="Ends writing buffered data to the I/O device.">endWrite()</a> complete it. <a class="el" href="classPt_1_1System_1_1IOBuffer.html#ad1585484cec92cacd15885c798456205" title="Returns true if a read operation is running.">isReading()</a> and <a class="el" href="classPt_1_1System_1_1IOBuffer.html#a181a6a67a97d760db63a2c3294ed22e3" title="Returns true if a write operation is running.">isWriting()</a> report a transfer in progress.</p>
+<p>IStream, OStream, and IOStream own an IOBuffer. Formatted extraction and insertion then use the attached device. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -84,7 +84,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">IODevice Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">IODevice Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-IO.html">I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -95,7 +95,7 @@
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a>.</p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Net_1_1TcpSocket.html">TcpSocket</a>, <a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a>, <a class="el" href="classPt_1_1System_1_1FileDevice.html">FileDevice</a>, and <a class="el" href="classPt_1_1System_1_1SerialDevice.html">SerialDevice</a>.</p>
+<p>Inherited by WebSocket, <a class="el" href="classPt_1_1Net_1_1TcpSocket.html">TcpSocket</a>, <a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a>, <a class="el" href="classPt_1_1System_1_1FileDevice.html">FileDevice</a>, and <a class="el" href="classPt_1_1System_1_1SerialDevice.html">SerialDevice</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -220,8 +220,35 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a3fc677f388552a08fec9fcc6f378074d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class serves as the base class for all kinds of I/O devices. The interface supports synchronous and asynchronous I/O operations, peeking and seeking. I/O buffers and I/O streams within the Pt framework use IODevices as endpoints and therefore fully feaured standard C++ compliant IOStreams can be constructed at runtime. Examples of IODevices are the <a class="el" href="classPt_1_1System_1_1SerialDevice.html" title="Serial device.">SerialDevice</a>, the endpoints of a <a class="el" href="classPt_1_1System_1_1Pipe.html" title="A Pair of IODevices that form a half-duplex pipe.">Pipe</a> or the <a class="el" href="classPt_1_1System_1_1FileDevice.html" title="Read and write to files.">FileDevice</a>. An <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">EventLoop</a> can be used to wait on activity on an IODevice. The signals inputReady or outputReady of the IODevice indicate that an I/O operation has finished. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>IODevice is the endpoint for I/O. It is a Selectable. A file, a pipe end, and a serial port are IODevice types. I/O buffers and I/O streams use this endpoint, so a standard C++ stream can be built at runtime.</p>
+<p><a class="el" href="classPt_1_1System_1_1IODevice.html#a8f0892c6bf02c81910a94fcdddee294e" title="Read data from I/O device.">read()</a> and <a class="el" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed" title="Write data to I/O device.">write()</a> transfer bytes and may return fewer than requested. They throw IOError on failure. When the device reaches the end of the stream, <a class="el" href="classPt_1_1System_1_1IODevice.html#a192addeb70d883e2f1a7b1bb3c07a7c7" title="Returns if the device has reached EOF.">isEof()</a> is true. <a class="el" href="classPt_1_1System_1_1IODevice.html#a4e6264069bc112d5f7a636525f88a396" title="Sets the timeout for blocking I/O in milliseconds.">setTimeout()</a> limits how long a blocking transfer waits. <a class="el" href="classPt_1_1System_1_1IODevice.html#a5ae591df94fc66ccb85cbb6565368bca" title="Closes the device.">close()</a> releases the endpoint.</p>
+<p><a class="el" href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20" title="Begins to read data.">beginRead()</a> and <a class="el" href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306" title="Begins to write data.">beginWrite()</a> start an asynchronous transfer. The device must be attached to an EventLoop with <a class="el" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda" title="Sets the parent loop, so that operations can be run.">setActive()</a>. When the transfer finishes, inputReady or outputReady is emitted. <a class="el" href="classPt_1_1System_1_1IODevice.html#a178c8460c175bc35851ae0d4903c6e75" title="Ends reading data.">endRead()</a> and <a class="el" href="classPt_1_1System_1_1IODevice.html#a5ec7d50df5d6301755f0f1580c75935b" title="Ends writing data.">endWrite()</a> complete the operation and return the number of bytes. Only one read and one write may run at a time.</p>
+<p>Some devices can seek. <a class="el" href="classPt_1_1System_1_1IODevice.html#ab55427f1222dc5fffd8f2b49bc1fd6fd" title="Returns true if device is seekable.">seekable()</a> reports that. <a class="el" href="classPt_1_1System_1_1IODevice.html#a7e569ddbce42e3d779ae412450a61603" title="Moves the read position to the given offset.">seek()</a> and <a class="el" href="classPt_1_1System_1_1IODevice.html#aaf874b410407f8e3ecf47cb27630f514" title="Returns the current I/O position.">position()</a> throw IOError when the device cannot seek. <a class="el" href="classPt_1_1System_1_1IODevice.html#a8c4ee9c81e1c1d588edc57043f44b677" title="Peek data from I/O device without consuming them.">peek()</a> copies bytes without consuming them. <a class="el" href="classPt_1_1System_1_1IODevice.html#ad55f80ed3cd8b6c4f247763b747016af" title="Synchronize device.">sync()</a> commits written data to the device.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Reader</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        <span class="keyword">explicit</span> Reader(<a class="code" href="classPt_1_1System_1_1IODevice.html">Pt::System::IODevice</a>&amp; device)</div>
+<div class="line">        : _device(&amp;device)</div>
+<div class="line">        {</div>
+<div class="line">            _device-&gt;inputReady() += Pt::slot(*<span class="keyword">this</span>, &amp;Reader::onInput);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> begin()</div>
+<div class="line">        {</div>
+<div class="line">            _device-&gt;beginRead(_buffer, <span class="keyword">sizeof</span>(_buffer));</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> onInput(<a class="code" href="classPt_1_1System_1_1IODevice.html">Pt::System::IODevice</a>&amp; device)</div>
+<div class="line">        {</div>
+<div class="line">            device.<a class="code" href="classPt_1_1System_1_1IODevice.html#a178c8460c175bc35851ae0d4903c6e75">endRead</a>();</div>
+<div class="line">            device.<a class="code" href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">beginRead</a>(_buffer, <span class="keyword">sizeof</span>(_buffer));</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span>:</div>
+<div class="line">        <a class="code" href="classPt_1_1System_1_1IODevice.html">Pt::System::IODevice</a>* _device;</div>
+<div class="line">        <span class="keywordtype">char</span> _buffer[256];</div>
+<div class="line">};</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f0892c6bf02c81910a94fcdddee294e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f0892c6bf02c81910a94fcdddee294e">&#9670;&nbsp;</a></span>read()</h2>
 
@@ -430,7 +457,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">EventLoop</a> and data becomes available. </p>
+<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Event loop of a thread or process.">EventLoop</a> and data becomes available. </p>
 
 </div>
 </div>
@@ -448,11 +475,14 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">EventLoop</a> and the device is ready to write data. </p>
+<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Event loop of a thread or process.">EventLoop</a> and the device is ready to write data. </p>
 
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a178c8460c175bc35851ae0d4903c6e75"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a178c8460c175bc35851ae0d4903c6e75">Pt::System::IODevice::endRead</a></div><div class="ttdeci">std::size_t endRead()</div><div class="ttdoc">Ends reading data.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ac693ab150b948f96c8dd8f485274fb20"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">Pt::System::IODevice::beginRead</a></div><div class="ttdeci">void beginRead(char *buffer, std::size_t n)</div><div class="ttdoc">Begins to read data.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html">Pt::System::IODevice</a></div><div class="ttdoc">Endpoint for I/O operations.</div><div class="ttdef"><b>Definition:</b> IODevice.h:96</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

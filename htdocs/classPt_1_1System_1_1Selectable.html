@@ -84,18 +84,18 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Selectable Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Selectable Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-EventLoop.html">Event Loops</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Selectable_8h_source.html">Pt/System/Selectable.h</a>&gt;</code></p>
 
-<p>Dispatches operations through an event loop.  
-</p>
+<p>Operation that runs through an event loop.  
+ <a href="classPt_1_1System_1_1Selectable.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Lua_1_1Script.html">Script</a>, <a class="el" href="classPt_1_1Net_1_1TcpServer.html">TcpServer</a>, <a class="el" href="classPt_1_1System_1_1AsyncYield.html">AsyncYield</a><code> [private]</code>, <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a>, and IONotifier.</p>
+<p>Inherited by <a class="el" href="classPt_1_1Lua_1_1Script.html">Script</a>, <a class="el" href="classPt_1_1Net_1_1TcpServer.html">TcpServer</a>, <a class="el" href="classPt_1_1System_1_1AsyncYield.html">AsyncYield</a><code> [private]</code>, <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a>, and <a class="el" href="classPt_1_1System_1_1IONotifier.html">IONotifier</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,7 +151,11 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a3fc677f388552a08fec9fcc6f378074d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if ready and run. <br /></td></tr>
 <tr class="separator:a3fc677f388552a08fec9fcc6f378074d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Selectable is the attachment between an asynchronous operation and an EventLoop. <a class="el" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda" title="Sets the parent loop, so that operations can be run.">setActive()</a> attaches it. The loop then monitors the operation. <a class="el" href="classPt_1_1System_1_1Selectable.html#ac295bade8aee589f6718dfa79edc2a34" title="Remove from event loop and cancels outstanding operations.">detach()</a> removes it and cancels work that is still running. <a class="el" href="classPt_1_1System_1_1Selectable.html#a02d5fa6b14e221f3012a794b905be166" title="Cancels all operations.">cancel()</a> cancels without detaching. <a class="el" href="classPt_1_1System_1_1Selectable.html#a36ddcfd5046634b9b4fa5c5bc00b29bb" title="Returns the used event loop.">parent()</a> is the loop.</p>
+<p><a class="el" href="classPt_1_1System_1_1Selectable.html#a149ad6701e3e2414cb566bb414029841" title="Run operation if it is ready.">run()</a> executes the operation when the loop has marked it ready. <a class="el" href="classPt_1_1System_1_1Selectable.html#abcca23e6afadfade8c5d63ee62b49bfd" title="Posts this selectable to its event loop from any thread.">post()</a> asks the loop to run it from any thread. IODevice and IONotifier are selectables. Timer is not; it registers with the loop on its own.</p>
+<p>The loop does not own the selectable. The caller keeps it alive while it is attached. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -85,13 +85,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">AttachedThread Class Reference</div>  </div>
+<div class="title">AttachedThread Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Thread_8h_source.html">Pt/System/Thread.h</a>&gt;</code></p>
 
-<p>A Joinable thread.  
+<p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> that joins in its destructor.  
  <a href="classPt_1_1System_1_1AttachedThread.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1Thread.html">Thread</a>.</p>
@@ -158,29 +158,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a3cfabfe1ccc5086cc5753eb45afc4658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>AttachedThreads are threads, which are managed by the creator, and are normally created on the stack. The creator must wait, until the thread terminates either explicitly by calling <a class="el" href="classPt_1_1System_1_1Thread.html#a6c7abfff648dad193674fc432ad4840d" title="Wait for the thread to finish execution.">join()</a> or implicitly by the destructor. The life-time of the callable object must exceed the life-time of the thread. Mind the order of destruction if the AttachedThread is a member variable of a class.</p>
-<p>Example: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>Operation</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordtype">void</span> run()</div>
-<div class="line">    {</div>
-<div class="line">        <span class="comment">// implement, whatever needs to be done in parallel</span></div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">{</div>
-<div class="line">    Operation op;</div>
-<div class="line">    <a class="code" href="classPt_1_1System_1_1AttachedThread.html#aa603c05e595f69303e5b0129ab8cabf6">AttachedThread</a> thread( Pt::callable(op, &amp;Operation::run) );</div>
-<div class="line">    thread.start();</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// the thread runs and we can do something else in parallel</span></div>
-<div class="line"> </div>
-<div class="line">    doMoreWork();</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// AttachedThread&#39;s destructor joins the thread</span></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<div class="textblock"><p>AttachedThread is a Thread that calls <a class="el" href="classPt_1_1System_1_1Thread.html#a6c7abfff648dad193674fc432ad4840d" title="Wait for the thread to finish execution.">join()</a> when it is destroyed, unless <a class="el" href="classPt_1_1System_1_1Thread.html#a6c7abfff648dad193674fc432ad4840d" title="Wait for the thread to finish execution.">join()</a> already ran. The callable must outlive the thread. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&nbsp;</a></span>State</h2>
 
@@ -203,7 +182,7 @@ Static Public Member Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a0e73e048b83849a411148a8dddc6dfcb"></a>Ready&#160;</td><td class="fielddoc"><p>Not started yet. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2f5f2c4a8c4f4f0519d503dcdfbf55cb"></a>Running&#160;</td><td class="fielddoc"><p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Platform independent threads.">Thread</a> is running. </p>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2f5f2c4a8c4f4f0519d503dcdfbf55cb"></a>Running&#160;</td><td class="fielddoc"><p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> is running. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a46c8473c20dee3a0c0cd09ffb324aee3"></a>Joined&#160;</td><td class="fielddoc"><p>Joined with parent thread. </p>
 </td></tr>
@@ -336,7 +315,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This starts the execution of the thread by calling the thread entry. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This starts the execution of the thread by calling the thread entry. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -362,7 +341,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This function is meant to be called from within a thread to leave the thread at once. Implicitly called when the thread entry is left. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This function is meant to be called from within a thread to leave the thread at once. Implicitly called when the thread entry is left. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -388,7 +367,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This function is meant to be called from within a thread to give up the CPU to other threads. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This function is meant to be called from within a thread to give up the CPU to other threads. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -415,12 +394,11 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The calling thread sleeps for <em>ms</em> milliseconds. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>The calling thread sleeps for <em>ms</em> milliseconds. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1System_1_1AttachedThread_html_aa603c05e595f69303e5b0129ab8cabf6"><div class="ttname"><a href="classPt_1_1System_1_1AttachedThread.html#aa603c05e595f69303e5b0129ab8cabf6">Pt::System::AttachedThread::AttachedThread</a></div><div class="ttdeci">AttachedThread()</div><div class="ttdoc">Default Constructor.</div><div class="ttdef"><b>Definition:</b> Thread.h:216</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

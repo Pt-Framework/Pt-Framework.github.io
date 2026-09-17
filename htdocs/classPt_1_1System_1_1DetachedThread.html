@@ -86,13 +86,13 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">DetachedThread Class Reference</div>  </div>
+<div class="title">DetachedThread Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Thread_8h_source.html">Pt/System/Thread.h</a>&gt;</code></p>
 
-<p>A detached thread.  
+<p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> that runs without a waiter.  
  <a href="classPt_1_1System_1_1DetachedThread.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1Thread.html">Thread</a>.</p>
@@ -154,34 +154,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:aed2d208f4d304cc6def0a15b73f115bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a detached thread.  <a href="classPt_1_1System_1_1DetachedThread.html#aed2d208f4d304cc6def0a15b73f115bf">More...</a><br /></td></tr>
 <tr class="separator:aed2d208f4d304cc6def0a15b73f115bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72fcb26a14f6beb1c3fbace9ab3e7dbb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1DetachedThread.html#a72fcb26a14f6beb1c3fbace9ab3e7dbb">run</a> ()</td></tr>
-<tr class="memdesc:a72fcb26a14f6beb1c3fbace9ab3e7dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Thread.html" title="Platform independent threads.">Thread</a> entry method.  <a href="classPt_1_1System_1_1DetachedThread.html#a72fcb26a14f6beb1c3fbace9ab3e7dbb">More...</a><br /></td></tr>
+<tr class="memdesc:a72fcb26a14f6beb1c3fbace9ab3e7dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> entry method.  <a href="classPt_1_1System_1_1DetachedThread.html#a72fcb26a14f6beb1c3fbace9ab3e7dbb">More...</a><br /></td></tr>
 <tr class="separator:a72fcb26a14f6beb1c3fbace9ab3e7dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A detached thread runs just for its own. The user does not need (actually can not even) wait for the thread to stop. The object is normally created on the heap.</p>
-<p>Example:</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>MyThread : <span class="keyword">public</span> <a class="code" href="namespacePt_1_1System.html">Pt::System</a>::<a class="code" href="classPt_1_1System_1_1DetachedThread.html#a5239d5e11aab0ef89f7fa7b9613715c6">::DetachedThread</a></div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">protected</span>:</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1System_1_1DetachedThread.html#a72fcb26a14f6beb1c3fbace9ab3e7dbb">run</a>();</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> MyThread::run()</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// implement, whatever needs to be done in parallel</span></div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> someFunc()</div>
-<div class="line">{</div>
-<div class="line">    MyThread *thread = <span class="keyword">new</span> MyThread();</div>
-<div class="line">    thread-&gt;start();</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// here the thread runs and the program can do something</span></div>
-<div class="line">    <span class="comment">// else in parallel. It continues to run even after this</span></div>
-<div class="line">    <span class="comment">// function returns. The object is automatically destroyed,</span></div>
-<div class="line">    <span class="comment">// when the thread has finished.</span></div>
-<div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<div class="textblock"><p>DetachedThread is a Thread that detaches in the constructor. <a class="el" href="classPt_1_1System_1_1Thread.html#a6c7abfff648dad193674fc432ad4840d" title="Wait for the thread to finish execution.">join()</a> is not used. The object is usually created with new. The default <a class="el" href="classPt_1_1System_1_1DetachedThread.html#aed2d208f4d304cc6def0a15b73f115bf" title="Destroys a detached thread.">destroy()</a> deletes it when the entry returns. Override <a class="el" href="classPt_1_1System_1_1DetachedThread.html#a72fcb26a14f6beb1c3fbace9ab3e7dbb" title="Thread entry method.">run()</a> for the thread entry, or pass a function pointer. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&nbsp;</a></span>State</h2>
 
@@ -204,7 +182,7 @@ Protected Member Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a0e73e048b83849a411148a8dddc6dfcb"></a>Ready&#160;</td><td class="fielddoc"><p>Not started yet. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2f5f2c4a8c4f4f0519d503dcdfbf55cb"></a>Running&#160;</td><td class="fielddoc"><p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Platform independent threads.">Thread</a> is running. </p>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2f5f2c4a8c4f4f0519d503dcdfbf55cb"></a>Running&#160;</td><td class="fielddoc"><p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> is running. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a46c8473c20dee3a0c0cd09ffb324aee3"></a>Joined&#160;</td><td class="fielddoc"><p>Joined with parent thread. </p>
 </td></tr>
@@ -343,7 +321,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This starts the execution of the thread by calling the thread entry. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This starts the execution of the thread by calling the thread entry. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -369,7 +347,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This function is meant to be called from within a thread to leave the thread at once. Implicitly called when the thread entry is left. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This function is meant to be called from within a thread to leave the thread at once. Implicitly called when the thread entry is left. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -395,7 +373,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This function is meant to be called from within a thread to give up the CPU to other threads. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This function is meant to be called from within a thread to give up the CPU to other threads. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -422,14 +400,11 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The calling thread sleeps for <em>ms</em> milliseconds. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>The calling thread sleeps for <em>ms</em> milliseconds. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1System_1_1DetachedThread_html_a72fcb26a14f6beb1c3fbace9ab3e7dbb"><div class="ttname"><a href="classPt_1_1System_1_1DetachedThread.html#a72fcb26a14f6beb1c3fbace9ab3e7dbb">Pt::System::DetachedThread::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdoc">Thread entry method.</div><div class="ttdef"><b>Definition:</b> Thread.h:324</div></div>
-<div class="ttc" id="anamespacePt_1_1System_html"><div class="ttname"><a href="namespacePt_1_1System.html">Pt::System</a></div><div class="ttdoc">System programming</div><div class="ttdef"><b>Definition:</b> Client.h:41</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1DetachedThread_html_a5239d5e11aab0ef89f7fa7b9613715c6"><div class="ttname"><a href="classPt_1_1System_1_1DetachedThread.html#a5239d5e11aab0ef89f7fa7b9613715c6">Pt::System::DetachedThread::DetachedThread</a></div><div class="ttdeci">DetachedThread()</div><div class="ttdoc">Constructs a detached thread.</div><div class="ttdef"><b>Definition:</b> Thread.h:301</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -88,45 +88,45 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module offers support for multithreaded programming, API's for file system operations such as traversing through directories and files, creating and handling of subprocesses, synchronous or asynchronous IO, logging, shared libraries and plugins. It introduces event loops as the central software interrupt to handle events across thread boundaries, timers and reactive I/O. </p>
+<div class="textblock"><p>This module is the portable operating-system layer for a process. It covers the file system, threads and processes, event loops, I/O devices, logging, shared libraries, plugins, tar archives, and the clock. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Application.html">Application</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Console applications without a GUI.  <a href="classPt_1_1System_1_1Application.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Console process root.  <a href="classPt_1_1System_1_1Application.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1AsyncWait.html">AsyncWait</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable for async one-shot timer delay.  <a href="classPt_1_1System_1_1AsyncWait.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1AsyncYield.html">AsyncYield</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable that schedules a resume in the <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">EventLoop</a>.  <a href="classPt_1_1System_1_1AsyncYield.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable that schedules a resume in the <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Event loop of a thread or process.">EventLoop</a>.  <a href="classPt_1_1System_1_1AsyncYield.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1AttachedThread.html">AttachedThread</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Joinable thread.  <a href="classPt_1_1System_1_1AttachedThread.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> that joins in its destructor.  <a href="classPt_1_1System_1_1AttachedThread.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1BasicPlugin.html">BasicPlugin</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A plugin implementation.  <a href="classPt_1_1System_1_1BasicPlugin.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Clock.html">Clock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures time intervals.  <a href="classPt_1_1System_1_1Clock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stopwatch, system time and monotonic ticks.  <a href="classPt_1_1System_1_1Clock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Condition.html">Condition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal and wait synchronisation promitive.  <a href="classPt_1_1System_1_1Condition.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Signal.html" title="Multicast Signal to call multiple slots.">Signal</a> and wait synchronisation primitive.  <a href="classPt_1_1System_1_1Condition.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1DetachedThread.html">DetachedThread</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A detached thread.  <a href="classPt_1_1System_1_1DetachedThread.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> that runs without a waiter.  <a href="classPt_1_1System_1_1DetachedThread.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1DirectoryIterator.html">DirectoryIterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates over entries of a directory.  <a href="classPt_1_1System_1_1DirectoryIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-safe event loop supporting I/O multiplexing and Timers.  <a href="classPt_1_1System_1_1EventLoop.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Event.html" title="Base class for all event types.">Event</a> loop of a thread or process.  <a href="classPt_1_1System_1_1EventLoop.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html">EventSink</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receiver for events.  <a href="classPt_1_1System_1_1EventSink.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSource.html">EventSource</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends Events to receivers in other threads.  <a href="classPt_1_1System_1_1EventSource.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends events to sinks in other threads.  <a href="classPt_1_1System_1_1EventSource.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1FileDevice.html">FileDevice</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and write to files.  <a href="classPt_1_1System_1_1FileDevice.html#details">More...</a><br /></td></tr>
@@ -135,16 +135,19 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides information about a node in the file-system.  <a href="classPt_1_1System_1_1FileInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IOBuffer.html">IOBuffer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements std::streambuf for I/O devices.  <a href="classPt_1_1System_1_1IOBuffer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream buffer for an IODevice.  <a href="classPt_1_1System_1_1IOBuffer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoint for I/O operations.  <a href="classPt_1_1System_1_1IODevice.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IONotifier.html">IONotifier</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monitors a native handle or file descriptor.  <a href="classPt_1_1System_1_1IONotifier.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IOStream.html">IOStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input/Output stream for I/O devices.  <a href="classPt_1_1System_1_1IOStream.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bidirectional stream for an IODevice.  <a href="classPt_1_1System_1_1IOStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IStream.html">IStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input stream for I/O devices.  <a href="classPt_1_1System_1_1IStream.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input stream for an IODevice.  <a href="classPt_1_1System_1_1IStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Library.html">Library</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared library loader.  <a href="classPt_1_1System_1_1Library.html#details">More...</a><br /></td></tr>
@@ -165,22 +168,22 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target of log-messages.  <a href="classPt_1_1System_1_1LogTarget.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1MainLoop.html">MainLoop</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-safe event loop supporting I/O multiplexing and Timers.  <a href="classPt_1_1System_1_1MainLoop.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Platform event loop.  <a href="classPt_1_1System_1_1MainLoop.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Mutex.html">Mutex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutual exclusion device.  <a href="classPt_1_1System_1_1Mutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1MutexLock.html">MutexLock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MutexLock class for <a class="el" href="classPt_1_1System_1_1Mutex.html" title="Mutual exclusion device.">Mutex</a>.  <a href="classPt_1_1System_1_1MutexLock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped lock for a Mutex.  <a href="classPt_1_1System_1_1MutexLock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1OStream.html">OStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream for I/O devices.  <a href="classPt_1_1System_1_1OStream.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream for an IODevice.  <a href="classPt_1_1System_1_1OStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Path.html">Path</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a path in the file-system.  <a href="classPt_1_1System_1_1Path.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Pipe.html">Pipe</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Pair of IODevices that form a half-duplex pipe.  <a href="classPt_1_1System_1_1Pipe.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair of IODevice endpoints that form a half-duplex pipe.  <a href="classPt_1_1System_1_1Pipe.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Plugin.html">Plugin</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for plugins.  <a href="classPt_1_1System_1_1Plugin.html#details">More...</a><br /></td></tr>
@@ -192,43 +195,43 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages loaded plugins.  <a href="classPt_1_1System_1_1PluginManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html">Process</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes shell commands.  <a href="classPt_1_1System_1_1Process.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts another program as a child process.  <a href="classPt_1_1System_1_1Process.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ProcessFailed.html">ProcessFailed</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates process failure.  <a href="classPt_1_1System_1_1ProcessFailed.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thrown when a process does not terminate normally.  <a href="classPt_1_1System_1_1ProcessFailed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process startup parameters  <a href="classPt_1_1System_1_1ProcessInfo.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startup parameters for a Process.  <a href="classPt_1_1System_1_1ProcessInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Queue.html">Queue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class implements a thread safe queue.  <a href="classPt_1_1System_1_1Queue.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-safe FIFO queue.  <a href="classPt_1_1System_1_1Queue.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ReadLock.html">ReadLock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reader lock object for read-write mutexes.  <a href="classPt_1_1System_1_1ReadLock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped read lock for a ReadWriteMutex.  <a href="classPt_1_1System_1_1ReadLock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ReadWriteMutex.html">ReadWriteMutex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronisation device similar to a POSIX rwlock.  <a href="classPt_1_1System_1_1ReadWriteMutex.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Mutex.html" title="Mutual exclusion device.">Mutex</a> for concurrent readers or one writer.  <a href="classPt_1_1System_1_1ReadWriteMutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1RecursiveLock.html">RecursiveLock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock class for recursive mutexes.  <a href="classPt_1_1System_1_1RecursiveLock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped lock for a RecursiveMutex.  <a href="classPt_1_1System_1_1RecursiveLock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1RecursiveMutex.html">RecursiveMutex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive mutual exclusion device.  <a href="classPt_1_1System_1_1RecursiveMutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches operations through an event loop.  <a href="classPt_1_1System_1_1Selectable.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation that runs through an event loop.  <a href="classPt_1_1System_1_1Selectable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Semaphore.html">Semaphore</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Semaphore synchronization object.  <a href="classPt_1_1System_1_1Semaphore.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counting semaphore.  <a href="classPt_1_1System_1_1Semaphore.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html">SerialDevice</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serial device.  <a href="classPt_1_1System_1_1SerialDevice.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serial port as an IODevice.  <a href="classPt_1_1System_1_1SerialDevice.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SpinLock.html">SpinLock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock object for spin mutexes.  <a href="classPt_1_1System_1_1SpinLock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped lock for a SpinMutex.  <a href="classPt_1_1System_1_1SpinLock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SpinMutex.html">SpinMutex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spinmutex class.  <a href="classPt_1_1System_1_1SpinMutex.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spin mutex.  <a href="classPt_1_1System_1_1SpinMutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Symbol.html">Symbol</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Symbol.html" title="Symbol resolved from a shared library.">Symbol</a> resolved from a shared library.  <a href="classPt_1_1System_1_1Symbol.html#details">More...</a><br /></td></tr>
@@ -237,7 +240,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thrown, when a symbol is not found in a library.  <a href="classPt_1_1System_1_1SymbolNotFound.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SystemError.html">SystemError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class indication a system error.  <a href="classPt_1_1System_1_1SystemError.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception for a failed system operation.  <a href="classPt_1_1System_1_1SystemError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1TarEntry.html">TarEntry</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a single entry returned by <a class="el" href="classPt_1_1System_1_1TarReader.html" title="Incremental reader for tar archives (Pax/UStar format).">TarReader</a>.  <a href="classPt_1_1System_1_1TarEntry.html#details">More...</a><br /></td></tr>
@@ -249,32 +252,32 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking writer for tar archives (Pax/UStar format).  <a href="classPt_1_1System_1_1TarWriter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Thread.html">Thread</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Platform independent threads.  <a href="classPt_1_1System_1_1Thread.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Portable thread of control.  <a href="classPt_1_1System_1_1Thread.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Timer.html">Timer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies clients in constant intervals.  <a href="classPt_1_1System_1_1Timer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval timeout notifications.  <a href="classPt_1_1System_1_1Timer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1WriteLock.html">WriteLock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writer lock object for read-write mutexes.  <a href="classPt_1_1System_1_1WriteLock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped write lock for a ReadWriteMutex.  <a href="classPt_1_1System_1_1WriteLock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gaca1fd1d8935433e6ba2e3918214e07f9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> { , <br />
-&#160;&#160;<a class="el" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a24d54883f5403a81c97e5ce29ee031ba">Fatal</a> = 100, 
+<tr class="memitem:gaca1fd1d8935433e6ba2e3918214e07f9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-System-Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> { , <br />
+&#160;&#160;<a class="el" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a24d54883f5403a81c97e5ce29ee031ba">Fatal</a> = 100, 
 <br />
-&#160;&#160;<a class="el" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f">Error</a> = 200, 
+&#160;&#160;<a class="el" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f">Error</a> = 200, 
 <br />
-&#160;&#160;<a class="el" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c">Warn</a> = 300, 
+&#160;&#160;<a class="el" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c">Warn</a> = 300, 
 <br />
-&#160;&#160;<a class="el" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Info</a> = 400, 
+&#160;&#160;<a class="el" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Info</a> = 400, 
 <br />
-&#160;&#160;<a class="el" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8">Debug</a> = 500, 
+&#160;&#160;<a class="el" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8">Debug</a> = 500, 
 <br />
-&#160;&#160;<a class="el" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8af18ff6dfbaa47fadcc947a9f12602d">Trace</a> = 600
+&#160;&#160;<a class="el" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8af18ff6dfbaa47fadcc947a9f12602d">Trace</a> = 600
 <br />
  }</td></tr>
-<tr class="memdesc:gaca1fd1d8935433e6ba2e3918214e07f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Severity of the log-message.  <a href="group__Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">More...</a><br /></td></tr>
+<tr class="memdesc:gaca1fd1d8935433e6ba2e3918214e07f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Severity of the log-message.  <a href="group__Pt-System-Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">More...</a><br /></td></tr>
 <tr class="separator:gaca1fd1d8935433e6ba2e3918214e07f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">SpinMutex Class Reference</div>  </div>
+<div class="title">SpinMutex Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Mutex_8h_source.html">Pt/System/Mutex.h</a>&gt;</code></p>
 
-<p>Spinmutex class.  
+<p>Spin mutex.  
  <a href="classPt_1_1System_1_1SpinMutex.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -116,7 +116,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a9278be8203e1c42e2619179882ae4403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The most lightweight synchronisation object is the SpinMutex. It is usually implemented with a status variable that can be set to locked and unlocked and atomic operations to change and inspect the status. When <a class="el" href="classPt_1_1System_1_1SpinMutex.html#aa81aed607133209dade63a226818224d" title="Lock the mutex.">lock()</a> is called, the status is changed to Locked. Subsequent calls of <a class="el" href="classPt_1_1System_1_1SpinMutex.html#aa81aed607133209dade63a226818224d" title="Lock the mutex.">lock()</a> from other threads will block until the first thread has called <a class="el" href="classPt_1_1System_1_1SpinMutex.html#a9278be8203e1c42e2619179882ae4403" title="Unlocks the mutex.">unlock()</a> and the state of the Spinlock has changed to Unlocked. Note that SpinMutexes are not recursive. When a <a class="el" href="classPt_1_1System_1_1SpinMutex.html#aa81aed607133209dade63a226818224d" title="Lock the mutex.">lock()</a> blocks a busy-wait happens, therefore a SpinMutex is only usable in cases where resources need to be locked for a very short time, but in these cases a higher performance can be achieved. </p>
+<div class="textblock"><p>SpinMutex is the lightest mutex. <a class="el" href="classPt_1_1System_1_1SpinMutex.html#aa81aed607133209dade63a226818224d" title="Lock the mutex.">lock()</a> sets a locked status with an atomic operation. Another thread that calls <a class="el" href="classPt_1_1System_1_1SpinMutex.html#aa81aed607133209dade63a226818224d" title="Lock the mutex.">lock()</a> waits until <a class="el" href="classPt_1_1System_1_1SpinMutex.html#a9278be8203e1c42e2619179882ae4403" title="Unlocks the mutex.">unlock()</a> clears that status. It is not recursive.</p>
+<p>Use it only when the lock is held for a very short time. For a longer critical section use Mutex. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa81aed607133209dade63a226818224d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa81aed607133209dade63a226818224d">&#9670;&nbsp;</a></span>lock()</h2>

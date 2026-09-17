@@ -95,7 +95,7 @@
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 
-<p>Inherited by <a class="el" href="classPt_1_1Http_1_1BasicService.html">BasicService&lt; R, Alloc &gt;</a>, <a class="el" href="classPt_1_1JsonRpc_1_1HttpService.html">HttpService</a>, <a class="el" href="classPt_1_1Mcp_1_1HttpService.html">HttpService</a>, HttpService, and <a class="el" href="classPt_1_1XmlRpc_1_1HttpService.html">HttpService</a>.</p>
+<p>Inherited by <a class="el" href="classPt_1_1Http_1_1BasicService.html">BasicService&lt; R, Alloc &gt;</a>, WebSocketService, <a class="el" href="classPt_1_1JsonRpc_1_1HttpService.html">HttpService</a>, <a class="el" href="classPt_1_1Mcp_1_1HttpService.html">HttpService</a>, HttpService, and <a class="el" href="classPt_1_1XmlRpc_1_1HttpService.html">HttpService</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,6 +115,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Service.html#a16bab97a286c623c9a1aaeabccad8838">releaseResponder</a> (<a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *)</td></tr>
 <tr class="memdesc:a16bab97a286c623c9a1aaeabccad8838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a responder created by a server. <br /></td></tr>
 <tr class="separator:a16bab97a286c623c9a1aaeabccad8838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4905225fadbb82df7e16c98b6f9c513f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; IOStream *, const std::string &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Service.html#a4905225fadbb82df7e16c98b6f9c513f">upgradeRequested</a> ()</td></tr>
+<tr class="memdesc:a4905225fadbb82df7e16c98b6f9c513f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a request upgrades to this service.  <a href="classPt_1_1Http_1_1Service.html#a4905225fadbb82df7e16c98b6f9c513f">More...</a><br /></td></tr>
+<tr class="separator:a4905225fadbb82df7e16c98b6f9c513f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -127,6 +130,25 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a8e8d88c0fbe1d98fe87a2104bcc0690c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a responder created by a server. <br /></td></tr>
 <tr class="separator:a8e8d88c0fbe1d98fe87a2104bcc0690c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4905225fadbb82df7e16c98b6f9c513f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4905225fadbb82df7e16c98b6f9c513f">&#9670;&nbsp;</a></span>upgradeRequested()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt;IOStream*, const std::string&amp;&gt;&amp; upgradeRequested </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The signal provides the accepted stream and the value of the request's Upgrade header. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

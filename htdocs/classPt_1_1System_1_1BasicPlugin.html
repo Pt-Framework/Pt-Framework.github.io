@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">BasicPlugin&lt; Class, Iface &gt; Class Template Reference</div>  </div>
+<div class="title">BasicPlugin&lt; Class, Iface &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Plugins.html">Plugins</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -125,14 +125,8 @@ const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a
 <div class="textblock"><h3>template&lt;typename Class, typename Iface&gt;<br />
 class Pt::System::BasicPlugin&lt; Class, Iface &gt;</h3>
 
-<p>In the plugin library, shared object global BasicPlugins have to be arranged in a null teminated array with C linkage. The <a class="el" href="classPt_1_1System_1_1PluginManager.html" title="Manages loaded plugins.">PluginManager</a> can be set up to resolve the symbol of this array and use the plugins.</p>
-<div class="fragment"><div class="line"><span class="keyword">static</span> Pt::BasicPlugin&lt;SomeClass, MyIface&gt; plugin0(<span class="stringliteral">&quot;some-feature&quot;</span>);</div>
-<div class="line"><span class="keyword">static</span> Pt::BasicPlugin&lt;OtherClass, MyIface&gt; plugin1(<span class="stringliteral">&quot;other-feature&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> { \</div>
-<div class="line">    PT_API Pt::PluginId* PluginList[] = { &amp;plugin0, &amp;plugin1, 0 }; \</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<p>BasicPlugin is a Plugin that constructs with new and destroys with delete. The first template argument is the concrete class. The second is the interface. The constructor takes a feature string and an optional info string. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

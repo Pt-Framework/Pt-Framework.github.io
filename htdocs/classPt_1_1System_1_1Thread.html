@@ -85,13 +85,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Thread Class Reference</div>  </div>
+<div class="title">Thread Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Thread_8h_source.html">Pt/System/Thread.h</a>&gt;</code></p>
 
-<p>Platform independent threads.  
+<p>Portable thread of control.  
  <a href="classPt_1_1System_1_1Thread.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -159,11 +159,25 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a3cfabfe1ccc5086cc5753eb45afc4658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is a thread base class, which is flexible, but harder to use. Try to use either an <a class="el" href="classPt_1_1System_1_1AttachedThread.html" title="A Joinable thread.">AttachedThread</a> or a <a class="el" href="classPt_1_1System_1_1DetachedThread.html" title="A detached thread.">DetachedThread</a> instead.</p>
-<p>A Thread represents a separate thread of control within the program. It shares data with all the other threads within the process but executes independently in the way that a separate program does on a multitasking operating system. Each thread gets its own stack, which size is determinated by the operating system.</p>
-<p>The execution of a thread starts either by calling <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669" title="Starts the thread.">start()</a> which calls the thread entry object passed to the constructor. Threads can either be joined, so you can wait for them, or be detached, so they run indepentently.</p>
-<p>Thread also provides a platform independent sleep function. A thread can give up CPU time either by calling <a class="el" href="classPt_1_1System_1_1Thread.html#ae956c0e5ebbbd767cfed1bfddc544389" title="Yield CPU time.">yield()</a> or <a class="el" href="classPt_1_1System_1_1Thread.html#a3cfabfe1ccc5086cc5753eb45afc4658" title="Sleep for some time.">sleep()</a> to stop for a specified period of time. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<div class="textblock"><p>Thread is the portable thread. Construction does not start it. <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669" title="Starts the thread.">start()</a> runs the Callable passed to the constructor or to <a class="el" href="classPt_1_1System_1_1Thread.html#a92d99b933200b1140169ad42cef86b10" title="Initialize with a thread entry.">init()</a>, or it runs an EventLoop. The object must be joined or detached before it is destroyed. Destroying a running joinable thread is an error.</p>
+<p><a class="el" href="classPt_1_1System_1_1Thread.html#a6c7abfff648dad193674fc432ad4840d" title="Wait for the thread to finish execution.">join()</a> blocks until the entry returns. <a class="el" href="classPt_1_1System_1_1Thread.html#ac295bade8aee589f6718dfa79edc2a34" title="Detaches the thread.">detach()</a> lets the thread run without a waiter. After <a class="el" href="classPt_1_1System_1_1Thread.html#ac295bade8aee589f6718dfa79edc2a34" title="Detaches the thread.">detach()</a>, <a class="el" href="classPt_1_1System_1_1Thread.html#a6c7abfff648dad193674fc432ad4840d" title="Wait for the thread to finish execution.">join()</a> is not used. <a class="el" href="classPt_1_1System_1_1Thread.html#a3cfabfe1ccc5086cc5753eb45afc4658" title="Sleep for some time.">sleep()</a> suspends the calling thread. <a class="el" href="classPt_1_1System_1_1Thread.html#ae956c0e5ebbbd767cfed1bfddc544389" title="Yield CPU time.">yield()</a> gives up the rest of the time slice. <a class="el" href="classPt_1_1System_1_1Thread.html#a98a9fd114ee065ff149a7d4fb4de8de8" title="Exits athread.">exit()</a> leaves the current thread.</p>
+<p>The callable must outlive a joinable thread. AttachedThread joins in its destructor. DetachedThread detaches in the constructor and destroys itself when the entry returns.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Work</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        <span class="keywordtype">void</span> run()</div>
+<div class="line">        {</div>
+<div class="line">        }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    Work work;</div>
+<div class="line">    <a class="code" href="classPt_1_1System_1_1AttachedThread.html">Pt::System::AttachedThread</a> thread( Pt::callable(work, &amp;Work::run) );</div>
+<div class="line">    thread.start();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&nbsp;</a></span>State</h2>
 
@@ -178,7 +192,7 @@ Static Public Member Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a0e73e048b83849a411148a8dddc6dfcb"></a>Ready&#160;</td><td class="fielddoc"><p>Not started yet. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2f5f2c4a8c4f4f0519d503dcdfbf55cb"></a>Running&#160;</td><td class="fielddoc"><p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Platform independent threads.">Thread</a> is running. </p>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2f5f2c4a8c4f4f0519d503dcdfbf55cb"></a>Running&#160;</td><td class="fielddoc"><p><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> is running. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a46c8473c20dee3a0c0cd09ffb324aee3"></a>Joined&#160;</td><td class="fielddoc"><p>Joined with parent thread. </p>
 </td></tr>
@@ -230,7 +244,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs a thread object to execute the Callable <em>cb</em>. The <a class="el" href="classPt_1_1System_1_1Thread.html" title="Platform independent threads.">Thread</a> is not started on construction, but when <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669" title="Starts the thread.">start()</a> is called. </p>
+<p>Constructs a thread object to execute the Callable <em>cb</em>. The <a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> is not started on construction, but when <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669" title="Starts the thread.">start()</a> is called. </p>
 
 </div>
 </div>
@@ -257,7 +271,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs a thread object to run the event loop <em>loop</em> in a separate thread. The <a class="el" href="classPt_1_1System_1_1Thread.html" title="Platform independent threads.">Thread</a> is not started on construction, but when <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669" title="Starts the thread.">start()</a> is called. </p>
+<p>Constructs a thread object to run the event loop <em>loop</em> in a separate thread. The <a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> is not started on construction, but when <a class="el" href="classPt_1_1System_1_1Thread.html#a60de64d75454385b23995437f1d72669" title="Starts the thread.">start()</a> is called. </p>
 
 </div>
 </div>
@@ -321,7 +335,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This starts the execution of the thread by calling the thread entry. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This starts the execution of the thread by calling the thread entry. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -347,7 +361,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This function is meant to be called from within a thread to leave the thread at once. Implicitly called when the thread entry is left. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This function is meant to be called from within a thread to leave the thread at once. Implicitly called when the thread entry is left. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -373,7 +387,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This function is meant to be called from within a thread to give up the CPU to other threads. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>This function is meant to be called from within a thread to give up the CPU to other threads. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
@@ -400,11 +414,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The calling thread sleeps for <em>ms</em> milliseconds. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a> on failure. </p>
+<p>The calling thread sleeps for <em>ms</em> milliseconds. Throws a <a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a> on failure. </p>
 
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1System_1_1AttachedThread_html"><div class="ttname"><a href="classPt_1_1System_1_1AttachedThread.html">Pt::System::AttachedThread</a></div><div class="ttdoc">Thread that joins in its destructor.</div><div class="ttdef"><b>Definition:</b> Thread.h:199</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

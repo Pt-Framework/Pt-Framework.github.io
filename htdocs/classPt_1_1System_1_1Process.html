@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Process Class Reference</div>  </div>
+<div class="title">Process Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Process_8h_source.html">Pt/System/Process.h</a>&gt;</code></p>
 
-<p>Executes shell commands.  
-</p>
+<p>Starts another program as a child process.  
+ <a href="classPt_1_1System_1_1Process.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
@@ -129,14 +129,17 @@ const <a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a>
 <tr class="memdesc:acf42de6572f1e3e6aca988477c3662cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current state. <br /></td></tr>
 <tr class="separator:acf42de6572f1e3e6aca988477c3662cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60de64d75454385b23995437f1d72669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html#a60de64d75454385b23995437f1d72669">start</a> ()</td></tr>
-<tr class="memdesc:a60de64d75454385b23995437f1d72669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start/Create the <a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a>.  <a href="classPt_1_1System_1_1Process.html#a60de64d75454385b23995437f1d72669">More...</a><br /></td></tr>
+<tr class="memdesc:a60de64d75454385b23995437f1d72669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start/Create the <a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a>.  <a href="classPt_1_1System_1_1Process.html#a60de64d75454385b23995437f1d72669">More...</a><br /></td></tr>
 <tr class="separator:a60de64d75454385b23995437f1d72669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9d52caad9fb2892deeb25596cfd2ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html#aae9d52caad9fb2892deeb25596cfd2ab">kill</a> ()</td></tr>
-<tr class="memdesc:aae9d52caad9fb2892deeb25596cfd2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kills the <a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a>.  <a href="classPt_1_1System_1_1Process.html#aae9d52caad9fb2892deeb25596cfd2ab">More...</a><br /></td></tr>
+<tr class="memdesc:aae9d52caad9fb2892deeb25596cfd2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kills the <a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a>.  <a href="classPt_1_1System_1_1Process.html#aae9d52caad9fb2892deeb25596cfd2ab">More...</a><br /></td></tr>
 <tr class="separator:aae9d52caad9fb2892deeb25596cfd2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95db92d0c2ab12b431e38f7642c918a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html#a95db92d0c2ab12b431e38f7642c918a2">wait</a> ()</td></tr>
-<tr class="memdesc:a95db92d0c2ab12b431e38f7642c918a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until the <a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> ends.  <a href="classPt_1_1System_1_1Process.html#a95db92d0c2ab12b431e38f7642c918a2">More...</a><br /></td></tr>
+<tr class="memdesc:a95db92d0c2ab12b431e38f7642c918a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until the <a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> ends.  <a href="classPt_1_1System_1_1Process.html#a95db92d0c2ab12b431e38f7642c918a2">More...</a><br /></td></tr>
 <tr class="separator:a95db92d0c2ab12b431e38f7642c918a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b48d1fc17d8ea8605712e248ba6385e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html#a1b48d1fc17d8ea8605712e248ba6385e">tryWait</a> (int &amp;status)</td></tr>
+<tr class="memdesc:a1b48d1fc17d8ea8605712e248ba6385e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the process has finished.  <a href="classPt_1_1System_1_1Process.html#a1b48d1fc17d8ea8605712e248ba6385e">More...</a><br /></td></tr>
+<tr class="separator:a1b48d1fc17d8ea8605712e248ba6385e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a19f9293dcd644c24218b104b29e917"><td class="memItemLeft" align="right" valign="top"><a id="a1a19f9293dcd644c24218b104b29e917"></a>
 <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html#a1a19f9293dcd644c24218b104b29e917">stdInput</a> ()</td></tr>
 <tr class="memdesc:a1a19f9293dcd644c24218b104b29e917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an I/O device to stdin. <br /></td></tr>
@@ -150,7 +153,16 @@ const <a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a>
 <tr class="memdesc:a18a87c1f2b2a106668ec0292981ec8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an I/O device to stderr. <br /></td></tr>
 <tr class="separator:a18a87c1f2b2a106668ec0292981ec8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Construct with a ProcessInfo that names the command, arguments, and how stdin, stdout, and stderr are handled. <a class="el" href="classPt_1_1System_1_1Process.html#a60de64d75454385b23995437f1d72669" title="Start/Create the Process.">start()</a> runs the program. <a class="el" href="classPt_1_1System_1_1Process.html#a95db92d0c2ab12b431e38f7642c918a2" title="Waits until the Process ends.">wait()</a> joins it and returns the exit status. <a class="el" href="classPt_1_1System_1_1Process.html#a1b48d1fc17d8ea8605712e248ba6385e" title="Returns true if the process has finished.">tryWait()</a> reports whether it has finished. <a class="el" href="classPt_1_1System_1_1Process.html#aae9d52caad9fb2892deeb25596cfd2ab" title="Kills the Process.">kill()</a> terminates it. <a class="el" href="classPt_1_1System_1_1Process.html#a1a19f9293dcd644c24218b104b29e917" title="Returns an I/O device to stdin.">stdInput()</a>, <a class="el" href="classPt_1_1System_1_1Process.html#aab452659a7f7fe30a3b1e7a29bbf88e2" title="Returns an I/O device to stdout.">stdOutput()</a>, and <a class="el" href="classPt_1_1System_1_1Process.html#a18a87c1f2b2a106668ec0292981ec8a3" title="Returns an I/O device to stderr.">stdError()</a> return the redirected IODevice endpoints when redirection was requested.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a></td><td>if <a class="el" href="classPt_1_1System_1_1Process.html#a60de64d75454385b23995437f1d72669" title="Start/Create the Process.">start()</a>, <a class="el" href="classPt_1_1System_1_1Process.html#aae9d52caad9fb2892deeb25596cfd2ab" title="Kills the Process.">kill()</a>, or <a class="el" href="classPt_1_1System_1_1Process.html#a95db92d0c2ab12b431e38f7642c918a2" title="Waits until the Process ends.">wait()</a> fails. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1ProcessFailed.html" title="Thrown when a process does not terminate normally.">ProcessFailed</a></td><td>if <a class="el" href="classPt_1_1System_1_1Process.html#a95db92d0c2ab12b431e38f7642c918a2" title="Waits until the Process ends.">wait()</a> finds a non-normal termination. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&nbsp;</a></span>State</h2>
 
@@ -192,7 +204,7 @@ const <a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a>
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -215,7 +227,7 @@ const <a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a>
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -238,10 +250,29 @@ const <a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a>
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception class indication a system error.">SystemError</a>,<a class="el" href="classPt_1_1System_1_1ProcessFailed.html" title="Indicates process failure.">ProcessFailed</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classPt_1_1System_1_1SystemError.html" title="Exception for a failed system operation.">SystemError</a>,<a class="el" href="classPt_1_1System_1_1ProcessFailed.html" title="Thrown when a process does not terminate normally.">ProcessFailed</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1b48d1fc17d8ea8605712e248ba6385e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b48d1fc17d8ea8605712e248ba6385e">&#9670;&nbsp;</a></span>tryWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tryWait </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets <em>status</em> to the exit status when the process has finished. </p>
 
 </div>
 </div>

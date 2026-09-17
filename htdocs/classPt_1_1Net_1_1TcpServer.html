@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TcpServer Class Reference</div>  </div>
+<div class="title">TcpServer Class Reference<div class="ingroups"><a class="el" href="group__Pt-Net.html">Networking</a> &raquo; <a class="el" href="group__Pt-Net-Tcp.html">TCP Sockets</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="TcpServer_8h_source.html">Pt/Net/TcpServer.h</a>&gt;</code></p>
 
-<p>TCP server socket.  
-</p>
+<p>Listens for TCP connections.  
+ <a href="classPt_1_1Net_1_1TcpServer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a>.</p>
 <table class="memberdecls">
@@ -99,38 +99,38 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4fa47aea3bf862292f7a88e3f13aff1"><td class="memItemLeft" align="right" valign="top"><a id="ae4fa47aea3bf862292f7a88e3f13aff1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#ae4fa47aea3bf862292f7a88e3f13aff1">TcpServer</a> ()</td></tr>
-<tr class="memdesc:ae4fa47aea3bf862292f7a88e3f13aff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="memdesc:ae4fa47aea3bf862292f7a88e3f13aff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a closed server. <br /></td></tr>
 <tr class="separator:ae4fa47aea3bf862292f7a88e3f13aff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76f6db2cd4fa81a772330748a37be281"><td class="memItemLeft" align="right" valign="top"><a id="a76f6db2cd4fa81a772330748a37be281"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a76f6db2cd4fa81a772330748a37be281">TcpServer</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;<a class="el" href="classPt_1_1Net_1_1TcpServer.html#a1edfac22331fb732120df36898d0a907">loop</a>)</td></tr>
-<tr class="memdesc:a76f6db2cd4fa81a772330748a37be281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with event loop. <br /></td></tr>
+<tr class="memdesc:a76f6db2cd4fa81a772330748a37be281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a server and attaches it to <em>loop</em>. <br /></td></tr>
 <tr class="separator:a76f6db2cd4fa81a772330748a37be281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4766afd6e92835edc6b7d28a493cf993"><td class="memItemLeft" align="right" valign="top"><a id="a4766afd6e92835edc6b7d28a493cf993"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a4766afd6e92835edc6b7d28a493cf993">TcpServer</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:a4766afd6e92835edc6b7d28a493cf993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a server socket and listens on an address. <br /></td></tr>
+<tr class="memdesc:a4766afd6e92835edc6b7d28a493cf993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a server and listens on <em>ep</em>. <br /></td></tr>
 <tr class="separator:a4766afd6e92835edc6b7d28a493cf993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb415b51f7d85a5d4ac91370d0cbb00"><td class="memItemLeft" align="right" valign="top"><a id="a4eb415b51f7d85a5d4ac91370d0cbb00"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a4eb415b51f7d85a5d4ac91370d0cbb00">~TcpServer</a> ()</td></tr>
-<tr class="memdesc:a4eb415b51f7d85a5d4ac91370d0cbb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memdesc:a4eb415b51f7d85a5d4ac91370d0cbb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the server. <br /></td></tr>
 <tr class="separator:a4eb415b51f7d85a5d4ac91370d0cbb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07ee5e021e298d2899ae74932d7be28"><td class="memItemLeft" align="right" valign="top"><a id="af07ee5e021e298d2899ae74932d7be28"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#af07ee5e021e298d2899ae74932d7be28">listen</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:af07ee5e021e298d2899ae74932d7be28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listen at local endpoint. <br /></td></tr>
+<tr class="memdesc:af07ee5e021e298d2899ae74932d7be28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listens on local endpoint <em>ep</em>. <br /></td></tr>
 <tr class="separator:af07ee5e021e298d2899ae74932d7be28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78141d274442995446415104ede8864f"><td class="memItemLeft" align="right" valign="top"><a id="a78141d274442995446415104ede8864f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a78141d274442995446415104ede8864f">listen</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep, const <a class="el" href="classPt_1_1Net_1_1TcpServerOptions.html">TcpServerOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a78141d274442995446415104ede8864f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listen at local endpoint. <br /></td></tr>
+<tr class="memdesc:a78141d274442995446415104ede8864f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listens on <em>ep</em> with <em>options</em>. <br /></td></tr>
 <tr class="separator:a78141d274442995446415104ede8864f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a183615050060f9d8f3841dc4351e9d95"><td class="memItemLeft" align="right" valign="top"><a id="a183615050060f9d8f3841dc4351e9d95"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a183615050060f9d8f3841dc4351e9d95">beginAccept</a> ()</td></tr>
-<tr class="memdesc:a183615050060f9d8f3841dc4351e9d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin accepting a connection. <br /></td></tr>
+<tr class="memitem:a183615050060f9d8f3841dc4351e9d95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a183615050060f9d8f3841dc4351e9d95">beginAccept</a> ()</td></tr>
+<tr class="memdesc:a183615050060f9d8f3841dc4351e9d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins accepting a connection.  <a href="classPt_1_1Net_1_1TcpServer.html#a183615050060f9d8f3841dc4351e9d95">More...</a><br /></td></tr>
 <tr class="separator:a183615050060f9d8f3841dc4351e9d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft" align="right" valign="top"><a id="a5ae591df94fc66ccb85cbb6565368bca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
-<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the server and stop listening and accepting. <br /></td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the server and stops listening. <br /></td></tr>
 <tr class="separator:a5ae591df94fc66ccb85cbb6565368bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9831c2e82cb966ffb00c925eb80aedaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Net_1_1TcpServer.html">TcpServer</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a9831c2e82cb966ffb00c925eb80aedaa">connectionPending</a> ()</td></tr>
-<tr class="memdesc:a9831c2e82cb966ffb00c925eb80aedaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies that a connection was accepted.  <a href="classPt_1_1Net_1_1TcpServer.html#a9831c2e82cb966ffb00c925eb80aedaa">More...</a><br /></td></tr>
+<tr class="memitem:a9831c2e82cb966ffb00c925eb80aedaa"><td class="memItemLeft" align="right" valign="top"><a id="a9831c2e82cb966ffb00c925eb80aedaa"></a>
+<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Net_1_1TcpServer.html">TcpServer</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a9831c2e82cb966ffb00c925eb80aedaa">connectionPending</a> ()</td></tr>
+<tr class="memdesc:a9831c2e82cb966ffb00c925eb80aedaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal that a connection is pending. <br /></td></tr>
 <tr class="separator:a9831c2e82cb966ffb00c925eb80aedaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1edfac22331fb732120df36898d0a907"><td class="memItemLeft" align="right" valign="top"><a id="a1edfac22331fb732120df36898d0a907"></a>
 <a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1TcpServer.html#a1edfac22331fb732120df36898d0a907">loop</a> () const</td></tr>
@@ -180,26 +180,55 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:abcca23e6afadfade8c5d63ee62b49bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts this selectable to its event loop from any thread. <br /></td></tr>
 <tr class="separator:abcca23e6afadfade8c5d63ee62b49bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9831c2e82cb966ffb00c925eb80aedaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9831c2e82cb966ffb00c925eb80aedaa">&#9670;&nbsp;</a></span>connectionPending()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>TcpServer is the listening side of the TCP model above.</p>
+<p>listen() binds a local endpoint and waits for peers. If that address is already occupied, the call throws AddressInUse.</p>
+<p>beginAccept() waits for the next pending connection. The server must be attached to an event loop.</p>
+<p>connectionPending is emitted when a peer is ready. There is no matching end-accept.</p>
+<p>A TcpSocket takes the connection with accept().</p>
+<p>close() stops listening and accepting.</p>
+<p>The caller owns the server. Attaching it to a loop does not transfer ownership.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Acceptor : <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        <span class="keyword">explicit</span> Acceptor(<a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a>&amp; server)</div>
+<div class="line">        : _server(&amp;server)</div>
+<div class="line">        {</div>
+<div class="line">            _server-&gt;connectionPending() += Pt::slot(*<span class="keyword">this</span>, &amp;Acceptor::onPending);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> onPending(<a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a>&amp; server)</div>
+<div class="line">        {</div>
+<div class="line">            _peer.accept(server);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span>:</div>
+<div class="line">        <a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a>* _server;</div>
+<div class="line">        <a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a> _peer;</div>
+<div class="line">};</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a183615050060f9d8f3841dc4351e9d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183615050060f9d8f3841dc4351e9d95">&#9670;&nbsp;</a></span>beginAccept()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt;<a class="el" href="classPt_1_1Net_1_1TcpServer.html">TcpServer</a>&amp;&gt;&amp; connectionPending </td>
+          <td class="memname">void beginAccept </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This signal is send when the TcpServer is monitored in an EventLoop and a connection was accepted. </p>
+<p>The server must be attached to an event loop. </p>
 
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a></div><div class="ttdoc">Connected TCP byte stream.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:131</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1TcpServer_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a></div><div class="ttdoc">Listens for TCP connections.</div><div class="ttdef"><b>Definition:</b> TcpServer.h:139</div></div>
+<div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

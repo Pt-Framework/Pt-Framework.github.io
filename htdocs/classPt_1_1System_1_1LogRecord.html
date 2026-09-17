@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">LogRecord Class Reference<div class="ingroups"><a class="el" href="group__Logging.html">Logging</a></div></div>  </div>
+<div class="title">LogRecord Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Logging.html">Logging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -97,7 +97,7 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abf406d30a3c657972f5005573b57848e"><td class="memItemLeft" align="right" valign="top"><a id="abf406d30a3c657972f5005573b57848e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#abf406d30a3c657972f5005573b57848e">LogRecord</a> (const <a class="el" href="group__Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> &amp;level)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#abf406d30a3c657972f5005573b57848e">LogRecord</a> (const <a class="el" href="group__Pt-System-Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> &amp;level)</td></tr>
 <tr class="memdesc:abf406d30a3c657972f5005573b57848e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a log record with a severity level. <br /></td></tr>
 <tr class="separator:abf406d30a3c657972f5005573b57848e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ee1436cccc49937f8e6b7bce3837263"><td class="memItemLeft" align="right" valign="top"><a id="a9ee1436cccc49937f8e6b7bce3837263"></a>
@@ -113,7 +113,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a0627ce9d4496345ea0233aa48e179aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the textual of the record. <br /></td></tr>
 <tr class="separator:a0627ce9d4496345ea0233aa48e179aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a311f57f5055cd8321929870e404e6852"><td class="memItemLeft" align="right" valign="top"><a id="a311f57f5055cd8321929870e404e6852"></a>
-<a class="el" href="group__Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a311f57f5055cd8321929870e404e6852">logLevel</a> () const</td></tr>
+<a class="el" href="group__Pt-System-Logging.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1LogRecord.html#a311f57f5055cd8321929870e404e6852">logLevel</a> () const</td></tr>
 <tr class="memdesc:a311f57f5055cd8321929870e404e6852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the severity level. <br /></td></tr>
 <tr class="separator:a311f57f5055cd8321929870e404e6852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a052afc64df1888be8cc363733a1530db"><td class="memItemLeft" align="right" valign="top"><a id="a052afc64df1888be8cc363733a1530db"></a>
@@ -144,30 +144,31 @@ template&lt;typename T &gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Log records represent the text entries that can be added to log. Each log record has a log level, which indicates it's severity. The text of a log record can be formatted with the stream operator, just like writing to std::cout. All stream output operators defined for std::ostream can be used including the manipulators.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a> record(<a class="code" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a>);</div>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a> record(<a class="code" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a>);</div>
 <div class="line">record &lt;&lt; <span class="stringliteral">&quot;pi is: &quot;</span> &lt;&lt; 3.1415;</div>
 </div><!-- fragment --><p>Once a log record is created it can be added to a log with a logger. The record might be ignored if the log level is disabled for the logger's target. Unneccessary formatting can be avoided by checking if the record's log level is enabled for the logger's target.</p>
 <div class="fragment"><div class="line"><a class="code" href="classPt_1_1System_1_1Logger.html">Pt::System::Logger</a> logger(<span class="stringliteral">&quot;app.module&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a> record(<a class="code" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a>);</div>
+<div class="line"><a class="code" href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a> record(<a class="code" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a>);</div>
 <div class="line"><span class="keywordflow">if</span>( logger.enabled(record) )</div>
 <div class="line">{</div>
 <div class="line">    record &lt;&lt; <span class="stringliteral">&quot;pi is: &quot;</span> &lt;&lt; 3.1415;</div>
 <div class="line">    logger.log(record);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The same log record can be sent multiple times to a logger or to several loggers. This way formatting is only done once and logging performance can be increased.</p>
+<p>Similarily, a log record can be sent multiple times to a logger or to several loggers:</p>
 <div class="fragment"><div class="line"><a class="code" href="classPt_1_1System_1_1Logger.html">Pt::System::Logger</a> logger1(<span class="stringliteral">&quot;app.module1&quot;</span>);</div>
 <div class="line"><a class="code" href="classPt_1_1System_1_1Logger.html">Pt::System::Logger</a> logger2(<span class="stringliteral">&quot;app.module2&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a> record(<a class="code" href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a>);</div>
-<div class="line">msg &lt;&lt; <span class="stringliteral">&quot;pi is: &quot;</span> &lt;&lt; 3.1415;</div>
+<div class="line"><a class="code" href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a> record(<a class="code" href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a>);</div>
+<div class="line">record &lt;&lt; <span class="stringliteral">&quot;pi is: &quot;</span> &lt;&lt; 3.1415;</div>
 <div class="line"> </div>
 <div class="line">logger1.log(record);</div>
 <div class="line">logger2.log(record);</div>
 </div><!-- fragment --> </div></div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1System_1_1LogRecord_html"><div class="ttname"><a href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a></div><div class="ttdoc">Log records can be added to a log.</div><div class="ttdef"><b>Definition:</b> LogRecord.h:91</div></div>
-<div class="ttc" id="agroup__Logging_html_ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc"><div class="ttname"><a href="group__Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a></div><div class="ttdeci">@ Info</div><div class="ttdoc">Infos and more severe messages.</div><div class="ttdef"><b>Definition:</b> LogLevel.h:46</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Logger_html"><div class="ttname"><a href="classPt_1_1System_1_1Logger.html">Pt::System::Logger</a></div><div class="ttdoc">Writes log records to a target.</div><div class="ttdef"><b>Definition:</b> Logger.h:97</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1LogRecord_html"><div class="ttname"><a href="classPt_1_1System_1_1LogRecord.html">Pt::System::LogRecord</a></div><div class="ttdoc">Log records can be added to a log.</div><div class="ttdef"><b>Definition:</b> LogRecord.h:94</div></div>
+<div class="ttc" id="agroup__Pt-System-Logging_html_ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc"><div class="ttname"><a href="group__Pt-System-Logging.html#ggaca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Pt::System::Info</a></div><div class="ttdeci">@ Info</div><div class="ttdoc">Infos and more severe messages.</div><div class="ttdef"><b>Definition:</b> LogLevel.h:46</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Logger_html"><div class="ttname"><a href="classPt_1_1System_1_1Logger.html">Pt::System::Logger</a></div><div class="ttdoc">Writes log records to a target.</div><div class="ttdef"><b>Definition:</b> Logger.h:217</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

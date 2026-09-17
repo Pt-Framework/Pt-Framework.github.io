@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Clock Class Reference</div>  </div>
+<div class="title">Clock Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Clock_8h_source.html">Pt/System/Clock.h</a>&gt;</code></p>
 
-<p>Measures time intervals.  
+<p>Stopwatch, system time and monotonic ticks.  
  <a href="classPt_1_1System_1_1Clock.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -99,7 +99,7 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9c0c37ccb62b05327be38f5d60efb0c"><td class="memItemLeft" align="right" valign="top"><a id="ad9c0c37ccb62b05327be38f5d60efb0c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Clock.html#ad9c0c37ccb62b05327be38f5d60efb0c">Clock</a> ()</td></tr>
-<tr class="memdesc:ad9c0c37ccb62b05327be38f5d60efb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classPt_1_1System_1_1Clock.html" title="Measures time intervals.">Clock</a>. <br /></td></tr>
+<tr class="memdesc:ad9c0c37ccb62b05327be38f5d60efb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classPt_1_1System_1_1Clock.html" title="Stopwatch, system time and monotonic ticks.">Clock</a>. <br /></td></tr>
 <tr class="separator:ad9c0c37ccb62b05327be38f5d60efb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae998d397f1e7cd192026fe38a071dd"><td class="memItemLeft" align="right" valign="top"><a id="a4ae998d397f1e7cd192026fe38a071dd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Clock.html#a4ae998d397f1e7cd192026fe38a071dd">~Clock</a> ()</td></tr>
@@ -128,7 +128,9 @@ static <a class="el" href="classPt_1_1DateTime.html">DateTime</a>&#160;</td><td 
 <tr class="separator:abb6b9705c83ee8d44c121dffc41260cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The Clock class can be used like a stop-watch by calling <a class="el" href="classPt_1_1System_1_1Clock.html#a60de64d75454385b23995437f1d72669" title="Start the clock.">start()</a> and <a class="el" href="classPt_1_1System_1_1Clock.html#a03b06381d280ecbf6cf9712ba85cd957" title="Stop the clock.">stop()</a>. The latter method returns the elapsed time. </p>
+<div class="textblock"><p>Clock measures elapsed time and reports the system clock. <a class="el" href="classPt_1_1System_1_1Clock.html#a60de64d75454385b23995437f1d72669" title="Start the clock.">start()</a> begins a measurement. <a class="el" href="classPt_1_1System_1_1Clock.html#a03b06381d280ecbf6cf9712ba85cd957" title="Stop the clock.">stop()</a> returns the Timespan since <a class="el" href="classPt_1_1System_1_1Clock.html#a60de64d75454385b23995437f1d72669" title="Start the clock.">start()</a>. A second <a class="el" href="classPt_1_1System_1_1Clock.html#a60de64d75454385b23995437f1d72669" title="Start the clock.">start()</a> begins a new measurement.</p>
+<p><a class="el" href="classPt_1_1System_1_1Clock.html#a311d355dcefc52556de2a4da226b5e73" title="Returns the system time.">getSystemTime()</a> returns the current UTC time as a DateTime. <a class="el" href="classPt_1_1System_1_1Clock.html#a23b5283e74ebb9f27a5c668375bfa153" title="Returns the current local time.">getLocalTime()</a> returns the local wall time. These values follow the system clock, including adjustments.</p>
+<p><a class="el" href="classPt_1_1System_1_1Clock.html#abb6b9705c83ee8d44c121dffc41260cb" title="Returns the timespan since a fixed point in the past.">getSystemTicks()</a> returns the timespan since a fixed point in the past. That origin is platform-defined. It may be boot time or an epoch. Differences between two tick values are monotonic and are the right way to measure elapsed time across threads. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a03b06381d280ecbf6cf9712ba85cd957"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03b06381d280ecbf6cf9712ba85cd957">&#9670;&nbsp;</a></span>stop()</h2>

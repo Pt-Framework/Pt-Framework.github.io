@@ -84,7 +84,7 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TarEntry Class Reference<div class="ingroups"><a class="el" href="group__Pt-System-Tar.html">Tar Archive I/O</a></div></div>  </div>
+<div class="title">TarEntry Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Tar.html">Tar Archive I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -206,7 +206,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A TarEntry holds the metadata and provides access to the content of one entry in a tar archive. Instances are produced by TarReader::advance() and remain valid until the next advance() call.</p>
 <p>Use type() to distinguish files, directories, symbolic links, and hard links. Use path() for the archive path, mtime() for the modification time, and permissions() for the POSIX permission bits.</p>
-<p>File content is delivered in one or more chunks. After each advance() call, up to avail() bytes are readable at data(). <a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> those bytes before calling advance() again — the buffer is reused on the next call. Repeat until isEnd() returns true, which means all size() bytes have been delivered. </p>
+<p>File content is delivered in one or more chunks. After each advance() call, up to avail() bytes are readable at data(). <a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> those bytes before calling advance() again — the buffer is reused on the next call. Repeat until isEnd() returns true, which means all size() bytes have been delivered. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a1d1cfd8ffb84e947f82999c682b666a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d1cfd8ffb84e947f82999c682b666a7">&#9670;&nbsp;</a></span>Type</h2>
@@ -267,7 +267,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> these bytes before calling TarReader::advance() again — the pointer becomes invalid on the next advance() call. </p>
+<p><a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> these bytes before calling TarReader::advance() again — the pointer becomes invalid on the next advance() call. </p>
 
 </div>
 </div>

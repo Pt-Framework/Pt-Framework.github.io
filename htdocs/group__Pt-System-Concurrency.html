@@ -80,14 +80,72 @@
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Concurrency</div>  </div>
+<div class="title">Concurrency<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The classes and functions in this group make it possible to write multi-threaded programs. Access to shared resources can be serialized by various types of mutexes, semaphores and condition variables. The most lightweight synchronization primitives are atomic integers. The framework allows to start threads, which can be either joinable or detached. </p>
+<p>A process can run more than one thread of control. Thread is the portable thread. Construction does not start it. start() runs a Callable or an EventLoop. The thread must be joined or detached before it is destroyed. AttachedThread joins in its destructor. DetachedThread runs without a waiter and destroys itself when the entry returns.</p>
+<p>Mutex serializes access to shared data. It is not recursive: the same thread must not lock it again. MutexLock locks in the constructor and unlocks in the destructor, including during stack unwinding. RecursiveMutex allows the owning thread to lock again. ReadWriteMutex allows concurrent readers or one writer. SpinMutex is for short critical sections. Atomic integers are documented with the core module.</p>
+<p>Condition waits while a Mutex or MutexLock is held. wait() unlocks, suspends the caller, and relocks when the wait ends. signal() wakes one waiter. broadcast() wakes all. Semaphore counts. wait() decrements when the count is positive. post() increments.</p>
+<p>Queue is a thread-safe FIFO. get() blocks while the queue is empty. put() blocks when a maximum size is set and the queue is full. A maximum of zero means no limit.</p>
+<p>Process starts another program from ProcessInfo. start() runs it. wait() joins it. Redirected stdin, stdout, and stderr are IODevice endpoints. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Condition.html">Condition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Signal.html" title="Multicast Signal to call multiple slots.">Signal</a> and wait synchronisation primitive.  <a href="classPt_1_1System_1_1Condition.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Mutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutual exclusion device.  <a href="classPt_1_1System_1_1Mutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1MutexLock.html">MutexLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped lock for a Mutex.  <a href="classPt_1_1System_1_1MutexLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1RecursiveMutex.html">RecursiveMutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive mutual exclusion device.  <a href="classPt_1_1System_1_1RecursiveMutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1RecursiveLock.html">RecursiveLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped lock for a RecursiveMutex.  <a href="classPt_1_1System_1_1RecursiveLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ReadWriteMutex.html">ReadWriteMutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Mutex.html" title="Mutual exclusion device.">Mutex</a> for concurrent readers or one writer.  <a href="classPt_1_1System_1_1ReadWriteMutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ReadLock.html">ReadLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped read lock for a ReadWriteMutex.  <a href="classPt_1_1System_1_1ReadLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1WriteLock.html">WriteLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped write lock for a ReadWriteMutex.  <a href="classPt_1_1System_1_1WriteLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SpinMutex.html">SpinMutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spin mutex.  <a href="classPt_1_1System_1_1SpinMutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SpinLock.html">SpinLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped lock for a SpinMutex.  <a href="classPt_1_1System_1_1SpinLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ProcessFailed.html">ProcessFailed</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thrown when a process does not terminate normally.  <a href="classPt_1_1System_1_1ProcessFailed.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1ProcessInfo.html">ProcessInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startup parameters for a Process.  <a href="classPt_1_1System_1_1ProcessInfo.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Process.html">Process</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts another program as a child process.  <a href="classPt_1_1System_1_1Process.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Queue.html">Queue&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-safe FIFO queue.  <a href="classPt_1_1System_1_1Queue.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Semaphore.html">Semaphore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counting semaphore.  <a href="classPt_1_1System_1_1Semaphore.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1Thread.html">Thread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Portable thread of control.  <a href="classPt_1_1System_1_1Thread.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1AttachedThread.html">AttachedThread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> that joins in its destructor.  <a href="classPt_1_1System_1_1AttachedThread.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1DetachedThread.html">DetachedThread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Thread.html" title="Portable thread of control.">Thread</a> that runs without a waiter.  <a href="classPt_1_1System_1_1DetachedThread.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionPt_1_1atomic__t.html">atomic_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic integers to be used with atomicity functions.  <a href="unionPt_1_1atomic__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>

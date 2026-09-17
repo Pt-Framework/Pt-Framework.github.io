@@ -85,13 +85,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">SerialDevice Class Reference</div>  </div>
+<div class="title">SerialDevice Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-IO.html">I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="SerialDevice_8h_source.html">Pt/System/SerialDevice.h</a>&gt;</code></p>
 
-<p>Serial device.  
+<p>Serial port as an IODevice.  
  <a href="classPt_1_1System_1_1SerialDevice.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a>.</p>
@@ -177,6 +177,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classPt_1_1System_1_1SerialDevice.html#ae88006c219f95bae663fe0f2a2561dd7">FlowControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#a7ec577d4ca2b95794d5efeb77d1b10be">flowControl</a> () const</td></tr>
 <tr class="memdesc:a7ec577d4ca2b95794d5efeb77d1b10be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current flow control kind. <br /></td></tr>
 <tr class="separator:a7ec577d4ca2b95794d5efeb77d1b10be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74cdbd3a17fe3f4ef896e705bf8ad2b"><td class="memItemLeft" align="right" valign="top"><a id="af74cdbd3a17fe3f4ef896e705bf8ad2b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#af74cdbd3a17fe3f4ef896e705bf8ad2b">setRts</a> (bool on)</td></tr>
+<tr class="memdesc:af74cdbd3a17fe3f4ef896e705bf8ad2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the RTS control line. <br /></td></tr>
+<tr class="separator:af74cdbd3a17fe3f4ef896e705bf8ad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a490fb2e604f45ba4e79d7f48516d7"><td class="memItemLeft" align="right" valign="top"><a id="ad6a490fb2e604f45ba4e79d7f48516d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#ad6a490fb2e604f45ba4e79d7f48516d7">setDtr</a> (bool on)</td></tr>
+<tr class="memdesc:ad6a490fb2e604f45ba4e79d7f48516d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the DTR control line. <br /></td></tr>
+<tr class="separator:ad6a490fb2e604f45ba4e79d7f48516d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d09e35275a79a5bc106eeac9892be3"><td class="memItemLeft" align="right" valign="top"><a id="a72d09e35275a79a5bc106eeac9892be3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#a72d09e35275a79a5bc106eeac9892be3">setBreak</a> (bool on)</td></tr>
+<tr class="memdesc:a72d09e35275a79a5bc106eeac9892be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or clears a break condition. <br /></td></tr>
+<tr class="separator:a72d09e35275a79a5bc106eeac9892be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de02b9af7e1008068c5bc0ec536f5d0"><td class="memItemLeft" align="right" valign="top"><a id="a1de02b9af7e1008068c5bc0ec536f5d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#a1de02b9af7e1008068c5bc0ec536f5d0">sendBreak</a> (int duration=0)</td></tr>
+<tr class="memdesc:a1de02b9af7e1008068c5bc0ec536f5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a break condition. <br /></td></tr>
+<tr class="separator:a1de02b9af7e1008068c5bc0ec536f5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace5cb1f5387a3e899f980526fbbb8e7c"><td class="memItemLeft" align="right" valign="top"><a id="ace5cb1f5387a3e899f980526fbbb8e7c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#ace5cb1f5387a3e899f980526fbbb8e7c">isCts</a> () const</td></tr>
+<tr class="memdesc:ace5cb1f5387a3e899f980526fbbb8e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if CTS is asserted. <br /></td></tr>
+<tr class="separator:ace5cb1f5387a3e899f980526fbbb8e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87fd3f54b61f4825e8a598c0953d734"><td class="memItemLeft" align="right" valign="top"><a id="ad87fd3f54b61f4825e8a598c0953d734"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#ad87fd3f54b61f4825e8a598c0953d734">isDsr</a> () const</td></tr>
+<tr class="memdesc:ad87fd3f54b61f4825e8a598c0953d734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if DSR is asserted. <br /></td></tr>
+<tr class="separator:ad87fd3f54b61f4825e8a598c0953d734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1SerialDevice.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears pending error flags. <br /></td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft" align="right" valign="top"><a id="a5ae591df94fc66ccb85cbb6565368bca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IODevice.html#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
 <tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the device. <br /></td></tr>
@@ -290,25 +318,17 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a96d2eb7450432fa029e8a874cbd2900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class implements access to a serial port as an IODevice. A SerialDevice can be opened by passing a system dependent path and an open mode. Then serial port attributes can be set before read or write operations are performed. The following example opens a COM port on windows, sets serial device attributes for a serial mouse and toggles the flow control to cause the device to send a PNP string which will be read subsequently:</p>
-<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespacePt_1_1System.html">Pt::System</a>;</div>
+<div class="textblock"><p>SerialDevice opens a serial port as an IODevice. The path is system-dependent, for example "COM1" on Windows or "/dev/ttyS0" on POSIX. Open the port, then set baud rate, character size, stop bits, parity, and flow control before read or write.</p>
+<p>The device supports the blocking and asynchronous transfers of IODevice. Control lines are available as <a class="el" href="classPt_1_1System_1_1SerialDevice.html#af74cdbd3a17fe3f4ef896e705bf8ad2b" title="Sets the RTS control line.">setRts()</a>, <a class="el" href="classPt_1_1System_1_1SerialDevice.html#ad6a490fb2e604f45ba4e79d7f48516d7" title="Sets the DTR control line.">setDtr()</a>, <a class="el" href="classPt_1_1System_1_1SerialDevice.html#ace5cb1f5387a3e899f980526fbbb8e7c" title="Returns true if CTS is asserted.">isCts()</a>, and <a class="el" href="classPt_1_1System_1_1SerialDevice.html#ad87fd3f54b61f4825e8a598c0953d734" title="Returns true if DSR is asserted.">isDsr()</a>. <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a72d09e35275a79a5bc106eeac9892be3" title="Sets or clears a break condition.">setBreak()</a> and <a class="el" href="classPt_1_1System_1_1SerialDevice.html#a1de02b9af7e1008068c5bc0ec536f5d0" title="Sends a break condition.">sendBreak()</a> generate a break condition.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1System_1_1SerialDevice.html">Pt::System::SerialDevice</a> device(<span class="stringliteral">&quot;COM1&quot;</span>, std::ios_base::in);</div>
+<div class="line">device.setBaudRate(Pt::System::SerialDevice::BaudRate9600);</div>
+<div class="line">device.setCharSize(8);</div>
+<div class="line">device.setStopBits(Pt::System::SerialDevice::OneStopBit);</div>
+<div class="line">device.setParity(Pt::System::SerialDevice::ParityNone);</div>
+<div class="line">device.setFlowControl(Pt::System::SerialDevice::FlowControlNone);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1SerialDevice.html">Pt::System::SerialDevice</a> serdev( <span class="stringliteral">&quot;COM1&quot;</span>,  std::ios_base::in );</div>
-<div class="line">serdev.setBaudRate(Pt::System::SerialDevice::BaudRate1200);</div>
-<div class="line">serdev.setCharSize(7);</div>
-<div class="line">serdev.setStopBits(Pt::System::SerialDevice::OneStopBit);</div>
-<div class="line">serdev.setParity(Pt::System::SerialDevice::ParityNone);</div>
-<div class="line"> </div>
-<div class="line">serdev.setFlowControl(Pt::System::SerialDevice::FlowControlHard);</div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1Thread.html#a3cfabfe1ccc5086cc5753eb45afc4658">Thread::sleep</a>( 300 );</div>
-<div class="line"> </div>
-<div class="line">serdev.setFlowControl(Pt::System::SerialDevice::FlowControlSoft);</div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1Thread.html#a3cfabfe1ccc5086cc5753eb45afc4658">Thread::sleep</a>( 300 );</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">char</span> pnp_id[200];</div>
-<div class="line"><span class="keywordtype">size_t</span> size = serdev.read( pnp_id, 200);</div>
-<div class="line">std::cerr &lt;&lt; <span class="stringliteral">&quot;Mouse Id: &quot;</span>;</div>
-<div class="line">std::cerr.write(pnp_id, size) &lt;&lt; std::endl;</div>
+<div class="line"><span class="keywordtype">char</span> buffer[64];</div>
+<div class="line">std::size_t n = device.<a class="code" href="classPt_1_1System_1_1IODevice.html#a8f0892c6bf02c81910a94fcdddee294e">read</a>(buffer, <span class="keyword">sizeof</span>(buffer));</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f0892c6bf02c81910a94fcdddee294e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f0892c6bf02c81910a94fcdddee294e">&#9670;&nbsp;</a></span>read()</h2>
@@ -574,7 +594,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">EventLoop</a> and data becomes available. </p>
+<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Event loop of a thread or process.">EventLoop</a> and data becomes available. </p>
 
 </div>
 </div>
@@ -600,14 +620,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">EventLoop</a> and the device is ready to write data. </p>
+<p>This signal is send when the <a class="el" href="classPt_1_1System_1_1IODevice.html" title="Endpoint for I/O operations.">IODevice</a> is monitored in an <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Event loop of a thread or process.">EventLoop</a> and the device is ready to write data. </p>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1System_1_1Thread_html_a3cfabfe1ccc5086cc5753eb45afc4658"><div class="ttname"><a href="classPt_1_1System_1_1Thread.html#a3cfabfe1ccc5086cc5753eb45afc4658">Pt::System::Thread::sleep</a></div><div class="ttdeci">static void sleep(unsigned int ms)</div><div class="ttdoc">Sleep for some time.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1SerialDevice_html"><div class="ttname"><a href="classPt_1_1System_1_1SerialDevice.html">Pt::System::SerialDevice</a></div><div class="ttdoc">Serial device.</div><div class="ttdef"><b>Definition:</b> SerialDevice.h:73</div></div>
-<div class="ttc" id="anamespacePt_1_1System_html"><div class="ttname"><a href="namespacePt_1_1System.html">Pt::System</a></div><div class="ttdoc">System programming</div><div class="ttdef"><b>Definition:</b> Client.h:41</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a8f0892c6bf02c81910a94fcdddee294e"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a8f0892c6bf02c81910a94fcdddee294e">Pt::System::IODevice::read</a></div><div class="ttdeci">std::size_t read(char *buffer, std::size_t n)</div><div class="ttdoc">Read data from I/O device.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1SerialDevice_html"><div class="ttname"><a href="classPt_1_1System_1_1SerialDevice.html">Pt::System::SerialDevice</a></div><div class="ttdoc">Serial port as an IODevice.</div><div class="ttdef"><b>Definition:</b> SerialDevice.h:69</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

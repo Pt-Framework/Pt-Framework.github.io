@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Queue&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">Queue&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Concurrency.html">Concurrency</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Queue_8h_source.html">Pt/System/Queue.h</a>&gt;</code></p>
 
-<p>This class implements a thread safe queue.  
+<p>Thread-safe FIFO queue.  
  <a href="classPt_1_1System_1_1Queue.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -128,7 +128,7 @@ size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class Pt::System::Queue&lt; T &gt;</h3>
 
-<p>A queue is a container where the elements put into the queue are fetched in the same order (first-in-first-out, fifo). The class has a optional maximum size. If the size is set to 0 the queue has no limit. Otherwise putting a element to the queue may block until another thread fetches a element or icreases the limit. </p>
+<p><a class="el" href="classPt_1_1System_1_1Queue.html#abc17b3790439a0ae2a075ca6a562e82b" title="Returns the next element.">get()</a> returns the next element and blocks while the queue is empty. <a class="el" href="classPt_1_1System_1_1Queue.html#a111ad39a46ebedb45e6e9aec021be1ba" title="Adds a element to the queue.">put()</a> appends an element and blocks when a maximum size is set and the queue is full. A maximum of zero means no limit. Raising the maximum may wake a thread blocked in <a class="el" href="classPt_1_1System_1_1Queue.html#a111ad39a46ebedb45e6e9aec021be1ba" title="Adds a element to the queue.">put()</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abc17b3790439a0ae2a075ca6a562e82b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc17b3790439a0ae2a075ca6a562e82b">&#9670;&nbsp;</a></span>get()</h2>

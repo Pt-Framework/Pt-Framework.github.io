@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">UdpSocket Class Reference</div>  </div>
+<div class="title">UdpSocket Class Reference<div class="ingroups"><a class="el" href="group__Pt-Net.html">Networking</a> &raquo; <a class="el" href="group__Pt-Net-Udp.html">UDP Sockets</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="UdpSocket_8h_source.html">Pt/Net/UdpSocket.h</a>&gt;</code></p>
 
-<p>UDP server and client socket.  
-</p>
+<p>UDP datagram socket.  
+ <a href="classPt_1_1Net_1_1UdpSocket.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a>.</p>
 <table class="memberdecls">
@@ -99,77 +99,79 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a589faf702e24e40bf3f01d7053c3dab6"><td class="memItemLeft" align="right" valign="top"><a id="a589faf702e24e40bf3f01d7053c3dab6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a589faf702e24e40bf3f01d7053c3dab6">UdpSocket</a> ()</td></tr>
-<tr class="memdesc:a589faf702e24e40bf3f01d7053c3dab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="memdesc:a589faf702e24e40bf3f01d7053c3dab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a closed socket. <br /></td></tr>
 <tr class="separator:a589faf702e24e40bf3f01d7053c3dab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a0cca9b80580f90dee577568728f41e"><td class="memItemLeft" align="right" valign="top"><a id="a2a0cca9b80580f90dee577568728f41e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a2a0cca9b80580f90dee577568728f41e">UdpSocket</a> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;<a class="el" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>)</td></tr>
-<tr class="memdesc:a2a0cca9b80580f90dee577568728f41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with event loop. <br /></td></tr>
+<tr class="memdesc:a2a0cca9b80580f90dee577568728f41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a socket and attaches it to <em>loop</em>. <br /></td></tr>
 <tr class="separator:a2a0cca9b80580f90dee577568728f41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0147d0cc3d374e15cb1969b13cc1dddb"><td class="memItemLeft" align="right" valign="top"><a id="a0147d0cc3d374e15cb1969b13cc1dddb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a0147d0cc3d374e15cb1969b13cc1dddb">~UdpSocket</a> ()</td></tr>
-<tr class="memdesc:a0147d0cc3d374e15cb1969b13cc1dddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memdesc:a0147d0cc3d374e15cb1969b13cc1dddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the socket. <br /></td></tr>
 <tr class="separator:a0147d0cc3d374e15cb1969b13cc1dddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e4613173ed2e1d77fd146ce91bf8e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">bind</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:ac3e4613173ed2e1d77fd146ce91bf8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind to local endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">More...</a><br /></td></tr>
+<tr class="memdesc:ac3e4613173ed2e1d77fd146ce91bf8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds to local endpoint <em>ep</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">More...</a><br /></td></tr>
 <tr class="separator:ac3e4613173ed2e1d77fd146ce91bf8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadcbdadbaa49e1de2d10629a948f01a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aadcbdadbaa49e1de2d10629a948f01a3">bind</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep, const <a class="el" href="classPt_1_1Net_1_1UdpSocketOptions.html">UdpSocketOptions</a> &amp;o)</td></tr>
-<tr class="memdesc:aadcbdadbaa49e1de2d10629a948f01a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind to local endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#aadcbdadbaa49e1de2d10629a948f01a3">More...</a><br /></td></tr>
+<tr class="memdesc:aadcbdadbaa49e1de2d10629a948f01a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds to <em>ep</em> with <em>o</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#aadcbdadbaa49e1de2d10629a948f01a3">More...</a><br /></td></tr>
 <tr class="separator:aadcbdadbaa49e1de2d10629a948f01a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7017fd65edc8f84da8412ae986dfd40e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">beginBind</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:a7017fd65edc8f84da8412ae986dfd40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin bind to local endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">More...</a><br /></td></tr>
+<tr class="memdesc:a7017fd65edc8f84da8412ae986dfd40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins binding to <em>ep</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">More...</a><br /></td></tr>
 <tr class="separator:a7017fd65edc8f84da8412ae986dfd40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af17ff3980fa23d1261d08b966739936f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#af17ff3980fa23d1261d08b966739936f">beginBind</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep, const <a class="el" href="classPt_1_1Net_1_1UdpSocketOptions.html">UdpSocketOptions</a> &amp;o)</td></tr>
-<tr class="memdesc:af17ff3980fa23d1261d08b966739936f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin bind to local endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#af17ff3980fa23d1261d08b966739936f">More...</a><br /></td></tr>
+<tr class="memdesc:af17ff3980fa23d1261d08b966739936f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins binding to <em>ep</em> with <em>o</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#af17ff3980fa23d1261d08b966739936f">More...</a><br /></td></tr>
 <tr class="separator:af17ff3980fa23d1261d08b966739936f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6e8a5dba8f987e807a325737549e748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">endBind</a> ()</td></tr>
-<tr class="memdesc:af6e8a5dba8f987e807a325737549e748"><td class="mdescLeft">&#160;</td><td class="mdescRight">end bind to local endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">More...</a><br /></td></tr>
+<tr class="memdesc:af6e8a5dba8f987e807a325737549e748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends binding to a local endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">More...</a><br /></td></tr>
 <tr class="separator:af6e8a5dba8f987e807a325737549e748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedeb1d2d17984ea62868167b3d2b73db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">bound</a> ()</td></tr>
-<tr class="memdesc:aedeb1d2d17984ea62868167b3d2b73db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies that the socket was bound.  <a href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">More...</a><br /></td></tr>
+<tr class="memitem:aedeb1d2d17984ea62868167b3d2b73db"><td class="memItemLeft" align="right" valign="top"><a id="aedeb1d2d17984ea62868167b3d2b73db"></a>
+<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">bound</a> ()</td></tr>
+<tr class="memdesc:aedeb1d2d17984ea62868167b3d2b73db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal that the socket was bound. <br /></td></tr>
 <tr class="separator:aedeb1d2d17984ea62868167b3d2b73db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05476a754529dc56ab358f6383346cae"><td class="memItemLeft" align="right" valign="top"><a id="a05476a754529dc56ab358f6383346cae"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a05476a754529dc56ab358f6383346cae">isBound</a> () const</td></tr>
-<tr class="memdesc:a05476a754529dc56ab358f6383346cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if bound. <br /></td></tr>
+<tr class="memdesc:a05476a754529dc56ab358f6383346cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the socket is bound. <br /></td></tr>
 <tr class="separator:a05476a754529dc56ab358f6383346cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea676309d63eaa953da8c4b0baf64c60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aea676309d63eaa953da8c4b0baf64c60">connect</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:aea676309d63eaa953da8c4b0baf64c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to an endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#aea676309d63eaa953da8c4b0baf64c60">More...</a><br /></td></tr>
+<tr class="memdesc:aea676309d63eaa953da8c4b0baf64c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects to <em>ep</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#aea676309d63eaa953da8c4b0baf64c60">More...</a><br /></td></tr>
 <tr class="separator:aea676309d63eaa953da8c4b0baf64c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c053cc40c407e34a893a6a4294d8ec9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a9c053cc40c407e34a893a6a4294d8ec9">connect</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep, const <a class="el" href="classPt_1_1Net_1_1UdpSocketOptions.html">UdpSocketOptions</a> &amp;o)</td></tr>
-<tr class="memdesc:a9c053cc40c407e34a893a6a4294d8ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to an endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#a9c053cc40c407e34a893a6a4294d8ec9">More...</a><br /></td></tr>
+<tr class="memdesc:a9c053cc40c407e34a893a6a4294d8ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects to <em>ep</em> with <em>o</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#a9c053cc40c407e34a893a6a4294d8ec9">More...</a><br /></td></tr>
 <tr class="separator:a9c053cc40c407e34a893a6a4294d8ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41e61cf0c5358aa1452e38533b74d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">setTarget</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:ac41e61cf0c5358aa1452e38533b74d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set target endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">More...</a><br /></td></tr>
+<tr class="memdesc:ac41e61cf0c5358aa1452e38533b74d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the send target to <em>ep</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">More...</a><br /></td></tr>
 <tr class="separator:ac41e61cf0c5358aa1452e38533b74d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd9b00b6019c1e781887106cebe9494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#adbd9b00b6019c1e781887106cebe9494">setTarget</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep, const <a class="el" href="classPt_1_1Net_1_1UdpSocketOptions.html">UdpSocketOptions</a> &amp;o)</td></tr>
-<tr class="memdesc:adbd9b00b6019c1e781887106cebe9494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set target endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#adbd9b00b6019c1e781887106cebe9494">More...</a><br /></td></tr>
+<tr class="memdesc:adbd9b00b6019c1e781887106cebe9494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the send target to <em>ep</em> with <em>o</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#adbd9b00b6019c1e781887106cebe9494">More...</a><br /></td></tr>
 <tr class="separator:adbd9b00b6019c1e781887106cebe9494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89aefafffbf53007302f26f9c62d3b2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">beginConnect</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
-<tr class="memdesc:a89aefafffbf53007302f26f9c62d3b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin connect to an endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">More...</a><br /></td></tr>
+<tr class="memdesc:a89aefafffbf53007302f26f9c62d3b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins connecting to <em>ep</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">More...</a><br /></td></tr>
 <tr class="separator:a89aefafffbf53007302f26f9c62d3b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d93792426ada2d2ce1ddb2ed6d8eb66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a2d93792426ada2d2ce1ddb2ed6d8eb66">beginConnect</a> (const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep, const <a class="el" href="classPt_1_1Net_1_1UdpSocketOptions.html">UdpSocketOptions</a> &amp;o)</td></tr>
-<tr class="memdesc:a2d93792426ada2d2ce1ddb2ed6d8eb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin connect to an endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#a2d93792426ada2d2ce1ddb2ed6d8eb66">More...</a><br /></td></tr>
+<tr class="memdesc:a2d93792426ada2d2ce1ddb2ed6d8eb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins connecting to <em>ep</em> with <em>o</em>.  <a href="classPt_1_1Net_1_1UdpSocket.html#a2d93792426ada2d2ce1ddb2ed6d8eb66">More...</a><br /></td></tr>
 <tr class="separator:a2d93792426ada2d2ce1ddb2ed6d8eb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ddd0ea533304dc70208ee7a00a8e0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a> ()</td></tr>
-<tr class="memdesc:a18ddd0ea533304dc70208ee7a00a8e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">End connect to an endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">More...</a><br /></td></tr>
+<tr class="memdesc:a18ddd0ea533304dc70208ee7a00a8e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends connecting to an endpoint.  <a href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">More...</a><br /></td></tr>
 <tr class="separator:a18ddd0ea533304dc70208ee7a00a8e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9985d10e20644e700f56f47bc6766060"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">connected</a> ()</td></tr>
-<tr class="memdesc:a9985d10e20644e700f56f47bc6766060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies that the socket was connected.  <a href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">More...</a><br /></td></tr>
+<tr class="memitem:a9985d10e20644e700f56f47bc6766060"><td class="memItemLeft" align="right" valign="top"><a id="a9985d10e20644e700f56f47bc6766060"></a>
+<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">connected</a> ()</td></tr>
+<tr class="memdesc:a9985d10e20644e700f56f47bc6766060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal that the socket was connected. <br /></td></tr>
 <tr class="separator:a9985d10e20644e700f56f47bc6766060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80178eafbc14f5434c65b0a8413c12c7"><td class="memItemLeft" align="right" valign="top"><a id="a80178eafbc14f5434c65b0a8413c12c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a80178eafbc14f5434c65b0a8413c12c7">isConnected</a> () const</td></tr>
-<tr class="memdesc:a80178eafbc14f5434c65b0a8413c12c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if connected. <br /></td></tr>
+<tr class="memdesc:a80178eafbc14f5434c65b0a8413c12c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the socket is connected. <br /></td></tr>
 <tr class="separator:a80178eafbc14f5434c65b0a8413c12c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75476fad4525b26500c465203bb319ac"><td class="memItemLeft" align="right" valign="top"><a id="a75476fad4525b26500c465203bb319ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a75476fad4525b26500c465203bb319ac">joinMulticastGroup</a> (const std::string &amp;ipaddr)</td></tr>
-<tr class="memdesc:a75476fad4525b26500c465203bb319ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins a multicast group. <br /></td></tr>
+<tr class="memdesc:a75476fad4525b26500c465203bb319ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins multicast group <em>ipaddr</em>. <br /></td></tr>
 <tr class="separator:a75476fad4525b26500c465203bb319ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9996a2a207bb8a57aca938c4a208758"><td class="memItemLeft" align="right" valign="top"><a id="ae9996a2a207bb8a57aca938c4a208758"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#ae9996a2a207bb8a57aca938c4a208758">localEndpoint</a> (<a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;ep) const</td></tr>
-<tr class="memdesc:ae9996a2a207bb8a57aca938c4a208758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the local endpoint. <br /></td></tr>
+<tr class="memdesc:ae9996a2a207bb8a57aca938c4a208758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the local endpoint into <em>ep</em>. <br /></td></tr>
 <tr class="separator:ae9996a2a207bb8a57aca938c4a208758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ee7fe7c6397cec005c54b006f14bb55"><td class="memItemLeft" align="right" valign="top"><a id="a2ee7fe7c6397cec005c54b006f14bb55"></a>
 const <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a2ee7fe7c6397cec005c54b006f14bb55">remoteEndpoint</a> () const</td></tr>
-<tr class="memdesc:a2ee7fe7c6397cec005c54b006f14bb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the remote endpoint. <br /></td></tr>
+<tr class="memdesc:a2ee7fe7c6397cec005c54b006f14bb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the remote endpoint. <br /></td></tr>
 <tr class="separator:a2ee7fe7c6397cec005c54b006f14bb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft" align="right" valign="top"><a id="a5ae591df94fc66ccb85cbb6565368bca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1IODevice.html#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
@@ -283,7 +285,42 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a96d2eb7450432fa029e8a874cbd2900d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detached from loop. <br /></td></tr>
 <tr class="separator:a96d2eb7450432fa029e8a874cbd2900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>UdpSocket is the datagram socket in the model above.</p>
+<p>bind() sets the local endpoint that receives datagrams.</p>
+<p>beginBind() starts that bind on an attached event loop.</p>
+<p><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db" title="Returns the signal that the socket was bound.">bound()</a> is emitted when it finishes. endBind() completes it.</p>
+<p>connect() associates a remote peer so writes go there and reads come from it.</p>
+<p>setTarget() sets a send destination without associating the socket. Broadcast and multicast sends use that path.</p>
+<p>joinMulticastGroup() joins a multicast group. Bind first.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">char</span> buffer[256];</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> onBound(<a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a>&amp; socket)</div>
+<div class="line">{</div>
+<div class="line">    socket.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">endBind</a>();</div>
+<div class="line">    socket.<a class="code" href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">beginRead</a>(buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> onConnected(<a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a>&amp; socket)</div>
+<div class="line">{</div>
+<div class="line">    socket.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a>();</div>
+<div class="line">    socket.<a class="code" href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">beginWrite</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> <a class="code" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> receiver;</div>
+<div class="line">receiver.<a class="code" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a>(<a class="code" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>);</div>
+<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">bound</a>() += Pt::slot(onBound);</div>
+<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">beginBind</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(8000));</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> sender;</div>
+<div class="line">sender.<a class="code" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a>(<a class="code" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>);</div>
+<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">connected</a>() += Pt::slot(onConnected);</div>
+<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">beginConnect</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a>(8000));</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac3e4613173ed2e1d77fd146ce91bf8e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3e4613173ed2e1d77fd146ce91bf8e9">&#9670;&nbsp;</a></span>bind() <span class="overload">[1/2]</span></h2>
 
@@ -357,7 +394,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Begins binding to the <a class="el" href="classPt_1_1Net_1_1Endpoint.html" title="Represents a Network Host.">Endpoint</a> <em>ep</em>. The UdpSocket must be attached to a event loop with <a class="el" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda" title="Sets the parent loop, so that operations can be run.">setActive()</a>. Once the binding has completed, the signal <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db" title="Notifies that the socket was bound.">bound()</a> will be sent. In response, the method <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748" title="end bind to local endpoint.">endBind()</a> has to be called to finish the bind operation.</p>
+<p>The socket must be attached to an event loop.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
@@ -421,24 +458,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="aedeb1d2d17984ea62868167b3d2b73db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedeb1d2d17984ea62868167b3d2b73db">&#9670;&nbsp;</a></span>bound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt;<a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a>&amp;&gt;&amp; bound </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This signal is send when the UdpSocket is monitored in an EventLoop and was bound to a local endpoint. </p>
 
 </div>
 </div>
@@ -636,24 +655,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a9985d10e20644e700f56f47bc6766060"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9985d10e20644e700f56f47bc6766060">&#9670;&nbsp;</a></span>connected()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt;<a class="el" href="classPt_1_1Net_1_1UdpSocket.html">UdpSocket</a>&amp;&gt;&amp; connected </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This signal is send when the UdpSocket is monitored in an EventLoop and a connection was established. </p>
 
 </div>
 </div>
@@ -952,6 +953,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a0f6819a4971e612ac6d0cb54c4d41306"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">Pt::System::IODevice::beginWrite</a></div><div class="ttdeci">void beginWrite(const char *buffer, std::size_t n)</div><div class="ttdoc">Begins to write data.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a89aefafffbf53007302f26f9c62d3b2b"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">Pt::Net::UdpSocket::beginConnect</a></div><div class="ttdeci">bool beginConnect(const Endpoint &amp;ep)</div><div class="ttdoc">Begins connecting to ep.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_af6e8a5dba8f987e807a325737549e748"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">Pt::Net::UdpSocket::endBind</a></div><div class="ttdeci">void endBind()</div><div class="ttdoc">Ends binding to a local endpoint.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a7017fd65edc8f84da8412ae986dfd40e"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">Pt::Net::UdpSocket::beginBind</a></div><div class="ttdeci">bool beginBind(const Endpoint &amp;ep)</div><div class="ttdoc">Begins binding to ep.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ade1579512a59fd8e90ad41bea1d2ae68"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">Pt::System::IODevice::loop</a></div><div class="ttdeci">EventLoop * loop() const</div><div class="ttdoc">Returns the used event loop.</div><div class="ttdef"><b>Definition:</b> IODevice.h:240</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ac693ab150b948f96c8dd8f485274fb20"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">Pt::System::IODevice::beginRead</a></div><div class="ttdeci">void beginRead(char *buffer, std::size_t n)</div><div class="ttdoc">Begins to read data.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a></div><div class="ttdoc">UDP datagram socket.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:151</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a9985d10e20644e700f56f47bc6766060"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">Pt::Net::UdpSocket::connected</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:254</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:51</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a3e2a1ad7afd80765b91aaa1dac44dfad"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a></div><div class="ttdeci">static Endpoint ip4Any(unsigned short port)</div><div class="ttdoc">Creates the IPv4 any-address for port.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Selectable_html_a931676e60334ab733b848fa90dcb6dda"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">Pt::System::Selectable::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;parent)</div><div class="ttdoc">Sets the parent loop, so that operations can be run.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Net::UdpSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Ends connecting to an endpoint.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_abc562f2e3e17ddf88185f7632953830f"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a></div><div class="ttdeci">static Endpoint ip4Loopback(unsigned short port)</div><div class="ttdoc">Creates the IPv4 loopback address for port.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_aedeb1d2d17984ea62868167b3d2b73db"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">Pt::Net::UdpSocket::bound</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; bound()</div><div class="ttdoc">Returns the signal that the socket was bound.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:203</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

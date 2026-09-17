@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Pipe Class Reference</div>  </div>
+<div class="title">Pipe Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-IO.html">I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Pipe_8h_source.html">Pt/System/Pipe.h</a>&gt;</code></p>
 
-<p>A Pair of IODevices that form a half-duplex pipe.  
+<p>Pair of IODevice endpoints that form a half-duplex pipe.  
  <a href="classPt_1_1System_1_1Pipe.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -120,7 +120,9 @@ const <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a> &amp;
 <tr class="separator:adecfe9d1b2c0ad88713d1c005ca26e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A pipe consists of a pair of IODevices: A writable output device and a readable input device. If bytes are written to the output device they can be read from the input device in exactly the order in which they were written. Whether or not the writer to a pipe will block until the reader reads the data, or some previously-written bytes, from the pipe is system-dependent and therefore unspecified. Many pipe implementations will buffer up to a certain number of bytes between input and output, but such buffering should not be assumed. </p>
+<div class="textblock"><p>A pipe is two IODevice objects created together. Bytes written to <a class="el" href="classPt_1_1System_1_1Pipe.html#acc46486c687d29c911c29259442532c5" title="Endpoint of the pipe to write to.">in()</a> are read from <a class="el" href="classPt_1_1System_1_1Pipe.html#a1adb2b6d97e3db01e1ee4f13b14d480f" title="Endpoint of the pipe to read from.">out()</a> in the same order. The constructor opens both ends. The destructor closes them.</p>
+<p>Whether a write blocks until a read consumes data is system-dependent. Some platforms buffer a limited number of bytes between the ends. That buffer must not be assumed. Treat a write as complete only when write() or endWrite() returns.</p>
+<p>Each end is a Selectable. Attach <a class="el" href="classPt_1_1System_1_1Pipe.html#a1adb2b6d97e3db01e1ee4f13b14d480f" title="Endpoint of the pipe to read from.">out()</a> to an EventLoop to read without blocking the thread. Attach <a class="el" href="classPt_1_1System_1_1Pipe.html#acc46486c687d29c911c29259442532c5" title="Endpoint of the pipe to write to.">in()</a> to write the same way. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7f52bc182c1b34d2394c2bce2ebaa7ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f52bc182c1b34d2394c2bce2ebaa7ee">&#9670;&nbsp;</a></span>Pipe()</h2>

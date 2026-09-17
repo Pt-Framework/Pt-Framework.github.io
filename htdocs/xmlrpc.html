@@ -120,14 +120,14 @@ XML-RPC Services</h1>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="classPt_1_1XmlRpc_1_1HttpService.html">Pt::XmlRpc::HttpService</a> httpService(service);</div>
 <div class="line">    <a class="code" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> servlet(<span class="stringliteral">&quot;/calculator&quot;</span>, httpService);</div>
-<div class="line">    server.<a class="code" href="classPt_1_1Http_1_1Server.html#ac4200942695db336eb7ddc5855032035">addServlet</a>(servlet);</div>
+<div class="line">    server.addServlet(servlet);</div>
 <div class="line"> </div>
 <div class="line">    loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>The code above constructs a HTTP server instance and adds an XML-RPC service with the name '/calculator'. HTTP services are not directly added to a HTTP server, but as part of a servlet. The servlet of type <a class="el" href="classPt_1_1Http_1_1MapUrl.html" title="Maps requests to a service by URL.">Pt::Http::MapUrl</a> instructs the server to route all requests for the URL '/calculator' to the CalculatorService. The server requires an event loop to run, in this case a program main loop.</p>
 <h1><a class="anchor" id="xmlrpc_AsyncProcedures"></a>
 Asynchronous XML-RPC Service Procedures</h1>
-<p>Since the server has only a limited number of worker threads, the XML-RPC procedures should not block, for example to perform long I/O operations, otherwise the performance of the HTTP server will degrade. Instead, the asynchronous API allows using a <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Thread-safe event loop supporting I/O multiplexing and Timers.">Pt::System::EventLoop</a> from within a XML-RPC procedure, as shown in the next example:</p>
+<p>Since the server has only a limited number of worker threads, the XML-RPC procedures should not block, for example to perform long I/O operations, otherwise the performance of the HTTP server will degrade. Instead, the asynchronous API allows using a <a class="el" href="classPt_1_1System_1_1EventLoop.html" title="Event loop of a thread or process.">Pt::System::EventLoop</a> from within a XML-RPC procedure, as shown in the next example:</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>AsyncEcho : <span class="keyword">public</span> Pt::XmlRpc::ActiveProcedure&lt;std::string, std::string&gt;</div>
 <div class="line">                , <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
 <div class="line">{</div>
@@ -331,15 +331,14 @@ Copyright and Disclaimer</h1>
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MapUrl_html"><div class="ttname"><a href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a></div><div class="ttdoc">Maps requests to a service by URL.</div><div class="ttdef"><b>Definition:</b> Servlet.h:118</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Notifies clients in constant intervals.</div><div class="ttdef"><b>Definition:</b> Timer.h:79</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1Timer_html"><div class="ttname"><a href="classPt_1_1System_1_1Timer.html">Pt::System::Timer</a></div><div class="ttdoc">Interval timeout notifications.</div><div class="ttdef"><b>Definition:</b> Timer.h:74</div></div>
 <div class="ttc" id="aclassPt_1_1XmlRpc_1_1HttpService_html"><div class="ttname"><a href="classPt_1_1XmlRpc_1_1HttpService.html">Pt::XmlRpc::HttpService</a></div><div class="ttdoc">HTTP service for XML-RPC.</div><div class="ttdef"><b>Definition:</b> HttpService.h:48</div></div>
 <div class="ttc" id="aclassPt_1_1XmlRpc_1_1Responder_html"><div class="ttname"><a href="classPt_1_1XmlRpc_1_1Responder.html">Pt::XmlRpc::Responder</a></div><div class="ttdoc">Dispatches requests to a service procedure.</div><div class="ttdef"><b>Definition:</b> Responder.h:49</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Server_html_ac4200942695db336eb7ddc5855032035"><div class="ttname"><a href="classPt_1_1Http_1_1Server.html#ac4200942695db336eb7ddc5855032035">Pt::Http::Server::addServlet</a></div><div class="ttdeci">void addServlet(Servlet &amp;servlet)</div><div class="ttdoc">Adds a servlet.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
 <div class="ttc" id="aclassPt_1_1XmlRpc_1_1HttpClient_html"><div class="ttname"><a href="classPt_1_1XmlRpc_1_1HttpClient.html">Pt::XmlRpc::HttpClient</a></div><div class="ttdoc">A client for remote procedure calls via HTTP.</div><div class="ttdef"><b>Definition:</b> HttpClient.h:47</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Represents a Network Host.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:47</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:67</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1Server_html"><div class="ttname"><a href="classPt_1_1Http_1_1Server.html">Pt::Http::Server</a></div><div class="ttdoc">An HTTP server.</div><div class="ttdef"><b>Definition:</b> Server.h:59</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Thread-safe event loop supporting I/O multiplexing and Timers.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:67</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:51</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -83,7 +83,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">TarReader Class Reference<div class="ingroups"><a class="el" href="group__Pt-System-Tar.html">Tar Archive I/O</a></div></div>  </div>
+<div class="title">TarReader Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Tar.html">Tar Archive I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -171,7 +171,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Each call consumes the bytes previously exposed via TarEntry::data() and fetches the next data from the stream. <a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> TarEntry::data() before calling <a class="el" href="classPt_1_1System_1_1TarReader.html#a74274171d1c59b57aadcd793d8373078" title="Advance to the next entry or deliver the next content chunk.">advance()</a> again — the buffer is reused on each call.</p>
+<p>Each call consumes the bytes previously exposed via TarEntry::data() and fetches the next data from the stream. <a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> TarEntry::data() before calling <a class="el" href="classPt_1_1System_1_1TarReader.html#a74274171d1c59b57aadcd793d8373078" title="Advance to the next entry or deliver the next content chunk.">advance()</a> again — the buffer is reused on each call.</p>
 <p>When <em>importSize</em> is 0 (default), only bytes already in the stream buffer are used and no blocking I/O is performed, making this safe for event-loop use. A value greater than 0 allows reading up to that many additional bytes from the stream, which may block.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">MainLoop Class Reference</div>  </div>
+<div class="title">MainLoop Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-EventLoop.html">Event Loops</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="MainLoop_8h_source.html">Pt/System/MainLoop.h</a>&gt;</code></p>
 
-<p>Thread-safe event loop supporting I/O multiplexing and Timers.  
+<p>Platform event loop.  
  <a href="classPt_1_1System_1_1MainLoop.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1System_1_1EventLoop.html">EventLoop</a>.</p>
@@ -119,7 +119,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a358d2e2397ca11ccd17553e3c40e7901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5473b44af17c41807bd98b6d1da298b"><td class="memItemLeft" align="right" valign="top"><a id="ad5473b44af17c41807bd98b6d1da298b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#ad5473b44af17c41807bd98b6d1da298b">processEvents</a> ()</td></tr>
-<tr class="memdesc:ad5473b44af17c41807bd98b6d1da298b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Process.html" title="Executes shell commands.">Process</a> all queued events. <br /></td></tr>
+<tr class="memdesc:ad5473b44af17c41807bd98b6d1da298b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> all queued events. <br /></td></tr>
 <tr class="separator:ad5473b44af17c41807bd98b6d1da298b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824db47f925f8e739fe313d20f4614e6"><td class="memItemLeft" align="right" valign="top"><a id="a824db47f925f8e739fe313d20f4614e6"></a>
 <a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; const <a class="el" href="classPt_1_1Event.html">Event</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a824db47f925f8e739fe313d20f4614e6">eventReceived</a> ()</td></tr>
@@ -137,7 +137,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a6d3302e0356744a0461035a9aafa45cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="memItemLeft" align="right" valign="top"><a id="a6a05bf7a1187628b7a9b92bcc0284b35"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventLoop.html#a6a05bf7a1187628b7a9b92bcc0284b35">setReady</a> (<a class="el" href="classPt_1_1System_1_1Selectable.html">Selectable</a> &amp;s)</td></tr>
-<tr class="memdesc:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classPt_1_1System_1_1Selectable.html" title="Dispatches operations through an event loop.">Selectable</a> as ready without waking the loop. <br /></td></tr>
+<tr class="memdesc:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classPt_1_1System_1_1Selectable.html" title="Operation that runs through an event loop.">Selectable</a> as ready without waking the loop. <br /></td></tr>
 <tr class="separator:a6a05bf7a1187628b7a9b92bcc0284b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c8ef93b92a3fb86475dca464fbacbc"><td class="memItemLeft" align="right" valign="top"><a id="a40c8ef93b92a3fb86475dca464fbacbc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1System_1_1EventSink.html#a40c8ef93b92a3fb86475dca464fbacbc">commitEvent</a> (const <a class="el" href="classPt_1_1Event.html">Event</a> &amp;ev)</td></tr>
@@ -168,25 +168,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a90cea37236bf0e95e93e568898bf6fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The following example uses a MainLoop to wait on acitvity on a <a class="el" href="classPt_1_1System_1_1Timer.html" title="Notifies clients in constant intervals.">Timer</a>, which is set to time-out after 1000 msecs.</p>
-<div class="fragment"><div class="line"><span class="comment">// slot to handle timer activity</span></div>
-<div class="line"><span class="keywordtype">void</span> onTimer();</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">using</span> <a class="code" href="namespacePt_1_1System.html">Pt::System</a>;</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="classPt_1_1System_1_1MainLoop.html#a889336ba4bb2ad7683bda3349b7cbc6e">MainLoop</a> loop;</div>
-<div class="line"> </div>
-<div class="line">    Timer timer;</div>
-<div class="line">    timer.setActive(loop);</div>
-<div class="line">    timer.start(1000);</div>
-<div class="line">    timer.timeout() += Pt::slot(onTimer);</div>
-<div class="line"> </div>
-<div class="line">    loop.run();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>MainLoop is the EventLoop implementation for the platform. It multiplexes I/O and timers. Application creates one by default. Construct a MainLoop directly when the process has no Application, or when a second loop runs in another thread. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1e99e13beeacd50b6e6fe630f4e0243d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e99e13beeacd50b6e6fe630f4e0243d">&#9670;&nbsp;</a></span>yieldAsync()</h2>
 
@@ -241,8 +224,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html_a889336ba4bb2ad7683bda3349b7cbc6e"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html#a889336ba4bb2ad7683bda3349b7cbc6e">Pt::System::MainLoop::MainLoop</a></div><div class="ttdeci">MainLoop()</div><div class="ttdoc">Default Constructor.</div></div>
-<div class="ttc" id="anamespacePt_1_1System_html"><div class="ttname"><a href="namespacePt_1_1System.html">Pt::System</a></div><div class="ttdoc">System programming</div><div class="ttdef"><b>Definition:</b> Client.h:41</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

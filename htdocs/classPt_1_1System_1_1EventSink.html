@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">EventSink Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">EventSink Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-EventLoop.html">Event Loops</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="EventSink_8h_source.html">Pt/System/EventSink.h</a>&gt;</code></p>
 
 <p>Receiver for events.  
-</p>
+ <a href="classPt_1_1System_1_1EventSink.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 
@@ -135,7 +135,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:ab30c3ee8b164fdc3fe46e23229814dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers event processing. <br /></td></tr>
 <tr class="separator:ab30c3ee8b164fdc3fe46e23229814dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An EventSink accepts events from an EventSource or from direct calls. <a class="el" href="classPt_1_1System_1_1EventSink.html#a40c8ef93b92a3fb86475dca464fbacbc" title="Queues an event and triggers event processing.">commitEvent()</a> queues an event and starts processing. <a class="el" href="classPt_1_1System_1_1EventSink.html#a8794d4e41fef851f88dd39f0dd39462a" title="Only queues an event.">queueEvent()</a> queues without starting processing, so several events can be added first. <a class="el" href="classPt_1_1System_1_1EventSink.html#a9a390b373c288df5bb2d7821e7ffa9c2" title="Triggers event processing.">wake()</a> starts processing.</p>
+<p>EventLoop is an EventSink. Events queued for a loop are delivered on eventReceived in the loop thread. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">
