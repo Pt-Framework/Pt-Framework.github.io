@@ -152,16 +152,15 @@ static <a class="el" href="classPt_1_1Net_1_1Endpoint.html">Endpoint</a>&#160;</
 <tr class="separator:aeb9b948157396a25422ea07a9450faeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Endpoint is the address value in the model above. It names a host and a service port. It does not open a socket.</p>
-<p>A host name and a port number construct it. The host may be a DNS name or a numeric IPv4 or IPv6 address.</p>
-<p>Factory functions build the IPv4 and IPv6 any and loopback addresses, and the IPv4 broadcast address, for a port. Those addresses do not perform name resolution.</p>
-<p>toString() formats the endpoint for display.</p>
-<p>clear() resets it to an empty address.</p>
-<p>An endpoint is a copyable value.</p>
+<div class="textblock"><p>Endpoint is the copyable address value that TCP and UDP operations use. It names a host and a service port. It does not open a socket, and constructing one does not start a connection or a listen.</p>
+<p>A host string and a port number construct it. The host may be a DNS name or a numeric IPv4 or IPv6 address. Name resolution happens when a socket uses the endpoint, not when the value is created, so an invalid name fails on listen, bind, or connect rather than on construction.</p>
+<p>Factory functions build the IPv4 and IPv6 any and loopback addresses, and the IPv4 broadcast address, for a port. Those addresses do not perform name resolution. The any-address is the local wildcard used to listen or bind on every local interface. Loopback is the host itself. The IPv4 broadcast address is the send destination for UDP broadcast.</p>
+<p>toString() formats the endpoint for display. clear() resets it to an empty address. Copy and assignment duplicate the address, not a socket.</p>
+<p>The example constructs a named host-and-port endpoint and an IPv4 any-address for a port. The first is a remote or named host. The second is a local wildcard.</p>
 <div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a> host(<span class="stringliteral">&quot;example.com&quot;</span>, 80);</div>
 <div class="line"><a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a> any = <a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(8080);</div>
 </div><!-- fragment --> </div></div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:67</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:76</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a3e2a1ad7afd80765b91aaa1dac44dfad"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a></div><div class="ttdeci">static Endpoint ip4Any(unsigned short port)</div><div class="ttdoc">Creates the IPv4 any-address for port.</div></div>
 
 <div class="clear">&nbsp;</div>

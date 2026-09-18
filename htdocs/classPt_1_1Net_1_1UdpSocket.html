@@ -286,13 +286,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a96d2eb7450432fa029e8a874cbd2900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>UdpSocket is the datagram socket in the model above.</p>
-<p>bind() sets the local endpoint that receives datagrams.</p>
-<p>beginBind() starts that bind on an attached event loop.</p>
-<p><a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db" title="Returns the signal that the socket was bound.">bound()</a> is emitted when it finishes. endBind() completes it.</p>
-<p>connect() associates a remote peer so writes go there and reads come from it.</p>
-<p>setTarget() sets a send destination without associating the socket. Broadcast and multicast sends use that path.</p>
-<p>joinMulticastGroup() joins a multicast group. Bind first.</p>
+<div class="textblock"><p>UdpSocket is the datagram IODevice for unicast, broadcast, and multicast. One type covers all three modes. After a local bind or a send destination is set, read() and write() are the inherited device operations, blocking or asynchronous. Each write() sends one datagram. Each read() receives one datagram.</p>
+<p>bind() sets the local endpoint that receives datagrams. If that address is already occupied, the call throws AddressInUse. If the host cannot be used, it throws AccessFailed. connect() associates a remote peer so writes go there and reads come from it. setTarget() sets a send destination without associating the socket. Broadcast and multicast sends use setTarget(). connect() and setTarget() throw AccessFailed when the host is not reachable.</p>
+<dl class="section user"><dt>Asynchronous bind and connect</dt><dd></dd></dl>
+<p>beginBind() and beginConnect() start those operations on an attached event loop. They return true when the operation completed immediately. bound() and connected() are emitted when the attempt finishes. endBind() and endConnect() complete it. The socket must be attached before either begin method is called. isBound() and isConnected() report the current associations. localEndpoint() writes the local side. remoteEndpoint() is the associated peer.</p>
+<dl class="section user"><dt>Broadcast and multicast</dt><dd></dd></dl>
+<p>Broadcast send sets the broadcast option and uses the IPv4 broadcast endpoint as the target. Multicast send uses a multicast group address as the target. To receive a group's datagrams, bind first, then joinMulticastGroup(). UdpSocketOptions also set the hop limit. Those values configure an operation; they do not open a socket.</p>
+<p>The first example is asynchronous unicast: one socket binds the local any-address, the other connects to loopback, and each slot completes the begin operation before I/O. The second example is a broadcast send. The third binds, joins a group, and sends to that group.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> buffer[256];</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> onBound(<a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a>&amp; socket)</div>
@@ -320,6 +320,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">beginConnect</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a>(8000));</div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">loop</a>.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocketOptions.html">Pt::Net::UdpSocketOptions</a> opts;</div>
+<div class="line">opts.<a class="code" href="classPt_1_1Net_1_1UdpSocketOptions.html#afc852764fad4f645329f7f66197154d9">setBroadcast</a>();</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> sender;</div>
+<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">setTarget</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a85a02fc633cf3e65e108161aee9de453">Pt::Net::Endpoint::ip4Broadcast</a>(8000), opts);</div>
+<div class="line">sender.<a class="code" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">write</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> receiver;</div>
+<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">bind</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(8000));</div>
+<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a75476fad4525b26500c465203bb319ac">joinMulticastGroup</a>(<span class="stringliteral">&quot;224.0.1.1&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> sender;</div>
+<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">setTarget</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a>(<span class="stringliteral">&quot;224.0.1.1&quot;</span>, 8000));</div>
+<div class="line">sender.<a class="code" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">write</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac3e4613173ed2e1d77fd146ce91bf8e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3e4613173ed2e1d77fd146ce91bf8e9">&#9670;&nbsp;</a></span>bind() <span class="overload">[1/2]</span></h2>
@@ -338,7 +351,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%AddressInUse</td><td>if the local address is already occupied. </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -372,7 +386,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%AddressInUse</td><td>if the local address is already occupied. </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -395,9 +410,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 <p>The socket must be attached to an event loop.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the bind completed immediately </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%AddressInUse</td><td>if the local address is already occupied. </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -429,9 +446,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The socket must be attached to an event loop.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the bind completed immediately </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%AddressInUse</td><td>if the local address is already occupied. </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -454,7 +474,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%AddressInUse</td><td>if the local address is already occupied. </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -478,7 +499,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -512,7 +533,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -536,7 +557,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -570,7 +591,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -592,9 +613,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The socket must be attached to an event loop.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the connect completed immediately </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -626,9 +649,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The socket must be attached to an event loop.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the connect completed immediately </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -651,7 +676,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -954,20 +979,28 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a0f6819a4971e612ac6d0cb54c4d41306"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">Pt::System::IODevice::beginWrite</a></div><div class="ttdeci">void beginWrite(const char *buffer, std::size_t n)</div><div class="ttdoc">Begins to write data.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocketOptions_html_afc852764fad4f645329f7f66197154d9"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocketOptions.html#afc852764fad4f645329f7f66197154d9">Pt::Net::UdpSocketOptions::setBroadcast</a></div><div class="ttdeci">void setBroadcast()</div><div class="ttdoc">Enables UDP broadcast.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:72</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a89aefafffbf53007302f26f9c62d3b2b"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">Pt::Net::UdpSocket::beginConnect</a></div><div class="ttdeci">bool beginConnect(const Endpoint &amp;ep)</div><div class="ttdoc">Begins connecting to ep.</div></div>
+<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a7a6d2a237f8e5423ae44adffda0a52ed"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">Pt::System::IODevice::write</a></div><div class="ttdeci">std::size_t write(const char *buffer, std::size_t n)</div><div class="ttdoc">Write data to I/O device.</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_af6e8a5dba8f987e807a325737549e748"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">Pt::Net::UdpSocket::endBind</a></div><div class="ttdeci">void endBind()</div><div class="ttdoc">Ends binding to a local endpoint.</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a7017fd65edc8f84da8412ae986dfd40e"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">Pt::Net::UdpSocket::beginBind</a></div><div class="ttdeci">bool beginBind(const Endpoint &amp;ep)</div><div class="ttdoc">Begins binding to ep.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ade1579512a59fd8e90ad41bea1d2ae68"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">Pt::System::IODevice::loop</a></div><div class="ttdeci">EventLoop * loop() const</div><div class="ttdoc">Returns the used event loop.</div><div class="ttdef"><b>Definition:</b> IODevice.h:240</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_ac3e4613173ed2e1d77fd146ce91bf8e9"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">Pt::Net::UdpSocket::bind</a></div><div class="ttdeci">void bind(const Endpoint &amp;ep)</div><div class="ttdoc">Binds to local endpoint ep.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a85a02fc633cf3e65e108161aee9de453"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a85a02fc633cf3e65e108161aee9de453">Pt::Net::Endpoint::ip4Broadcast</a></div><div class="ttdeci">static Endpoint ip4Broadcast(unsigned short port)</div><div class="ttdoc">Creates the IPv4 broadcast address for port.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:76</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ac693ab150b948f96c8dd8f485274fb20"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">Pt::System::IODevice::beginRead</a></div><div class="ttdeci">void beginRead(char *buffer, std::size_t n)</div><div class="ttdoc">Begins to read data.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a></div><div class="ttdoc">UDP datagram socket.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:151</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a9985d10e20644e700f56f47bc6766060"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">Pt::Net::UdpSocket::connected</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:254</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a></div><div class="ttdoc">UDP datagram socket.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:193</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a9985d10e20644e700f56f47bc6766060"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">Pt::Net::UdpSocket::connected</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:311</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a75476fad4525b26500c465203bb319ac"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a75476fad4525b26500c465203bb319ac">Pt::Net::UdpSocket::joinMulticastGroup</a></div><div class="ttdeci">void joinMulticastGroup(const std::string &amp;ipaddr)</div><div class="ttdoc">Joins multicast group ipaddr.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocketOptions_html"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocketOptions.html">Pt::Net::UdpSocketOptions</a></div><div class="ttdoc">UDP socket bind and send options.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:47</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:51</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a3e2a1ad7afd80765b91aaa1dac44dfad"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a></div><div class="ttdeci">static Endpoint ip4Any(unsigned short port)</div><div class="ttdoc">Creates the IPv4 any-address for port.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Selectable_html_a931676e60334ab733b848fa90dcb6dda"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">Pt::System::Selectable::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;parent)</div><div class="ttdoc">Sets the parent loop, so that operations can be run.</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Net::UdpSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Ends connecting to an endpoint.</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_abc562f2e3e17ddf88185f7632953830f"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a></div><div class="ttdeci">static Endpoint ip4Loopback(unsigned short port)</div><div class="ttdoc">Creates the IPv4 loopback address for port.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_aedeb1d2d17984ea62868167b3d2b73db"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">Pt::Net::UdpSocket::bound</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; bound()</div><div class="ttdoc">Returns the signal that the socket was bound.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:203</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_ac41e61cf0c5358aa1452e38533b74d1a"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">Pt::Net::UdpSocket::setTarget</a></div><div class="ttdeci">void setTarget(const Endpoint &amp;ep)</div><div class="ttdoc">Sets the send target to ep.</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_aedeb1d2d17984ea62868167b3d2b73db"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">Pt::Net::UdpSocket::bound</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; bound()</div><div class="ttdoc">Returns the signal that the socket was bound.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:254</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

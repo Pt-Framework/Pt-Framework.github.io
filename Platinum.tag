@@ -118702,9 +118702,9 @@
     <docanchor file="Pt-Net-Page.html" title="Endpoints">Pt-Net-Page-Endpoint</docanchor>
     <docanchor file="Pt-Net-Page.html" title="TCP Sockets">Pt-Net-Page-Tcp</docanchor>
     <docanchor file="Pt-Net-Page.html" title="TCP Servers">Pt-Net-Page-TcpServer</docanchor>
-    <docanchor file="Pt-Net-Page.html" title="TCP Client Sockets">Pt-Net-Page-TcpSocket</docanchor>
+    <docanchor file="Pt-Net-Page.html" title="Connected TCP Sockets">Pt-Net-Page-TcpSocket</docanchor>
     <docanchor file="Pt-Net-Page.html" title="UDP Sockets">Pt-Net-Page-Udp</docanchor>
-    <docanchor file="Pt-Net-Page.html" title="UDP Sockets">Pt-Net-Page-UdpSocket</docanchor>
+    <docanchor file="Pt-Net-Page.html" title="Datagram Socket">Pt-Net-Page-UdpSocket</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-System-Page</name>

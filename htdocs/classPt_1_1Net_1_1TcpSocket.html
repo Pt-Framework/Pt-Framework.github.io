@@ -268,14 +268,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a96d2eb7450432fa029e8a874cbd2900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TcpSocket is the connected stream in the TCP model above.</p>
-<p>connect() reaches a remote endpoint and makes this socket the client side of the stream.</p>
-<p>accept() takes a pending connection from a listening server and makes this socket the accepted side.</p>
-<p>beginConnect() starts an asynchronous connect. The socket must be attached to an event loop.</p>
-<p>connected is emitted when the attempt finishes. endConnect() completes it. If the host is not reachable, the operation throws AccessFailed.</p>
-<p>isConnected() reports whether the stream is up.</p>
-<p>localEndpoint() writes the local side of the connection.</p>
-<p>remoteEndpoint() writes the remote side.</p>
+<div class="textblock"><p>TcpSocket is the connected TCP IODevice. The same type is the client side of a connect() and the accepted side of a pending TcpServer connection. After the stream is up, read() and write() are the inherited device operations, blocking or asynchronous.</p>
+<p>connect() reaches a remote endpoint and makes this socket the client stream. If the host is not reachable, the operation throws AccessFailed. accept() takes a pending connection from a listening server and makes this socket the accepted stream. A socket is one side or the other, not both at once: connect() and accept() close any previous connection first.</p>
+<dl class="section user"><dt>Asynchronous connect</dt><dd></dd></dl>
+<p>beginConnect() starts an asynchronous connect. The socket must be attached to an event loop. connected() is emitted when the attempt finishes. endConnect() completes it and throws AccessFailed if the host is not reachable. isConnected() reports whether the stream is up. localEndpoint() and remoteEndpoint() write the two sides of the connection.</p>
+<p>TcpSocketOptions configure the connection. They do not open a socket. Keep-alive, when set to a non-negative interval in seconds, enables periodic probes on the stream. A negative value leaves keep-alive unset.</p>
+<p>The example is an asynchronous client connect. The slot calls endConnect() and then writes through the inherited device operation. The accept path is the TcpServer pending-connection slot.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> onConnected(<a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a>&amp; socket)</div>
 <div class="line">{</div>
 <div class="line">    socket.<a class="code" href="classPt_1_1Net_1_1TcpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a>();</div>
@@ -314,7 +312,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +337,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -373,7 +371,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -395,9 +393,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The socket must be attached to an event loop.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -429,9 +428,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The socket must be attached to an event loop.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -454,7 +454,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">System::AccessFailed</td><td>if the host is not reachable </td></tr>
+    <tr><td class="paramname">%System::AccessFailed</td><td>if the host is not reachable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -757,12 +757,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a0f6819a4971e612ac6d0cb54c4d41306"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">Pt::System::IODevice::beginWrite</a></div><div class="ttdeci">void beginWrite(const char *buffer, std::size_t n)</div><div class="ttdoc">Begins to write data.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a></div><div class="ttdoc">Connected TCP byte stream.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:131</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a></div><div class="ttdoc">Connected TCP byte stream.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:141</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ade1579512a59fd8e90ad41bea1d2ae68"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ade1579512a59fd8e90ad41bea1d2ae68">Pt::System::IODevice::loop</a></div><div class="ttdeci">EventLoop * loop() const</div><div class="ttdoc">Returns the used event loop.</div><div class="ttdef"><b>Definition:</b> IODevice.h:240</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_ab5c44affc1d019b81c9f7a1720c60b14"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#ab5c44affc1d019b81c9f7a1720c60b14">Pt::Net::TcpSocket::beginConnect</a></div><div class="ttdeci">void beginConnect(const Endpoint &amp;ep)</div><div class="ttdoc">Begins connecting to ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:67</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_a53ea129b989135dc396ca6ae8d192bdb"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#a53ea129b989135dc396ca6ae8d192bdb">Pt::Net::TcpSocket::connected</a></div><div class="ttdeci">Signal&lt; TcpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:195</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:76</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_a53ea129b989135dc396ca6ae8d192bdb"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#a53ea129b989135dc396ca6ae8d192bdb">Pt::Net::TcpSocket::connected</a></div><div class="ttdeci">Signal&lt; TcpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:209</div></div>
 <div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Net::TcpSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Ends connecting to a host.</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:51</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1Selectable_html_a931676e60334ab733b848fa90dcb6dda"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">Pt::System::Selectable::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;parent)</div><div class="ttdoc">Sets the parent loop, so that operations can be run.</div></div>
