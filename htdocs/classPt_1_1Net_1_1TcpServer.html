@@ -178,14 +178,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:abcca23e6afadfade8c5d63ee62b49bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TcpServer is the listening Selectable in the TCP model. It binds a local endpoint and reports pending peers. It is not an IODevice and it does not read or write bytes. A TcpSocket takes each connection.</p>
-<p>listen() binds the local endpoint and waits for peers. If that address is already occupied, the call throws AddressInUse. A second listen() closes the previous listen first, so the server holds at most one local binding. The constructors create a closed server, attach one to an EventLoop, or listen immediately on an endpoint.</p>
+<div class="textblock"><p>TcpServer is the listening Selectable in the TCP model: it binds a local endpoint and reports pending peers, but it is not an IODevice and it does not read or write bytes. A TcpSocket takes each connection.</p>
+<p>listen() binds the local endpoint and waits for peers, and if that address is already occupied the call throws AddressInUse. A second listen() closes the previous listen first, so the server holds at most one local binding. The constructors create a closed server, attach one to an EventLoop, or listen immediately on an endpoint.</p>
 <dl class="section user"><dt>Listen options</dt><dd></dd></dl>
-<p>TcpServerOptions configure the listen. They do not open a server. The accept backlog is the number of pending connections the server will queue. Deferred accept, when set to a positive number of seconds, may wait until the peer sends data before reporting the connection. A negative deferred-accept value leaves that setting unset.</p>
+<p>TcpServerOptions configure the listen; they do not open a server. The accept backlog is the number of pending connections the server will queue, and deferred accept, when set to a positive number of seconds, may wait until the peer sends data before reporting the connection. A negative deferred-accept value leaves that setting unset.</p>
 <dl class="section user"><dt>Accepting connections</dt><dd></dd></dl>
-<p>Asynchronous accept requires an attached event loop. beginAccept() waits for the next pending connection. connectionPending() is emitted when a peer is ready. There is no matching end-accept: a TcpSocket takes the connection with accept(). The server must be attached before beginAccept(). After the slot takes the connection, call beginAccept() again to wait for the next peer.</p>
-<p>close() stops listening and accepting. The caller owns the server. Attaching it to a loop does not transfer ownership.</p>
-<p>The example is the pending-connection slot. The acceptor is Connectable so it can bind connectionPending() to onPending(). When the signal fires, accept() takes the stream into a TcpSocket that the acceptor owns.</p>
+<p>Asynchronous accept requires an attached event loop. beginAccept() waits for the next pending connection, and connectionPending() is emitted when a peer is ready. There is no matching end-accept: a TcpSocket takes the connection with accept(). The server must be attached before beginAccept(), and after the slot takes the connection, beginAccept() is called again to wait for the next peer.</p>
+<p>close() stops listening and accepting. The caller owns the server, and attaching it to a loop does not transfer ownership.</p>
+<p>The example is the pending-connection slot. The acceptor is Connectable so it can bind connectionPending() to onPending(), and when the signal fires, accept() takes the stream into a TcpSocket that the acceptor owns.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>Acceptor : <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">public</span>:</div>
@@ -316,7 +316,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a></div><div class="ttdoc">Connected TCP byte stream.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:141</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpServer_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a></div><div class="ttdoc">Listens for TCP connections.</div><div class="ttdef"><b>Definition:</b> TcpServer.h:157</div></div>
+<div class="ttc" id="aclassPt_1_1Net_1_1TcpServer_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a></div><div class="ttdoc">Listens for TCP connections.</div><div class="ttdef"><b>Definition:</b> TcpServer.h:159</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
 
 <div class="clear">&nbsp;</div>

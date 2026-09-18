@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Authenticator Class Reference</div>  </div>
+<div class="title">Authenticator Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Clients.html">HTTP Clients</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Authenticator_8h_source.html">Pt/Http/Authenticator.h</a>&gt;</code></p>
 
-<p>Client side authentication.  
-</p>
+<p>Client-side authentication.  
+ <a href="classPt_1_1Http_1_1Authenticator.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
@@ -125,7 +125,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:addf52f8547e4a20826317bfee1abf863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authenticate a request in response to a reply. <br /></td></tr>
 <tr class="separator:addf52f8547e4a20826317bfee1abf863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Authenticator prepares a request after a 401 reply so the client can send it again. It is not the server-side authorizer. Store credentials per realm with setCredential(), then call authenticate() with the rejected request and the 401 reply. The method writes the authentication headers onto the request and returns true when that is possible. It returns false when no credentials are available for the realm, or when the challenge cannot be met.</p>
+<p>Basic authentication is registered by default. Other Authentication methods can be added with addAuthentication(). The authenticator does not send the request; the caller sends it again through the client.</p>
+<p>The example stores a realm credential and applies it to a request that just received 401.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Http_1_1Authenticator.html">Pt::Http::Authenticator</a> auth;</div>
+<div class="line">auth.<a class="code" href="classPt_1_1Http_1_1Authenticator.html#a80eb96a705cdbaf9537334ed985898aa">setCredential</a>(<span class="stringliteral">&quot;some-realm&quot;</span>, <a class="code" href="classPt_1_1Http_1_1Credential.html">Pt::Http::Credential</a>(<span class="stringliteral">&quot;john&quot;</span>, <span class="stringliteral">&quot;12345&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a>&amp; client = ...;</div>
+<div class="line"><span class="keywordtype">bool</span> isAuth = auth.<a class="code" href="classPt_1_1Http_1_1Authenticator.html#addf52f8547e4a20826317bfee1abf863">authenticate</a>(client.<a class="code" href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">request</a>(), client.<a class="code" href="classPt_1_1Http_1_1Client.html#a0c5458f9aa165ddfb1b14bb741f31bde">reply</a>());</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Http_1_1Authenticator_html_a80eb96a705cdbaf9537334ed985898aa"><div class="ttname"><a href="classPt_1_1Http_1_1Authenticator.html#a80eb96a705cdbaf9537334ed985898aa">Pt::Http::Authenticator::setCredential</a></div><div class="ttdeci">void setCredential(const std::string &amp;realm, const Credential &amp;cred)</div><div class="ttdoc">Set credential for a realm.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_aec4a4eb55d027f2e26330fbab46ebf54"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">Pt::Http::Client::request</a></div><div class="ttdeci">Request &amp; request()</div><div class="ttdoc">Returns the request to send.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_a0c5458f9aa165ddfb1b14bb741f31bde"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#a0c5458f9aa165ddfb1b14bb741f31bde">Pt::Http::Client::reply</a></div><div class="ttdeci">Reply &amp; reply()</div><div class="ttdoc">Returns the received reply.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Authenticator_html"><div class="ttname"><a href="classPt_1_1Http_1_1Authenticator.html">Pt::Http::Authenticator</a></div><div class="ttdoc">Client-side authentication.</div><div class="ttdef"><b>Definition:</b> Authenticator.h:152</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Client_html"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a></div><div class="ttdoc">HTTP user agent.</div><div class="ttdef"><b>Definition:</b> Client.h:189</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Credential_html"><div class="ttname"><a href="classPt_1_1Http_1_1Credential.html">Pt::Http::Credential</a></div><div class="ttdoc">Credentials for authorization and authentication.</div><div class="ttdef"><b>Definition:</b> Credentials.h:45</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Authenticator_html_addf52f8547e4a20826317bfee1abf863"><div class="ttname"><a href="classPt_1_1Http_1_1Authenticator.html#addf52f8547e4a20826317bfee1abf863">Pt::Http::Authenticator::authenticate</a></div><div class="ttdeci">bool authenticate(Request &amp;request, const Reply &amp;reply)</div><div class="ttdoc">Authenticate a request in response to a reply.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

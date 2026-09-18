@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Certificate Class Reference</div>  </div>
+<div class="title">Certificate Class Reference<div class="ingroups"><a class="el" href="group__Pt-Ssl.html">Secure Communication</a> &raquo; <a class="el" href="group__Pt-Ssl-Certificates.html">Certificates</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Certificate_8h_source.html">Pt/Ssl/Certificate.h</a>&gt;</code></p>
 
 <p>X509 certificate.  
-</p>
+ <a href="classPt_1_1Ssl_1_1Certificate.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
@@ -105,7 +105,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a828b19a7f783474c26f7535bbe652c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the subject of the certificate. <br /></td></tr>
 <tr class="separator:a828b19a7f783474c26f7535bbe652c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Certificate is the non-copyable handle the store holds for one X509 certificate. subject() is the subject string used to find it. The private key, when the store loaded one for this certificate, stays inside the handle and is not readable.</p>
+<p>Pass the certificate by const reference to Context::setIdentity(), addCertificate(), or addCACertificate(). The store remains the owner of this object. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

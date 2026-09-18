@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Reply Class Reference</div>  </div>
+<div class="title">Reply Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Messages.html">HTTP Messages</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Reply_8h_source.html">Pt/Http/Reply.h</a>&gt;</code></p>
 
 <p>HTTP reply message.  
-</p>
+ <a href="classPt_1_1Http_1_1Reply.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Http_1_1Message.html">Message</a>.</p>
 <table class="memberdecls">
@@ -138,9 +138,8 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Reply.html#a525eec1e72f189af12fda68f8bcbe8bf">statusText</a> () const</td></tr>
 <tr class="memdesc:a525eec1e72f189af12fda68f8bcbe8bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HTTP status text. <br /></td></tr>
 <tr class="separator:a525eec1e72f189af12fda68f8bcbe8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e1db76e3a5162a4cf8c80b8a9289d8"><td class="memItemLeft" align="right" valign="top"><a id="ae7e1db76e3a5162a4cf8c80b8a9289d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Reply.html#ae7e1db76e3a5162a4cf8c80b8a9289d8">beginSend</a> (bool finish=true)</td></tr>
-<tr class="memdesc:ae7e1db76e3a5162a4cf8c80b8a9289d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin sending the reply. <br /></td></tr>
+<tr class="memitem:ae7e1db76e3a5162a4cf8c80b8a9289d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Reply.html#ae7e1db76e3a5162a4cf8c80b8a9289d8">beginSend</a> (bool finish=true)</td></tr>
+<tr class="memdesc:ae7e1db76e3a5162a4cf8c80b8a9289d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins sending the reply.  <a href="classPt_1_1Http_1_1Reply.html#ae7e1db76e3a5162a4cf8c80b8a9289d8">More...</a><br /></td></tr>
 <tr class="separator:ae7e1db76e3a5162a4cf8c80b8a9289d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Reply.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
@@ -175,7 +174,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a482de369e242eac519fd5e208a37320c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards the message body. <br /></td></tr>
 <tr class="separator:a482de369e242eac519fd5e208a37320c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Reply is the Message a server sends and a client receives. It adds the status line: statusCode() and statusText(), set together with setStatus(). The default is 200 OK. The nested StatusCode enumeration names the codes the API uses in replies it generates, but setStatus() accepts any code.</p>
+<p>On the client, the reply is Client::reply() after a receive step has made it available. Read body() when progress reports body bytes, and read the status when progress reports the header. On the server, the responder writes the reply and starts sending it with beginSend(). The completion flag is true when this is the last chunk of the body, and false when onWriteReply() should run again for more. Calling beginSend(true) finishes the reply and releases the responder.</p>
+<p>clear() resets status, header and body so the same reply object can be used for another exchange. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ae98a46f4ea1a43ca48acaf15d2eb7113"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae98a46f4ea1a43ca48acaf15d2eb7113">&#9670;&nbsp;</a></span>StatusCode</h2>
 
@@ -203,6 +206,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="fieldname"><a id="ae98a46f4ea1a43ca48acaf15d2eb7113ab8ac81cb3f7ed04522aa93ecc40f38eb"></a>InternalServerError&#160;</td><td class="fielddoc"><p>Internal server error occured. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae7e1db76e3a5162a4cf8c80b8a9289d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e1db76e3a5162a4cf8c80b8a9289d8">&#9670;&nbsp;</a></span>beginSend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beginSend </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>finish</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><em>finish</em> is true when this is the last chunk of the body. </p>
 
 </div>
 </div>

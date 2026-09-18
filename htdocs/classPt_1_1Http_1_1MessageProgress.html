@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">MessageProgress Class Reference</div>  </div>
+<div class="title">MessageProgress Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Messages.html">HTTP Messages</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Message_8h_source.html">Pt/Http/Message.h</a>&gt;</code></p>
 
-<p>HTTP message progress.  
-</p>
+<p>Progress of an asynchronous HTTP send or receive.  
+ <a href="classPt_1_1Http_1_1MessageProgress.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -106,12 +106,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html#a4f77062fc013d7c504165011b7e0cedc">body</a> () const</td></tr>
 <tr class="memdesc:a4f77062fc013d7c504165011b7e0cedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the body was processed. <br /></td></tr>
 <tr class="separator:a4f77062fc013d7c504165011b7e0cedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8165862d4f553334d23a9d72c01f377b"><td class="memItemLeft" align="right" valign="top"><a id="a8165862d4f553334d23a9d72c01f377b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html#a8165862d4f553334d23a9d72c01f377b">trailer</a> () const</td></tr>
+<tr class="memdesc:a8165862d4f553334d23a9d72c01f377b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the trailer was processed. <br /></td></tr>
+<tr class="separator:a8165862d4f553334d23a9d72c01f377b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebaed0be88cbcf45f1985b819c9dabb7"><td class="memItemLeft" align="right" valign="top"><a id="aebaed0be88cbcf45f1985b819c9dabb7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">finished</a> () const</td></tr>
 <tr class="memdesc:aebaed0be88cbcf45f1985b819c9dabb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if message is complete. <br /></td></tr>
 <tr class="separator:aebaed0be88cbcf45f1985b819c9dabb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>MessageProgress is the result of one begin/end step on a message. The client returns it from endSend() and endReceive(), and the same flags describe how far a request or a reply has moved.</p>
+<p>The flags are independent and can be combined. header() means the header of that message is now available to read or has been sent. body() means body bytes were processed on this step. finished() means the message is complete, so the caller must not begin the same send or receive again. trailer() means trailer fields were processed.</p>
+<p>A short reply often arrives in one receive step, in which case header, body and finished are all true. A large body, or a socket that accepted only part of a write, returns finished as false, and the caller calls begin again. It is also possible that I/O made progress without a header or body becoming visible yet, so none of the three is true; begin again until finished.</p>
+<p>For a chunked send, finished means the current chunk has left the socket, not that the whole request is complete. The completion flag on the next beginSend() decides whether another chunk follows. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

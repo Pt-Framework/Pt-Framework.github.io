@@ -3660,6 +3660,13 @@
       <anchor>a01997d391bc287cec81afb95ede0e44d</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>preAuthenticate</name>
+      <anchorfile>classPt_1_1Http_1_1BasicAuthentication.html</anchorfile>
+      <anchor>a5d1eb2c64e362e0ba4f3b5ccd2fc5cc3</anchor>
+      <arglist>(const Credential &amp;credential, Request &amp;request)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>authenticate</name>
@@ -38911,6 +38918,103 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Http::IOStream</name>
+    <filename>classPt_1_1Http_1_1IOStream.html</filename>
+    <base>BasicIOStream&lt; char &gt;</base>
+    <base>Pt::Connectable</base>
+    <member kind="function">
+      <type></type>
+      <name>IOStream</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>a4eaca5ec6c5ea6c0dc460baa866f131f</anchor>
+      <arglist>(Connection *conn)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~IOStream</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>aff561ffe180640a45cb12c2cbd4746d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginInput</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>ad75f03162e6a250d2165a3985c551a27</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>endInput</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>acb255eb01d344a016d49c6e132ce7b37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginOutput</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>acb733b984f4e60a743f2e07531ea9d5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>endOutput</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>a917ca882894933c1fd49abf968903d35</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal &amp;</type>
+      <name>inputReady</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>af52dc06f7fbcefec105180d0e3db8e2d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal &amp;</type>
+      <name>outputReady</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>aecb1ed29b1f583d3dc3b0d55816919b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1Http_1_1IOStream.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::streamsize</type>
+      <name>peeksome</name>
+      <anchorfile>classPt_1_1BasicIOStream.html</anchorfile>
+      <anchor>ac06710e909bf4323e3b3c5dda9d3dec4</anchor>
+      <arglist>(char *buffer, std::streamsize n)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::streamsize</type>
+      <name>writesome</name>
+      <anchorfile>classPt_1_1BasicIOStream.html</anchorfile>
+      <anchor>a64aabd5de59de120b952540e175670cd</anchor>
+      <arglist>(char *buffer, std::streamsize n)</arglist>
+    </member>
+    <member kind="function">
+      <type>BasicStreamBuffer&lt; char &gt; *</type>
+      <name>buffer</name>
+      <anchorfile>classPt_1_1BasicIOStream.html</anchorfile>
+      <anchor>a6046f28f315a127459574eaf26bd3ebc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBuffer</name>
+      <anchorfile>classPt_1_1BasicIOStream.html</anchorfile>
+      <anchor>aec28ff80bde4f62110820a952c72db45</anchor>
+      <arglist>(BasicStreamBuffer&lt; char &gt; *sb)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Forms::IPixmapImpl</name>
     <filename>classPt_1_1Forms_1_1IPixmapImpl.html</filename>
     <member kind="function" virtualness="virtual">
@@ -62583,6 +62687,27 @@
       <anchor>a0c5021ac5d779d2ef743c5e0a2712054</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1MessageHeader.html</anchorfile>
+      <anchor>a0b8432e3164bdabd852e4a776921286c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1MessageHeader.html</anchorfile>
+      <anchor>a17fe16a9677ca853ddd7f1e304a09f12</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static char *</type>
+      <name>htdateCurrent</name>
+      <anchorfile>classPt_1_1Http_1_1MessageHeader.html</anchorfile>
+      <anchor>ae76e10cc5ed2b1c228e9cc52070df0e7</anchor>
+      <arglist>(char *buffer)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Http::MessageProgress</name>
@@ -62606,6 +62731,13 @@
       <name>body</name>
       <anchorfile>classPt_1_1Http_1_1MessageProgress.html</anchorfile>
       <anchor>a4f77062fc013d7c504165011b7e0cedc</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>trailer</name>
+      <anchorfile>classPt_1_1Http_1_1MessageProgress.html</anchorfile>
+      <anchor>a8165862d4f553334d23a9d72c01f377b</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -77078,6 +77210,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
+      <name>onReadRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a6989d7f431a372e1c9c81e1f2fff6722</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
       <name>onBeginReply</name>
       <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
       <anchor>aa6c918c8e26b98c18fb24a4b252ecf3e</anchor>
@@ -77089,6 +77228,20 @@
       <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
       <anchor>a093bd5e0d28dcfba374d4843c1cf7f98</anchor>
       <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setReady</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a96b5d78979926c5e49f496f40e47ba45</anchor>
+      <arglist>(bool isFinished)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setFinished</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a52cabd84243d606a36fcd993a7350c83</anchor>
+      <arglist>(bool isFinished)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -87008,73 +87161,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Signal&lt; IOStream *, const std::string &amp; &gt;</name>
-    <filename>classPt_1_1Signal.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Signal</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a44146dfdbec17a8ab7207e52ffae152c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Signal</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>af291bb2b5c535bb82eabda8169ecaee3</anchor>
-      <arglist>(const Signal &amp;rhs)</arglist>
-    </member>
-    <member kind="function">
-      <type>Connection</type>
-      <name>connect</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
-      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>disconnect</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a960705de531a20389fb29928d43258c3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>disconnect</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
-      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>send</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
-      <arglist>(As... args)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
-      <arglist>(As... args)</arglist>
-    </member>
-    <member kind="function">
-      <type>Connection</type>
-      <name>operator+=</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
-      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>operator-=</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
-      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Signal&lt; Pt::Char &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
     <member kind="function">
@@ -87410,6 +87496,73 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Signal&lt; Pt::Http::IOStream *, const std::string &amp; &gt;</name>
+    <filename>classPt_1_1Signal.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a44146dfdbec17a8ab7207e52ffae152c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>af291bb2b5c535bb82eabda8169ecaee3</anchor>
+      <arglist>(const Signal &amp;rhs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>connect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a960705de531a20389fb29928d43258c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>operator+=</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator-=</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Signal&lt; Pt::Http::Reply &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
     <member kind="function">
@@ -87478,6 +87631,73 @@
   </compound>
   <compound kind="class">
     <name>Signal&lt; Pt::Http::Request &amp; &gt;</name>
+    <filename>classPt_1_1Signal.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a44146dfdbec17a8ab7207e52ffae152c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>af291bb2b5c535bb82eabda8169ecaee3</anchor>
+      <arglist>(const Signal &amp;rhs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>connect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a960705de531a20389fb29928d43258c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disconnect</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
+      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
+      <arglist>(As... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>Connection</type>
+      <name>operator+=</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator-=</name>
+      <anchorfile>classPt_1_1Signal.html</anchorfile>
+      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
+      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Signal&lt; Pt::Http::WebSocket &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
     <member kind="function">
       <type></type>
@@ -87947,73 +88167,6 @@
   </compound>
   <compound kind="class">
     <name>Signal&lt; std::size_t &gt;</name>
-    <filename>classPt_1_1Signal.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Signal</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a44146dfdbec17a8ab7207e52ffae152c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Signal</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>af291bb2b5c535bb82eabda8169ecaee3</anchor>
-      <arglist>(const Signal &amp;rhs)</arglist>
-    </member>
-    <member kind="function">
-      <type>Connection</type>
-      <name>connect</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>abcc75b12badc9497caaff6d6da1322b9</anchor>
-      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>disconnect</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a960705de531a20389fb29928d43258c3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>disconnect</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a14ff75c5275f8be634f074bf7503cb20</anchor>
-      <arglist>(const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>send</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a7652e7cc10c31f0df5d5b27a1d5389c8</anchor>
-      <arglist>(As... args)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>operator()</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ad6299bb146224269e3a0ce6218616ece</anchor>
-      <arglist>(As... args)</arglist>
-    </member>
-    <member kind="function">
-      <type>Connection</type>
-      <name>operator+=</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>ab8fecc96a05ee330b44ebac6a6603232</anchor>
-      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>operator-=</name>
-      <anchorfile>classPt_1_1Signal.html</anchorfile>
-      <anchor>a4d3daeb8bf613f4eb7c31f447d160d97</anchor>
-      <arglist>(Signal&lt; As... &gt; &amp;signal, const BasicSlot&lt; R, As... &gt; &amp;slot)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Signal&lt; WebSocket &amp; &gt;</name>
     <filename>classPt_1_1Signal.html</filename>
     <member kind="function">
       <type></type>
@@ -108305,6 +108458,509 @@
     <filename>structPt_1_1Void.html</filename>
   </compound>
   <compound kind="class">
+    <name>Pt::Http::WebSocket</name>
+    <filename>classPt_1_1Http_1_1WebSocket.html</filename>
+    <base>Pt::System::IODevice</base>
+    <base>Pt::Connectable</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>Frame</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Unknow</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a40edee570bab8999297a62cfd40139ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Text</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Binary</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5ae27b0860dfa490c46dd387b06d21a04b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Ping</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9ed7b6fafb4c429650c92d8c04a4dfaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Pong</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9a7bb6fa7ee9f12581b077ebb985da33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Unknow</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a40edee570bab8999297a62cfd40139ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Text</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Binary</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5ae27b0860dfa490c46dd387b06d21a04b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Ping</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9ed7b6fafb4c429650c92d8c04a4dfaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Pong</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9a7bb6fa7ee9f12581b077ebb985da33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WebSocket</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>aa3cb16933bc8224409ae525bbf821a79</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WebSocket</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a1c3496451e192441b4aa48f90e6d138b</anchor>
+      <arglist>(Pt::Http::IOStream *stream)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~WebSocket</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>ad679d104906d3c4969770e5364341d01</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>accept</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a965d5c94b7aa03283bed6d76cd2343aa</anchor>
+      <arglist>(Pt::Http::IOStream *stream)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginConnect</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a98898a52a5589b791620617c21b8d8e9</anchor>
+      <arglist>(const std::string &amp;url, const std::string &amp;origin=std::string(), bool keepAlive=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>Pt::Signal&lt; WebSocket &amp; &gt; &amp;</type>
+      <name>connected</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a432323242eb1dd73661df89cc67869db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>endConnect</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a18ddd0ea533304dc70208ee7a00a8e0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setSendFrame</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a17af87ac91eb8f408bfcad6eafe0f0a2</anchor>
+      <arglist>(Frame m)</arglist>
+    </member>
+    <member kind="function">
+      <type>Frame</type>
+      <name>receiveFrame</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a72971f83d468c10f2f521c8d06b3c04c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sendPongFrame</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>aa53f5005679337f324eb79fb5cef2d32</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sendPingFrame</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a5d358321c4241240213f05c417eeeed4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTimeout</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a4e6264069bc112d5f7a636525f88a396</anchor>
+      <arglist>(std::size_t timeout)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginRead</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>ac693ab150b948f96c8dd8f485274fb20</anchor>
+      <arglist>(char *buffer, std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>endRead</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a178c8460c175bc35851ae0d4903c6e75</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>read</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a8f0892c6bf02c81910a94fcdddee294e</anchor>
+      <arglist>(char *buffer, std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginWrite</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a0f6819a4971e612ac6d0cb54c4d41306</anchor>
+      <arglist>(const char *buffer, std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>endWrite</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a5ec7d50df5d6301755f0f1580c75935b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>write</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a7a6d2a237f8e5423ae44adffda0a52ed</anchor>
+      <arglist>(const char *buffer, std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>seekable</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>ab55427f1222dc5fffd8f2b49bc1fd6fd</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>pos_type</type>
+      <name>seek</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a7e569ddbce42e3d779ae412450a61603</anchor>
+      <arglist>(off_type offset, seekdir sd)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>peek</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a8c4ee9c81e1c1d588edc57043f44b677</anchor>
+      <arglist>(char *buffer, std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>ad55f80ed3cd8b6c4f247763b747016af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>pos_type</type>
+      <name>position</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>aaf874b410407f8e3ecf47cb27630f514</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEof</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a192addeb70d883e2f1a7b1bb3c07a7c7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Signal&lt; IODevice &amp; &gt; &amp;</type>
+      <name>inputReady</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>aa107df43ab15d8af87b97a1740c85d19</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Signal&lt; IODevice &amp; &gt; &amp;</type>
+      <name>outputReady</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>aee6cb622f8b2b5f552f99765d7375e42</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isReading</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>ad1585484cec92cacd15885c798456205</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isWriting</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>a181a6a67a97d760db63a2c3294ed22e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>EventLoop *</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1System_1_1IODevice.html</anchorfile>
+      <anchor>ade1579512a59fd8e90ad41bea1d2ae68</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setActive</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a931676e60334ab733b848fa90dcb6dda</anchor>
+      <arglist>(EventLoop &amp;parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>detach</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>ac295bade8aee589f6718dfa79edc2a34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a02d5fa6b14e221f3012a794b905be166</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>run</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a149ad6701e3e2414cb566bb414029841</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>EventLoop *</type>
+      <name>parent</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>a36ddcfd5046634b9b4fa5c5bc00b29bb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onCancel</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a493685a908b7d52b3d8a0ccc98c53b0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>onRun</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a7fe59135336edd8f09a32b668217688b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onAttach</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a44b2236e94d7ae4506ff3dbc39a14fb5</anchor>
+      <arglist>(Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onDetach</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a180c56ebacc2b28ccd2944512ae6b5ee</anchor>
+      <arglist>(Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>post</name>
+      <anchorfile>classPt_1_1System_1_1Selectable.html</anchorfile>
+      <anchor>abcca23e6afadfade8c5d63ee62b49bfd</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::WebSocketResponder</name>
+    <filename>classPt_1_1Http_1_1WebSocketResponder.html</filename>
+    <base>Pt::Http::Responder</base>
+    <member kind="function">
+      <type></type>
+      <name>WebSocketResponder</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketResponder.html</anchorfile>
+      <anchor>a6c20bf60a08ca736a240d7f9b79855e1</anchor>
+      <arglist>(Pt::Http::WebSocketService &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a48d666821900087fe2bd446b00df1ab5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Service &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>ab9945c226a4843aec87aedea8997c526</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a97056dc7df3e5bc37d10603d28101713</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>readRequest</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>aef52340b29d6530411dad468ada8efee</anchor>
+      <arglist>(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a94e875b430e1b8a8adad42cb064597c9</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeReply</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a0608ccbb527654f59a73556c70475491</anchor>
+      <arglist>(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginRequest</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketResponder.html</anchorfile>
+      <anchor>ae34e742a5cb96b98fbf84a6a6ba4625f</anchor>
+      <arglist>(Pt::Http::Request &amp;request, Pt::Http::Reply &amp;reply, Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReadRequest</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketResponder.html</anchorfile>
+      <anchor>a7ac7f882883cc80665e89c48958902cb</anchor>
+      <arglist>(Pt::Http::Request &amp;request, Pt::Http::Reply &amp;reply, Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onBeginReply</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketResponder.html</anchorfile>
+      <anchor>a2ef023fb0e010bcfd6daba1ff7d2cbc7</anchor>
+      <arglist>(const Pt::Http::Request &amp;request, Pt::Http::Reply &amp;reply, Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onWriteReply</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketResponder.html</anchorfile>
+      <anchor>a0a0576a8f27b7aedcc7242a0b5be8934</anchor>
+      <arglist>(const Pt::Http::Request &amp;request, Pt::Http::Reply &amp;reply, Pt::System::EventLoop &amp;loop)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setReady</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a96b5d78979926c5e49f496f40e47ba45</anchor>
+      <arglist>(bool isFinished)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setFinished</name>
+      <anchorfile>classPt_1_1Http_1_1Responder.html</anchorfile>
+      <anchor>a52cabd84243d606a36fcd993a7350c83</anchor>
+      <arglist>(bool isFinished)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::WebSocketService</name>
+    <filename>classPt_1_1Http_1_1WebSocketService.html</filename>
+    <base>Pt::Http::Service</base>
+    <member kind="function">
+      <type></type>
+      <name>WebSocketService</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a7361bc88a2a3f6dcddff5ddb5e4849fe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WebSocketService</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>adcc09da5f4cec09431ddead0330e80e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Responder *</type>
+      <name>getResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a895a6131460015d99bd9249dd856d0bd</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>releaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
+      <arglist>(Responder *)</arglist>
+    </member>
+    <member kind="function">
+      <type>Signal&lt; IOStream *, const std::string &amp; &gt; &amp;</type>
+      <name>upgradeRequested</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a4905225fadbb82df7e16c98b6f9c513f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Responder *</type>
+      <name>onGetResponder</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>aa322457cb2a5722ab7b4b61cfae6eaf2</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReleaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a8ad8493dee8e40a32ee3596fb9972c10</anchor>
+      <arglist>(Responder *r)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Forms::Widget</name>
     <filename>classPt_1_1Forms_1_1Widget.html</filename>
     <base>Pt::Forms::Responder</base>
@@ -117118,6 +117774,7 @@
     <class kind="class">Pt::Http::Client</class>
     <class kind="class">Pt::Http::Credential</class>
     <class kind="class">Pt::Http::HttpError</class>
+    <class kind="class">Pt::Http::IOStream</class>
     <class kind="class">Pt::Http::MapAny</class>
     <class kind="class">Pt::Http::MapUrl</class>
     <class kind="class">Pt::Http::Message</class>
@@ -117129,6 +117786,9 @@
     <class kind="class">Pt::Http::Server</class>
     <class kind="class">Pt::Http::Service</class>
     <class kind="class">Pt::Http::Servlet</class>
+    <class kind="class">Pt::Http::WebSocket</class>
+    <class kind="class">Pt::Http::WebSocketResponder</class>
+    <class kind="class">Pt::Http::WebSocketService</class>
   </compound>
   <compound kind="namespace">
     <name>Pt::Json</name>
@@ -117241,94 +117901,94 @@
     <member kind="enumeration">
       <type></type>
       <name>OpenMode</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>a3a70f8b621474c9885f80fe709e2dca2</anchor>
+      <anchorfile>group__Pt-Ssl-Streams.html</anchorfile>
+      <anchor>ga3a70f8b621474c9885f80fe709e2dca2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Connect</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>a3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e</anchor>
+      <anchorfile>group__Pt-Ssl-Streams.html</anchorfile>
+      <anchor>gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Accept</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>a3a70f8b621474c9885f80fe709e2dca2a2e9639ddb75a9a4f7c0402e691fae0fa</anchor>
+      <anchorfile>group__Pt-Ssl-Streams.html</anchorfile>
+      <anchor>gga3a70f8b621474c9885f80fe709e2dca2a2e9639ddb75a9a4f7c0402e691fae0fa</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>Protocol</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184c</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>gaac39b55be6469395f55ff0292ad8184c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SSLv2</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184cae04bf4f11890e086fe100449a0cab770</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cae04bf4f11890e086fe100449a0cab770</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SSLv3or2</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184ca96a4a71cb7b31c6300f76cc2ac32e418</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184ca96a4a71cb7b31c6300f76cc2ac32e418</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SSLv3</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184cab1f794fb2aac9cc4e7b82a5847e292e0</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cab1f794fb2aac9cc4e7b82a5847e292e0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TLS</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184cac60337f6c63b015a24fe86e2a387e08c</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cac60337f6c63b015a24fe86e2a387e08c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TLSv1</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184ca4badde36beb0e803bac0c8545264fd13</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184ca4badde36beb0e803bac0c8545264fd13</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TLSv1_1</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184caf1e5c4029ac253604f804feb79908028</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184caf1e5c4029ac253604f804feb79908028</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TLSv1_2</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aac39b55be6469395f55ff0292ad8184cac37271b5b3bc8a375c6123368a30deeb</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cac37271b5b3bc8a375c6123368a30deeb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>VerifyMode</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aec3fd496ba134cc896c9a62b4f37a281</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>gaec3fd496ba134cc896c9a62b4f37a281</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>NoVerify</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aec3fd496ba134cc896c9a62b4f37a281adc5d3b2c5c8a961c3a20fd18b565d196</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaec3fd496ba134cc896c9a62b4f37a281adc5d3b2c5c8a961c3a20fd18b565d196</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TryVerify</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aec3fd496ba134cc896c9a62b4f37a281a7227943a70d9e51bd661f7be05724c1d</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaec3fd496ba134cc896c9a62b4f37a281a7227943a70d9e51bd661f7be05724c1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>AlwaysVerify</name>
-      <anchorfile>namespacePt_1_1Ssl.html</anchorfile>
-      <anchor>aec3fd496ba134cc896c9a62b4f37a281a8b8cef4284b42e10a4b39d3f3a5f07b1</anchor>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaec3fd496ba134cc896c9a62b4f37a281a8b8cef4284b42e10a4b39d3f3a5f07b1</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -118173,6 +118833,61 @@
     <class kind="class">Pt::Gfx::Rgb32Image</class>
   </compound>
   <compound kind="group">
+    <name>Pt-Http</name>
+    <title>HTTP Clients and Servers</title>
+    <filename>group__Pt-Http.html</filename>
+    <subgroup>Pt-Http-Messages</subgroup>
+    <subgroup>Pt-Http-Clients</subgroup>
+    <subgroup>Pt-Http-Servers</subgroup>
+    <subgroup>Pt-Http-WebSocket</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Http-Messages</name>
+    <title>HTTP Messages</title>
+    <filename>group__Pt-Http-Messages.html</filename>
+    <class kind="class">Pt::Http::Credential</class>
+    <class kind="class">Pt::Http::HttpError</class>
+    <class kind="class">Pt::Http::MessageHeader</class>
+    <class kind="class">Pt::Http::MessageProgress</class>
+    <class kind="class">Pt::Http::Message</class>
+    <class kind="class">Pt::Http::Reply</class>
+    <class kind="class">Pt::Http::Request</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Http-Clients</name>
+    <title>HTTP Clients</title>
+    <filename>group__Pt-Http-Clients.html</filename>
+    <class kind="class">Pt::Http::Authentication</class>
+    <class kind="class">Pt::Http::BasicAuthentication</class>
+    <class kind="class">Pt::Http::Authenticator</class>
+    <class kind="class">Pt::Http::Client</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Http-Servers</name>
+    <title>HTTP Servers</title>
+    <filename>group__Pt-Http-Servers.html</filename>
+    <class kind="class">Pt::Http::Authorization</class>
+    <class kind="class">Pt::Http::Authorizer</class>
+    <class kind="class">Pt::Http::BasicAuthorizer</class>
+    <class kind="class">Pt::Http::BasicUserListAuthorizer</class>
+    <class kind="class">Pt::Http::Responder</class>
+    <class kind="class">Pt::Http::Server</class>
+    <class kind="class">Pt::Http::Service</class>
+    <class kind="class">Pt::Http::BasicService</class>
+    <class kind="class">Pt::Http::Servlet</class>
+    <class kind="class">Pt::Http::MapUrl</class>
+    <class kind="class">Pt::Http::MapAny</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Http-WebSocket</name>
+    <title>WebSocket</title>
+    <filename>group__Pt-Http-WebSocket.html</filename>
+    <class kind="class">Pt::Http::IOStream</class>
+    <class kind="class">Pt::Http::WebSocket</class>
+    <class kind="class">Pt::Http::WebSocketResponder</class>
+    <class kind="class">Pt::Http::WebSocketService</class>
+  </compound>
+  <compound kind="group">
     <name>Pt-Net</name>
     <title>Networking</title>
     <filename>group__Pt-Net.html</filename>
@@ -118196,6 +118911,131 @@
     <filename>group__Pt-Net-Udp.html</filename>
     <class kind="class">Pt::Net::UdpSocketOptions</class>
     <class kind="class">Pt::Net::UdpSocket</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Ssl</name>
+    <title>Secure Communication</title>
+    <filename>group__Pt-Ssl.html</filename>
+    <class kind="class">Pt::Ssl::SslError</class>
+    <subgroup>Pt-Ssl-Certificates</subgroup>
+    <subgroup>Pt-Ssl-Context</subgroup>
+    <subgroup>Pt-Ssl-Streams</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Ssl-Certificates</name>
+    <title>Certificates</title>
+    <filename>group__Pt-Ssl-Certificates.html</filename>
+    <class kind="class">Pt::Ssl::Certificate</class>
+    <class kind="class">Pt::Ssl::CertificateStore</class>
+    <class kind="class">Pt::Ssl::InvalidCertificate</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Ssl-Context</name>
+    <title>SSL Context</title>
+    <filename>group__Pt-Ssl-Context.html</filename>
+    <class kind="class">Pt::Ssl::Context</class>
+    <class kind="class">Pt::Ssl::InvalidCertificate</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>Protocol</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>gaac39b55be6469395f55ff0292ad8184c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SSLv2</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cae04bf4f11890e086fe100449a0cab770</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SSLv3or2</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184ca96a4a71cb7b31c6300f76cc2ac32e418</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SSLv3</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cab1f794fb2aac9cc4e7b82a5847e292e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TLS</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cac60337f6c63b015a24fe86e2a387e08c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TLSv1</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184ca4badde36beb0e803bac0c8545264fd13</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TLSv1_1</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184caf1e5c4029ac253604f804feb79908028</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TLSv1_2</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaac39b55be6469395f55ff0292ad8184cac37271b5b3bc8a375c6123368a30deeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>VerifyMode</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>gaec3fd496ba134cc896c9a62b4f37a281</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NoVerify</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaec3fd496ba134cc896c9a62b4f37a281adc5d3b2c5c8a961c3a20fd18b565d196</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TryVerify</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaec3fd496ba134cc896c9a62b4f37a281a7227943a70d9e51bd661f7be05724c1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AlwaysVerify</name>
+      <anchorfile>group__Pt-Ssl-Context.html</anchorfile>
+      <anchor>ggaec3fd496ba134cc896c9a62b4f37a281a8b8cef4284b42e10a4b39d3f3a5f07b1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Ssl-Streams</name>
+    <title>Secure Streams</title>
+    <filename>group__Pt-Ssl-Streams.html</filename>
+    <class kind="class">Pt::Ssl::IOStream</class>
+    <class kind="class">Pt::Ssl::HandshakeFailed</class>
+    <class kind="class">Pt::Ssl::StreamBuffer</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>OpenMode</name>
+      <anchorfile>group__Pt-Ssl-Streams.html</anchorfile>
+      <anchor>ga3a70f8b621474c9885f80fe709e2dca2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Connect</name>
+      <anchorfile>group__Pt-Ssl-Streams.html</anchorfile>
+      <anchor>gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Accept</name>
+      <anchorfile>group__Pt-Ssl-Streams.html</anchorfile>
+      <anchor>gga3a70f8b621474c9885f80fe709e2dca2a2e9639ddb75a9a4f7c0402e691fae0fa</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>Pt-System</name>
@@ -118491,25 +119331,6 @@
     <filename>faq.html</filename>
   </compound>
   <compound kind="page">
-    <name>http_client</name>
-    <title>HTTP Clients</title>
-    <filename>http_client.html</filename>
-    <docanchor file="http_client.html" title="Making HTTP Requests">http_client_send</docanchor>
-    <docanchor file="http_client.html" title="Request Pipelining">http_client_pipelining</docanchor>
-    <docanchor file="http_client.html" title="Chunked Encoding">http_client_chunked</docanchor>
-    <docanchor file="http_client.html" title="Secure Connections">http_client_ssl</docanchor>
-    <docanchor file="http_client.html" title="Authentication">http_client_auth</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>http_server</name>
-    <title>HTTP Server and Services</title>
-    <filename>http_server.html</filename>
-    <docanchor file="http_server.html" title="Implementing Services">http_server_service</docanchor>
-    <docanchor file="http_server.html" title="Servlets and Request Dispatch">http_server_servlet</docanchor>
-    <docanchor file="http_server.html" title="Secure Connections">http_server_ssl</docanchor>
-    <docanchor file="http_server.html" title="Authorization">http_server_auth</docanchor>
-  </compound>
-  <compound kind="page">
     <name>images</name>
     <title>Images</title>
     <filename>images.html</filename>
@@ -118696,6 +119517,28 @@
     <docanchor file="Pt-Gfx-Drawing-Page.html" title="Text and FontMetrics">Pt-Gfx-Drawing-Page-Text</docanchor>
   </compound>
   <compound kind="page">
+    <name>Pt-Http-Page</name>
+    <title>HTTP Clients and Servers</title>
+    <filename>Pt-Http-Page.html</filename>
+    <docanchor file="Pt-Http-Page.html" title="HTTP Messages">Pt-Http-Page-Messages</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Message Header">Pt-Http-Page-MessageHeader</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Message">Pt-Http-Page-Message</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Message Progress">Pt-Http-Page-MessageProgress</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Request">Pt-Http-Page-Request</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Reply">Pt-Http-Page-Reply</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="HTTP Clients">Pt-Http-Page-Clients</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Client">Pt-Http-Page-Client</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Authenticator">Pt-Http-Page-Authenticator</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="HTTP Servers">Pt-Http-Page-Servers</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Server">Pt-Http-Page-Server</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Servlet">Pt-Http-Page-Servlet</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Service">Pt-Http-Page-Service</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Responder">Pt-Http-Page-Responder</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Authorizer">Pt-Http-Page-Authorizer</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="WebSocket">Pt-Http-Page-WebSocket</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="WebSocket">Pt-Http-Page-WebSocketClass</docanchor>
+  </compound>
+  <compound kind="page">
     <name>Pt-Net-Page</name>
     <title>Networking</title>
     <filename>Pt-Net-Page.html</filename>
@@ -118705,6 +119548,19 @@
     <docanchor file="Pt-Net-Page.html" title="Connected TCP Sockets">Pt-Net-Page-TcpSocket</docanchor>
     <docanchor file="Pt-Net-Page.html" title="UDP Sockets">Pt-Net-Page-Udp</docanchor>
     <docanchor file="Pt-Net-Page.html" title="Datagram Socket">Pt-Net-Page-UdpSocket</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>Pt-Ssl-Page</name>
+    <title>Secure Communication</title>
+    <filename>Pt-Ssl-Page.html</filename>
+    <docanchor file="Pt-Ssl-Page.html" title="Certificates">Pt-Ssl-Page-Certificates</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="CertificateStore">Pt-Ssl-Page-CertificateStore</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="Certificate">Pt-Ssl-Page-Certificate</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="SSL Context">Pt-Ssl-Page-Context</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="Context">Pt-Ssl-Page-ContextClass</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="Secure Streams">Pt-Ssl-Page-Streams</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="IOStream">Pt-Ssl-Page-IOStream</docanchor>
+    <docanchor file="Pt-Ssl-Page.html" title="StreamBuffer">Pt-Ssl-Page-StreamBuffer</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-System-Page</name>
@@ -118777,16 +119633,6 @@
     <docanchor file="requirements.html" title="OpenSSL">requirements_openssl</docanchor>
     <docanchor file="requirements.html" title="Freetype">requirements_freetype</docanchor>
     <docanchor file="requirements.html" title="Required Tools">requirements_tools</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>ssl</name>
-    <title>Secure Communication</title>
-    <filename>ssl.html</filename>
-    <docanchor file="ssl.html" title="Certificate Management">ssl_CertStore</docanchor>
-    <docanchor file="ssl.html" title="Context Initialization">ssl_Context</docanchor>
-    <docanchor file="ssl.html" title="Opening a Connection">ssl_Connection</docanchor>
-    <docanchor file="ssl.html" title="Reading and Writing Data">ssl_ReadWrite</docanchor>
-    <docanchor file="ssl.html" title="Connection Shutdown">ssl_Shutdown</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial</name>

@@ -84,7 +84,7 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">BasicAuthentication Class Reference</div>  </div>
+<div class="title">BasicAuthentication Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Clients.html">HTTP Clients</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -112,60 +112,19 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1BasicAuthentication.html#a01997d391bc287cec81afb95ede0e44d">~BasicAuthentication</a> ()</td></tr>
 <tr class="memdesc:a01997d391bc287cec81afb95ede0e44d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a01997d391bc287cec81afb95ede0e44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab58188173bcb398152fced02ba8f6a52"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1BasicAuthentication.html#ab58188173bcb398152fced02ba8f6a52">authenticate</a> (const <a class="el" href="classPt_1_1Http_1_1Authentication.html#a1cddad9cb74c486dd173c81a3f672948">Credentials</a> &amp;credentials, <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request, const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;reply)</td></tr>
-<tr class="memdesc:ab58188173bcb398152fced02ba8f6a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authenticate a request in response to a reply.  <a href="classPt_1_1Http_1_1BasicAuthentication.html#ab58188173bcb398152fced02ba8f6a52">More...</a><br /></td></tr>
+<tr class="memitem:a5d1eb2c64e362e0ba4f3b5ccd2fc5cc3"><td class="memItemLeft" align="right" valign="top"><a id="a5d1eb2c64e362e0ba4f3b5ccd2fc5cc3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1BasicAuthentication.html#a5d1eb2c64e362e0ba4f3b5ccd2fc5cc3">preAuthenticate</a> (const <a class="el" href="classPt_1_1Http_1_1Credential.html">Credential</a> &amp;credential, <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request)</td></tr>
+<tr class="memdesc:a5d1eb2c64e362e0ba4f3b5ccd2fc5cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes basic credentials onto <em>request</em> before a challenge. <br /></td></tr>
+<tr class="separator:a5d1eb2c64e362e0ba4f3b5ccd2fc5cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58188173bcb398152fced02ba8f6a52"><td class="memItemLeft" align="right" valign="top"><a id="ab58188173bcb398152fced02ba8f6a52"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1BasicAuthentication.html#ab58188173bcb398152fced02ba8f6a52">authenticate</a> (const <a class="el" href="classPt_1_1Http_1_1Authentication.html#a1cddad9cb74c486dd173c81a3f672948">Credentials</a> &amp;credentials, <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request, const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;reply)</td></tr>
+<tr class="memdesc:ab58188173bcb398152fced02ba8f6a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authenticates <em>request</em> from <em>credentials</em> in response to <em>reply</em>. <br /></td></tr>
 <tr class="separator:ab58188173bcb398152fced02ba8f6a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top"><a id="ad8227ba86a01f26e4f173cd5e219d5d1"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Http_1_1Authentication.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type name of the authentication. <br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab58188173bcb398152fced02ba8f6a52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab58188173bcb398152fced02ba8f6a52">&#9670;&nbsp;</a></span>authenticate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool authenticate </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Authentication.html#a1cddad9cb74c486dd173c81a3f672948">Credentials</a> &amp;&#160;</td>
-          <td class="paramname"><em>credentials</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;&#160;</td>
-          <td class="paramname"><em>reply</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Authenticates the <em>request</em> using the <em>credentials</em> in response to the corresponding <em>reply</em>. </p>
-
-<p>Implements <a class="el" href="classPt_1_1Http_1_1Authentication.html#a852ae804f1660b40a660814936929967">Authentication</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Servlet Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Servlet Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Servers.html">HTTP Servers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Servlet_8h_source.html">Pt/Http/Servlet.h</a>&gt;</code></p>
 
-<p>Servlet for HTTP services.  
+<p>Maps requests to a service.  
  <a href="classPt_1_1Http_1_1Servlet.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -144,8 +144,16 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ae0d8170ad2b53d1cdb56e97e5cdae8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Servlets are used by the HttpServer to map incoming requests to services and to authorize requests. Therefore servlets combine a service with a authorizer and mapping rule. Servlets can be added to a HttpServer. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>Servlet is the mapping rule in the server model. It combines a Service with an optional Authorizer and decides whether an incoming request belongs to that service. The server calls isMapped(), which forwards to onRequest(), and the first servlet that returns true handles the request.</p>
+<p>Construct it with a service, or with a service and an authorizer. Several servlets may share one service, so the same resource can appear under more than one name, and they may share one authorizer. service() and authorizer() return those pointers.</p>
+<p>MapUrl maps one exact URL. MapAny maps every request. A custom servlet implements onRequest() and returns true when its service should run. Do not reimplement MapUrl unless the mapping rule is actually different.</p>
+<p>setShutdown() marks the servlet so it stops taking new work, and isIdle() is true when no exchange is using it. detach() unregisters it from the server that holds it.</p>
+<p>The example is the usual mapping: one URL, one service. The optional authorizer is passed as a third argument.</p>
+<div class="fragment"><div class="line">HelloService hello;</div>
+<div class="line"><a class="code" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> mapHello(<span class="stringliteral">&quot;/hello&quot;</span>, hello);</div>
+<div class="line">server.addServlet(mapHello);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Http_1_1MapUrl_html"><div class="ttname"><a href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a></div><div class="ttdoc">Maps requests to a service by URL.</div><div class="ttdef"><b>Definition:</b> Servlet.h:147</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Message Class Reference</div>  </div>
+<div class="title">Message Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Messages.html">HTTP Messages</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Message_8h_source.html">Pt/Http/Message.h</a>&gt;</code></p>
 
 <p>HTTP message with header and body.  
-</p>
+ <a href="classPt_1_1Http_1_1Message.html#details">More...</a></p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a>, and <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a>.</p>
 <table class="memberdecls">
@@ -129,7 +129,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a482de369e242eac519fd5e208a37320c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards the message body. <br /></td></tr>
 <tr class="separator:a482de369e242eac519fd5e208a37320c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Message is the header-and-body object that Request and Reply extend. The header is header(), and the body is body(), an iostream. Write the body before sending, and read it when progress reports that body bytes are available.</p>
+<p>Callers do not construct a Message. A Client owns the request and reply, and a Responder is passed the server-side pair. The connection that carries the message is connection(), which is the HTTP connection the client or server already opened.</p>
+<p>available() is how many body bytes can be read without blocking, and pending() is how many body bytes still have to be written. discard() drops the buffered body so the stream can be reused for another message. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

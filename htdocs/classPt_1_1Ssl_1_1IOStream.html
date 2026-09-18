@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">IOStream Class Reference</div>  </div>
+<div class="title">IOStream Class Reference<div class="ingroups"><a class="el" href="group__Pt-Ssl.html">Secure Communication</a> &raquo; <a class="el" href="group__Pt-Ssl-Streams.html">Secure Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Ssl_2IOStream_8h_source.html">Pt/Ssl/IOStream.h</a>&gt;</code></p>
 
-<p>SSL stream.  
-</p>
+<p>SSL iostream.  
+ <a href="classPt_1_1Ssl_1_1IOStream.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1BasicIOStream.html">BasicIOStream&lt; char &gt;</a>, and <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
@@ -98,55 +98,55 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a695db9e2b36dada92d7fa771c5900d66"><td class="memItemLeft" align="right" valign="top"><a id="a695db9e2b36dada92d7fa771c5900d66"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a695db9e2b36dada92d7fa771c5900d66">IOStream</a> (std::size_t bufferSize=1024)</td></tr>
-<tr class="memdesc:a695db9e2b36dada92d7fa771c5900d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an SSL stream. <br /></td></tr>
+<tr class="memdesc:a695db9e2b36dada92d7fa771c5900d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a closed SSL stream. <br /></td></tr>
 <tr class="separator:a695db9e2b36dada92d7fa771c5900d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55e6009ac353c6087a1edd0ae75afa39"><td class="memItemLeft" align="right" valign="top"><a id="a55e6009ac353c6087a1edd0ae75afa39"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a55e6009ac353c6087a1edd0ae75afa39">IOStream</a> (<a class="el" href="classPt_1_1Ssl_1_1Context.html">Context</a> &amp;ctx, std::iostream &amp;ios, <a class="el" href="namespacePt_1_1Ssl.html#a3a70f8b621474c9885f80fe709e2dca2">OpenMode</a> mode, std::size_t bufferSize=1024)</td></tr>
-<tr class="memdesc:a55e6009ac353c6087a1edd0ae75afa39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an open SSL stream. <br /></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a55e6009ac353c6087a1edd0ae75afa39">IOStream</a> (<a class="el" href="classPt_1_1Ssl_1_1Context.html">Context</a> &amp;ctx, std::iostream &amp;ios, <a class="el" href="group__Pt-Ssl-Streams.html#ga3a70f8b621474c9885f80fe709e2dca2">OpenMode</a> mode, std::size_t bufferSize=1024)</td></tr>
+<tr class="memdesc:a55e6009ac353c6087a1edd0ae75afa39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an SSL stream and opens it. <br /></td></tr>
 <tr class="separator:a55e6009ac353c6087a1edd0ae75afa39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff561ffe180640a45cb12c2cbd4746d6"><td class="memItemLeft" align="right" valign="top"><a id="aff561ffe180640a45cb12c2cbd4746d6"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#aff561ffe180640a45cb12c2cbd4746d6">~IOStream</a> ()</td></tr>
 <tr class="memdesc:aff561ffe180640a45cb12c2cbd4746d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:aff561ffe180640a45cb12c2cbd4746d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aecf01dc4167fd014b46b932eac74a6"><td class="memItemLeft" align="right" valign="top"><a id="a7aecf01dc4167fd014b46b932eac74a6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a7aecf01dc4167fd014b46b932eac74a6">open</a> (<a class="el" href="classPt_1_1Ssl_1_1Context.html">Context</a> &amp;ctx, std::iostream &amp;ios, <a class="el" href="namespacePt_1_1Ssl.html#a3a70f8b621474c9885f80fe709e2dca2">OpenMode</a> mode)</td></tr>
-<tr class="memdesc:a7aecf01dc4167fd014b46b932eac74a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the SSL stream. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a7aecf01dc4167fd014b46b932eac74a6">open</a> (<a class="el" href="classPt_1_1Ssl_1_1Context.html">Context</a> &amp;ctx, std::iostream &amp;ios, <a class="el" href="group__Pt-Ssl-Streams.html#ga3a70f8b621474c9885f80fe709e2dca2">OpenMode</a> mode)</td></tr>
+<tr class="memdesc:a7aecf01dc4167fd014b46b932eac74a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the SSL stream on <em>ios</em> using <em>ctx</em> and <em>mode</em>. <br /></td></tr>
 <tr class="separator:a7aecf01dc4167fd014b46b932eac74a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a454a318e612d785698ad9ef4fea7453b"><td class="memItemLeft" align="right" valign="top"><a id="a454a318e612d785698ad9ef4fea7453b"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a454a318e612d785698ad9ef4fea7453b">currentCipher</a> () const</td></tr>
-<tr class="memdesc:a454a318e612d785698ad9ef4fea7453b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently used cipher. <br /></td></tr>
+<tr class="memdesc:a454a318e612d785698ad9ef4fea7453b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cipher in use, or a placeholder if not connected. <br /></td></tr>
 <tr class="separator:a454a318e612d785698ad9ef4fea7453b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft" align="right" valign="top"><a id="a5ae591df94fc66ccb85cbb6565368bca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
-<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream. <br /></td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream without a TLS shutdown. <br /></td></tr>
 <tr class="separator:a5ae591df94fc66ccb85cbb6565368bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80178eafbc14f5434c65b0a8413c12c7"><td class="memItemLeft" align="right" valign="top"><a id="a80178eafbc14f5434c65b0a8413c12c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a80178eafbc14f5434c65b0a8413c12c7">isConnected</a> () const</td></tr>
-<tr class="memdesc:a80178eafbc14f5434c65b0a8413c12c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if connected to peer. <br /></td></tr>
+<tr class="memdesc:a80178eafbc14f5434c65b0a8413c12c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the handshake has completed. <br /></td></tr>
 <tr class="separator:a80178eafbc14f5434c65b0a8413c12c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e179596ba025c1f325afab4e67684f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a67e179596ba025c1f325afab4e67684f">writeHandshake</a> ()</td></tr>
 <tr class="memdesc:a67e179596ba025c1f325afab4e67684f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a handshake message to the underlying stream.  <a href="classPt_1_1Ssl_1_1IOStream.html#a67e179596ba025c1f325afab4e67684f">More...</a><br /></td></tr>
 <tr class="separator:a67e179596ba025c1f325afab4e67684f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4756a847468fb69d6c6adf4ed82d6a2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a4756a847468fb69d6c6adf4ed82d6a2f">readHandshake</a> ()</td></tr>
-<tr class="memdesc:a4756a847468fb69d6c6adf4ed82d6a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads handshake message from the underlying stream.  <a href="classPt_1_1Ssl_1_1IOStream.html#a4756a847468fb69d6c6adf4ed82d6a2f">More...</a><br /></td></tr>
+<tr class="memdesc:a4756a847468fb69d6c6adf4ed82d6a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a handshake message from the underlying stream.  <a href="classPt_1_1Ssl_1_1IOStream.html#a4756a847468fb69d6c6adf4ed82d6a2f">More...</a><br /></td></tr>
 <tr class="separator:a4756a847468fb69d6c6adf4ed82d6a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec1255304305c9d8eff8571c0fd87b80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">shutdown</a> ()</td></tr>
-<tr class="memdesc:aec1255304305c9d8eff8571c0fd87b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown the SSL connection.  <a href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">More...</a><br /></td></tr>
+<tr class="memdesc:aec1255304305c9d8eff8571c0fd87b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes or starts the TLS shutdown.  <a href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">More...</a><br /></td></tr>
 <tr class="separator:aec1255304305c9d8eff8571c0fd87b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ea35b8def36970df50df50fe5599b4"><td class="memItemLeft" align="right" valign="top"><a id="a11ea35b8def36970df50df50fe5599b4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4">isShutdown</a> () const</td></tr>
-<tr class="memdesc:a11ea35b8def36970df50df50fe5599b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the shutown notify has to be completed. <br /></td></tr>
+<tr class="memdesc:a11ea35b8def36970df50df50fe5599b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a shutdown alert was received. <br /></td></tr>
 <tr class="separator:a11ea35b8def36970df50df50fe5599b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6ba31d7da4a5565c9c87f9987fdbba9"><td class="memItemLeft" align="right" valign="top"><a id="ad6ba31d7da4a5565c9c87f9987fdbba9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#ad6ba31d7da4a5565c9c87f9987fdbba9">isClosed</a> () const</td></tr>
-<tr class="memdesc:ad6ba31d7da4a5565c9c87f9987fdbba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the connection is closed. <br /></td></tr>
+<tr class="memdesc:ad6ba31d7da4a5565c9c87f9987fdbba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the connection was closed prematurely. <br /></td></tr>
 <tr class="separator:ad6ba31d7da4a5565c9c87f9987fdbba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a893fad161e0bcb173591cae663514dbf"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">import</a> (std::streamsize maxImport=0)</td></tr>
-<tr class="memdesc:a893fad161e0bcb173591cae663514dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads user message from the underlying stream.  <a href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">More...</a><br /></td></tr>
+<tr class="memdesc:a893fad161e0bcb173591cae663514dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrypts available data from the underlying stream.  <a href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">More...</a><br /></td></tr>
 <tr class="separator:a893fad161e0bcb173591cae663514dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8faaf2644d39b5ada114ab79fc78ea3"><td class="memItemLeft" align="right" valign="top"><a id="ac8faaf2644d39b5ada114ab79fc78ea3"></a>
 <a class="el" href="classPt_1_1Ssl_1_1StreamBuffer.html">StreamBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">sslBuffer</a> ()</td></tr>
-<tr class="memdesc:ac8faaf2644d39b5ada114ab79fc78ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ssl buffer. <br /></td></tr>
+<tr class="memdesc:ac8faaf2644d39b5ada114ab79fc78ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the SSL stream buffer. <br /></td></tr>
 <tr class="separator:ac8faaf2644d39b5ada114ab79fc78ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06710e909bf4323e3b3c5dda9d3dec4"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicIOStream.html#ac06710e909bf4323e3b3c5dda9d3dec4">peeksome</a> (char *<a class="el" href="classPt_1_1BasicIOStream.html#a6046f28f315a127459574eaf26bd3ebc">buffer</a>, std::streamsize n)</td></tr>
 <tr class="memdesc:ac06710e909bf4323e3b3c5dda9d3dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peeks bytes in the stream buffer.  <a href="classPt_1_1BasicIOStream.html#ac06710e909bf4323e3b3c5dda9d3dec4">More...</a><br /></td></tr>
@@ -164,7 +164,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aec28ff80bde4f62110820a952c72db45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the buffer. <br /></td></tr>
 <tr class="separator:aec28ff80bde4f62110820a952c72db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>IOStream is the iostream facade for a secure connection. It wraps an underlying iostream with a Context and an OpenMode, and it is the type most callers construct. The handshake, encrypted I/O, and shutdown are the stream operations the group described; this type forwards them to its StreamBuffer.</p>
+<p>A default-constructed stream is closed. The constructor that takes a context, an iostream, and a mode opens immediately, as does open(). isConnected() is true after the handshake completes. readHandshake() and writeHandshake() are the non-blocking handshake steps. import() decrypts available input. sslBuffer() is the buffer when the caller needs StreamBuffer::setPeerName() or the streambuf itself. currentCipher() is the negotiated cipher. close() drops the connection without a TLS shutdown.</p>
+<p>Writes use the inherited iostream API. flush() pushes encrypted bytes to the underlying stream. Premature EOF on the transport is handled by the code that owns that stream.</p>
+<p>The example imports available ciphertext and reads the decrypted bytes, then writes a message and flushes it so the encrypted output reaches the underlying stream.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a>&amp; ssl = ...;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span>(;;)</div>
+<div class="line">{</div>
+<div class="line">    ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">import</a>();</div>
+<div class="line"> </div>
+<div class="line">    std::streamsize avail = ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">sslBuffer</a>().in_avail();</div>
+<div class="line">    <span class="keywordflow">if</span>(avail &lt;= 0)</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">do</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">char</span> buf[255];</div>
+<div class="line">        std::streamsize n = ssl.readsome(buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line">        std::cout.write(buf, n);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">while</span>( ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">sslBuffer</a>().in_avail() &gt; 0 );</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span>( ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4">isShutdown</a>() )</div>
+<div class="line">    ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">shutdown</a>();</div>
+<div class="line"> </div>
+<div class="line">ssl &lt;&lt; <span class="stringliteral">&quot;pi is: &quot;</span> &lt;&lt; 3.1415;</div>
+<div class="line">ssl.flush();</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a67e179596ba025c1f325afab4e67684f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67e179596ba025c1f325afab4e67684f">&#9670;&nbsp;</a></span>writeHandshake()</h2>
 
@@ -179,7 +208,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if handshake data was written, false if not. </p>
+<p>Returns true if handshake data was written, false otherwise.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%HandshakeFailed</td><td>if the handshake cannot complete. </td></tr>
+    <tr><td class="paramname">%SslError</td><td>if the stream is not open. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -197,7 +233,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if more handshake data needs to be read, false if not. </p>
+<p>Returns true if more handshake data needs to be read, false otherwise.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%HandshakeFailed</td><td>if the handshake cannot complete. </td></tr>
+    <tr><td class="paramname">%SslError</td><td>if the stream is not open. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -215,7 +258,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4" title="Returns true if the shutown notify has to be completed.">isShutdown()</a> returned false, the shutdown message is written to the output. If <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4" title="Returns true if the shutown notify has to be completed.">isShutdown()</a> returned true, or a previous call of <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80" title="Shutdown the SSL connection.">shutdown()</a> returned false, more data is required to read the shutdown reply. True is returned if the shutown was completed. </p>
+<p>Returns true if the shutdown completed.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%SslError</td><td>if the shutdown fails. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -234,7 +283,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Call <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4" title="Returns true if the shutown notify has to be completed.">isShutdown()</a> to find out if a shutdown notify was received and <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#ad6ba31d7da4a5565c9c87f9987fdbba9" title="Returns true if the connection is closed.">isClosed()</a> if the connection was prematurely closed. </p>
+<p>Returns the number of bytes consumed from the underlying stream. Call isShutdown() to find out if a shutdown alert was received, and isClosed() if the connection was closed prematurely. </p>
 
 </div>
 </div>
@@ -276,6 +325,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_ac8faaf2644d39b5ada114ab79fc78ea3"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">Pt::Ssl::IOStream::sslBuffer</a></div><div class="ttdeci">StreamBuffer &amp; sslBuffer()</div><div class="ttdoc">Returns the SSL stream buffer.</div><div class="ttdef"><b>Definition:</b> IOStream.h:195</div></div>
+<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a11ea35b8def36970df50df50fe5599b4"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4">Pt::Ssl::IOStream::isShutdown</a></div><div class="ttdeci">bool isShutdown() const</div><div class="ttdoc">Returns true if a shutdown alert was received.</div><div class="ttdef"><b>Definition:</b> IOStream.h:175</div></div>
+<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_aec1255304305c9d8eff8571c0fd87b80"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">Pt::Ssl::IOStream::shutdown</a></div><div class="ttdeci">bool shutdown()</div><div class="ttdoc">Completes or starts the TLS shutdown.</div><div class="ttdef"><b>Definition:</b> IOStream.h:170</div></div>
+<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a893fad161e0bcb173591cae663514dbf"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">Pt::Ssl::IOStream::import</a></div><div class="ttdeci">std::streamsize import(std::streamsize maxImport=0)</div><div class="ttdoc">Decrypts available data from the underlying stream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:190</div></div>
+<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a></div><div class="ttdoc">SSL iostream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:98</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

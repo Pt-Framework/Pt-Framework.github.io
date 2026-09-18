@@ -126,63 +126,73 @@
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>Connection;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>PT_HTTP_API IOStream : <span class="keyword">public</span> <a class="code" href="classPt_1_1BasicIOStream.html">Pt::BasicIOStream</a>&lt;char&gt;,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                             <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    public :</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        IOStream(Connection* conn);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">virtual</span> ~IOStream();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> beginInput();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">size_t</span> endInput();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> beginOutput();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">size_t</span> endOutput();</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html">   51</a></span>&#160;<span class="keyword">class </span>PT_HTTP_API <a class="code" href="classPt_1_1Http_1_1IOStream.html">IOStream</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1BasicIOStream.html">Pt::BasicIOStream</a>&lt;char&gt;,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                             <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    public :</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#a4eaca5ec6c5ea6c0dc460baa866f131f">   57</a></span>&#160;        <a class="code" href="classPt_1_1Http_1_1IOStream.html#a4eaca5ec6c5ea6c0dc460baa866f131f">IOStream</a>(<a class="code" href="classPt_1_1Connection.html">Connection</a>* conn);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a>&amp; inputReady()</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> _inputReady;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a>&amp; outputReady()</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> _outputReady;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> cancel();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> onInput(<a class="code" href="classPt_1_1System_1_1IOBuffer.html">Pt::System::IOBuffer</a>&amp; b)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            _inputReady.send();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> onOutput(<a class="code" href="classPt_1_1System_1_1IOBuffer.html">Pt::System::IOBuffer</a>&amp; b)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            _outputReady.send();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Connection* _conn;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::streambuf* _buffer;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a> _inputReady;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a> _outputReady;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#aff561ffe180640a45cb12c2cbd4746d6">   61</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Http_1_1IOStream.html#aff561ffe180640a45cb12c2cbd4746d6">~IOStream</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#ad75f03162e6a250d2165a3985c551a27">   65</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1IOStream.html#ad75f03162e6a250d2165a3985c551a27">beginInput</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#acb255eb01d344a016d49c6e132ce7b37">   69</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classPt_1_1Http_1_1IOStream.html#acb255eb01d344a016d49c6e132ce7b37">endInput</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#acb733b984f4e60a743f2e07531ea9d5b">   73</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1IOStream.html#acb733b984f4e60a743f2e07531ea9d5b">beginOutput</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#a917ca882894933c1fd49abf968903d35">   77</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classPt_1_1Http_1_1IOStream.html#a917ca882894933c1fd49abf968903d35">endOutput</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#af52dc06f7fbcefec105180d0e3db8e2d">   81</a></span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a>&amp; <a class="code" href="classPt_1_1Http_1_1IOStream.html#af52dc06f7fbcefec105180d0e3db8e2d">inputReady</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> _inputReady;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#aecb1ed29b1f583d3dc3b0d55816919b3">   88</a></span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a>&amp; <a class="code" href="classPt_1_1Http_1_1IOStream.html#aecb1ed29b1f583d3dc3b0d55816919b3">outputReady</a>()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">return</span> _outputReady;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classPt_1_1Http_1_1IOStream.html#a02d5fa6b14e221f3012a794b905be166">   95</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1IOStream.html#a02d5fa6b14e221f3012a794b905be166">cancel</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">void</span> onInput(<a class="code" href="classPt_1_1System_1_1IOBuffer.html">Pt::System::IOBuffer</a>&amp; b)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            _inputReady.send();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> onOutput(<a class="code" href="classPt_1_1System_1_1IOBuffer.html">Pt::System::IOBuffer</a>&amp; b)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            _outputReady.send();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="classPt_1_1Connection.html">Connection</a>* _conn;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::streambuf* _buffer;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a> _inputReady;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classPt_1_1Signal.html">Pt::Signal&lt;&gt;</a> _outputReady;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_a4eaca5ec6c5ea6c0dc460baa866f131f"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#a4eaca5ec6c5ea6c0dc460baa866f131f">Pt::Http::IOStream::IOStream</a></div><div class="ttdeci">IOStream(Connection *conn)</div><div class="ttdoc">Constructs the stream for conn.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_a917ca882894933c1fd49abf968903d35"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#a917ca882894933c1fd49abf968903d35">Pt::Http::IOStream::endOutput</a></div><div class="ttdeci">size_t endOutput()</div><div class="ttdoc">Ends an asynchronous write.</div></div>
 <div class="ttc" id="aclassPt_1_1Signal_html"><div class="ttname"><a href="classPt_1_1Signal.html">Pt::Signal</a></div><div class="ttdoc">Multicast Signal to call multiple slots.</div><div class="ttdef"><b>Definition:</b> Signal.h:190</div></div>
 <div class="ttc" id="aclassPt_1_1BasicIOStream_html"><div class="ttname"><a href="classPt_1_1BasicIOStream.html">Pt::BasicIOStream</a></div><div class="ttdoc">Input/Output stream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:142</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_a02d5fa6b14e221f3012a794b905be166"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#a02d5fa6b14e221f3012a794b905be166">Pt::Http::IOStream::cancel</a></div><div class="ttdeci">void cancel()</div><div class="ttdoc">Cancels pending I/O.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_aecb1ed29b1f583d3dc3b0d55816919b3"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#aecb1ed29b1f583d3dc3b0d55816919b3">Pt::Http::IOStream::outputReady</a></div><div class="ttdeci">Pt::Signal &amp; outputReady()</div><div class="ttdoc">Returns the signal emitted when output is ready.</div><div class="ttdef"><b>Definition:</b> IOStream.h:88</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_ad75f03162e6a250d2165a3985c551a27"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#ad75f03162e6a250d2165a3985c551a27">Pt::Http::IOStream::beginInput</a></div><div class="ttdeci">void beginInput()</div><div class="ttdoc">Begins an asynchronous read.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_aff561ffe180640a45cb12c2cbd4746d6"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#aff561ffe180640a45cb12c2cbd4746d6">Pt::Http::IOStream::~IOStream</a></div><div class="ttdeci">virtual ~IOStream()</div><div class="ttdoc">Destructor.</div></div>
 <div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html">Pt::Http::IOStream</a></div><div class="ttdoc">Stream of an upgraded HTTP connection.</div><div class="ttdef"><b>Definition:</b> IOStream.h:53</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1IOBuffer_html"><div class="ttname"><a href="classPt_1_1System_1_1IOBuffer.html">Pt::System::IOBuffer</a></div><div class="ttdoc">Stream buffer for an IODevice.</div><div class="ttdef"><b>Definition:</b> IOBuffer.h:60</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_af52dc06f7fbcefec105180d0e3db8e2d"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#af52dc06f7fbcefec105180d0e3db8e2d">Pt::Http::IOStream::inputReady</a></div><div class="ttdeci">Pt::Signal &amp; inputReady()</div><div class="ttdoc">Returns the signal emitted when input is ready.</div><div class="ttdef"><b>Definition:</b> IOStream.h:81</div></div>
+<div class="ttc" id="aclassPt_1_1Connection_html"><div class="ttname"><a href="classPt_1_1Connection.html">Pt::Connection</a></div><div class="ttdoc">Represents a connection between a Signal/Delegate and a slot.</div><div class="ttdef"><b>Definition:</b> Connection.h:96</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_acb733b984f4e60a743f2e07531ea9d5b"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#acb733b984f4e60a743f2e07531ea9d5b">Pt::Http::IOStream::beginOutput</a></div><div class="ttdeci">void beginOutput()</div><div class="ttdoc">Begins an asynchronous write.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1IOStream_html_acb255eb01d344a016d49c6e132ce7b37"><div class="ttname"><a href="classPt_1_1Http_1_1IOStream.html#acb255eb01d344a016d49c6e132ce7b37">Pt::Http::IOStream::endInput</a></div><div class="ttdeci">size_t endInput()</div><div class="ttdoc">Ends an asynchronous read.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

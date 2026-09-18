@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Context Class Reference</div>  </div>
+<div class="title">Context Class Reference<div class="ingroups"><a class="el" href="group__Pt-Ssl.html">Secure Communication</a> &raquo; <a class="el" href="group__Pt-Ssl-Context.html">SSL Context</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Ssl_2Context_8h_source.html">Pt/Ssl/Context.h</a>&gt;</code></p>
 
-<p>Context for SSL connections.  
-</p>
+<p>Shared configuration for SSL connections.  
+ <a href="classPt_1_1Ssl_1_1Context.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
@@ -98,11 +98,11 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7540648fc201ffee17e0cdea0888a6f7"><td class="memItemLeft" align="right" valign="top"><a id="a7540648fc201ffee17e0cdea0888a6f7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a7540648fc201ffee17e0cdea0888a6f7">Context</a> ()</td></tr>
-<tr class="memdesc:a7540648fc201ffee17e0cdea0888a6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br /></td></tr>
+<tr class="memdesc:a7540648fc201ffee17e0cdea0888a6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a context for the highest available TLS protocol. <br /></td></tr>
 <tr class="separator:a7540648fc201ffee17e0cdea0888a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a862504a9b81b95685bcb4e97e74cab89"><td class="memItemLeft" align="right" valign="top"><a id="a862504a9b81b95685bcb4e97e74cab89"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a862504a9b81b95685bcb4e97e74cab89">Context</a> (<a class="el" href="namespacePt_1_1Ssl.html#aac39b55be6469395f55ff0292ad8184c">Protocol</a> <a class="el" href="classPt_1_1Ssl_1_1Context.html#ab4e76470d0c75da3425cafaf0ac507ea">protocol</a>)</td></tr>
-<tr class="memdesc:a862504a9b81b95685bcb4e97e74cab89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with specific protocol. <br /></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a862504a9b81b95685bcb4e97e74cab89">Context</a> (<a class="el" href="group__Pt-Ssl-Context.html#gaac39b55be6469395f55ff0292ad8184c">Protocol</a> <a class="el" href="classPt_1_1Ssl_1_1Context.html#ab4e76470d0c75da3425cafaf0ac507ea">protocol</a>)</td></tr>
+<tr class="memdesc:a862504a9b81b95685bcb4e97e74cab89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a context for <em>protocol</em>. <br /></td></tr>
 <tr class="separator:a862504a9b81b95685bcb4e97e74cab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2cdbdf8ca6efd618beb4f0c416e02f9"><td class="memItemLeft" align="right" valign="top"><a id="ad2cdbdf8ca6efd618beb4f0c416e02f9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#ad2cdbdf8ca6efd618beb4f0c416e02f9">~Context</a> ()</td></tr>
@@ -110,39 +110,44 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad2cdbdf8ca6efd618beb4f0c416e02f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa13a104049ec002b3ba792225ec66a47"><td class="memItemLeft" align="right" valign="top"><a id="aa13a104049ec002b3ba792225ec66a47"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#aa13a104049ec002b3ba792225ec66a47">assign</a> (const <a class="el" href="classPt_1_1Ssl_1_1Context.html">Context</a> &amp;ctx)</td></tr>
-<tr class="memdesc:aa13a104049ec002b3ba792225ec66a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the certificates, verify mode and protocol. <br /></td></tr>
+<tr class="memdesc:aa13a104049ec002b3ba792225ec66a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies protocol, verify settings and certificates from <em>ctx</em>. <br /></td></tr>
 <tr class="separator:aa13a104049ec002b3ba792225ec66a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e76470d0c75da3425cafaf0ac507ea"><td class="memItemLeft" align="right" valign="top"><a id="ab4e76470d0c75da3425cafaf0ac507ea"></a>
-<a class="el" href="namespacePt_1_1Ssl.html#aac39b55be6469395f55ff0292ad8184c">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#ab4e76470d0c75da3425cafaf0ac507ea">protocol</a> () const</td></tr>
-<tr class="memdesc:ab4e76470d0c75da3425cafaf0ac507ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current protocol. <br /></td></tr>
+<a class="el" href="group__Pt-Ssl-Context.html#gaac39b55be6469395f55ff0292ad8184c">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#ab4e76470d0c75da3425cafaf0ac507ea">protocol</a> () const</td></tr>
+<tr class="memdesc:ab4e76470d0c75da3425cafaf0ac507ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the protocol. <br /></td></tr>
 <tr class="separator:ab4e76470d0c75da3425cafaf0ac507ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad32830ca61916180c52a432a0ea8f0bc"><td class="memItemLeft" align="right" valign="top"><a id="ad32830ca61916180c52a432a0ea8f0bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#ad32830ca61916180c52a432a0ea8f0bc">setProtocol</a> (<a class="el" href="namespacePt_1_1Ssl.html#aac39b55be6469395f55ff0292ad8184c">Protocol</a> <a class="el" href="classPt_1_1Ssl_1_1Context.html#ab4e76470d0c75da3425cafaf0ac507ea">protocol</a>)</td></tr>
-<tr class="memdesc:ad32830ca61916180c52a432a0ea8f0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current protocol. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#ad32830ca61916180c52a432a0ea8f0bc">setProtocol</a> (<a class="el" href="group__Pt-Ssl-Context.html#gaac39b55be6469395f55ff0292ad8184c">Protocol</a> <a class="el" href="classPt_1_1Ssl_1_1Context.html#ab4e76470d0c75da3425cafaf0ac507ea">protocol</a>)</td></tr>
+<tr class="memdesc:ad32830ca61916180c52a432a0ea8f0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the protocol. <br /></td></tr>
 <tr class="separator:ad32830ca61916180c52a432a0ea8f0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e7ba7676441a4c266dd092b66ae74b"><td class="memItemLeft" align="right" valign="top"><a id="a13e7ba7676441a4c266dd092b66ae74b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a13e7ba7676441a4c266dd092b66ae74b">setVerifyDepth</a> (int n)</td></tr>
-<tr class="memdesc:a13e7ba7676441a4c266dd092b66ae74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limits the number of certificates checked in the peer's certificate chain. <br /></td></tr>
+<tr class="memdesc:a13e7ba7676441a4c266dd092b66ae74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limits how many certificates are checked in the peer chain. <br /></td></tr>
 <tr class="separator:a13e7ba7676441a4c266dd092b66ae74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc6a115cb5f00fc94a8d28c191fe3fb9"><td class="memItemLeft" align="right" valign="top"><a id="afc6a115cb5f00fc94a8d28c191fe3fb9"></a>
-<a class="el" href="namespacePt_1_1Ssl.html#aec3fd496ba134cc896c9a62b4f37a281">VerifyMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#afc6a115cb5f00fc94a8d28c191fe3fb9">verifyMode</a> () const</td></tr>
-<tr class="memdesc:afc6a115cb5f00fc94a8d28c191fe3fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current verify mode. <br /></td></tr>
+<a class="el" href="group__Pt-Ssl-Context.html#gaec3fd496ba134cc896c9a62b4f37a281">VerifyMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#afc6a115cb5f00fc94a8d28c191fe3fb9">verifyMode</a> () const</td></tr>
+<tr class="memdesc:afc6a115cb5f00fc94a8d28c191fe3fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the verification mode. <br /></td></tr>
 <tr class="separator:afc6a115cb5f00fc94a8d28c191fe3fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa86059ac2726d155770f7dc76ebe321d"><td class="memItemLeft" align="right" valign="top"><a id="aa86059ac2726d155770f7dc76ebe321d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#aa86059ac2726d155770f7dc76ebe321d">setVerifyMode</a> (<a class="el" href="namespacePt_1_1Ssl.html#aec3fd496ba134cc896c9a62b4f37a281">VerifyMode</a> mode)</td></tr>
-<tr class="memdesc:aa86059ac2726d155770f7dc76ebe321d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current validation mode. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#aa86059ac2726d155770f7dc76ebe321d">setVerifyMode</a> (<a class="el" href="group__Pt-Ssl-Context.html#gaec3fd496ba134cc896c9a62b4f37a281">VerifyMode</a> mode)</td></tr>
+<tr class="memdesc:aa86059ac2726d155770f7dc76ebe321d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the verification mode. <br /></td></tr>
 <tr class="separator:aa86059ac2726d155770f7dc76ebe321d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64c592bd18556c6921aa6c41204c83c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a64c592bd18556c6921aa6c41204c83c6">addCACertificate</a> (const <a class="el" href="classPt_1_1Ssl_1_1Certificate.html">Certificate</a> &amp;trustedCert)</td></tr>
-<tr class="memdesc:a64c592bd18556c6921aa6c41204c83c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a certificate to the trusted CA certificates.  <a href="classPt_1_1Ssl_1_1Context.html#a64c592bd18556c6921aa6c41204c83c6">More...</a><br /></td></tr>
+<tr class="memdesc:a64c592bd18556c6921aa6c41204c83c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <em>trustedCert</em> to the trusted CA certificates.  <a href="classPt_1_1Ssl_1_1Context.html#a64c592bd18556c6921aa6c41204c83c6">More...</a><br /></td></tr>
 <tr class="separator:a64c592bd18556c6921aa6c41204c83c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a669e161125c5f9d6b50effc9af6f6d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a669e161125c5f9d6b50effc9af6f6d06">setIdentity</a> (const <a class="el" href="classPt_1_1Ssl_1_1Certificate.html">Certificate</a> &amp;cert)</td></tr>
-<tr class="memdesc:a669e161125c5f9d6b50effc9af6f6d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the main certificate of this context.  <a href="classPt_1_1Ssl_1_1Context.html#a669e161125c5f9d6b50effc9af6f6d06">More...</a><br /></td></tr>
+<tr class="memdesc:a669e161125c5f9d6b50effc9af6f6d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the certificate presented to the peer.  <a href="classPt_1_1Ssl_1_1Context.html#a669e161125c5f9d6b50effc9af6f6d06">More...</a><br /></td></tr>
 <tr class="separator:a669e161125c5f9d6b50effc9af6f6d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a202c33308130ee5b25121e324ef16f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Ssl_1_1Context.html#a6a202c33308130ee5b25121e324ef16f">addCertificate</a> (const <a class="el" href="classPt_1_1Ssl_1_1Certificate.html">Certificate</a> &amp;cert)</td></tr>
-<tr class="memdesc:a6a202c33308130ee5b25121e324ef16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds certificate chain.  <a href="classPt_1_1Ssl_1_1Context.html#a6a202c33308130ee5b25121e324ef16f">More...</a><br /></td></tr>
+<tr class="memdesc:a6a202c33308130ee5b25121e324ef16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <em>cert</em> to the chain presented with the identity.  <a href="classPt_1_1Ssl_1_1Context.html#a6a202c33308130ee5b25121e324ef16f">More...</a><br /></td></tr>
 <tr class="separator:a6a202c33308130ee5b25121e324ef16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Context is the configuration the group described: protocol, verification, identity, chain, and trusted CAs, used by every stream opened with it. It is not a connected stream. Keep the context alive while a stream that opened with it is still open.</p>
+<p>The default constructor selects TLS, the highest available protocol, and TryVerify. The protocol constructor selects that protocol and the same default verify mode. setProtocol() and setVerifyMode() change them later. setVerifyDepth() limits how many certificates in the peer's chain are checked.</p>
+<p>setIdentity() is required on a server context and optional on a client context. addCertificate() extends the chain presented with that identity. addCACertificate() extends the trust store used to verify the peer. Each of those calls copies what it needs from the Certificate argument, which must be valid for the call. Unusable material throws InvalidCertificate.</p>
+<p>The object is not copyable. assign() copies protocol, verify settings, and certificates from another context into this one. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a64c592bd18556c6921aa6c41204c83c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64c592bd18556c6921aa6c41204c83c6">&#9670;&nbsp;</a></span>addCACertificate()</h2>
 
@@ -158,7 +163,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Trusted CA certificates are needed to check, if the peer's certificate is signed by a trusted <a class="el" href="classPt_1_1Ssl_1_1Certificate.html" title="X509 certificate.">Certificate</a> Authority. Add the certificates of all trusted CAs. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%InvalidCertificate</td><td>if <em>trustedCert</em> cannot be used. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -177,7 +187,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting a main certificate is mandatory for a server context. For a client context, it is only needed for client authentication. </p>
+<p>Required for a server context. For a client context, needed only for client authentication.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%InvalidCertificate</td><td>if <em>cert</em> cannot be used as identity. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -196,7 +212,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds the certificate to the certificate chain presented to the peer together with the main certificate. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%InvalidCertificate</td><td>if <em>cert</em> cannot be used. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
