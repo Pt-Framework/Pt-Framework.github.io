@@ -77,18 +77,70 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">Core Module</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The core module is the basis for all other modules of the framework. It has no dependency on any system specific libraries except the standard C++ library. </p>
+<p>The core module is the basis for all other modules of the framework. It has no dependency on any system specific libraries except the standard C++ library. This chapter covers command-line arguments, application settings, events, type-erased values, the Void marker, non-copyable objects, singletons, fixed-size integers, byte order, atomic operations, streams, zlib streams, dates and times, coroutines, allocators, unicode text, signals and delegates, type traits, conversions, and serialization. </p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Any.html">Any</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of any copyable type.  <a href="classPt_1_1Any.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Arg.html">Arg&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command-line option extracted from argc and argv.  <a href="classPt_1_1Arg.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Arg_3_01bool_01_4.html">Arg&lt; bool &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean command-line switch.  <a href="classPt_1_1Arg_3_01bool_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Event.html">Event</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for typed events.  <a href="classPt_1_1Event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicEvent.html">BasicEvent&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Event.html" title="Base class for typed events.">Event</a> base that clones, destroys and identifies a derived type T.  <a href="classPt_1_1BasicEvent.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1IOError.html">IOError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">I/O error.  <a href="classPt_1_1IOError.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1AccessFailed.html">AccessFailed</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Failed to access a resource.  <a href="classPt_1_1AccessFailed.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class that disables copy construction and assignment.  <a href="classPt_1_1NonCopyable.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1SettingsError.html">SettingsError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid settings text.  <a href="classPt_1_1SettingsError.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Settings.html">Settings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hierarchical application settings loaded from text.  <a href="classPt_1_1Settings.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Singleton.html">Singleton&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process-wide single instance of <em>T</em>.  <a href="classPt_1_1Singleton.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPt_1_1Void.html">Void</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marker type for an unused template argument.  <a href="structPt_1_1Void.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:group__Pt-Basics"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Basics.html">Basic Types</a></td></tr>
-<tr class="memdesc:group__Pt-Basics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program options, application settings, events and a few general-purpose helper types. <br /></td></tr>
+<tr class="memitem:group__Pt-IntTypes"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-IntTypes.html">Fixed-Size Integers</a></td></tr>
+<tr class="memdesc:group__Pt-IntTypes"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed-width signed and unsigned integer types. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Byteorder"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Byteorder.html">Byte Order</a></td></tr>
+<tr class="memdesc:group__Pt-Byteorder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Little-endian and big-endian integer conversion. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Atomics"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Atomics.html">Atomic Operations</a></td></tr>
+<tr class="memdesc:group__Pt-Atomics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock-free atomic integer and pointer operations. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-Streams"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Streams.html">Streams</a></td></tr>
+<tr class="memdesc:group__Pt-Streams"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream buffers and iostreams with peek and partial write. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__Pt-ZStreams"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-ZStreams.html">Zlib Streams</a></td></tr>
+<tr class="memdesc:group__Pt-ZStreams"><td class="mdescLeft">&#160;</td><td class="mdescRight">zlib compression through stream buffers and iostreams. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__Pt-DateTime"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-DateTime.html">Dates and Times</a></td></tr>
 <tr class="memdesc:group__Pt-DateTime"><td class="mdescLeft">&#160;</td><td class="mdescRight">Durations and points in calendar time. <br /></td></tr>
@@ -109,7 +161,7 @@ Modules</h2></td></tr>
 <tr class="memdesc:group__Pt-TypeTraits"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time type traits and runtime type information. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__Pt-Convert"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html">Conversions</a></td></tr>
-<tr class="memdesc:group__Pt-Convert"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion between strings, numbers and byte orders. <br /></td></tr>
+<tr class="memdesc:group__Pt-Convert"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion between strings and numbers. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__Pt-Serialization"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Serialization.html">Serialization</a></td></tr>
 <tr class="memdesc:group__Pt-Serialization"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composing and decomposing types to text or binary formats. <br /></td></tr>

@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Transform Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">Transform Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Transform_8h_source.html">Pt/Gfx/Transform.h</a>&gt;</code></p>
 
-<p>Affine transform for drawing coordinates.  
+<p>2D affine transform.  
  <a href="classPt_1_1Gfx_1_1Transform.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -216,7 +216,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:acccdf96ea6ed3e1c8661f615c5d8316a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPt_1_1Gfx_1_1Transform.html" title="Affine transform for drawing coordinates.">Transform</a> stores the matrix used to map logical drawing coordinates to the coordinate system of the target. It can be composed from translation, scaling, rotation and shear operations and is used by painters, paths and text drawing. </p>
+<div class="textblock"><p>Transform maps logical drawing coordinates. The default is identity. Translate, scale, rotate, and shear compose on the left. A painter's setTransform() applies this mapping before the surface scaling. drawText() can take an extra transform for a single run.</p>
+<p>Invert a transform only when it is invertible. The type is a value; copying duplicates the matrix, not a painter. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

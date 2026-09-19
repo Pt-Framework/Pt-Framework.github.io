@@ -85,13 +85,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Settings Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Basics.html">Basic Types</a></div></div>  </div>
+<div class="title">Settings Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Settings_8h_source.html">Pt/Settings.h</a>&gt;</code></p>
 
-<p>Store application settings.  
+<p>Hierarchical application settings loaded from text.  
  <a href="classPt_1_1Settings.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1SerializationInfo.html">SerializationInfo</a>.</p>
@@ -236,69 +236,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ab3658f15ff98af95d7f10a0359eea6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Many programs need to be able to restore its settings from a persistent location, such as a file. The <a class="el" href="classPt_1_1Settings.html">Settings</a> class provides an hierachical organisation of settings entries and an API to read and write them in a text format. The following example illustrates how settings can be read from a file:</p>
+<div class="textblock"><p>Settings is a tree of named entries that a program can load, change, and save. The unit of persistence is the whole tree. load() replaces it from a <code>std::basic_istream</code> of Pt::Char or from a Formatter. save() writes it the same way. A file is a typical source, but a string stream is equally valid, which is useful in tests.</p>
 <div class="fragment"><div class="line">std::ifstream ifs(<span class="stringliteral">&quot;app.settings&quot;</span>);</div>
-<div class="line"><a class="code" href="classPt_1_1BasicTextIStream.html">Pt::TextIStream</a> tis(ifs, <span class="keyword">new</span> Pt::Utf8codec);</div>
+<div class="line"><a class="code" href="classPt_1_1BasicTextIStream.html">Pt::TextIStream</a> tis(ifs, <span class="keyword">new</span> <a class="code" href="classPt_1_1Utf8Codec.html">Pt::Utf8Codec</a>);</div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="classPt_1_1Settings.html">Pt::Settings</a> settings;</div>
 <div class="line">settings.<a class="code" href="classPt_1_1Settings.html#ae73562d96ab1e249b02b6026c3accfa5">load</a>(tis);</div>
-</div><!-- fragment --><p><a class="el" href="classPt_1_1Settings.html" title="Store application settings.">Settings</a> can be loaded from any input stream, so the API is not limited to files. In this example, a file stream is opened and a text input stream is used to read UTF-8 encoded text. Another interesting use-case is to load settings from a string stream, which can greatly simplify unit testing. Writing settings to a file is just as easy:</p>
-<div class="fragment"><div class="line">std::ofstream ofs(<span class="stringliteral">&quot;app.settings&quot;</span>, std::ios::out|std::ios::trunc);</div>
-<div class="line"><a class="code" href="classPt_1_1BasicTextOStream.html">Pt::TextOStream</a> tos(ofs, <span class="keyword">new</span> Pt::Utf8codec);</div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Settings.html">Pt::Settings</a> settings;</div>
-<div class="line">settings.<a class="code" href="classPt_1_1Settings.html#aa48fd86bc80333a8d8349f5401c58302">save</a>(tos);</div>
-</div><!-- fragment --><p><a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Any</a> output stream can be used to save the settings, in this case UTF-8 encoded text is written to a file. Note, that the file is truncated when opened, so the content is replaced.</p>
-<p><a class="el" href="classPt_1_1Settings.html" title="Store application settings.">Settings</a> are saved in a compact text format, which supports integers, floats, strings and booleans as scalar value types and arrays and structs as compound types. The next example shows some possibilities:</p>
+</div><!-- fragment --><p>The text format stores scalars, arrays, and structs. Integers, floating-point values, strings, and booleans are scalars. An array is a bracketed list. A struct is a brace-delimited list of named members. A <code></code>[section] line is a top-level struct: the names that follow become its members until the next section.</p>
 <div class="fragment"><div class="line">a = 1</div>
 <div class="line">b = 3.14</div>
 <div class="line">c = <span class="stringliteral">&quot;Hello World!&quot;</span></div>
 <div class="line">d = <span class="keyword">true</span></div>
 <div class="line">e = [ 1, 2, 3 ]</div>
 <div class="line">f = { red = 255, green = 0, blue = 0 }</div>
-</div><!-- fragment --><p>The entry values for a, b, c and d are of type integer, float, string and bool, respectively. The entries e and f demonstrate the syntax for arrays and structs. The following example shows how such a settings file can be loaded and how the entries are accessed:</p>
-<div class="fragment"><div class="line">std::ifstream ifs(<span class="stringliteral">&quot;app.settings&quot;</span>);</div>
-<div class="line"><a class="code" href="classPt_1_1BasicTextIStream.html">Pt::TextIStream</a> tis(ifs, <span class="keyword">new</span> Pt::Utf8codec);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Settings.html">Pt::Settings</a> settings;</div>
-<div class="line">settings.<a class="code" href="classPt_1_1Settings.html#ae73562d96ab1e249b02b6026c3accfa5">load</a>(tis);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> a = 0;</div>
+<div class="line">[animals]</div>
+<div class="line">a = <span class="stringliteral">&quot;dog&quot;</span></div>
+<div class="line">b = <span class="stringliteral">&quot;cat&quot;</span></div>
+</div><!-- fragment --><p>After a load, that file has top-level entries <code>a</code> through <code>f</code> and a top-level entry <code>animals</code> with subentries <code>a</code> and <code>b</code>. entry() and <code>operator</code>[] return a ConstEntry or Entry by name. A missing name yields an empty entry. Empty entries are false in boolean context. get() extracts a serializable value and returns false when the entry is empty. set() replaces the value of an existing entry. addEntry() and makeEntry() create members; makeEntry() returns the member if it already exists. removeEntry() drops a member.</p>
+<p>The stored type must have serialization operators. STL containers already do. A user type needs <code>operator&lt;&lt;=</code> and <code>operator&gt;&gt;=</code> for SerializationInfo, the same operators the rest of the serialization framework uses. Settings privately inherits SerializationInfo; do not use that base as a public API.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a = 0;</div>
 <div class="line"><span class="keywordtype">bool</span> ok = settings[<span class="stringliteral">&quot;a&quot;</span>].get(a);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">float</span> b = 0;</div>
-<div class="line">ok = settings.<a class="code" href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">entry</a>(<span class="stringliteral">&quot;b&quot;</span>).<a class="code" href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">get</a>(b);</div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1String.html">Pt::String</a> c;</div>
-<div class="line">ok = settings.<a class="code" href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">entry</a>(<span class="stringliteral">&quot;c&quot;</span>).<a class="code" href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">get</a>(c);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">bool</span> d = <span class="keyword">false</span>;</div>
-<div class="line">ok = settings.<a class="code" href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">entry</a>(<span class="stringliteral">&quot;d&quot;</span>).<a class="code" href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">get</a>(d);</div>
 <div class="line"> </div>
 <div class="line">std::vector&lt;int&gt; e;</div>
 <div class="line">ok = settings.<a class="code" href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">entry</a>(<span class="stringliteral">&quot;e&quot;</span>).<a class="code" href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">get</a>(e);</div>
 <div class="line"> </div>
-<div class="line">Color f;</div>
-<div class="line">ok = settings.<a class="code" href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">entry</a>(<span class="stringliteral">&quot;f&quot;</span>).<a class="code" href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">get</a>(f);</div>
-</div><!-- fragment --><p>The <a class="el" href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">entry()</a> method or alternatively, the index operator can be used, to access entries and subentries by name. If a subentry does not exist, an empty entry object will be returned. Values can be retrieved with the <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">get()</a> method, which returns false, if the value does not exist. The data type, which is stored in the settings must be serializable i.e. the serialization operators must be defined. The framework defines the serialization operators for STL containers, so these work out of the box. The <a class="el" href="classPt_1_1Settings_1_1Entry.html#ac492aea31d0904792242257fdcb1e197">set()</a> function can be used to set an entry to a new value, before the modified settings are saved. New subentries can be added using the <a class="el" href="classPt_1_1Settings.html#a84d4425d49ab42bb6e85870695fa84e4">addEntry()</a> function.</p>
-<p><a class="el" href="classPt_1_1Settings.html" title="Store application settings.">Settings</a> can be split into sections, to improve the readability of the file, using the following syntax:</p>
-<div class="fragment"><div class="line">[animals]</div>
-<div class="line">a = <span class="stringliteral">&quot;dog&quot;</span></div>
-<div class="line">b = <span class="stringliteral">&quot;cat&quot;</span></div>
-<div class="line"> </div>
-<div class="line">[plants]</div>
-<div class="line">a = <span class="stringliteral">&quot;tulip&quot;</span></div>
-<div class="line">b = <span class="stringliteral">&quot;rose&quot;</span></div>
-</div><!-- fragment --><p>When such a settings file is loaded, it will contain two entries named "animals" and "plants". Both entries will have two subentries named "a" and "b". </p>
+<div class="line">settings.<a class="code" href="classPt_1_1Settings.html#afe3f816edfe3da8a92d132572a05d325">makeEntry</a>(<span class="stringliteral">&quot;port&quot;</span>).<a class="code" href="classPt_1_1Settings_1_1Entry.html#ac492aea31d0904792242257fdcb1e197">set</a>(8080);</div>
+<div class="line">settings.<a class="code" href="classPt_1_1Settings.html#aa48fd86bc80333a8d8349f5401c58302">save</a>(tos);</div>
+</div><!-- fragment --><p>load() from malformed text throws SettingsError, which reports the line of the failure. Saving truncates nothing by itself; open the destination stream with <code>ios::trunc</code> when the file should be replaced. Entry iterates like a sibling walk: begin() / end() and <code>operator++</code> move to the next member of the same parent. </p>
 </div></div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1Settings_html_ae73562d96ab1e249b02b6026c3accfa5"><div class="ttname"><a href="classPt_1_1Settings.html#ae73562d96ab1e249b02b6026c3accfa5">Pt::Settings::load</a></div><div class="ttdeci">void load(std::basic_istream&lt; Pt::Char &gt; &amp;is)</div><div class="ttdoc">Loads settings from a input stream.</div></div>
+<div class="ttc" id="aclassPt_1_1Utf8Codec_html"><div class="ttname"><a href="classPt_1_1Utf8Codec.html">Pt::Utf8Codec</a></div><div class="ttdoc">Convert between unicode and UTF-8.</div><div class="ttdef"><b>Definition:</b> Utf8Codec.h:44</div></div>
 <div class="ttc" id="aclassPt_1_1Settings_html_aa48fd86bc80333a8d8349f5401c58302"><div class="ttname"><a href="classPt_1_1Settings.html#aa48fd86bc80333a8d8349f5401c58302">Pt::Settings::save</a></div><div class="ttdeci">void save(std::basic_ostream&lt; Pt::Char &gt; &amp;os) const</div><div class="ttdoc">Saves settings to a output stream.</div></div>
-<div class="ttc" id="aclassPt_1_1BasicTextOStream_html"><div class="ttname"><a href="classPt_1_1BasicTextOStream.html">Pt::BasicTextOStream&lt; Char, char &gt;</a></div></div>
-<div class="ttc" id="aclassPt_1_1Settings_1_1ConstEntry_html_a294f2af41e3587ee2566498c08c17ddc"><div class="ttname"><a href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">Pt::Settings::ConstEntry::get</a></div><div class="ttdeci">bool get(T &amp;value) const</div><div class="ttdoc">Gets the value.</div><div class="ttdef"><b>Definition:</b> Settings.h:417</div></div>
-<div class="ttc" id="aclassPt_1_1Settings_html"><div class="ttname"><a href="classPt_1_1Settings.html">Pt::Settings</a></div><div class="ttdoc">Store application settings.</div><div class="ttdef"><b>Definition:</b> Settings.h:173</div></div>
+<div class="ttc" id="aclassPt_1_1Settings_1_1Entry_html_ac492aea31d0904792242257fdcb1e197"><div class="ttname"><a href="classPt_1_1Settings_1_1Entry.html#ac492aea31d0904792242257fdcb1e197">Pt::Settings::Entry::set</a></div><div class="ttdeci">void set(const T &amp;value)</div><div class="ttdoc">Sets the value.</div><div class="ttdef"><b>Definition:</b> Settings.h:171</div></div>
+<div class="ttc" id="aclassPt_1_1Settings_1_1ConstEntry_html_a294f2af41e3587ee2566498c08c17ddc"><div class="ttname"><a href="classPt_1_1Settings_1_1ConstEntry.html#a294f2af41e3587ee2566498c08c17ddc">Pt::Settings::ConstEntry::get</a></div><div class="ttdeci">bool get(T &amp;value) const</div><div class="ttdoc">Gets the value.</div><div class="ttdef"><b>Definition:</b> Settings.h:379</div></div>
+<div class="ttc" id="aclassPt_1_1Settings_html"><div class="ttname"><a href="classPt_1_1Settings.html">Pt::Settings</a></div><div class="ttdoc">Hierarchical application settings loaded from text.</div><div class="ttdef"><b>Definition:</b> Settings.h:135</div></div>
 <div class="ttc" id="aclassPt_1_1BasicTextIStream_html"><div class="ttname"><a href="classPt_1_1BasicTextIStream.html">Pt::BasicTextIStream&lt; Char, char &gt;</a></div></div>
-<div class="ttc" id="aclassPt_1_1Settings_html_a727e31ed03ce7b16588df67c1c41d91b"><div class="ttname"><a href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">Pt::Settings::entry</a></div><div class="ttdeci">ConstEntry entry(const std::string &amp;name) const</div><div class="ttdoc">Returns a top level entry.</div><div class="ttdef"><b>Definition:</b> Settings.h:591</div></div>
-<div class="ttc" id="aclassPt_1_1String_html"><div class="ttname"><a href="classPt_1_1String.html">Pt::String</a></div><div class="ttdoc">Unicode capable basic_string.</div><div class="ttdef"><b>Definition:</b> Api-String.h:63</div></div>
+<div class="ttc" id="aclassPt_1_1Settings_html_a727e31ed03ce7b16588df67c1c41d91b"><div class="ttname"><a href="classPt_1_1Settings.html#a727e31ed03ce7b16588df67c1c41d91b">Pt::Settings::entry</a></div><div class="ttdeci">ConstEntry entry(const std::string &amp;name) const</div><div class="ttdoc">Returns a top level entry.</div><div class="ttdef"><b>Definition:</b> Settings.h:553</div></div>
+<div class="ttc" id="aclassPt_1_1Settings_html_afe3f816edfe3da8a92d132572a05d325"><div class="ttname"><a href="classPt_1_1Settings.html#afe3f816edfe3da8a92d132572a05d325">Pt::Settings::makeEntry</a></div><div class="ttdeci">Entry makeEntry(const char *name)</div><div class="ttdoc">Makes a top level entry.</div><div class="ttdef"><b>Definition:</b> Settings.h:611</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

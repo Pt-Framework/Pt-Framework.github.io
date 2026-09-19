@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">PointI Class Reference</div>  </div>
+<div class="title">PointI Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Point_8h_source.html">Pt/Gfx/Point.h</a>&gt;</code></p>
 
-<p>Point with integer X and Y coordinates.  
-</p>
+<p>Integer X and Y coordinates.  
+ <a href="classPt_1_1Gfx_1_1PointI.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,7 +103,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a51ab470d45315f3fc25310c0c8f02111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the negation of this point. <br /></td></tr>
 <tr class="separator:a51ab470d45315f3fc25310c0c8f02111"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>PointI is the integer counterpart of Point. Image pixels, view origins, and rounded drawing coordinates use this type. It is not a logical drawing point; widen it to Point when a painter needs a floating-point coordinate.</p>
+<p>Arithmetic matches Point but uses Int. Equality is exact. There is no rounding API on this type: rounding is how a Point becomes a PointI. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

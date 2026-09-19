@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Paint Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">Paint Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Paint_8h_source.html">Pt/Gfx/Paint.h</a>&gt;</code></p>
 
-<p><a class="el" href="classPt_1_1Gfx_1_1Paint.html" title="Paint state used by drawing operations.">Paint</a> state used by drawing operations.  
+<p><a class="el" href="classPt_1_1Gfx_1_1Pen.html" title="Outline color, width and style.">Pen</a>, brush, font and composition mode.  
  <a href="classPt_1_1Gfx_1_1Paint.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -136,7 +136,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ad56c22d0881053fd0d628fa139b1748b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Paint bundles the composition mode, pen, brush and font that define how a painter renders geometry and text. It can be reused to apply the same drawing state to multiple painting operations. </p>
+<div class="textblock"><p>Paint stores the four pieces of drawing state a painter uses: CompositionMode, Pen, Brush, and Font. Set them on a Paint value and reuse that value, or set the same pieces on a Painter directly. This type does not draw and it does not own a surface. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

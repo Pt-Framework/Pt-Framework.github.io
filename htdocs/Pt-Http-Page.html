@@ -146,59 +146,59 @@ Client</h2>
 <p>The request is request(). Set the URL, the method, query parameters and header fields before the send starts, and write the body with request().body(). The default method is GET. The reply is reply() after a receive step has made it available.</p>
 <p>Asynchronous receive is beginReceive() and endReceive(). replyReceived() is emitted when a step has completed. The slot calls endReceive(), which returns MessageProgress. If the header is available, the status can be read; if the body is available, it can be read from reply().body(); if the reply is not finished, beginReceive() continues the same reply. A short reply often completes in one step.</p>
 <p>The example is an asynchronous GET. The client is constructed with the loop and the host, the request URL is set, and beginReceive() starts the exchange. The slot ends each receive step and exits the loop when the reply is finished.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> onReplyReceived(<a class="code" href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a>&amp; client)</div>
+<div class="fragment"><div class="line">void onReplyReceived(Pt::Http::Client&amp; client)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a> progress = client.<a class="code" href="classPt_1_1Http_1_1Client.html#aa4e20e6fcca8f2a5079e2027f5b364cd">endReceive</a>();</div>
-<div class="line">    <a class="code" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply = client.<a class="code" href="classPt_1_1Http_1_1Client.html#a0c5458f9aa165ddfb1b14bb741f31bde">reply</a>();</div>
+<div class="line">    Pt::Http::MessageProgress progress = client.endReceive();</div>
+<div class="line">    Pt::Http::Reply&amp; reply = client.reply();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span>( progress.<a class="code" href="classPt_1_1Http_1_1MessageProgress.html#aad4b55a916dbc809ea6f08ad1517e8bf">header</a>() )</div>
+<div class="line">    if( progress.header() )</div>
 <div class="line">    {</div>
-<div class="line">        std::cout &lt;&lt; reply.<a class="code" href="classPt_1_1Http_1_1Reply.html#ab4defe0336ad2d11a36b460652384041">statusCode</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line">                  &lt;&lt; reply.<a class="code" href="classPt_1_1Http_1_1Reply.html#a525eec1e72f189af12fda68f8bcbe8bf">statusText</a>() &lt;&lt; std::endl;</div>
+<div class="line">        std::cout &lt;&lt; reply.statusCode() &lt;&lt; &#39; &#39;</div>
+<div class="line">                  &lt;&lt; reply.statusText() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span>( progress.<a class="code" href="classPt_1_1Http_1_1MessageProgress.html#a4f77062fc013d7c504165011b7e0cedc">body</a>() )</div>
+<div class="line">    if( progress.body() )</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">while</span>( reply.<a class="code" href="classPt_1_1Http_1_1Message.html#aae56e96375ec31f762b40b8ff136f39b">body</a>().rdbuf()-&gt;in_avail() )</div>
-<div class="line">            std::cout &lt;&lt; reply.<a class="code" href="classPt_1_1Http_1_1Message.html#aae56e96375ec31f762b40b8ff136f39b">body</a>().get();</div>
+<div class="line">        while( reply.body().rdbuf()-&gt;in_avail() )</div>
+<div class="line">            std::cout &lt;&lt; reply.body().get();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span>( progress.<a class="code" href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">finished</a>() )</div>
+<div class="line">    if( progress.finished() )</div>
 <div class="line">    {</div>
-<div class="line">        client.<a class="code" href="classPt_1_1Http_1_1Client.html#a1edfac22331fb732120df36898d0a907">loop</a>()-&gt;<a class="code" href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">exit</a>();</div>
-<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">        client.loop()-&gt;exit();</div>
+<div class="line">        return;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    client.<a class="code" href="classPt_1_1Http_1_1Client.html#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
+<div class="line">    client.beginReceive();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a> ep(<span class="stringliteral">&quot;www.example.com&quot;</span>, 80);</div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a> client(loop, ep);</div>
+<div class="line">Pt::System::MainLoop loop;</div>
+<div class="line">Pt::Net::Endpoint ep(&quot;www.example.com&quot;, 80);</div>
+<div class="line">Pt::Http::Client client(loop, ep);</div>
 <div class="line"> </div>
-<div class="line">client.<a class="code" href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">request</a>().<a class="code" href="classPt_1_1Http_1_1Request.html#a4db25e46537d49db296a9889d0f1b3bc">setUrl</a>(<span class="stringliteral">&quot;/index.html&quot;</span>);</div>
-<div class="line">client.<a class="code" href="classPt_1_1Http_1_1Client.html#a4bc940329526f68c7a18b04f230ff84f">replyReceived</a>() += Pt::slot(onReplyReceived);</div>
-<div class="line">client.<a class="code" href="classPt_1_1Http_1_1Client.html#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
-<div class="line">loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+<div class="line">client.request().setUrl(&quot;/index.html&quot;);</div>
+<div class="line">client.replyReceived() += Pt::slot(onReplyReceived);</div>
+<div class="line">client.beginReceive();</div>
+<div class="line">loop.run();</div>
 </div><!-- fragment --><dl class="section user"><dt>Pipelining</dt><dd></dd></dl>
 <p>Pipelining sends several requests before receiving the matching replies, which needs a persistent connection. Set the keep-alive header on the request, connect requestSent() as well as replyReceived(), and start with beginSend() rather than beginReceive(). The send slot calls endSend(); if that send is not finished, beginSend() continues it, and if it is finished, the next request can be filled and sent. When no further request will be pipelined, beginReceive() starts reading the replies. Identify each reply by order or by application state, because Reply does not store the request URL.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> onRequestSent(<a class="code" href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a>&amp; client)</div>
+<div class="fragment"><div class="line">void onRequestSent(Pt::Http::Client&amp; client)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a> progress = client.<a class="code" href="classPt_1_1Http_1_1Client.html#abd47018d0d4fbae7e1a15807bb728662">endSend</a>();</div>
-<div class="line">    <span class="keywordflow">if</span>( ! progress.<a class="code" href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">finished</a>() )</div>
+<div class="line">    Pt::Http::MessageProgress progress = client.endSend();</div>
+<div class="line">    if( ! progress.finished() )</div>
 <div class="line">    {</div>
-<div class="line">        client.<a class="code" href="classPt_1_1Http_1_1Client.html#a51f5e3c115973b763ec7ced957bc7c7c">beginSend</a>();</div>
-<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">        client.beginSend();</div>
+<div class="line">        return;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span>( client.<a class="code" href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">request</a>().<a class="code" href="classPt_1_1Http_1_1Request.html#aee0e062a4003fa86e1f39564e1fe7844">url</a>() == <span class="stringliteral">&quot;/cat.png&quot;</span> )</div>
+<div class="line">    if( client.request().url() == &quot;/cat.png&quot; )</div>
 <div class="line">    {</div>
-<div class="line">        client.<a class="code" href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">request</a>().<a class="code" href="classPt_1_1Http_1_1Request.html#a4db25e46537d49db296a9889d0f1b3bc">setUrl</a>(<span class="stringliteral">&quot;/dog.png&quot;</span>);</div>
-<div class="line">        client.<a class="code" href="classPt_1_1Http_1_1Client.html#a51f5e3c115973b763ec7ced957bc7c7c">beginSend</a>();</div>
-<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">        client.request().setUrl(&quot;/dog.png&quot;);</div>
+<div class="line">        client.beginSend();</div>
+<div class="line">        return;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    client.<a class="code" href="classPt_1_1Http_1_1Client.html#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
+<div class="line">    client.beginReceive();</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section user"><dt>Chunked bodies</dt><dd></dd></dl>
 <p>A chunked request body is sent with beginSend(false) until the last chunk, so the completion flag is false while more body data will be written. endSend() reports whether the current chunk has left the socket, not whether the whole request is complete. When a chunk has finished and more data remains, write it to request().body() and call beginSend(false) again. When no more chunks remain, beginReceive() finishes the request correctly. To pipeline another chunked request after this one, call beginSend(true) so the request body is terminated.</p>
@@ -210,11 +210,11 @@ Authenticator</h2>
 <p>Authenticator prepares a request after a 401 reply so the client can send it again. It is not the server-side authorizer. Store credentials per realm with setCredential(), then call authenticate() with the rejected request and the 401 reply. The method writes the authentication headers onto the request and returns true when that is possible. It returns false when no credentials are available for the realm, or when the challenge cannot be met.</p>
 <p>Basic authentication is registered by default. Other Authentication methods can be added with addAuthentication(). The authenticator does not send the request; the caller sends it again through the client.</p>
 <p>The example stores a realm credential and applies it to a request that just received 401.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Http_1_1Authenticator.html">Pt::Http::Authenticator</a> auth;</div>
-<div class="line">auth.<a class="code" href="classPt_1_1Http_1_1Authenticator.html#a80eb96a705cdbaf9537334ed985898aa">setCredential</a>(<span class="stringliteral">&quot;some-realm&quot;</span>, <a class="code" href="classPt_1_1Http_1_1Credential.html">Pt::Http::Credential</a>(<span class="stringliteral">&quot;john&quot;</span>, <span class="stringliteral">&quot;12345&quot;</span>));</div>
+<div class="fragment"><div class="line">Pt::Http::Authenticator auth;</div>
+<div class="line">auth.setCredential(&quot;some-realm&quot;, Pt::Http::Credential(&quot;john&quot;, &quot;12345&quot;));</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a>&amp; client = ...;</div>
-<div class="line"><span class="keywordtype">bool</span> isAuth = auth.<a class="code" href="classPt_1_1Http_1_1Authenticator.html#addf52f8547e4a20826317bfee1abf863">authenticate</a>(client.<a class="code" href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">request</a>(), client.<a class="code" href="classPt_1_1Http_1_1Client.html#a0c5458f9aa165ddfb1b14bb741f31bde">reply</a>());</div>
+<div class="line">Pt::Http::Client&amp; client = ...;</div>
+<div class="line">bool isAuth = auth.authenticate(client.request(), client.reply());</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Http-Page-Servers"></a>
 HTTP Servers</h1>
 <p>Server is the listening HTTP service. It binds a local Endpoint and accepts connections, but it does not implement a resource. Incoming requests are mapped by servlets. Each Servlet combines a mapping rule, a Service, and an optional Authorizer. addServlet() registers the servlet, and the first servlet that maps the request handles it.</p>
@@ -224,14 +224,14 @@ HTTP Servers</h1>
 <p>MapUrl maps one exact URL, and MapAny maps every request. A custom servlet implements onRequest() and returns true when its service should run. Several servlets may share one service, so the same resource can appear under more than one name.</p>
 <p>Authorizer is the server-side access check. It is attached to a servlet, not to the server as a whole, and the same authorizer may be shared. BasicAuthorizer implements HTTP Basic authentication and asks a derived class whether the credentials are granted. Authorization may complete immediately or through an asynchronous Authorization object.</p>
 <p>The example is the listening server and a URL mapping. The service is a BasicService for a responder type that the next sections implement, and the loop runs the server.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1Server.html">Pt::Http::Server</a> server(loop, <a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(80));</div>
+<div class="fragment"><div class="line">Pt::System::MainLoop loop;</div>
+<div class="line">Pt::Http::Server server(loop, Pt::Net::Endpoint::ip4Any(80));</div>
 <div class="line"> </div>
 <div class="line">HelloService hello;</div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> mapHello(<span class="stringliteral">&quot;/hello&quot;</span>, hello);</div>
+<div class="line">Pt::Http::MapUrl mapHello(&quot;/hello&quot;, hello);</div>
 <div class="line">server.addServlet(mapHello);</div>
 <div class="line"> </div>
-<div class="line">loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+<div class="line">loop.run();</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Http-Page-Server"></a>
 Server</h2>
 <p>Server is the listening HTTP service in the server model. It binds a local Endpoint and accepts connections, but it does not implement a resource. Incoming requests are mapped by servlets that have been added with addServlet(). The first servlet that maps the request handles it. removeServlet() unregisters a servlet.</p>
@@ -246,7 +246,7 @@ Servlet</h2>
 <p>setShutdown() marks the servlet so it stops taking new work, and isIdle() is true when no exchange is using it. detach() unregisters it from the server that holds it.</p>
 <p>The example is the usual mapping: one URL, one service. The optional authorizer is passed as a third argument.</p>
 <div class="fragment"><div class="line">HelloService hello;</div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> mapHello(<span class="stringliteral">&quot;/hello&quot;</span>, hello);</div>
+<div class="line">Pt::Http::MapUrl mapHello(&quot;/hello&quot;, hello);</div>
 <div class="line">server.addServlet(mapHello);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Http-Page-Service"></a>
 Service</h2>
@@ -254,42 +254,42 @@ Service</h2>
 <p>BasicService is that factory for a single responder type, using an allocator that defaults to new and delete. Use a custom Service when the responder type depends on the request headers, or when responders are pooled.</p>
 <p>upgradeRequested() is emitted when a request asks to upgrade the connection. The signal provides the accepted IOStream and the value of the Upgrade header. That stream is the upgraded connection, not the HTTP message body.</p>
 <p>The example is the usual factory: a BasicService for a responder type. The equivalent hand-written service implements onGetResponder() and onReleaseResponder() in the same way.</p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService&lt;HelloResponder&gt;</a> HelloService;</div>
+<div class="fragment"><div class="line">typedef Pt::Http::BasicService&lt;HelloResponder&gt; HelloService;</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Http-Page-Responder"></a>
 Responder</h2>
 <p>Responder is the per-exchange handler in the server model. A Service creates it for a mapped request and releases it when the reply has been sent. Derive from it and implement the four callbacks, which the server calls in order.</p>
 <p>onBeginRequest() runs when the request header is available, so the responder can inspect fields and prepare the reply. onReadRequest() runs for each chunk of the request body, and may be called more than once. onBeginReply() runs when the request is complete and the reply should start. onWriteReply() runs when a previous Reply::beginSend(false) needs another chunk of the reply body, which is how a large reply is written in chunked encoding.</p>
 <p>Finish the reply with Reply::beginSend() and the completion flag set to true. That call may be made from an earlier callback, in which case the remaining callbacks are skipped and the rest of the request is ignored. service() is the service that created this responder.</p>
 <p>The example is a responder that ignores the request body and writes a fixed reply. beginSend(true) completes the reply in onBeginReply(), so onWriteReply() stays empty.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>HelloResponder : <span class="keyword">public</span> <a class="code" href="classPt_1_1Http_1_1Responder.html">Pt::Http::Responder</a></div>
+<div class="fragment"><div class="line">class HelloResponder : public Pt::Http::Responder</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        <span class="keyword">explicit</span> HelloResponder(<a class="code" href="classPt_1_1Http_1_1Service.html">Pt::Http::Service</a>&amp; s)</div>
-<div class="line">        : <a class="code" href="namespacePt.html">Pt</a>::Http::Responder(s)</div>
+<div class="line">    public:</div>
+<div class="line">        explicit HelloResponder(Pt::Http::Service&amp; s)</div>
+<div class="line">        : Pt::Http::Responder(s)</div>
 <div class="line">        {}</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">protected</span>:</div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1Responder.html#ac42e9083a591870e368f493985579698">onBeginRequest</a>(<a class="code" href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a>&amp; request,</div>
-<div class="line">                                    <a class="code" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply,</div>
-<div class="line">                                    <a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop)</div>
+<div class="line">    protected:</div>
+<div class="line">        virtual void onBeginRequest(Pt::Http::Request&amp; request,</div>
+<div class="line">                                    Pt::Http::Reply&amp; reply,</div>
+<div class="line">                                    Pt::System::EventLoop&amp; loop)</div>
 <div class="line">        {}</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1Responder.html#a6989d7f431a372e1c9c81e1f2fff6722">onReadRequest</a>(<a class="code" href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a>&amp; request,</div>
-<div class="line">                                   <a class="code" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply,</div>
-<div class="line">                                   <a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop)</div>
+<div class="line">        virtual void onReadRequest(Pt::Http::Request&amp; request,</div>
+<div class="line">                                   Pt::Http::Reply&amp; reply,</div>
+<div class="line">                                   Pt::System::EventLoop&amp; loop)</div>
 <div class="line">        {}</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1Responder.html#aa6c918c8e26b98c18fb24a4b252ecf3e">onBeginReply</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a>&amp; request,</div>
-<div class="line">                                  <a class="code" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply,</div>
-<div class="line">                                  <a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop)</div>
+<div class="line">        virtual void onBeginReply(const Pt::Http::Request&amp; request,</div>
+<div class="line">                                  Pt::Http::Reply&amp; reply,</div>
+<div class="line">                                  Pt::System::EventLoop&amp; loop)</div>
 <div class="line">        {</div>
-<div class="line">            reply.<a class="code" href="classPt_1_1Http_1_1Message.html#aae56e96375ec31f762b40b8ff136f39b">body</a>() &lt;&lt; <span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
-<div class="line">            reply.<a class="code" href="classPt_1_1Http_1_1Reply.html#ae7e1db76e3a5162a4cf8c80b8a9289d8">beginSend</a>(<span class="keyword">true</span>);</div>
+<div class="line">            reply.body() &lt;&lt; &quot;Hello World!&quot;;</div>
+<div class="line">            reply.beginSend(true);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1Responder.html#a093bd5e0d28dcfba374d4843c1cf7f98">onWriteReply</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a>&amp; request,</div>
-<div class="line">                                  <a class="code" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply,</div>
-<div class="line">                                  <a class="code" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop)</div>
+<div class="line">        virtual void onWriteReply(const Pt::Http::Request&amp; request,</div>
+<div class="line">                                  Pt::Http::Reply&amp; reply,</div>
+<div class="line">                                  Pt::System::EventLoop&amp; loop)</div>
 <div class="line">        {}</div>
 <div class="line">};</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Http-Page-Authorizer"></a>
@@ -298,28 +298,28 @@ Authorizer</h2>
 <p>beginAuthorize() starts the check for a request and reply. When the result is already known, <em>granted</em> is set and a null pointer is returned. When the check needs I/O, an Authorization object is returned; endAuthorization() completes it, and cancelAuthorization() aborts it. The authorizer releases that object in onReleaseAuthorization().</p>
 <p>BasicAuthorizer implements HTTP Basic authentication. A derived class implements onAuthorizeCredentials() and either sets <em>granted</em> immediately or returns an Authorization for later completion. BasicUserListAuthorizer is that check against an in-memory user list.</p>
 <p>The example grants or denies access from credentials in one step, so it returns a null pointer and does not need to release an authorization object.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>AccessAuthorizer : <span class="keyword">public</span> <a class="code" href="classPt_1_1Http_1_1BasicAuthorizer.html">Pt::Http::BasicAuthorizer</a></div>
+<div class="fragment"><div class="line">class AccessAuthorizer : public Pt::Http::BasicAuthorizer</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        <span class="keyword">explicit</span> AccessAuthorizer(<span class="keyword">const</span> std::string&amp; realm)</div>
-<div class="line">        : <a class="code" href="namespacePt.html">Pt</a>::Http::BasicAuthorizer(realm)</div>
+<div class="line">    public:</div>
+<div class="line">        explicit AccessAuthorizer(const std::string&amp; realm)</div>
+<div class="line">        : Pt::Http::BasicAuthorizer(realm)</div>
 <div class="line">        {}</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">protected</span>:</div>
-<div class="line">        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Http_1_1Authorization.html">Pt::Http::Authorization</a>* <a class="code" href="classPt_1_1Http_1_1BasicAuthorizer.html#a9de9824c2de94f2d772f2b971852a19c">onAuthorizeCredentials</a>(</div>
-<div class="line">            <span class="keyword">const</span> <a class="code" href="classPt_1_1Http_1_1Credential.html">Pt::Http::Credential</a>&amp; cred, <span class="keywordtype">bool</span>&amp; granted)</div>
+<div class="line">    protected:</div>
+<div class="line">        virtual Pt::Http::Authorization* onAuthorizeCredentials(</div>
+<div class="line">            const Pt::Http::Credential&amp; cred, bool&amp; granted)</div>
 <div class="line">        {</div>
-<div class="line">            granted = checkCredentials(cred.<a class="code" href="classPt_1_1Http_1_1Credential.html#abc21a7799abcb5e966cde5c593de83f0">user</a>(), cred.<a class="code" href="classPt_1_1Http_1_1Credential.html#a4f84bd1e2c90d6acfb4d6c88a101bf7e">password</a>());</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line">            granted = checkCredentials(cred.user(), cred.password());</div>
+<div class="line">            return 0;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Http_1_1Authorizer.html#ae6779877e385e36d13cab075b83bc047">onReleaseAuthorization</a>(<a class="code" href="classPt_1_1Http_1_1Authorization.html">Pt::Http::Authorization</a>* auth)</div>
+<div class="line">        virtual void onReleaseAuthorization(Pt::Http::Authorization* auth)</div>
 <div class="line">        {}</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line">AccessAuthorizer auth(<span class="stringliteral">&quot;some-realm&quot;</span>);</div>
+<div class="line">AccessAuthorizer auth(&quot;some-realm&quot;);</div>
 <div class="line">HelloService hello;</div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> mapHello(<span class="stringliteral">&quot;/hello&quot;</span>, hello, auth);</div>
+<div class="line">Pt::Http::MapUrl mapHello(&quot;/hello&quot;, hello, auth);</div>
 <div class="line">server.addServlet(mapHello);</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Http-Page-WebSocket"></a>
 WebSocket</h1>
@@ -329,19 +329,19 @@ WebSocket</h1>
 <p>IOStream is the upgraded connection, not the HTTP message body. Service::upgradeRequested() reports that stream and the Upgrade header value to a service that handles upgrades itself.</p>
 <p>Ping and pong are control frames. sendPingFrame() writes a ping, and after a ping is received sendPongFrame() writes the matching pong. Text and binary frames are the data payload. Unknown is the unset frame type.</p>
 <p>The example is a client handshake. The slot completes the connect and then writes through the inherited device operation.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> onConnected(<a class="code" href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a>&amp; socket)</div>
+<div class="fragment"><div class="line">void onConnected(Pt::Http::WebSocket&amp; socket)</div>
 <div class="line">{</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1Http_1_1WebSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a>();</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1Http_1_1WebSocket.html#a17af87ac91eb8f408bfcad6eafe0f0a2">setSendFrame</a>(<a class="code" href="classPt_1_1Http_1_1WebSocket.html#a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocket::Text</a>);</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">beginWrite</a>(<span class="stringliteral">&quot;hello&quot;</span>, 5);</div>
+<div class="line">    socket.endConnect();</div>
+<div class="line">    socket.setSendFrame(Pt::Http::WebSocket::Text);</div>
+<div class="line">    socket.beginWrite(&quot;hello&quot;, 5);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
-<div class="line"><a class="code" href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a> socket;</div>
-<div class="line">socket.<a class="code" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a>(loop);</div>
-<div class="line">socket.<a class="code" href="classPt_1_1Http_1_1WebSocket.html#a432323242eb1dd73661df89cc67869db">connected</a>() += Pt::slot(onConnected);</div>
-<div class="line">socket.<a class="code" href="classPt_1_1Http_1_1WebSocket.html#a98898a52a5589b791620617c21b8d8e9">beginConnect</a>(<span class="stringliteral">&quot;ws://localhost/ws&quot;</span>);</div>
-<div class="line">loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+<div class="line">Pt::System::MainLoop loop;</div>
+<div class="line">Pt::Http::WebSocket socket;</div>
+<div class="line">socket.setActive(loop);</div>
+<div class="line">socket.connected() += Pt::slot(onConnected);</div>
+<div class="line">socket.beginConnect(&quot;ws://localhost/ws&quot;);</div>
+<div class="line">loop.run();</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Http-Page-WebSocketClass"></a>
 WebSocket</h2>
 <p>WebSocket is the IODevice that follows a WebSocket handshake. After the handshake the same TCP connection carries framed messages instead of HTTP request and reply messages. read() and write() transfer payload bytes. The frame type is separate: setSendFrame() selects the opcode for the next send, and receiveFrame() reports the opcode of the frame that was last received.</p>
@@ -349,61 +349,6 @@ WebSocket</h2>
 <p>Ping and pong are control frames. sendPingFrame() writes a ping, and after a ping is received sendPongFrame() writes the matching pong. Text and binary are the data payload. Unknown is the unset frame type. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Authenticator_html_a80eb96a705cdbaf9537334ed985898aa"><div class="ttname"><a href="classPt_1_1Http_1_1Authenticator.html#a80eb96a705cdbaf9537334ed985898aa">Pt::Http::Authenticator::setCredential</a></div><div class="ttdeci">void setCredential(const std::string &amp;realm, const Credential &amp;cred)</div><div class="ttdoc">Set credential for a realm.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a0f6819a4971e612ac6d0cb54c4d41306"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">Pt::System::IODevice::beginWrite</a></div><div class="ttdeci">void beginWrite(const char *buffer, std::size_t n)</div><div class="ttdoc">Begins to write data.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_aec4a4eb55d027f2e26330fbab46ebf54"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#aec4a4eb55d027f2e26330fbab46ebf54">Pt::Http::Client::request</a></div><div class="ttdeci">Request &amp; request()</div><div class="ttdoc">Returns the request to send.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_aad4b55a916dbc809ea6f08ad1517e8bf"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#aad4b55a916dbc809ea6f08ad1517e8bf">Pt::Http::MessageProgress::header</a></div><div class="ttdeci">bool header() const</div><div class="ttdoc">Returns true if the header was processed.</div><div class="ttdef"><b>Definition:</b> Message.h:358</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Responder_html_a6989d7f431a372e1c9c81e1f2fff6722"><div class="ttname"><a href="classPt_1_1Http_1_1Responder.html#a6989d7f431a372e1c9c81e1f2fff6722">Pt::Http::Responder::onReadRequest</a></div><div class="ttdeci">virtual void onReadRequest(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</div><div class="ttdoc">Called for each chunk of the request body.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Request_html"><div class="ttname"><a href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a></div><div class="ttdoc">HTTP request message.</div><div class="ttdef"><b>Definition:</b> Request.h:65</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1MapUrl_html"><div class="ttname"><a href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a></div><div class="ttdoc">Maps requests to a service by URL.</div><div class="ttdef"><b>Definition:</b> Servlet.h:147</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1BasicService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService</a></div><div class="ttdoc">Basic HTTP service implementation.</div><div class="ttdef"><b>Definition:</b> Service.h:135</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Reply_html_ae7e1db76e3a5162a4cf8c80b8a9289d8"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html#ae7e1db76e3a5162a4cf8c80b8a9289d8">Pt::Http::Reply::beginSend</a></div><div class="ttdeci">void beginSend(bool finish=true)</div><div class="ttdoc">Begins sending the reply.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a98898a52a5589b791620617c21b8d8e9"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html#a98898a52a5589b791620617c21b8d8e9">Pt::Http::WebSocket::beginConnect</a></div><div class="ttdeci">void beginConnect(const std::string &amp;url, const std::string &amp;origin=std::string(), bool keepAlive=true)</div><div class="ttdoc">Begins a client handshake to url.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Authorization_html"><div class="ttname"><a href="classPt_1_1Http_1_1Authorization.html">Pt::Http::Authorization</a></div><div class="ttdoc">Asynchronous HTTP authorization operation.</div><div class="ttdef"><b>Definition:</b> Authorizer.h:52</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Reply_html"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a></div><div class="ttdoc">HTTP reply message.</div><div class="ttdef"><b>Definition:</b> Reply.h:64</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_a0c5458f9aa165ddfb1b14bb741f31bde"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#a0c5458f9aa165ddfb1b14bb741f31bde">Pt::Http::Client::reply</a></div><div class="ttdeci">Reply &amp; reply()</div><div class="ttdoc">Returns the received reply.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_abd47018d0d4fbae7e1a15807bb728662"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#abd47018d0d4fbae7e1a15807bb728662">Pt::Http::Client::endSend</a></div><div class="ttdeci">MessageProgress endSend()</div><div class="ttdoc">End sending the request.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Http::WebSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Completes the client handshake.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Authorizer_html_ae6779877e385e36d13cab075b83bc047"><div class="ttname"><a href="classPt_1_1Http_1_1Authorizer.html#ae6779877e385e36d13cab075b83bc047">Pt::Http::Authorizer::onReleaseAuthorization</a></div><div class="ttdeci">virtual void onReleaseAuthorization(Authorization *auth)=0</div><div class="ttdoc">Release authorization operation.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Responder_html_ac42e9083a591870e368f493985579698"><div class="ttname"><a href="classPt_1_1Http_1_1Responder.html#ac42e9083a591870e368f493985579698">Pt::Http::Responder::onBeginRequest</a></div><div class="ttdeci">virtual void onBeginRequest(Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</div><div class="ttdoc">Called when the request header was received.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Service_html"><div class="ttname"><a href="classPt_1_1Http_1_1Service.html">Pt::Http::Service</a></div><div class="ttdoc">Factory for request responders.</div><div class="ttdef"><b>Definition:</b> Service.h:77</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Request_html_aee0e062a4003fa86e1f39564e1fe7844"><div class="ttname"><a href="classPt_1_1Http_1_1Request.html#aee0e062a4003fa86e1f39564e1fe7844">Pt::Http::Request::url</a></div><div class="ttdeci">const std::string &amp; url() const</div><div class="ttdoc">Returns the HTTP request URL.</div><div class="ttdef"><b>Definition:</b> Request.h:94</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Responder_html_a093bd5e0d28dcfba374d4843c1cf7f98"><div class="ttname"><a href="classPt_1_1Http_1_1Responder.html#a093bd5e0d28dcfba374d4843c1cf7f98">Pt::Http::Responder::onWriteReply</a></div><div class="ttdeci">virtual void onWriteReply(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</div><div class="ttdoc">Write responding reply.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Authenticator_html"><div class="ttname"><a href="classPt_1_1Http_1_1Authenticator.html">Pt::Http::Authenticator</a></div><div class="ttdoc">Client-side authentication.</div><div class="ttdef"><b>Definition:</b> Authenticator.h:152</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_a4f77062fc013d7c504165011b7e0cedc"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#a4f77062fc013d7c504165011b7e0cedc">Pt::Http::MessageProgress::body</a></div><div class="ttdeci">bool body() const</div><div class="ttdoc">Returns true if the body was processed.</div><div class="ttdef"><b>Definition:</b> Message.h:363</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Message_html_aae56e96375ec31f762b40b8ff136f39b"><div class="ttname"><a href="classPt_1_1Http_1_1Message.html#aae56e96375ec31f762b40b8ff136f39b">Pt::Http::Message::body</a></div><div class="ttdeci">std::iostream &amp; body()</div><div class="ttdoc">Returns the body of the message.</div><div class="ttdef"><b>Definition:</b> Message.h:480</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a17af87ac91eb8f408bfcad6eafe0f0a2"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html#a17af87ac91eb8f408bfcad6eafe0f0a2">Pt::Http::WebSocket::setSendFrame</a></div><div class="ttdeci">void setSendFrame(Frame m)</div><div class="ttdoc">Sets the opcode for the next send.</div><div class="ttdef"><b>Definition:</b> WebSocket.h:123</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_a91151db77a69a3a7a4c3ae3cabd304b7"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#a91151db77a69a3a7a4c3ae3cabd304b7">Pt::Http::Client::beginReceive</a></div><div class="ttdeci">void beginReceive()</div><div class="ttdoc">Begin receiving the reply.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a></div><div class="ttdoc">Progress of an asynchronous HTTP send or receive.</div><div class="ttdef"><b>Definition:</b> Message.h:337</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_aebaed0be88cbcf45f1985b819c9dabb7"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">Pt::Http::MessageProgress::finished</a></div><div class="ttdeci">bool finished() const</div><div class="ttdoc">Returns true if message is complete.</div><div class="ttdef"><b>Definition:</b> Message.h:373</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Responder_html"><div class="ttname"><a href="classPt_1_1Http_1_1Responder.html">Pt::Http::Responder</a></div><div class="ttdoc">Handles one HTTP request and writes the reply.</div><div class="ttdef"><b>Definition:</b> Responder.h:109</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a358d2e2397ca11ccd17553e3c40e7901"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a358d2e2397ca11ccd17553e3c40e7901">Pt::System::EventLoop::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">Stops the loop.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:77</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Reply_html_a525eec1e72f189af12fda68f8bcbe8bf"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html#a525eec1e72f189af12fda68f8bcbe8bf">Pt::Http::Reply::statusText</a></div><div class="ttdeci">const std::string &amp; statusText() const</div><div class="ttdoc">Returns the HTTP status text.</div><div class="ttdef"><b>Definition:</b> Reply.h:111</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Server_html"><div class="ttname"><a href="classPt_1_1Http_1_1Server.html">Pt::Http::Server</a></div><div class="ttdoc">Listening HTTP server.</div><div class="ttdef"><b>Definition:</b> Server.h:83</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a></div><div class="ttdoc">HTTP user agent.</div><div class="ttdef"><b>Definition:</b> Client.h:189</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a></div><div class="ttdoc">Event loop of a thread or process.</div><div class="ttdef"><b>Definition:</b> EventLoop.h:83</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_aa4e20e6fcca8f2a5079e2027f5b364cd"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#aa4e20e6fcca8f2a5079e2027f5b364cd">Pt::Http::Client::endReceive</a></div><div class="ttdeci">MessageProgress endReceive()</div><div class="ttdoc">End receiving the reply.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Request_html_a4db25e46537d49db296a9889d0f1b3bc"><div class="ttname"><a href="classPt_1_1Http_1_1Request.html#a4db25e46537d49db296a9889d0f1b3bc">Pt::Http::Request::setUrl</a></div><div class="ttdeci">void setUrl(const std::string &amp;u)</div><div class="ttdoc">Sets the request URL.</div><div class="ttdef"><b>Definition:</b> Request.h:99</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Credential_html"><div class="ttname"><a href="classPt_1_1Http_1_1Credential.html">Pt::Http::Credential</a></div><div class="ttdoc">Credentials for authorization and authentication.</div><div class="ttdef"><b>Definition:</b> Credentials.h:45</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Credential_html_abc21a7799abcb5e966cde5c593de83f0"><div class="ttname"><a href="classPt_1_1Http_1_1Credential.html#abc21a7799abcb5e966cde5c593de83f0">Pt::Http::Credential::user</a></div><div class="ttdeci">std::string &amp; user()</div><div class="ttdoc">Returns the user name.</div><div class="ttdef"><b>Definition:</b> Credentials.h:84</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html#a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocket::Text</a></div><div class="ttdeci">@ Text</div><div class="ttdoc">Text data frame.</div><div class="ttdef"><b>Definition:</b> WebSocket.h:79</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a432323242eb1dd73661df89cc67869db"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html#a432323242eb1dd73661df89cc67869db">Pt::Http::WebSocket::connected</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal emitted when the handshake finishes.</div><div class="ttdef"><b>Definition:</b> WebSocket.h:110</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a></div><div class="ttdoc">Framed WebSocket I/O device.</div><div class="ttdef"><b>Definition:</b> WebSocket.h:72</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Credential_html_a4f84bd1e2c90d6acfb4d6c88a101bf7e"><div class="ttname"><a href="classPt_1_1Http_1_1Credential.html#a4f84bd1e2c90d6acfb4d6c88a101bf7e">Pt::Http::Credential::password</a></div><div class="ttdeci">std::string &amp; password()</div><div class="ttdoc">Returns the password.</div><div class="ttdef"><b>Definition:</b> Credentials.h:94</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_a4bc940329526f68c7a18b04f230ff84f"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#a4bc940329526f68c7a18b04f230ff84f">Pt::Http::Client::replyReceived</a></div><div class="ttdeci">Signal&lt; Client &amp; &gt; &amp; replyReceived()</div><div class="ttdoc">Signals that a part of the reply was received.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Authenticator_html_addf52f8547e4a20826317bfee1abf863"><div class="ttname"><a href="classPt_1_1Http_1_1Authenticator.html#addf52f8547e4a20826317bfee1abf863">Pt::Http::Authenticator::authenticate</a></div><div class="ttdeci">bool authenticate(Request &amp;request, const Reply &amp;reply)</div><div class="ttdoc">Authenticate a request in response to a reply.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_a1edfac22331fb732120df36898d0a907"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#a1edfac22331fb732120df36898d0a907">Pt::Http::Client::loop</a></div><div class="ttdeci">System::EventLoop * loop() const</div><div class="ttdoc">Returns the used event loop.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1BasicAuthorizer_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicAuthorizer.html">Pt::Http::BasicAuthorizer</a></div><div class="ttdoc">Server-side basic HTTP authorization.</div><div class="ttdef"><b>Definition:</b> Authorizer.h:194</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:51</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html_a51f5e3c115973b763ec7ced957bc7c7c"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html#a51f5e3c115973b763ec7ced957bc7c7c">Pt::Http::Client::beginSend</a></div><div class="ttdeci">void beginSend(bool finished=true)</div><div class="ttdoc">Begins sending the request.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a3e2a1ad7afd80765b91aaa1dac44dfad"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a></div><div class="ttdeci">static Endpoint ip4Any(unsigned short port)</div><div class="ttdoc">Creates the IPv4 any-address for port.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Selectable_html_a931676e60334ab733b848fa90dcb6dda"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">Pt::System::Selectable::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;parent)</div><div class="ttdoc">Sets the parent loop, so that operations can be run.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Responder_html_aa6c918c8e26b98c18fb24a4b252ecf3e"><div class="ttname"><a href="classPt_1_1Http_1_1Responder.html#aa6c918c8e26b98c18fb24a4b252ecf3e">Pt::Http::Responder::onBeginReply</a></div><div class="ttdeci">virtual void onBeginReply(const Request &amp;request, Reply &amp;reply, System::EventLoop &amp;loop)=0</div><div class="ttdoc">Called when request is complete.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Reply_html_ab4defe0336ad2d11a36b460652384041"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html#ab4defe0336ad2d11a36b460652384041">Pt::Http::Reply::statusCode</a></div><div class="ttdeci">unsigned statusCode() const</div><div class="ttdoc">Returns the HTTP status code.</div><div class="ttdef"><b>Definition:</b> Reply.h:107</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1BasicAuthorizer_html_a9de9824c2de94f2d772f2b971852a19c"><div class="ttname"><a href="classPt_1_1Http_1_1BasicAuthorizer.html#a9de9824c2de94f2d772f2b971852a19c">Pt::Http::BasicAuthorizer::onAuthorizeCredentials</a></div><div class="ttdeci">virtual Authorization * onAuthorizeCredentials(const Credential &amp;cred, bool &amp;granted)=0</div><div class="ttdoc">Begin authorization using client credentials.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

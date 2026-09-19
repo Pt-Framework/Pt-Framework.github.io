@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ZIStream Class Reference</div>  </div>
+<div class="title">ZIStream Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-ZStreams.html">Zlib Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ZStream_8h_source.html">Pt/ZStream.h</a>&gt;</code></p>
 
-<p>Input stream for zlib compression.  
-</p>
+<p>Input stream that inflates zlib or gzip data.  
+ <a href="classPt_1_1ZIStream.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1BasicIStream.html">BasicIStream&lt; char &gt;</a>.</p>
 <table class="memberdecls">
@@ -156,7 +156,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aec28ff80bde4f62110820a952c72db45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the buffer. <br /></td></tr>
 <tr class="separator:aec28ff80bde4f62110820a952c72db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ZIStream owns a ZBuffer and reads uncompressed bytes from a compressed <code>std::istream</code>. Construct it with a format, or with a target stream and a format. attach(), detach(), reset() and finish() forward to the buffer. zBuffer() returns the owned buffer. The target is not owned. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac06710e909bf4323e3b3c5dda9d3dec4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac06710e909bf4323e3b3c5dda9d3dec4">&#9670;&nbsp;</a></span>peeksome()</h2>
 

@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">SizeI Class Reference</div>  </div>
+<div class="title">SizeI Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Size_8h_source.html">Pt/Gfx/Size.h</a>&gt;</code></p>
 
-<p>Size with integer width and height.  
-</p>
+<p>Integer width and height.  
+ <a href="classPt_1_1Gfx_1_1SizeI.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,7 +107,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:abfb4b24d761aaffc4d08662448d4211f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy with width and height swapped. <br /></td></tr>
 <tr class="separator:abfb4b24d761aaffc4d08662448d4211f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>SizeI is the integer counterpart of Size. Image width and height, and rounded drawing sizes, use this type. Widen it to Size when a painter needs a floating-point extent.</p>
+<p>Arithmetic matches Size but uses Int. There is no rounding API on this type: rounding is how a Size becomes a SizeI. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

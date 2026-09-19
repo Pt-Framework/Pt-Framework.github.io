@@ -139,16 +139,6 @@
 <div class="line">{</div>
 <div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;numeric value is out of range: &quot;</span> &lt;&lt; l &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>The byte order conversion API consists of two sets of functions. <a class="el" href="group__Pt-Convert.html#ga630b14e1adebb2ab0e59ea1af2f7c3ac" title="Swaps the byteorder of an int32_t.">Pt::swab()</a> swaps the byte order of a type by bytewise copying, and is overloaded for all fixed-size integer types such as <a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62" title="Unsigned 32-bit integer type.">Pt::uint32_t</a>:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Pt/Byteorder.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> value = ...;</div>
-<div class="line"><a class="code" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> swapped = <a class="code" href="group__Pt-Convert.html#ga630b14e1adebb2ab0e59ea1af2f7c3ac">Pt::swab</a>(value);</div>
-</div><!-- fragment --><p>A second set of functions can be used to convert from a specific external byte order to the native host byte order: <a class="el" href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c" title="Converts a value from big-endian to host-byteorder.">Pt::beToHost()</a>, <a class="el" href="group__Pt-Convert.html#gab2008e7b981ad12830b00e2115b3d063" title="Converts a value from the host-byteorder to big-endian.">Pt::hostToBe()</a>, <a class="el" href="group__Pt-Convert.html#gae052a9e568c7a59117411e25f191ef49" title="Converts a value from little-endian to host-byteorder.">Pt::leToHost()</a> and <a class="el" href="group__Pt-Convert.html#ga1edda5ac54b0a328707546e32d8af2c5" title="Converts a value from host-byteorder to little-endian.">Pt::hostToLe()</a>. For example <a class="el" href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c" title="Converts a value from big-endian to host-byteorder.">Pt::beToHost()</a> converts from big-endian to the host byte order:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Pt/Byteorder.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> beVal = ...;</div>
-<div class="line"><a class="code" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> value = <a class="code" href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c">Pt::beToHost</a>(beVal);</div>
 </div><!-- fragment --> <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -158,38 +148,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga630b14e1adebb2ab0e59ea1af2f7c3ac"><td class="memItemLeft" align="right" valign="top"><a id="ga630b14e1adebb2ab0e59ea1af2f7c3ac"></a>
-<a class="el" href="group__Pt-IntTypes.html#gaef44329758059c91c76d334e8fc09700">int8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga630b14e1adebb2ab0e59ea1af2f7c3ac">swab</a> (<a class="el" href="group__Pt-IntTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> value)</td></tr>
-<tr class="memdesc:ga630b14e1adebb2ab0e59ea1af2f7c3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the byteorder of an int32_t. <br /></td></tr>
-<tr class="separator:ga630b14e1adebb2ab0e59ea1af2f7c3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1d7b5495153de1da275cb5d65c80fc6b"><td class="memItemLeft" align="right" valign="top"><a id="ga1d7b5495153de1da275cb5d65c80fc6b"></a>
-<a class="el" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga1d7b5495153de1da275cb5d65c80fc6b">swab</a> (<a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">uint32_t</a> value)</td></tr>
-<tr class="memdesc:ga1d7b5495153de1da275cb5d65c80fc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the byteorder of a uint32_t. <br /></td></tr>
-<tr class="separator:ga1d7b5495153de1da275cb5d65c80fc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03063b48cbfb1477cb08c345be8aee6f"><td class="memItemLeft" align="right" valign="top"><a id="ga03063b48cbfb1477cb08c345be8aee6f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga03063b48cbfb1477cb08c345be8aee6f">isBigEndian</a> ()</td></tr>
-<tr class="memdesc:ga03063b48cbfb1477cb08c345be8aee6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true, if the cpu is big-endian (high-byte first). <br /></td></tr>
-<tr class="separator:ga03063b48cbfb1477cb08c345be8aee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga26e842f5bdd6e6a7bd50716fa480c774"><td class="memItemLeft" align="right" valign="top"><a id="ga26e842f5bdd6e6a7bd50716fa480c774"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga26e842f5bdd6e6a7bd50716fa480c774">isLittleEndian</a> ()</td></tr>
-<tr class="memdesc:ga26e842f5bdd6e6a7bd50716fa480c774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true, if the cpu is little-endian (low-byte first). <br /></td></tr>
-<tr class="separator:ga26e842f5bdd6e6a7bd50716fa480c774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1edda5ac54b0a328707546e32d8af2c5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga1edda5ac54b0a328707546e32d8af2c5"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga1edda5ac54b0a328707546e32d8af2c5">hostToLe</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:ga1edda5ac54b0a328707546e32d8af2c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value from host-byteorder to little-endian.  <a href="group__Pt-Convert.html#ga1edda5ac54b0a328707546e32d8af2c5">More...</a><br /></td></tr>
-<tr class="separator:ga1edda5ac54b0a328707546e32d8af2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae052a9e568c7a59117411e25f191ef49"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gae052a9e568c7a59117411e25f191ef49"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#gae052a9e568c7a59117411e25f191ef49">leToHost</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:gae052a9e568c7a59117411e25f191ef49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value from little-endian to host-byteorder.  <a href="group__Pt-Convert.html#gae052a9e568c7a59117411e25f191ef49">More...</a><br /></td></tr>
-<tr class="separator:gae052a9e568c7a59117411e25f191ef49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab2008e7b981ad12830b00e2115b3d063"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gab2008e7b981ad12830b00e2115b3d063"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#gab2008e7b981ad12830b00e2115b3d063">hostToBe</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:gab2008e7b981ad12830b00e2115b3d063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value from the host-byteorder to big-endian.  <a href="group__Pt-Convert.html#gab2008e7b981ad12830b00e2115b3d063">More...</a><br /></td></tr>
-<tr class="separator:gab2008e7b981ad12830b00e2115b3d063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga83bc0daa86a89543b86dbae165ab9a4c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga83bc0daa86a89543b86dbae165ab9a4c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c">beToHost</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:ga83bc0daa86a89543b86dbae165ab9a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value from big-endian to host-byteorder.  <a href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c">More...</a><br /></td></tr>
-<tr class="separator:ga83bc0daa86a89543b86dbae165ab9a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7c5b9a08aceaff4a18ad274153c02c1a"><td class="memTemplParams" colspan="2"><a id="ga7c5b9a08aceaff4a18ad274153c02c1a"></a>
 template&lt;typename R , typename T &gt; </td></tr>
 <tr class="memitem:ga7c5b9a08aceaff4a18ad274153c02c1a"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pt-Convert.html#ga7c5b9a08aceaff4a18ad274153c02c1a">narrow</a> (T from)</td></tr>
@@ -271,88 +229,8 @@ template&lt;typename InIterT , typename T &gt; </td></tr>
 <tr class="memdesc:ga7198137bf531df6395e35b2eb5a736b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a floating point value. <br /></td></tr>
 <tr class="separator:ga7198137bf531df6395e35b2eb5a736b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga1edda5ac54b0a328707546e32d8af2c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1edda5ac54b0a328707546e32d8af2c5">&#9670;&nbsp;</a></span>hostToLe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Pt::hostToLe </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function does nothing on a LE system, but calls <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> on a BE system. The generic <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> function expects the type passed in to be an integer type and so does this function. Overloading swab can remove this restriction and may improve performance for custom types. </p>
-
-</div>
-</div>
-<a id="gae052a9e568c7a59117411e25f191ef49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae052a9e568c7a59117411e25f191ef49">&#9670;&nbsp;</a></span>leToHost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Pt::leToHost </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function does nothing on a LE system, but calls <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> on a BE system. The generic <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> function expects the type passed in to be an integer type and so does this function. Overloading swab can remove this restriction and may improve performance for custom types. </p>
-
-</div>
-</div>
-<a id="gab2008e7b981ad12830b00e2115b3d063"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab2008e7b981ad12830b00e2115b3d063">&#9670;&nbsp;</a></span>hostToBe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Pt::hostToBe </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function does nothing on a BE system, but calls <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> on a LE system. The generic <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> function expects the type passed in to be an integer type and so does this function. Overloading swab can remove this restriction and may improve performance for custom types. </p>
-
-</div>
-</div>
-<a id="ga83bc0daa86a89543b86dbae165ab9a4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga83bc0daa86a89543b86dbae165ab9a4c">&#9670;&nbsp;</a></span>beToHost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Pt::beToHost </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function does nothing on a BE system, but calls <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> on a LE system. The generic <a class="el" href="classPt_1_1String.html#a17215a58b2d53282c8ffe4be2e344a51" title="Swaps two strings.">swap()</a> function expects the type passed in to be an integer type and so does this function. Overloading swab can remove this restriction and may improve performance for custom types. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <div class="ttc" id="aclassPt_1_1ConversionError_html"><div class="ttname"><a href="classPt_1_1ConversionError.html">Pt::ConversionError</a></div><div class="ttdoc">Indicates a failed conversion.</div><div class="ttdef"><b>Definition:</b> ConversionError.h:46</div></div>
-<div class="ttc" id="agroup__Pt-Convert_html_ga83bc0daa86a89543b86dbae165ab9a4c"><div class="ttname"><a href="group__Pt-Convert.html#ga83bc0daa86a89543b86dbae165ab9a4c">Pt::beToHost</a></div><div class="ttdeci">T beToHost(const T &amp;value)</div><div class="ttdoc">Converts a value from big-endian to host-byteorder.</div><div class="ttdef"><b>Definition:</b> Byteorder.h:254</div></div>
-<div class="ttc" id="agroup__Pt-Convert_html_ga630b14e1adebb2ab0e59ea1af2f7c3ac"><div class="ttname"><a href="group__Pt-Convert.html#ga630b14e1adebb2ab0e59ea1af2f7c3ac">Pt::swab</a></div><div class="ttdeci">int8_t swab(int8_t value)</div><div class="ttdoc">Swaps the byteorder of an int32_t.</div><div class="ttdef"><b>Definition:</b> Byteorder.h:133</div></div>
-<div class="ttc" id="agroup__Pt-IntTypes_html_ga435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a></div><div class="ttdeci">uint_type uint32_t</div><div class="ttdoc">Unsigned 32-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:48</div></div>
 <div class="ttc" id="agroup__Pt-Convert_html_gab8c23f359723f97773055b3c68f76f5d"><div class="ttname"><a href="group__Pt-Convert.html#gab8c23f359723f97773055b3c68f76f5d">Pt::formatFloat</a></div><div class="ttdeci">OutIterT formatFloat(OutIterT it, T d, const FormatT &amp;fmt, int precision, bool fixed=false)</div><div class="ttdoc">Formats a floating point value in a given format.</div><div class="ttdef"><b>Definition:</b> Convert.h:733</div></div>
 <div class="ttc" id="agroup__Pt-Convert_html_ga9ca4001d8fc13efc5917f2ac1058c69c"><div class="ttname"><a href="group__Pt-Convert.html#ga9ca4001d8fc13efc5917f2ac1058c69c">Pt::parseFloat</a></div><div class="ttdeci">InIterT parseFloat(InIterT it, InIterT end, T &amp;n, const FormatT &amp;fmt, bool &amp;ok)</div><div class="ttdoc">Parses a floating point value in a given format.</div><div class="ttdef"><b>Definition:</b> Convert.h:942</div></div>
 <div class="ttc" id="agroup__Pt-Convert_html_ga3d34599303e3da18e9d1004b858e498e"><div class="ttname"><a href="group__Pt-Convert.html#ga3d34599303e3da18e9d1004b858e498e">Pt::formatInt</a></div><div class="ttdeci">OutIterT formatInt(OutIterT it, T i, const FormatT &amp;fmt)</div><div class="ttdoc">Formats an integer in a given format.</div><div class="ttdef"><b>Definition:</b> Convert.h:635</div></div>

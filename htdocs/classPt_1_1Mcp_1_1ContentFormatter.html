@@ -84,28 +84,35 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ContentFormatter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ContentFormatter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Mcp.html">Model Context Protocol</a> &raquo; <a class="el" href="group__Pt-Mcp-Content.html">Result Content</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ContentType_8h_source.html">Pt/Mcp/ContentType.h</a>&gt;</code></p>
 
-<p>Writes the wrapper bytes of an MCP content block around a <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Formatter</a>.  
+<p>Writer for one MCP content block around a <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Formatter</a>.  
  <a href="classPt_1_1Mcp_1_1ContentFormatter.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa34a60409472ebc952108e9e1e96ea1c"><td class="memItemLeft" align="right" valign="top"><a id="aa34a60409472ebc952108e9e1e96ea1c"></a>
-<a class="el" href="classPt_1_1Formatter.html">Pt::Formatter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#aa34a60409472ebc952108e9e1e96ea1c">beginContent</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:aa34a60409472ebc952108e9e1e96ea1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the opening bytes of the content block to <em>os</em> and returns the <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Formatter</a> the result is to be decomposed into. <br /></td></tr>
+<tr class="memitem:a2bb527ab35e9e13a7b63523196b0d7d0"><td class="memItemLeft" align="right" valign="top"><a id="a2bb527ab35e9e13a7b63523196b0d7d0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#a2bb527ab35e9e13a7b63523196b0d7d0">~ContentFormatter</a> ()</td></tr>
+<tr class="memdesc:a2bb527ab35e9e13a7b63523196b0d7d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the formatter. <br /></td></tr>
+<tr class="separator:a2bb527ab35e9e13a7b63523196b0d7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34a60409472ebc952108e9e1e96ea1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPt_1_1Formatter.html">Pt::Formatter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#aa34a60409472ebc952108e9e1e96ea1c">beginContent</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:aa34a60409472ebc952108e9e1e96ea1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the opening bytes of the content block to <em>os</em>.  <a href="classPt_1_1Mcp_1_1ContentFormatter.html#aa34a60409472ebc952108e9e1e96ea1c">More...</a><br /></td></tr>
 <tr class="separator:aa34a60409472ebc952108e9e1e96ea1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02ff67c29fb79d3393bf3aedc9967dfc"><td class="memItemLeft" align="right" valign="top"><a id="a02ff67c29fb79d3393bf3aedc9967dfc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#a02ff67c29fb79d3393bf3aedc9967dfc">finishContent</a> (std::ostream &amp;os)</td></tr>
-<tr class="memdesc:a02ff67c29fb79d3393bf3aedc9967dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes buffered output and writes the closing bytes of the content array to <em>os</em>. <br /></td></tr>
+<tr class="memdesc:a02ff67c29fb79d3393bf3aedc9967dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes buffered output and writes the closing bytes to <em>os</em>. <br /></td></tr>
 <tr class="separator:a02ff67c29fb79d3393bf3aedc9967dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:af30acde4ff9d2e370b49f07230069b8d"><td class="memItemLeft" align="right" valign="top"><a id="af30acde4ff9d2e370b49f07230069b8d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#af30acde4ff9d2e370b49f07230069b8d">ContentFormatter</a> ()</td></tr>
+<tr class="memdesc:af30acde4ff9d2e370b49f07230069b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an idle content formatter. <br /></td></tr>
+<tr class="separator:af30acde4ff9d2e370b49f07230069b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc110378c2ef8758fb6df3fd266c690"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#aedc110378c2ef8758fb6df3fd266c690">onBeginContent</a> ()=0</td></tr>
 <tr class="memdesc:aedc110378c2ef8758fb6df3fd266c690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the opening bytes of the concrete content block.  <a href="classPt_1_1Mcp_1_1ContentFormatter.html#aedc110378c2ef8758fb6df3fd266c690">More...</a><br /></td></tr>
 <tr class="separator:aedc110378c2ef8758fb6df3fd266c690"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,16 +125,36 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a296e647519feaf7b351e47556abb4525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0366920b8d800ade17447e598058abbf"><td class="memItemLeft" align="right" valign="top"><a id="a0366920b8d800ade17447e598058abbf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#a0366920b8d800ade17447e598058abbf">write</a> (const char *s, std::size_t n)</td></tr>
-<tr class="memdesc:a0366920b8d800ade17447e598058abbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes raw bytes to the output stream. <br /></td></tr>
+<tr class="memdesc:a0366920b8d800ade17447e598058abbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <em>n</em> raw bytes from <em>s</em> to the output stream. <br /></td></tr>
 <tr class="separator:a0366920b8d800ade17447e598058abbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68e6246d2b432e62df3ab96661ade7ee"><td class="memItemLeft" align="right" valign="top"><a id="a68e6246d2b432e62df3ab96661ade7ee"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#a68e6246d2b432e62df3ab96661ade7ee">output</a> () const</td></tr>
-<tr class="memdesc:a68e6246d2b432e62df3ab96661ade7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output stream passed to <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#aa34a60409472ebc952108e9e1e96ea1c" title="Writes the opening bytes of the content block to os and returns the Formatter the result is to be dec...">beginContent()</a>. <br /></td></tr>
+<tr class="memdesc:a68e6246d2b432e62df3ab96661ade7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output stream passed to beginContent(). <br /></td></tr>
 <tr class="separator:a68e6246d2b432e62df3ab96661ade7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> adds the begin/finish protocol for the enclosing content block (e.g. {"type":"text","text":"...")) around an existing <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Pt::Formatter</a>: beginFormat() writes the opening bytes and returns the <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Pt::Formatter</a> the decomposed result is drained into via <a class="el" href="classPt_1_1Decomposer.html#afe89415fae9af61721cf5930e1f22420" title="Begin formatting the type.">Decomposer::beginFormat()</a> and <a class="el" href="classPt_1_1Decomposer.html#adcfa0c6475b9d5a2ec8febc657d634e9" title="Advance formatting the type.">Decomposer::advanceFormat()</a>; finishFormat() flushes any buffered output and writes the closing bytes once the result is fully drained. A <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html" title="Writes the wrapper bytes of an MCP content block around a Formatter.">ContentFormatter</a> does not need to be a <a class="el" href="classPt_1_1Formatter.html" title="Support for serialization to different formats.">Formatter</a> itself - it may wrap an existing one. Instances are created by <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a901ec88edc2f7298a74bdc84f1df5f52" title="Creates a new ContentFormatter for a result.">ContentType::getFormatter()</a> and must be released via <a class="el" href="classPt_1_1Mcp_1_1ContentType.html#a06484925cd0ffeed7f03a71e10d654cc" title="Releases a ContentFormatter previously obtained from getFormatter().">ContentType::releaseFormatter()</a>. </p>
+<div class="textblock"><p>ContentFormatter is the per-request writer the result-content group described. beginContent() writes the opening bytes of the content array and of the concrete block (for example a text member), then returns the Pt::Formatter the decomposed result is drained into. finishContent() flushes buffered output and writes the closing bytes. The formatter is not itself a Pt::Formatter; it wraps one.</p>
+<p>Instances come from ContentType::getFormatter() and must be released with ContentType::releaseFormatter(). Subclass this type to implement a custom block: onBeginContent() writes the type-specific opening JSON, onBeginFormat() returns the inner formatter, and onFinishContent() writes the closing JSON. write() and output() are for those overrides. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa34a60409472ebc952108e9e1e96ea1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa34a60409472ebc952108e9e1e96ea1c">&#9670;&nbsp;</a></span>beginContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Formatter.html">Pt::Formatter</a>&amp; beginContent </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the Pt::Formatter the result is to be decomposed into. </p>
+
+</div>
+</div>
 <a id="aedc110378c2ef8758fb6df3fd266c690"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aedc110378c2ef8758fb6df3fd266c690">&#9670;&nbsp;</a></span>onBeginContent()</h2>
 
@@ -150,7 +177,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Implementations write the type-specific opening JSON, e.g. {"type":"text","text":". </p>
+<p>Implementations write the type-specific opening JSON, for example the start of a text or image member. </p>
 
 </div>
 </div>
@@ -176,7 +203,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Called by <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#aa34a60409472ebc952108e9e1e96ea1c" title="Writes the opening bytes of the content block to os and returns the Formatter the result is to be dec...">beginContent()</a> after <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#aedc110378c2ef8758fb6df3fd266c690" title="Writes the opening bytes of the concrete content block.">onBeginContent()</a> has written the opening bytes. </p>
+<p>Called by beginContent() after onBeginContent() has written the opening bytes. </p>
 
 </div>
 </div>

@@ -79,26 +79,86 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Images and Image Views</div>  </div>
+<div class="title">Images and Image Views<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Images own pixel data. A typed image binds its pixel format at compile time: Argb32Image, Rgb32Image, Rgb16Image, and Yuv12Image are specializations of BasicImage with a concrete format type. Their views expose the matching concrete pixel type, such as Argb32Pixel. Use a typed image when its format is known by the calling code.</p>
-<p>Image and ImageF select their format at runtime through the abstract ImageFormat interface. Image exposes Pixel&lt;Color&gt;. ImageF is a ColorF lens on the same runtime ImageFormat, not a float storage format, and exposes Pixel&lt;ColorF&gt;. Use these images when the format is chosen by an image decoder, caller, or other runtime input. The generic pixels use the selected ImageFormat for their pixel operations.</p>
-<p>Both image families provide the same non-owning views. Use view() to access a rectangular region, pixelView() to traverse individual pixels, and lineView() to traverse rows as pixel spans. Each view preserves the source image's compile-time or runtime pixel behavior and does not copy pixel data.</p>
-<p>Pixel objects refer to a position in an image or view. Their copy-assignment operator is deleted to prevent accidentally rebinding a position. Call reset() to bind a pixel to another position. Write a color with its color assignment operator or assign().</p>
-<p>Add a format by deriving it from ImageFormat, implementing its pixel storage operations, and providing the matching concrete pixel types and ImageTraits specialization. The runtime image API then uses the format through ImageFormat, while typed images use it through BasicImage. </p>
-<table class="memberdecls">
+<p>An image is a rectangular pixel buffer. BasicImage either owns that buffer or wraps a caller-supplied one. Constructors that take width and height allocate. Constructors that take a data pointer wrap; the buffer must cover the given size and padding and must remain valid for the lifetime of the image. reset() switches between those two modes. clear() drops the buffer. Copying an owning image copies the pixels. A wrapped image does not take ownership on copy of the pointer; the original buffer still belongs to the caller.</p>
+<p>Format is either a compile-time type or a runtime value. A typed image binds the format in the template argument: Argb32Image, Rgb32Image, Rgb16Image, and Yuv12Image are BasicImage specializations, and their pixels are the matching concrete types such as Argb32Pixel. Use a typed image when the calling code already knows the format. Image selects the format at runtime through ImageFormat. Decoders, file loaders, and other input that discovers a format while running use Image. Image exposes Pixel&lt;Color&gt;. ImageF is not a float storage format: it is a ColorF lens on the same runtime ImageFormat, and it exposes Pixel&lt;ColorF&gt;. The generic pixels forward storage operations to the selected format.</p>
+<p>Color is the 8-bit working color, stored as a packed ARGB value with straight alpha. ColorF is a four-float working color in RGBA order, with channels in the unit interval and values above 1 allowed for HDR. Neither type is a pixel buffer. Pixels convert to and from the working color of their traits.</p>
+<p>Views do not copy pixels. The free functions view(), pixelView(), and lineView() build a non-owning region, a pixel-iterator range, or a row span over an image or another view. Each view keeps the source format, typed or runtime, and the source buffer must outlive the view. ViewBase stores width, height, and stride for every image and view.</p>
+<p>A pixel object is a cursor, not a color value. It refers to one position in an image or view. Copy construction duplicates the cursor. Copy assignment is deleted so a <code>pixel = other</code> cannot silently rebind the position; call reset() to bind another location. Assigning a Color or calling assign() writes through to storage. advance() and skipPadding() walk the buffer in scanline order.</p>
+<p>JPEG and PNG codecs read and write Image values on iostreams. JpegReader and PngReader attach a stream and an image, then get() fills that image. PngWriter attaches an output stream and write() emits the image. The reader owns neither the stream nor the image.</p>
+<p>Add a format by deriving it from ImageFormat, implementing its pixel storage operations, and providing the matching concrete pixel types and an ImageTraits specialization. Typed images then use the format as a BasicImage argument, and the runtime image API uses it through ImageFormat.</p>
+<p>The example decodes a JPEG into a runtime Image and opens a crop that does not copy pixels.</p>
+<div class="fragment"><div class="line">std::ifstream in(<span class="stringliteral">&quot;photo.jpg&quot;</span>, std::ios::binary);</div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Pt::Gfx::Image</a> image;</div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1JpegReader.html">Pt::Gfx::JpegReader</a> reader(in, image);</div>
+<div class="line">reader.get();</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1BasicView.html">Pt::Gfx::ImageView</a> crop = Pt::Gfx::view(image, 10, 10, 64, 64);</div>
+</div><!-- fragment --> <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32Image.html">Argb32Image</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image storing pixels in ARGB-32 format.  <a href="classPt_1_1Gfx_1_1Argb32Image.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 image.  <a href="classPt_1_1Gfx_1_1Argb32Image.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rgb32Image.html">Rgb32Image</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image storing pixels in premultiplied ARGB-32 format.  <a href="classPt_1_1Gfx_1_1Rgb32Image.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Premultiplied ARGB-32 image.  <a href="classPt_1_1Gfx_1_1Rgb32Image.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32Pixel.html">Argb32Pixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor to one ARGB-32 pixel.  <a href="classPt_1_1Gfx_1_1Argb32Pixel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32ConstPixel.html">Argb32ConstPixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only cursor to one ARGB-32 pixel.  <a href="classPt_1_1Gfx_1_1Argb32ConstPixel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32.html">Argb32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 image format.  <a href="classPt_1_1Gfx_1_1Argb32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Color.html">Color</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit ARGB color.  <a href="classPt_1_1Gfx_1_1Color.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ColorF.html">ColorF</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point RGBA color.  <a href="classPt_1_1Gfx_1_1ColorF.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">BasicImage&lt; FormatT, TraitsT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image that owns or wraps pixel data.  <a href="classPt_1_1Gfx_1_1BasicImage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicConstImage.html">BasicConstImage&lt; FormatT, TraitsT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only wrap of pixel data.  <a href="classPt_1_1Gfx_1_1BasicConstImage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">ImageFormat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime pixel format.  <a href="classPt_1_1Gfx_1_1ImageFormat.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Pixel.html">Pixel&lt; ColorT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor to one pixel.  <a href="classPt_1_1Gfx_1_1Pixel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ConstPixel.html">ConstPixel&lt; ColorT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only cursor to one pixel.  <a href="classPt_1_1Gfx_1_1ConstPixel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1JpegReader.html">JpegReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">JPEG image reader.  <a href="classPt_1_1Gfx_1_1JpegReader.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngReader.html">PngReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PNG image reader.  <a href="classPt_1_1Gfx_1_1PngReader.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngWriter.html">PngWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PNG image writer.  <a href="classPt_1_1Gfx_1_1PngWriter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView&lt; FormatT, TraitsT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-owning image region.  <a href="classPt_1_1Gfx_1_1BasicView.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicConstView.html">BasicConstView&lt; FormatT, TraitsT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only image region.  <a href="classPt_1_1Gfx_1_1BasicConstView.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width, height and stride of an image or view.  <a href="classPt_1_1Gfx_1_1ViewBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Gfx_1_1JpegReader_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1JpegReader.html">Pt::Gfx::JpegReader</a></div><div class="ttdoc">JPEG image reader.</div><div class="ttdef"><b>Definition:</b> JpegReader.h:55</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1BasicView_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1BasicView.html">Pt::Gfx::BasicView</a></div><div class="ttdoc">Non-owning image region.</div><div class="ttdef"><b>Definition:</b> View.h:65</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1BasicImage_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1BasicImage.html">Pt::Gfx::BasicImage</a></div><div class="ttdoc">Image that owns or wraps pixel data.</div><div class="ttdef"><b>Definition:</b> Image.h:83</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

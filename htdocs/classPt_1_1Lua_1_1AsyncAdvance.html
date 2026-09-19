@@ -84,19 +84,30 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">AsyncAdvance Class Reference</div>  </div>
+<div class="title">AsyncAdvance Class Reference<div class="ingroups"><a class="el" href="group__Pt-Lua.html">Lua Scripting</a> &raquo; <a class="el" href="group__Pt-Lua-Scripts.html">Scripts</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Script_8h_source.html">Pt/Lua/Script.h</a>&gt;</code></p>
 
-<p>Awaitable for async advance of a <a class="el" href="namespacePt_1_1Lua.html" title="Lua Runtime and Bindiungs.">Lua</a> Script.  
+<p>Awaitable advance of a <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> script.  
  <a href="classPt_1_1Lua_1_1AsyncAdvance.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Awaiter.html">Awaiter</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4aab76bc625cff65e8c77773dd0f2a69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html#a4aab76bc625cff65e8c77773dd0f2a69">AsyncAdvance</a> (<a class="el" href="classPt_1_1Lua_1_1Script.html">Script</a> &amp;script)</td></tr>
+<tr class="memdesc:a4aab76bc625cff65e8c77773dd0f2a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an awaitable for one advance of <em>script</em>.  <a href="classPt_1_1Lua_1_1AsyncAdvance.html#a4aab76bc625cff65e8c77773dd0f2a69">More...</a><br /></td></tr>
+<tr class="separator:a4aab76bc625cff65e8c77773dd0f2a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6db2a4e1fe5d1fd5a0307f59ee53cd"><td class="memItemLeft" align="right" valign="top"><a id="abf6db2a4e1fe5d1fd5a0307f59ee53cd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html#abf6db2a4e1fe5d1fd5a0307f59ee53cd">~AsyncAdvance</a> ()</td></tr>
+<tr class="memdesc:abf6db2a4e1fe5d1fd5a0307f59ee53cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels a pending step and detaches from the script. <br /></td></tr>
+<tr class="separator:abf6db2a4e1fe5d1fd5a0307f59ee53cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1287693218ada60f5936409dde58469"><td class="memItemLeft" align="right" valign="top"><a id="ad1287693218ada60f5936409dde58469"></a>
+<a class="el" href="classPt_1_1Lua_1_1Script.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Script::Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html#ad1287693218ada60f5936409dde58469">await_resume</a> ()</td></tr>
+<tr class="memdesc:ad1287693218ada60f5936409dde58469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status of the completed advance step. <br /></td></tr>
+<tr class="separator:ad1287693218ada60f5936409dde58469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff8eeb4a34dc8c50ffbd2e9baebaa6e"><td class="memItemLeft" align="right" valign="top"><a id="a8ff8eeb4a34dc8c50ffbd2e9baebaa6e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Awaiter.html#a8ff8eeb4a34dc8c50ffbd2e9baebaa6e">await_ready</a> () const</td></tr>
 <tr class="memdesc:a8ff8eeb4a34dc8c50ffbd2e9baebaa6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false so co_await always suspends. <br /></td></tr>
@@ -118,8 +129,34 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aa70e4661651376db02803dde8117e8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Wraps the beginAdvance() / endAdvance() / advanced() async pattern into a C++20 awaitable for use with co_await. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>AsyncAdvance is the C++20 form of beginAdvance(), endAdvance(), and advanced(). co_await script.advanceAsync() runs one step and await_resume() returns that step's Status. Continue awaiting while the status is Yield or NativeCall.</p>
+<p>Only one awaiter may be pending on a script. A second construction throws std::logic_error. Destroying a pending awaiter cancels the script. Destroying the script detaches the awaiter. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4aab76bc625cff65e8c77773dd0f2a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aab76bc625cff65e8c77773dd0f2a69">&#9670;&nbsp;</a></span>AsyncAdvance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Lua_1_1Script.html">Script</a> &amp;&#160;</td>
+          <td class="paramname"><em>script</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if another awaiter is already pending. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa70e4661651376db02803dde8117e8e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa70e4661651376db02803dde8117e8e0">&#9670;&nbsp;</a></span>setReady()</h2>
 
@@ -142,7 +179,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Call this when the asynchronous operation has completed. Typically connect a completion signal to this method. </p>
+<p><a class="el" href="classPt_1_1Lua_1_1Call.html" title="Synchronous native call from Lua.">Call</a> this when the asynchronous operation has completed. Typically connect a completion signal to this method. </p>
 
 </div>
 </div>

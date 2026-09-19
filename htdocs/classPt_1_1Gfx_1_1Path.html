@@ -84,13 +84,13 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Path Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">Path Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Gfx_2Path_8h_source.html">Pt/Gfx/Path.h</a>&gt;</code></p>
 
-<p>Vector path for drawing outlines and filled shapes.  
+<p>Sequence of lines and curves.  
  <a href="classPt_1_1Gfx_1_1Path.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -228,8 +228,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ab26d5f94f2f799affbd635fd139d0383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Path stores a sequence of drawing commands such as moves, lines and curves. Painters can stroke or fill the current path directly, while helper functions make it easy to append rectangles, ellipses and arc segments. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Path stores moves, lines, quadratic and cubic curves, and close commands. It does not belong to a painter. Build a path, then stroke or fill it with PainterBase::drawPath() and fillPath(), or assign it as the painter's current path.</p>
+<p>moveTo() starts a subpath. lineTo(), quadTo(), cubicTo(), and the arc helpers append to the current subpath. contains() and intersects() test geometry against the filled area using a FillRule, without a surface.</p>
+<p>The example builds a triangle and fills it on a bitmap.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Gfx_1_1Bitmap.html">Pt::Gfx::Bitmap</a> bitmap(<a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(64, 64));</div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1Painter.html">Pt::Gfx::Painter</a> painter(bitmap);</div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1Path.html">Pt::Gfx::Path</a> path;</div>
+<div class="line">path.<a class="code" href="classPt_1_1Gfx_1_1Path.html#aeca187f09ddccfd8c8967af0c88f200a">moveTo</a>(<a class="code" href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::PointF</a>(10, 10));</div>
+<div class="line">path.<a class="code" href="classPt_1_1Gfx_1_1Path.html#a609bd37eade2d3ec45dd05c7ff1a6725">lineTo</a>(<a class="code" href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::PointF</a>(50, 10));</div>
+<div class="line">path.<a class="code" href="classPt_1_1Gfx_1_1Path.html#a609bd37eade2d3ec45dd05c7ff1a6725">lineTo</a>(<a class="code" href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::PointF</a>(30, 40));</div>
+<div class="line">path.<a class="code" href="classPt_1_1Gfx_1_1Path.html#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line">painter.fillPath(path);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab0470e3a5ff00bf1df3ba1d8d28b3191"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0470e3a5ff00bf1df3ba1d8d28b3191">&#9670;&nbsp;</a></span>contains() <span class="overload">[1/2]</span></h2>
 
@@ -471,6 +481,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Path_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="classPt_1_1Gfx_1_1Path.html#a5ae591df94fc66ccb85cbb6565368bca">Pt::Gfx::Path::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the current subpath.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:69</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:73</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Painter_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Painter.html">Pt::Gfx::Painter</a></div><div class="ttdoc">Painter for a surface or a paint context.</div><div class="ttdef"><b>Definition:</b> Painter.h:62</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Path_html_aeca187f09ddccfd8c8967af0c88f200a"><div class="ttname"><a href="classPt_1_1Gfx_1_1Path.html#aeca187f09ddccfd8c8967af0c88f200a">Pt::Gfx::Path::moveTo</a></div><div class="ttdeci">void moveTo(const PointF &amp;p)</div><div class="ttdoc">Starts a new subpath at the given point.</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Path_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Path.html">Pt::Gfx::Path</a></div><div class="ttdoc">Sequence of lines and curves.</div><div class="ttdef"><b>Definition:</b> Path.h:81</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Bitmap_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Bitmap.html">Pt::Gfx::Bitmap</a></div><div class="ttdoc">Off-screen image that can be painted.</div><div class="ttdef"><b>Definition:</b> Bitmap.h:71</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Path_html_a609bd37eade2d3ec45dd05c7ff1a6725"><div class="ttname"><a href="classPt_1_1Gfx_1_1Path.html#a609bd37eade2d3ec45dd05c7ff1a6725">Pt::Gfx::Path::lineTo</a></div><div class="ttdeci">void lineTo(const PointF &amp;p)</div><div class="ttdoc">Adds a straight line to the given point.</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

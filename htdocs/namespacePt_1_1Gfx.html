@@ -90,7 +90,7 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Pt::Gfx provides APIs for drawing 2D shapes and text on different paint surfaces, such as in-memory bitmaps. It also provides image, view and pixel classes for storing image data, accessing pixels and working with image formats. </p>
+<div class="textblock"><p>Portable 2D images, pixel access, and drawing of shapes and text on paint surfaces. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -98,79 +98,97 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 image format.  <a href="classPt_1_1Gfx_1_1Argb32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32ConstPixel.html">Argb32ConstPixel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 const pixel.  <a href="classPt_1_1Gfx_1_1Argb32ConstPixel.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only cursor to one ARGB-32 pixel.  <a href="classPt_1_1Gfx_1_1Argb32ConstPixel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32Image.html">Argb32Image</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image storing pixels in ARGB-32 format.  <a href="classPt_1_1Gfx_1_1Argb32Image.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 image.  <a href="classPt_1_1Gfx_1_1Argb32Image.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Argb32Pixel.html">Argb32Pixel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 pixel.  <a href="classPt_1_1Gfx_1_1Argb32Pixel.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor to one ARGB-32 pixel.  <a href="classPt_1_1Gfx_1_1Argb32Pixel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicConstImage.html">BasicConstImage</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic const image.  <a href="classPt_1_1Gfx_1_1BasicConstImage.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only wrap of pixel data.  <a href="classPt_1_1Gfx_1_1BasicConstImage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicConstView.html">BasicConstView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only image region.  <a href="classPt_1_1Gfx_1_1BasicConstView.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicImage.html">BasicImage</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic image.  <a href="classPt_1_1Gfx_1_1BasicImage.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image that owns or wraps pixel data.  <a href="classPt_1_1Gfx_1_1BasicImage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-owning image region.  <a href="classPt_1_1Gfx_1_1BasicView.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html">Bitmap</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Off-screen drawing surface backed by an image.  <a href="classPt_1_1Gfx_1_1Bitmap.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Off-screen image that can be painted.  <a href="classPt_1_1Gfx_1_1Bitmap.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html">Brush</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill description for shapes and text.  <a href="classPt_1_1Gfx_1_1Brush.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill color, gradient or texture.  <a href="classPt_1_1Gfx_1_1Brush.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Canvas</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend canvas for drawing commands.  <a href="classPt_1_1Gfx_1_1Canvas.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend that executes drawing commands.  <a href="classPt_1_1Gfx_1_1Canvas.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Color.html">Color</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard color type.  <a href="classPt_1_1Gfx_1_1Color.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit ARGB color.  <a href="classPt_1_1Gfx_1_1Color.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPt_1_1Gfx_1_1ColorConverter.html">ColorConverter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts between public color types.  <a href="structPt_1_1Gfx_1_1ColorConverter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ColorF.html">ColorF</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA float32 working color.  <a href="classPt_1_1Gfx_1_1ColorF.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point RGBA color.  <a href="classPt_1_1Gfx_1_1ColorF.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ColorStop.html">ColorStop</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Color.html" title="Standard color type.">Color</a> stop for a gradient brush.  <a href="classPt_1_1Gfx_1_1ColorStop.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Color.html" title="8-bit ARGB color.">Color</a> stop for a gradient brush.  <a href="classPt_1_1Gfx_1_1ColorStop.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ColorStops.html">ColorStops</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered collection of gradient color stops.  <a href="classPt_1_1Gfx_1_1ColorStops.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1CompositionMode.html">CompositionMode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend mode used for drawing operations.  <a href="classPt_1_1Gfx_1_1CompositionMode.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">How new pixels combine with existing pixels.  <a href="classPt_1_1Gfx_1_1CompositionMode.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ConstPixel.html">ConstPixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only cursor to one pixel.  <a href="classPt_1_1Gfx_1_1ConstPixel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Font</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Font.html" title="Font request used for text drawing and measurement.">Font</a> request used for text drawing and measurement.  <a href="classPt_1_1Gfx_1_1Font.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Font.html" title="Font family, size and style.">Font</a> family, size and style.  <a href="classPt_1_1Gfx_1_1Font.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1FontFace.html">FontFace</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolved font family and style.  <a href="classPt_1_1Gfx_1_1FontFace.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html">FontMetrics</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metrics that describe a font face at a given size.  <a href="classPt_1_1Gfx_1_1FontMetrics.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ascent, descent and line height of a font.  <a href="classPt_1_1Gfx_1_1FontMetrics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1FontProvider.html">FontProvider</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend that loads font files.  <a href="classPt_1_1Gfx_1_1FontProvider.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1FontRegistry.html">FontRegistry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registry of font files.  <a href="classPt_1_1Gfx_1_1FontRegistry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">ImageFormat</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image format.  <a href="classPt_1_1Gfx_1_1ImageFormat.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime pixel format.  <a href="classPt_1_1Gfx_1_1ImageFormat.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPt_1_1Gfx_1_1ImageTraits.html">ImageTraits</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image traits.  <a href="structPt_1_1Gfx_1_1ImageTraits.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1JpegReader.html">JpegReader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reader for JPEG images.  <a href="classPt_1_1Gfx_1_1JpegReader.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">JPEG image reader.  <a href="classPt_1_1Gfx_1_1JpegReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Paint.html">Paint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Paint.html" title="Paint state used by drawing operations.">Paint</a> state used by drawing operations.  <a href="classPt_1_1Gfx_1_1Paint.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Pen.html" title="Outline color, width and style.">Pen</a>, brush, font and composition mode.  <a href="classPt_1_1Gfx_1_1Paint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintContext.html">PaintContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active painting session for a surface.  <a href="classPt_1_1Gfx_1_1PaintContext.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active painting session on a surface.  <a href="classPt_1_1Gfx_1_1PaintContext.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Painter.html">Painter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete painter for <a class="el" href="namespacePt_1_1Gfx.html" title="Graphics and imaging services.">Pt::Gfx</a> paint targets.  <a href="classPt_1_1Gfx_1_1Painter.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Painter.html" title="Painter for a surface or a paint context.">Painter</a> for a surface or a paint context.  <a href="classPt_1_1Gfx_1_1Painter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PainterBase.html">PainterBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for drawing commands and paint state.  <a href="classPt_1_1Gfx_1_1PainterBase.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing commands and paint state.  <a href="classPt_1_1Gfx_1_1PainterBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">PaintSurface</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract target for drawing operations.  <a href="classPt_1_1Gfx_1_1PaintSurface.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target for drawing operations.  <a href="classPt_1_1Gfx_1_1PaintSurface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Path.html">Path</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector path for drawing outlines and filled shapes.  <a href="classPt_1_1Gfx_1_1Path.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence of lines and curves.  <a href="classPt_1_1Gfx_1_1Path.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PathElement.html">PathElement</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only view of a path element.  <a href="classPt_1_1Gfx_1_1PathElement.html#details">More...</a><br /></td></tr>
@@ -179,28 +197,31 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward iterator over path elements.  <a href="classPt_1_1Gfx_1_1PathIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Pen.html">Pen</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attributes for the drawing of outlines.  <a href="classPt_1_1Gfx_1_1Pen.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outline color, width and style.  <a href="classPt_1_1Gfx_1_1Pen.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Pixel.html">Pixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor to one pixel.  <a href="classPt_1_1Gfx_1_1Pixel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel base class.  <a href="classPt_1_1Gfx_1_1PixelBase.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Pixel.html" title="Cursor to one pixel.">Pixel</a> base class.  <a href="classPt_1_1Gfx_1_1PixelBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngReader.html">PngReader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reader for PNG images.  <a href="classPt_1_1Gfx_1_1PngReader.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PNG image reader.  <a href="classPt_1_1Gfx_1_1PngReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PngWriter.html">PngWriter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writer for PNG images.  <a href="classPt_1_1Gfx_1_1PngWriter.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PNG image writer.  <a href="classPt_1_1Gfx_1_1PngWriter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Point.html">Point</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point with floating-point X and Y coordinates.  <a href="classPt_1_1Gfx_1_1Point.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point X and Y coordinates.  <a href="classPt_1_1Gfx_1_1Point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1PointI.html">PointI</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point with integer X and Y coordinates.  <a href="classPt_1_1Gfx_1_1PointI.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer X and Y coordinates.  <a href="classPt_1_1Gfx_1_1PointI.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rect with floating-point coordinates.  <a href="classPt_1_1Gfx_1_1Rect.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point rectangle.  <a href="classPt_1_1Gfx_1_1Rect.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rect with integer coordinates.  <a href="classPt_1_1Gfx_1_1RectI.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer rectangle.  <a href="classPt_1_1Gfx_1_1RectI.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rgb16.html">Rgb16</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-565 image format.  <a href="classPt_1_1Gfx_1_1Rgb16.html#details">More...</a><br /></td></tr>
@@ -224,25 +245,28 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Premultiplied ARGB-32 const pixel.  <a href="classPt_1_1Gfx_1_1Rgb32ConstPixel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rgb32Image.html">Rgb32Image</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image storing pixels in premultiplied ARGB-32 format.  <a href="classPt_1_1Gfx_1_1Rgb32Image.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Premultiplied ARGB-32 image.  <a href="classPt_1_1Gfx_1_1Rgb32Image.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Rgb32Pixel.html">Rgb32Pixel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-32 pixel as premultiplied ARGB-32.  <a href="classPt_1_1Gfx_1_1Rgb32Pixel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical-to-physical unit conversion.  <a href="classPt_1_1Gfx_1_1Scaling.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion between logical units and pixels.  <a href="classPt_1_1Gfx_1_1Scaling.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Size.html">Size</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size with floating-point width and height.  <a href="classPt_1_1Gfx_1_1Size.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point width and height.  <a href="classPt_1_1Gfx_1_1Size.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1SizeI.html">SizeI</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size with integer width and height.  <a href="classPt_1_1Gfx_1_1SizeI.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer width and height.  <a href="classPt_1_1Gfx_1_1SizeI.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1TextMetrics.html">TextMetrics</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metrics for a measured line of text.  <a href="classPt_1_1Gfx_1_1TextMetrics.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width and bounds of a text run.  <a href="classPt_1_1Gfx_1_1TextMetrics.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Transform.html">Transform</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affine transform for drawing coordinates.  <a href="classPt_1_1Gfx_1_1Transform.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D affine transform.  <a href="classPt_1_1Gfx_1_1Transform.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width, height and stride of an image or view.  <a href="classPt_1_1Gfx_1_1ViewBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Yuv12.html">Yuv12</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">YV-12 image format.  <a href="classPt_1_1Gfx_1_1Yuv12.html#details">More...</a><br /></td></tr>
@@ -261,11 +285,11 @@ typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstImage.html">BasicConstIm
 <tr class="memdesc:a4a423507377d3070eae52e03d0194bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 const image. <br /></td></tr>
 <tr class="separator:a4a423507377d3070eae52e03d0194bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aded7f70487a28ea001d9845f8e7d3508"><td class="memItemLeft" align="right" valign="top"><a id="aded7f70487a28ea001d9845f8e7d3508"></a>
-typedef BasicView&lt; <a class="el" href="classPt_1_1Gfx_1_1Argb32.html">Argb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#aded7f70487a28ea001d9845f8e7d3508">Argb32View</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Argb32.html">Argb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#aded7f70487a28ea001d9845f8e7d3508">Argb32View</a></td></tr>
 <tr class="memdesc:aded7f70487a28ea001d9845f8e7d3508"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 view. <br /></td></tr>
 <tr class="separator:aded7f70487a28ea001d9845f8e7d3508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af19862d03efd7f1a82918e99331ea0c7"><td class="memItemLeft" align="right" valign="top"><a id="af19862d03efd7f1a82918e99331ea0c7"></a>
-typedef BasicConstView&lt; <a class="el" href="classPt_1_1Gfx_1_1Argb32.html">Argb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#af19862d03efd7f1a82918e99331ea0c7">Argb32ConstView</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstView.html">BasicConstView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Argb32.html">Argb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#af19862d03efd7f1a82918e99331ea0c7">Argb32ConstView</a></td></tr>
 <tr class="memdesc:af19862d03efd7f1a82918e99331ea0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARGB-32 const view. <br /></td></tr>
 <tr class="separator:af19862d03efd7f1a82918e99331ea0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c15f06b8778ffd25542e238998e9de9"><td class="memItemLeft" align="right" valign="top"><a id="a6c15f06b8778ffd25542e238998e9de9"></a>
@@ -301,11 +325,11 @@ typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstImage.html">BasicConstIm
 <tr class="memdesc:abc08c482e86bf5df3b661daa5430f013"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-16 const image. <br /></td></tr>
 <tr class="separator:abc08c482e86bf5df3b661daa5430f013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfffa005f4db3ee1eaa053446bbbc351"><td class="memItemLeft" align="right" valign="top"><a id="abfffa005f4db3ee1eaa053446bbbc351"></a>
-typedef BasicView&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb16.html">Rgb16</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#abfffa005f4db3ee1eaa053446bbbc351">Rgb16View</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb16.html">Rgb16</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#abfffa005f4db3ee1eaa053446bbbc351">Rgb16View</a></td></tr>
 <tr class="memdesc:abfffa005f4db3ee1eaa053446bbbc351"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-16 view. <br /></td></tr>
 <tr class="separator:abfffa005f4db3ee1eaa053446bbbc351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac59cce0c264f30dc1f5124e8f76e8fa7"><td class="memItemLeft" align="right" valign="top"><a id="ac59cce0c264f30dc1f5124e8f76e8fa7"></a>
-typedef BasicConstView&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb16.html">Rgb16</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#ac59cce0c264f30dc1f5124e8f76e8fa7">Rgb16ConstView</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstView.html">BasicConstView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb16.html">Rgb16</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#ac59cce0c264f30dc1f5124e8f76e8fa7">Rgb16ConstView</a></td></tr>
 <tr class="memdesc:ac59cce0c264f30dc1f5124e8f76e8fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-16 const view. <br /></td></tr>
 <tr class="separator:ac59cce0c264f30dc1f5124e8f76e8fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44583b1733b2609553df97287cad039b"><td class="memItemLeft" align="right" valign="top"><a id="a44583b1733b2609553df97287cad039b"></a>
@@ -337,11 +361,11 @@ typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstImage.html">BasicConstIm
 <tr class="memdesc:af120609e96906abfcef252fbff53669e"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-32 const image. <br /></td></tr>
 <tr class="separator:af120609e96906abfcef252fbff53669e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1208e36a9055f66edb0d8e33b5b20926"><td class="memItemLeft" align="right" valign="top"><a id="a1208e36a9055f66edb0d8e33b5b20926"></a>
-typedef BasicView&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb32.html">Rgb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a1208e36a9055f66edb0d8e33b5b20926">Rgb32View</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb32.html">Rgb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a1208e36a9055f66edb0d8e33b5b20926">Rgb32View</a></td></tr>
 <tr class="memdesc:a1208e36a9055f66edb0d8e33b5b20926"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-32 view. <br /></td></tr>
 <tr class="separator:a1208e36a9055f66edb0d8e33b5b20926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08e61ecd0ab3e8686740577e1c164f94"><td class="memItemLeft" align="right" valign="top"><a id="a08e61ecd0ab3e8686740577e1c164f94"></a>
-typedef BasicConstView&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb32.html">Rgb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a08e61ecd0ab3e8686740577e1c164f94">Rgb32ConstView</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstView.html">BasicConstView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Rgb32.html">Rgb32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a08e61ecd0ab3e8686740577e1c164f94">Rgb32ConstView</a></td></tr>
 <tr class="memdesc:a08e61ecd0ab3e8686740577e1c164f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB-32 const view. <br /></td></tr>
 <tr class="separator:a08e61ecd0ab3e8686740577e1c164f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a320f521181be8420afb39dfb2a863179"><td class="memItemLeft" align="right" valign="top"><a id="a320f521181be8420afb39dfb2a863179"></a>
@@ -377,11 +401,11 @@ typedef <a class="el" href="classPt_1_1Gfx_1_1BasicConstImage.html">BasicConstIm
 <tr class="memdesc:a77132750047612792f0938d4c530a131"><td class="mdescLeft">&#160;</td><td class="mdescRight">YUV-12 const image. <br /></td></tr>
 <tr class="separator:a77132750047612792f0938d4c530a131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc6def832489b485c5349d48fcc4187"><td class="memItemLeft" align="right" valign="top"><a id="a8fc6def832489b485c5349d48fcc4187"></a>
-typedef BasicView&lt; <a class="el" href="classPt_1_1Gfx_1_1Yuv12.html">Yuv12</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a8fc6def832489b485c5349d48fcc4187">Yuv12View</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Yuv12.html">Yuv12</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a8fc6def832489b485c5349d48fcc4187">Yuv12View</a></td></tr>
 <tr class="memdesc:a8fc6def832489b485c5349d48fcc4187"><td class="mdescLeft">&#160;</td><td class="mdescRight">YUV-12 view. <br /></td></tr>
 <tr class="separator:a8fc6def832489b485c5349d48fcc4187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a130fc26ef4b43c3cbd263f00b9a5f8c7"><td class="memItemLeft" align="right" valign="top"><a id="a130fc26ef4b43c3cbd263f00b9a5f8c7"></a>
-typedef BasicView&lt; <a class="el" href="classPt_1_1Gfx_1_1Yuv12.html">Yuv12</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a130fc26ef4b43c3cbd263f00b9a5f8c7">Yuv12ConstView</a></td></tr>
+typedef <a class="el" href="classPt_1_1Gfx_1_1BasicView.html">BasicView</a>&lt; <a class="el" href="classPt_1_1Gfx_1_1Yuv12.html">Yuv12</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePt_1_1Gfx.html#a130fc26ef4b43c3cbd263f00b9a5f8c7">Yuv12ConstView</a></td></tr>
 <tr class="memdesc:a130fc26ef4b43c3cbd263f00b9a5f8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">YUV-12 conmst view. <br /></td></tr>
 <tr class="separator:a130fc26ef4b43c3cbd263f00b9a5f8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7367458b70cafc34f09f42ca74708f0"><td class="memItemLeft" align="right" valign="top"><a id="af7367458b70cafc34f09f42ca74708f0"></a>

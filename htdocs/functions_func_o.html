@@ -83,6 +83,9 @@
 : <a class="el" href="classPt_1_1ConstMethod.html#a559f28105d2bbb02ae479920ef15f783">ConstMethod&lt; R, ClassT, As &gt;</a>
 , <a class="el" href="classPt_1_1Method.html#a4c170f72886d7c5e23a4545438105cc2">Method&lt; R, ClassT, As &gt;</a>
 </li>
+<li>ObjectType()
+: <a class="el" href="classPt_1_1Mcp_1_1ObjectType.html#a2865be043ce174f8e1844a3de7e7cb34">ObjectType</a>
+</li>
 <li>onActionKey()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#a8aafcd3ee37394de63c185b46df6701b">Button</a>
 , <a class="el" href="classPt_1_1Forms_1_1Control.html#a8aafcd3ee37394de63c185b46df6701b">Control</a>
@@ -351,6 +354,7 @@
 </li>
 <li>onCancel()
 : <a class="el" href="classPt_1_1Awaiter.html#a5c669ec9685e2b6d83321fe70c660156">Awaiter</a>
+, <a class="el" href="classPt_1_1Db_1_1ConnectionAwaiter.html#af26b183a2c5c4eca45ef4b797140b223">ConnectionAwaiter</a>
 , <a class="el" href="classPt_1_1Http_1_1WebSocket.html#a493685a908b7d52b3d8a0ccc98c53b0c">WebSocket</a>
 , <a class="el" href="classPt_1_1JsonRpc_1_1Client.html#a493685a908b7d52b3d8a0ccc98c53b0c">Client</a>
 , <a class="el" href="classPt_1_1JsonRpc_1_1HttpClient.html#a493685a908b7d52b3d8a0ccc98c53b0c">HttpClient</a>
@@ -386,7 +390,8 @@
 , <a class="el" href="classPt_1_1Xml_1_1XmlSerializationContext.html#aee5bc5978267b4417ab076de56c36091">XmlSerializationContext</a>
 </li>
 <li>onClone()
-: <a class="el" href="classPt_1_1Event.html#a3262a2f75eb95ed30d271457f57226dd">Event</a>
+: <a class="el" href="classPt_1_1BasicEvent.html#adcc29b51c2af21bd26a25c8dd675f6e0">BasicEvent&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Event.html#a3262a2f75eb95ed30d271457f57226dd">Event</a>
 </li>
 <li>onClose()
 : <a class="el" href="classPt_1_1System_1_1LogChannel.html#ac92aac8031b33474af687b6ce0b0263e">LogChannel</a>
@@ -466,7 +471,8 @@
 : <a class="el" href="classPt_1_1Cosmo_1_1IActivate.html#a5e2f2970dc0f18eea554c8d1e2a1e7ba">IActivate</a>
 </li>
 <li>onDestroy()
-: <a class="el" href="classPt_1_1Cosmo_1_1ComponentPlugin.html#a692311f71fb3130bb4b9d33d98bb2b68">ComponentPlugin&lt; T, Factory &gt;</a>
+: <a class="el" href="classPt_1_1BasicEvent.html#aff9f3d37b2bb6c6821794af7ba549cea">BasicEvent&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1ComponentPlugin.html#a692311f71fb3130bb4b9d33d98bb2b68">ComponentPlugin&lt; T, Factory &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1IComponentPlugin.html#a3d7145be2e353ba4e4042a76f5f10125">IComponentPlugin</a>
 , <a class="el" href="classPt_1_1Event.html#a734ec146031b0c5bb2358efb94c080cb">Event</a>
 </li>
@@ -665,6 +671,10 @@
 <li>onGetArgv()
 : <a class="el" href="classPt_1_1Cosmo_1_1IMain.html#ad13f053ebec7c152d236a3c24f4ea7d5">IMain</a>
 </li>
+<li>onGetBeginSql()
+: <a class="el" href="classPt_1_1Db_1_1SqliteTransaction.html#aebc250ec7fad7014669b8eb62e31d258">SqliteTransaction</a>
+, <a class="el" href="classPt_1_1Db_1_1Transaction.html#a1a2b6a37ab9ba095a4aee8a17867af78">Transaction</a>
+</li>
 <li>onGetCanvas()
 : <a class="el" href="classPt_1_1Forms_1_1Pixmap.html#ac4cd7418641690ff3b634e946e99eda3">Pixmap</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a67aa55c887285040a03580dd6051798d">PaintSurface</a>
@@ -672,6 +682,9 @@
 <li>onGetClassId()
 : <a class="el" href="classPt_1_1Cosmo_1_1ComponentPlugin.html#a43092a8788f015d66cb061271557bc10">ComponentPlugin&lt; T, Factory &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1IComponentType.html#a5cd44d88807a8effc9fa8d7bbdf7c60e">IComponentType</a>
+</li>
+<li>onGetCommitSql()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#a88b7bc1b033b81bf8b73f060d81c0d5c">Transaction</a>
 </li>
 <li>onGetComponents()
 : <a class="el" href="classPt_1_1Cosmo_1_1IComponentManager.html#a6be074c9e92b0e5e2dc92c915d49f5bd">IComponentManager</a>
@@ -711,6 +724,9 @@
 , <a class="el" href="classPt_1_1Http_1_1Service.html#a6ba78d05d3ac202751247902423f69bb">Service</a>
 , <a class="el" href="classPt_1_1Http_1_1WebSocketService.html#aa322457cb2a5722ab7b4b61cfae6eaf2">WebSocketService</a>
 , <a class="el" href="classPt_1_1JsonRpc_1_1HttpService.html#a39d2acca58a1a563cdfa2aa66dc06606">HttpService</a>
+</li>
+<li>onGetRollbackSql()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#a8d859d1cb926c0f9dd8028ea9246cd19">Transaction</a>
 </li>
 <li>onGetScaling()
 : <a class="el" href="classPt_1_1Forms_1_1Pixmap.html#ab24037ae1555afd944afddbc2a548e41">Pixmap</a>
@@ -1614,6 +1630,7 @@
 </li>
 <li>onResult()
 : <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#aee417c3d369444f3b503dae87408e433">Responder</a>
+, <a class="el" href="classPt_1_1Lua_1_1BasicAsyncCall.html#a7e63a742a6a91781e891dd6f03392814">BasicAsyncCall&lt; R &gt;</a>
 , <a class="el" href="classPt_1_1Remoting_1_1ActiveProcedure.html#a3d5095afa6e9282e101e69c7fd3f6830">ActiveProcedure&lt; R, As &gt;</a>
 , <a class="el" href="classPt_1_1Soap_1_1Responder.html#aee417c3d369444f3b503dae87408e433">Responder</a>
 </li>
@@ -1818,7 +1835,8 @@
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a2723f45dc09e09359e656adf936b063c">Window</a>
 </li>
 <li>onTypeInfo()
-: <a class="el" href="classPt_1_1Event.html#aa5cbc27166a3e96dcfc56254a0ce681a">Event</a>
+: <a class="el" href="classPt_1_1BasicEvent.html#a2aef2e4d631397e2f84db21b88074d31">BasicEvent&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Event.html#aa5cbc27166a3e96dcfc56254a0ce681a">Event</a>
 </li>
 <li>onUnload()
 : <a class="el" href="classPt_1_1Cosmo_1_1IComponentManager.html#a00f939c9aa44d3cfd934a8b08c4218a7">IComponentManager</a>
@@ -1842,15 +1860,24 @@
 , <a class="el" href="classPt_1_1Http_1_1WebSocketResponder.html#a0a0576a8f27b7aedcc7242a0b5be8934">WebSocketResponder</a>
 </li>
 <li>open()
-: <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a7aecf01dc4167fd014b46b932eac74a6">IOStream</a>
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a9452e436e25a496f38c817c9cbf91d65">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a9452e436e25a496f38c817c9cbf91d65">IConnection</a>
+, <a class="el" href="classPt_1_1Ssl_1_1IOStream.html#a7aecf01dc4167fd014b46b932eac74a6">IOStream</a>
 , <a class="el" href="classPt_1_1Ssl_1_1StreamBuffer.html#ac8d51a9cdea41669bc742fdb1367a5bb">StreamBuffer</a>
 , <a class="el" href="classPt_1_1System_1_1FileDevice.html#a0511b039b7147bcba600af86c7633c63">FileDevice</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#ade62d61bbd25a95e018f338f9800889e">Library</a>
 , <a class="el" href="classPt_1_1System_1_1LogChannel.html#a2d9d44b590c3e536ff604622f974cab7">LogChannel</a>
 , <a class="el" href="classPt_1_1System_1_1SerialDevice.html#ab168eeeab0fd7fd53964cf1a3e36997f">SerialDevice</a>
 </li>
+<li>openAsync()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a717734291481d1e8a27d52f9c382a920">Connection</a>
+</li>
 <li>opened()
 : <a class="el" href="classPt_1_1System_1_1FileDevice.html#a8947b83e69aeab270e98d4395af337d0">FileDevice</a>
+</li>
+<li>openFinished()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a50f6a25e46541b62e86753d7570e4852">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a50f6a25e46541b62e86753d7570e4852">IConnection</a>
 </li>
 <li>openMenu()
 : <a class="el" href="classPt_1_1Forms_1_1MenuBase.html#abf5cef11bd36450f4a6eb096da87929d">MenuBase</a>
@@ -1862,7 +1889,8 @@
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#ad940da666d3c0af39bc98355e48ef544">AutoPtr&lt; T &gt;</a>
 </li>
 <li>operator bool()
-: <a class="el" href="classPt_1_1AutoPtr.html#a67b76affb3b5d35fa419ac234144038b">AutoPtr&lt; T, Destroy &gt;</a>
+: <a class="el" href="classPt_1_1Arg_3_01bool_01_4.html#a67b76affb3b5d35fa419ac234144038b">Arg&lt; bool &gt;</a>
+, <a class="el" href="classPt_1_1AutoPtr.html#a67b76affb3b5d35fa419ac234144038b">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a67b76affb3b5d35fa419ac234144038b">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Forms_1_1FacetPtr.html#a67b76affb3b5d35fa419ac234144038b">FacetPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a67b76affb3b5d35fa419ac234144038b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
@@ -1891,6 +1919,11 @@
 : <a class="el" href="classPt_1_1AutoPtr.html#a61efd4196a96540ee018fee8791f3f10">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1Connection.html#a61efd4196a96540ee018fee8791f3f10">Connection</a>
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a61efd4196a96540ee018fee8791f3f10">AutoPtr&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Db_1_1Connection.html#a61efd4196a96540ee018fee8791f3f10">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1Result.html#a61efd4196a96540ee018fee8791f3f10">Result</a>
+, <a class="el" href="classPt_1_1Db_1_1Row.html#a61efd4196a96540ee018fee8791f3f10">Row</a>
+, <a class="el" href="classPt_1_1Db_1_1Statement.html#a61efd4196a96540ee018fee8791f3f10">Statement</a>
+, <a class="el" href="classPt_1_1Db_1_1Value.html#a61efd4196a96540ee018fee8791f3f10">Value</a>
 , <a class="el" href="classPt_1_1Forms_1_1FacetPtr.html#a61efd4196a96540ee018fee8791f3f10">FacetPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#a61efd4196a96540ee018fee8791f3f10">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a61efd4196a96540ee018fee8791f3f10">Document::Element</a>
@@ -1902,10 +1935,11 @@
 </li>
 <li>operator!=()
 : <a class="el" href="classPt_1_1AutoPtr.html#a029ad275f7da4acf1af855a23922236a">AutoPtr&lt; T, Destroy &gt;</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a71ddf830bc504cfc31ee4eab2842a1ca">AutoPtr&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a158eb497dc3e029c852d459195fe1aa9">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#afd179446ef2a78265104038e26b5174b">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a3887764124eb590ec7c7bd63263b5dcc">DateTime</a>
-, <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#aeb8e153aecc6a0551463e338314836ab">Key::Modifiers</a>
+, <a class="el" href="classPt_1_1Db_1_1Blob.html#ad3c7725c5dc6db297817a995f9fb7d6e">Blob</a>
+, <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#ae2327ba2bc9ce6b3a1fe54f2e416b05d">Key::Modifiers</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key.html#a6aa1ea5c60678d8a812ba4644162ce2e">Key</a>
 , <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html#aed480fe5fd83d4055f926ac3c8069965">SizePolicy</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Font.html#abc1cf90c3fce9365a10d128914a3a545">Font</a>
@@ -1949,7 +1983,7 @@
 , <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Forms_1_1FacetPtr.html#a7dec280fcc6cd89b58980bbd6ca0d275">FacetPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#ab90825cd285e28cbdb2c6323747fc32a">PathIterator</a>
-, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#a2bae581b78b4b75255ec1384c494631c">Transform</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Transform.html#ac317590e57062cbc89b4c45e7387ae69">Transform</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a9598d34b024cd6dfe9ef65656439af81">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#ab8668a0afd4e98308473f5d8a96dbd8f">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a25602f5d8391df8b352dfe6f3dba3922">Document::Element</a>
@@ -1971,14 +2005,14 @@
 : <a class="el" href="classPt_1_1Date.html#a8e148dce315438d02f0ea92a687fa5d0">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a289a53eb21b6e9b31ee9f7d7c792d35a">DateTime</a>
 , <a class="el" href="classPt_1_1SourceInfo.html#ac870ec8ede666492231ae5fefa8fdf72">SourceInfo</a>
-, <a class="el" href="classPt_1_1String.html#a6bbff98bddad3570563a3f122ddcbbd8">String</a>
+, <a class="el" href="classPt_1_1String.html#a7ffff62a361379fc3f6cfb1524a5b88f">String</a>
 , <a class="el" href="classPt_1_1Time.html#a9bf26b37f981815c6faf1fb88188fcb2">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ab827785c810b8b244d78f707674a6c09">Timespan</a>
 </li>
 <li>operator++()
 : <a class="el" href="classPt_1_1Date.html#ae6a991aa97305857a8f1f3ce86e56a8e">Date</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a5da1c1ca09b4089e9f8250b2ee8abefe">PathIterator</a>
-, <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#a858a8f58b67c9fc79d628f5ebef436b3">MessageHeader::ConstIterator</a>
+, <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#ab7eab0ba59cfdc636f6acdd4c86ed8f8">MessageHeader::ConstIterator</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#a6cc9e26cb15598521f807c872456d60c">Document::ConstElement</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#ae03db7e3bab6887d136b9df289793e61">Document::Element</a>
 , <a class="el" href="classPt_1_1Json_1_1InputIterator.html#a5aca15d82412956581232e2578603725">InputIterator</a>
@@ -1996,14 +2030,14 @@
 , <a class="el" href="classPt_1_1DateTime.html#a9ab1750e4d8bf705f23c16ce6d24f33f">DateTime</a>
 , <a class="el" href="classPt_1_1Delegate.html#aa53c69b236efc457195b407e18974d8b">Delegate&lt; R, As &gt;</a>
 , <a class="el" href="classPt_1_1Signal.html#ab8fecc96a05ee330b44ebac6a6603232">Signal&lt; As &gt;</a>
-, <a class="el" href="classPt_1_1String.html#a7b02033067050cf3e13fe17696fa3c13">String</a>
-, <a class="el" href="classPt_1_1System_1_1Path.html#a551477cc4faee150c67bfd4369ac8c37">Path</a>
+, <a class="el" href="classPt_1_1String.html#a1b978d07dcdb723bb937642eb0b95b57">String</a>
+, <a class="el" href="classPt_1_1System_1_1Path.html#a9cd17d49ca71aacd113b1d219ca71cc6">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a35690e01f94ba7fcf0302860cfa7217a">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#ad08a656c69fe27b00a6154439444bd81">Timespan</a>
 </li>
 <li>operator-()
 : <a class="el" href="classPt_1_1Date.html#ae50bde3a2c9b7934b310e90bd58c4a1d">Date</a>
-, <a class="el" href="classPt_1_1DateTime.html#a1ef0d8d965acb14d9abe257dd9fe6550">DateTime</a>
+, <a class="el" href="classPt_1_1DateTime.html#a4f505e44abfb29c398a1ee766800f5ad">DateTime</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Point.html#a2db556feb8013b54a7b1691995013606">Point</a>
 , <a class="el" href="classPt_1_1Gfx_1_1PointI.html#a51ab470d45315f3fc25310c0c8f02111">PointI</a>
 , <a class="el" href="classPt_1_1Time.html#af0562f5ada270b837ed6a3466e67eaef">Time</a>
@@ -2037,14 +2071,14 @@
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#abbcb321fe8fcb32d38edf18d5e049862">InputIterator</a>
 </li>
 <li>operator/()
-: <a class="el" href="classPt_1_1System_1_1Path.html#af2f9868ecbef1b906d553d86cb4a11dd">Path</a>
+: <a class="el" href="classPt_1_1System_1_1Path.html#a7721c90bb9da4aef0a482dd06ebd53e3">Path</a>
 </li>
 <li>operator/=()
-: <a class="el" href="classPt_1_1System_1_1Path.html#ab8fc246d149e3c9ac34094f72bfd27d1">Path</a>
+: <a class="el" href="classPt_1_1System_1_1Path.html#a3c68eba76c226cf160d83b2df29930d7">Path</a>
 </li>
 <li>operator&lt;()
 : <a class="el" href="classPt_1_1AutoPtr.html#a148a5cba3dee2bb708a56fce8409bd87">AutoPtr&lt; T, Destroy &gt;</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7642c673da0a33702d5e749fb5a81c99">AutoPtr&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a8a5402ed32d7a952d094748b65bc752f">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a900297f0a1d5018e0c30d2e8fa6a99c6">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#aaec41bb6ed721384b089c34fd87e0085">DateTime</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#a71fb6f5a6019e703f95fb11cc2d28282">Key::Modifiers</a>
@@ -2053,7 +2087,7 @@
 , <a class="el" href="classPt_1_1Gfx_1_1PathIterator.html#a934dfb3d1c9065c4abb878991a01cdc0">PathIterator</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Scaling.html#a68757a602b586b16e632a51d8e61395f">Scaling</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#ac3a00e770145fe57ece2ba4763b0bef3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
-, <a class="el" href="classPt_1_1String.html#a1b6a69897caa901cbf96513bdd73f486">String</a>
+, <a class="el" href="classPt_1_1String.html#a202baf3b75d0117ce2e1762a7c3d8ac0">String</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#abc4f1649f9430830c2ebf74b2294327c">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#aff5f32a3ecb7cc733ed9c59779c1c55e">Path</a>
 , <a class="el" href="classPt_1_1Time.html#a2176bf97f6b18969bb71b7c3f2e56234">Time</a>
@@ -2064,26 +2098,26 @@
 <li>operator&lt;&lt;()
 : <a class="el" href="classPt_1_1Arg.html#a4bf8e8df7e0ce9b07dd95a06b2a5480d">Arg&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1String.html#a54e7c59a4c450a81fe60ee7753d91444">String</a>
-, <a class="el" href="classPt_1_1System_1_1LogMessage.html#a7ace7e3495f61900e0af56b4f92aabb7">LogMessage</a>
-, <a class="el" href="classPt_1_1System_1_1LogRecord.html#a26d5f1f280759a7a03dde5ed3fcf4ee9">LogRecord</a>
+, <a class="el" href="classPt_1_1System_1_1LogMessage.html#a9f029c2a40b5465e01e90bf673481b88">LogMessage</a>
+, <a class="el" href="classPt_1_1System_1_1LogRecord.html#a0c0f7ecd3612e4f474d3d90d6e95f012">LogRecord</a>
 </li>
 <li>operator&lt;&lt;=()
 : <a class="el" href="classPt_1_1Date.html#abb486a3a4ba29e5e1425f37dad28ff79">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#ad6ec544ced0e04e69a7427c6404bb0b7">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#aa7665263679aeb8fb019cf60cce8116c">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a47fcd12931419d9a16dfcbcb155fb0ae">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a06b41188437d96b459699fcbd69ba6b7">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#ab220dae46e89b7286c6dfd93b1a22aa8">Time</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="classPt_1_1Date.html#a54e8d7e0bf2a62a64edbf0163b916964">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#abf9627c22b617dd531e214056bc67f92">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#a448930d2d2d620e139fdf62b1dc41179">String</a>
+, <a class="el" href="classPt_1_1String.html#ae11048dfde3ca389fb8fd8f155419c61">String</a>
 , <a class="el" href="classPt_1_1Time.html#a6a0cd3c0e9278655b3751210ee91ab22">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#a22b73b37156a4f6beed7dacbb4e80964">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#ae6865e5a731ebd557b801c5b10948edb">TypeInfo</a>
 </li>
 <li>operator=()
-: <a class="el" href="classPt_1_1Any.html#a57db7ebd4b66b495fd2247f7b58b5644">Any</a>
+: <a class="el" href="classPt_1_1Any.html#aff84600274cc918767b3fe358172083a">Any</a>
 , <a class="el" href="classPt_1_1AutoPtr.html#a7e432e9cab07c3bd710fd8da4c71aee1">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1AwaiterBase.html#a1f6b205a6f9705615f5a737dd61b1b75">AwaiterBase</a>
 , <a class="el" href="classPt_1_1Connectable.html#abcf9a8b573a667282e80d5182f7f0c46">Connectable</a>
@@ -2118,24 +2152,26 @@
 , <a class="el" href="classPt_1_1RegexSMatch.html#a5f597404a86f77f4365f61c8d495fa05">RegexSMatch</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a9c76d25b309e5012ca135e6768ef25c3">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a098521b7d40674cefdc71c327bf95f61">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#aa7694556e438408131523c949aeecdd0">String</a>
+, <a class="el" href="classPt_1_1String.html#a5eb07ee8a460b6568316ac3e9d0997c4">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#ad4fbf13550fdca8eae388e8f40daa391">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a1e476f19923f26dd9fe90e8ce3e8eaba">Library</a>
-, <a class="el" href="classPt_1_1System_1_1Path.html#a94de7a6556038eaba998a927e959ed60">Path</a>
+, <a class="el" href="classPt_1_1System_1_1Path.html#aabdad23ab07a625023972a679a40f4e4">Path</a>
 , <a class="el" href="classPt_1_1System_1_1TarEntry.html#a42b1db701d4977779a13d4724f8503e4">TarEntry</a>
 , <a class="el" href="classPt_1_1Task.html#a6b2d4ac2ee4bd6c27a809803f54857c2">Task&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#acb9b42de1a5b9b7dbb7b013dfc372ada">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#aec03ed9fcb9723e8e81506cadbd74c85">Timespan</a>
-, <a class="el" href="classPt_1_1Utf8Appender.html#a9697fcb43030fa1478e9038762709774">Utf8Appender</a>
+, <a class="el" href="classPt_1_1Utf8Appender.html#ac8062e6216b6962718709941565977ef">Utf8Appender</a>
 , <a class="el" href="classPt_1_1Utf8Iterator.html#aef23d502fda6b68f539fc59c4da710f5">Utf8Iterator</a>
 , <a class="el" href="classPt_1_1Xml_1_1InputIterator.html#a75426e8cb2f5ef29ad0a59df52104455">InputIterator</a>
 </li>
 <li>operator==()
-: <a class="el" href="classPt_1_1AutoPtr.html#a8362c744dadb40fbed1027cdfeb7f632">AutoPtr&lt; T, Destroy &gt;</a>
+: <a class="el" href="classPt_1_1AutoPtr.html#aadf5d4a0b6e47fe277b62d40ac36cafa">AutoPtr&lt; T, Destroy &gt;</a>
 , <a class="el" href="classPt_1_1ConstMethod.html#aee3b7d3465f814822ced92b202ae072f">ConstMethod&lt; R, ClassT, As &gt;</a>
-, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a7a45f757bd45a50886a01a0f72c3be53">AutoPtr&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Cosmo_1_1AutoPtr.html#a38ca026ee98863972e1968c5a6288633">AutoPtr&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1Date.html#a9cfaaa2dd5867578b32c02fd8bc16339">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#a15ab62ed982a1d04015c4e94597e225e">DateTime</a>
+, <a class="el" href="classPt_1_1Db_1_1Blob.html#a485ef0c3b9faae637631fdf7a7a0322e">Blob</a>
+, <a class="el" href="classPt_1_1Db_1_1IBlob.html#aed685513e411aa784565a764d63b52b2">IBlob</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#a0bbe1923318776097a4259ed92eb6d38">Key::Modifiers</a>
 , <a class="el" href="classPt_1_1Forms_1_1Key.html#a26ee4aba0499341a047dc0b3dc292e6b">Key</a>
 , <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html#a827cbae1039c9872e49ce229d5705093">SizePolicy</a>
@@ -2154,7 +2190,7 @@
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a5dc3af8dc225a06f0159b9d15693ca68">Settings::Entry</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a4b50a58375f69e6824a9cf89f7978ebc">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#a19e4c4bfe35c5d933d7b25f7bfb243eb">CertificateStore::ConstIterator</a>
-, <a class="el" href="classPt_1_1String.html#ac6f0899ae6599fb32b39d37f64d0c18d">String</a>
+, <a class="el" href="classPt_1_1String.html#a88562729899134c99b1fbdb90795b2a8">String</a>
 , <a class="el" href="classPt_1_1System_1_1DirectoryIterator.html#a782fd50847dd704b91ddae9f0132a0c7">DirectoryIterator</a>
 , <a class="el" href="classPt_1_1System_1_1FileInfo.html#ae38434c56f5619be818100c28957c5de">FileInfo</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#a30c93fb5000eed1d3da891f5a7dcb519">Path</a>
@@ -2169,7 +2205,7 @@
 <li>operator&gt;()
 : <a class="el" href="classPt_1_1Date.html#a0522a0522684cb4206274de78a4f2fce">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#adabc4caa88be53935e7c3d210821c97a">DateTime</a>
-, <a class="el" href="classPt_1_1String.html#a205ea1d9dbe3934a97bd006b77561f6b">String</a>
+, <a class="el" href="classPt_1_1String.html#ac350375d335503a11852b4f6e8c92068">String</a>
 , <a class="el" href="classPt_1_1Time.html#a8527bf1c14fd3ecf9d5ad2f3e2706ab3">Time</a>
 , <a class="el" href="classPt_1_1Timespan.html#a25792d4699ea5acb28dea4c71e7912b9">Timespan</a>
 , <a class="el" href="classPt_1_1TypeInfo.html#a98c4a8b3fb7af8d157c6b73640656113">TypeInfo</a>
@@ -2185,18 +2221,20 @@
 <li>operator&gt;&gt;=()
 : <a class="el" href="classPt_1_1Date.html#a808244de45ec52b6fa77e3d8a17854b5">Date</a>
 , <a class="el" href="classPt_1_1DateTime.html#afc1517c44d2c4427905054c505be94b5">DateTime</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#a1c61e1013a274def60ba4c0b3eef9dca">SerializationInfo</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a381a3fc476b42b5c227ac9718ba91426">SerializationInfo</a>
 , <a class="el" href="classPt_1_1SmartPtr.html#a5086a18d7e6423ff5647f7defab8ea6b">SmartPtr&lt; T, OwnershipPolicy, DestroyPolicy &gt;</a>
 , <a class="el" href="classPt_1_1Time.html#aefa2b547256e14ed0cb125c60b88ccd1">Time</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html#aeef1b0103701898b7d3dd1b58b06ca4b">ColorStops</a>
+: <a class="el" href="classPt_1_1Db_1_1Result.html#a88056ff16bbc55469e6ddd18baa2f710">Result</a>
+, <a class="el" href="classPt_1_1Db_1_1Row.html#a53ec6d8090656eabd8a5220a35ba53ce">Row</a>
+, <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html#aeef1b0103701898b7d3dd1b58b06ca4b">ColorStops</a>
 , <a class="el" href="classPt_1_1Json_1_1Document_1_1ConstElement.html#aaad18846f5f2e539f58fb51bdde5d139">Document::ConstElement</a>
-, <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#af488dde00041eac0bde68d95f15d904e">Document::Element</a>
-, <a class="el" href="classPt_1_1Json_1_1Document.html#a666b0f026e9d3fbe3d574bd7b747a48d">Document</a>
-, <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#afa69993ac24702fbc591d47cfec3cb3e">Settings::ConstEntry</a>
+, <a class="el" href="classPt_1_1Json_1_1Document_1_1Element.html#a38ddf700deb69da473dfda2705d7a027">Document::Element</a>
+, <a class="el" href="classPt_1_1Json_1_1Document.html#a7b06dc3f43d6ceffae1e082b9f04000a">Document</a>
+, <a class="el" href="classPt_1_1Settings_1_1ConstEntry.html#a45c3214120b6ca60fbccd20a5257c530">Settings::ConstEntry</a>
 , <a class="el" href="classPt_1_1Settings_1_1Entry.html#a78e897e33ef0d5bf5aea29db12664f5b">Settings::Entry</a>
-, <a class="el" href="classPt_1_1Settings.html#ad78305c166c2975ecce6b5e729db6df0">Settings</a>
+, <a class="el" href="classPt_1_1Settings.html#adab603e669e28108db4ef6cf5386f8ec">Settings</a>
 , <a class="el" href="classPt_1_1String.html#ab2dcd7f3085e06f35ff2ba6f05f6a469">String</a>
 , <a class="el" href="classPt_1_1System_1_1Library.html#a0f0624726fef324c78e32f87fd1dd4be">Library</a>
 </li>
@@ -2205,7 +2243,7 @@
 </li>
 <li>operator|()
 : <a class="el" href="classPt_1_1Forms_1_1Key_1_1Modifiers.html#a1fef222446fc23794194c3cba77bb82d">Key::Modifiers</a>
-, <a class="el" href="classPt_1_1System_1_1FileInfo.html#abba573db61d1ee96386f1faca4d18dab">FileInfo</a>
+, <a class="el" href="classPt_1_1System_1_1FileInfo.html#a9e166591c7704e91ff31ee66de2be658">FileInfo</a>
 </li>
 <li>operator|=()
 : <a class="el" href="classPt_1_1System_1_1FileInfo.html#a9e3910d8b81004b254cee1b1e796133a">FileInfo</a>
@@ -2215,21 +2253,21 @@
 </li>
 <li>options()
 : <a class="el" href="classPt_1_1Forms_1_1ButtonStyler.html#a878d8845d08b04f5d598d9361ffff4e3">ButtonStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1CheckBoxStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">CheckBoxStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1CheckBoxStyler.html#a878d8845d08b04f5d598d9361ffff4e3">CheckBoxStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1ComboBoxStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ComboBoxStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1LineEditStyler.html#a878d8845d08b04f5d598d9361ffff4e3">LineEditStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1ListItemStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ListItemStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1LineEditStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">LineEditStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1ListItemStyler.html#a878d8845d08b04f5d598d9361ffff4e3">ListItemStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1PanelStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">PanelStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1ProgressBarStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">ProgressBarStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1SliderStyler.html#a878d8845d08b04f5d598d9361ffff4e3">SliderStyler</a>
-, <a class="el" href="classPt_1_1Forms_1_1SpinBoxStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">SpinBoxStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1SliderStyler.html#ac33cc640ad29cbccd3735aa9fabd9eb0">SliderStyler</a>
+, <a class="el" href="classPt_1_1Forms_1_1SpinBoxStyler.html#a878d8845d08b04f5d598d9361ffff4e3">SpinBoxStyler</a>
 , <a class="el" href="classPt_1_1Forms_1_1TabViewStyler.html#a878d8845d08b04f5d598d9361ffff4e3">TabViewStyler</a>
 </li>
 <li>origin()
 : <a class="el" href="classPt_1_1Gfx_1_1Canvas.html#a8bf64196b5980b3787c2b3bc1d25ea83">Canvas</a>
 </li>
 <li>OStream()
-: <a class="el" href="classPt_1_1System_1_1OStream.html#acf781b0015f15fa09b4a8e3b4ad19d38">OStream</a>
+: <a class="el" href="classPt_1_1System_1_1OStream.html#a852447bc0e5e3e1c469e4fa453870090">OStream</a>
 </li>
 <li>out()
 : <a class="el" href="classPt_1_1SaveInfo.html#a7833bee8ef27bf29a78d7b1b3553902c">SaveInfo</a>

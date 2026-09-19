@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Rect Class Reference</div>  </div>
+<div class="title">Rect Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Rect_8h_source.html">Pt/Gfx/Rect.h</a>&gt;</code></p>
 
-<p>Rect with floating-point coordinates.  
-</p>
+<p>Floating-point rectangle.  
+ <a href="classPt_1_1Gfx_1_1Rect.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -167,7 +167,19 @@ static <a class="el" href="classPt_1_1Gfx_1_1Rect.html">Rect</a>&#160;</td><td c
 <tr class="memdesc:a49b6b271a9c6a3e15bfc1d0298d629c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rect from x, y, width, and height. <br /></td></tr>
 <tr class="separator:a49b6b271a9c6a3e15bfc1d0298d629c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Rect is an origin Point and a Size. Drawing clips, fill rectangles, and path bounds use this type. Image regions use integer rectangles; convert with round(), floor(), ceil(), roundOut(), or roundIn() when a pixel rect is required. RectF is a typedef of this type.</p>
+<p>The origin is the top-left. right() and bottom() are origin plus size, and contains(const <a class="el" href="classPt_1_1Gfx_1_1Point.html" title="Floating-point X and Y coordinates.">Point</a>&amp;) treats the right and bottom edges as exclusive. isEmpty() is true when width or height is zero. Negative width or height is allowed until normalize() moves the origin so both are non-negative.</p>
+<p>Construct from a point and a size, from a size at the origin, from two corner points, or with fromLTRB() and fromXYWH(). Widen a RectI with the explicit constructor.</p>
+<p>unify() grows this rect to include another. toIntersected() returns the overlap, or an empty rect. intersects() is true when the interiors overlap.</p>
+<p>The example constructs a clip rectangle and tests a point.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a> r = <a class="code" href="classPt_1_1Gfx_1_1Rect.html#a49b6b271a9c6a3e15bfc1d0298d629c0">Pt::Gfx::Rect::fromXYWH</a>(10, 20, 100, 50);</div>
+<div class="line"><span class="keywordtype">bool</span> inside = r.<a class="code" href="classPt_1_1Gfx_1_1Rect.html#a5ffa49438ba3e84f30819f531de9072e">contains</a>(<a class="code" href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a>(15, 25));</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:73</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html_a49b6b271a9c6a3e15bfc1d0298d629c0"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html#a49b6b271a9c6a3e15bfc1d0298d629c0">Pt::Gfx::Rect::fromXYWH</a></div><div class="ttdeci">static Rect fromXYWH(Float x, Float y, Float w, Float h)</div><div class="ttdoc">Creates a rect from x, y, width, and height.</div><div class="ttdef"><b>Definition:</b> Rect.h:125</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html_a5ffa49438ba3e84f30819f531de9072e"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html#a5ffa49438ba3e84f30819f531de9072e">Pt::Gfx::Rect::contains</a></div><div class="ttdeci">bool contains(const Point &amp;p) const</div><div class="ttdoc">Returns true if the given point is inside or on the edge of this rect.</div><div class="ttdef"><b>Definition:</b> Rect.h:305</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Rect_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Rect.html">Pt::Gfx::Rect</a></div><div class="ttdoc">Floating-point rectangle.</div><div class="ttdef"><b>Definition:</b> Rect.h:76</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

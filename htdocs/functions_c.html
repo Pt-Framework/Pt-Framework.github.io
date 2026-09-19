@@ -90,6 +90,11 @@
 , <a class="el" href="classPt_1_1ConstMethod.html#a8eafc9fafa41fc928d7d905b61ff0e9e">ConstMethod&lt; R, ClassT, As &gt;</a>
 , <a class="el" href="classPt_1_1Delegate.html#abd3f354e905203c9d25f76b549a59aea">Delegate&lt; R, As &gt;</a>
 , <a class="el" href="classPt_1_1Function.html#a8eafc9fafa41fc928d7d905b61ff0e9e">Function&lt; R, As &gt;</a>
+, <a class="el" href="classPt_1_1Lua_1_1Call.html#a7d7d09572e006d45ca0f51db2dd9e7c1">Call</a>
+, <a class="el" href="classPt_1_1Lua_1_1ConstructorCall.html#af62f7b94a27d4eb9ba1cd709edf96997">ConstructorCall</a>
+, <a class="el" href="classPt_1_1Lua_1_1MethodCall.html#af62f7b94a27d4eb9ba1cd709edf96997">MethodCall</a>
+, <a class="el" href="classPt_1_1Lua_1_1PropertyGetCall.html#af62f7b94a27d4eb9ba1cd709edf96997">PropertyGetCall</a>
+, <a class="el" href="classPt_1_1Lua_1_1PropertySetCall.html#af62f7b94a27d4eb9ba1cd709edf96997">PropertySetCall</a>
 , <a class="el" href="classPt_1_1Method.html#a8eafc9fafa41fc928d7d905b61ff0e9e">Method&lt; R, ClassT, As &gt;</a>
 , <a class="el" href="classPt_1_1Remoting_1_1RemoteProcedure.html#a585bb43cc46ead593e538dd9b67a5cd9">RemoteProcedure&lt; R, As &gt;</a>
 , <a class="el" href="classPt_1_1Remoting_1_1Responder.html#a041d6c9ef8b2768d2a63839a8ddbfa10">Responder</a>
@@ -108,6 +113,8 @@
 <li>cancel()
 : <a class="el" href="classPt_1_1Awaiter.html#a74f085a8831b0100cd85229d3d226114">Awaiter</a>
 , <a class="el" href="classPt_1_1AwaiterBase.html#aa84b12a9400de0ee732e9415c29101dd">AwaiterBase</a>
+, <a class="el" href="classPt_1_1Db_1_1Connection.html#a02d5fa6b14e221f3012a794b905be166">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1Statement.html#a02d5fa6b14e221f3012a794b905be166">Statement</a>
 , <a class="el" href="classPt_1_1Forms_1_1MenuBase.html#a02d5fa6b14e221f3012a794b905be166">MenuBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#a02d5fa6b14e221f3012a794b905be166">MenuMenuItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#a02d5fa6b14e221f3012a794b905be166">MenuSubItem</a>
@@ -115,6 +122,7 @@
 , <a class="el" href="classPt_1_1Generator_1_1NextAwaiter.html#a74f085a8831b0100cd85229d3d226114">Generator&lt; T &gt;::NextAwaiter</a>
 , <a class="el" href="classPt_1_1Http_1_1IOStream.html#a02d5fa6b14e221f3012a794b905be166">IOStream</a>
 , <a class="el" href="classPt_1_1Http_1_1Server.html#a02d5fa6b14e221f3012a794b905be166">Server</a>
+, <a class="el" href="classPt_1_1Lua_1_1AsyncCall.html#a02d5fa6b14e221f3012a794b905be166">AsyncCall</a>
 , <a class="el" href="classPt_1_1Remoting_1_1Client.html#a02d5fa6b14e221f3012a794b905be166">Client</a>
 , <a class="el" href="classPt_1_1Remoting_1_1Responder.html#a02d5fa6b14e221f3012a794b905be166">Responder</a>
 , <a class="el" href="classPt_1_1System_1_1AsyncYield.html#a74f085a8831b0100cd85229d3d226114">AsyncYield</a>
@@ -123,6 +131,18 @@
 </li>
 <li>cancelAuthorization()
 : <a class="el" href="classPt_1_1Http_1_1Authorizer.html#a8140f3eca2a72b9c245d2254a29b30a3">Authorizer</a>
+</li>
+<li>cancelConnection()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#aa5a705526a69da55b819767e1e62d4e8">IConnection</a>
+</li>
+<li>cancelCursor()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#a68fd378c7347f5955a2fe586cef3bb3d">IConnection</a>
+</li>
+<li>cancelPending()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#aa07c85b939c6ddf8a1007becc58ea826">IConnection</a>
+</li>
+<li>cancelStatement()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#a1a13946f13a890c0b209182cd3bdd70d">IConnection</a>
 </li>
 <li>canvas()
 : <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#ae81a930db4bce8afd85a42948ec4adb5">PainterBase</a>
@@ -136,11 +156,11 @@
 <li>capHeight()
 : <a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html#ac8849906c4bcdd2dbf1a2030424a3c50">FontMetrics</a>
 </li>
-<li>capStyle()
-: <a class="el" href="classPt_1_1Gfx_1_1Pen.html#a9a61e698a15695c17010ecb223362e1d">Pen</a>
-</li>
 <li>CapStyle
 : <a class="el" href="classPt_1_1Gfx_1_1Pen.html#a63806a3e806775b35bb9373a3ec0c555">Pen</a>
+</li>
+<li>capStyle()
+: <a class="el" href="classPt_1_1Gfx_1_1Pen.html#a9a61e698a15695c17010ecb223362e1d">Pen</a>
 </li>
 <li>capture()
 : <a class="el" href="classPt_1_1Forms_1_1Application.html#a504398af7d6948eef905e956108df54a">Application</a>
@@ -148,11 +168,11 @@
 <li>catchSystemSignal()
 : <a class="el" href="classPt_1_1System_1_1Application.html#a4ef882542c4efc27d6db24864e18d9a6">Application</a>
 </li>
-<li>category()
-: <a class="el" href="classPt_1_1Gfx_1_1Font.html#a76e6b75b3ebf70bf6bcbf01d17c95d16">Font</a>
-</li>
 <li>Category
 : <a class="el" href="classPt_1_1Gfx_1_1Font.html#a9ca8f05608edcbf85ab6c2c85a439ccb">Font</a>
+</li>
+<li>category()
+: <a class="el" href="classPt_1_1Gfx_1_1Font.html#a76e6b75b3ebf70bf6bcbf01d17c95d16">Font</a>
 </li>
 <li>ceil()
 : <a class="el" href="classPt_1_1Gfx_1_1Point.html#a7e88e6c33ecddaf5e5a314398c202a95">Point</a>
@@ -218,6 +238,8 @@
 </li>
 <li>clear()
 : <a class="el" href="classPt_1_1Any.html#ac8bb3912a3ce86b15842e79d0b421204">Any</a>
+, <a class="el" href="classPt_1_1Db_1_1IStatement.html#a5eeb94d22b8366d1b68d0614384802fe">IStatement</a>
+, <a class="el" href="classPt_1_1Db_1_1Statement.html#a1b46cd1a52da0106bdba174bed500c40">Statement</a>
 , <a class="el" href="classPt_1_1Deserializer.html#ac8bb3912a3ce86b15842e79d0b421204">Deserializer</a>
 , <a class="el" href="classPt_1_1Forms_1_1Icon.html#ac8bb3912a3ce86b15842e79d0b421204">Icon</a>
 , <a class="el" href="classPt_1_1Forms_1_1IconProvider.html#a5eeb94d22b8366d1b68d0614384802fe">IconProvider</a>
@@ -260,6 +282,11 @@
 , <a class="el" href="classPt_1_1Xml_1_1StartDocument.html#ac8bb3912a3ce86b15842e79d0b421204">StartDocument</a>
 , <a class="el" href="classPt_1_1Xml_1_1StartElement.html#ac8bb3912a3ce86b15842e79d0b421204">StartElement</a>
 , <a class="el" href="classPt_1_1Xml_1_1XmlDeclaration.html#ac8bb3912a3ce86b15842e79d0b421204">XmlDeclaration</a>
+</li>
+<li>clearStatementCache()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#acdcf6c54afa1b3135a46bd503f7ec661">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a0182a7fa3dfd7d9be1ab7c167037cbcd">IConnection</a>
+, <a class="el" href="classPt_1_1Db_1_1IStmtCacheConnection.html#aaa78dc7a6bb491ed160712c973f2ddd4">IStmtCacheConnection</a>
 </li>
 <li>click()
 : <a class="el" href="classPt_1_1Forms_1_1Button.html#aaf95c7d4a7146c811cbaab4aace7c8a4">Button</a>
@@ -309,6 +336,8 @@
 </li>
 <li>close()
 : <a class="el" href="classPt_1_1Connection.html#a5ae591df94fc66ccb85cbb6565368bca">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1Cursor.html#a5ae591df94fc66ccb85cbb6565368bca">Cursor</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a5ae591df94fc66ccb85cbb6565368bca">IConnection</a>
 , <a class="el" href="classPt_1_1Forms_1_1Window.html#a5ae591df94fc66ccb85cbb6565368bca">Window</a>
 , <a class="el" href="classPt_1_1Gfx_1_1Path.html#a5ae591df94fc66ccb85cbb6565368bca">Path</a>
 , <a class="el" href="classPt_1_1Http_1_1Client.html#a5ae591df94fc66ccb85cbb6565368bca">Client</a>
@@ -327,23 +356,32 @@
 <li>close()
 : <a class="el" href="classPt_1_1XmlRpc_1_1HttpClient.html#a5ae591df94fc66ccb85cbb6565368bca">HttpClient</a>
 </li>
+<li>closeAsync()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#aeebe0573476be697f621139f50aa1b6e">Connection</a>
+</li>
 <li>closed()
 : <a class="el" href="classPt_1_1Forms_1_1Window.html#adbf5d15f23a6d8d692705e11c4b4364b">Window</a>
 </li>
 <li>CloseEvent()
 : <a class="el" href="classPt_1_1Forms_1_1CloseEvent.html#a69e2be74b5230770aafeb4b89561f3a4">CloseEvent</a>
 </li>
+<li>closeFinished()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a52745078f354b325ce4d1b702dfc3765">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a52745078f354b325ce4d1b702dfc3765">IConnection</a>
+</li>
 <li>closeMenu()
 : <a class="el" href="classPt_1_1Forms_1_1MenuBase.html#aac3540fb2920ec9d86f915ab6c78fce1">MenuBase</a>
 , <a class="el" href="classPt_1_1Forms_1_1MenuMenuItem.html#ac8d78534d723d2c92c9dd9f81d97bc97">MenuMenuItem</a>
 , <a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html#ac8d78534d723d2c92c9dd9f81d97bc97">MenuSubItem</a>
 </li>
+<li>code()
+: <a class="el" href="classPt_1_1Forms_1_1Key.html#a723f1fbb509ace247a3e98dc4daa976c">Key</a>
+</li>
 <li>Code
 : <a class="el" href="classPt_1_1Forms_1_1Key.html#af31477bc48f67856bedb0fa8e5b5281d">Key</a>
 </li>
 <li>code()
-: <a class="el" href="classPt_1_1Forms_1_1Key.html#a723f1fbb509ace247a3e98dc4daa976c">Key</a>
-, <a class="el" href="classPt_1_1JsonRpc_1_1Fault.html#a4aebcfaf2368eb240cf5111cc6fc140b">Fault</a>
+: <a class="el" href="classPt_1_1JsonRpc_1_1Fault.html#a4aebcfaf2368eb240cf5111cc6fc140b">Fault</a>
 </li>
 <li>codec()
 : <a class="el" href="classPt_1_1BasicTextBuffer.html#a54574703fecaff6ef4a111d60e173445">BasicTextBuffer&lt; CharT, ByteT &gt;</a>
@@ -393,12 +431,21 @@
 <li>Comment()
 : <a class="el" href="classPt_1_1Xml_1_1Comment.html#a15c8ebc41fe4315c50ba0586f90140b6">Comment</a>
 </li>
+<li>commit()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#ad55316f5135cdae6aa6c5a763f6c3473">Transaction</a>
+</li>
 <li>commitEvent()
 : <a class="el" href="classPt_1_1Forms_1_1Application.html#a40c8ef93b92a3fb86475dca464fbacbc">Application</a>
 , <a class="el" href="classPt_1_1System_1_1EventSink.html#a40c8ef93b92a3fb86475dca464fbacbc">EventSink</a>
 </li>
+<li>commitFinished()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#a5bc0299cbfb160a52c91007674ac78a8">Transaction</a>
+</li>
+<li>commitTransaction()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#adb4acf181ee37dd5966dfeee7919a30b">IConnection</a>
+</li>
 <li>compare()
-: <a class="el" href="classPt_1_1String.html#a60c1859147b2c842915857d689f22936">String</a>
+: <a class="el" href="classPt_1_1String.html#a62518174020f65919e8d7578a7015c55">String</a>
 , <a class="el" href="classPt_1_1System_1_1Path.html#ab42ac055048e0dece1f93dd6c2a4744a">Path</a>
 </li>
 <li>Component()
@@ -439,13 +486,13 @@
 </li>
 <li>connect()
 : <a class="el" href="classPt_1_1Delegate.html#a388d5be7d03361475f0e98d72f1a3460">Delegate&lt; R, As &gt;</a>
-, <a class="el" href="classPt_1_1Net_1_1TcpSocket.html#aea676309d63eaa953da8c4b0baf64c60">TcpSocket</a>
+, <a class="el" href="classPt_1_1Net_1_1TcpSocket.html#aea124a8329b255068b687431e20258d8">TcpSocket</a>
 , <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aea676309d63eaa953da8c4b0baf64c60">UdpSocket</a>
 , <a class="el" href="classPt_1_1Signal.html#abcc75b12badc9497caaff6d6da1322b9">Signal&lt; As &gt;</a>
 , <a class="el" href="classPt_1_1System_1_1EventSource.html#a7b7044b6f2bfbf28da5c35fc5fc72d39">EventSource</a>
 </li>
 <li>Connectable()
-: <a class="el" href="classPt_1_1Connectable.html#a399dbeee245691f9645976037a7ff6f1">Connectable</a>
+: <a class="el" href="classPt_1_1Connectable.html#aa815fa1cbb90aee181344ec4ee90f84a">Connectable</a>
 </li>
 <li>connected()
 : <a class="el" href="classPt_1_1Http_1_1WebSocket.html#a432323242eb1dd73661df89cc67869db">WebSocket</a>
@@ -456,7 +503,12 @@
 : <a class="el" href="classPt_1_1Connection.html#ab3f94257fa99c5755f8b51e9637e72c8">Connection</a>
 </li>
 <li>connection()
-: <a class="el" href="classPt_1_1Http_1_1Message.html#aea424cd7df0b8d59c7a961d2c487b65e">Message</a>
+: <a class="el" href="classPt_1_1Db_1_1ICursor.html#aa05c07fcc34f81a7e0be19dd8366cd97">ICursor</a>
+, <a class="el" href="classPt_1_1Db_1_1IStatement.html#aa05c07fcc34f81a7e0be19dd8366cd97">IStatement</a>
+, <a class="el" href="classPt_1_1Http_1_1Message.html#aea424cd7df0b8d59c7a961d2c487b65e">Message</a>
+</li>
+<li>ConnectionError()
+: <a class="el" href="classPt_1_1Db_1_1ConnectionError.html#aa20ad8011e458a3e9d658c52b39eeada">ConnectionError</a>
 </li>
 <li>connectionPending()
 : <a class="el" href="classPt_1_1Net_1_1TcpServer.html#a9831c2e82cb966ffb00c925eb80aedaa">TcpServer</a>
@@ -464,7 +516,7 @@
 <li>ConstIterator
 : <a class="el" href="classPt_1_1Forms_1_1TextBlock.html#a79b4bf04bef4ae6c8ba3b2059ab8299c">TextBlock</a>
 , <a class="el" href="classPt_1_1Http_1_1MessageHeader_1_1ConstIterator.html#aef44228e669dcefd36cced5bb991720c">MessageHeader::ConstIterator</a>
-, <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#aef44228e669dcefd36cced5bb991720c">CertificateStore::ConstIterator</a>
+, <a class="el" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html#afb044f645b46fc5e7a195284d1a6270a">CertificateStore::ConstIterator</a>
 , <a class="el" href="classPt_1_1Xml_1_1AttributeList.html#a08433f3d1d0a7f96d8c0f697f6e98e1a">AttributeList</a>
 </li>
 <li>ConstMethod()
@@ -476,36 +528,47 @@
 <li>ConstPointer
 : <a class="el" href="structPt_1_1TypeTraits.html#a976960298e9f635db316ee4b9c20721f">TypeTraits&lt; T &gt;</a>
 </li>
+<li>ConstraintMismatch()
+: <a class="el" href="classPt_1_1Db_1_1ConstraintMismatch.html#a7692b37b4409b1f7394aa357121b277c">ConstraintMismatch</a>
+</li>
 <li>ConstReference
 : <a class="el" href="structPt_1_1TypeTraits.html#a835ef035ef8ac9d24b968d2fc34aa845">TypeTraits&lt; T &gt;</a>
+</li>
+<li>ConstructorCall()
+: <a class="el" href="classPt_1_1Lua_1_1ConstructorCall.html#a53864ad63854cd96bf1e3d7123e9bc0b">ConstructorCall</a>
 </li>
 <li>ConstValue
 : <a class="el" href="structPt_1_1TypeTraits.html#af24b45c1e88fa52b73776ffc6a966bfe">TypeTraits&lt; T &gt;</a>
 </li>
 <li>contains()
-: <a class="el" href="classPt_1_1Gfx_1_1Path.html#aeda2d86833d9f61923f16f3a266250b8">Path</a>
-, <a class="el" href="classPt_1_1Gfx_1_1Rect.html#a5ffa49438ba3e84f30819f531de9072e">Rect</a>
-, <a class="el" href="classPt_1_1Gfx_1_1RectI.html#a1c546f97c42127dfa50a9452b75e7083">RectI</a>
+: <a class="el" href="classPt_1_1Gfx_1_1Path.html#ab0470e3a5ff00bf1df3ba1d8d28b3191">Path</a>
+, <a class="el" href="classPt_1_1Gfx_1_1Rect.html#a16299ab0f30587894ebd3f9438a2366f">Rect</a>
+, <a class="el" href="classPt_1_1Gfx_1_1RectI.html#a0588f9f3ae29dce310e5f981eb69fa84">RectI</a>
 </li>
 <li>content()
 : <a class="el" href="classPt_1_1Forms_1_1Form.html#a97855489e372a20def2abc161500fdbe">Form</a>
 , <a class="el" href="classPt_1_1Forms_1_1Panel.html#ad88d88efc48251c58731ea14d9ab1041">Panel</a>
 , <a class="el" href="classPt_1_1Forms_1_1Workspace.html#a97855489e372a20def2abc161500fdbe">Workspace</a>
+, <a class="el" href="classPt_1_1Mcp_1_1Tool.html#a4dfffcee9a42d9fde4d1f6046c20a931">Tool</a>
 , <a class="el" href="classPt_1_1Xml_1_1Characters.html#a253b9eee09785497185587955ac9deb2">Characters</a>
 , <a class="el" href="classPt_1_1Xml_1_1Comment.html#a5b94753af075788acc938283f68eea0c">Comment</a>
+</li>
+<li>ContentFormatter()
+: <a class="el" href="classPt_1_1Mcp_1_1ContentFormatter.html#af30acde4ff9d2e370b49f07230069b8d">ContentFormatter</a>
 </li>
 <li>contentLength()
 : <a class="el" href="classPt_1_1Http_1_1MessageHeader.html#a43b0b6f15f2b740bb386a64ad8483f87">MessageHeader</a>
 </li>
 <li>context()
 : <a class="el" href="classPt_1_1Deserializer.html#aab3b30330268d887bb23393801dabed1">Deserializer</a>
-, <a class="el" href="classPt_1_1SerializationInfo.html#ac33af7ac3b24f93f180981da2a378556">SerializationInfo</a>
 </li>
-<li>Context
-: <a class="el" href="classPt_1_1SerializationInfo.html#a1d1cfd8ffb84e947f82999c682b666a7a1f1c77c8a266dba0af92df48f3691801">SerializationInfo</a>
+<li>Context()
+: <a class="el" href="classPt_1_1Lua_1_1Context.html#a56c0395832361f12d91e71bce3202985">Context</a>
+, <a class="el" href="classPt_1_1SerializationInfo.html#a1d1cfd8ffb84e947f82999c682b666a7a1f1c77c8a266dba0af92df48f3691801">SerializationInfo</a>
 </li>
 <li>context()
-: <a class="el" href="classPt_1_1Serializer.html#aab3b30330268d887bb23393801dabed1">Serializer</a>
+: <a class="el" href="classPt_1_1SerializationInfo.html#ac33af7ac3b24f93f180981da2a378556">SerializationInfo</a>
+, <a class="el" href="classPt_1_1Serializer.html#aab3b30330268d887bb23393801dabed1">Serializer</a>
 </li>
 <li>Context()
 : <a class="el" href="classPt_1_1Ssl_1_1Context.html#a862504a9b81b95685bcb4e97e74cab89">Context</a>
@@ -553,7 +616,7 @@
 : <a class="el" href="classPt_1_1Forms_1_1Control.html#afae434ace06fc82dc95e800e7ffc039e">Control</a>
 </li>
 <li>ConversionError()
-: <a class="el" href="classPt_1_1ConversionError.html#a7452d4343f105c8356725e9686dd1b90">ConversionError</a>
+: <a class="el" href="classPt_1_1ConversionError.html#a8ac775495602eec86a3865614183d997">ConversionError</a>
 </li>
 <li>copy()
 : <a class="el" href="classPt_1_1String.html#a740c6d7b28bdacde55108c2abdfa62ae">String</a>
@@ -563,6 +626,8 @@
 </li>
 <li>create()
 : <a class="el" href="classPt_1_1Cosmo_1_1IComponentPlugin.html#a2fe63337362f836d6c39a3651e8826f9">IComponentPlugin</a>
+, <a class="el" href="classPt_1_1Db_1_1BlobImpl.html#ad7e3dc0cc4175355cc81dd5763f5e08c">BlobImpl</a>
+, <a class="el" href="classPt_1_1Db_1_1IBlob.html#a270e730e5d704a015a474037ccc75a24">IBlob</a>
 , <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#a9aecfda8d8aed85bcd181eeca6268aba">ButtonRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#a525c26841536a559d2d13d8b71d8ad16">CheckBoxRenderer</a>
 , <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#a94c1fd692d50c065a708818f4b4fca8a">ComboBoxRenderer</a>
@@ -578,7 +643,7 @@
 , <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#aa2d60ae8913aba44a40ba8cb97fac620">TabViewRenderer</a>
 , <a class="el" href="classPt_1_1System_1_1BasicPlugin.html#acb6b0de4d344c209c68dc3fd39ae367a">BasicPlugin&lt; Class, Iface &gt;</a>
 , <a class="el" href="classPt_1_1System_1_1Plugin.html#a331c525a7f47ad43967db28f224c734c">Plugin&lt; Iface &gt;</a>
-, <a class="el" href="classPt_1_1System_1_1PluginManager.html#afa3ecc224c3b9f40227d0ee550d0bd74">PluginManager&lt; IfaceT, PluginT &gt;</a>
+, <a class="el" href="classPt_1_1System_1_1PluginManager.html#ad6996c7e9a42fdf88e6ea21c86fa7b57">PluginManager&lt; IfaceT, PluginT &gt;</a>
 </li>
 <li>createCanvas()
 : <a class="el" href="classPt_1_1Forms_1_1IPixmapImpl.html#ad5bf1cfff4ad40c142c46859743ff554">IPixmapImpl</a>
@@ -602,7 +667,7 @@
 : <a class="el" href="classPt_1_1System_1_1FileInfo.html#a94ee97b05e192ac9bf007f9a605a5fda">FileInfo</a>
 </li>
 <li>Credential()
-: <a class="el" href="classPt_1_1Http_1_1Credential.html#ab6110a6d4a38d127f801606e9626093f">Credential</a>
+: <a class="el" href="classPt_1_1Http_1_1Credential.html#a746dd5832549e8aabe5dec3a017d9ef3">Credential</a>
 </li>
 <li>Credentials
 : <a class="el" href="classPt_1_1Http_1_1Authentication.html#a1cddad9cb74c486dd173c81a3f672948">Authentication</a>
@@ -630,8 +695,14 @@
 <li>currentPosition()
 : <a class="el" href="classPt_1_1Gfx_1_1Path.html#adbc7bbe06a1b67feff8f433510dccacf">Path</a>
 </li>
+<li>Cursor()
+: <a class="el" href="classPt_1_1Db_1_1Cursor.html#a95b74e81d0f9b0c8d69039b8f639001b">Cursor</a>
+</li>
 <li>cursor()
 : <a class="el" href="classPt_1_1Forms_1_1Widget.html#a43f8c6ffcd1af8bdf9b7495604ad559f">Widget</a>
+</li>
+<li>CursorIterator()
+: <a class="el" href="classPt_1_1Db_1_1CursorIterator.html#a799a7b507616e2c4e8320e725bce7fda">CursorIterator</a>
 </li>
 <li>cursorPosition()
 : <a class="el" href="classPt_1_1Forms_1_1LineEdit.html#ae8bd0a0df2f9c4836bb568a48af429f7">LineEdit</a>

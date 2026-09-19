@@ -811,7 +811,7 @@ template&lt;typename T , typename C , typename P , typename A &gt; </td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a8ce14d8b0fc90289ee23848f6de11c47"></a>Void&#160;</td><td class="fielddoc"><p><a class="el" href="structPt_1_1Void.html" title="Void type.">Void</a>. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a8ce14d8b0fc90289ee23848f6de11c47"></a>Void&#160;</td><td class="fielddoc"><p><a class="el" href="structPt_1_1Void.html" title="Marker type for an unused template argument.">Void</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a1f1c77c8a266dba0af92df48f3691801"></a>Context&#160;</td><td class="fielddoc"><p>Contextual. </p>
 </td></tr>
@@ -970,7 +970,7 @@ template&lt;typename T , typename C , typename P , typename A &gt; </td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The serialization of pointers is identical to the serialization of values if the object pointed to is owned by the pointer: the pointer can simply be dereferenced and the object it points to passed to the serialization operator. <a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Any</a> pointer serialized or deserialized through this overload is instead treated as a weak reference to another object in the same object graph. Depending on the format, this parses a reference id pointing to another object in the object stream. It does not matter in which order weak pointers and the objects they point to are serialized; both forward and backward references work. </p>
+<p>The serialization of pointers is identical to the serialization of values if the object pointed to is owned by the pointer: the pointer can simply be dereferenced and the object it points to passed to the serialization operator. <a class="el" href="classPt_1_1Any.html" title="Value of any copyable type.">Any</a> pointer serialized or deserialized through this overload is instead treated as a weak reference to another object in the same object graph. Depending on the format, this parses a reference id pointing to another object in the object stream. It does not matter in which order weak pointers and the objects they point to are serialized; both forward and backward references work. </p>
 
 </div>
 </div>
@@ -1007,7 +1007,7 @@ template&lt;typename T , typename C , typename P , typename A &gt; </td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classPt_1_1Any.html" title="Contains an arbitrary type.">Any</a> pointer serialized through this overload is treated as a weak reference to another object in the same object graph, and formatted as a reference id instead of the pointed-to value. See the deserialization overload of <a class="el" href="classPt_1_1SerializationInfo.html#a4ebed986945470c0134001a0785998d7" title="Deserializes a pointer reference.">operator&gt;&gt;=()</a> for <em>T*</em> for details. </p>
+<p><a class="el" href="classPt_1_1Any.html" title="Value of any copyable type.">Any</a> pointer serialized through this overload is treated as a weak reference to another object in the same object graph, and formatted as a reference id instead of the pointed-to value. See the deserialization overload of <a class="el" href="classPt_1_1SerializationInfo.html#a4ebed986945470c0134001a0785998d7" title="Deserializes a pointer reference.">operator&gt;&gt;=()</a> for <em>T*</em> for details. </p>
 
 </div>
 </div>

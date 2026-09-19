@@ -85,13 +85,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Brush Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">Brush Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Brush_8h_source.html">Pt/Gfx/Brush.h</a>&gt;</code></p>
 
-<p>Fill description for shapes and text.  
+<p>Fill color, gradient or texture.  
  <a href="classPt_1_1Gfx_1_1Brush.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -145,7 +145,7 @@ const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Color</a> &amp;&#160;</t
 <tr class="separator:a3d1e3b99f83db440e0c271e5e5c09fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f37fc62c05056779b790a846668f75"><td class="memItemLeft" align="right" valign="top"><a id="a12f37fc62c05056779b790a846668f75"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1ColorStops.html">ColorStops</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a12f37fc62c05056779b790a846668f75">gradientStops</a> () const</td></tr>
-<tr class="memdesc:a12f37fc62c05056779b790a846668f75"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Color.html" title="Standard color type.">Color</a> stops of a gradient. <br /></td></tr>
+<tr class="memdesc:a12f37fc62c05056779b790a846668f75"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Gfx_1_1Color.html" title="8-bit ARGB color.">Color</a> stops of a gradient. <br /></td></tr>
 <tr class="separator:a12f37fc62c05056779b790a846668f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1565c81b352eb2dd8fe051acced5f78b"><td class="memItemLeft" align="right" valign="top"><a id="a1565c81b352eb2dd8fe051acced5f78b"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1Point.html">PointF</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Brush.html#a1565c81b352eb2dd8fe051acced5f78b">gradientBegin</a> () const</td></tr>
@@ -226,7 +226,8 @@ static <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Brush</a>&#160;</td><td
 <tr class="separator:a8bfad2b12cb2008f192947e1fcc2ef3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPt_1_1Gfx_1_1Brush.html" title="Fill description for shapes and text.">Brush</a> describes how closed geometry is filled. It can represent solid colors, textures and gradients with absolute or relative coordinates so that painters can reuse the same fill definition across targets. </p>
+<div class="textblock"><p>Brush describes how a painter fills closed shapes, paths, and text. A solid brush is a Color. A gradient interpolates ColorStop values along a line or between two circles. A texture repeats an Image. The default brush is null and does not fill.</p>
+<p>PositionMode chooses whether gradient and texture coordinates are absolute or relative to the shape being filled. Relative coordinates map the unit square onto that shape. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac3553041f59bb62f90a80641b12a370c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3553041f59bb62f90a80641b12a370c">&#9670;&nbsp;</a></span>imageTexture()</h2>

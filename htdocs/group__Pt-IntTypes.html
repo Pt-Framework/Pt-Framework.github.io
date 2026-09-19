@@ -79,21 +79,24 @@
   <div class="summary">
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">Fixed-Size Integers<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Basics.html">Basic Types</a></div></div>  </div>
+<div class="title">Fixed-Size Integers<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The Pt framework defines a number of fixed-size, signed and unsigned integers ranging from 8-bit to 64-bit widths. They are typedefs for builtin fundamental types such as int or long and the actual type depends on the platform. For example, <a class="el" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5" title="Unsigned 8-bit integer type.">Pt::uint8_t</a> is a typedef for an unsigned 8 bits wide integer type and <a class="el" href="group__Pt-IntTypes.html#ga32f2e37ee053cf2ce8ca28d1f74630e5" title="Signed 32-bit integer type.">Pt::int32_t</a> is a typedef for a signed 32 bits wide integer. The following table shows all available fixed-size integer types:</p>
+<p>A width that is part of a contract belongs in a type, not in a comment. File formats, network protocols, atomic cells, and byte-order conversion all name an exact number of bits. The C++ fundamental types do not: <code>int</code> may be 16 or 32 bits, <code>long</code> may be 32 or 64. This group is the portable spelling of those widths.</p>
+<p>Each name is a typedef for a fundamental type that has that width on the current platform. Pt::int32_t is a signed 32-bit integer; Pt::uint8_t is an unsigned 8-bit integer. The typedef may be <code>int</code> on one target and <code>long</code> on another. Code that uses the Pt name keeps the width without writing per-platform #if.</p>
+<p>The signed and unsigned pairs are:</p>
 <table style="width:600px; margin:20px; padding:6px; background-color: #eff0f0;">
 <tr>
-<td><b>int8_t</b> </td><td>signed 8 bit integer </td><td><b>uint8_t</b> </td><td>unsigned 8 bit integer  </td></tr>
+<td><b>int8_t</b> </td><td>signed 8-bit integer </td><td><b>uint8_t</b> </td><td>unsigned 8-bit integer  </td></tr>
 <tr>
-<td><b>int16_t</b> </td><td>signed 16 bit integer </td><td><b>uint16_t</b> </td><td>unsigned 16 bit integer  </td></tr>
+<td><b>int16_t</b> </td><td>signed 16-bit integer </td><td><b>uint16_t</b> </td><td>unsigned 16-bit integer  </td></tr>
 <tr>
-<td><b>int32_t</b> </td><td>signed 32 bit integer </td><td><b>uint32_t</b> </td><td>unsigned 32 bit integer  </td></tr>
+<td><b>int32_t</b> </td><td>signed 32-bit integer </td><td><b>uint32_t</b> </td><td>unsigned 32-bit integer  </td></tr>
 <tr>
-<td><b>int64_t</b> </td><td>signed 64 bit integer </td><td><b>uint64_t</b> </td><td>unsigned 64 bit integer  </td></tr>
+<td><b>int64_t</b> </td><td>signed 64-bit integer </td><td><b>uint64_t</b> </td><td>unsigned 64-bit integer  </td></tr>
 </table>
+<p>Use these types where the width is the contract. Use <code>int</code> or <code>std::size_t</code> where the platform's natural width is the contract. Byte-order conversion in <a class="el" href="group__Pt-Byteorder.html">Byte Order</a> and the atomic cell in <a class="el" href="group__Pt-Atomics.html">Atomic Operations</a> are defined in terms of these widths. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>

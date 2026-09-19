@@ -122,48 +122,48 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePt.html">Pt</a> {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html">   41</a></span>&#160;<span class="keyword">class </span>PT_API <a class="code" href="classPt_1_1IOError.html">IOError</a> : <span class="keyword">public</span> std::ios::failure</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html#acd5c5ef5fea6a3856a517d4597a2085a">   46</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1IOError.html#acd5c5ef5fea6a3856a517d4597a2085a">IOError</a>(<span class="keyword">const</span> std::string&amp; what);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html#a76d85d183999f94fba0fedd6960ee4d4">   50</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1IOError.html#a76d85d183999f94fba0fedd6960ee4d4">IOError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* what);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html#a10028621a740d37beab68b994efacf36">   54</a></span>&#160;        <a class="code" href="classPt_1_1IOError.html#a10028621a740d37beab68b994efacf36">~IOError</a>() throw()</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html">   62</a></span>&#160;<span class="keyword">class </span>PT_API <a class="code" href="classPt_1_1AccessFailed.html">AccessFailed</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1IOError.html">IOError</a></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#aef8b0c80e0d5ac89a7cbeb1e6a94870e">   67</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1AccessFailed.html#aef8b0c80e0d5ac89a7cbeb1e6a94870e">AccessFailed</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* resource);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#a916beb287c66f68b227ab5792d0ec63d">   71</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1AccessFailed.html#a916beb287c66f68b227ab5792d0ec63d">AccessFailed</a>(<span class="keyword">const</span> std::string&amp; resource);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#a9cdb37b2744f9de7a2903cba49211eb6">   75</a></span>&#160;        <a class="code" href="classPt_1_1AccessFailed.html#a9cdb37b2744f9de7a2903cba49211eb6">~AccessFailed</a>() throw()</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">   80</a></span>&#160;        <span class="keyword">const</span> std::string&amp; <a class="code" href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">resource</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _resource; }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::string _resource;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// namespace Pt</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif // PT_IOERROR_H</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html">   43</a></span>&#160;<span class="keyword">class </span>PT_API <a class="code" href="classPt_1_1IOError.html">IOError</a> : <span class="keyword">public</span> std::ios::failure</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html#acd5c5ef5fea6a3856a517d4597a2085a">   48</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1IOError.html#acd5c5ef5fea6a3856a517d4597a2085a">IOError</a>(<span class="keyword">const</span> std::string&amp; what);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html#a76d85d183999f94fba0fedd6960ee4d4">   52</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1IOError.html#a76d85d183999f94fba0fedd6960ee4d4">IOError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* what);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classPt_1_1IOError.html#a10028621a740d37beab68b994efacf36">   56</a></span>&#160;        <a class="code" href="classPt_1_1IOError.html#a10028621a740d37beab68b994efacf36">~IOError</a>() throw()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html">   65</a></span>&#160;<span class="keyword">class </span>PT_API <a class="code" href="classPt_1_1AccessFailed.html">AccessFailed</a> : <span class="keyword">public</span> <a class="code" href="classPt_1_1IOError.html">IOError</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#aef8b0c80e0d5ac89a7cbeb1e6a94870e">   70</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1AccessFailed.html#aef8b0c80e0d5ac89a7cbeb1e6a94870e">AccessFailed</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* resource);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#a916beb287c66f68b227ab5792d0ec63d">   74</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classPt_1_1AccessFailed.html#a916beb287c66f68b227ab5792d0ec63d">AccessFailed</a>(<span class="keyword">const</span> std::string&amp; resource);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#a9cdb37b2744f9de7a2903cba49211eb6">   78</a></span>&#160;        <a class="code" href="classPt_1_1AccessFailed.html#a9cdb37b2744f9de7a2903cba49211eb6">~AccessFailed</a>() throw()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">   83</a></span>&#160;        <span class="keyword">const</span> std::string&amp; <a class="code" href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">resource</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _resource; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::string _resource;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace Pt</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif // PT_IOERROR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1AccessFailed_html_a916beb287c66f68b227ab5792d0ec63d"><div class="ttname"><a href="classPt_1_1AccessFailed.html#a916beb287c66f68b227ab5792d0ec63d">Pt::AccessFailed::AccessFailed</a></div><div class="ttdeci">AccessFailed(const std::string &amp;resource)</div><div class="ttdoc">Construct with resource string.</div></div>
-<div class="ttc" id="aclassPt_1_1AccessFailed_html_a9cdb37b2744f9de7a2903cba49211eb6"><div class="ttname"><a href="classPt_1_1AccessFailed.html#a9cdb37b2744f9de7a2903cba49211eb6">Pt::AccessFailed::~AccessFailed</a></div><div class="ttdeci">~AccessFailed()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> IOError.h:75</div></div>
+<div class="ttc" id="aclassPt_1_1AccessFailed_html_a9cdb37b2744f9de7a2903cba49211eb6"><div class="ttname"><a href="classPt_1_1AccessFailed.html#a9cdb37b2744f9de7a2903cba49211eb6">Pt::AccessFailed::~AccessFailed</a></div><div class="ttdeci">~AccessFailed()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> IOError.h:78</div></div>
 <div class="ttc" id="aclassPt_1_1IOError_html_acd5c5ef5fea6a3856a517d4597a2085a"><div class="ttname"><a href="classPt_1_1IOError.html#acd5c5ef5fea6a3856a517d4597a2085a">Pt::IOError::IOError</a></div><div class="ttdeci">IOError(const std::string &amp;what)</div><div class="ttdoc">Construct with error message.</div></div>
 <div class="ttc" id="aclassPt_1_1AccessFailed_html_aef8b0c80e0d5ac89a7cbeb1e6a94870e"><div class="ttname"><a href="classPt_1_1AccessFailed.html#aef8b0c80e0d5ac89a7cbeb1e6a94870e">Pt::AccessFailed::AccessFailed</a></div><div class="ttdeci">AccessFailed(const char *resource)</div><div class="ttdoc">Construct with resource string.</div></div>
-<div class="ttc" id="aclassPt_1_1IOError_html"><div class="ttname"><a href="classPt_1_1IOError.html">Pt::IOError</a></div><div class="ttdoc">I/O error.</div><div class="ttdef"><b>Definition:</b> IOError.h:42</div></div>
-<div class="ttc" id="aclassPt_1_1AccessFailed_html"><div class="ttname"><a href="classPt_1_1AccessFailed.html">Pt::AccessFailed</a></div><div class="ttdoc">Failed to access a resource.</div><div class="ttdef"><b>Definition:</b> IOError.h:63</div></div>
-<div class="ttc" id="aclassPt_1_1IOError_html_a10028621a740d37beab68b994efacf36"><div class="ttname"><a href="classPt_1_1IOError.html#a10028621a740d37beab68b994efacf36">Pt::IOError::~IOError</a></div><div class="ttdeci">~IOError()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> IOError.h:54</div></div>
+<div class="ttc" id="aclassPt_1_1IOError_html"><div class="ttname"><a href="classPt_1_1IOError.html">Pt::IOError</a></div><div class="ttdoc">I/O error.</div><div class="ttdef"><b>Definition:</b> IOError.h:44</div></div>
+<div class="ttc" id="aclassPt_1_1AccessFailed_html"><div class="ttname"><a href="classPt_1_1AccessFailed.html">Pt::AccessFailed</a></div><div class="ttdoc">Failed to access a resource.</div><div class="ttdef"><b>Definition:</b> IOError.h:66</div></div>
+<div class="ttc" id="aclassPt_1_1IOError_html_a10028621a740d37beab68b994efacf36"><div class="ttname"><a href="classPt_1_1IOError.html#a10028621a740d37beab68b994efacf36">Pt::IOError::~IOError</a></div><div class="ttdeci">~IOError()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> IOError.h:56</div></div>
 <div class="ttc" id="aclassPt_1_1IOError_html_a76d85d183999f94fba0fedd6960ee4d4"><div class="ttname"><a href="classPt_1_1IOError.html#a76d85d183999f94fba0fedd6960ee4d4">Pt::IOError::IOError</a></div><div class="ttdeci">IOError(const char *what)</div><div class="ttdoc">Construct with error message.</div></div>
-<div class="ttc" id="aclassPt_1_1AccessFailed_html_aa289c12b935cbfd7fbd97d2622a6270b"><div class="ttname"><a href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">Pt::AccessFailed::resource</a></div><div class="ttdeci">const std::string &amp; resource() const</div><div class="ttdoc">Returns the ID of the inaccessible resource.</div><div class="ttdef"><b>Definition:</b> IOError.h:80</div></div>
+<div class="ttc" id="aclassPt_1_1AccessFailed_html_aa289c12b935cbfd7fbd97d2622a6270b"><div class="ttname"><a href="classPt_1_1AccessFailed.html#aa289c12b935cbfd7fbd97d2622a6270b">Pt::AccessFailed::resource</a></div><div class="ttdeci">const std::string &amp; resource() const</div><div class="ttdoc">Returns the ID of the inaccessible resource.</div><div class="ttdef"><b>Definition:</b> IOError.h:83</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

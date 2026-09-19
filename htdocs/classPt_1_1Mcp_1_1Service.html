@@ -83,38 +83,40 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Service Class Reference</div>  </div>
+<div class="title">Service Class Reference<div class="ingroups"><a class="el" href="group__Pt-Mcp.html">Model Context Protocol</a> &raquo; <a class="el" href="group__Pt-Mcp-Stdio.html">Standard I/O Transport</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Mcp_2Service_8h_source.html">Pt/Mcp/Service.h</a>&gt;</code></p>
 
-<p>MCP protocol service over stdio.  
+<p>Synchronous MCP service over standard streams.  
  <a href="classPt_1_1Mcp_1_1Service.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c363fbb032dae717715cc3ed5311c12"><td class="memItemLeft" align="right" valign="top"><a id="a2c363fbb032dae717715cc3ed5311c12"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Service.html#a2c363fbb032dae717715cc3ed5311c12">Service</a> (<a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a> &amp;serviceDef, const <a class="el" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a> &amp;decl)</td></tr>
-<tr class="memdesc:a2c363fbb032dae717715cc3ed5311c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a service definition and tool declaration. <br /></td></tr>
+<tr class="memdesc:a2c363fbb032dae717715cc3ed5311c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a service for <em>serviceDef</em> and <em>decl</em>. <br /></td></tr>
 <tr class="separator:a2c363fbb032dae717715cc3ed5311c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fa910779a00d2d84bf306d05689a26c"><td class="memItemLeft" align="right" valign="top"><a id="a3fa910779a00d2d84bf306d05689a26c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Service.html#a3fa910779a00d2d84bf306d05689a26c">~Service</a> ()</td></tr>
-<tr class="memdesc:a3fa910779a00d2d84bf306d05689a26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memdesc:a3fa910779a00d2d84bf306d05689a26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the service. <br /></td></tr>
 <tr class="separator:a3fa910779a00d2d84bf306d05689a26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f17d9be94ca2d1e9d321b68b98b758"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Service.html#a67f17d9be94ca2d1e9d321b68b98b758">readMessage</a> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a67f17d9be94ca2d1e9d321b68b98b758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Content-Length framed message from the stream.  <a href="classPt_1_1Mcp_1_1Service.html#a67f17d9be94ca2d1e9d321b68b98b758">More...</a><br /></td></tr>
+<tr class="memdesc:a67f17d9be94ca2d1e9d321b68b98b758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads one Content-Length framed message from <em>is</em>.  <a href="classPt_1_1Mcp_1_1Service.html#a67f17d9be94ca2d1e9d321b68b98b758">More...</a><br /></td></tr>
 <tr class="separator:a67f17d9be94ca2d1e9d321b68b98b758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="memItemLeft" align="right" valign="top"><a id="a52a061f3e17f744bf0e20b0d5cb0ccfb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Service.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">writeMessage</a> (std::ostream &amp;os, const std::string &amp;json)</td></tr>
-<tr class="memdesc:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a Content-Length framed message to the stream. <br /></td></tr>
+<tr class="memdesc:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a Content-Length framed message <em>json</em> to <em>os</em>. <br /></td></tr>
 <tr class="separator:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c1245f281c8c9a57d9aac63bacf2729"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Service.html#a6c1245f281c8c9a57d9aac63bacf2729">dispatch</a> (const std::string &amp;json)</td></tr>
-<tr class="memdesc:a6c1245f281c8c9a57d9aac63bacf2729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch an MCP request and return the response JSON.  <a href="classPt_1_1Mcp_1_1Service.html#a6c1245f281c8c9a57d9aac63bacf2729">More...</a><br /></td></tr>
+<tr class="memdesc:a6c1245f281c8c9a57d9aac63bacf2729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches an MCP request and returns the response JSON.  <a href="classPt_1_1Mcp_1_1Service.html#a6c1245f281c8c9a57d9aac63bacf2729">More...</a><br /></td></tr>
 <tr class="separator:a6c1245f281c8c9a57d9aac63bacf2729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles the full MCP protocol lifecycle: initialize, tools/list, and tools/call. Reads/writes Content-Length framed messages. </p>
+<div class="textblock"><p>Service is the synchronous stdio transport. It reads and writes Content-Length framed JSON-RPC messages and dispatches initialize, tools/list, and tools/call on the calling thread. Use it when every tool is a synchronous procedure. Asynchronous procedures need StdioService and an EventLoop.</p>
+<p>readMessage() consumes one framed message from a stream and returns the JSON body, or an empty string on EOF. writeMessage() writes a Content-Length header and the JSON body. dispatch() runs the request and returns the response JSON, or an empty string for a notification.</p>
+<p>The Pt::Remoting::ServiceDefinition and the ToolDeclaration are not owned. Both must outlive this service. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a67f17d9be94ca2d1e9d321b68b98b758"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67f17d9be94ca2d1e9d321b68b98b758">&#9670;&nbsp;</a></span>readMessage()</h2>
@@ -150,7 +152,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Routes to initialize, tools/list, or tools/call handlers. Returns an empty string for notifications (no id). </p>
+<p>Returns an empty string for notifications (no id). </p>
 
 </div>
 </div>

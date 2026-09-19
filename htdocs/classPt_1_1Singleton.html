@@ -84,21 +84,22 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Singleton&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Basics.html">Basic Types</a></div></div>  </div>
+<div class="title">Singleton&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Singleton_8h_source.html">Pt/Singleton.h</a>&gt;</code></p>
 
-<p>Singleton class template  
+<p>Process-wide single instance of <em>T</em>.  
  <a href="classPt_1_1Singleton.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a359703743cd890f1e3df60b6b06a5724"><td class="memItemLeft" align="right" valign="top">static T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Singleton.html#a359703743cd890f1e3df60b6b06a5724">instance</a> ()</td></tr>
-<tr class="memdesc:a359703743cd890f1e3df60b6b06a5724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the instance of the singleton type.  <a href="classPt_1_1Singleton.html#a359703743cd890f1e3df60b6b06a5724">More...</a><br /></td></tr>
+<tr class="memitem:a359703743cd890f1e3df60b6b06a5724"><td class="memItemLeft" align="right" valign="top"><a id="a359703743cd890f1e3df60b6b06a5724"></a>
+static T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Singleton.html#a359703743cd890f1e3df60b6b06a5724">instance</a> ()</td></tr>
+<tr class="memdesc:a359703743cd890f1e3df60b6b06a5724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the process-wide instance, creating it on first call. <br /></td></tr>
 <tr class="separator:a359703743cd890f1e3df60b6b06a5724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -116,52 +117,20 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class Pt::Singleton&lt; T &gt;</h3>
 
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">T</td><td>Type of the singleton </td></tr>
-    <tr><td class="paramname">A</td><td><a class="el" href="classPt_1_1Allocator.html" title="Allocator interface.">Allocator</a> for type T</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The Singleton class template can be used to easily implement the Singleton design pattern. It can either be used directly or as a base class.</p>
-<p>The follwing example shows how to use the singleton as a base class: </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySingleton : <span class="keyword">public</span> <a class="code" href="classPt_1_1Singleton.html#a04783ca27b0280a844368faf849c8ddb">Singleton</a>&lt;MySingleton&gt;</div>
+<p>Singleton&lt;T&gt; owns one <em>T</em> for the process. instance() creates that object on the first call and returns the same object on every later call. The instance is a function-local static created by create(); it lives until the program exits.</p>
+<p>Derive from Singleton&lt;T&gt; with <em>T</em> equal to the derived class, and befriend the base so it can construct <em>T:</em> </p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MySingleton : <span class="keyword">public</span> <a class="code" href="classPt_1_1Singleton.html">Pt::Singleton</a>&lt;MySingleton&gt;</div>
 <div class="line">{</div>
-<div class="line">      <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPt_1_1Singleton.html#a04783ca27b0280a844368faf849c8ddb">Singleton</a>&lt;MySingleton&gt;;</div>
+<div class="line">    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPt_1_1Singleton.html">Pt::Singleton</a>&lt;MySingleton&gt;;</div>
 <div class="line"> </div>
-<div class="line">      <span class="comment">// ...</span></div>
-<div class="line">  };</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a359703743cd890f1e3df60b6b06a5724"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a359703743cd890f1e3df60b6b06a5724">&#9670;&nbsp;</a></span>instance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static T&amp; instance </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<pre class="fragment">When called for the first time, the singleton instance will
-be created with the specified alloctaor. All subsequent calls
-will return a reference to the previously created instance.
-</pre><dl class="section return"><dt>Returns</dt><dd>The singleton instance </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1Singleton_html_a04783ca27b0280a844368faf849c8ddb"><div class="ttname"><a href="classPt_1_1Singleton.html#a04783ca27b0280a844368faf849c8ddb">Pt::Singleton::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Singleton.h:82</div></div>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">    MySingleton()</div>
+<div class="line">    { }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>The derived constructor stays protected so callers cannot build a second instance. instance() is the only public way to get the object. Singleton is NonCopyable, so the instance cannot be copied either.</p>
+<p>Construction is not synchronized. The first call to instance() must happen before other threads call it, or the program must otherwise guarantee a single initializing call. There is no destructor hook and no way to replace the instance. Use this type for a process-wide service that is created on demand, not for objects whose lifetime the caller must control. </p>
+</div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Singleton_html"><div class="ttname"><a href="classPt_1_1Singleton.html">Pt::Singleton</a></div><div class="ttdoc">Process-wide single instance of T.</div><div class="ttdef"><b>Definition:</b> Singleton.h:73</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

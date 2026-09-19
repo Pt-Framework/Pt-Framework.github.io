@@ -107,11 +107,11 @@ Building Programs</h1>
 </pre><p>Before a project can be built, it needs to be configured, so the build host properties are determined, the toolset is detected etc. The input for this 'configure' step is the file named Jamconfigure. Add the following lines to that file:</p>
 <div class="fragment"><div class="line">SubDir MY_TOP ;</div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor"># configure basic C compiler</span></div>
+<div class="line"># configure basic C compiler</div>
 <div class="line">ConfigureCc ;</div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor"># configure basic C++ compiler</span></div>
-<div class="line"><span class="preprocessor">ConfigureC++ ;</span></div>
+<div class="line"># configure basic C++ compiler</div>
+<div class="line">ConfigureC++ ;</div>
 </div><!-- fragment --><p>The SubDir rule defines the so-called root variable, which stands for the project root directory. You can think of this for now simply as the path to your project root directory. The SubDir rule also sets the directory context for the following statements, until the next SubDir call. It will be more useful when another project is included as a sub tree. So far, we only need to configure basic C and C++ support. This allows us to build programs, static libraries and shared libraries using standard C and C++. You should be able to run the configure step now sucessfully with this command:</p>
 <pre class="fragment">./jam.sh configure
 </pre><p>The script jam.sh must have the executable bit set. If this is not the case you can add it by executing chmod +x jam.sh. Remember, that you need to run jam.exe instead of jam.sh on windows systems.</p>

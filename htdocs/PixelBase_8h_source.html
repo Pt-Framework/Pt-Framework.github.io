@@ -133,7 +133,7 @@
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PixelBase.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>(<span class="keyword">const</span> ViewBase&amp; view, <a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base, Pt::ssize_t x, Pt::ssize_t y)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view, <a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base, Pt::ssize_t x, Pt::ssize_t y)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        : _view(&amp;view)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        , _base(base)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        { }</div>
@@ -141,7 +141,7 @@
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>()</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        { }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">const</span> ViewBase&amp; view()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> *_view; }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* base()</div>
@@ -290,7 +290,7 @@
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">const</span> ViewBase* _view;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>* _view;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>*    _base;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;};</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
@@ -355,9 +355,10 @@
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PixelBase_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PixelBase.html">Pt::Gfx::PixelBase</a></div><div class="ttdoc">Pixel base class.</div><div class="ttdef"><b>Definition:</b> PixelBase.h:52</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1ColorF_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ColorF.html">Pt::Gfx::ColorF</a></div><div class="ttdoc">RGBA float32 working color.</div><div class="ttdef"><b>Definition:</b> Color.h:149</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">Standard color type.</div><div class="ttdef"><b>Definition:</b> Color.h:47</div></div>
-<div class="ttc" id="agroup__Pt-IntTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1ColorF_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ColorF.html">Pt::Gfx::ColorF</a></div><div class="ttdoc">Floating-point RGBA color.</div><div class="ttdef"><b>Definition:</b> Color.h:173</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">8-bit ARGB color.</div><div class="ttdef"><b>Definition:</b> Color.h:65</div></div>
+<div class="ttc" id="agroup__Pt-IntTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:24</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1ViewBase_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ViewBase.html">Pt::Gfx::ViewBase</a></div><div class="ttdoc">Width, height and stride of an image or view.</div><div class="ttdef"><b>Definition:</b> ViewBase.h:50</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

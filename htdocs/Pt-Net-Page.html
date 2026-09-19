@@ -101,26 +101,26 @@ Endpoints</h1>
 <p>Factory functions build the IPv4 and IPv6 any and loopback addresses, and the IPv4 broadcast address, for a port, and those addresses do not perform name resolution. The any-address is the local wildcard used to listen or bind on every local interface, loopback is the host itself, and the IPv4 broadcast address is the send destination for UDP broadcast.</p>
 <p>toString() formats the endpoint for display, clear() resets it to an empty address, and copy and assignment duplicate the address, not a socket.</p>
 <p>The example constructs a named host-and-port endpoint and an IPv4 any-address for a port, so the first is a remote or named host and the second is a local wildcard.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a> host(<span class="stringliteral">&quot;example.com&quot;</span>, 80);</div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a> any = <a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(8080);</div>
+<div class="fragment"><div class="line">Pt::Net::Endpoint host(&quot;example.com&quot;, 80);</div>
+<div class="line">Pt::Net::Endpoint any = Pt::Net::Endpoint::ip4Any(8080);</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Net-Page-Tcp"></a>
 TCP Sockets</h1>
 <p>TCP is a connected byte stream between two endpoints, implemented by two types: TcpServer listens on a local endpoint and reports pending peers, and TcpSocket is the stream that transfers bytes, whether it is the client side of a connect() or the accepted side of a pending server connection.</p>
 <p>A server listen() binds the local endpoint and waits for peers. TcpSocket::accept() takes one pending connection and makes that socket the accepted stream, while TcpSocket::connect() reaches a remote endpoint and makes that socket the client stream. After the stream is up, read() and write() are the inherited I/O-device operations, blocking or asynchronous.</p>
 <p>TcpServer is a Selectable, not an IODevice, so it does not read or write, whereas TcpSocket is an IODevice. Listen and connection settings live in TcpServerOptions and TcpSocketOptions, which configure an operation but do not open a socket.</p>
 <p>The example is the two-type model on one thread: listen() queues incoming connections, connect() completes against that queue, accept() takes the pending stream, and the bytes then move through the inherited device operations.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a> server;</div>
-<div class="line">server.<a class="code" href="classPt_1_1Net_1_1TcpServer.html#af07ee5e021e298d2899ae74932d7be28">listen</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(9000));</div>
+<div class="fragment"><div class="line">Pt::Net::TcpServer server;</div>
+<div class="line">server.listen(Pt::Net::Endpoint::ip4Any(9000));</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a> client;</div>
-<div class="line">client.<a class="code" href="classPt_1_1Net_1_1TcpSocket.html#aea676309d63eaa953da8c4b0baf64c60">connect</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a>(9000));</div>
+<div class="line">Pt::Net::TcpSocket client;</div>
+<div class="line">client.connect(Pt::Net::Endpoint::ip4Loopback(9000));</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a> peer;</div>
-<div class="line">peer.<a class="code" href="classPt_1_1Net_1_1TcpSocket.html#ac85fb8aab49d090423d5af5e0dabd5cf">accept</a>(server);</div>
+<div class="line">Pt::Net::TcpSocket peer;</div>
+<div class="line">peer.accept(server);</div>
 <div class="line"> </div>
-<div class="line">peer.<a class="code" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">write</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
-<div class="line"><span class="keywordtype">char</span> buf[5];</div>
-<div class="line">client.<a class="code" href="classPt_1_1System_1_1IODevice.html#a8f0892c6bf02c81910a94fcdddee294e">read</a>(buf, 5);</div>
+<div class="line">peer.write(&quot;Hello&quot;, 5);</div>
+<div class="line">char buf[5];</div>
+<div class="line">client.read(buf, 5);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Net-Page-TcpServer"></a>
 TCP Servers</h2>
 <p>TcpServer is the listening Selectable in the TCP model: it binds a local endpoint and reports pending peers, but it is not an IODevice and it does not read or write bytes. A TcpSocket takes each connection.</p>
@@ -131,23 +131,23 @@ TCP Servers</h2>
 <p>Asynchronous accept requires an attached event loop. beginAccept() waits for the next pending connection, and connectionPending() is emitted when a peer is ready. There is no matching end-accept: a TcpSocket takes the connection with accept(). The server must be attached before beginAccept(), and after the slot takes the connection, beginAccept() is called again to wait for the next peer.</p>
 <p>close() stops listening and accepting. The caller owns the server, and attaching it to a loop does not transfer ownership.</p>
 <p>The example is the pending-connection slot. The acceptor is Connectable so it can bind connectionPending() to onPending(), and when the signal fires, accept() takes the stream into a TcpSocket that the acceptor owns.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>Acceptor : <span class="keyword">public</span> <a class="code" href="classPt_1_1Connectable.html">Pt::Connectable</a></div>
+<div class="fragment"><div class="line">class Acceptor : public Pt::Connectable</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        <span class="keyword">explicit</span> Acceptor(<a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a>&amp; server)</div>
+<div class="line">    public:</div>
+<div class="line">        explicit Acceptor(Pt::Net::TcpServer&amp; server)</div>
 <div class="line">        : _server(&amp;server)</div>
 <div class="line">        {</div>
-<div class="line">            _server-&gt;connectionPending() += Pt::slot(*<span class="keyword">this</span>, &amp;Acceptor::onPending);</div>
+<div class="line">            _server-&gt;connectionPending() += Pt::slot(*this, &amp;Acceptor::onPending);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordtype">void</span> onPending(<a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a>&amp; server)</div>
+<div class="line">        void onPending(Pt::Net::TcpServer&amp; server)</div>
 <div class="line">        {</div>
 <div class="line">            _peer.accept(server);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span>:</div>
-<div class="line">        <a class="code" href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a>* _server;</div>
-<div class="line">        <a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a> _peer;</div>
+<div class="line">    private:</div>
+<div class="line">        Pt::Net::TcpServer* _server;</div>
+<div class="line">        Pt::Net::TcpSocket _peer;</div>
 <div class="line">};</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Net-Page-TcpSocket"></a>
 Connected TCP Sockets</h2>
@@ -157,18 +157,18 @@ Connected TCP Sockets</h2>
 <p>beginConnect() starts an asynchronous connect, which requires the socket to be attached to an event loop. connected() is emitted when the attempt finishes, and endConnect() completes it, throwing AccessFailed if the host is not reachable. isConnected() reports whether the stream is up, and localEndpoint() and remoteEndpoint() write the two sides of the connection.</p>
 <p>TcpSocketOptions configure the connection but do not open a socket. Keep-alive, when set to a non-negative interval in seconds, enables periodic probes on the stream, and a negative value leaves keep-alive unset.</p>
 <p>The example is an asynchronous client connect, in which the slot calls endConnect() and then writes through the inherited device operation. The accept path is the TcpServer pending-connection slot.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> onConnected(<a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a>&amp; socket)</div>
+<div class="fragment"><div class="line">void onConnected(Pt::Net::TcpSocket&amp; socket)</div>
 <div class="line">{</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1Net_1_1TcpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a>();</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">beginWrite</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
+<div class="line">    socket.endConnect();</div>
+<div class="line">    socket.beginWrite(&quot;Hello&quot;, 5);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a> socket;</div>
-<div class="line">socket.<a class="code" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a>(loop);</div>
-<div class="line">socket.<a class="code" href="classPt_1_1Net_1_1TcpSocket.html#a53ea129b989135dc396ca6ae8d192bdb">connected</a>() += Pt::slot(onConnected);</div>
-<div class="line">socket.<a class="code" href="classPt_1_1Net_1_1TcpSocket.html#ab5c44affc1d019b81c9f7a1720c60b14">beginConnect</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a>(<span class="stringliteral">&quot;127.0.0.1&quot;</span>, 9000));</div>
-<div class="line">loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
+<div class="line">Pt::System::MainLoop loop;</div>
+<div class="line">Pt::Net::TcpSocket socket;</div>
+<div class="line">socket.setActive(loop);</div>
+<div class="line">socket.connected() += Pt::slot(onConnected);</div>
+<div class="line">socket.beginConnect(Pt::Net::Endpoint(&quot;127.0.0.1&quot;, 9000));</div>
+<div class="line">loop.run();</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Net-Page-Udp"></a>
 UDP Sockets</h1>
 <p>UDP is datagram I/O on a single UdpSocket type, which sends and receives unicast, broadcast, and multicast datagrams. It is an IODevice: after a local bind or a send destination is set, read() and write() are the inherited device operations, blocking or asynchronous, except that each write() sends one datagram and each read() receives one datagram rather than a TCP-style byte stream.</p>
@@ -183,80 +183,48 @@ Datagram Socket</h2>
 <dl class="section user"><dt>Broadcast and multicast</dt><dd></dd></dl>
 <p>Broadcast send sets the broadcast option and uses the IPv4 broadcast endpoint as the target, while multicast send uses a multicast group address as the target. To receive a group's datagrams, bind first, then joinMulticastGroup(). UdpSocketOptions also set the hop limit; those values configure an operation, but they do not open a socket.</p>
 <p>The first example is asynchronous unicast: one socket binds the local any-address, the other connects to loopback, and each slot completes the begin operation before I/O. The second example is a broadcast send, and the third binds, joins a group, and sends to that group.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">char</span> buffer[256];</div>
+<div class="fragment"><div class="line">char buffer[256];</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onBound(<a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a>&amp; socket)</div>
+<div class="line">void onBound(Pt::Net::UdpSocket&amp; socket)</div>
 <div class="line">{</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">endBind</a>();</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">beginRead</a>(buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line">    socket.endBind();</div>
+<div class="line">    socket.beginRead(buffer, sizeof(buffer));</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onConnected(<a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a>&amp; socket)</div>
+<div class="line">void onConnected(Pt::Net::UdpSocket&amp; socket)</div>
 <div class="line">{</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a>();</div>
-<div class="line">    socket.<a class="code" href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">beginWrite</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
+<div class="line">    socket.endConnect();</div>
+<div class="line">    socket.beginWrite(&quot;Hello&quot;, 5);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
+<div class="line">Pt::System::MainLoop loop;</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> receiver;</div>
-<div class="line">receiver.<a class="code" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a>(loop);</div>
-<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">bound</a>() += Pt::slot(onBound);</div>
-<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">beginBind</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(8000));</div>
+<div class="line">Pt::Net::UdpSocket receiver;</div>
+<div class="line">receiver.setActive(loop);</div>
+<div class="line">receiver.bound() += Pt::slot(onBound);</div>
+<div class="line">receiver.beginBind(Pt::Net::Endpoint::ip4Any(8000));</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> sender;</div>
-<div class="line">sender.<a class="code" href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">setActive</a>(loop);</div>
-<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">connected</a>() += Pt::slot(onConnected);</div>
-<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">beginConnect</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a>(8000));</div>
+<div class="line">Pt::Net::UdpSocket sender;</div>
+<div class="line">sender.setActive(loop);</div>
+<div class="line">sender.connected() += Pt::slot(onConnected);</div>
+<div class="line">sender.beginConnect(Pt::Net::Endpoint::ip4Loopback(8000));</div>
 <div class="line"> </div>
-<div class="line">loop.<a class="code" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocketOptions.html">Pt::Net::UdpSocketOptions</a> opts;</div>
-<div class="line">opts.<a class="code" href="classPt_1_1Net_1_1UdpSocketOptions.html#afc852764fad4f645329f7f66197154d9">setBroadcast</a>();</div>
+<div class="line">loop.run();</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Net::UdpSocketOptions opts;</div>
+<div class="line">opts.setBroadcast();</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> sender;</div>
-<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">setTarget</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a85a02fc633cf3e65e108161aee9de453">Pt::Net::Endpoint::ip4Broadcast</a>(8000), opts);</div>
-<div class="line">sender.<a class="code" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">write</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> receiver;</div>
-<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">bind</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a>(8000));</div>
-<div class="line">receiver.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#a75476fad4525b26500c465203bb319ac">joinMulticastGroup</a>(<span class="stringliteral">&quot;224.0.1.1&quot;</span>);</div>
+<div class="line">Pt::Net::UdpSocket sender;</div>
+<div class="line">sender.setTarget(Pt::Net::Endpoint::ip4Broadcast(8000), opts);</div>
+<div class="line">sender.write(&quot;Hello&quot;, 5);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Net::UdpSocket receiver;</div>
+<div class="line">receiver.bind(Pt::Net::Endpoint::ip4Any(8000));</div>
+<div class="line">receiver.joinMulticastGroup(&quot;224.0.1.1&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a> sender;</div>
-<div class="line">sender.<a class="code" href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">setTarget</a>(<a class="code" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a>(<span class="stringliteral">&quot;224.0.1.1&quot;</span>, 8000));</div>
-<div class="line">sender.<a class="code" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">write</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 5);</div>
+<div class="line">Pt::Net::UdpSocket sender;</div>
+<div class="line">sender.setTarget(Pt::Net::Endpoint(&quot;224.0.1.1&quot;, 8000));</div>
+<div class="line">sender.write(&quot;Hello&quot;, 5);</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a0f6819a4971e612ac6d0cb54c4d41306"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a0f6819a4971e612ac6d0cb54c4d41306">Pt::System::IODevice::beginWrite</a></div><div class="ttdeci">void beginWrite(const char *buffer, std::size_t n)</div><div class="ttdoc">Begins to write data.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocketOptions_html_afc852764fad4f645329f7f66197154d9"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocketOptions.html#afc852764fad4f645329f7f66197154d9">Pt::Net::UdpSocketOptions::setBroadcast</a></div><div class="ttdeci">void setBroadcast()</div><div class="ttdoc">Enables UDP broadcast.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:72</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html">Pt::Net::TcpSocket</a></div><div class="ttdoc">Connected TCP byte stream.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:141</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_ac85fb8aab49d090423d5af5e0dabd5cf"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#ac85fb8aab49d090423d5af5e0dabd5cf">Pt::Net::TcpSocket::accept</a></div><div class="ttdeci">void accept(TcpServer &amp;server)</div><div class="ttdoc">Accepts a connection from server.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpServer_html"><div class="ttname"><a href="classPt_1_1Net_1_1TcpServer.html">Pt::Net::TcpServer</a></div><div class="ttdoc">Listens for TCP connections.</div><div class="ttdef"><b>Definition:</b> TcpServer.h:159</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a89aefafffbf53007302f26f9c62d3b2b"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a89aefafffbf53007302f26f9c62d3b2b">Pt::Net::UdpSocket::beginConnect</a></div><div class="ttdeci">bool beginConnect(const Endpoint &amp;ep)</div><div class="ttdoc">Begins connecting to ep.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a7a6d2a237f8e5423ae44adffda0a52ed"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">Pt::System::IODevice::write</a></div><div class="ttdeci">std::size_t write(const char *buffer, std::size_t n)</div><div class="ttdoc">Write data to I/O device.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_af6e8a5dba8f987e807a325737549e748"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#af6e8a5dba8f987e807a325737549e748">Pt::Net::UdpSocket::endBind</a></div><div class="ttdeci">void endBind()</div><div class="ttdoc">Ends binding to a local endpoint.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a7017fd65edc8f84da8412ae986dfd40e"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">Pt::Net::UdpSocket::beginBind</a></div><div class="ttdeci">bool beginBind(const Endpoint &amp;ep)</div><div class="ttdoc">Begins binding to ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_ac3e4613173ed2e1d77fd146ce91bf8e9"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#ac3e4613173ed2e1d77fd146ce91bf8e9">Pt::Net::UdpSocket::bind</a></div><div class="ttdeci">void bind(const Endpoint &amp;ep)</div><div class="ttdoc">Binds to local endpoint ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_ab5c44affc1d019b81c9f7a1720c60b14"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#ab5c44affc1d019b81c9f7a1720c60b14">Pt::Net::TcpSocket::beginConnect</a></div><div class="ttdeci">void beginConnect(const Endpoint &amp;ep)</div><div class="ttdoc">Begins connecting to ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a85a02fc633cf3e65e108161aee9de453"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a85a02fc633cf3e65e108161aee9de453">Pt::Net::Endpoint::ip4Broadcast</a></div><div class="ttdeci">static Endpoint ip4Broadcast(unsigned short port)</div><div class="ttdoc">Creates the IPv4 broadcast address for port.</div></div>
-<div class="ttc" id="aclassPt_1_1Connectable_html"><div class="ttname"><a href="classPt_1_1Connectable.html">Pt::Connectable</a></div><div class="ttdoc">Connection Management for Signal and Slot Objects.</div><div class="ttdef"><b>Definition:</b> Connectable.h:50</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition:</b> Endpoint.h:77</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_ac693ab150b948f96c8dd8f485274fb20"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#ac693ab150b948f96c8dd8f485274fb20">Pt::System::IODevice::beginRead</a></div><div class="ttdeci">void beginRead(char *buffer, std::size_t n)</div><div class="ttdoc">Begins to read data.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1IODevice_html_a8f0892c6bf02c81910a94fcdddee294e"><div class="ttname"><a href="classPt_1_1System_1_1IODevice.html#a8f0892c6bf02c81910a94fcdddee294e">Pt::System::IODevice::read</a></div><div class="ttdeci">std::size_t read(char *buffer, std::size_t n)</div><div class="ttdoc">Read data from I/O device.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html">Pt::Net::UdpSocket</a></div><div class="ttdoc">UDP datagram socket.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:193</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a9985d10e20644e700f56f47bc6766060"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a9985d10e20644e700f56f47bc6766060">Pt::Net::UdpSocket::connected</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:311</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_a53ea129b989135dc396ca6ae8d192bdb"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#a53ea129b989135dc396ca6ae8d192bdb">Pt::Net::TcpSocket::connected</a></div><div class="ttdeci">Signal&lt; TcpSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal that the socket was connected.</div><div class="ttdef"><b>Definition:</b> TcpSocket.h:209</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a75476fad4525b26500c465203bb319ac"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a75476fad4525b26500c465203bb319ac">Pt::Net::UdpSocket::joinMulticastGroup</a></div><div class="ttdeci">void joinMulticastGroup(const std::string &amp;ipaddr)</div><div class="ttdoc">Joins multicast group ipaddr.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_aea676309d63eaa953da8c4b0baf64c60"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#aea676309d63eaa953da8c4b0baf64c60">Pt::Net::TcpSocket::connect</a></div><div class="ttdeci">void connect(const Endpoint &amp;ep)</div><div class="ttdoc">Connects to ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpServer_html_af07ee5e021e298d2899ae74932d7be28"><div class="ttname"><a href="classPt_1_1Net_1_1TcpServer.html#af07ee5e021e298d2899ae74932d7be28">Pt::Net::TcpServer::listen</a></div><div class="ttdeci">void listen(const Endpoint &amp;ep)</div><div class="ttdoc">Listens on local endpoint ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1TcpSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="classPt_1_1Net_1_1TcpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Net::TcpSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Ends connecting to a host.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocketOptions_html"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocketOptions.html">Pt::Net::UdpSocketOptions</a></div><div class="ttdoc">UDP socket bind and send options.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:47</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition:</b> MainLoop.h:51</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_a3e2a1ad7afd80765b91aaa1dac44dfad"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#a3e2a1ad7afd80765b91aaa1dac44dfad">Pt::Net::Endpoint::ip4Any</a></div><div class="ttdeci">static Endpoint ip4Any(unsigned short port)</div><div class="ttdoc">Creates the IPv4 any-address for port.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Selectable_html_a931676e60334ab733b848fa90dcb6dda"><div class="ttname"><a href="classPt_1_1System_1_1Selectable.html#a931676e60334ab733b848fa90dcb6dda">Pt::System::Selectable::setActive</a></div><div class="ttdeci">void setActive(EventLoop &amp;parent)</div><div class="ttdoc">Sets the parent loop, so that operations can be run.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Net::UdpSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Ends connecting to an endpoint.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html_abc562f2e3e17ddf88185f7632953830f"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html#abc562f2e3e17ddf88185f7632953830f">Pt::Net::Endpoint::ip4Loopback</a></div><div class="ttdeci">static Endpoint ip4Loopback(unsigned short port)</div><div class="ttdoc">Creates the IPv4 loopback address for port.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_ac41e61cf0c5358aa1452e38533b74d1a"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#ac41e61cf0c5358aa1452e38533b74d1a">Pt::Net::UdpSocket::setTarget</a></div><div class="ttdeci">void setTarget(const Endpoint &amp;ep)</div><div class="ttdoc">Sets the send target to ep.</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1UdpSocket_html_aedeb1d2d17984ea62868167b3d2b73db"><div class="ttname"><a href="classPt_1_1Net_1_1UdpSocket.html#aedeb1d2d17984ea62868167b3d2b73db">Pt::Net::UdpSocket::bound</a></div><div class="ttdeci">Signal&lt; UdpSocket &amp; &gt; &amp; bound()</div><div class="ttdoc">Returns the signal that the socket was bound.</div><div class="ttdef"><b>Definition:</b> UdpSocket.h:254</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -160,7 +160,6 @@
                     <li><a href="features-license.html">License</a></li>
                     <li><a href="https://lists.sourceforge.net/lists/listinfo/pt-framework-general">Mailing List</a></li>
                     <li><a href="htdocs/faq.html">Frequently Asked Questions</a></li>
-                    <li><a href="htdocs/pt_contents.html">The Pt Book</a></li>
                 </ul>
             </td>
             <td valign="top" class="docs-body">
@@ -207,7 +206,15 @@
                     <div class="infobox-header"><a href="htdocs/Pt-Core-Page.html">Pt</a></div>
                     <div class="infobox-body">
                         <ul>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Basics">Basic Types</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Arg">Command Line Arguments</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Settings">Application Settings</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Event">Events</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Any">Type-Erased Values</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-IntTypes">Fixed-Size Integers</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Byteorder">Byte Order</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Atomics">Atomic Operations</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Streams">Streams</a></li>
+                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-ZStreams">Zlib Streams</a></li>
                             <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-DateTime">Dates and Times</a></li>
                             <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Coroutines">Coroutines</a></li>
                             <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Allocator">Allocators</a></li>
@@ -232,7 +239,7 @@
                             <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Library">Shared Libraries</a></li>
                             <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Plugins">Plugins</a></li>
                             <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Tar">Tar Archive I/O</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Utilities">Utilities</a></li>
+                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Clock">System Clock</a></li>
                         </ul>
                     </div>
                 </div>
@@ -251,10 +258,11 @@
                 <div class="clear">&nbsp;</div>
 
                 <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header">Pt-Gfx</div>
+                    <div class="infobox-header"><a href="htdocs/Pt-Gfx-Page.html">Pt-Gfx</a></div>
                     <div class="infobox-body">
                         <ul>
-                            <li><a href="htdocs/Pt-Gfx-Drawing-Page.html">Drawing Graphics and Text</a></li>
+                            <li><a href="htdocs/Pt-Gfx-Page.html#Pt-Gfx-Page-Images">Images and Image Views</a></li>
+                            <li><a href="htdocs/Pt-Gfx-Page.html#Pt-Gfx-Page-Drawing">Drawing Graphics and Text</a></li>
                         </ul>
                     </div>
                 </div>
@@ -319,6 +327,45 @@
                     <div class="infobox-body">
                         <ul>
                             <li><a href="htdocs/Pt-Unit-Page.html">Unit Testing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear">&nbsp;</div>
+
+                <div class="infobox docs-module" style="float:left">
+                    <div class="infobox-header"><a href="htdocs/Pt-Db-Page.html">Pt-Db</a></div>
+                    <div class="infobox-body">
+                        <ul>
+                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Connections">Connections</a></li>
+                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Statements">Statements</a></li>
+                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Results">Results</a></li>
+                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Cursors">Cursors</a></li>
+                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Transactions">Transactions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="infobox docs-module" style="float:left">
+                    <div class="infobox-header"><a href="htdocs/Pt-Lua-Page.html">Pt-Lua</a></div>
+                    <div class="infobox-body">
+                        <ul>
+                            <li><a href="htdocs/Pt-Lua-Page.html#Pt-Lua-Page-Runtime">Runtime and Bindings</a></li>
+                            <li><a href="htdocs/Pt-Lua-Page.html#Pt-Lua-Page-Scripts">Scripts</a></li>
+                            <li><a href="htdocs/Pt-Lua-Page.html#Pt-Lua-Page-Calls">Native Calls</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="infobox docs-module" style="float:left">
+                    <div class="infobox-header"><a href="htdocs/Pt-Mcp-Page.html">Pt-Mcp</a></div>
+                    <div class="infobox-body">
+                        <ul>
+                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Types">Parameter Schemas</a></li>
+                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Tools">Tools and Server Declaration</a></li>
+                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Content">Result Content</a></li>
+                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Http">HTTP Transport</a></li>
+                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Stdio">Standard I/O Transport</a></li>
                         </ul>
                     </div>
                 </div>

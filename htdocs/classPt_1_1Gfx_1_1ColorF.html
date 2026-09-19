@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ColorF Class Reference</div>  </div>
+<div class="title">ColorF Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Images.html">Images and Image Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Color_8h_source.html">Pt/Gfx/Color.h</a>&gt;</code></p>
 
-<p>RGBA float32 working color.  
+<p>Floating-point RGBA color.  
  <a href="classPt_1_1Gfx_1_1ColorF.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -103,7 +103,8 @@ static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ac69c48335815d72bd123fc01bb843c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Four native floats in RGBA memory order. Channels use the range [0, 1]. Values greater than 1 are allowed for HDR. Alpha is straight. <a class="el" href="classPt_1_1Gfx_1_1ColorF.html" title="RGBA float32 working color.">ColorF</a> is a working type, not a pixel buffer format. Memory order matches RGBA32F so a later ArgbF32 format can copy a <a class="el" href="classPt_1_1Gfx_1_1ColorF.html" title="RGBA float32 working color.">ColorF</a> as 16 bytes. </p>
+<div class="textblock"><p>ColorF is a working color with four float channels in RGBA memory order. It is not a pixel buffer. Channels use the range [0, 1]; values greater than 1 are allowed for HDR. Alpha is straight, not premultiplied. ImageF uses this type as its working color through the same runtime ImageFormat as Image.</p>
+<p>Convert to and from Color with the converting constructors. toChannel8() clamps values below 0 to 0 and values of 1 or greater to 255. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac69c48335815d72bd123fc01bb843c1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac69c48335815d72bd123fc01bb843c1d">&#9670;&nbsp;</a></span>toChannel8()</h2>

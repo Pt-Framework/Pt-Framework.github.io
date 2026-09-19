@@ -85,14 +85,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ZBuffer Class Reference</div>  </div>
+<div class="title">ZBuffer Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-ZStreams.html">Zlib Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ZBuffer_8h_source.html">Pt/ZBuffer.h</a>&gt;</code></p>
 
-<p>Stream buffer for zlib compression.  
-</p>
+<p>Stream buffer that inflates on read and deflates on write.  
+ <a href="classPt_1_1ZBuffer.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1BasicStreamBuffer.html">BasicStreamBuffer&lt; char &gt;</a>.</p>
 <table class="memberdecls">
@@ -152,9 +152,8 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a893fad161e0bcb173591cae663514dbf"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1ZBuffer.html#a893fad161e0bcb173591cae663514dbf">import</a> (std::streamsize maxImport=0)</td></tr>
 <tr class="memdesc:a893fad161e0bcb173591cae663514dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import data from the target stream.  <a href="classPt_1_1ZBuffer.html#a893fad161e0bcb173591cae663514dbf">More...</a><br /></td></tr>
 <tr class="separator:a893fad161e0bcb173591cae663514dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a531fcfa8ed2b86c94f54fe219291129d"><td class="memItemLeft" align="right" valign="top"><a id="a531fcfa8ed2b86c94f54fe219291129d"></a>
-std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicStreamBuffer.html#a531fcfa8ed2b86c94f54fe219291129d">speekn</a> (char *buffer, std::streamsize size)</td></tr>
-<tr class="memdesc:a531fcfa8ed2b86c94f54fe219291129d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peek data in stream. <br /></td></tr>
+<tr class="memitem:a531fcfa8ed2b86c94f54fe219291129d"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicStreamBuffer.html#a531fcfa8ed2b86c94f54fe219291129d">speekn</a> (char *buffer, std::streamsize size)</td></tr>
+<tr class="memdesc:a531fcfa8ed2b86c94f54fe219291129d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peeks characters in the stream buffer.  <a href="classPt_1_1BasicStreamBuffer.html#a531fcfa8ed2b86c94f54fe219291129d">More...</a><br /></td></tr>
 <tr class="separator:a531fcfa8ed2b86c94f54fe219291129d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31f01a812028193e18c15af5695b9107"><td class="memItemLeft" align="right" valign="top"><a id="a31f01a812028193e18c15af5695b9107"></a>
 std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1BasicStreamBuffer.html#a31f01a812028193e18c15af5695b9107">out_avail</a> ()</td></tr>
@@ -168,7 +167,11 @@ virtual std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a5d4baca65e539138ca8fd821779d1484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of characters buffered for output. <br /></td></tr>
 <tr class="separator:a5d4baca65e539138ca8fd821779d1484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ZBuffer is the buffer in the <a class="el" href="group__Pt-ZStreams.html">Zlib Streams</a> model. It is a BasicStreamBuffer of <code>char</code> attached to a target <code>std::ios</code>. Reading inflates compressed bytes from the target. Writing deflates uncompressed bytes into the target.</p>
+<p>Format selects zlib or gzip wrapping at construction and must match the target data. attach() sets the target. detach() drops it without finishing a frame. reset() discards buffered data and begins a new zlib stream, optionally with a new target. discard() resets the state and keeps the target. finish() flushes remaining compressed bytes and ends the stream.</p>
+<p>zcount() is the total number of uncompressed bytes produced by inflate. The buffer does not own the target; keep the target alive until detach() or destruction. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab4e88c89b3b7ea1735996cc4def22d58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4e88c89b3b7ea1735996cc4def22d58">&#9670;&nbsp;</a></span>Format</h2>
 
@@ -206,6 +209,43 @@ virtual std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a cl
       </table>
 </div><div class="memdoc">
 <p>Returns the number of bytes consumed from the underlyig stream. </p>
+
+</div>
+</div>
+<a id="a531fcfa8ed2b86c94f54fe219291129d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a531fcfa8ed2b86c94f54fe219291129d">&#9670;&nbsp;</a></span>speekn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::streamsize speekn </td>
+          <td>(</td>
+          <td class="paramtype">char  *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::streamsize&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of characters that can be peeked depends on the current get area and may be less than requested, similar to istream::readsome(). The characters are not consumed. </p>
 
 </div>
 </div>

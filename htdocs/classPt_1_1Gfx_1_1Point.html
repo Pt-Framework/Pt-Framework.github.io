@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Point Class Reference</div>  </div>
+<div class="title">Point Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Point_8h_source.html">Pt/Gfx/Point.h</a>&gt;</code></p>
 
-<p>Point with floating-point X and Y coordinates.  
-</p>
+<p>Floating-point X and Y coordinates.  
+ <a href="classPt_1_1Gfx_1_1Point.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,7 +135,16 @@ Float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memdesc:a7e88e6c33ecddaf5e5a314398c202a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ceils each coordinate and returns a PointI. <br /></td></tr>
 <tr class="separator:a7e88e6c33ecddaf5e5a314398c202a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Point is the logical coordinate value drawing uses: an X and a Y of type Float. It is not a pixel index. Image and view positions are integers; convert with round(), floor(), or ceil() when a pixel location is required. PointF is a typedef of this type.</p>
+<p>The value is copyable. Arithmetic treats it as a vector: addition and subtraction with another point, scaling by a scalar, and move() by a delta. length() is the Euclidean length from the origin, and distanceTo() is the length to another point. isEqual() compares with a tolerance, because floating-point coordinates are not exact.</p>
+<p>Construct from two floats, or widen a PointI with the explicit constructor. Widening does not round; the integer coordinates become floats.</p>
+<p>The example builds a logical point and converts it to an integer pixel position by rounding.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a> p(10.4, 20.6);</div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1PointI.html">Pt::Gfx::PointI</a> pixel = p.round();</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Point_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Point.html">Pt::Gfx::Point</a></div><div class="ttdoc">Floating-point X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:73</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1PointI_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PointI.html">Pt::Gfx::PointI</a></div><div class="ttdoc">Integer X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> Point.h:292</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

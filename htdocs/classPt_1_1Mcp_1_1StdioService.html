@@ -83,39 +83,76 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">StdioService Class Reference</div>  </div>
+<div class="title">StdioService Class Reference<div class="ingroups"><a class="el" href="group__Pt-Mcp.html">Model Context Protocol</a> &raquo; <a class="el" href="group__Pt-Mcp-Stdio.html">Standard I/O Transport</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="StdioService_8h_source.html">Pt/Mcp/StdioService.h</a>&gt;</code></p>
 
-<p>MCP protocol service over stdio.  
+<p>MCP service over standard streams with an event loop.  
  <a href="classPt_1_1Mcp_1_1StdioService.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aacf7e663494c2e68850d81fb6b9696e2"><td class="memItemLeft" align="right" valign="top"><a id="aacf7e663494c2e68850d81fb6b9696e2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html#aacf7e663494c2e68850d81fb6b9696e2">StdioService</a> (<a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a> &amp;serviceDef, const <a class="el" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a> &amp;decl, <a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop)</td></tr>
-<tr class="memdesc:aacf7e663494c2e68850d81fb6b9696e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a service definition, tool declaration and the event loop used to drive asynchronous service procedures. <br /></td></tr>
+<tr class="memitem:aacf7e663494c2e68850d81fb6b9696e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html#aacf7e663494c2e68850d81fb6b9696e2">StdioService</a> (<a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a> &amp;serviceDef, const <a class="el" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a> &amp;decl, <a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop)</td></tr>
+<tr class="memdesc:aacf7e663494c2e68850d81fb6b9696e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a service for <em>serviceDef</em>, <em>decl</em> and <em>loop</em>.  <a href="classPt_1_1Mcp_1_1StdioService.html#aacf7e663494c2e68850d81fb6b9696e2">More...</a><br /></td></tr>
 <tr class="separator:aacf7e663494c2e68850d81fb6b9696e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1248592bbc0d907eb583a12e495310c2"><td class="memItemLeft" align="right" valign="top"><a id="a1248592bbc0d907eb583a12e495310c2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html#a1248592bbc0d907eb583a12e495310c2">~StdioService</a> ()</td></tr>
-<tr class="memdesc:a1248592bbc0d907eb583a12e495310c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memdesc:a1248592bbc0d907eb583a12e495310c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the service. <br /></td></tr>
 <tr class="separator:a1248592bbc0d907eb583a12e495310c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f17d9be94ca2d1e9d321b68b98b758"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">readMessage</a> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a67f17d9be94ca2d1e9d321b68b98b758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a Content-Length framed message from the stream.  <a href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">More...</a><br /></td></tr>
+<tr class="memdesc:a67f17d9be94ca2d1e9d321b68b98b758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads one Content-Length framed message from <em>is</em>.  <a href="classPt_1_1Mcp_1_1StdioService.html#a67f17d9be94ca2d1e9d321b68b98b758">More...</a><br /></td></tr>
 <tr class="separator:a67f17d9be94ca2d1e9d321b68b98b758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="memItemLeft" align="right" valign="top"><a id="a52a061f3e17f744bf0e20b0d5cb0ccfb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html#a52a061f3e17f744bf0e20b0d5cb0ccfb">writeMessage</a> (std::ostream &amp;os, const std::string &amp;json)</td></tr>
-<tr class="memdesc:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a Content-Length framed message to the stream. <br /></td></tr>
+<tr class="memdesc:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a Content-Length framed message <em>json</em> to <em>os</em>. <br /></td></tr>
 <tr class="separator:a52a061f3e17f744bf0e20b0d5cb0ccfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c1245f281c8c9a57d9aac63bacf2729"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">dispatch</a> (const std::string &amp;json)</td></tr>
-<tr class="memdesc:a6c1245f281c8c9a57d9aac63bacf2729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch an MCP request and return the response JSON.  <a href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">More...</a><br /></td></tr>
+<tr class="memdesc:a6c1245f281c8c9a57d9aac63bacf2729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches an MCP request and returns the response JSON.  <a href="classPt_1_1Mcp_1_1StdioService.html#a6c1245f281c8c9a57d9aac63bacf2729">More...</a><br /></td></tr>
 <tr class="separator:a6c1245f281c8c9a57d9aac63bacf2729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles the full MCP protocol lifecycle: initialize, tools/list, and tools/call. Reads/writes Content-Length framed messages. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>StdioService is the stdio transport that can run asynchronous tool procedures. Framing and dispatch are the same as Service: readMessage(), writeMessage(), and dispatch() on Content-Length framed JSON-RPC. The extra argument is an EventLoop. dispatch() starts the procedure and, when the procedure is asynchronous, runs that loop until the result is ready.</p>
+<p>Use this type when a tool is an asynchronous remoting procedure. Use Service when every tool completes on the calling thread. The loop is not owned; it must outlive this service. The Pt::Remoting::ServiceDefinition and the ToolDeclaration are not owned either.</p>
+<p>A typical server reads from stdin and writes to stdout until readMessage() returns empty. dispatch() returns an empty string for a notification, and that string is not written. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aacf7e663494c2e68850d81fb6b9696e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf7e663494c2e68850d81fb6b9696e2">&#9670;&nbsp;</a></span>StdioService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Mcp_1_1StdioService.html">StdioService</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Remoting_1_1ServiceDefinition.html">Remoting::ServiceDefinition</a> &amp;&#160;</td>
+          <td class="paramname"><em>serviceDef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Mcp_1_1ToolDeclaration.html">ToolDeclaration</a> &amp;&#160;</td>
+          <td class="paramname"><em>decl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;&#160;</td>
+          <td class="paramname"><em>loop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><em>loop</em> drives asynchronous service procedures. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a67f17d9be94ca2d1e9d321b68b98b758"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67f17d9be94ca2d1e9d321b68b98b758">&#9670;&nbsp;</a></span>readMessage()</h2>
 
@@ -150,7 +187,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Routes to initialize, tools/list, or tools/call handlers. Returns an empty string for notifications (no id). </p>
+<p>Returns an empty string for notifications (no id). </p>
 
 </div>
 </div>

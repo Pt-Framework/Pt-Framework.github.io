@@ -84,13 +84,13 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">PainterBase Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">PainterBase Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="PainterBase_8h_source.html">Pt/Gfx/PainterBase.h</a>&gt;</code></p>
 
-<p>Base class for drawing commands and paint state.  
+<p>Drawing commands and paint state.  
  <a href="classPt_1_1Gfx_1_1PainterBase.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -308,7 +308,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a3138f8ca97cb8090c915b6c35b6c6a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>PainterBase stores the state used by drawing operations and forwards the resulting commands to a Canvas supplied by a PaintSurface or PaintContext. It provides the common API for lines, filled shapes, paths, text and image rendering, while concrete painters only need to manage how painting begins. </p>
+<div class="textblock"><p>PainterBase is the command API Painter inherits. It holds the current Pen, Brush, Font, CompositionMode, user Transform, and clip, and it forwards draw and fill operations to the Canvas of the bound surface or context.</p>
+<p>Outline commands use the pen. Fill commands use the brush. drawPath() and fillPath() use the current path or a path passed as an argument. drawText() uses the current font. drawImage() and drawBitmap() composite existing pixels. Coordinates are logical; the target Scaling converts them to physical pixels.</p>
+<p>This type is not constructed by application code. Construct a Painter. beginPaint() is protected so only a concrete painter starts a session. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

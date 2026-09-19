@@ -84,14 +84,14 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">RectI Class Reference</div>  </div>
+<div class="title">RectI Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Rect_8h_source.html">Pt/Gfx/Rect.h</a>&gt;</code></p>
 
-<p>Rect with integer coordinates.  
-</p>
+<p>Integer rectangle.  
+ <a href="classPt_1_1Gfx_1_1RectI.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,7 +139,10 @@ static <a class="el" href="classPt_1_1Gfx_1_1RectI.html">RectI</a>&#160;</td><td
 <tr class="memdesc:a0ab3d905086121d5abe297060a6393f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rect from x, y, width, and height. <br /></td></tr>
 <tr class="separator:a0ab3d905086121d5abe297060a6393f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>RectI is the integer counterpart of Rect: a PointI origin and a SizeI. Image regions and rounded drawing rectangles use this type. Widen it to Rect when a painter needs a floating-point rectangle.</p>
+<p>Geometry matches Rect, including exclusive right and bottom edges in contains(). There is no rounding API on this type: rounding is how a Rect becomes a RectI. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

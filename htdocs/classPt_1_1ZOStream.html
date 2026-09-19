@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ZOStream Class Reference</div>  </div>
+<div class="title">ZOStream Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-ZStreams.html">Zlib Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ZStream_8h_source.html">Pt/ZStream.h</a>&gt;</code></p>
 
-<p>Output stream for zlib compression.  
-</p>
+<p>Output stream that deflates to zlib or gzip.  
+ <a href="classPt_1_1ZOStream.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1BasicOStream.html">BasicOStream&lt; char &gt;</a>.</p>
 <table class="memberdecls">
@@ -153,7 +153,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aec28ff80bde4f62110820a952c72db45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the buffer. <br /></td></tr>
 <tr class="separator:aec28ff80bde4f62110820a952c72db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ZOStream owns a ZBuffer and writes uncompressed bytes to a compressed <code>std::ostream</code>. Construct it with a format, or with a target stream and a format. attach(), detach(), reset() and finish() forward to the buffer. Call finish() before relying on the target to contain a complete frame. The target is not owned. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

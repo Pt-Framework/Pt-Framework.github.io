@@ -198,6 +198,10 @@
 : <a class="el" href="classPt_1_1BasicComposer.html#a6aa0fe55c467a35a5ea68c5583861762">BasicComposer&lt; T &gt;</a>
 , <a class="el" href="classPt_1_1BasicComposer_3_01Pt_1_1SerializationInfo_01_4.html#afad60663b15c89f75f4c788fd5f0bdbc">BasicComposer&lt; Pt::SerializationInfo &gt;</a>
 , <a class="el" href="classPt_1_1BasicDecomposer.html#a23234d89a029fda36b9a7c53f1f1f632">BasicDecomposer&lt; T &gt;</a>
+, <a class="el" href="classPt_1_1Db_1_1Cursor.html#a2387033802383edbdc95f9bbb12a707e">Cursor</a>
+, <a class="el" href="classPt_1_1Db_1_1Result.html#ad5fee900c7aee90671038c79225bf8ec">Result</a>
+, <a class="el" href="classPt_1_1Db_1_1Row.html#ad5fee900c7aee90671038c79225bf8ec">Row</a>
+, <a class="el" href="classPt_1_1Db_1_1Transaction.html#ab0bdf5cca484fb2ba637c39384b27fb2">Transaction</a>
 , <a class="el" href="classPt_1_1Deserializer.html#a419dd33f0b58cc9b7e3fc034e821193e">Deserializer</a>
 , <a class="el" href="classPt_1_1Forms_1_1InputMethod.html#a4cf67e92a4565e6a074a1f6feb9b933b">InputMethod</a>
 , <a class="el" href="classPt_1_1Forms_1_1Painter.html#a6cb5c2952b6e9f6e6dfc3b2e688d407c">Painter</a>
@@ -222,15 +226,32 @@
 <li>beginAccept()
 : <a class="el" href="classPt_1_1Net_1_1TcpServer.html#a183615050060f9d8f3841dc4351e9d95">TcpServer</a>
 </li>
+<li>beginAdvance()
+: <a class="el" href="classPt_1_1Lua_1_1Script.html#a1ea8396a037344eb4c17b28e5f09b1f7">Script</a>
+</li>
 <li>beginAuthorize()
 : <a class="el" href="classPt_1_1Http_1_1Authorization.html#ae2893d6bd52071e2f3b053e8449c300d">Authorization</a>
 , <a class="el" href="classPt_1_1Http_1_1Authorizer.html#ac4ffa0c012cc638420481c34c83fb9c3">Authorizer</a>
+</li>
+<li>beginBatchFetch()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#af702868d1f63d581ebb08d4775a3e97b">IConnection</a>
 </li>
 <li>beginBind()
 : <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#a7017fd65edc8f84da8412ae986dfd40e">UdpSocket</a>
 </li>
 <li>beginCall()
-: <a class="el" href="classPt_1_1Remoting_1_1Responder.html#acaa96f8c157ef50d9d5448831c4bdc89">Responder</a>
+: <a class="el" href="classPt_1_1Lua_1_1AsyncCall.html#ada648a025a64aef3ed32e9a8a981b4ba">AsyncCall</a>
+, <a class="el" href="classPt_1_1Remoting_1_1Responder.html#acaa96f8c157ef50d9d5448831c4bdc89">Responder</a>
+</li>
+<li>beginClose()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#ad8453237c5fcbd9425474ef4ef69f0d2">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#ad8453237c5fcbd9425474ef4ef69f0d2">IConnection</a>
+</li>
+<li>beginCommit()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#aa756ca2d88fa0400578d814ccd025212">Transaction</a>
+</li>
+<li>beginCommitTransaction()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#aeb419855d2c011450b133267e1a95a95">IConnection</a>
 </li>
 <li>beginConnect()
 : <a class="el" href="classPt_1_1Http_1_1WebSocket.html#a98898a52a5589b791620617c21b8d8e9">WebSocket</a>
@@ -259,8 +280,16 @@
 : <a class="el" href="classPt_1_1Composer.html#a666f3cb85e7d9e0cfbfcdf6c4b7e2aad">Composer</a>
 , <a class="el" href="classPt_1_1Formatter.html#aff59bd3122e1d4462f749477a59b9227">Formatter</a>
 </li>
+<li>beginExecute()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a180f755412c953623b0892060ce6b7ab">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a180f755412c953623b0892060ce6b7ab">IConnection</a>
+, <a class="el" href="classPt_1_1Db_1_1Statement.html#a4952dde4be21af32cc194170eade302c">Statement</a>
+</li>
 <li>beginFault()
 : <a class="el" href="classPt_1_1JsonRpc_1_1Responder.html#a6a9bf9cd11626e2fe323dd7937878810">Responder</a>
+</li>
+<li>beginFetch()
+: <a class="el" href="classPt_1_1Db_1_1Cursor.html#a5e66f81eca11c91a3ba513435848418b">Cursor</a>
 </li>
 <li>beginFile()
 : <a class="el" href="classPt_1_1System_1_1TarWriter.html#af3d8b24a9c401a03048ca83d24118d14">TarWriter</a>
@@ -278,7 +307,7 @@
 </li>
 <li>beginMember()
 : <a class="el" href="classPt_1_1Composer.html#ab75b86fa3ae308c3f8bb7c26c18fc7f8">Composer</a>
-, <a class="el" href="classPt_1_1Formatter.html#a074919036d63ef03a1445f76364e6601">Formatter</a>
+, <a class="el" href="classPt_1_1Formatter.html#affe96e299a5af49efc60d7f39d412bf7">Formatter</a>
 </li>
 <li>beginMessage()
 : <a class="el" href="classPt_1_1JsonRpc_1_1Client.html#adde1b3544f8b7fbfce805bde01ae33c8">Client</a>
@@ -289,7 +318,9 @@
 , <a class="el" href="classPt_1_1XmlRpc_1_1Responder.html#a537b3e57a18bb9bd4afd13a9a1473992">Responder</a>
 </li>
 <li>beginOpen()
-: <a class="el" href="classPt_1_1System_1_1FileDevice.html#a31733d5fb687a5778e4ff4571ba2051a">FileDevice</a>
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a4a0dab19396c661e0e17bc0c1d89663c">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a4a0dab19396c661e0e17bc0c1d89663c">IConnection</a>
+, <a class="el" href="classPt_1_1System_1_1FileDevice.html#a31733d5fb687a5778e4ff4571ba2051a">FileDevice</a>
 </li>
 <li>beginOutput()
 : <a class="el" href="classPt_1_1Http_1_1IOStream.html#acb733b984f4e60a743f2e07531ea9d5b">IOStream</a>
@@ -300,6 +331,19 @@
 </li>
 <li>beginParse()
 : <a class="el" href="classPt_1_1Formatter.html#a6d40a211221c854e6126e83e270d2578">Formatter</a>
+</li>
+<li>beginPing()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#adedb5b20ea0894d613ac0561764b2d63">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#adedb5b20ea0894d613ac0561764b2d63">IConnection</a>
+</li>
+<li>beginPrepare()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a45450763e36a7ec89f589c539063083f">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#a45450763e36a7ec89f589c539063083f">IConnection</a>
+</li>
+<li>beginPrepareCached()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#a017a0bf89c8fed501896f055167bf6a8">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#ab743d3555fb5f8061dee25a07f2ef174">IConnection</a>
+, <a class="el" href="classPt_1_1Db_1_1IStmtCacheConnection.html#a8b179f5617914a6341be9e601021e2fd">IStmtCacheConnection</a>
 </li>
 <li>beginRead()
 : <a class="el" href="classPt_1_1System_1_1IOBuffer.html#a3949fef47b46b258d04173ad17b19a17">IOBuffer</a>
@@ -322,19 +366,36 @@
 , <a class="el" href="classPt_1_1XmlRpc_1_1Client.html#a47023fe0730ed1c00bbecaeb01aa02d0">Client</a>
 , <a class="el" href="classPt_1_1XmlRpc_1_1Responder.html#a72ed5f0a66ebd08fbfcc70f98f75ee7f">Responder</a>
 </li>
+<li>beginRollback()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#a5a843d6e43f2b195bd88852bc22ba501">Transaction</a>
+</li>
+<li>beginRollbackTransaction()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#a2b6b09af27d2b8b2e48a5f487466b27a">IConnection</a>
+</li>
 <li>beginSave()
 : <a class="el" href="classPt_1_1SerializationContext.html#a87b4e990c989fb0620ccec3eda1e9839">SerializationContext</a>
 , <a class="el" href="classPt_1_1SerializationInfo.html#ad786cdabc740213497eb43e9e3f2947d">SerializationInfo</a>
+</li>
+<li>beginSelect()
+: <a class="el" href="classPt_1_1Db_1_1Connection.html#afe507e44bb41ac1d1a822e1c02016e36">Connection</a>
+, <a class="el" href="classPt_1_1Db_1_1IConnection.html#afe507e44bb41ac1d1a822e1c02016e36">IConnection</a>
+, <a class="el" href="classPt_1_1Db_1_1Statement.html#ad76e33773cee9327c6c0ffbbb80dfbd1">Statement</a>
 </li>
 <li>beginSend()
 : <a class="el" href="classPt_1_1Http_1_1Client.html#a51f5e3c115973b763ec7ced957bc7c7c">Client</a>
 , <a class="el" href="classPt_1_1Http_1_1Reply.html#ae7e1db76e3a5162a4cf8c80b8a9289d8">Reply</a>
 </li>
 <li>beginSequence()
-: <a class="el" href="classPt_1_1Formatter.html#a40ac858247ebb3452f81940a6ccf920f">Formatter</a>
+: <a class="el" href="classPt_1_1Formatter.html#af4f7bce763bb6fa6e18d09b26a58c1df">Formatter</a>
+</li>
+<li>beginStart()
+: <a class="el" href="classPt_1_1Db_1_1Transaction.html#a2308defaa1c82e8dbb1211e5a29d7cab">Transaction</a>
+</li>
+<li>beginStartTransaction()
+: <a class="el" href="classPt_1_1Db_1_1IConnection.html#acfbed7e41bbff31f63b7a76ff6e79beb">IConnection</a>
 </li>
 <li>beginStruct()
-: <a class="el" href="classPt_1_1Formatter.html#aefebc82030d444413ad8335dc52baa5e">Formatter</a>
+: <a class="el" href="classPt_1_1Formatter.html#abb35616624790200a2bd05daaa51546c">Formatter</a>
 </li>
 <li>beginWait()
 : <a class="el" href="classPt_1_1System_1_1IONotifier.html#a124732e7a25ba8e2cd288301b6dc34b1">IONotifier</a>
@@ -359,10 +420,14 @@
 , <a class="el" href="classPt_1_1Forms_1_1StyleOption.html#ae67b7392f85a3678fc7b05dab7d74c5e">StyleOption</a>
 , <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html#a94c5a0ca647980c80b12376fafee853f">StyleOptions</a>
 , <a class="el" href="classPt_1_1Forms_1_1Styler.html#a36be2eaef48ddc0bd3fff591fa5dfbed">Styler</a>
+, <a class="el" href="classPt_1_1Lua_1_1AsyncCall.html#a55b204a2df45e68eb9a3f111bc38aede">AsyncCall</a>
 , <a class="el" href="classPt_1_1Net_1_1UdpSocket.html#aadcbdadbaa49e1de2d10629a948f01a3">UdpSocket</a>
 </li>
 <li>Bitmap()
 : <a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#af3ac0122871b379c617761af1332442e">Bitmap</a>
+</li>
+<li>Blob()
+: <a class="el" href="classPt_1_1Db_1_1Blob.html#a94b3a441da453ea0ebb8ec815fb104ca">Blob</a>
 </li>
 <li>body()
 : <a class="el" href="classPt_1_1Http_1_1Message.html#aae56e96375ec31f762b40b8ff136f39b">Message</a>
@@ -370,6 +435,7 @@
 </li>
 <li>Boolean()
 : <a class="el" href="classPt_1_1Json_1_1Boolean.html#ac1d73962378c5218d066e37347c430ac">Boolean</a>
+, <a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501a3e74f2723415f1cc3cc2f3883f68add8">Type</a>
 , <a class="el" href="classPt_1_1SerializationInfo.html#a1d1cfd8ffb84e947f82999c682b666a7a3e74f2723415f1cc3cc2f3883f68add8">SerializationInfo</a>
 </li>
 <li>Borderless

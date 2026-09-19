@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">BasicIOStream&lt; CharT, TraitsT &gt; Class Template Reference</div>  </div>
+<div class="title">BasicIOStream&lt; CharT, TraitsT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-Streams.html">Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="IOStream_8h_source.html">Pt/IOStream.h</a>&gt;</code></p>
 
-<p>Input/Output stream.  
-</p>
+<p>Input and output stream over a BasicStreamBuffer.  
+ <a href="classPt_1_1BasicIOStream.html#details">More...</a></p>
 
 <p>Inherits basic_iostream&lt; CharT, std::char_traits&lt; CharT &gt; &gt;.</p>
 <table class="memberdecls">
@@ -120,7 +120,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aec28ff80bde4f62110820a952c72db45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the buffer. <br /></td></tr>
 <tr class="separator:aec28ff80bde4f62110820a952c72db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename CharT, typename TraitsT = std::char_traits&lt;CharT&gt;&gt;<br />
+class Pt::BasicIOStream&lt; CharT, TraitsT &gt;</h3>
+
+<p>BasicIOStream is the bidirectional stream in the <a class="el" href="group__Pt-Streams.html">Streams</a> model. It is a <code>std::basic_iostream</code> that holds a BasicStreamBuffer pointer. peeksome() is the input lookahead of BasicIStream. writesome() is the partial write of BasicOStream. Both require that <code>rdbuf()</code> still is this buffer.</p>
+<p>buffer() returns the pointer. setBuffer() replaces it and updates <code>rdbuf()</code>. The stream does not own the buffer. Use this type when the same buffer is read and written; use BasicIStream or BasicOStream when the direction is fixed. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac06710e909bf4323e3b3c5dda9d3dec4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac06710e909bf4323e3b3c5dda9d3dec4">&#9670;&nbsp;</a></span>peeksome()</h2>
 

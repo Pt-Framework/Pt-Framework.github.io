@@ -81,23 +81,63 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">Pt::Lua Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> state bound to a Pt::Reflex type catalog, scripts that advance on an event loop, and asynchronous native calls those scripts can invoke. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1AsyncAdvance.html">AsyncAdvance</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable for async advance of a <a class="el" href="namespacePt_1_1Lua.html" title="Lua Runtime and Bindiungs.">Lua</a> Script.  <a href="classPt_1_1Lua_1_1AsyncAdvance.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable advance of a <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> script.  <a href="classPt_1_1Lua_1_1AsyncAdvance.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1AsyncCall.html">AsyncCall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous native call from <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a>.  <a href="classPt_1_1Lua_1_1AsyncCall.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1BasicAsyncCall.html">BasicAsyncCall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous native call with result type <em>R</em>.  <a href="classPt_1_1Lua_1_1BasicAsyncCall.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1BasicAsyncCall_3_01void_01_4.html">BasicAsyncCall&lt; void &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous native call with no result.  <a href="classPt_1_1Lua_1_1BasicAsyncCall_3_01void_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1Call.html">Call</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronous native call from <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a>.  <a href="classPt_1_1Lua_1_1Call.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1ConstructorCall.html">ConstructorCall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflected constructor invocation from <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a>.  <a href="classPt_1_1Lua_1_1ConstructorCall.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1Context.html">Context</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scripting context.  <a href="classPt_1_1Lua_1_1Context.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> state with a bound type catalog.  <a href="classPt_1_1Lua_1_1Context.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1MethodCall.html">MethodCall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflected method invocation from <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a>.  <a href="classPt_1_1Lua_1_1MethodCall.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1PropertyGetCall.html">PropertyGetCall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflected property read from <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a>.  <a href="classPt_1_1Lua_1_1PropertyGetCall.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1PropertySetCall.html">PropertySetCall</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflected property write from <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a>.  <a href="classPt_1_1Lua_1_1PropertySetCall.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1Result.html">Result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Lua_1_1Result.html" title="Result of a finished Lua script.">Result</a> of a finished <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> script.  <a href="classPt_1_1Lua_1_1Result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1Script.html">Script</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacePt_1_1Lua.html" title="Lua Runtime and Bindiungs.">Lua</a> script.  <a href="classPt_1_1Lua_1_1Script.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> script.  <a href="classPt_1_1Lua_1_1Script.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Lua_1_1TypeManager.html">TypeManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type catalog for <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> bindings.  <a href="classPt_1_1Lua_1_1TypeManager.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gaa977d3f9b442cb12bfab6e6ffc186e4b"><td class="memTemplParams" colspan="2">template&lt;typename... As&gt; </td></tr>
+<tr class="memitem:gaa977d3f9b442cb12bfab6e6ffc186e4b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__Pt-Lua-Calls.html#gaa977d3f9b442cb12bfab6e6ffc186e4b">AsyncFunction</a> = Pt::Reflex::BasicFunction&lt; <a class="el" href="classPt_1_1Lua_1_1AsyncCall.html">AsyncCall</a> *, As... &gt;</td></tr>
+<tr class="memdesc:gaa977d3f9b442cb12bfab6e6ffc186e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflex function that returns an asynchronous <a class="el" href="namespacePt_1_1Lua.html" title="Lua runtime and reflected bindings.">Lua</a> call.  <a href="group__Pt-Lua-Calls.html#gaa977d3f9b442cb12bfab6e6ffc186e4b">More...</a><br /></td></tr>
+<tr class="separator:gaa977d3f9b442cb12bfab6e6ffc186e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 

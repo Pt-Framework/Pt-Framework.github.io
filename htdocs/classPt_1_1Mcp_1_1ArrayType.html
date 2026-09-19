@@ -81,29 +81,106 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ArrayType Class Reference</div>  </div>
+<div class="title">ArrayType Class Reference<div class="ingroups"><a class="el" href="group__Pt-Mcp.html">Model Context Protocol</a> &raquo; <a class="el" href="group__Pt-Mcp-Types.html">Parameter Schemas</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Type_8h_source.html">Pt/Mcp/Type.h</a>&gt;</code></p>
 
-<p>Array type with element type.  
+<p>JSON array schema with one element type.  
  <a href="classPt_1_1Mcp_1_1ArrayType.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Mcp_1_1Type.html">Type</a>.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae3b8b91f7f6754d1ef7fd67c1bdaa501"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501">TypeId</a> { <br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501a727b8a8d744d88f4d9596d91abfdf277">Null</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501a1e2f89e867cd91c3de2ea9fbd2ef96a3">Integer</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501afa620f80ceb585b771a878cc135c4035">Number</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501ade17ec82ff106e0c2b4417f5ca231eae">String</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501a3e74f2723415f1cc3cc2f3883f68add8">Boolean</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501a5df911aaca43421a25e32c3002befbc4">Object</a> = 5, 
+<br />
+&#160;&#160;<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501af8303e03242532eebd970f40ee509689">Array</a> = 6
+<br />
+ }</td></tr>
+<tr class="memdesc:ae3b8b91f7f6754d1ef7fd67c1bdaa501"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON Schema kind of a Type.  <a href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501">More...</a><br /></td></tr>
+<tr class="separator:ae3b8b91f7f6754d1ef7fd67c1bdaa501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af8565b214788ac4ced2a131f9f99e780"><td class="memItemLeft" align="right" valign="top"><a id="af8565b214788ac4ced2a131f9f99e780"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ArrayType.html#af8565b214788ac4ced2a131f9f99e780">ArrayType</a> (const <a class="el" href="classPt_1_1Mcp_1_1Type.html">Type</a> &amp;<a class="el" href="classPt_1_1Mcp_1_1ArrayType.html#ad99b84af731b62fbb747f148488b04ea">items</a>)</td></tr>
+<tr class="memdesc:af8565b214788ac4ced2a131f9f99e780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an array schema whose items have type <em>items</em>. <br /></td></tr>
+<tr class="separator:af8565b214788ac4ced2a131f9f99e780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6b6e69bb5132b9b2ecb1b50108b7d3"><td class="memItemLeft" align="right" valign="top"><a id="a7a6b6e69bb5132b9b2ecb1b50108b7d3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ArrayType.html#a7a6b6e69bb5132b9b2ecb1b50108b7d3">~ArrayType</a> ()</td></tr>
+<tr class="memdesc:a7a6b6e69bb5132b9b2ecb1b50108b7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the array schema. <br /></td></tr>
+<tr class="separator:a7a6b6e69bb5132b9b2ecb1b50108b7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99b84af731b62fbb747f148488b04ea"><td class="memItemLeft" align="right" valign="top"><a id="ad99b84af731b62fbb747f148488b04ea"></a>
+const <a class="el" href="classPt_1_1Mcp_1_1Type.html">Type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ArrayType.html#ad99b84af731b62fbb747f148488b04ea">items</a> () const</td></tr>
+<tr class="memdesc:ad99b84af731b62fbb747f148488b04ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the schema type of the array elements. <br /></td></tr>
+<tr class="separator:ad99b84af731b62fbb747f148488b04ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a543035e7ab328b6fc10715fbfd9b0419"><td class="memItemLeft" align="right" valign="top"><a id="a543035e7ab328b6fc10715fbfd9b0419"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1ArrayType.html#a543035e7ab328b6fc10715fbfd9b0419">toSchema</a> (std::ostream &amp;os, const std::string &amp;description=&quot;&quot;) const override</td></tr>
-<tr class="memdesc:a543035e7ab328b6fc10715fbfd9b0419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the JSON Schema representation to the stream. <br /></td></tr>
+<tr class="memdesc:a543035e7ab328b6fc10715fbfd9b0419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes this array as a JSON Schema object to <em>os</em>. <br /></td></tr>
 <tr class="separator:a543035e7ab328b6fc10715fbfd9b0419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7973a410c8b5f902c1e08bdb9c1a08"><td class="memItemLeft" align="right" valign="top"><a id="a7b7973a410c8b5f902c1e08bdb9c1a08"></a>
+<a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Mcp_1_1Type.html#a7b7973a410c8b5f902c1e08bdb9c1a08">typeId</a> () const</td></tr>
+<tr class="memdesc:a7b7973a410c8b5f902c1e08bdb9c1a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the JSON Schema kind of this type. <br /></td></tr>
+<tr class="separator:a7b7973a410c8b5f902c1e08bdb9c1a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Describes a JSON array schema with a single items type. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>ArrayType is a composed Type whose schema is a JSON array. The items type is the schema of every element. It is not owned; it must outlive this array type. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b8b91f7f6754d1ef7fd67c1bdaa501">&#9670;&nbsp;</a></span>TypeId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPt_1_1Mcp_1_1Type.html#ae3b8b91f7f6754d1ef7fd67c1bdaa501">TypeId</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501a727b8a8d744d88f4d9596d91abfdf277"></a>Null&#160;</td><td class="fielddoc"><p>JSON null. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501a1e2f89e867cd91c3de2ea9fbd2ef96a3"></a>Integer&#160;</td><td class="fielddoc"><p>JSON integer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501afa620f80ceb585b771a878cc135c4035"></a>Number&#160;</td><td class="fielddoc"><p>JSON number. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501ade17ec82ff106e0c2b4417f5ca231eae"></a>String&#160;</td><td class="fielddoc"><p>JSON string. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501a3e74f2723415f1cc3cc2f3883f68add8"></a>Boolean&#160;</td><td class="fielddoc"><p>JSON boolean. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501a5df911aaca43421a25e32c3002befbc4"></a>Object&#160;</td><td class="fielddoc"><p>JSON object. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3b8b91f7f6754d1ef7fd67c1bdaa501af8303e03242532eebd970f40ee509689"></a>Array&#160;</td><td class="fielddoc"><p>JSON array. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

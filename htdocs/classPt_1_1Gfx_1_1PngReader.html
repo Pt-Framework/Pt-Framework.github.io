@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">PngReader Class Reference</div>  </div>
+<div class="title">PngReader Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Images.html">Images and Image Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="PngReader_8h_source.html">Pt/Gfx/PngReader.h</a>&gt;</code></p>
 
-<p>Reader for PNG images.  
-</p>
+<p>PNG image reader.  
+ <a href="classPt_1_1Gfx_1_1PngReader.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -126,7 +126,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a3ed8e1a73e65e436c4abaeef9250a38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the whole image from the stream. <br /></td></tr>
 <tr class="separator:a3ed8e1a73e65e436c4abaeef9250a38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>PngReader decodes PNG data from an iostream into an Image. Attach a stream and an image, then call get() to read the whole image, or advance() to consume bytes as they become available. The reader does not own the stream or the image.</p>
+<p>When advance() is called with import size 0, only bytes already in the stream buffer are consumed. A positive import size may block on the underlying stream. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad5641c7abf48bceb0762e981a8e88e6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5641c7abf48bceb0762e981a8e88e6a">&#9670;&nbsp;</a></span>advance()</h2>
 

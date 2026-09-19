@@ -113,7 +113,7 @@ Using Prebuilt Dependencies</h1>
 <pre class="fragment">https://github.com/Pt-Framework/Pt/releases/download/&lt;PREBUILT_RELEASE&gt;/&lt;name&gt;.zip
 </pre><p>Settings made explicitly always win. If any of the five package variables are set on the command line or in the environment, or if a flag is passed that builds that package from sources in the tree, prebuilt paths are not applied to that package. The following commands keep a hand-chosen zlib or build zlib from sources, while still using the bundle for the other libraries:</p>
 <div class="fragment"><div class="line">./jam.sh configure --with-prebuilt -sZLIB_INCLUDES=/opt/zlib/include</div>
-<div class="line">./jam.sh configure --fetch-prebuilt --with-<span class="keyword">inline</span>-zlib</div>
+<div class="line">./jam.sh configure --fetch-prebuilt --with-inline-zlib</div>
 </div><!-- fragment --><p>Flags such as <code>&ndash;with-inline-zlib</code>, <code>&ndash;with-inline-libpng</code>, <code>&ndash;with-inline-libjpeg</code> and <code>&ndash;with-inline-freetype</code> skip the corresponding Configure probe and build that package from sources in the tree.</p>
 <p>Configure looks for each library in this order:</p>
 <pre class="fragment">User settings / --with-inline-xxx
@@ -191,8 +191,8 @@ The packages.jam Manifest</h1>
 <p><code>PREBUILT_PACKAGE_DEPENDS</code> lists every needed package in the same bundle. If png is in the bundle, zlib is in the bundle too. The project walks that list for include paths (always), for files to copy (when asked), and for extra link libraries (static linking only). There are no version ranges, no optional dependencies, and no search for a package outside the bundle.</p>
 <p>The file does not set <code>ZLIB_LINKLIBS</code> or <code>SSL_LINKLIBS</code>. Mapping package names to those project variables is done in <code>jam/prebuilt.jam</code>.</p>
 <p>Example:</p>
-<div class="fragment"><div class="line"><span class="preprocessor"># prebuilt/&lt;name&gt;/jam/packages.jam</span></div>
-<div class="line"><span class="keywordflow">if</span> ! $(PREBUILT_PACKAGES_JAM_INCLUDED) {</div>
+<div class="fragment"><div class="line"># prebuilt/&lt;name&gt;/jam/packages.jam</div>
+<div class="line">if ! $(PREBUILT_PACKAGES_JAM_INCLUDED) {</div>
 <div class="line">PREBUILT_PACKAGES_JAM_INCLUDED = true ;</div>
 <div class="line"> </div>
 <div class="line">PREBUILT_SCHEMA  = 1 ;</div>
@@ -230,14 +230,14 @@ Configure Integration</h1>
 <p>For each package, if the bundle is loaded and sources in the tree were not requested, empty variables are filled from the bundle, then Configure is called once:</p>
 <div class="fragment"><div class="line">Load zlib.jam ;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> --with-<span class="keyword">inline</span>-zlib in $(ARGV)</div>
+<div class="line">if --with-inline-zlib in $(ARGV)</div>
 <div class="line">{</div>
 <div class="line">    WITH_BUILTIN_ZLIB = yes ;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> ! $(WITH_BUILTIN_ZLIB)</div>
+<div class="line">if ! $(WITH_BUILTIN_ZLIB)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> $(PREBUILT_ROOT)</div>
+<div class="line">    if $(PREBUILT_ROOT)</div>
 <div class="line">    {</div>
 <div class="line">        ZLIB_INCLUDES  ?= [ Prebuilt-Includes zlib ] ;</div>
 <div class="line">        ZLIB_C++FLAGS  ?= [ Prebuilt-CxxFlags zlib ] ;</div>
@@ -250,7 +250,7 @@ Configure Integration</h1>
 <div class="line">                                 $(ZLIB_LINKLIBS) : $(ZLIB_LIBDIR) : $(ZLIB_LINKFLAGS) ] ;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> ! $(WITH_ZLIB)</div>
+<div class="line">if ! $(WITH_ZLIB)</div>
 <div class="line">{</div>
 <div class="line">    WITH_BUILTIN_ZLIB = yes ;</div>
 <div class="line">}</div>
@@ -312,7 +312,7 @@ Deployment</h1>
 <div class="line">local sources = [ Prebuilt-Bin $(packages) ] ;</div>
 <div class="line">sources += [ Prebuilt-Lib $(packages) ] ;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">for</span> local src in $(sources)</div>
+<div class="line">for local src in $(sources)</div>
 <div class="line">{</div>
 <div class="line">    local dest = $(src:BS) ;</div>
 <div class="line">    File $(dest) : $(src) ;</div>

@@ -98,21 +98,21 @@ Certificates</h1>
 <p>PKCS12 is the usual container: one file or memory buffer can hold several certificates and their keys, often protected by a password. PEM is the other encoding loadPem() accepts from memory. After a load, the store owns the certificates. A private key stays attached to its certificate and is not exposed by any function; selecting a certificate later as a context identity selects that key as well.</p>
 <p>Certificates in the store are inspected by subject. subject() on a Certificate is the subject string, findCertificate() returns a certificate whose subject contains a substring or a null pointer, and getCertificate() does the same search and throws InvalidCertificate when nothing matches. begin() and end() walk the store. The store must outlive any reference or pointer taken from it.</p>
 <p>The example loads PKCS12 data, lists subjects, and looks up one certificate by name. Using that certificate in a Context is the next chapter.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html">Pt::Ssl::CertificateStore</a> store;</div>
+<div class="fragment"><div class="line">Pt::Ssl::CertificateStore store;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* password = ...;</div>
-<div class="line">std::ifstream ifs(<span class="stringliteral">&quot;certs.p12&quot;</span>);</div>
-<div class="line">store.<a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html#a8ae6f839090da6abdf382567483ca471">loadPkcs12</a>(ifs, password);</div>
+<div class="line">const char* password = ...;</div>
+<div class="line">std::ifstream ifs(&quot;certs.p12&quot;);</div>
+<div class="line">store.loadPkcs12(ifs, password);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html">Pt::Ssl::CertificateStore::ConstIterator</a> it;</div>
-<div class="line"><span class="keywordflow">for</span>(it = store.<a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html#ad5fee900c7aee90671038c79225bf8ec">begin</a>(); it != store.<a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html#a69b6e2a03c835ca5d658a1f16acbaa9c">end</a>(); ++it)</div>
+<div class="line">Pt::Ssl::CertificateStore::ConstIterator it;</div>
+<div class="line">for(it = store.begin(); it != store.end(); ++it)</div>
 <div class="line">{</div>
-<div class="line">    std::cout &lt;&lt; it-&gt;<a class="code" href="classPt_1_1Ssl_1_1Certificate.html#a828b19a7f783474c26f7535bbe652c5d">subject</a>() &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; it-&gt;subject() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <a class="code" href="classPt_1_1Ssl_1_1Certificate.html">Pt::Ssl::Certificate</a>* cert = store.<a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html#a3a72fe6a5f114b3f4185b7f5c6873186">findCertificate</a>(<span class="stringliteral">&quot;Example Server&quot;</span>);</div>
-<div class="line"><span class="keywordflow">if</span>( ! cert)</div>
-<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">const Pt::Ssl::Certificate* cert = store.findCertificate(&quot;Example Server&quot;);</div>
+<div class="line">if( ! cert)</div>
+<div class="line">    return;</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Ssl-Page-CertificateStore"></a>
 CertificateStore</h2>
 <p>CertificateStore is the owner of the certificates the group described. PKCS12 data is loaded from an iostream or from a memory buffer, and PEM data is loaded from memory. Each load adds to the store; it does not replace certificates already loaded. Unreadable PKCS12 or PEM data throws InvalidCertificate.</p>
@@ -131,10 +131,10 @@ SSL Context</h1>
 <p>The context copies the certificate data it needs when identity, chain, or CA certificates are set, so the store does not have to remain after those calls. The Certificate argument of each call must still be valid for the call. Unusable certificate material throws InvalidCertificate.</p>
 <p>Context is not copyable. assign() copies protocol, verify settings, and certificates into another context.</p>
 <p>The example prepares a server context from certificates already in a store. Opening a stream with that context is the next chapter.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Ssl_1_1Context.html">Pt::Ssl::Context</a> ctx(<a class="code" href="group__Pt-Ssl-Context.html#ggaac39b55be6469395f55ff0292ad8184cac37271b5b3bc8a375c6123368a30deeb">Pt::Ssl::TLSv1_2</a>);</div>
-<div class="line">ctx.setVerifyMode(<a class="code" href="group__Pt-Ssl-Context.html#ggaec3fd496ba134cc896c9a62b4f37a281a8b8cef4284b42e10a4b39d3f3a5f07b1">Pt::Ssl::AlwaysVerify</a>);</div>
-<div class="line">ctx.setIdentity(store.<a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html#ab0f78ab26d4e4569d2d9e316af3db98c">getCertificate</a>(<span class="stringliteral">&quot;Example Server&quot;</span>));</div>
-<div class="line">ctx.addCACertificate(store.<a class="code" href="classPt_1_1Ssl_1_1CertificateStore.html#ab0f78ab26d4e4569d2d9e316af3db98c">getCertificate</a>(<span class="stringliteral">&quot;Example CA&quot;</span>));</div>
+<div class="fragment"><div class="line">Pt::Ssl::Context ctx(Pt::Ssl::TLSv1_2);</div>
+<div class="line">ctx.setVerifyMode(Pt::Ssl::AlwaysVerify);</div>
+<div class="line">ctx.setIdentity(store.getCertificate(&quot;Example Server&quot;));</div>
+<div class="line">ctx.addCACertificate(store.getCertificate(&quot;Example CA&quot;));</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Ssl-Page-ContextClass"></a>
 Context</h2>
 <p>Context is the configuration the group described: protocol, verification, identity, chain, and trusted CAs, used by every stream opened with it. It is not a connected stream. Keep the context alive while a stream that opened with it is still open.</p>
@@ -154,22 +154,22 @@ Secure Streams</h1>
 <p>The expected name in the peer certificate is setPeerName() on StreamBuffer. currentCipher() is the cipher in use after the handshake, or a placeholder when no connection is open.</p>
 <p>The example opens a client stream and runs the handshake until the stream is connected. Reading and writing application data is the IOStream chapter.</p>
 <div class="fragment"><div class="line">std::iostream&amp; ios = ...;</div>
-<div class="line"><a class="code" href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a> ssl(ctx, ios, <a class="code" href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Pt::Ssl::Connect</a>);</div>
+<div class="line">Pt::Ssl::IOStream ssl(ctx, ios, Pt::Ssl::Connect);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">while</span>( ! ssl.isConnected() )</div>
+<div class="line">while( ! ssl.isConnected() )</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordtype">bool</span> wantRead = ssl.readHandshake();</div>
-<div class="line">    <span class="keywordflow">if</span>(wantRead)</div>
+<div class="line">    bool wantRead = ssl.readHandshake();</div>
+<div class="line">    if(wantRead)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="comment">// wait until the underlying stream has more data</span></div>
-<div class="line">        <span class="keywordflow">continue</span>;</div>
+<div class="line">        // wait until the underlying stream has more data</div>
+<div class="line">        continue;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> wantWrite = ssl.writeHandshake();</div>
-<div class="line">    <span class="keywordflow">if</span>(wantWrite)</div>
+<div class="line">    bool wantWrite = ssl.writeHandshake();</div>
+<div class="line">    if(wantWrite)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="comment">// flush the underlying stream</span></div>
-<div class="line">        <span class="keywordflow">continue</span>;</div>
+<div class="line">        // flush the underlying stream</div>
+<div class="line">        continue;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Ssl-Page-IOStream"></a>
@@ -178,29 +178,29 @@ IOStream</h2>
 <p>A default-constructed stream is closed. The constructor that takes a context, an iostream, and a mode opens immediately, as does open(). isConnected() is true after the handshake completes. readHandshake() and writeHandshake() are the non-blocking handshake steps. import() decrypts available input. sslBuffer() is the buffer when the caller needs StreamBuffer::setPeerName() or the streambuf itself. currentCipher() is the negotiated cipher. close() drops the connection without a TLS shutdown.</p>
 <p>Writes use the inherited iostream API. flush() pushes encrypted bytes to the underlying stream. Premature EOF on the transport is handled by the code that owns that stream.</p>
 <p>The example imports available ciphertext and reads the decrypted bytes, then writes a message and flushes it so the encrypted output reaches the underlying stream.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a>&amp; ssl = ...;</div>
+<div class="fragment"><div class="line">Pt::Ssl::IOStream&amp; ssl = ...;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">for</span>(;;)</div>
+<div class="line">for(;;)</div>
 <div class="line">{</div>
-<div class="line">    ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">import</a>();</div>
+<div class="line">    ssl.import();</div>
 <div class="line"> </div>
-<div class="line">    std::streamsize avail = ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">sslBuffer</a>().in_avail();</div>
-<div class="line">    <span class="keywordflow">if</span>(avail &lt;= 0)</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    std::streamsize avail = ssl.sslBuffer().in_avail();</div>
+<div class="line">    if(avail &lt;= 0)</div>
+<div class="line">        break;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">do</span></div>
+<div class="line">    do</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordtype">char</span> buf[255];</div>
-<div class="line">        std::streamsize n = ssl.readsome(buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line">        char buf[255];</div>
+<div class="line">        std::streamsize n = ssl.readsome(buf, sizeof(buf));</div>
 <div class="line">        std::cout.write(buf, n);</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">while</span>( ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">sslBuffer</a>().in_avail() &gt; 0 );</div>
+<div class="line">    while( ssl.sslBuffer().in_avail() &gt; 0 );</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span>( ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4">isShutdown</a>() )</div>
-<div class="line">    ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">shutdown</a>();</div>
+<div class="line">if( ssl.isShutdown() )</div>
+<div class="line">    ssl.shutdown();</div>
 <div class="line"> </div>
-<div class="line">ssl &lt;&lt; <span class="stringliteral">&quot;pi is: &quot;</span> &lt;&lt; 3.1415;</div>
+<div class="line">ssl &lt;&lt; &quot;pi is: &quot; &lt;&lt; 3.1415;</div>
 <div class="line">ssl.flush();</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Ssl-Page-StreamBuffer"></a>
 StreamBuffer</h2>
@@ -208,29 +208,10 @@ StreamBuffer</h2>
 <p>setPeerName() is the name expected in the peer certificate. It may be called before or after open(); an open connection receives the name immediately. import() returns the number of bytes consumed from the underlying stream. readHandshake() and writeHandshake() are the same non-blocking handshake as on IOStream. currentCipher() is the cipher in use, or a placeholder when no connection is open.</p>
 <p>The example opens a client buffer and sets the name that must appear in the peer certificate.</p>
 <div class="fragment"><div class="line">std::iostream&amp; ios = ...;</div>
-<div class="line"><a class="code" href="classPt_1_1Ssl_1_1StreamBuffer.html">Pt::Ssl::StreamBuffer</a> sb(ctx, ios, <a class="code" href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Pt::Ssl::Connect</a>);</div>
-<div class="line">sb.setPeerName(<span class="stringliteral">&quot;example.com&quot;</span>);</div>
+<div class="line">Pt::Ssl::StreamBuffer sb(ctx, ios, Pt::Ssl::Connect);</div>
+<div class="line">sb.setPeerName(&quot;example.com&quot;);</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore.html">Pt::Ssl::CertificateStore</a></div><div class="ttdoc">Store for X509 certificates and their keys.</div><div class="ttdef"><b>Definition:</b> CertificateStore.h:63</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_ac8faaf2644d39b5ada114ab79fc78ea3"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#ac8faaf2644d39b5ada114ab79fc78ea3">Pt::Ssl::IOStream::sslBuffer</a></div><div class="ttdeci">StreamBuffer &amp; sslBuffer()</div><div class="ttdoc">Returns the SSL stream buffer.</div><div class="ttdef"><b>Definition:</b> IOStream.h:195</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a11ea35b8def36970df50df50fe5599b4"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a11ea35b8def36970df50df50fe5599b4">Pt::Ssl::IOStream::isShutdown</a></div><div class="ttdeci">bool isShutdown() const</div><div class="ttdoc">Returns true if a shutdown alert was received.</div><div class="ttdef"><b>Definition:</b> IOStream.h:175</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_html_a69b6e2a03c835ca5d658a1f16acbaa9c"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore.html#a69b6e2a03c835ca5d658a1f16acbaa9c">Pt::Ssl::CertificateStore::end</a></div><div class="ttdeci">ConstIterator end() const</div><div class="ttdoc">Returns an iterator to one past the last certificate.</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_html_ad5fee900c7aee90671038c79225bf8ec"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore.html#ad5fee900c7aee90671038c79225bf8ec">Pt::Ssl::CertificateStore::begin</a></div><div class="ttdeci">ConstIterator begin() const</div><div class="ttdoc">Returns an iterator to the first certificate.</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_aec1255304305c9d8eff8571c0fd87b80"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#aec1255304305c9d8eff8571c0fd87b80">Pt::Ssl::IOStream::shutdown</a></div><div class="ttdeci">bool shutdown()</div><div class="ttdoc">Completes or starts the TLS shutdown.</div><div class="ttdef"><b>Definition:</b> IOStream.h:170</div></div>
-<div class="ttc" id="agroup__Pt-Ssl-Context_html_ggaec3fd496ba134cc896c9a62b4f37a281a8b8cef4284b42e10a4b39d3f3a5f07b1"><div class="ttname"><a href="group__Pt-Ssl-Context.html#ggaec3fd496ba134cc896c9a62b4f37a281a8b8cef4284b42e10a4b39d3f3a5f07b1">Pt::Ssl::AlwaysVerify</a></div><div class="ttdeci">@ AlwaysVerify</div><div class="ttdoc">Require a peer certificate.</div><div class="ttdef"><b>Definition:</b> Context.h:84</div></div>
-<div class="ttc" id="agroup__Pt-Ssl-Context_html_ggaac39b55be6469395f55ff0292ad8184cac37271b5b3bc8a375c6123368a30deeb"><div class="ttname"><a href="group__Pt-Ssl-Context.html#ggaac39b55be6469395f55ff0292ad8184cac37271b5b3bc8a375c6123368a30deeb">Pt::Ssl::TLSv1_2</a></div><div class="ttdeci">@ TLSv1_2</div><div class="ttdoc">TLS version 1.2.</div><div class="ttdef"><b>Definition:</b> Context.h:73</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_html_a3a72fe6a5f114b3f4185b7f5c6873186"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore.html#a3a72fe6a5f114b3f4185b7f5c6873186">Pt::Ssl::CertificateStore::findCertificate</a></div><div class="ttdeci">const Certificate * findCertificate(const std::string &amp;subject)</div><div class="ttdoc">Returns a certificate whose subject contains subject.</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_html_a8ae6f839090da6abdf382567483ca471"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore.html#a8ae6f839090da6abdf382567483ca471">Pt::Ssl::CertificateStore::loadPkcs12</a></div><div class="ttdeci">void loadPkcs12(std::istream &amp;is, const char *passwd)</div><div class="ttdoc">Loads PKCS12 certificates and keys from is.</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore_1_1ConstIterator.html">Pt::Ssl::CertificateStore::ConstIterator</a></div><div class="ttdoc">Iterator to a certificate in the store.</div><div class="ttdef"><b>Definition:</b> CertificateStore.h:125</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1Certificate_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1Certificate.html">Pt::Ssl::Certificate</a></div><div class="ttdoc">X509 certificate.</div><div class="ttdef"><b>Definition:</b> Certificate.h:56</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1StreamBuffer_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1StreamBuffer.html">Pt::Ssl::StreamBuffer</a></div><div class="ttdoc">SSL stream buffer.</div><div class="ttdef"><b>Definition:</b> StreamBuffer.h:73</div></div>
-<div class="ttc" id="agroup__Pt-Ssl-Streams_html_gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e"><div class="ttname"><a href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Pt::Ssl::Connect</a></div><div class="ttdeci">@ Connect</div><div class="ttdoc">Client handshake.</div><div class="ttdef"><b>Definition:</b> Context.h:57</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a893fad161e0bcb173591cae663514dbf"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a893fad161e0bcb173591cae663514dbf">Pt::Ssl::IOStream::import</a></div><div class="ttdeci">std::streamsize import(std::streamsize maxImport=0)</div><div class="ttdoc">Decrypts available data from the underlying stream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:190</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1CertificateStore_html_ab0f78ab26d4e4569d2d9e316af3db98c"><div class="ttname"><a href="classPt_1_1Ssl_1_1CertificateStore.html#ab0f78ab26d4e4569d2d9e316af3db98c">Pt::Ssl::CertificateStore::getCertificate</a></div><div class="ttdeci">const Certificate &amp; getCertificate(const std::string &amp;subject)</div><div class="ttdoc">Returns a certificate whose subject contains subject.</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1Certificate_html_a828b19a7f783474c26f7535bbe652c5d"><div class="ttname"><a href="classPt_1_1Ssl_1_1Certificate.html#a828b19a7f783474c26f7535bbe652c5d">Pt::Ssl::Certificate::subject</a></div><div class="ttdeci">std::string subject() const</div><div class="ttdoc">Returns the subject of the certificate.</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a></div><div class="ttdoc">SSL iostream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:98</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1Context_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1Context.html">Pt::Ssl::Context</a></div><div class="ttdoc">Shared configuration for SSL connections.</div><div class="ttdef"><b>Definition:</b> Context.h:113</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

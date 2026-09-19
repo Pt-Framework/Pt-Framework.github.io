@@ -97,16 +97,16 @@
 <div class="fragment"><div class="line">std::iostream&amp; ios = ...;</div>
 <div class="line"><a class="code" href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a> ssl(ctx, ios, <a class="code" href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Pt::Ssl::Connect</a>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">while</span>( ! ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a80178eafbc14f5434c65b0a8413c12c7">isConnected</a>() )</div>
+<div class="line"><span class="keywordflow">while</span>( ! ssl.isConnected() )</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordtype">bool</span> wantRead = ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a4756a847468fb69d6c6adf4ed82d6a2f">readHandshake</a>();</div>
+<div class="line">    <span class="keywordtype">bool</span> wantRead = ssl.readHandshake();</div>
 <div class="line">    <span class="keywordflow">if</span>(wantRead)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// wait until the underlying stream has more data</span></div>
 <div class="line">        <span class="keywordflow">continue</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> wantWrite = ssl.<a class="code" href="classPt_1_1Ssl_1_1IOStream.html#a67e179596ba025c1f325afab4e67684f">writeHandshake</a>();</div>
+<div class="line">    <span class="keywordtype">bool</span> wantWrite = ssl.writeHandshake();</div>
 <div class="line">    <span class="keywordflow">if</span>(wantWrite)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// flush the underlying stream</span></div>
@@ -159,11 +159,8 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a4756a847468fb69d6c6adf4ed82d6a2f"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a4756a847468fb69d6c6adf4ed82d6a2f">Pt::Ssl::IOStream::readHandshake</a></div><div class="ttdeci">bool readHandshake()</div><div class="ttdoc">Reads a handshake message from the underlying stream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:161</div></div>
 <div class="ttc" id="agroup__Pt-Ssl-Streams_html_gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e"><div class="ttname"><a href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Pt::Ssl::Connect</a></div><div class="ttdeci">@ Connect</div><div class="ttdoc">Client handshake.</div><div class="ttdef"><b>Definition:</b> Context.h:57</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a67e179596ba025c1f325afab4e67684f"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a67e179596ba025c1f325afab4e67684f">Pt::Ssl::IOStream::writeHandshake</a></div><div class="ttdeci">bool writeHandshake()</div><div class="ttdoc">Writes a handshake message to the underlying stream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:150</div></div>
 <div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html">Pt::Ssl::IOStream</a></div><div class="ttdoc">SSL iostream.</div><div class="ttdef"><b>Definition:</b> IOStream.h:98</div></div>
-<div class="ttc" id="aclassPt_1_1Ssl_1_1IOStream_html_a80178eafbc14f5434c65b0a8413c12c7"><div class="ttname"><a href="classPt_1_1Ssl_1_1IOStream.html#a80178eafbc14f5434c65b0a8413c12c7">Pt::Ssl::IOStream::isConnected</a></div><div class="ttdeci">bool isConnected() const</div><div class="ttdoc">Returns true if the handshake has completed.</div><div class="ttdef"><b>Definition:</b> IOStream.h:140</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

@@ -134,7 +134,7 @@
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Gfx_1_1ColorF.html">ColorF</a> <a class="code" href="classPt_1_1Gfx_1_1ColorF.html">ColorType</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Yuv12Pixel.html">Yuv12Pixel</a>(<a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Yuv12Pixel.html">Yuv12Pixel</a>(<a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view, </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   Pt::ssize_t x, Pt::ssize_t y);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">public</span>:</div>
@@ -155,7 +155,7 @@
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Yuv12Pixel.html">Yuv12Pixel</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ColorF.html">ColorF</a>&amp; color);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">const</span> ViewBase&amp; view()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _view; }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        Pt::ssize_t xpos()<span class="keyword"> const</span></div>
@@ -206,7 +206,7 @@
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">bool</span> equals(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Yuv12ConstPixel.html">Yuv12ConstPixel</a>&amp; p) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">const</span> ViewBase&amp; _view;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; _view;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        Pt::ssize_t     _xpos;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        Pt::ssize_t     _ypos;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        Pt::ssize_t     _subStride;</div>
@@ -225,7 +225,7 @@
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classPt_1_1Gfx_1_1ColorF.html">ColorF</a> <a class="code" href="classPt_1_1Gfx_1_1ColorF.html">ColorType</a>;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Yuv12ConstPixel.html">Yuv12ConstPixel</a>(<span class="keyword">const</span> <a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Yuv12ConstPixel.html">Yuv12ConstPixel</a>(<span class="keyword">const</span> <a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view, </div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                        Pt::ssize_t xpos, Pt::ssize_t ypos);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">public</span>:</div>
@@ -257,7 +257,7 @@
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1Yuv12ConstPixel.html">Yuv12ConstPixel</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1Yuv12ConstPixel.html">Yuv12ConstPixel</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">const</span> ViewBase&amp; view()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _view; }</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        Pt::ssize_t xpos()<span class="keyword"> const</span></div>
@@ -301,7 +301,7 @@
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">        </span>{ <span class="keywordflow">return</span> _y == p._y; }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">const</span> ViewBase&amp;     _view;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp;     _view;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        Pt::ssize_t         _xpos;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        Pt::ssize_t         _ypos;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        Pt::ssize_t         _subStride;</div>
@@ -354,7 +354,7 @@
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">virtual</span> std::size_t onImageSize(Pt::ssize_t width, Pt::ssize_t height,</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                        std::size_t padding) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>* onCreatePixel(<a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> ViewBase&amp; view, </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classPt_1_1Gfx_1_1PixelBase.html">PixelBase</a>* onCreatePixel(<a class="code" href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a>* data, <span class="keyword">const</span> <a class="code" href="classPt_1_1Gfx_1_1ViewBase.html">ViewBase</a>&amp; view, </div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                         Pt::ssize_t x, Pt::ssize_t y, </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                         PixelStorage&amp; store) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
@@ -574,13 +574,14 @@
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="preprocessor">#include &lt;Pt/Gfx/Yuv12.hpp&gt;</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1ImageFormat_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ImageFormat.html">Pt::Gfx::ImageFormat</a></div><div class="ttdoc">Image format.</div><div class="ttdef"><b>Definition:</b> ImageFormat.h:53</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1ImageFormat_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ImageFormat.html">Pt::Gfx::ImageFormat</a></div><div class="ttdoc">Runtime pixel format.</div><div class="ttdef"><b>Definition:</b> ImageFormat.h:72</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Yuv12Pixel_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Yuv12Pixel.html">Pt::Gfx::Yuv12Pixel</a></div><div class="ttdoc">YV-12 pixel.</div><div class="ttdef"><b>Definition:</b> Yuv12.h:44</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Yuv12_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Yuv12.html">Pt::Gfx::Yuv12</a></div><div class="ttdoc">YV-12 image format.</div><div class="ttdef"><b>Definition:</b> Yuv12.h:234</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PixelBase_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PixelBase.html">Pt::Gfx::PixelBase</a></div><div class="ttdoc">Pixel base class.</div><div class="ttdef"><b>Definition:</b> PixelBase.h:52</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1ColorF_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ColorF.html">Pt::Gfx::ColorF</a></div><div class="ttdoc">RGBA float32 working color.</div><div class="ttdef"><b>Definition:</b> Color.h:149</div></div>
-<div class="ttc" id="agroup__Pt-IntTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:20</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1ColorF_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ColorF.html">Pt::Gfx::ColorF</a></div><div class="ttdoc">Floating-point RGBA color.</div><div class="ttdef"><b>Definition:</b> Color.h:173</div></div>
+<div class="ttc" id="agroup__Pt-IntTypes_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group__Pt-IntTypes.html#gaba7bc1797add20fe3efdf37ced1182c5">Pt::uint8_t</a></div><div class="ttdeci">uint_type uint8_t</div><div class="ttdoc">Unsigned 8-bit integer type.</div><div class="ttdef"><b>Definition:</b> Api-Types.h:24</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Yuv12ConstPixel_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Yuv12ConstPixel.html">Pt::Gfx::Yuv12ConstPixel</a></div><div class="ttdoc">YV12 const pixel.</div><div class="ttdef"><b>Definition:</b> Yuv12.h:137</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1ViewBase_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1ViewBase.html">Pt::Gfx::ViewBase</a></div><div class="ttdoc">Width, height and stride of an image or view.</div><div class="ttdef"><b>Definition:</b> ViewBase.h:50</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

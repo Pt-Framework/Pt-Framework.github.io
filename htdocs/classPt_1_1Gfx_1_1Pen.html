@@ -84,13 +84,13 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Pen Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">Pen Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Pen_8h_source.html">Pt/Gfx/Pen.h</a>&gt;</code></p>
 
-<p>Attributes for the drawing of outlines.  
+<p>Outline color, width and style.  
  <a href="classPt_1_1Gfx_1_1Pen.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -183,7 +183,8 @@ const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a545096f94f6a42ab226fd2855167a784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Pen objects are used as container of drawing attributes for Painter objects. A size and a color can be specified per pen. The size and color are used to draw outlined shapes by the Painter. Outlined shapes for example are lines, outlined rectangles or ellipses and text. </p>
+<div class="textblock"><p>Pen describes how a painter strokes lines, polylines, arcs, rectangle and ellipse outlines, paths, and text outlines. The default pen is null and does not stroke. A pen constructed from a Color is solid, one pixel wide, with round caps and joins.</p>
+<p>Style selects solid, dotted, dashed, or a custom dash pattern. CapStyle is the shape of open ends. JoinStyle is the shape of corners. Width is in logical units. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3fe23d230c102f4573f3c09ec83c1911"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3fe23d230c102f4573f3c09ec83c1911">&#9670;&nbsp;</a></span>Pen() <span class="overload">[1/2]</span></h2>

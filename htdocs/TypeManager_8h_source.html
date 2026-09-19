@@ -84,84 +84,65 @@
 <div class="title">TypeManager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  Copyright (C) 2020-2026 by Marc Boris Duerner</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  This library is free software; you can redistribute it and/or</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  modify it under the terms of the GNU Lesser General Public</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  License as published by the Free Software Foundation; either</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  version 2.1 of the License, or (at your option) any later version.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  As a special exception, you may use this file as part of a free</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  software library without restriction. Specifically, if other files</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  instantiate templates or use macros or inline functions from this</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  file, or you compile this file and link it with other files to</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  produce an executable, this file does not by itself cause the</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  resulting executable to be covered by the GNU General Public</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  License. This exception does not however invalidate any other</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  reasons why the executable file might be covered by the GNU Library</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  General Public License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  This library is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  Lesser General Public License for more details.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  You should have received a copy of the GNU Lesser General Public</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  License along with this library; if not, write to the:</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">  Boston, MA 02110-1301 USA</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*/</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (C) 2020-2026 by Marc Boris Duerner</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">   SPDX-License-Identifier: LGPL-2.1-or-later WITH mif-exception</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef PT_LUA_TYPEMANAGER_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define PT_LUA_TYPEMANAGER_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/Api.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/AsyncCall.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/TypeManager.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/Function.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/Type.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePt.html">Pt</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>Lua {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... As&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__Pt-Lua-Calls.html#gaa977d3f9b442cb12bfab6e6ffc186e4b">   27</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__Pt-Lua-Calls.html#gaa977d3f9b442cb12bfab6e6ffc186e4b">AsyncFunction</a> = Pt::Reflex::BasicFunction&lt;<a class="code" href="classPt_1_1Lua_1_1AsyncCall.html">AsyncCall</a>*, As...&gt;;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef PT_LUA_TYPEMANAGER_H</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define PT_LUA_TYPEMANAGER_H</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/Api.h&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Pt/Lua/AsyncCall.h&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/TypeManager.h&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/Function.h&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;Pt/Reflex/Type.h&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePt.html">Pt</a> {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>Lua {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... As&gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">using</span> AsyncFunction = Pt::Reflex::BasicFunction&lt;AsyncCall*, As...&gt;;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">class </span>PT_LUA_API TypeManager : <span class="keyword">public</span> Pt::Reflex::TypeManager</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    TypeManager();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    TypeManager(<span class="keyword">const</span> TypeManager&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    TypeManager&amp; operator=(<span class="keyword">const</span> TypeManager&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ~TypeManager();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Pt::Reflex::Type&amp; voidType()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> *_voidType; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1TypeManager.html">   50</a></span>&#160;<span class="keyword">class </span>PT_LUA_API <a class="code" href="classPt_1_1Lua_1_1TypeManager.html">TypeManager</a> : <span class="keyword">public</span> Pt::Reflex::TypeManager</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1TypeManager.html#a3205b99bd360aa156545f4acd444ba4c">   55</a></span>&#160;    <a class="code" href="classPt_1_1Lua_1_1TypeManager.html#a3205b99bd360aa156545f4acd444ba4c">TypeManager</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1TypeManager.html">TypeManager</a>(<span class="keyword">const</span> <a class="code" href="classPt_1_1Lua_1_1TypeManager.html">TypeManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classPt_1_1Lua_1_1TypeManager.html">TypeManager</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classPt_1_1Lua_1_1TypeManager.html">TypeManager</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    Pt::Reflex::BasicType&lt;int&gt;*         _intType;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Pt::Reflex::BasicType&lt;long&gt;*        _longType;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Pt::Reflex::BasicType&lt;float&gt;*       _floatType;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Pt::Reflex::BasicType&lt;double&gt;*      _doubleType;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Pt::Reflex::BasicType&lt;bool&gt;*        _boolType;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Pt::Reflex::BasicType&lt;std::string&gt;* _stringType;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    Pt::Reflex::Type*                   _voidType;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    Pt::Reflex::BasicType&lt;AsyncCall*&gt;*  _asyncCallType;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1TypeManager.html#ad38db3e97df5b46a74993568b0ea1b6e">   63</a></span>&#160;    <a class="code" href="classPt_1_1Lua_1_1TypeManager.html#ad38db3e97df5b46a74993568b0ea1b6e">~TypeManager</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classPt_1_1Lua_1_1TypeManager.html#aad1ed6edac173f29d17b77aa2bec492d">   67</a></span>&#160;    Pt::Reflex::Type&amp; <a class="code" href="classPt_1_1Lua_1_1TypeManager.html#aad1ed6edac173f29d17b77aa2bec492d">voidType</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> *_voidType; }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Pt::Reflex::BasicType&lt;int&gt;*         _intType;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Pt::Reflex::BasicType&lt;long&gt;*        _longType;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Pt::Reflex::BasicType&lt;float&gt;*       _floatType;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Pt::Reflex::BasicType&lt;double&gt;*      _doubleType;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Pt::Reflex::BasicType&lt;bool&gt;*        _boolType;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Pt::Reflex::BasicType&lt;std::string&gt;* _stringType;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    Pt::Reflex::Type*                   _voidType;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Pt::Reflex::BasicType&lt;AsyncCall*&gt;*  _asyncCallType;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif // include guard</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
+<div class="ttc" id="agroup__Pt-Lua-Calls_html_gaa977d3f9b442cb12bfab6e6ffc186e4b"><div class="ttname"><a href="group__Pt-Lua-Calls.html#gaa977d3f9b442cb12bfab6e6ffc186e4b">Pt::Lua::AsyncFunction</a></div><div class="ttdeci">Pt::Reflex::BasicFunction&lt; AsyncCall *, As... &gt; AsyncFunction</div><div class="ttdoc">Reflex function that returns an asynchronous Lua call.</div><div class="ttdef"><b>Definition:</b> TypeManager.h:27</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1TypeManager_html_aad1ed6edac173f29d17b77aa2bec492d"><div class="ttname"><a href="classPt_1_1Lua_1_1TypeManager.html#aad1ed6edac173f29d17b77aa2bec492d">Pt::Lua::TypeManager::voidType</a></div><div class="ttdeci">Pt::Reflex::Type &amp; voidType() const</div><div class="ttdoc">Returns the builtin void type.</div><div class="ttdef"><b>Definition:</b> TypeManager.h:67</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1TypeManager_html_ad38db3e97df5b46a74993568b0ea1b6e"><div class="ttname"><a href="classPt_1_1Lua_1_1TypeManager.html#ad38db3e97df5b46a74993568b0ea1b6e">Pt::Lua::TypeManager::~TypeManager</a></div><div class="ttdeci">~TypeManager()</div><div class="ttdoc">Destroys the catalog and its builtin types.</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1TypeManager_html_a3205b99bd360aa156545f4acd444ba4c"><div class="ttname"><a href="classPt_1_1Lua_1_1TypeManager.html#a3205b99bd360aa156545f4acd444ba4c">Pt::Lua::TypeManager::TypeManager</a></div><div class="ttdeci">TypeManager()</div><div class="ttdoc">Creates a catalog with Lua builtin types.</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1AsyncCall_html"><div class="ttname"><a href="classPt_1_1Lua_1_1AsyncCall.html">Pt::Lua::AsyncCall</a></div><div class="ttdoc">Asynchronous native call from Lua.</div><div class="ttdef"><b>Definition:</b> AsyncCall.h:42</div></div>
+<div class="ttc" id="aclassPt_1_1Lua_1_1TypeManager_html"><div class="ttname"><a href="classPt_1_1Lua_1_1TypeManager.html">Pt::Lua::TypeManager</a></div><div class="ttdoc">Type catalog for Lua bindings.</div><div class="ttdef"><b>Definition:</b> TypeManager.h:51</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

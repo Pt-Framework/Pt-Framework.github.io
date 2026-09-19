@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Size Class Reference</div>  </div>
+<div class="title">Size Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Size_8h_source.html">Pt/Gfx/Size.h</a>&gt;</code></p>
 
-<p>Size with floating-point width and height.  
-</p>
+<p>Floating-point width and height.  
+ <a href="classPt_1_1Gfx_1_1Size.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,7 +127,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:accb4f11e7dc727fd870ee68597e4310a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ceils each dimension and returns a SizeI. <br /></td></tr>
 <tr class="separator:accb4f11e7dc727fd870ee68597e4310a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Size is the logical width and height drawing uses. It is not a pixel count. Image and view dimensions are integers; convert with round(), floor(), or ceil() when a pixel size is required. SizeF is a typedef of this type.</p>
+<p>The value is copyable. isEmpty() is true when width or height is zero. area() is width times height. transpose() swaps the components. Arithmetic scales or grows both dimensions.</p>
+<p>Construct from two floats, or widen a SizeI with the explicit constructor.</p>
+<p>The example builds a logical size and converts it to an integer pixel size by rounding.</p>
+<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a> s(320.0, 240.0);</div>
+<div class="line"><a class="code" href="classPt_1_1Gfx_1_1SizeI.html">Pt::Gfx::SizeI</a> pixels = s.round();</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclassPt_1_1Gfx_1_1SizeI_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1SizeI.html">Pt::Gfx::SizeI</a></div><div class="ttdoc">Integer width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:279</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:69</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

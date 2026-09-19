@@ -122,42 +122,42 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>Gfx {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html">   41</a></span>&#160;<span class="keyword">class </span>PT_GFX_API <a class="code" href="classPt_1_1Gfx_1_1PngReader.html">PngReader</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a2968366e3dc2aa0f0f6840d78191d1c9">   46</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a2968366e3dc2aa0f0f6840d78191d1c9">PngReader</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#abcd63be28e8aa5753e3df71b117d2edd">   50</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#abcd63be28e8aa5753e3df71b117d2edd">PngReader</a>(std::istream&amp; is, <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>&amp; image);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a4807348a7ec74912f0e621fad41a0d0d">   54</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a4807348a7ec74912f0e621fad41a0d0d">~PngReader</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a072a0e60ec71e9b9db302f901570ba37">   58</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a072a0e60ec71e9b9db302f901570ba37">attach</a>(std::istream&amp; is, <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>&amp; image);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#ac295bade8aee589f6718dfa79edc2a34">   62</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#ac295bade8aee589f6718dfa79edc2a34">detach</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#ad20897c5c8bd47f5d4005989bead0e55">   66</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">   82</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>* <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">advance</a>(std::streamsize importSize = 0);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a3ed8e1a73e65e436c4abaeef9250a38e">   86</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>&amp; <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a3ed8e1a73e65e436c4abaeef9250a38e">get</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">class </span>PngReaderImpl* _impl;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html">   52</a></span>&#160;<span class="keyword">class </span>PT_GFX_API <a class="code" href="classPt_1_1Gfx_1_1PngReader.html">PngReader</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a2968366e3dc2aa0f0f6840d78191d1c9">   57</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a2968366e3dc2aa0f0f6840d78191d1c9">PngReader</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#abcd63be28e8aa5753e3df71b117d2edd">   61</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#abcd63be28e8aa5753e3df71b117d2edd">PngReader</a>(std::istream&amp; is, <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>&amp; image);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a4807348a7ec74912f0e621fad41a0d0d">   65</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a4807348a7ec74912f0e621fad41a0d0d">~PngReader</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a072a0e60ec71e9b9db302f901570ba37">   69</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a072a0e60ec71e9b9db302f901570ba37">attach</a>(std::istream&amp; is, <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>&amp; image);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#ac295bade8aee589f6718dfa79edc2a34">   73</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#ac295bade8aee589f6718dfa79edc2a34">detach</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#ad20897c5c8bd47f5d4005989bead0e55">   77</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">   93</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>* <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">advance</a>(std::streamsize importSize = 0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classPt_1_1Gfx_1_1PngReader.html#a3ed8e1a73e65e436c4abaeef9250a38e">   97</a></span>&#160;        <a class="code" href="classPt_1_1Gfx_1_1BasicImage.html">Image</a>&amp; <a class="code" href="classPt_1_1Gfx_1_1PngReader.html#a3ed8e1a73e65e436c4abaeef9250a38e">get</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">class </span>PngReaderImpl* _impl;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition:</b> Allocator.h:33</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_ad5641c7abf48bceb0762e981a8e88e6a"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#ad5641c7abf48bceb0762e981a8e88e6a">Pt::Gfx::PngReader::advance</a></div><div class="ttdeci">Image * advance(std::streamsize importSize=0)</div><div class="ttdoc">Reads image data from the target stream.</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_a072a0e60ec71e9b9db302f901570ba37"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#a072a0e60ec71e9b9db302f901570ba37">Pt::Gfx::PngReader::attach</a></div><div class="ttdeci">void attach(std::istream &amp;is, Image &amp;image)</div><div class="ttdoc">Attach to target stream and image.</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html">Pt::Gfx::PngReader</a></div><div class="ttdoc">Reader for PNG images.</div><div class="ttdef"><b>Definition:</b> PngReader.h:42</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html">Pt::Gfx::PngReader</a></div><div class="ttdoc">PNG image reader.</div><div class="ttdef"><b>Definition:</b> PngReader.h:53</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_ad20897c5c8bd47f5d4005989bead0e55"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#ad20897c5c8bd47f5d4005989bead0e55">Pt::Gfx::PngReader::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset to begin new decompression.</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_a4807348a7ec74912f0e621fad41a0d0d"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#a4807348a7ec74912f0e621fad41a0d0d">Pt::Gfx::PngReader::~PngReader</a></div><div class="ttdeci">~PngReader()</div><div class="ttdoc">Destructor.</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1BasicImage_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1BasicImage.html">Pt::Gfx::BasicImage</a></div><div class="ttdoc">Basic image.</div><div class="ttdef"><b>Definition:</b> Image.h:52</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1BasicImage_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1BasicImage.html">Pt::Gfx::BasicImage</a></div><div class="ttdoc">Image that owns or wraps pixel data.</div><div class="ttdef"><b>Definition:</b> Image.h:83</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_abcd63be28e8aa5753e3df71b117d2edd"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#abcd63be28e8aa5753e3df71b117d2edd">Pt::Gfx::PngReader::PngReader</a></div><div class="ttdeci">PngReader(std::istream &amp;is, Image &amp;image)</div><div class="ttdoc">Construct with target stream and image.</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_a3ed8e1a73e65e436c4abaeef9250a38e"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#a3ed8e1a73e65e436c4abaeef9250a38e">Pt::Gfx::PngReader::get</a></div><div class="ttdeci">Image &amp; get()</div><div class="ttdoc">Reads the whole image from the stream.</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1PngReader_html_ac295bade8aee589f6718dfa79edc2a34"><div class="ttname"><a href="classPt_1_1Gfx_1_1PngReader.html#ac295bade8aee589f6718dfa79edc2a34">Pt::Gfx::PngReader::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdoc">Detach from target stream.</div></div>

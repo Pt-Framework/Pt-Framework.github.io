@@ -85,13 +85,13 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Bitmap Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">Bitmap Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Bitmap_8h_source.html">Pt/Gfx/Bitmap.h</a>&gt;</code></p>
 
-<p>Off-screen drawing surface backed by an image.  
+<p>Off-screen image that can be painted.  
  <a href="classPt_1_1Gfx_1_1Bitmap.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">PaintSurface</a>.</p>
@@ -176,7 +176,7 @@ static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valig
 <tr class="memdesc:a7926a39e42f6e3e5093e5a992f8f9ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the available font families. <br /></td></tr>
 <tr class="separator:a7926a39e42f6e3e5093e5a992f8f9ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30b440fe5968af81df24e30d239f64f"><td class="memItemLeft" align="right" valign="top"><a id="ae30b440fe5968af81df24e30d239f64f"></a>
-static std::vector&lt; FontFace &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ae30b440fe5968af81df24e30d239f64f">fontFaces</a> (const std::string &amp;family)</td></tr>
+static std::vector&lt; <a class="el" href="classPt_1_1Gfx_1_1FontFace.html">FontFace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#ae30b440fe5968af81df24e30d239f64f">fontFaces</a> (const std::string &amp;family)</td></tr>
 <tr class="memdesc:ae30b440fe5968af81df24e30d239f64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the font faces of a family. <br /></td></tr>
 <tr class="separator:ae30b440fe5968af81df24e30d239f64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -196,11 +196,11 @@ virtual const <a class="el" href="classPt_1_1Gfx_1_1Scaling.html">Scaling</a> &a
 <tr class="separator:a0e439768a6cffb0b9056554dfc1b6f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a711f27fc65cf35a3facc32d878c4b117"><td class="memItemLeft" align="right" valign="top"><a id="a711f27fc65cf35a3facc32d878c4b117"></a>
 virtual <a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a711f27fc65cf35a3facc32d878c4b117">onCreateCanvas</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *reuse) override</td></tr>
-<tr class="memdesc:a711f27fc65cf35a3facc32d878c4b117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Backend canvas for drawing commands.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a711f27fc65cf35a3facc32d878c4b117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Backend that executes drawing commands.">Canvas</a>. <br /></td></tr>
 <tr class="separator:a711f27fc65cf35a3facc32d878c4b117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06657acb77d7ffff47af8ad5b27c0703"><td class="memItemLeft" align="right" valign="top"><a id="a06657acb77d7ffff47af8ad5b27c0703"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a06657acb77d7ffff47af8ad5b27c0703">onReleaseCanvas</a> () override</td></tr>
-<tr class="memdesc:a06657acb77d7ffff47af8ad5b27c0703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the current <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Backend canvas for drawing commands.">Canvas</a>. <br /></td></tr>
+<tr class="memdesc:a06657acb77d7ffff47af8ad5b27c0703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the current <a class="el" href="classPt_1_1Gfx_1_1Canvas.html" title="Backend that executes drawing commands.">Canvas</a>. <br /></td></tr>
 <tr class="separator:a06657acb77d7ffff47af8ad5b27c0703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7580150c69f4be6985f30ae001960379"><td class="memItemLeft" align="right" valign="top"><a id="a7580150c69f4be6985f30ae001960379"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Gfx_1_1Bitmap.html#a7580150c69f4be6985f30ae001960379">onSync</a> () override</td></tr>
@@ -220,7 +220,9 @@ virtual <a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> *&#16
 <tr class="separator:a67aa55c887285040a03580dd6051798d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Bitmap is the standard in-memory PaintSurface implementation. It can be used as a rendering target for Painter and also exposes the rendered image so that drawing results can be copied, inspected or reused by image APIs. </p>
+<div class="textblock"><p>Bitmap is the in-memory PaintSurface. Construct it with a physical size, paint with a Painter, then read the pixels with image(). reset() replaces the buffer with a new size or with a copy of an existing Image. setScaleFactor() sets the logical-to-physical scaling used while drawing.</p>
+<p>The bitmap owns its image. A painter on the bitmap does not own the bitmap. After finish(), the image remains valid until the bitmap is reset or destroyed.</p>
+<p>defaultFont(), fontFamilies(), and fontFaces() query the backend font list. Font::addFont() registers files those queries can resolve. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1ac6de6f31b1397264686afcc0e0b358"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ac6de6f31b1397264686afcc0e0b358">&#9670;&nbsp;</a></span>reset() <span class="overload">[1/2]</span></h2>

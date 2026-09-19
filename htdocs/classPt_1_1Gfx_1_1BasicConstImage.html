@@ -83,14 +83,14 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">BasicConstImage&lt; FormatT, TraitsT &gt; Class Template Reference</div>  </div>
+<div class="title">BasicConstImage&lt; FormatT, TraitsT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Images.html">Images and Image Views</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Image_8h_source.html">Pt/Gfx/Image.h</a>&gt;</code></p>
 
-<p>Basic const image.  
-</p>
+<p>Read-only wrap of pixel data.  
+ <a href="classPt_1_1Gfx_1_1BasicConstImage.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,7 +103,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a25ac44668ab454e7a750953af3fe635f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to new data, keep existing format. <br /></td></tr>
 <tr class="separator:a25ac44668ab454e7a750953af3fe635f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename FormatT, typename TraitsT&gt;<br />
+class Pt::Gfx::BasicConstImage&lt; FormatT, TraitsT &gt;</h3>
+
+<p>BasicConstImage refers to existing pixels and never allocates. Construct it from a const buffer, from a BasicImage, or from another const image. The source buffer must outlive this object. </p>
+</div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

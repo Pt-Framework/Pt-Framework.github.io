@@ -83,13 +83,13 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">FontMetrics Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
+<div class="title">FontMetrics Class Reference<div class="ingroups"><a class="el" href="group__Pt-Gfx.html">Graphics and Imaging</a> &raquo; <a class="el" href="group__Pt-Gfx-Drawing.html">Drawing Graphics and Text</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="FontMetrics_8h_source.html">Pt/Gfx/FontMetrics.h</a>&gt;</code></p>
 
-<p>Metrics that describe a font face at a given size.  
+<p>Ascent, descent and line height of a font.  
  <a href="classPt_1_1Gfx_1_1FontMetrics.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -180,7 +180,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ac8108596b0d876848dd5e5015181dd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPt_1_1Gfx_1_1FontMetrics.html" title="Metrics that describe a font face at a given size.">FontMetrics</a> contains values such as ascent, descent and underline geometry for the font selected by a painter. These metrics can be used to align text, compute line spacing and position decorative lines. </p>
+<div class="textblock"><p>FontMetrics describes the selected face at the current size. ascent() is above the baseline, descent() below it. height() is their sum. lineHeight() adds leading(). Underline and strikeout positions are relative to the baseline. PainterBase::fontMetrics() returns these values for the current font. </p>
 </div></div><!-- contents -->
 
 <div class="clear">&nbsp;</div>

@@ -95,23 +95,23 @@
 <div class="fragment"><div class="line">Application -&gt; Screen -&gt; WindowManager -&gt; Window (Form) -&gt; content Control -&gt; child Controls</div>
 </div><!-- fragment --><p>Attaching a window or control does not transfer ownership. The code that creates an object keeps it alive while the hierarchy uses it. A window or control removes itself from its parent when it is destroyed.</p>
 <p>The following example creates a visual hierarchy with a window, its content layout, and a control displayed by that layout.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="fragment"><div class="line">int main(int argc, char** argv)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a> application(argc, argv);</div>
+<div class="line">    Pt::Forms::Application application(argc, argv);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> label;</div>
-<div class="line">    label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Hello, Forms&quot;</span>);</div>
+<div class="line">    Pt::Forms::Label label;</div>
+<div class="line">    label.setText(&quot;Hello, Forms&quot;);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a> content;</div>
-<div class="line">    content.<a class="code" href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(label);</div>
+<div class="line">    Pt::Forms::FlowLayout content;</div>
+<div class="line">    content.addItem(label);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a> window;</div>
-<div class="line">    window.<a class="code" href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">setTitle</a>(<span class="stringliteral">&quot;Example&quot;</span>);</div>
-<div class="line">    window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;content);</div>
-<div class="line">    window.<a class="code" href="classPt_1_1Forms_1_1Widget.html#ae618907c9d0f27ee1c0b1ae26e965f30">show</a>();</div>
+<div class="line">    Pt::Forms::Window window;</div>
+<div class="line">    window.setTitle(&quot;Example&quot;);</div>
+<div class="line">    window.setContent(&amp;content);</div>
+<div class="line">    window.show();</div>
 <div class="line"> </div>
 <div class="line">    application.run();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">    return 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Application"></a>
 Application</h1>
@@ -181,29 +181,29 @@ Layouting and Painting</h1>
 <p>Visual content updates in one cycle: invalidate, layouting, then painting. Call Widget::invalidate() after a visual-only change. It coalesces and later calls onInvalidate() so the widget can rebuild derived visual state. Control::onInvalidate() also requests relayout. Call Control::relayout() after a content or policy change that affects size or geometry.</p>
 <p>Layouting has two passes, not two pipelines. Measure is inside-out: Control::measure() / onMeasure() compute a preferred size under a SizePolicy and cache it until content, policy, limits, or scaling invalidate it. Layout is outside-in: onLayout() assigns child geometry in the available rectangle with move() and resize(). A layout event then requests a repaint.</p>
 <p>Painting is not synchronous. Widget::repaint() queues a local dirty region. A PaintEvent carries that rectangle down visible content after the window frame makes a PaintSurface available. A View adapts that surface. onPaint() draws in local coordinates.</p>
-<p>PaintSurface, PaintContext, and Painter are one mechanism. A PaintSurface is the Forms render target; a view borrows it and does not own it. A PaintContext is the active session on that surface and the argument to onPaint(). A Painter binds to the surface or the context and issues drawing commands. It extends Gfx with pixmap drawing. A Pixmap is an off-screen PaintSurface used as a back buffer or as cached image content. Use <a class="el" href="Pt-Gfx-Drawing-Page.html">Drawing Graphics and Text</a> for pens, brushes, text, and paths.</p>
+<p>PaintSurface, PaintContext, and Painter are one mechanism. A PaintSurface is the Forms render target; a view borrows it and does not own it. A PaintContext is the active session on that surface and the argument to onPaint(). A Painter binds to the surface or the context and issues drawing commands. It extends Gfx with pixmap drawing. A Pixmap is an off-screen PaintSurface used as a back buffer or as cached image content. Use <a class="el" href="Pt-Gfx-Page.html#Pt-Gfx-Page-Drawing">Drawing Graphics and Text</a> for pens, brushes, text, and paths.</p>
 <p>A styled control does not invent a second cycle. onInvalidate() binds the Styler. Layouting calls named measure then layout methods. Painting calls named render methods. <a class="el" href="Pt-Forms-Page.html#Pt-Forms-Page-Styling">Styles and Renderers</a> describes that implementation.</p>
 <p>GraphicsBackend and IPixmapImpl are platform integration. Ordinary applications do not call them.</p>
 <p>The following example implements the three update hooks on a custom control. onMeasure() returns the preferred size for the control. onLayout() places a child in the rectangle assigned by the parent. onPaint() constructs a Painter on the supplied PaintContext and fills the dirty rectangle. The painter does not own the context or the surface.</p>
-<div class="fragment"><div class="line">Gfx::SizeF MyControl::onMeasure(<span class="keyword">const</span> <a class="code" href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a>&amp;)</div>
+<div class="fragment"><div class="line">Gfx::SizeF MyControl::onMeasure(const Pt::Forms::SizePolicy&amp;)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> Gfx::SizeF(80, 24);</div>
+<div class="line">    return Gfx::SizeF(80, 24);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> MyControl::onLayout(<span class="keyword">const</span> Gfx::RectF&amp; rect)</div>
+<div class="line">void MyControl::onLayout(const Gfx::RectF&amp; rect)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span>(_content)</div>
+<div class="line">    if(_content)</div>
 <div class="line">    {</div>
 <div class="line">        _content-&gt;move(rect.topLeft());</div>
 <div class="line">        _content-&gt;resize(rect.size());</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> MyControl::onPaint(<a class="code" href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a>&amp; context,</div>
-<div class="line">                        <span class="keyword">const</span> Gfx::RectF&amp; rect)</div>
+<div class="line">void MyControl::onPaint(Pt::Forms::PaintContext&amp; context,</div>
+<div class="line">                        const Gfx::RectF&amp; rect)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1Painter.html">Pt::Forms::Painter</a> painter(context);</div>
-<div class="line">    painter.setBrush(<a class="code" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(240, 240, 240)));</div>
+<div class="line">    Pt::Forms::Painter painter(context);</div>
+<div class="line">    painter.setBrush(Pt::Gfx::Brush(Pt::Gfx::Color(240, 240, 240)));</div>
 <div class="line">    painter.fillRect(rect);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Input"></a>
@@ -267,10 +267,10 @@ Canvas Layout</h2>
 <div class="line">| A@(16,16)        |</div>
 <div class="line">|        B@(80,40) |</div>
 <div class="line">+------------------+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html">Pt::Forms::CanvasLayout</a> canvas;</div>
-<div class="line">canvas.<a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">addItem</a>(a, Gfx::PointF(16, 16), Gfx::SizeF(80, 24));</div>
-<div class="line">canvas.<a class="code" href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">addItem</a>(b, Gfx::PointF(80, 40), Gfx::SizeF(64, 24));</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;canvas);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::CanvasLayout canvas;</div>
+<div class="line">canvas.addItem(a, Gfx::PointF(16, 16), Gfx::SizeF(80, 24));</div>
+<div class="line">canvas.addItem(b, Gfx::PointF(80, 40), Gfx::SizeF(64, 24));</div>
+<div class="line">window.setContent(&amp;canvas);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-DockingLayout"></a>
 Docking Layout</h2>
 <p>Children are placed in add order. Left and Right take preferred width and the remaining height. Top and Bottom take preferred height and the remaining width. Each dock shrinks the leftover rectangle. Fill children share that leftover.</p>
@@ -281,11 +281,11 @@ Docking Layout</h2>
 <div class="line">+------+----------+------+</div>
 <div class="line">| Bottom                 |</div>
 <div class="line">+------------------------+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1DockingLayout.html">Pt::Forms::DockingLayout</a> content;</div>
-<div class="line">content.<a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">addItem</a>(toolbar, <a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a47321105d20c4efd6c573a6d829e1ad9">Pt::Forms::DockingLayout::Top</a>);</div>
-<div class="line">content.<a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">addItem</a>(status, <a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a05cdd4fa6b505ee008f4e865acfecccb">Pt::Forms::DockingLayout::Bottom</a>);</div>
-<div class="line">content.<a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">addItem</a>(body, <a class="code" href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::DockingLayout::Fill</a>);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;content);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::DockingLayout content;</div>
+<div class="line">content.addItem(toolbar, Pt::Forms::DockingLayout::Top);</div>
+<div class="line">content.addItem(status, Pt::Forms::DockingLayout::Bottom);</div>
+<div class="line">content.addItem(body, Pt::Forms::DockingLayout::Fill);</div>
+<div class="line">window.setContent(&amp;content);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-FlowLayout"></a>
 Flow Layout</h2>
 <p>Direction::Left and Direction::Right place children on a horizontal axis. Direction::Top and Direction::Bottom place them on a vertical axis. Each child keeps its preferred size on the flow axis and stretches on the cross axis. setCenter() packs the group in the remaining space. setReverse() visits children in reverse order along the same direction.</p>
@@ -298,11 +298,11 @@ Flow Layout</h2>
 <div class="line">+----------------------+</div>
 <div class="line">|      [A] [B] [C]     |</div>
 <div class="line">+----------------------+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a> row(<a class="code" href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Direction::Left</a>);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::FlowLayout row(Pt::Forms::Direction::Left);</div>
 <div class="line">row.addItem(a);</div>
 <div class="line">row.addItem(b);</div>
 <div class="line">row.addItem(c);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;row);</div>
+<div class="line">window.setContent(&amp;row);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-GridLayout"></a>
 Grid Layout</h2>
 <p>Cell size is the largest preferred child size. Vertical fills columns then wraps to the next row. Horizontal fills rows then wraps to the next column. The wrap count is the number of cells on that axis; <code>0</code> fits as many as the available size allows. Items keep their preferred size and are centered in their cells.</p>
@@ -312,12 +312,12 @@ Grid Layout</h2>
 <div class="line">+---+---+---+</div>
 <div class="line">| D | E | F |</div>
 <div class="line">+---+---+---+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1GridLayout.html">Pt::Forms::GridLayout</a> grid(<a class="code" href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600">Pt::Forms::GridLayout::Vertical</a>, 3);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::GridLayout grid(Pt::Forms::GridLayout::Vertical, 3);</div>
 <div class="line">grid.addItem(a);</div>
 <div class="line">grid.addItem(b);</div>
 <div class="line">grid.addItem(c);</div>
 <div class="line">grid.addItem(d);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;grid);</div>
+<div class="line">window.setContent(&amp;grid);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-StackLayout"></a>
 Stack Layout</h2>
 <p>Added children are hidden until setCurrent() selects an index. The current child fills the padded bounds minus its margin. The preferred size is the largest preferred child size. current() is NoIndex until a child is selected.</p>
@@ -325,11 +325,11 @@ Stack Layout</h2>
 <div class="line">| current child    |</div>
 <div class="line">| (others hidden)  |</div>
 <div class="line">+------------------+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1StackLayout.html">Pt::Forms::StackLayout</a> stack;</div>
-<div class="line">stack.<a class="code" href="classPt_1_1Forms_1_1StackLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(pageA);</div>
-<div class="line">stack.<a class="code" href="classPt_1_1Forms_1_1StackLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(pageB);</div>
-<div class="line">stack.<a class="code" href="classPt_1_1Forms_1_1StackLayout.html#a3b2097dbd6666ffe9cd7e28653059798">setCurrent</a>(0);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;stack);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::StackLayout stack;</div>
+<div class="line">stack.addItem(pageA);</div>
+<div class="line">stack.addItem(pageB);</div>
+<div class="line">stack.setCurrent(0);</div>
+<div class="line">window.setContent(&amp;stack);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-TableLayout"></a>
 Table Layout</h2>
 <p>addItem() places a child in a cell. setColumn() and setRow() set each track to Preferred, Fixed, or Fill. Preferred tracks use the largest preferred child on that track. Fixed tracks use the given size. Fill tracks share leftover space after preferred and fixed tracks. Measure resolves preferred and fixed tracks first so Fill cells and nested layouts see the resulting track size. Layout assigns each visible cell the track rectangle minus its margin.</p>
@@ -339,15 +339,15 @@ Table Layout</h2>
 <div class="line">+---------+---------------+</div>
 <div class="line">| notes   |               |  Fill</div>
 <div class="line">+---------+---------------+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1TableLayout2.html">Pt::Forms::TableLayout2</a> table;</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a>(0, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a>);</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">setColumn</a>(1, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a>);</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a>(0, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a>);</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">setRow</a>(1, <a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a>);</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(name, 0, 0);</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(edit, 0, 1);</div>
-<div class="line">table.<a class="code" href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">addItem</a>(notes, 1, 0);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;table);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::TableLayout2 table;</div>
+<div class="line">table.setColumn(0, Pt::Forms::TableLayout2::Preferred);</div>
+<div class="line">table.setColumn(1, Pt::Forms::TableLayout2::Fill);</div>
+<div class="line">table.setRow(0, Pt::Forms::TableLayout2::Preferred);</div>
+<div class="line">table.setRow(1, Pt::Forms::TableLayout2::Fill);</div>
+<div class="line">table.addItem(name, 0, 0);</div>
+<div class="line">table.addItem(edit, 0, 1);</div>
+<div class="line">table.addItem(notes, 1, 0);</div>
+<div class="line">window.setContent(&amp;table);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-ScrollLayout"></a>
 Scroll Layout</h2>
 <p>Children are measured with setContentMode() and placed at their preferred size. scrollX() and scrollY() move the content within the layout bounds. Offsets are clamped to the scrollable range. enableScrolling() selects which axes accept scroll input. This layout does not draw scroll bars.</p>
@@ -355,10 +355,10 @@ Scroll Layout</h2>
 <div class="line">| visible window   |</div>
 <div class="line">|            [====]|  content extends</div>
 <div class="line">+------------------+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1ScrollLayout.html">Pt::Forms::ScrollLayout</a> scroll;</div>
-<div class="line">scroll.<a class="code" href="classPt_1_1Forms_1_1ScrollLayout.html#aab58257809062a73e86cd5c273d6188f">enableScrolling</a>(<span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line">scroll.<a class="code" href="classPt_1_1Forms_1_1ScrollLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">addItem</a>(content);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;scroll);</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Forms::ScrollLayout scroll;</div>
+<div class="line">scroll.enableScrolling(true, true);</div>
+<div class="line">scroll.addItem(content);</div>
+<div class="line">window.setContent(&amp;scroll);</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Buttons"></a>
 Buttons</h1>
 <p>Use a button when the user should run a command or turn a choice on or off. A completed gesture runs a press, release, and cancel protocol and ends in clicked().</p>
@@ -371,10 +371,10 @@ Button</h2>
 <p>A Button holds a caption and hover, and runs a press, release, and cancel protocol that ends in clicked(). It is a base class for all button-like controls. Derive PushButton for a command or CheckBox for a boolean choice.</p>
 <p>setText() sets the caption and records a mnemonic from an ampersand. Pointer, touch, mnemonic, shortcut, and the action key all run the protocol. A release outside the widget, or a scroll during a press, cancels.</p>
 <p>Connect clicked() to handle a completed gesture. Override onPressed(), onReleased(), and onCanceled() in a subclass to implement the command or choice.</p>
-<div class="fragment"><div class="line">download.setText(<span class="stringliteral">&quot;&amp;Download&quot;</span>);</div>
-<div class="line">download.clicked() += Pt::slot(*<span class="keyword">this</span>, &amp;MainWindow::onStartDownload);</div>
+<div class="fragment"><div class="line">download.setText(&quot;&amp;Download&quot;);</div>
+<div class="line">download.clicked() += Pt::slot(*this, &amp;MainWindow::onStartDownload);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> MainWindow::onStartDownload()</div>
+<div class="line">void MainWindow::onStartDownload()</div>
 <div class="line">{</div>
 <div class="line">    client.fetch(url);</div>
 <div class="line">}</div>
@@ -383,11 +383,11 @@ Push Buttons</h2>
 <p>A PushButton is a Button that presents a command. A completed click emits clicked() and, unless it is a toggle, returns to the unpressed look. setToggle() keeps the pressed state after release so the button can show an on/off command such as Bold.</p>
 <p>setIcon() places a picture next to the caption. setLayout() chooses the Direction of icon and text. setFlat() drops the framed face.</p>
 <p>The button owns a ButtonStyler. On invalidate it calls Styler::bind(). Appearance getters and setters read and write widget-local options. setRenderer() assigns a ButtonRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. ButtonState is the snapshot passed to paint layers.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a> send;</div>
-<div class="line">send.<a class="code" href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;&amp;Send&quot;</span>);</div>
-<div class="line">send.<a class="code" href="classPt_1_1Forms_1_1Button.html#ab5a6ad1af3b398dac329b35a860c6ae7">clicked</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;MailComposer::onSend);</div>
+<div class="fragment"><div class="line">Pt::Forms::PushButton send;</div>
+<div class="line">send.setText(&quot;&amp;Send&quot;);</div>
+<div class="line">send.clicked() += Pt::slot(*this, &amp;MailComposer::onSend);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> MailComposer::onSend()</div>
+<div class="line">void MailComposer::onSend()</div>
 <div class="line">{</div>
 <div class="line">    mailer.send(message);</div>
 <div class="line">}</div>
@@ -395,13 +395,13 @@ Push Buttons</h2>
 Check Boxes</h2>
 <p>A CheckBox is a Button whose value is Unspecified, Checked, or Unchecked. setState() assigns the value. isChecked() is true only for Checked. A completed click toggles Checked and Unchecked, then emits clicked(). Unspecified becomes Checked on that click.</p>
 <p>The box owns a CheckBoxStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. setRenderer() assigns a CheckBoxRenderer. CheckBoxState is the snapshot passed to paint layers.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1CheckBox.html">Pt::Forms::CheckBox</a> remember;</div>
-<div class="line">remember.<a class="code" href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Remember me&quot;</span>);</div>
-<div class="line">remember.<a class="code" href="classPt_1_1Forms_1_1Button.html#ab5a6ad1af3b398dac329b35a860c6ae7">clicked</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;LoginDialog::onRememberToggled);</div>
+<div class="fragment"><div class="line">Pt::Forms::CheckBox remember;</div>
+<div class="line">remember.setText(&quot;Remember me&quot;);</div>
+<div class="line">remember.clicked() += Pt::slot(*this, &amp;LoginDialog::onRememberToggled);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> LoginDialog::onRememberToggled()</div>
+<div class="line">void LoginDialog::onRememberToggled()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span>( remember.<a class="code" href="classPt_1_1Forms_1_1CheckBox.html#ac8cada18b9357ff68b26e17f44294764">isChecked</a>() )</div>
+<div class="line">    if( remember.isChecked() )</div>
 <div class="line">        storeCredentials();</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Displays"></a>
@@ -416,41 +416,41 @@ Labels</h2>
 <p>A Label presents a caption or a picture. It does not edit text. setText() sets the caption and clears any icon. setIcon() shows an icon instead of text. setAlignment() places the content in the label bounds.</p>
 <p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off without replacing the style. Whether the fill or frame is on is a widget setting, not a style option.</p>
 <p>The label owns a PanelStyler and shares the panel appearance family with Panel. On invalidate it binds that styler. Measure, layout, and paint call typed methods on it. TextBlock lays out wrapped text. Icon supplies pictures. Neither is a widget.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> heading;</div>
-<div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Inbox&quot;</span>);</div>
-<div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#a327cb29689a0b041e25cce65bc58693e">setAlignment</a>(<a class="code" href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Alignment::Left</a>);</div>
-<div class="line">heading.<a class="code" href="classPt_1_1Forms_1_1Label.html#ae25e5c2d8699fd7c56e7c4547bad68a9">setFontWeight</a>(Pt::Gfx::Font::Weight::Bold);</div>
+<div class="fragment"><div class="line">Pt::Forms::Label heading;</div>
+<div class="line">heading.setText(&quot;Inbox&quot;);</div>
+<div class="line">heading.setAlignment(Pt::Forms::Alignment::Left);</div>
+<div class="line">heading.setFontWeight(Pt::Gfx::Font::Weight::Bold);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> empty;</div>
-<div class="line">empty.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;No messages&quot;</span>);</div>
-<div class="line">empty.<a class="code" href="classPt_1_1Forms_1_1Label.html#a327cb29689a0b041e25cce65bc58693e">setAlignment</a>(<a class="code" href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389">Pt::Forms::Alignment::Center</a>);</div>
-<div class="line">empty.<a class="code" href="classPt_1_1Forms_1_1Label.html#ac24598c93a713c95d97205c65dfccbfc">setTextColor</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(120, 120, 120));</div>
+<div class="line">Pt::Forms::Label empty;</div>
+<div class="line">empty.setText(&quot;No messages&quot;);</div>
+<div class="line">empty.setAlignment(Pt::Forms::Alignment::Center);</div>
+<div class="line">empty.setTextColor(Pt::Gfx::Color(120, 120, 120));</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-Panel"></a>
 Panels</h2>
 <p>A Panel presents one content control with an optional background, frame, and icon. setContent() attaches the child without taking ownership. Keep the child alive until it is detached. content() returns the attached control, or 0.</p>
 <p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off. Whether the fill or frame is on is a widget setting, not a style option. setIcon() paints a picture aligned with the given Alignment.</p>
 <p>The panel owns a PanelStyler and shares that appearance family with Label. On invalidate it binds the styler. Measure, layout, and paint call typed methods on it. The content control is laid out in the inner rectangle after the frame.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> status;</div>
-<div class="line">status.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Ready&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::Label status;</div>
+<div class="line">status.setText(&quot;Ready&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Panel.html">Pt::Forms::Panel</a> banner;</div>
-<div class="line">banner.<a class="code" href="classPt_1_1Forms_1_1Panel.html#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a>(<a class="code" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(240, 240, 240)));</div>
-<div class="line">banner.<a class="code" href="classPt_1_1Forms_1_1Panel.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;status);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;banner);</div>
+<div class="line">Pt::Forms::Panel banner;</div>
+<div class="line">banner.setBackground(Pt::Gfx::Brush(Pt::Gfx::Color(240, 240, 240)));</div>
+<div class="line">banner.setContent(&amp;status);</div>
+<div class="line">window.setContent(&amp;banner);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-ProgressBar"></a>
 Progress Bars</h2>
 <p>A ProgressBar maps an integer value between minimum() and maximum() to a ratio from 0 to 1. setRange() sets the bounds. setValue() clamps the value and emits valueChanged(). progress() returns the ratio used to fill the track. reset() returns to the minimum.</p>
 <p>The bar owns a ProgressBarStyler. On invalidate it binds that styler. Appearance getters and setters overlay the application style. setRenderer() assigns a ProgressBarRenderer. progressBarState() is the snapshot passed to paint layers.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> caption;</div>
-<div class="line">caption.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Copying photos...&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::Label caption;</div>
+<div class="line">caption.setText(&quot;Copying photos...&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1ProgressBar.html">Pt::Forms::ProgressBar</a> copy;</div>
-<div class="line">copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#ab9eedccb53862a3577d79147b51946df">setRange</a>(0, photoCount);</div>
-<div class="line">copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#a6ce3b26c111a73fc0757dee808943f19">setValue</a>(0);</div>
+<div class="line">Pt::Forms::ProgressBar copy;</div>
+<div class="line">copy.setRange(0, photoCount);</div>
+<div class="line">copy.setValue(0);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> Album::onPhotoCopied()</div>
+<div class="line">void Album::onPhotoCopied()</div>
 <div class="line">{</div>
-<div class="line">    copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#a6ce3b26c111a73fc0757dee808943f19">setValue</a>(copy.<a class="code" href="classPt_1_1Forms_1_1ProgressBar.html#a8702bf15d64240deb9b75903f38d9103">value</a>() + 1);</div>
+<div class="line">    copy.setValue(copy.value() + 1);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Editors"></a>
 Editors and Selectors</h1>
@@ -467,11 +467,11 @@ Line Edits</h2>
 <p>setEditable(false) keeps the text from being changed and does not take focus. setAccepted(true) completes an edit: Return emits returnPressed(), and losing focus after a change emits editingFinished().</p>
 <p>The field owns a LineEditStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. setRenderer() assigns a LineEditRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. lineEditState() is the snapshot passed to paint layers.</p>
 <p>A LineEditor stores the text, caret, and scroll. It is not a widget.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1LineEdit.html">Pt::Forms::LineEdit</a> name;</div>
-<div class="line">name.<a class="code" href="classPt_1_1Forms_1_1LineEdit.html#afc5f5c07ff988e5c1c6a813a196d84bc">setPlaceholderText</a>(<span class="stringliteral">&quot;Full name&quot;</span>);</div>
-<div class="line">name.<a class="code" href="classPt_1_1Forms_1_1LineEdit.html#aad94a817f75ca581179b605cfe741300">editingFinished</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;ContactForm::onNameEdited);</div>
+<div class="fragment"><div class="line">Pt::Forms::LineEdit name;</div>
+<div class="line">name.setPlaceholderText(&quot;Full name&quot;);</div>
+<div class="line">name.editingFinished() += Pt::slot(*this, &amp;ContactForm::onNameEdited);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> ContactForm::onNameEdited(<span class="keyword">const</span> <a class="code" href="classPt_1_1String.html">Pt::String</a>&amp; text)</div>
+<div class="line">void ContactForm::onNameEdited(const Pt::String&amp; text)</div>
 <div class="line">{</div>
 <div class="line">    contact.setName(text);</div>
 <div class="line">}</div>
@@ -481,12 +481,12 @@ Spin Boxes</h2>
 <p>Override toText() and toValue() to change how the integer is shown and parsed. onInput() accepts partial text while the user types. onStep() applies an up or down step.</p>
 <p>The box owns a SpinBoxStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. setRenderer() assigns a SpinBoxRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler.</p>
 <p>A LineEditor stores the entry text and caret. It is not a widget. SpinBoxButton is an integrated subpart, not a control the application places.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1SpinBox.html">Pt::Forms::SpinBox</a> quantity;</div>
-<div class="line">quantity.<a class="code" href="classPt_1_1Forms_1_1SpinBox.html#a693c16cecd031a84aaf28be0427cff88">setRange</a>(1, 99);</div>
-<div class="line">quantity.<a class="code" href="classPt_1_1Forms_1_1SpinBox.html#a6ce3b26c111a73fc0757dee808943f19">setValue</a>(1);</div>
-<div class="line">quantity.<a class="code" href="classPt_1_1Forms_1_1SpinBox.html#a784ad57c98045e60731408c6502d31d8">valueEdited</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;OrderForm::onQuantityEdited);</div>
+<div class="fragment"><div class="line">Pt::Forms::SpinBox quantity;</div>
+<div class="line">quantity.setRange(1, 99);</div>
+<div class="line">quantity.setValue(1);</div>
+<div class="line">quantity.valueEdited() += Pt::slot(*this, &amp;OrderForm::onQuantityEdited);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> OrderForm::onQuantityEdited(<span class="keywordtype">int</span> n)</div>
+<div class="line">void OrderForm::onQuantityEdited(int n)</div>
 <div class="line">{</div>
 <div class="line">    order.setQuantity(n);</div>
 <div class="line">}</div>
@@ -496,28 +496,28 @@ Combo Boxes</h2>
 <p>Calling setEditable(false) keeps the text from being typed, allowing the user to still pick from the list. Calling setAccepted(true) completes an edit: pressing Return emits returnPressed(), and losing focus after a change emits editingFinished(). Calling setMaxHeight() limits the popup height, and calling setScrollBars() shows scroll bars on the list.</p>
 <p>The box owns a ComboBoxStyler. On invalidate, it calls Styler::bind(). Appearance getters and setters overlay the application style. Use setRenderer() to assign a ComboBoxRenderer until it is cleared. Measure, layout, and paint operations call typed methods on the styler.</p>
 <p>An internal LineEditor stores the entry text and caret, but is not a widget. The popup list is a Popup that hosts a ListBox.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a> berlin;</div>
-<div class="line">berlin.<a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Berlin&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::ListBoxItem berlin;</div>
+<div class="line">berlin.setText(&quot;Berlin&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1ComboBox.html">Pt::Forms::ComboBox</a> city;</div>
-<div class="line">city.<a class="code" href="classPt_1_1Forms_1_1ComboBox.html#a1263d7c3457f6ef79ef539eb2bfe32bc">addItem</a>(berlin);</div>
-<div class="line">city.<a class="code" href="classPt_1_1Forms_1_1ComboBox.html#a6b090849697219553f58b45f49b15e73">selected</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;AddressForm::onCitySelected);</div>
+<div class="line">Pt::Forms::ComboBox city;</div>
+<div class="line">city.addItem(berlin);</div>
+<div class="line">city.selected() += Pt::slot(*this, &amp;AddressForm::onCitySelected);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> AddressForm::onCitySelected(<a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a>&amp; item)</div>
+<div class="line">void AddressForm::onCitySelected(Pt::Forms::ListBoxItem&amp; item)</div>
 <div class="line">{</div>
-<div class="line">    address.setCity(item.<a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html#ac4f6ea7a6165211c2a95f5b68767a64a">text</a>());</div>
+<div class="line">    address.setCity(item.text());</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-Slider"></a>
 Sliders</h2>
 <p>A Slider maps an integer between minimum() and maximum() to a handle on a track. setRange() sets the bounds. setPosition() clamps the value and emits positionChanged() when it changes. Dragging the handle updates the position.</p>
 <p>The slider owns a SliderStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. setRenderer() assigns a SliderRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. sliderState() is the snapshot passed to paint layers.</p>
 <p>Track and handle are borrowable renderer primitives. The slider still orchestrates measure, layout, and paint through the styler.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Slider.html">Pt::Forms::Slider</a> volume;</div>
-<div class="line">volume.<a class="code" href="classPt_1_1Forms_1_1Slider.html#a693c16cecd031a84aaf28be0427cff88">setRange</a>(0, 100);</div>
-<div class="line">volume.<a class="code" href="classPt_1_1Forms_1_1Slider.html#a34d31de4fe5ca10b07f40ec47326f307">setPosition</a>(50);</div>
-<div class="line">volume.<a class="code" href="classPt_1_1Forms_1_1Slider.html#afef709ee1692228367f835c57115ab3f">positionChanged</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;Mixer::onVolumeChanged);</div>
+<div class="fragment"><div class="line">Pt::Forms::Slider volume;</div>
+<div class="line">volume.setRange(0, 100);</div>
+<div class="line">volume.setPosition(50);</div>
+<div class="line">volume.positionChanged() += Pt::slot(*this, &amp;Mixer::onVolumeChanged);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> Mixer::onVolumeChanged(<span class="keywordtype">int</span> pos)</div>
+<div class="line">void Mixer::onVolumeChanged(int pos)</div>
 <div class="line">{</div>
 <div class="line">    output.setVolume(pos);</div>
 <div class="line">}</div>
@@ -539,42 +539,42 @@ List Boxes</h2>
 <p>A ListBox presents caller-owned ListBoxItem objects. Use addItem() to add an item. Keep each item alive until removeItem() detaches it. A completed click on a selectable item toggles ListBoxItem::isSelected(). selected() emits that item. selectedItems() returns the items that are currently selected. Calling setScrollBars() shows scroll bars when the list does not fit.</p>
 <p>The list owns a ListBoxStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. Use setRenderer() to assign a ListBoxRenderer until it is cleared. Measure, layout, and paint operations call typed methods on the styler.</p>
 <p>Items are hosted in a ScrollView.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a> berlin;</div>
-<div class="line">berlin.<a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Berlin&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::ListBoxItem berlin;</div>
+<div class="line">berlin.setText(&quot;Berlin&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1ListBox.html">Pt::Forms::ListBox</a> cities;</div>
-<div class="line">cities.<a class="code" href="classPt_1_1Forms_1_1ListBox.html#a1263d7c3457f6ef79ef539eb2bfe32bc">addItem</a>(berlin);</div>
-<div class="line">cities.<a class="code" href="classPt_1_1Forms_1_1ListBox.html#a6b090849697219553f58b45f49b15e73">selected</a>() += Pt::slot(*<span class="keyword">this</span>, &amp;AddressForm::onCitySelected);</div>
+<div class="line">Pt::Forms::ListBox cities;</div>
+<div class="line">cities.addItem(berlin);</div>
+<div class="line">cities.selected() += Pt::slot(*this, &amp;AddressForm::onCitySelected);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> AddressForm::onCitySelected(<a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a>&amp; item)</div>
+<div class="line">void AddressForm::onCitySelected(Pt::Forms::ListBoxItem&amp; item)</div>
 <div class="line">{</div>
-<div class="line">    address.setCity(item.<a class="code" href="classPt_1_1Forms_1_1ListBoxItem.html#ac4f6ea7a6165211c2a95f5b68767a64a">text</a>());</div>
+<div class="line">    address.setCity(item.text());</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-TabView"></a>
 Tab Views</h2>
 <p>A TabView presents several caller-owned content controls, one at a time. Use addTab() to add a control with a title. Keep each control alive until removeTab() detaches it. setCurrent() shows that page. Choosing a tab shows its page. setText() changes a tab title. The view owns the titles, the current tab, tab geometry, and tab input. There is no separate tab-bar widget.</p>
 <p>The view owns a TabViewStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. Use setRenderer() to assign a TabViewRenderer until it is cleared. Measure, layout, and paint operations call typed methods on the styler.</p>
 <p>Pages live in a StackLayout.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> general;</div>
-<div class="line">general.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;General settings&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::Label general;</div>
+<div class="line">general.setText(&quot;General settings&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> network;</div>
-<div class="line">network.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Network settings&quot;</span>);</div>
+<div class="line">Pt::Forms::Label network;</div>
+<div class="line">network.setText(&quot;Network settings&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1TabView.html">Pt::Forms::TabView</a> settings;</div>
-<div class="line">settings.<a class="code" href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">addTab</a>(general, <span class="stringliteral">&quot;General&quot;</span>);</div>
-<div class="line">settings.<a class="code" href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">addTab</a>(network, <span class="stringliteral">&quot;Network&quot;</span>);</div>
+<div class="line">Pt::Forms::TabView settings;</div>
+<div class="line">settings.addTab(general, &quot;General&quot;);</div>
+<div class="line">settings.addTab(network, &quot;Network&quot;);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-ScrollBar"></a>
 Scroll Bars</h2>
 <p>A ScrollBar maps a value between minimumPosition() and maximumPosition() to a handle on a track. setRange() sets the bounds. setPosition() clamps the value. scroll() clamps the value and emits changed(). Decrease and increase controls step by setStepping(). The constructor sets Orientation.</p>
 <p>The bar owns a ScrollBarStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. setRenderer() assigns a ScrollBarRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. scrollBarState() is the snapshot passed to paint layers.</p>
 <p>Track, handle, and decrease and increase controls are renderer primitives. The bar still orchestrates measure, layout, and paint through the styler.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1ScrollBar.html">Pt::Forms::ScrollBar</a> volume(<a class="code" href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58a7d5f78c516bedc0a066182a6fd606b8b">Pt::Forms::ScrollBar::Horizontal</a>);</div>
-<div class="line">volume.<a class="code" href="classPt_1_1Forms_1_1Slider.html#a693c16cecd031a84aaf28be0427cff88">setRange</a>(0, 100);</div>
-<div class="line">volume.<a class="code" href="classPt_1_1Forms_1_1Slider.html#a34d31de4fe5ca10b07f40ec47326f307">setPosition</a>(50);</div>
-<div class="line">volume.changed() += Pt::slot(*<span class="keyword">this</span>, &amp;Mixer::onVolume);</div>
+<div class="fragment"><div class="line">Pt::Forms::ScrollBar volume(Pt::Forms::ScrollBar::Horizontal);</div>
+<div class="line">volume.setRange(0, 100);</div>
+<div class="line">volume.setPosition(50);</div>
+<div class="line">volume.changed() += Pt::slot(*this, &amp;Mixer::onVolume);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> Mixer::onVolume(<span class="keywordtype">double</span> pos)</div>
+<div class="line">void Mixer::onVolume(double pos)</div>
 <div class="line">{</div>
 <div class="line">    output.setVolume(pos);</div>
 <div class="line">}</div>
@@ -582,15 +582,15 @@ Scroll Bars</h2>
 Scroll Views</h2>
 <p>A ScrollView presents one caller-owned content control that may be larger than the view. Use setContent() to attach the control. Keep it alive until another call replaces it. Calling setScrollBars() shows horizontal and vertical ScrollBar objects when the content does not fit. scrollX() and scrollY() move the content. setContentMode() chooses how the content is measured.</p>
 <p>The view has no family renderer. It hosts a ScrollLayout and optional ScrollBar objects. Offset of oversized content is a ScrollLayout.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> terms;</div>
-<div class="line">terms.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;These terms apply to all deliveries. &quot;</span></div>
-<div class="line">              <span class="stringliteral">&quot;Orders ship within five working days. &quot;</span></div>
-<div class="line">              <span class="stringliteral">&quot;Damaged goods must be reported within 14 days.&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::Label terms;</div>
+<div class="line">terms.setText(&quot;These terms apply to all deliveries. &quot;</div>
+<div class="line">              &quot;Orders ship within five working days. &quot;</div>
+<div class="line">              &quot;Damaged goods must be reported within 14 days.&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1ScrollView.html">Pt::Forms::ScrollView</a> page;</div>
-<div class="line">page.<a class="code" href="classPt_1_1Forms_1_1ScrollView.html#aeb86c020ae0ec5b9c7793adff871ddf0">setContent</a>(terms);</div>
-<div class="line">page.<a class="code" href="classPt_1_1Forms_1_1ScrollView.html#a7c947ce71551301c2fe67494b871b696">setScrollBars</a>(<span class="keyword">true</span>);</div>
-<div class="line">window.<a class="code" href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">setContent</a>(&amp;page);</div>
+<div class="line">Pt::Forms::ScrollView page;</div>
+<div class="line">page.setContent(terms);</div>
+<div class="line">page.setScrollBars(true);</div>
+<div class="line">window.setContent(&amp;page);</div>
 </div><!-- fragment --><h1><a class="anchor" id="Pt-Forms-Page-Menus"></a>
 Menus</h1>
 <p>Use menus to group related commands when the user chooses an action from a compact list. A MenuBar is a horizontal strip of top-level entries. Choosing an entry opens its associated Menu. A Menu is a transient popup containing a vertical list of command items and submenu items.</p>
@@ -601,27 +601,27 @@ Menus</h1>
 Menu</h2>
 <p>Use a Menu for commands chosen from a vertical popup list, including a context menu or the menu opened by a MenuBarItem. Add MenuItem objects for commands and MenuSubItem objects for nested menus. The menu does not own its items; remove an item before destroying it.</p>
 <p>A menu derives its default background and contour from the application style during invalidation. setBackground() and setContour() supply local overrides for this menu. A nested menu is opened and positioned by its associated submenu item.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Menu.html">Pt::Forms::Menu</a> fileMenu;</div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1MenuItem.html">Pt::Forms::MenuItem</a> openItem;</div>
-<div class="line">openItem.<a class="code" href="classPt_1_1Forms_1_1MenuItemBase.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Open&quot;</span>);</div>
-<div class="line">fileMenu.<a class="code" href="classPt_1_1Forms_1_1Menu.html#a156bb196a80a4eadf4167d130826f088">addItem</a>(openItem);</div>
+<div class="fragment"><div class="line">Pt::Forms::Menu fileMenu;</div>
+<div class="line">Pt::Forms::MenuItem openItem;</div>
+<div class="line">openItem.setText(&quot;Open&quot;);</div>
+<div class="line">fileMenu.addItem(openItem);</div>
 </div><!-- fragment --><p> Menu and MenuBar use this interface to register submenu items, track their parent item, and coordinate opening, closing, and cancellation. Applications use a concrete menu container instead of deriving from this type.</p>
 <h2><a class="anchor" id="Pt-Forms-Page-MenuBar"></a>
 Menu Bars</h2>
 <p>Use a MenuBar to present a stable row of top-level command categories. Add MenuBarItem objects and associate each item with a Menu. The bar opens the selected menu below its item and closes the previously active menu. It does not own its items; remove an item before destroying it.</p>
 <p>A menu bar derives its default background and contour from the application style during invalidation. setBackground() and setContour() supply local overrides for this menu bar.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html">Pt::Forms::MenuBarItem</a> fileItem;</div>
-<div class="line">fileItem.<a class="code" href="classPt_1_1Forms_1_1MenuItemBase.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;File&quot;</span>);</div>
+<div class="fragment"><div class="line">Pt::Forms::MenuBarItem fileItem;</div>
+<div class="line">fileItem.setText(&quot;File&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1MenuBarItem.html">Pt::Forms::MenuBarItem</a> editItem;</div>
-<div class="line">editItem.<a class="code" href="classPt_1_1Forms_1_1MenuItemBase.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Edit&quot;</span>);</div>
+<div class="line">Pt::Forms::MenuBarItem editItem;</div>
+<div class="line">editItem.setText(&quot;Edit&quot;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Menu.html">Pt::Forms::Menu</a> fileMenu;</div>
-<div class="line">fileMenu.<a class="code" href="classPt_1_1Forms_1_1Menu.html#a156bb196a80a4eadf4167d130826f088">addItem</a>(&amp;fileItem);</div>
-<div class="line">fileMenu.<a class="code" href="classPt_1_1Forms_1_1Menu.html#a156bb196a80a4eadf4167d130826f088">addItem</a>(&amp;editItem);</div>
+<div class="line">Pt::Forms::Menu fileMenu;</div>
+<div class="line">fileMenu.addItem(&amp;fileItem);</div>
+<div class="line">fileMenu.addItem(&amp;editItem);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1MenuBar.html">Pt::Forms::MenuBar</a> menuBar;</div>
-<div class="line">menuBar.<a class="code" href="classPt_1_1Forms_1_1MenuBar.html#a2c596351da2905484476953eeeff1047">addItem</a>(fileItem);</div>
+<div class="line">Pt::Forms::MenuBar menuBar;</div>
+<div class="line">menuBar.addItem(fileItem);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-MenuItem"></a>
 Menu Items</h2>
 <p>A menu item displays text, an optional icon, an optional separator, and a shortcut when one is registered. A pointer or touch release over the item, or a matching shortcut, emits triggered(). A highlighted item is the item currently under the pointer.</p>
@@ -646,13 +646,13 @@ Icons</h2>
 <p>A default icon uses a built-in provider. Icon(IconProvider&amp;) attaches a caller-owned provider that must outlive the icon. Copies share the same implementation until addImage() or clear() changes one copy.</p>
 <p>addImage() registers an image or file path at a logical size. Passing only an image uses its pixel size as the key. The logical size may differ from the pixel size. Images registered by path load as PNG on first use through Application::loadImage(). A missing path produces an empty image.</p>
 <p>getImage() returns the registered image for a requested area. The built-in provider selects the largest image that fits entirely in that area. An empty icon produces an empty image. minimumSize() and maximumSize() return the smallest and largest registered keys.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1Icon.html">Pt::Forms::Icon</a> icon;</div>
-<div class="line">icon.<a class="code" href="classPt_1_1Forms_1_1Icon.html#aa8547ba44211c1e25959012febd1daa6">addImage</a>(<a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(16, 16), <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a>(<span class="stringliteral">&quot;app-16.png&quot;</span>));</div>
-<div class="line">icon.<a class="code" href="classPt_1_1Forms_1_1Icon.html#aa8547ba44211c1e25959012febd1daa6">addImage</a>(<a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(32, 32), <a class="code" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a>(<span class="stringliteral">&quot;app-32.png&quot;</span>));</div>
+<div class="fragment"><div class="line">Pt::Forms::Icon icon;</div>
+<div class="line">icon.addImage(Pt::Gfx::SizeF(16, 16), Pt::System::Path(&quot;app-16.png&quot;));</div>
+<div class="line">icon.addImage(Pt::Gfx::SizeF(32, 32), Pt::System::Path(&quot;app-32.png&quot;));</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> label;</div>
-<div class="line">label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a3d5ab28c5be995b1ee175b4573e51910">setIcon</a>(icon, <a class="code" href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::SizeF</a>(16, 16));</div>
-<div class="line">label.<a class="code" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Hello&quot;</span>);</div>
+<div class="line">Pt::Forms::Label label;</div>
+<div class="line">label.setIcon(icon, Pt::Gfx::SizeF(16, 16));</div>
+<div class="line">label.setText(&quot;Hello&quot;);</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-IconProvider"></a>
 Icon Providers</h2>
 <p>Derive from IconProvider only to provide a custom image source. Ordinary code uses the built-in provider created by a default Icon. A custom provider implements every pure virtual function. Its getImage() function selects and, when needed, loads an image for the requested size.</p>
@@ -675,17 +675,17 @@ Styles and Renderers</h1>
 <p>Family renderers provide a text painter whose font and text color already follow the style. A widget does not construct a Painter for that themed text. Style::Facet::onReset() is the point at which a renderer reads StyleOptions and stores drawing state. Render methods use that prepared state plus the visual-state snapshot.</p>
 <p>renderBackground() paints the whole control. An inner fill uses a layer name such as entry background. PlatinumStyle backgrounds are empty unless a local BackgroundOption is set.</p>
 <p>Styler binds a control to the current style. Call Styler::bind() from onInvalidate() after the base implementation. Layouting and painting call typed methods on the derived styler. Derive a Style to install a different look. Derive a Renderer to draw a control family. Derive a Styler only when adding a new control family.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1StyleOptions.html">Pt::Forms::StyleOptions</a> options = <a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a6e258ee689d77db09515e35fe67a7fcc">Pt::Forms::StyleOptions::defaults</a>();</div>
-<div class="line">options.<a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">set</a>(</div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1AccentColorOption.html">Pt::Forms::AccentColorOption</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(20, 140, 250))</div>
+<div class="fragment"><div class="line">Pt::Forms::StyleOptions options = Pt::Forms::StyleOptions::defaults();</div>
+<div class="line">options.set(</div>
+<div class="line">    Pt::Forms::AccentColorOption(Pt::Gfx::Color(20, 140, 250))</div>
 <div class="line">);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a>&amp; app = <a class="code" href="classPt_1_1Forms_1_1Application.html#a294a0851013e6ca75047af8fa0f8d8ed">Pt::Forms::Application::instance</a>();</div>
-<div class="line">app.<a class="code" href="classPt_1_1Forms_1_1Application.html#a970f2523988a3ebb114f0d8d0ef8308d">setStyleOptions</a>(options);</div>
+<div class="line">Pt::Forms::Application&amp; app = Pt::Forms::Application::instance();</div>
+<div class="line">app.setStyleOptions(options);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a> send;</div>
-<div class="line">send.<a class="code" href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a>(<span class="stringliteral">&quot;Send&quot;</span>);</div>
-<div class="line">send.<a class="code" href="classPt_1_1Forms_1_1PushButton.html#a51e5e13c91886ce59275c2f791202ab2">setForeground</a>(<a class="code" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(20, 140, 250)));</div>
+<div class="line">Pt::Forms::PushButton send;</div>
+<div class="line">send.setText(&quot;Send&quot;);</div>
+<div class="line">send.setForeground(Pt::Gfx::Brush(Pt::Gfx::Color(20, 140, 250)));</div>
 </div><!-- fragment --><h2><a class="anchor" id="Pt-Forms-Page-Style"></a>
 Styles</h2>
 <p>A Style stores one renderer facet per dynamic type. Use set() to register or replace a facet. Use get() to retrieve it. Use reset() to apply StyleOptions to every registered facet. generation() changes when the set of facets changes.</p>
@@ -696,17 +696,17 @@ Styles</h2>
 Style Options</h2>
 <p>A StyleOptions object contains named appearance options, such as the application background, text colors, accent color, contour pen, and default font. A Style uses these values when it prepares the renderers that paint controls.</p>
 <p>Application owns the global style options. It creates them from defaults() and uses them with the default PlatinumStyle. To change the application theme, create an options object, change the values that the application requires, and pass it to Application::setStyleOptions(). The application resets its renderers and invalidates its widgets so that the new appearance is applied.</p>
-<div class="fragment"><div class="line"><a class="code" href="classPt_1_1Forms_1_1StyleOptions.html">Pt::Forms::StyleOptions</a> options = <a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a6e258ee689d77db09515e35fe67a7fcc">Pt::Forms::StyleOptions::defaults</a>();</div>
+<div class="fragment"><div class="line">Pt::Forms::StyleOptions options = Pt::Forms::StyleOptions::defaults();</div>
 <div class="line"> </div>
-<div class="line">options.<a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">set</a>(</div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1AccentColorOption.html">Pt::Forms::AccentColorOption</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(20, 140, 250))</div>
+<div class="line">options.set(</div>
+<div class="line">    Pt::Forms::AccentColorOption(Pt::Gfx::Color(20, 140, 250))</div>
 <div class="line">);</div>
-<div class="line">options.<a class="code" href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">set</a>(</div>
-<div class="line">    <a class="code" href="classPt_1_1Forms_1_1TextColorOption.html">Pt::Forms::TextColorOption</a>(<a class="code" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(30, 30, 30))</div>
+<div class="line">options.set(</div>
+<div class="line">    Pt::Forms::TextColorOption(Pt::Gfx::Color(30, 30, 30))</div>
 <div class="line">);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a>&amp; app = <a class="code" href="classPt_1_1Forms_1_1Application.html#a294a0851013e6ca75047af8fa0f8d8ed">Pt::Forms::Application::instance</a>();</div>
-<div class="line">app.<a class="code" href="classPt_1_1Forms_1_1Application.html#a970f2523988a3ebb114f0d8d0ef8308d">setStyleOptions</a>(options);</div>
+<div class="line">Pt::Forms::Application&amp; app = Pt::Forms::Application::instance();</div>
+<div class="line">app.setStyleOptions(options);</div>
 </div><!-- fragment --><p>The default constructor creates an empty options object. An empty object is useful as a local overlay for a control. A styler binds this overlay to the application options. A local option overrides the option of the same type in the application options, while an option that is not present locally continues to use the application value. Application owns the live global instance, constructed from defaults(). Application::styleOptions() returns that object as const.</p>
 <p>findLocal() searches only this object and returns 0 when the option is not stored locally. find() searches this object and then its bound parent. After bind(), get() returns a local or inherited token and throws std::logic_error when the requested option is not available. set() adds or replaces a local option, and reset() removes a local option.</p>
 <p>StyleOptions stores tokens that every style can honor. Look-specific metrics stay in the derived style or renderer.</p>
@@ -726,107 +726,6 @@ Renderers</h2>
 <p>Derive a renderer for a control family and register it on a Style. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollView_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollView.html">Pt::Forms::ScrollView</a></div><div class="ttdoc">Viewport over larger content.</div><div class="ttdef"><b>Definition:</b> ScrollView.h:70</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1PushButton_html_a51e5e13c91886ce59275c2f791202ab2"><div class="ttname"><a href="classPt_1_1Forms_1_1PushButton.html#a51e5e13c91886ce59275c2f791202ab2">Pt::Forms::PushButton::setForeground</a></div><div class="ttdeci">void setForeground(const Gfx::Brush &amp;b)</div><div class="ttdoc">Sets the widget-local foreground brush to b.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Slider_html_a34d31de4fe5ca10b07f40ec47326f307"><div class="ttname"><a href="classPt_1_1Forms_1_1Slider.html#a34d31de4fe5ca10b07f40ec47326f307">Pt::Forms::Slider::setPosition</a></div><div class="ttdeci">void setPosition(int pos)</div><div class="ttdoc">Sets the position to pos, clamped to the range, and emits positionChanged() when it changes.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1StyleOptions_html_a8cbbcde34aa157a262c803c353b1f791"><div class="ttname"><a href="classPt_1_1Forms_1_1StyleOptions.html#a8cbbcde34aa157a262c803c353b1f791">Pt::Forms::StyleOptions::set</a></div><div class="ttdeci">void set(const T &amp;option)</div><div class="ttdoc">Adds or replaces the local option of type T.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:778</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html">Pt::Forms::CanvasLayout</a></div><div class="ttdoc">Arranges children at stored positions and sizes.</div><div class="ttdef"><b>Definition:</b> CanvasLayout.h:64</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollLayout.html">Pt::Forms::ScrollLayout</a></div><div class="ttdoc">Offsets children when content exceeds the viewport.</div><div class="ttdef"><b>Definition:</b> ScrollLayout.h:66</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollLayout_html_aab58257809062a73e86cd5c273d6188f"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollLayout.html#aab58257809062a73e86cd5c273d6188f">Pt::Forms::ScrollLayout::enableScrolling</a></div><div class="ttdeci">void enableScrolling(bool scrollX, bool scrollY)</div><div class="ttdoc">Enables horizontal scrolling when scrollX is true and vertical scrolling when scrollY is true.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Icon_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Icon.html">Pt::Forms::Icon</a></div><div class="ttdoc">Represents an image at one or more logical sizes.</div><div class="ttdef"><b>Definition:</b> Icon.h:144</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TabView_html_a680731f5ebef71753c8ac2d71505cf18"><div class="ttname"><a href="classPt_1_1Forms_1_1TabView.html#a680731f5ebef71753c8ac2d71505cf18">Pt::Forms::TabView::addTab</a></div><div class="ttdeci">void addTab(Control &amp;control, const Pt::String &amp;title)</div><div class="ttdoc">Adds caller-owned control as a tab with title.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1StackLayout_html_a3b2097dbd6666ffe9cd7e28653059798"><div class="ttname"><a href="classPt_1_1Forms_1_1StackLayout.html#a3b2097dbd6666ffe9cd7e28653059798">Pt::Forms::StackLayout::setCurrent</a></div><div class="ttdeci">void setCurrent(std::size_t n)</div><div class="ttdoc">Shows the child at index n and hides the previous child.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html">Pt::Forms::GridLayout</a></div><div class="ttdoc">Arranges children in uniform wrapping cells.</div><div class="ttdef"><b>Definition:</b> GridLayout.h:68</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba71538626343dfb517a80453f42943e8a">Pt::Forms::TableLayout2::Preferred</a></div><div class="ttdeci">@ Preferred</div><div class="ttdoc">The track uses the largest preferred child size.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:156</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition:</b> Label.h:80</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html_a970f2523988a3ebb114f0d8d0ef8308d"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html#a970f2523988a3ebb114f0d8d0ef8308d">Pt::Forms::Application::setStyleOptions</a></div><div class="ttdeci">void setStyleOptions(const StyleOptions &amp;options)</div><div class="ttdoc">Replaces the style options for all widgets.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1MenuItemBase_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuItemBase.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::MenuItemBase::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div><div class="ttdoc">Sets the item text.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Button_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::Button::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div><div class="ttdoc">Sets the caption to t and records its mnemonic.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Direction_html_a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="classPt_1_1Forms_1_1Direction.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Direction::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdoc">Left to right.</div><div class="ttdef"><b>Definition:</b> Direction.h:60</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_a0abc1448e972f339952d2ed3bf083690"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#a0abc1448e972f339952d2ed3bf083690">Pt::Forms::TableLayout2::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, std::size_t row, std::size_t column)</div><div class="ttdoc">Attaches control at row and column.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Slider_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Slider.html">Pt::Forms::Slider</a></div><div class="ttdoc">Value chosen along a range by dragging a handle on a track.</div><div class="ttdef"><b>Definition:</b> Slider.h:72</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBar_html_a2c596351da2905484476953eeeff1047"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBar.html#a2c596351da2905484476953eeeff1047">Pt::Forms::MenuBar::addItem</a></div><div class="ttdeci">void addItem(MenuBarItem &amp;item)</div><div class="ttdoc">Adds top-level entry item to this menu bar.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ab4b01f3da0a2276708526324bf66dbdba09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::TableLayout2::Fill</a></div><div class="ttdeci">@ Fill</div><div class="ttdoc">The track shares leftover space.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:152</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html">Pt::Forms::ProgressBar</a></div><div class="ttdoc">Control that shows a value within a range.</div><div class="ttdef"><b>Definition:</b> ProgressBar.h:70</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Button_html_ab5a6ad1af3b398dac329b35a860c6ae7"><div class="ttname"><a href="classPt_1_1Forms_1_1Button.html#ab5a6ad1af3b398dac329b35a860c6ae7">Pt::Forms::Button::clicked</a></div><div class="ttdeci">Signal &amp; clicked()</div><div class="ttdoc">Returns the signal emitted after a completed click.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_ac24598c93a713c95d97205c65dfccbfc"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#ac24598c93a713c95d97205c65dfccbfc">Pt::Forms::Label::setTextColor</a></div><div class="ttdeci">void setTextColor(const Gfx::Color &amp;color)</div><div class="ttdoc">Sets the widget-local text color to color.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1SpinBox_html_a693c16cecd031a84aaf28be0427cff88"><div class="ttname"><a href="classPt_1_1Forms_1_1SpinBox.html#a693c16cecd031a84aaf28be0427cff88">Pt::Forms::SpinBox::setRange</a></div><div class="ttdeci">void setRange(int min, int max)</div><div class="ttdoc">Sets the range to min through max and clamps the value.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Widget_html_ae618907c9d0f27ee1c0b1ae26e965f30"><div class="ttname"><a href="classPt_1_1Forms_1_1Widget.html#ae618907c9d0f27ee1c0b1ae26e965f30">Pt::Forms::Widget::show</a></div><div class="ttdeci">virtual void show(bool b=true)</div><div class="ttdoc">Requests that the widget be shown or hidden.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1CanvasLayout_html_ad8ccf7b7ce76f6c257905bb1c5ebf855"><div class="ttname"><a href="classPt_1_1Forms_1_1CanvasLayout.html#ad8ccf7b7ce76f6c257905bb1c5ebf855">Pt::Forms::CanvasLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, const LayoutParams &amp;params)</div><div class="ttdoc">Attaches control at the position and size in params.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Slider_html_a693c16cecd031a84aaf28be0427cff88"><div class="ttname"><a href="classPt_1_1Forms_1_1Slider.html#a693c16cecd031a84aaf28be0427cff88">Pt::Forms::Slider::setRange</a></div><div class="ttdeci">void setRange(int min, int max)</div><div class="ttdoc">Sets the range to min through max.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1LineEdit_html_afc5f5c07ff988e5c1c6a813a196d84bc"><div class="ttname"><a href="classPt_1_1Forms_1_1LineEdit.html#afc5f5c07ff988e5c1c6a813a196d84bc">Pt::Forms::LineEdit::setPlaceholderText</a></div><div class="ttdeci">void setPlaceholderText(const Pt::String &amp;s)</div><div class="ttdoc">Sets the placeholder shown while the field is empty to s.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Window_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html">Pt::Forms::Window</a></div><div class="ttdoc">Form presented by a window manager.</div><div class="ttdef"><b>Definition:</b> Window.h:99</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a6ce3b26c111a73fc0757dee808943f19"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html#a6ce3b26c111a73fc0757dee808943f19">Pt::Forms::ProgressBar::setValue</a></div><div class="ttdeci">void setValue(int n)</div><div class="ttdoc">Sets the value to n, clamped to the range, and emits valueChanged().</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1SpinBox_html_a6ce3b26c111a73fc0757dee808943f19"><div class="ttname"><a href="classPt_1_1Forms_1_1SpinBox.html#a6ce3b26c111a73fc0757dee808943f19">Pt::Forms::SpinBox::setValue</a></div><div class="ttdeci">void setValue(int n)</div><div class="ttdoc">Sets the value to n, clamped to the range, and emits valueEdited().</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1PushButton_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a></div><div class="ttdoc">Command button with optional toggle, icon, and caption.</div><div class="ttdef"><b>Definition:</b> PushButton.h:77</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a392f50a2ce6333f59929171fa21e3f61a05cdd4fa6b505ee008f4e865acfecccb"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a05cdd4fa6b505ee008f4e865acfecccb">Pt::Forms::DockingLayout::Bottom</a></div><div class="ttdeci">@ Bottom</div><div class="ttdoc">Docks to the bottom edge.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:95</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Painter_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Painter.html">Pt::Forms::Painter</a></div><div class="ttdoc">Draws on a Forms paint surface or paint context.</div><div class="ttdef"><b>Definition:</b> Painter.h:53</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1PaintContext_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PaintContext.html">Pt::Forms::PaintContext</a></div><div class="ttdoc">Active painting session on a Forms paint surface.</div><div class="ttdef"><b>Definition:</b> PaintContext.h:51</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1StackLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1StackLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::StackLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as a hidden stack page.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ad1d1cf7ebe8a2ab0e6aa6dda875010ec"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ad1d1cf7ebe8a2ab0e6aa6dda875010ec">Pt::Forms::TableLayout2::setRow</a></div><div class="ttdeci">void setRow(std::size_t row, SizeMode mode, double size=0)</div><div class="ttdoc">Sets row row to mode and optional fixed size.</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1Size_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Size.html">Pt::Gfx::Size</a></div><div class="ttdoc">Size with floating-point width and height.</div><div class="ttdef"><b>Definition:</b> Size.h:47</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Menu_html_a156bb196a80a4eadf4167d130826f088"><div class="ttname"><a href="classPt_1_1Forms_1_1Menu.html#a156bb196a80a4eadf4167d130826f088">Pt::Forms::Menu::addItem</a></div><div class="ttdeci">void addItem(MenuItem &amp;item)</div><div class="ttdoc">Adds command item to this menu.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html_ac4f6ea7a6165211c2a95f5b68767a64a"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html#ac4f6ea7a6165211c2a95f5b68767a64a">Pt::Forms::ListBoxItem::text</a></div><div class="ttdeci">const Pt::String &amp; text() const</div><div class="ttdoc">Returns the caption.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ComboBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ComboBox.html">Pt::Forms::ComboBox</a></div><div class="ttdoc">Provides a text entry field with a drop-down list.</div><div class="ttdef"><b>Definition:</b> ComboBox.h:83</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Alignment_html_a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389"><div class="ttname"><a href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389">Pt::Forms::Alignment::Center</a></div><div class="ttdeci">@ Center</div><div class="ttdoc">Center of the rectangle.</div><div class="ttdef"><b>Definition:</b> Alignment.h:85</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1GridLayout_html_a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600"><div class="ttname"><a href="classPt_1_1Forms_1_1GridLayout.html#a871118a09520247c78a71ecd7b0abd58a2434cd8c1a594a4cdaa250f86639c600">Pt::Forms::GridLayout::Vertical</a></div><div class="ttdeci">@ Vertical</div><div class="ttdoc">Fills columns, then wraps to the next row.</div><div class="ttdef"><b>Definition:</b> GridLayout.h:80</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a3d5ab28c5be995b1ee175b4573e51910"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a3d5ab28c5be995b1ee175b4573e51910">Pt::Forms::Label::setIcon</a></div><div class="ttdeci">void setIcon(const Icon &amp;icon, const Gfx::SizeF &amp;iconSize)</div><div class="ttdoc">Shows icon instead of the caption.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::ListBoxItem::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div><div class="ttdoc">Sets the caption to t.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a8702bf15d64240deb9b75903f38d9103"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html#a8702bf15d64240deb9b75903f38d9103">Pt::Forms::ProgressBar::value</a></div><div class="ttdeci">int value() const</div><div class="ttdoc">Returns the current value.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a510e1903e8b0f085c4766b5969b9b0f6"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a510e1903e8b0f085c4766b5969b9b0f6">Pt::Forms::DockingLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control, DockMode ds)</div><div class="ttdoc">Attaches control with dock mode ds.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_ab9eedccb53862a3577d79147b51946df"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html#ab9eedccb53862a3577d79147b51946df">Pt::Forms::ProgressBar::setRange</a></div><div class="ttdeci">void setRange(int minpos, int maxpos)</div><div class="ttdoc">Sets the range to minpos through maxpos.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Panel::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Attaches control as the content.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollView_html_a7c947ce71551301c2fe67494b871b696"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollView.html#a7c947ce71551301c2fe67494b871b696">Pt::Forms::ScrollView::setScrollBars</a></div><div class="ttdeci">void setScrollBars(bool hasScrollBars)</div><div class="ttdoc">Sets whether the view shows scroll bars.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1StyleOptions_html_a6e258ee689d77db09515e35fe67a7fcc"><div class="ttname"><a href="classPt_1_1Forms_1_1StyleOptions.html#a6e258ee689d77db09515e35fe67a7fcc">Pt::Forms::StyleOptions::defaults</a></div><div class="ttdeci">static StyleOptions defaults()</div><div class="ttdoc">Returns options filled with the built-in default values.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html_a1263d7c3457f6ef79ef539eb2bfe32bc"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBox.html#a1263d7c3457f6ef79ef539eb2bfe32bc">Pt::Forms::ListBox::addItem</a></div><div class="ttdeci">void addItem(ListBoxItem &amp;item)</div><div class="ttdoc">Adds caller-owned item to the list.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ComboBox_html_a6b090849697219553f58b45f49b15e73"><div class="ttname"><a href="classPt_1_1Forms_1_1ComboBox.html#a6b090849697219553f58b45f49b15e73">Pt::Forms::ComboBox::selected</a></div><div class="ttdeci">Pt::Signal&lt; ListBoxItem &amp; &gt; &amp; selected()</div><div class="ttdoc">Returns the signal emitted when a list item is chosen.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1LineEdit_html_aad94a817f75ca581179b605cfe741300"><div class="ttname"><a href="classPt_1_1Forms_1_1LineEdit.html#aad94a817f75ca581179b605cfe741300">Pt::Forms::LineEdit::editingFinished</a></div><div class="ttdeci">Pt::Signal&lt; const Pt::String &amp; &gt; &amp; editingFinished()</div><div class="ttdoc">Returns the signal emitted when focus loss completes an edit.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html_a871118a09520247c78a71ecd7b0abd58a7d5f78c516bedc0a066182a6fd606b8b"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html#a871118a09520247c78a71ecd7b0abd58a7d5f78c516bedc0a066182a6fd606b8b">Pt::Forms::ScrollBar::Horizontal</a></div><div class="ttdeci">@ Horizontal</div><div class="ttdoc">Track runs left to right.</div><div class="ttdef"><b>Definition:</b> ScrollBar.h:86</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html">Pt::Forms::Application</a></div><div class="ttdoc">Provides the runtime root of a Forms user interface.</div><div class="ttdef"><b>Definition:</b> Application.h:88</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TextColorOption_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TextColorOption.html">Pt::Forms::TextColorOption</a></div><div class="ttdoc">Text color option.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:335</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html_a6b090849697219553f58b45f49b15e73"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBox.html#a6b090849697219553f58b45f49b15e73">Pt::Forms::ListBox::selected</a></div><div class="ttdeci">Pt::Signal&lt; ListBoxItem &amp; &gt; &amp; selected()</div><div class="ttdoc">Returns the signal emitted when an item's selected state is set.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Slider_html_afef709ee1692228367f835c57115ab3f"><div class="ttname"><a href="classPt_1_1Forms_1_1Slider.html#afef709ee1692228367f835c57115ab3f">Pt::Forms::Slider::positionChanged</a></div><div class="ttdeci">Signal&lt; int &gt; &amp; positionChanged()</div><div class="ttdoc">Returns the signal emitted when the position changes.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1StackLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1StackLayout.html">Pt::Forms::StackLayout</a></div><div class="ttdoc">Shows one child at a time.</div><div class="ttdef"><b>Definition:</b> StackLayout.h:65</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Alignment_html_a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911a9d4d8b0b72fc2659da772d761a3c5ecb">Pt::Forms::Alignment::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdoc">Left edge, vertically centered.</div><div class="ttdef"><b>Definition:</b> Alignment.h:81</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBar.html">Pt::Forms::MenuBar</a></div><div class="ttdoc">Represents a horizontal bar of top-level menus.</div><div class="ttdef"><b>Definition:</b> MenuBar.h:78</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html">Pt::Forms::FlowLayout</a></div><div class="ttdoc">Arranges children in a single row or column.</div><div class="ttdef"><b>Definition:</b> FlowLayout.h:72</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Form_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="classPt_1_1Forms_1_1Form.html#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Form::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Replaces the content root with control.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollView_html_aeb86c020ae0ec5b9c7793adff871ddf0"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollView.html#aeb86c020ae0ec5b9c7793adff871ddf0">Pt::Forms::ScrollView::setContent</a></div><div class="ttdeci">void setContent(Control &amp;control)</div><div class="ttdoc">Sets the caller-owned content to control.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html">Pt::Forms::Panel</a></div><div class="ttdoc">Surface that groups one child behind an optional fill and frame.</div><div class="ttdef"><b>Definition:</b> Panel.h:80</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1SpinBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SpinBox.html">Pt::Forms::SpinBox</a></div><div class="ttdoc">Integer editor with a range and step controls.</div><div class="ttdef"><b>Definition:</b> SpinBox.h:154</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1CheckBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1CheckBox.html">Pt::Forms::CheckBox</a></div><div class="ttdoc">Button that presents a boolean choice.</div><div class="ttdef"><b>Definition:</b> CheckBox.h:70</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollBar.html">Pt::Forms::ScrollBar</a></div><div class="ttdoc">Position in a range shown by a handle on a track.</div><div class="ttdef"><b>Definition:</b> ScrollBar.h:76</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html">Pt::Forms::DockingLayout</a></div><div class="ttdoc">Docks children to edges and fills leftover space.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:69</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Icon_html_aa8547ba44211c1e25959012febd1daa6"><div class="ttname"><a href="classPt_1_1Forms_1_1Icon.html#aa8547ba44211c1e25959012febd1daa6">Pt::Forms::Icon::addImage</a></div><div class="ttdeci">void addImage(const Gfx::Image &amp;image)</div><div class="ttdoc">Registers image using its pixel size as the key.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1Path_html"><div class="ttname"><a href="classPt_1_1System_1_1Path.html">Pt::System::Path</a></div><div class="ttdoc">Represents a path in the file-system.</div><div class="ttdef"><b>Definition:</b> Path.h:48</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a></div><div class="ttdoc">Item in a list box.</div><div class="ttdef"><b>Definition:</b> ListBox.h:71</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1FlowLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1FlowLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::FlowLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as a flow item.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1SpinBox_html_a784ad57c98045e60731408c6502d31d8"><div class="ttname"><a href="classPt_1_1Forms_1_1SpinBox.html#a784ad57c98045e60731408c6502d31d8">Pt::Forms::SpinBox::valueEdited</a></div><div class="ttdeci">Pt::Signal&lt; int &gt; &amp; valueEdited()</div><div class="ttdoc">Returns the signal emitted when the value changes.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1StyleOptions_html"><div class="ttname"><a href="classPt_1_1Forms_1_1StyleOptions.html">Pt::Forms::StyleOptions</a></div><div class="ttdoc">Stores named appearance options.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:646</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Menu_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Menu.html">Pt::Forms::Menu</a></div><div class="ttdoc">Represents a popup menu containing commands and nested menus.</div><div class="ttdef"><b>Definition:</b> Menu.h:71</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Application_html_a294a0851013e6ca75047af8fa0f8d8ed"><div class="ttname"><a href="classPt_1_1Forms_1_1Application.html#a294a0851013e6ca75047af8fa0f8d8ed">Pt::Forms::Application::instance</a></div><div class="ttdeci">static Application &amp; instance()</div><div class="ttdoc">Returns the Forms application instance.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1SizePolicy_html"><div class="ttname"><a href="classPt_1_1Forms_1_1SizePolicy.html">Pt::Forms::SizePolicy</a></div><div class="ttdoc">Constraint used when measuring a control.</div><div class="ttdef"><b>Definition:</b> SizePolicy.h:48</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ComboBox_html_a1263d7c3457f6ef79ef539eb2bfe32bc"><div class="ttname"><a href="classPt_1_1Forms_1_1ComboBox.html#a1263d7c3457f6ef79ef539eb2bfe32bc">Pt::Forms::ComboBox::addItem</a></div><div class="ttdeci">void addItem(ListBoxItem &amp;item)</div><div class="ttdoc">Adds caller-owned item to the popup list.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html">Pt::Forms::TableLayout2</a></div><div class="ttdoc">Arranges children in row and column tracks.</div><div class="ttdef"><b>Definition:</b> TableLayout.h:142</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">Standard color type.</div><div class="ttdef"><b>Definition:</b> Color.h:47</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a392f50a2ce6333f59929171fa21e3f61a47321105d20c4efd6c573a6d829e1ad9"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a47321105d20c4efd6c573a6d829e1ad9">Pt::Forms::DockingLayout::Top</a></div><div class="ttdeci">@ Top</div><div class="ttdoc">Docks to the top edge.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:87</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_ae25e5c2d8699fd7c56e7c4547bad68a9"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#ae25e5c2d8699fd7c56e7c4547bad68a9">Pt::Forms::Label::setFontWeight</a></div><div class="ttdeci">void setFontWeight(Gfx::Font::Weight weight)</div><div class="ttdoc">Sets the widget-local font weight to weight.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBox.html">Pt::Forms::ListBox</a></div><div class="ttdoc">Scrollable list of items.</div><div class="ttdef"><b>Definition:</b> ListBox.h:428</div></div>
-<div class="ttc" id="aclassPt_1_1String_html"><div class="ttname"><a href="classPt_1_1String.html">Pt::String</a></div><div class="ttdoc">Unicode capable basic_string.</div><div class="ttdef"><b>Definition:</b> Api-String.h:63</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1AccentColorOption_html"><div class="ttname"><a href="classPt_1_1Forms_1_1AccentColorOption.html">Pt::Forms::AccentColorOption</a></div><div class="ttdoc">Accent color option.</div><div class="ttdef"><b>Definition:</b> StyleOptions.h:188</div></div>
-<div class="ttc" id="aclassPt_1_1Gfx_1_1Brush_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a></div><div class="ttdoc">Fill description for shapes and text.</div><div class="ttdef"><b>Definition:</b> Brush.h:145</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a759a5fbd6e124e55f9a2596dc5f83393"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html#a759a5fbd6e124e55f9a2596dc5f83393">Pt::Forms::Panel::setBackground</a></div><div class="ttdeci">void setBackground(const Gfx::Brush &amp;b)</div><div class="ttdoc">Sets the widget-local background brush to b and enables the fill.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Window_html_abc79cf0667bbb5c93fca3f01b52c7b57"><div class="ttname"><a href="classPt_1_1Forms_1_1Window.html#abc79cf0667bbb5c93fca3f01b52c7b57">Pt::Forms::Window::setTitle</a></div><div class="ttdeci">void setTitle(const std::string &amp;title)</div><div class="ttdoc">Sets the window title to title.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1MenuBarItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuBarItem.html">Pt::Forms::MenuBarItem</a></div><div class="ttdoc">Represents a top-level entry in a menu bar.</div><div class="ttdef"><b>Definition:</b> MenuBarItem.h:54</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1CheckBox_html_ac8cada18b9357ff68b26e17f44294764"><div class="ttname"><a href="classPt_1_1Forms_1_1CheckBox.html#ac8cada18b9357ff68b26e17f44294764">Pt::Forms::CheckBox::isChecked</a></div><div class="ttdeci">bool isChecked() const</div><div class="ttdoc">Returns true if the choice is Checked.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ScrollLayout_html_a6a9728e9e1e980411fdf96fff45b94c3"><div class="ttname"><a href="classPt_1_1Forms_1_1ScrollLayout.html#a6a9728e9e1e980411fdf96fff45b94c3">Pt::Forms::ScrollLayout::addItem</a></div><div class="ttdeci">void addItem(Control &amp;control)</div><div class="ttdoc">Attaches control as scrollable content.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TableLayout2_html_ac6576e5f0222afd743840eaffd5c84cc"><div class="ttname"><a href="classPt_1_1Forms_1_1TableLayout2.html#ac6576e5f0222afd743840eaffd5c84cc">Pt::Forms::TableLayout2::setColumn</a></div><div class="ttdeci">void setColumn(std::size_t col, SizeMode mode, double size=0)</div><div class="ttdoc">Sets column col to mode and optional fixed size.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a327cb29689a0b041e25cce65bc58693e"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a327cb29689a0b041e25cce65bc58693e">Pt::Forms::Label::setAlignment</a></div><div class="ttdeci">void setAlignment(Alignment a)</div><div class="ttdoc">Sets the alignment of the caption or icon to a.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1MenuItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1MenuItem.html">Pt::Forms::MenuItem</a></div><div class="ttdoc">Represents a command that can be chosen from a menu.</div><div class="ttdef"><b>Definition:</b> MenuItem.h:50</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1LineEdit_html"><div class="ttname"><a href="classPt_1_1Forms_1_1LineEdit.html">Pt::Forms::LineEdit</a></div><div class="ttdoc">Single-line text field.</div><div class="ttdef"><b>Definition:</b> LineEdit.h:81</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1TabView_html"><div class="ttname"><a href="classPt_1_1Forms_1_1TabView.html">Pt::Forms::TabView</a></div><div class="ttdoc">Pages selected by tabs.</div><div class="ttdef"><b>Definition:</b> TabView.h:155</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1DockingLayout_html_a392f50a2ce6333f59929171fa21e3f61a09da1e90dad0e3ab24a83e66bac15da6"><div class="ttname"><a href="classPt_1_1Forms_1_1DockingLayout.html#a392f50a2ce6333f59929171fa21e3f61a09da1e90dad0e3ab24a83e66bac15da6">Pt::Forms::DockingLayout::Fill</a></div><div class="ttdeci">@ Fill</div><div class="ttdoc">Fills leftover space after edge docks.</div><div class="ttdef"><b>Definition:</b> DockingLayout.h:99</div></div>
 
 <div class="clear">&nbsp;</div>
 <div id="footer">

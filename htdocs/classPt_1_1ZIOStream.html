@@ -84,14 +84,14 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ZIOStream Class Reference</div>  </div>
+<div class="title">ZIOStream Class Reference<div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a> &raquo; <a class="el" href="group__Pt-ZStreams.html">Zlib Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ZStream_8h_source.html">Pt/ZStream.h</a>&gt;</code></p>
 
-<p>I/O stream for zlib compression.  
-</p>
+<p>Bidirectional stream for zlib or gzip.  
+ <a href="classPt_1_1ZIOStream.html#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1BasicIOStream.html">BasicIOStream&lt; char &gt;</a>.</p>
 <table class="memberdecls">
@@ -160,7 +160,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aec28ff80bde4f62110820a952c72db45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the buffer. <br /></td></tr>
 <tr class="separator:aec28ff80bde4f62110820a952c72db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ZIOStream owns a ZBuffer and reads and writes uncompressed bytes on a compressed <code>std::iostream</code>. attach(), detach(), reset() and finish() forward to the buffer. zcount() is inflate output so far. The target is not owned. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac06710e909bf4323e3b3c5dda9d3dec4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac06710e909bf4323e3b3c5dda9d3dec4">&#9670;&nbsp;</a></span>peeksome()</h2>
 

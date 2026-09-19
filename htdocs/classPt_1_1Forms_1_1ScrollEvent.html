@@ -83,9 +83,10 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ScrollEvent Class Reference<div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Input.html">Pointer and Keyboard Input</a></div></div>  </div>
+<div class="title">ScrollEvent Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__Pt-Forms.html">Graphical User Interfaces</a> &raquo; <a class="el" href="group__Pt-Forms-Input.html">Pointer and Keyboard Input</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -94,7 +95,7 @@
 <p>Scroll or wheel movement.  
  <a href="classPt_1_1Forms_1_1ScrollEvent.html#details">More...</a></p>
 
-<p>Inherits BasicEvent&lt; T &gt;.</p>
+<p>Inherits <a class="el" href="classPt_1_1BasicEvent.html">BasicEvent&lt; ScrollEvent &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -161,6 +162,13 @@ template&lt;typename EventT &gt; </td></tr>
 <tr class="memitem:a80e25740f4e681300159e8e3fd61d564"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPt_1_1Event.html#a80e25740f4e681300159e8e3fd61d564">destruct</a> (EventT &amp;ev, <a class="el" href="classPt_1_1Allocator.html">Allocator</a> &amp;allocator)</td></tr>
 <tr class="memdesc:a80e25740f4e681300159e8e3fd61d564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructs an event using an allocator. <br /></td></tr>
 <tr class="separator:a80e25740f4e681300159e8e3fd61d564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa5cbc27166a3e96dcfc56254a0ce681a"><td class="memItemLeft" align="right" valign="top"><a id="aa5cbc27166a3e96dcfc56254a0ce681a"></a>
+virtual const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPt_1_1Event.html#aa5cbc27166a3e96dcfc56254a0ce681a">onTypeInfo</a> () const =0</td></tr>
+<tr class="memdesc:aa5cbc27166a3e96dcfc56254a0ce681a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type info for this class of events. <br /></td></tr>
+<tr class="separator:aa5cbc27166a3e96dcfc56254a0ce681a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The event identifies the scroll axis. The widget pointer and widget ID identify the target. </p>
