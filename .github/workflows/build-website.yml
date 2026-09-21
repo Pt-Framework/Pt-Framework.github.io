@@ -22,13 +22,14 @@ jobs:
           repository: Pt-Framework/Pt
           path: pt-source
 
-      - name: Install Doxygen 1.8.20 (Windows)
+      - name: Install Doxygen 1.18.0 (Windows)
         shell: pwsh
         run: |
-          $url = "https://sourceforge.net/projects/doxygen/files/rel-1.8.20/doxygen-1.8.20.windows.x64.bin.zip/download"
-          Invoke-WebRequest -Uri $url -OutFile "doxygen.zip" -UserAgent "NativeHost"
+          $url = "https://github.com/doxygen/doxygen/releases/download/Release_1_18_0/doxygen-1.18.0.windows.x64.bin.zip"
+          Invoke-WebRequest -Uri $url -OutFile "doxygen.zip"
           Expand-Archive -Path "doxygen.zip" -DestinationPath "doxygen-bin"
           echo "$pwd\doxygen-bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+          & "$pwd\doxygen-bin\doxygen.exe" -v
 
       - name: Build Website
         shell: pwsh
