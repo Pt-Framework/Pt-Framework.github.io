@@ -1,389 +1,270 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!-- HTML header for doxygen 1.18.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <title>Online Reference Documentation</title>
-    <meta content="Pt Reference Manual" name="description">
-    <meta content="The Pt Development Team" name="author">
-    <link rel="stylesheet" href="htdocs/doxygen.css" type="text/css">
-
-    <style type="text/css">
-        .docs-header {
-        	text-align: left;
-            padding: 5px 25px 5px 25px;
-            color: #000000;
-            font-size:  15px;
-            border-color: #CCCCCC;
-            border-style: solid;
-            border-width: 0 0 3px;
-        }
-
-        .docs-body ul {
-            padding: 5px 25px 5px 25px;
-            list-style-type: none;
-        }
-
-        .docs-body a {
-            text-decoration: none;
-        }
-
-        .docs-module {
-            width: 33.333%;
-            padding: 0;
-        }
-
-        .docs-module .infobox-header {
-            text-align: left;
-            padding: 5px 25px 5px 25px;
-            color: #000000;
-            font-size: 15px;
-            border-bottom: 3px solid #CCCCCC;
-        }
-
-        .docs-module .infobox-body {
-            font-size: inherit;
-            padding: 0;
-        }
-    </style>
-
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Platinum (Pt) C++ Framework"/>
+<meta name="author" content="The Pt Development Team"/>
+<title>Platinum: Documentation</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="site.css" rel="stylesheet" type="text/css"/>
 </head>
-
-<body style="margin:0px;">
-
-<div id="container">
-
-    <div id="header">
-
-        <table id="logo">
-            <tr>
-                <td>
-                    <a href="index.html"><img src="htdocs/platinum-logo.gif" border="0"/></a>
-                </td>
-                <td>
-                    <h3>The Power in your Hands</h3>
-                </td>
-            </tr>
-        </table>
-
-        <div class="search">
-            <form action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-              <p style="margin: 0; padding-top:2px; padding-bottom:2px;"><b>Search Site:</b></p>
-              <p style="margin: 0; padding:0;">
-                <input type="hidden" name="si" value="43943317">
-                <input type="hidden" name="pid" value="r">
-                <input type="hidden" name="n" value="0">
-                <input type="hidden" name="_charset_" value="">
-                <input type="hidden" name="bcd" value="&#247;">
-                <input style="background-color: #FFFFFF;
-                              border: 1px solid #ffffff;
-                              font-size: 12px;
-                              width: 160px"
-                       type="text" name="query" value="Search...">
-              </p>
-
-            </form>
-        </div>
-
-          <div class="header-menu">
-
-		<div class="header-menu-entry">
-            <a id="header-menu-link" href="index.html">About</a> </div>
-
-		<div class="header-menu-entry-sep"></div>
-
-		<div class="header-menu-entry">
-            <a id="header-menu-link" href="features-modules.html">Features</a> </div>
-
-		<div class="header-menu-entry-sep"></div>
-
-		<div class="header-menu-entry">
-            <a id="header-menu-link" href="docs.html">Documentation</a> </div>
-
-		<div class="header-menu-entry-sep"></div>
-
-		<div class="header-menu-entry">
-            <a id="header-menu-link" href="downloads.html">Download</a> </div>
-
-		<div class="header-menu-entry-sep"></div>
-
-		<div class="header-menu-entry">
-            <a id="header-menu-link" href="community.html">Community</a> </div>
-	</div>
-
+<body>
+<input type="checkbox" id="pt-toc-toggle" class="pt-toc-toggle" autocomplete="off" tabindex="-1"/>
+<div class="pt-dim"><label for="pt-toc-toggle">Close menu</label></div>
+<nav class="pt-toc" id="pt-toc" aria-label="Site menu">
+  <div class="pt-toc-inner">
+    <div class="pt-toc-heading">Start</div>
+    <a href="downloads.html">Download</a>
+    <a href="docs.html#getting-started">Getting Started</a>
+    <a href="license.html">License</a>
+    <div class="pt-toc-heading">References</div>
+    <a href="docs.html#jam">Jam Build Tool</a>
+    <a href="classes.html">Class Index</a>
+    <a href="namespaces.html">Namespaces</a>
+    <a href="topics.html">Modules</a>
+  </div>
+</nav>
+<header class="pt-header">
+  <nav class="pt-bar" aria-label="Site">
+    <a class="pt-nav pt-nav-home" href="index.html" title="Home">Pt</a>
+    <span class="pt-crumb pt-crumb-docs">
+      <span class="pt-crumb-sep" aria-hidden="true">›</span>
+      <a class="pt-nav pt-nav-docs" href="docs.html" title="Documentation">Documentation</a>
+      <span class="pt-nav pt-nav-docs-here" aria-current="page">Documentation</span>
+    </span>
+    <span class="pt-crumb pt-crumb-download">
+      <span class="pt-crumb-sep" aria-hidden="true">›</span>
+      <span class="pt-nav pt-nav-download-here" aria-current="page">Get Platinum</span>
+    </span>
+    <span class="pt-bar-end">
+      <label class="pt-nav pt-nav-toc" for="pt-toc-toggle" title="Menu">&#8801;</label>
+    </span>
+  </nav>
+</header>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div class="pt-subhead">
+  <nav class="pt-api-links" aria-label="API">
+    <a href="classes.html">Class Index</a>
+    <a href="namespaces.html">Namespaces</a>
+    <a href="topics.html">Modules</a>
+  </nav>
 </div>
-
-<div class="header-submenu" style="padding-left: 146px;">
-    <div class="header-submenu-term"><img src="htdocs/sub_left.png" width="4" height="20" /></div>
-
-	<div class="header-submenu-entry-sep"></div>
-
-    <div class="header-submenu-entry">
-        <a id="header-submenu-link" href="docs.html">Main</a></div>
-
-	<div class="header-submenu-entry-sep"></div>
-
-    <div class="header-submenu-entry">
-        <a id="header-submenu-link" href="htdocs/classes.html">Class Index</a></div>
-
-	<div class="header-submenu-entry-sep"></div>
-
-    <div class="header-submenu-entry">
-        <a id="header-submenu-link" href="htdocs/namespaces.html">Namespaces</a></div>
-
-	<div class="header-submenu-entry-sep"></div>
-
-    <div class="header-submenu-entry">
-        <a id="header-submenu-link" href="htdocs/modules.html">Modules</a></div>
-
-	<div class="header-submenu-entry-sep"></div>
-
-    <div class="header-submenu-term"><img src="htdocs/sub_right.png" width="4" height="20" /></div>
-</div>
-
+<!-- end header part -->
+<!-- Generated by Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Documentation </div></div>
+</div><!--header-->
 <div class="contents">
+<div class="textblock"><p> 
+</p>
+<div class="pt-page-marker pt-page-docs">Documentation</div>
 
-    <div class="headertitle">
-        <div class="title">Online Reference Documentation</div>
-    </div>
+<h1 class="pt-page-title">Documentation</h1>
 
-    <table cellpadding="2" cellspacing="0" border="0" width="100%">
-        <tr>
-            <th class="docs-header">Genral Information</th>
-            <th class="docs-header">Getting Started</th>
-            <th class="docs-header">Jam Build Tool</th>
-        </tr>
-        <tr>
-            <td valign="top" class="docs-body">
-                <ul>
-                    <!--<li><a href="about.html">Goals and Approach</a></li>-->
-                    <li><a href="features-platforms.html" >Supported Platforms</a></li>
-                    <li><a href="features-license.html">License</a></li>
-                    <li><a href="https://lists.sourceforge.net/lists/listinfo/pt-framework-general">Mailing List</a></li>
-                    <li><a href="htdocs/faq.html">Frequently Asked Questions</a></li>
-                </ul>
-            </td>
-            <td valign="top" class="docs-body">
-                <ul>
-                    <li><a href="htdocs/requirements.html">Requirements</a></li>
-                    <li><a href="htdocs/installing.html">Installing from Source</a></li>
-                    <li><a href="htdocs/tutorial.html">Tutorial <i style="font-size: 10px;">(In Progress)</i></a></li>
-                    <!--<li><a>Example Programs <i style="font-size: 10px;">(Coming Soon)</i></a></li>-->
-                    <!--<li><a href="htdocs/reading.html">Contributing</a></li>-->
-                    <li><a href="htdocs/reading.html">Recommended Reading</a></li>
-                </ul>
-            </td>
-            <td valign="top" class="docs-body">
-                <ul>
-                    <li><a href="htdocs/jam-intro.html">Introduction</a></li>
-                    <li><a href="htdocs/jam-getting.html">Getting Jam</a></li>
-                    <li><a href="htdocs/jam-usage.html">Basic Usage</a></li>
-                    <li><a href="htdocs/jam-language.html">Language Features</a></li>
-                    <li><a href="htdocs/jam-jamfile.html">Using the Jambase</a></li>
-                    <li><a href="htdocs/jam-jambase.html">Jambase Reference</a></li>
-                    <li><a href="htdocs/jam-prebuilt-page.html">Prebuilt Dependencies</a></li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <th class="docs-header">Tools</th>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td valign="top" class="docs-body">
-                <ul>
-                    <li><a href="https://github.com/lezsakdomi/perforce-jam">Perforce Jam</a></li>
-                    <li><a href="http://www.doxygen.org">Doxygen</a></li>
-                    <li><a href="https://git-scm.com/">Git</a></li>
-                    <li><a href="http://gcc.gnu.org/">GNU Toolset</a></li>
-                    <li><a href="http://www.mingw.org/">GNU for Win32</a></li>
-                </ul>
-            </td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td colspan="3" valign="top" class="docs-body">
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Core-Page.html">Pt</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Arg">Command Line Arguments</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Settings">Application Settings</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Event">Events</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Any">Type-Erased Values</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-IntTypes">Fixed-Size Integers</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Byteorder">Byte Order</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Atomics">Atomic Operations</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Streams">Streams</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-ZStreams">Zlib Streams</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-DateTime">Dates and Times</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Coroutines">Coroutines</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Allocator">Allocators</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Text">Text Processing</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Signals">Signals and Delegates</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-TypeTraits">Type Traits and Information</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Convert">Conversions</a></li>
-                            <li><a href="htdocs/Pt-Core-Page.html#Pt-Core-Page-Serialization">Serialization</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-System-Page.html">Pt-System</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-FileSystem">File System Access</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Concurrency">Concurrency</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-EventLoop">Event Loops</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-IO">I/O</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Logging">Logging</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Library">Shared Libraries</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Plugins">Plugins</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Tar">Tar Archive I/O</a></li>
-                            <li><a href="htdocs/Pt-System-Page.html#Pt-System-Page-Clock">System Clock</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Net-Page.html">Pt-Net</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Net-Page.html#Pt-Net-Page-Endpoint">Endpoints</a></li>
-                            <li><a href="htdocs/Pt-Net-Page.html#Pt-Net-Page-Tcp">TCP Sockets</a></li>
-                            <li><a href="htdocs/Pt-Net-Page.html#Pt-Net-Page-Udp">UDP Sockets</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="clear">&nbsp;</div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Gfx-Page.html">Pt-Gfx</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Gfx-Page.html#Pt-Gfx-Page-Images">Images and Image Views</a></li>
-                            <li><a href="htdocs/Pt-Gfx-Page.html#Pt-Gfx-Page-Drawing">Drawing Graphics and Text</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Forms-Page.html">Pt-Forms</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Application">Application</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Widgets">Widgets and Views</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Windows">Windows and Workspaces</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Updating">Layouting and Painting</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Input">Pointer and Keyboard Input</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Layouts">Layouts</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Buttons">Buttons</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Displays">Displays</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Editors">Editors and Selectors</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Collections">Collections</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Menus">Menus</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Icons">Icons and Text</a></li>
-                            <li><a href="htdocs/Pt-Forms-Page.html#Pt-Forms-Page-Styling">Styles and Renderers</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Http-Page.html">Pt-Http</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Http-Page.html#Pt-Http-Page-Messages">HTTP Messages</a></li>
-                            <li><a href="htdocs/Pt-Http-Page.html#Pt-Http-Page-Clients">HTTP Clients</a></li>
-                            <li><a href="htdocs/Pt-Http-Page.html#Pt-Http-Page-Servers">HTTP Servers</a></li>
-                            <li><a href="htdocs/Pt-Http-Page.html#Pt-Http-Page-WebSocket">WebSocket</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="clear">&nbsp;</div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Ssl-Page.html">Pt-Ssl</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Ssl-Page.html#Pt-Ssl-Page-Certificates">Certificates</a></li>
-                            <li><a href="htdocs/Pt-Ssl-Page.html#Pt-Ssl-Page-Context">SSL Context</a></li>
-                            <li><a href="htdocs/Pt-Ssl-Page.html#Pt-Ssl-Page-Streams">Secure Streams</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header">Pt-XmlRpc</div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/xmlrpc.html">XML-RPC Communication</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Unit-Page.html">Pt-Unit</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Unit-Page.html">Unit Testing</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="clear">&nbsp;</div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Db-Page.html">Pt-Db</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Connections">Connections</a></li>
-                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Statements">Statements</a></li>
-                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Results">Results</a></li>
-                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Cursors">Cursors</a></li>
-                            <li><a href="htdocs/Pt-Db-Page.html#Pt-Db-Page-Transactions">Transactions</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Lua-Page.html">Pt-Lua</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Lua-Page.html#Pt-Lua-Page-Runtime">Runtime and Bindings</a></li>
-                            <li><a href="htdocs/Pt-Lua-Page.html#Pt-Lua-Page-Scripts">Scripts</a></li>
-                            <li><a href="htdocs/Pt-Lua-Page.html#Pt-Lua-Page-Calls">Native Calls</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="infobox docs-module" style="float:left">
-                    <div class="infobox-header"><a href="htdocs/Pt-Mcp-Page.html">Pt-Mcp</a></div>
-                    <div class="infobox-body">
-                        <ul>
-                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Types">Parameter Schemas</a></li>
-                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Tools">Tools and Server Declaration</a></li>
-                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Content">Result Content</a></li>
-                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Http">HTTP Transport</a></li>
-                            <li><a href="htdocs/Pt-Mcp-Page.html#Pt-Mcp-Page-Stdio">Standard I/O Transport</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="clear">&nbsp;</div>
-            </td>
-        </tr>
-    </table>
-
+<div class="pt-portals">
+  <div class="pt-portal" id="getting-started">
+    <h2>Getting Started</h2>
+    <ul>
+      <li><a href="installing.html">Installing from Source</a></li>
+      <li><a href="platforms.html">Supported Platforms</a></li>
+      <li><a href="license.html">License</a></li>
+      <li><a href="https://github.com/Pt-Framework/Pt/blob/main/README.md">README</a></li>
+      <li><a href="https://github.com/Pt-Framework/Pt/blob/main/CONTRIBUTING.md">Contributing</a></li>
+      <li><a href="https://github.com/Pt-Framework/Pt/blob/main/SECURITY.md">Security</a></li>
+    </ul>
+  </div>
+  <div class="pt-portal" id="reference">
+    <h2>Reference</h2>
+    <ul>
+      <li><a href="classes.html">Class Index</a></li>
+      <li><a href="namespaces.html">Namespaces</a></li>
+      <li><a href="topics.html">Modules</a></li>
+    </ul>
+  </div>
+  <div class="pt-portal" id="jam">
+    <h2>Jam Build Tool</h2>
+    <ul>
+      <li><a href="jam-intro.html">Introduction</a></li>
+      <li><a href="jam-getting.html">Getting Jam</a></li>
+      <li><a href="jam-usage.html">Basic Usage</a></li>
+      <li><a href="jam-jamfile.html">Using the Jambase</a></li>
+      <li><a href="jam-prebuilt-page.html">Prebuilt Dependencies</a></li>
+    </ul>
+  </div>
 </div>
 
-<div class="clear">&nbsp;</div>
+<h2 class="pt-kicker">Modules</h2>
 
-<div id="footer">
-    <div style="float:left;">Copyright &copy; 2003-2026 The Pt Development Team</div>
+<div class="pt-portals">
+  <div class="pt-portal">
+    <h3><a href="Pt-Core-Page.html">Core</a></h3>
+    <ul>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Arg">Command Line Arguments</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Settings">Application Settings</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Event">Events</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Any">Type-Erased Values</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-IntTypes">Fixed-Size Integers</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Byteorder">Byte Order</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Atomics">Atomic Operations</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Streams">Streams</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-ZStreams">Zlib Streams</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-DateTime">Dates and Times</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Coroutines">Coroutines</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Allocator">Allocators</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Text">Text Processing</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Signals">Signals and Delegates</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-TypeTraits">Type Traits and Information</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Convert">Conversions</a></li>
+      <li><a href="Pt-Core-Page.html#Pt-Core-Page-Serialization">Serialization</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-System-Page.html">System</a></h3>
+    <ul>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-FileSystem">File System Access</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-Concurrency">Concurrency</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-EventLoop">Event Loops</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-IO">I/O</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-Logging">Logging</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-Library">Shared Libraries</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-Plugins">Plugins</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-Tar">Tar Archive I/O</a></li>
+      <li><a href="Pt-System-Page.html#Pt-System-Page-Clock">System Clock</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Net-Page.html">Net</a></h3>
+    <ul>
+      <li><a href="Pt-Net-Page.html#Pt-Net-Page-Endpoint">Endpoints</a></li>
+      <li><a href="Pt-Net-Page.html#Pt-Net-Page-Tcp">TCP Sockets</a></li>
+      <li><a href="Pt-Net-Page.html#Pt-Net-Page-Udp">UDP Sockets</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Http-Page.html">HTTP</a></h3>
+    <ul>
+      <li><a href="Pt-Http-Page.html#Pt-Http-Page-Messages">HTTP Messages</a></li>
+      <li><a href="Pt-Http-Page.html#Pt-Http-Page-Clients">HTTP Clients</a></li>
+      <li><a href="Pt-Http-Page.html#Pt-Http-Page-Servers">HTTP Servers</a></li>
+      <li><a href="Pt-Http-Page.html#Pt-Http-Page-WebSocket">WebSocket</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Ssl-Page.html">SSL</a></h3>
+    <ul>
+      <li><a href="Pt-Ssl-Page.html#Pt-Ssl-Page-Certificates">Certificates</a></li>
+      <li><a href="Pt-Ssl-Page.html#Pt-Ssl-Page-Context">SSL Context</a></li>
+      <li><a href="Pt-Ssl-Page.html#Pt-Ssl-Page-Streams">Secure Streams</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Gfx-Page.html">Gfx</a></h3>
+    <ul>
+      <li><a href="Pt-Gfx-Page.html#Pt-Gfx-Page-Images">Images and Image Views</a></li>
+      <li><a href="Pt-Gfx-Page.html#Pt-Gfx-Page-Drawing">Drawing Graphics and Text</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Forms-Page.html">Forms</a></h3>
+    <ul>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Application">Application</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Widgets">Widgets and Views</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Windows">Windows and Workspaces</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Updating">Layouting and Painting</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Input">Pointer and Keyboard Input</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Layouts">Layouts</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Buttons">Buttons</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Displays">Displays</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Editors">Editors and Selectors</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Collections">Collections</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Menus">Menus</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Icons">Icons and Text</a></li>
+      <li><a href="Pt-Forms-Page.html#Pt-Forms-Page-Styling">Styles and Renderers</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="xmlrpc.html">XmlRpc</a></h3>
+    <ul>
+      <li><a href="xmlrpc.html">XML-RPC Communication</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Unit-Page.html">Unit</a></h3>
+    <ul>
+      <li><a href="Pt-Unit-Page.html">Unit Testing</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Db-Page.html">Database</a></h3>
+    <ul>
+      <li><a href="Pt-Db-Page.html#Pt-Db-Page-Connections">Connections</a></li>
+      <li><a href="Pt-Db-Page.html#Pt-Db-Page-Statements">Statements</a></li>
+      <li><a href="Pt-Db-Page.html#Pt-Db-Page-Results">Results</a></li>
+      <li><a href="Pt-Db-Page.html#Pt-Db-Page-Cursors">Cursors</a></li>
+      <li><a href="Pt-Db-Page.html#Pt-Db-Page-Transactions">Transactions</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Lua-Page.html">Lua</a></h3>
+    <ul>
+      <li><a href="Pt-Lua-Page.html#Pt-Lua-Page-Runtime">Runtime and Bindings</a></li>
+      <li><a href="Pt-Lua-Page.html#Pt-Lua-Page-Scripts">Scripts</a></li>
+      <li><a href="Pt-Lua-Page.html#Pt-Lua-Page-Calls">Native Calls</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="Pt-Mcp-Page.html">MCP</a></h3>
+    <ul>
+      <li><a href="Pt-Mcp-Page.html#Pt-Mcp-Page-Types">Parameter Schemas</a></li>
+      <li><a href="Pt-Mcp-Page.html#Pt-Mcp-Page-Tools">Tools and Server Declaration</a></li>
+      <li><a href="Pt-Mcp-Page.html#Pt-Mcp-Page-Content">Result Content</a></li>
+      <li><a href="Pt-Mcp-Page.html#Pt-Mcp-Page-Http">HTTP Transport</a></li>
+      <li><a href="Pt-Mcp-Page.html#Pt-Mcp-Page-Stdio">Standard I/O Transport</a></li>
+    </ul>
+  </div>
+
+  <div class="pt-portal">
+    <h3>Reflex</h3>
+  </div>
+
+  <div class="pt-portal">
+    <h3><a href="namespacePt_1_1Cosmo.html">Cosmo</a></h3>
+  </div>
 </div>
-
+ </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.18.0-->
+<!-- start footer part -->
+<div class="pt-footer">
+  <span>Copyright &copy; 2003-2026 The Pt Development Team</span>
+  <a href="license.html">License</a>
+  <a href="https://github.com/Pt-Framework/Pt">GitHub</a>
 </div>
-
+</div><!-- doc-content -->
 </body>
 </html>
