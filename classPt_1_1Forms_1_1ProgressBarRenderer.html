@@ -79,23 +79,52 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="ProgressBarStyler_8h_source.html">Pt/Forms/ProgressBarStyler.h</a>&gt;</code></p>
 
+<p>Renders the look of a progress bar.  
+ <a href="#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae42c6e6ba7f0ce759f4f7b86e410dc42" id="r_ae42c6e6ba7f0ce759f4f7b86e410dc42"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> (std::size_t refs=0)</td></tr>
-<tr class="memitem:aac37a528b461ed79c73a95aa87b77e72" id="r_aac37a528b461ed79c73a95aa87b77e72"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aac37a528b461ed79c73a95aa87b77e72">~ProgressBarRenderer</a> ()</td></tr>
-<tr class="memitem:a003d5e77e5d7df9b99302eddc2522ac4" id="r_a003d5e77e5d7df9b99302eddc2522ac4"><td class="memItemLeft"><a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a003d5e77e5d7df9b99302eddc2522ac4">create</a> () const</td></tr>
-<tr class="memitem:a2937d7b5508889f628308d933ab5473e" id="r_a2937d7b5508889f628308d933ab5473e"><td class="memItemLeft">Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a2937d7b5508889f628308d933ab5473e">measureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize)</td></tr>
-<tr class="memitem:aadabe29a770c88b2d79334f5a5fb1360" id="r_aadabe29a770c88b2d79334f5a5fb1360"><td class="memItemLeft">Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#aadabe29a770c88b2d79334f5a5fb1360">measureBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
-<tr class="memitem:ad6c8efca054f3f220cc908baada33751" id="r_ad6c8efca054f3f220cc908baada33751"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad6c8efca054f3f220cc908baada33751">layoutChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect)</td></tr>
-<tr class="memitem:a419f2cf0e2a6e560e62b96810e4eeb62" id="r_a419f2cf0e2a6e560e62b96810e4eeb62"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a419f2cf0e2a6e560e62b96810e4eeb62">layoutBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect)</td></tr>
-<tr class="memitem:a9e2626742335e12c7bea47b16f75df70" id="r_a9e2626742335e12c7bea47b16f75df70"><td class="memItemLeft">const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9e2626742335e12c7bea47b16f75df70">textPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
-<tr class="memitem:a9862c9ec55eb7c64e40bfd58573cbf9e" id="r_a9862c9ec55eb7c64e40bfd58573cbf9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9862c9ec55eb7c64e40bfd58573cbf9e">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
-<tr class="memitem:ac199f2f01e127a4d6017d627570bbe50" id="r_ac199f2f01e127a4d6017d627570bbe50"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac199f2f01e127a4d6017d627570bbe50">renderBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
-<tr class="memitem:a4f585eb711da05455c237efc4ff36863" id="r_a4f585eb711da05455c237efc4ff36863"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4f585eb711da05455c237efc4ff36863">renderTrack</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
-<tr class="memitem:a10ae625148f94eebd50502d8942ec231" id="r_a10ae625148f94eebd50502d8942ec231"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a10ae625148f94eebd50502d8942ec231">renderChunk</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
-<tr class="memitem:a22f40467fbe89f8b314f1d14028969a0" id="r_a22f40467fbe89f8b314f1d14028969a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a22f40467fbe89f8b314f1d14028969a0">renderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memitem:ae42c6e6ba7f0ce759f4f7b86e410dc42" id="r_ae42c6e6ba7f0ce759f4f7b86e410dc42"><td class="memItemLeft"><a id="ae42c6e6ba7f0ce759f4f7b86e410dc42" name="ae42c6e6ba7f0ce759f4f7b86e410dc42"></a>
+&#160;</td><td class="memItemRight"><b>ProgressBarRenderer</b> (std::size_t refs=0)</td></tr>
+<tr class="memdesc:ae42c6e6ba7f0ce759f4f7b86e410dc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a renderer with reference count <em class="arg">refs</em>. <br /></td></tr>
+<tr class="memitem:aac37a528b461ed79c73a95aa87b77e72" id="r_aac37a528b461ed79c73a95aa87b77e72"><td class="memItemLeft"><a id="aac37a528b461ed79c73a95aa87b77e72" name="aac37a528b461ed79c73a95aa87b77e72"></a>
+virtual&#160;</td><td class="memItemRight"><b>~ProgressBarRenderer</b> ()</td></tr>
+<tr class="memdesc:aac37a528b461ed79c73a95aa87b77e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the renderer. <br /></td></tr>
+<tr class="memitem:a003d5e77e5d7df9b99302eddc2522ac4" id="r_a003d5e77e5d7df9b99302eddc2522ac4"><td class="memItemLeft"><a id="a003d5e77e5d7df9b99302eddc2522ac4" name="a003d5e77e5d7df9b99302eddc2522ac4"></a>
+<a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> *&#160;</td><td class="memItemRight"><b>create</b> () const</td></tr>
+<tr class="memdesc:a003d5e77e5d7df9b99302eddc2522ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new default-constructed instance that the caller owns. <br /></td></tr>
+<tr class="memitem:a2937d7b5508889f628308d933ab5473e" id="r_a2937d7b5508889f628308d933ab5473e"><td class="memItemLeft"><a id="a2937d7b5508889f628308d933ab5473e" name="a2937d7b5508889f628308d933ab5473e"></a>
+Gfx::SizeF&#160;</td><td class="memItemRight"><b>measureFrame</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize)</td></tr>
+<tr class="memdesc:a2937d7b5508889f628308d933ab5473e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outer size including the frame for <em class="arg">contentSize</em>. <br /></td></tr>
+<tr class="memitem:aadabe29a770c88b2d79334f5a5fb1360" id="r_aadabe29a770c88b2d79334f5a5fb1360"><td class="memItemLeft"><a id="aadabe29a770c88b2d79334f5a5fb1360" name="aadabe29a770c88b2d79334f5a5fb1360"></a>
+Gfx::SizeF&#160;</td><td class="memItemRight"><b>measureBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
+<tr class="memdesc:aadabe29a770c88b2d79334f5a5fb1360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the natural size of the track. <br /></td></tr>
+<tr class="memitem:ad6c8efca054f3f220cc908baada33751" id="r_ad6c8efca054f3f220cc908baada33751"><td class="memItemLeft"><a id="ad6c8efca054f3f220cc908baada33751" name="ad6c8efca054f3f220cc908baada33751"></a>
+void&#160;</td><td class="memItemRight"><b>layoutChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect)</td></tr>
+<tr class="memdesc:ad6c8efca054f3f220cc908baada33751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and text rectangles in <em class="arg">rect</em>. <br /></td></tr>
+<tr class="memitem:a419f2cf0e2a6e560e62b96810e4eeb62" id="r_a419f2cf0e2a6e560e62b96810e4eeb62"><td class="memItemLeft"><a id="a419f2cf0e2a6e560e62b96810e4eeb62" name="a419f2cf0e2a6e560e62b96810e4eeb62"></a>
+void&#160;</td><td class="memItemRight"><b>layoutBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect)</td></tr>
+<tr class="memdesc:a419f2cf0e2a6e560e62b96810e4eeb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and filled portion for <em class="arg">progressRatio</em>. <br /></td></tr>
+<tr class="memitem:a9e2626742335e12c7bea47b16f75df70" id="r_a9e2626742335e12c7bea47b16f75df70"><td class="memItemLeft"><a id="a9e2626742335e12c7bea47b16f75df70" name="a9e2626742335e12c7bea47b16f75df70"></a>
+const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight"><b>textPainter</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)</td></tr>
+<tr class="memdesc:a9e2626742335e12c7bea47b16f75df70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="memitem:a9862c9ec55eb7c64e40bfd58573cbf9e" id="r_a9862c9ec55eb7c64e40bfd58573cbf9e"><td class="memItemLeft"><a id="a9862c9ec55eb7c64e40bfd58573cbf9e" name="a9862c9ec55eb7c64e40bfd58573cbf9e"></a>
+void&#160;</td><td class="memItemRight"><b>renderChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a9862c9ec55eb7c64e40bfd58573cbf9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints track, filled portion, and text for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:ac199f2f01e127a4d6017d627570bbe50" id="r_ac199f2f01e127a4d6017d627570bbe50"><td class="memItemLeft"><a id="ac199f2f01e127a4d6017d627570bbe50" name="ac199f2f01e127a4d6017d627570bbe50"></a>
+void&#160;</td><td class="memItemRight"><b>renderBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:ac199f2f01e127a4d6017d627570bbe50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track and filled portion for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:a4f585eb711da05455c237efc4ff36863" id="r_a4f585eb711da05455c237efc4ff36863"><td class="memItemLeft"><a id="a4f585eb711da05455c237efc4ff36863" name="a4f585eb711da05455c237efc4ff36863"></a>
+void&#160;</td><td class="memItemRight"><b>renderTrack</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a4f585eb711da05455c237efc4ff36863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:a10ae625148f94eebd50502d8942ec231" id="r_a10ae625148f94eebd50502d8942ec231"><td class="memItemLeft"><a id="a10ae625148f94eebd50502d8942ec231" name="a10ae625148f94eebd50502d8942ec231"></a>
+void&#160;</td><td class="memItemRight"><b>renderChunk</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a10ae625148f94eebd50502d8942ec231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the filled portion for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:a22f40467fbe89f8b314f1d14028969a0" id="r_a22f40467fbe89f8b314f1d14028969a0"><td class="memItemLeft"><a id="a22f40467fbe89f8b314f1d14028969a0" name="a22f40467fbe89f8b314f1d14028969a0"></a>
+void&#160;</td><td class="memItemRight"><b>renderText</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a22f40467fbe89f8b314f1d14028969a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em class="arg">text</em> at <em class="arg">textPos</em> for <em class="arg">state</em>. <br /></td></tr>
 <tr class="memitem:a97ffddc703a75438dcd96f778f867a09" id="r_a97ffddc703a75438dcd96f778f867a09"><td class="memItemLeft"><a id="a97ffddc703a75438dcd96f778f867a09" name="a97ffddc703a75438dcd96f778f867a09"></a>
 const std::type_info &amp;&#160;</td><td class="memItemRight"><b>typeId</b> () const</td></tr>
 <tr class="memdesc:a97ffddc703a75438dcd96f778f867a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
@@ -111,440 +140,46 @@ void&#160;</td><td class="memItemRight"><b>reset</b> (const <a class="el" href="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac0808b52bd27cc1f083c28f855db8888" id="r_ac0808b52bd27cc1f083c28f855db8888"><td class="memItemLeft">virtual <a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac0808b52bd27cc1f083c28f855db8888">onCreate</a> () const =0</td></tr>
+<tr class="memitem:ac0808b52bd27cc1f083c28f855db8888" id="r_ac0808b52bd27cc1f083c28f855db8888"><td class="memItemLeft"><a id="ac0808b52bd27cc1f083c28f855db8888" name="ac0808b52bd27cc1f083c28f855db8888"></a>
+virtual <a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> *&#160;</td><td class="memItemRight"><b>onCreate</b> () const =0</td></tr>
+<tr class="memdesc:ac0808b52bd27cc1f083c28f855db8888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the same concrete type. <br /></td></tr>
 <tr class="memitem:adefda73de91a015f122ff2904604a77a" id="r_adefda73de91a015f122ff2904604a77a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adefda73de91a015f122ff2904604a77a">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;options)=0</td></tr>
-<tr class="memitem:a636e3794525900b85feb533efd7c2af2" id="r_a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft">virtual Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a636e3794525900b85feb533efd7c2af2">onMeasureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize)=0</td></tr>
-<tr class="memitem:aa978e6fdc19094cb8bdbb30fc5380bc6" id="r_aa978e6fdc19094cb8bdbb30fc5380bc6"><td class="memItemLeft">virtual Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#aa978e6fdc19094cb8bdbb30fc5380bc6">onMeasureBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
-<tr class="memitem:a40588b2dfaa2bf790a462b690933bcca" id="r_a40588b2dfaa2bf790a462b690933bcca"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a40588b2dfaa2bf790a462b690933bcca">onLayoutChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect)=0</td></tr>
-<tr class="memitem:aea67dcb4d560e6f3ccd809aec4418eb5" id="r_aea67dcb4d560e6f3ccd809aec4418eb5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aea67dcb4d560e6f3ccd809aec4418eb5">onLayoutBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect)=0</td></tr>
-<tr class="memitem:a1b239a71c4fc2d241c667766438cf8cb" id="r_a1b239a71c4fc2d241c667766438cf8cb"><td class="memItemLeft">virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1b239a71c4fc2d241c667766438cf8cb">onGetTextPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
-<tr class="memitem:afad86e98d88f6983f7ab93a942a84286" id="r_afad86e98d88f6983f7ab93a942a84286"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afad86e98d88f6983f7ab93a942a84286">onRenderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
-<tr class="memitem:ab6a4e7f610b258f0c9bd1430e23b43bc" id="r_ab6a4e7f610b258f0c9bd1430e23b43bc"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab6a4e7f610b258f0c9bd1430e23b43bc">onRenderBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
-<tr class="memitem:ab1488a8311acfa4f9d3cfead03fab059" id="r_ab1488a8311acfa4f9d3cfead03fab059"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab1488a8311acfa4f9d3cfead03fab059">onRenderTrack</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
-<tr class="memitem:ab0b659cda6a6ff8bc1f953adb9c300fd" id="r_ab0b659cda6a6ff8bc1f953adb9c300fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab0b659cda6a6ff8bc1f953adb9c300fd">onRenderChunk</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
-<tr class="memitem:abc0fe292e1e575b44bcc6f5507592ff5" id="r_abc0fe292e1e575b44bcc6f5507592ff5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abc0fe292e1e575b44bcc6f5507592ff5">onRenderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:adefda73de91a015f122ff2904604a77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em class="arg">options</em>.     <br /></td></tr>
+<tr class="memitem:a636e3794525900b85feb533efd7c2af2" id="r_a636e3794525900b85feb533efd7c2af2"><td class="memItemLeft"><a id="a636e3794525900b85feb533efd7c2af2" name="a636e3794525900b85feb533efd7c2af2"></a>
+virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasureFrame</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize)=0</td></tr>
+<tr class="memdesc:a636e3794525900b85feb533efd7c2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em class="arg">contentSize</em>. <br /></td></tr>
+<tr class="memitem:aa978e6fdc19094cb8bdbb30fc5380bc6" id="r_aa978e6fdc19094cb8bdbb30fc5380bc6"><td class="memItemLeft"><a id="aa978e6fdc19094cb8bdbb30fc5380bc6" name="aa978e6fdc19094cb8bdbb30fc5380bc6"></a>
+virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasureBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:aa978e6fdc19094cb8bdbb30fc5380bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the natural size of the track. <br /></td></tr>
+<tr class="memitem:a40588b2dfaa2bf790a462b690933bcca" id="r_a40588b2dfaa2bf790a462b690933bcca"><td class="memItemLeft"><a id="a40588b2dfaa2bf790a462b690933bcca" name="a40588b2dfaa2bf790a462b690933bcca"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onLayoutChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect)=0</td></tr>
+<tr class="memdesc:a40588b2dfaa2bf790a462b690933bcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and text rectangles in <em class="arg">rect</em>. <br /></td></tr>
+<tr class="memitem:aea67dcb4d560e6f3ccd809aec4418eb5" id="r_aea67dcb4d560e6f3ccd809aec4418eb5"><td class="memItemLeft"><a id="aea67dcb4d560e6f3ccd809aec4418eb5" name="aea67dcb4d560e6f3ccd809aec4418eb5"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onLayoutBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect)=0</td></tr>
+<tr class="memdesc:aea67dcb4d560e6f3ccd809aec4418eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and filled portion for <em class="arg">progressRatio</em>. <br /></td></tr>
+<tr class="memitem:a1b239a71c4fc2d241c667766438cf8cb" id="r_a1b239a71c4fc2d241c667766438cf8cb"><td class="memItemLeft"><a id="a1b239a71c4fc2d241c667766438cf8cb" name="a1b239a71c4fc2d241c667766438cf8cb"></a>
+virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp;&#160;</td><td class="memItemRight"><b>onGetTextPainter</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface)=0</td></tr>
+<tr class="memdesc:a1b239a71c4fc2d241c667766438cf8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a painter with the current font and text color. <br /></td></tr>
+<tr class="memitem:afad86e98d88f6983f7ab93a942a84286" id="r_afad86e98d88f6983f7ab93a942a84286"><td class="memItemLeft"><a id="afad86e98d88f6983f7ab93a942a84286" name="afad86e98d88f6983f7ab93a942a84286"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onRenderChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:afad86e98d88f6983f7ab93a942a84286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints track, filled portion, and text for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:ab6a4e7f610b258f0c9bd1430e23b43bc" id="r_ab6a4e7f610b258f0c9bd1430e23b43bc"><td class="memItemLeft"><a id="ab6a4e7f610b258f0c9bd1430e23b43bc" name="ab6a4e7f610b258f0c9bd1430e23b43bc"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onRenderBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:ab6a4e7f610b258f0c9bd1430e23b43bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track and filled portion for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:ab1488a8311acfa4f9d3cfead03fab059" id="r_ab1488a8311acfa4f9d3cfead03fab059"><td class="memItemLeft"><a id="ab1488a8311acfa4f9d3cfead03fab059" name="ab1488a8311acfa4f9d3cfead03fab059"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onRenderTrack</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:ab1488a8311acfa4f9d3cfead03fab059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the track for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:ab0b659cda6a6ff8bc1f953adb9c300fd" id="r_ab0b659cda6a6ff8bc1f953adb9c300fd"><td class="memItemLeft"><a id="ab0b659cda6a6ff8bc1f953adb9c300fd" name="ab0b659cda6a6ff8bc1f953adb9c300fd"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onRenderChunk</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:ab0b659cda6a6ff8bc1f953adb9c300fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the filled portion for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:abc0fe292e1e575b44bcc6f5507592ff5" id="r_abc0fe292e1e575b44bcc6f5507592ff5"><td class="memItemLeft"><a id="abc0fe292e1e575b44bcc6f5507592ff5" name="abc0fe292e1e575b44bcc6f5507592ff5"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onRenderText</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)=0</td></tr>
+<tr class="memdesc:abc0fe292e1e575b44bcc6f5507592ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints <em class="arg">text</em> at <em class="arg">textPos</em> for <em class="arg">state</em>. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief Renders the look of a progress bar.</p>
-<p>A ProgressBarRenderer is a Style::Facet for the progress-bar family. Named measure methods run inside-out. Named layout methods run outside-in. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
+<div class="textblock"><p>A ProgressBarRenderer is a Style::Facet for the progress-bar family. Named measure methods run inside-out. Named layout methods run outside-in. Named render methods paint prepared rectangles. The widget owns geometry and orchestrates those passes. The renderer does not mutate widget geometry.</p>
 <p>Derive a renderer to change the look of progress bars. Register it on a Style, or assign it with ProgressBar::setRenderer(). </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae42c6e6ba7f0ce759f4f7b86e410dc42" name="ae42c6e6ba7f0ce759f4f7b86e410dc42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">&#9670;&#160;</a></span>ProgressBarRenderer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ProgressBarRenderer </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>refs</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Constructs a renderer with reference count <em class="arg">refs</em>. </p>
-
-</div>
-</div>
-<a id="aac37a528b461ed79c73a95aa87b77e72" name="aac37a528b461ed79c73a95aa87b77e72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac37a528b461ed79c73a95aa87b77e72">&#9670;&#160;</a></span>~ProgressBarRenderer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destroys the renderer. </p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a003d5e77e5d7df9b99302eddc2522ac4" name="a003d5e77e5d7df9b99302eddc2522ac4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a003d5e77e5d7df9b99302eddc2522ac4">&#9670;&#160;</a></span>create()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> * create </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Creates a new default-constructed instance that the caller owns. </p>
-
-</div>
-</div>
-<a id="a2937d7b5508889f628308d933ab5473e" name="a2937d7b5508889f628308d933ab5473e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2937d7b5508889f628308d933ab5473e">&#9670;&#160;</a></span>measureFrame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Gfx::SizeF measureFrame </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>contentSize</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the outer size including the frame for <em class="arg">contentSize</em>. </p>
-
-</div>
-</div>
-<a id="aadabe29a770c88b2d79334f5a5fb1360" name="aadabe29a770c88b2d79334f5a5fb1360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadabe29a770c88b2d79334f5a5fb1360">&#9670;&#160;</a></span>measureBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Gfx::SizeF measureBar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the natural size of the track. </p>
-
-</div>
-</div>
-<a id="ad6c8efca054f3f220cc908baada33751" name="ad6c8efca054f3f220cc908baada33751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6c8efca054f3f220cc908baada33751">&#9670;&#160;</a></span>layoutChrome()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void layoutChrome </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>barSize</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>textSize</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>barRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Places the track and text rectangles in <em class="arg">rect</em>. </p>
-
-</div>
-</div>
-<a id="a419f2cf0e2a6e560e62b96810e4eeb62" name="a419f2cf0e2a6e560e62b96810e4eeb62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a419f2cf0e2a6e560e62b96810e4eeb62">&#9670;&#160;</a></span>layoutBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void layoutBar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>barRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>progressRatio</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Places the track and filled portion for <em class="arg">progressRatio</em>. </p>
-
-</div>
-</div>
-<a id="a9e2626742335e12c7bea47b16f75df70" name="a9e2626742335e12c7bea47b16f75df70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e2626742335e12c7bea47b16f75df70">&#9670;&#160;</a></span>textPainter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp; textPainter </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns a painter with the current font and text color. </p>
-
-</div>
-</div>
-<a id="a9862c9ec55eb7c64e40bfd58573cbf9e" name="a9862c9ec55eb7c64e40bfd58573cbf9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9862c9ec55eb7c64e40bfd58573cbf9e">&#9670;&#160;</a></span>renderChrome()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void renderChrome </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Paints track, filled portion, and text for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="ac199f2f01e127a4d6017d627570bbe50" name="ac199f2f01e127a4d6017d627570bbe50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac199f2f01e127a4d6017d627570bbe50">&#9670;&#160;</a></span>renderBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void renderBar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Paints the track and filled portion for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="a4f585eb711da05455c237efc4ff36863" name="a4f585eb711da05455c237efc4ff36863"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f585eb711da05455c237efc4ff36863">&#9670;&#160;</a></span>renderTrack()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void renderTrack </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Paints the track for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="a10ae625148f94eebd50502d8942ec231" name="a10ae625148f94eebd50502d8942ec231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10ae625148f94eebd50502d8942ec231">&#9670;&#160;</a></span>renderChunk()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void renderChunk </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Paints the filled portion for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="a22f40467fbe89f8b314f1d14028969a0" name="a22f40467fbe89f8b314f1d14028969a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f40467fbe89f8b314f1d14028969a0">&#9670;&#160;</a></span>renderText()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void renderText </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Paints <em class="arg">text</em> at <em class="arg">textPos</em> for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="ac0808b52bd27cc1f083c28f855db8888" name="ac0808b52bd27cc1f083c28f855db8888"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0808b52bd27cc1f083c28f855db8888">&#9670;&#160;</a></span>onCreate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="#ae42c6e6ba7f0ce759f4f7b86e410dc42">ProgressBarRenderer</a> * onCreate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Creates a new instance of the same concrete type. </p>
-
-<p>Implements <a class="el" href="classPt_1_1Forms_1_1Renderer.html#a30bad97ed37261e4d76f68b7e6eb601f">Renderer</a>.</p>
-
-</div>
-</div>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="adefda73de91a015f122ff2904604a77a" name="adefda73de91a015f122ff2904604a77a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adefda73de91a015f122ff2904604a77a">&#9670;&#160;</a></span>onReset()</h2>
 
@@ -567,406 +202,9 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1" title="Resets this facet with options.">Style::Facet::onReset</a> </p>
+<p>Resolves tokens from <em class="arg">options</em> and stores the painter and metric state used later by measure, layout, and render. Shared facets are reset when the application applies global options.    </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">Style::Facet</a>.</p>
-
-</div>
-</div>
-<a id="a636e3794525900b85feb533efd7c2af2" name="a636e3794525900b85feb533efd7c2af2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a636e3794525900b85feb533efd7c2af2">&#9670;&#160;</a></span>onMeasureFrame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual Gfx::SizeF onMeasureFrame </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>contentSize</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Measures the frame enclosing <em class="arg">contentSize</em>. </p>
-
-</div>
-</div>
-<a id="aa978e6fdc19094cb8bdbb30fc5380bc6" name="aa978e6fdc19094cb8bdbb30fc5380bc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa978e6fdc19094cb8bdbb30fc5380bc6">&#9670;&#160;</a></span>onMeasureBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual Gfx::SizeF onMeasureBar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns the natural size of the track. </p>
-
-</div>
-</div>
-<a id="a40588b2dfaa2bf790a462b690933bcca" name="a40588b2dfaa2bf790a462b690933bcca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40588b2dfaa2bf790a462b690933bcca">&#9670;&#160;</a></span>onLayoutChrome()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onLayoutChrome </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>barSize</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>textSize</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>barRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Places the track and text rectangles in <em class="arg">rect</em>. </p>
-
-</div>
-</div>
-<a id="aea67dcb4d560e6f3ccd809aec4418eb5" name="aea67dcb4d560e6f3ccd809aec4418eb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea67dcb4d560e6f3ccd809aec4418eb5">&#9670;&#160;</a></span>onLayoutBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onLayoutBar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>barRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>progressRatio</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Places the track and filled portion for <em class="arg">progressRatio</em>. </p>
-
-</div>
-</div>
-<a id="a1b239a71c4fc2d241c667766438cf8cb" name="a1b239a71c4fc2d241c667766438cf8cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b239a71c4fc2d241c667766438cf8cb">&#9670;&#160;</a></span>onGetTextPainter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> &amp; onGetTextPainter </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns a painter with the current font and text color. </p>
-
-</div>
-</div>
-<a id="afad86e98d88f6983f7ab93a942a84286" name="afad86e98d88f6983f7ab93a942a84286"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afad86e98d88f6983f7ab93a942a84286">&#9670;&#160;</a></span>onRenderChrome()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRenderChrome </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints track, filled portion, and text for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="ab6a4e7f610b258f0c9bd1430e23b43bc" name="ab6a4e7f610b258f0c9bd1430e23b43bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6a4e7f610b258f0c9bd1430e23b43bc">&#9670;&#160;</a></span>onRenderBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRenderBar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints the track and filled portion for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="ab1488a8311acfa4f9d3cfead03fab059" name="ab1488a8311acfa4f9d3cfead03fab059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1488a8311acfa4f9d3cfead03fab059">&#9670;&#160;</a></span>onRenderTrack()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRenderTrack </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints the track for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="ab0b659cda6a6ff8bc1f953adb9c300fd" name="ab0b659cda6a6ff8bc1f953adb9c300fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0b659cda6a6ff8bc1f953adb9c300fd">&#9670;&#160;</a></span>onRenderChunk()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRenderChunk </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints the filled portion for <em class="arg">state</em>. </p>
-
-</div>
-</div>
-<a id="abc0fe292e1e575b44bcc6f5507592ff5" name="abc0fe292e1e575b44bcc6f5507592ff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc0fe292e1e575b44bcc6f5507592ff5">&#9670;&#160;</a></span>onRenderText()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRenderText </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints <em class="arg">text</em> at <em class="arg">textPos</em> for <em class="arg">state</em>. </p>
 
 </div>
 </div>

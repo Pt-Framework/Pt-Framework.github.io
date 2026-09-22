@@ -80,13 +80,18 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="MenuSubItem_8h_source.html">Pt/Forms/MenuSubItem.h</a>&gt;</code></p>
 
+<p>Represents a menu item that opens a nested menu.  
+ <a href="#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a>.</p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1MenuBarItem.html">MenuBarItem</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa0fd6a0729a4284de5ca222fdc0485ce" id="r_aa0fd6a0729a4284de5ca222fdc0485ce"><td class="memItemLeft">typedef <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae8cda83001199a70edf5ceed871c682d">MenuItemBase</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa0fd6a0729a4284de5ca222fdc0485ce">Base</a></td></tr>
+<tr class="memitem:aa0fd6a0729a4284de5ca222fdc0485ce" id="r_aa0fd6a0729a4284de5ca222fdc0485ce"><td class="memItemLeft"><a id="aa0fd6a0729a4284de5ca222fdc0485ce" name="aa0fd6a0729a4284de5ca222fdc0485ce"></a>
+typedef <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae8cda83001199a70edf5ceed871c682d">MenuItemBase</a>&#160;</td><td class="memItemRight"><b>Base</b></td></tr>
+<tr class="memdesc:aa0fd6a0729a4284de5ca222fdc0485ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the inherited menu item type. <br /></td></tr>
 <tr class="memitem:ab55053d0a57be0d70df423df9c2b12cd" id="r_ab55053d0a57be0d70df423df9c2b12cd"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1View.html#ab55053d0a57be0d70df423df9c2b12cd">FocusPolicy</a> { <br />
 &#160;&#160;<a class="el" href="classPt_1_1Forms_1_1View.html#ab55053d0a57be0d70df423df9c2b12cda506647bdf445931594e9b2de731eeb88">NoFocus</a>
 , <br />
@@ -99,37 +104,92 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ace99b25a0c2f00f75f6f134bdffa422c" id="r_ace99b25a0c2f00f75f6f134bdffa422c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ace99b25a0c2f00f75f6f134bdffa422c">MenuSubItem</a> ()</td></tr>
-<tr class="memitem:a765eb6c1acce3f584a90dccdd7cddd3c" id="r_a765eb6c1acce3f584a90dccdd7cddd3c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a765eb6c1acce3f584a90dccdd7cddd3c">~MenuSubItem</a> ()</td></tr>
+<tr class="memitem:ace99b25a0c2f00f75f6f134bdffa422c" id="r_ace99b25a0c2f00f75f6f134bdffa422c"><td class="memItemLeft"><a id="ace99b25a0c2f00f75f6f134bdffa422c" name="ace99b25a0c2f00f75f6f134bdffa422c"></a>
+&#160;</td><td class="memItemRight"><b>MenuSubItem</b> ()</td></tr>
+<tr class="memdesc:ace99b25a0c2f00f75f6f134bdffa422c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an item without a nested menu. <br /></td></tr>
+<tr class="memitem:a765eb6c1acce3f584a90dccdd7cddd3c" id="r_a765eb6c1acce3f584a90dccdd7cddd3c"><td class="memItemLeft"><a id="a765eb6c1acce3f584a90dccdd7cddd3c" name="a765eb6c1acce3f584a90dccdd7cddd3c"></a>
+virtual&#160;</td><td class="memItemRight"><b>~MenuSubItem</b> ()</td></tr>
+<tr class="memdesc:a765eb6c1acce3f584a90dccdd7cddd3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the item. <br /></td></tr>
 <tr class="memitem:a8cad69cc8160accef37a84a8aa555cbb" id="r_a8cad69cc8160accef37a84a8aa555cbb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8cad69cc8160accef37a84a8aa555cbb">setMenu</a> (Menu *menu)</td></tr>
-<tr class="memitem:afba58bf05c9a6680d0811d2d7e6f9164" id="r_afba58bf05c9a6680d0811d2d7e6f9164"><td class="memItemLeft">const Menu *&#160;</td><td class="memItemRight"><a class="el" href="#afba58bf05c9a6680d0811d2d7e6f9164">menu</a> () const</td></tr>
-<tr class="memitem:a523ec3b0f934d878ffd11c87f772efd0" id="r_a523ec3b0f934d878ffd11c87f772efd0"><td class="memItemLeft">Menu *&#160;</td><td class="memItemRight"><a class="el" href="#a523ec3b0f934d878ffd11c87f772efd0">menu</a> ()</td></tr>
+<tr class="memdesc:a8cad69cc8160accef37a84a8aa555cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associates <em class="arg">menu</em> with this item.  <br /></td></tr>
+<tr class="memitem:afba58bf05c9a6680d0811d2d7e6f9164" id="r_afba58bf05c9a6680d0811d2d7e6f9164"><td class="memItemLeft"><a id="afba58bf05c9a6680d0811d2d7e6f9164" name="afba58bf05c9a6680d0811d2d7e6f9164"></a>
+const Menu *&#160;</td><td class="memItemRight"><b>menu</b> () const</td></tr>
+<tr class="memdesc:afba58bf05c9a6680d0811d2d7e6f9164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nested menu, or 0 when none is assigned. <br /></td></tr>
+<tr class="memitem:a523ec3b0f934d878ffd11c87f772efd0" id="r_a523ec3b0f934d878ffd11c87f772efd0"><td class="memItemLeft"><a id="a523ec3b0f934d878ffd11c87f772efd0" name="a523ec3b0f934d878ffd11c87f772efd0"></a>
+Menu *&#160;</td><td class="memItemRight"><b>menu</b> ()</td></tr>
+<tr class="memdesc:a523ec3b0f934d878ffd11c87f772efd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nested menu, or 0 when none is assigned. <br /></td></tr>
 <tr class="memitem:a46fc25ee47736ab836302f4573baba2c" id="r_a46fc25ee47736ab836302f4573baba2c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a46fc25ee47736ab836302f4573baba2c">setParentMenu</a> (<a class="el" href="classPt_1_1Forms_1_1MenuBase.html">MenuBase</a> *p)</td></tr>
-<tr class="memitem:a02d5fa6b14e221f3012a794b905be166" id="r_a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02d5fa6b14e221f3012a794b905be166">cancel</a> ()</td></tr>
-<tr class="memitem:ac8d78534d723d2c92c9dd9f81d97bc97" id="r_ac8d78534d723d2c92c9dd9f81d97bc97"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8d78534d723d2c92c9dd9f81d97bc97">closeMenu</a> ()</td></tr>
-<tr class="memitem:ae0b1861d934f61491fad3142725daf56" id="r_ae0b1861d934f61491fad3142725daf56"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae0b1861d934f61491fad3142725daf56">openMenu</a> ()</td></tr>
-<tr class="memitem:ab0388aa6dc327a4e186353037fc96d0e" id="r_ab0388aa6dc327a4e186353037fc96d0e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab0388aa6dc327a4e186353037fc96d0e">isMenuOpen</a> () const</td></tr>
-<tr class="memitem:a5596a0827b0ed73421c4c7c3768c1c70" id="r_a5596a0827b0ed73421c4c7c3768c1c70"><td class="memItemLeft">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a5596a0827b0ed73421c4c7c3768c1c70">text</a> () const</td></tr>
-<tr class="memitem:a3a3d0511ca0d199ca61dbca0b738573b" id="r_a3a3d0511ca0d199ca61dbca0b738573b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a3a3d0511ca0d199ca61dbca0b738573b">setText</a> (const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;t)</td></tr>
-<tr class="memitem:ae50b43f1f166000cf8b1ca18ec724243" id="r_ae50b43f1f166000cf8b1ca18ec724243"><td class="memItemLeft">const Pt::Gfx::Image &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae50b43f1f166000cf8b1ca18ec724243">icon</a> () const</td></tr>
-<tr class="memitem:a711a5c365d0f75460cf7da9e59ed09ad" id="r_a711a5c365d0f75460cf7da9e59ed09ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a711a5c365d0f75460cf7da9e59ed09ad">setIcon</a> (const Pt::Gfx::Image &amp;img)</td></tr>
-<tr class="memitem:a574321a3846c345d894d4a7a14408694" id="r_a574321a3846c345d894d4a7a14408694"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a574321a3846c345d894d4a7a14408694">iconPadding</a> () const</td></tr>
+<tr class="memdesc:a46fc25ee47736ab836302f4573baba2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the containing menu coordinator.  <br /></td></tr>
+<tr class="memitem:a02d5fa6b14e221f3012a794b905be166" id="r_a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft"><a id="a02d5fa6b14e221f3012a794b905be166" name="a02d5fa6b14e221f3012a794b905be166"></a>
+void&#160;</td><td class="memItemRight"><b>cancel</b> ()</td></tr>
+<tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the nested menu interaction. <br /></td></tr>
+<tr class="memitem:ac8d78534d723d2c92c9dd9f81d97bc97" id="r_ac8d78534d723d2c92c9dd9f81d97bc97"><td class="memItemLeft"><a id="ac8d78534d723d2c92c9dd9f81d97bc97" name="ac8d78534d723d2c92c9dd9f81d97bc97"></a>
+void&#160;</td><td class="memItemRight"><b>closeMenu</b> ()</td></tr>
+<tr class="memdesc:ac8d78534d723d2c92c9dd9f81d97bc97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the nested menu. <br /></td></tr>
+<tr class="memitem:ae0b1861d934f61491fad3142725daf56" id="r_ae0b1861d934f61491fad3142725daf56"><td class="memItemLeft"><a id="ae0b1861d934f61491fad3142725daf56" name="ae0b1861d934f61491fad3142725daf56"></a>
+void&#160;</td><td class="memItemRight"><b>openMenu</b> ()</td></tr>
+<tr class="memdesc:ae0b1861d934f61491fad3142725daf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the nested menu. <br /></td></tr>
+<tr class="memitem:ab0388aa6dc327a4e186353037fc96d0e" id="r_ab0388aa6dc327a4e186353037fc96d0e"><td class="memItemLeft"><a id="ab0388aa6dc327a4e186353037fc96d0e" name="ab0388aa6dc327a4e186353037fc96d0e"></a>
+bool&#160;</td><td class="memItemRight"><b>isMenuOpen</b> () const</td></tr>
+<tr class="memdesc:ab0388aa6dc327a4e186353037fc96d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the nested menu is open. <br /></td></tr>
+<tr class="memitem:a5596a0827b0ed73421c4c7c3768c1c70" id="r_a5596a0827b0ed73421c4c7c3768c1c70"><td class="memItemLeft"><a id="a5596a0827b0ed73421c4c7c3768c1c70" name="a5596a0827b0ed73421c4c7c3768c1c70"></a>
+const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;&#160;</td><td class="memItemRight"><b>text</b> () const</td></tr>
+<tr class="memdesc:a5596a0827b0ed73421c4c7c3768c1c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the item text. <br /></td></tr>
+<tr class="memitem:a3a3d0511ca0d199ca61dbca0b738573b" id="r_a3a3d0511ca0d199ca61dbca0b738573b"><td class="memItemLeft"><a id="a3a3d0511ca0d199ca61dbca0b738573b" name="a3a3d0511ca0d199ca61dbca0b738573b"></a>
+void&#160;</td><td class="memItemRight"><b>setText</b> (const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;t)</td></tr>
+<tr class="memdesc:a3a3d0511ca0d199ca61dbca0b738573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the item text. <br /></td></tr>
+<tr class="memitem:ae50b43f1f166000cf8b1ca18ec724243" id="r_ae50b43f1f166000cf8b1ca18ec724243"><td class="memItemLeft"><a id="ae50b43f1f166000cf8b1ca18ec724243" name="ae50b43f1f166000cf8b1ca18ec724243"></a>
+const Pt::Gfx::Image &amp;&#160;</td><td class="memItemRight"><b>icon</b> () const</td></tr>
+<tr class="memdesc:ae50b43f1f166000cf8b1ca18ec724243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the item icon. <br /></td></tr>
+<tr class="memitem:a711a5c365d0f75460cf7da9e59ed09ad" id="r_a711a5c365d0f75460cf7da9e59ed09ad"><td class="memItemLeft"><a id="a711a5c365d0f75460cf7da9e59ed09ad" name="a711a5c365d0f75460cf7da9e59ed09ad"></a>
+void&#160;</td><td class="memItemRight"><b>setIcon</b> (const Pt::Gfx::Image &amp;img)</td></tr>
+<tr class="memdesc:a711a5c365d0f75460cf7da9e59ed09ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the item icon. <br /></td></tr>
+<tr class="memitem:a574321a3846c345d894d4a7a14408694" id="r_a574321a3846c345d894d4a7a14408694"><td class="memItemLeft"><a id="a574321a3846c345d894d4a7a14408694" name="a574321a3846c345d894d4a7a14408694"></a>
+double&#160;</td><td class="memItemRight"><b>iconPadding</b> () const</td></tr>
+<tr class="memdesc:a574321a3846c345d894d4a7a14408694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the space reserved before the item icon. <br /></td></tr>
 <tr class="memitem:a7016a1e3d7a5721dc1bb46005ca2e44b" id="r_a7016a1e3d7a5721dc1bb46005ca2e44b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a7016a1e3d7a5721dc1bb46005ca2e44b">setIconPadding</a> (double left)</td></tr>
-<tr class="memitem:a8b998b3e01ac6285aec7fdfb5fdda621" id="r_a8b998b3e01ac6285aec7fdfb5fdda621"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a8b998b3e01ac6285aec7fdfb5fdda621">setSeperator</a> (bool v)</td></tr>
-<tr class="memitem:a47864a1f4c7bb598927673cc9d564fde" id="r_a47864a1f4c7bb598927673cc9d564fde"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a47864a1f4c7bb598927673cc9d564fde">hasSeperator</a> () const</td></tr>
-<tr class="memitem:a696a8bc6da14d83af6c554a0b69531f9" id="r_a696a8bc6da14d83af6c554a0b69531f9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a696a8bc6da14d83af6c554a0b69531f9">isHighlighted</a> () const</td></tr>
-<tr class="memitem:a1c0b0e30b5469ff494c7988ac859e6d0" id="r_a1c0b0e30b5469ff494c7988ac859e6d0"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae8cda83001199a70edf5ceed871c682d">MenuItemBase</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a1c0b0e30b5469ff494c7988ac859e6d0">triggered</a> ()</td></tr>
+<tr class="memdesc:a7016a1e3d7a5721dc1bb46005ca2e44b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the space reserved before the item icon.  <br /></td></tr>
+<tr class="memitem:a8b998b3e01ac6285aec7fdfb5fdda621" id="r_a8b998b3e01ac6285aec7fdfb5fdda621"><td class="memItemLeft"><a id="a8b998b3e01ac6285aec7fdfb5fdda621" name="a8b998b3e01ac6285aec7fdfb5fdda621"></a>
+void&#160;</td><td class="memItemRight"><b>setSeperator</b> (bool v)</td></tr>
+<tr class="memdesc:a8b998b3e01ac6285aec7fdfb5fdda621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether a separator is drawn below this item. <br /></td></tr>
+<tr class="memitem:a47864a1f4c7bb598927673cc9d564fde" id="r_a47864a1f4c7bb598927673cc9d564fde"><td class="memItemLeft"><a id="a47864a1f4c7bb598927673cc9d564fde" name="a47864a1f4c7bb598927673cc9d564fde"></a>
+bool&#160;</td><td class="memItemRight"><b>hasSeperator</b> () const</td></tr>
+<tr class="memdesc:a47864a1f4c7bb598927673cc9d564fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a separator is drawn below this item. <br /></td></tr>
+<tr class="memitem:a696a8bc6da14d83af6c554a0b69531f9" id="r_a696a8bc6da14d83af6c554a0b69531f9"><td class="memItemLeft"><a id="a696a8bc6da14d83af6c554a0b69531f9" name="a696a8bc6da14d83af6c554a0b69531f9"></a>
+bool&#160;</td><td class="memItemRight"><b>isHighlighted</b> () const</td></tr>
+<tr class="memdesc:a696a8bc6da14d83af6c554a0b69531f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true while the pointer is over this item. <br /></td></tr>
+<tr class="memitem:a1c0b0e30b5469ff494c7988ac859e6d0" id="r_a1c0b0e30b5469ff494c7988ac859e6d0"><td class="memItemLeft"><a id="a1c0b0e30b5469ff494c7988ac859e6d0" name="a1c0b0e30b5469ff494c7988ac859e6d0"></a>
+<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae8cda83001199a70edf5ceed871c682d">MenuItemBase</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>triggered</b> ()</td></tr>
+<tr class="memdesc:a1c0b0e30b5469ff494c7988ac859e6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when this item is activated. <br /></td></tr>
 <tr class="memitem:a78e8ba9a6430b8cc45d8032dbc74c8de" id="r_a78e8ba9a6430b8cc45d8032dbc74c8de"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a78e8ba9a6430b8cc45d8032dbc74c8de">background</a> () const</td></tr>
-<tr class="memitem:a727def2c7e320bb619f789a24a284377" id="r_a727def2c7e320bb619f789a24a284377"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a727def2c7e320bb619f789a24a284377">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memdesc:a78e8ba9a6430b8cc45d8032dbc74c8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the background brush.  <br /></td></tr>
+<tr class="memitem:a727def2c7e320bb619f789a24a284377" id="r_a727def2c7e320bb619f789a24a284377"><td class="memItemLeft"><a id="a727def2c7e320bb619f789a24a284377" name="a727def2c7e320bb619f789a24a284377"></a>
+void&#160;</td><td class="memItemRight"><b>setBackground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memdesc:a727def2c7e320bb619f789a24a284377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local background brush. <br /></td></tr>
 <tr class="memitem:a8c326ba5255dc668ac9405a9db282137" id="r_a8c326ba5255dc668ac9405a9db282137"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Pt::Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a8c326ba5255dc668ac9405a9db282137">contour</a> () const</td></tr>
-<tr class="memitem:a672da84f9e4f9995e3467060d0e64e9a" id="r_a672da84f9e4f9995e3467060d0e64e9a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a672da84f9e4f9995e3467060d0e64e9a">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Pt::Gfx::Pen</a> &amp;p)</td></tr>
+<tr class="memdesc:a8c326ba5255dc668ac9405a9db282137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contour pen.  <br /></td></tr>
+<tr class="memitem:a672da84f9e4f9995e3467060d0e64e9a" id="r_a672da84f9e4f9995e3467060d0e64e9a"><td class="memItemLeft"><a id="a672da84f9e4f9995e3467060d0e64e9a" name="a672da84f9e4f9995e3467060d0e64e9a"></a>
+void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Pt::Gfx::Pen</a> &amp;p)</td></tr>
+<tr class="memdesc:a672da84f9e4f9995e3467060d0e64e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local contour pen. <br /></td></tr>
 <tr class="memitem:a8b9e2035a19decb36f539f0ddc51a940" id="r_a8b9e2035a19decb36f539f0ddc51a940"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a8b9e2035a19decb36f539f0ddc51a940">textColor</a> () const</td></tr>
-<tr class="memitem:aa6641a6a978a56b3c69e1a5e9ec4cba4" id="r_aa6641a6a978a56b3c69e1a5e9ec4cba4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#aa6641a6a978a56b3c69e1a5e9ec4cba4">setTextColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a8b9e2035a19decb36f539f0ddc51a940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text color.  <br /></td></tr>
+<tr class="memitem:aa6641a6a978a56b3c69e1a5e9ec4cba4" id="r_aa6641a6a978a56b3c69e1a5e9ec4cba4"><td class="memItemLeft"><a id="aa6641a6a978a56b3c69e1a5e9ec4cba4" name="aa6641a6a978a56b3c69e1a5e9ec4cba4"></a>
+void&#160;</td><td class="memItemRight"><b>setTextColor</b> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memdesc:aa6641a6a978a56b3c69e1a5e9ec4cba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local text color. <br /></td></tr>
 <tr class="memitem:a55f13909ac968caa45ecb803774832bc" id="r_a55f13909ac968caa45ecb803774832bc"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Pt::Gfx::Font</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a55f13909ac968caa45ecb803774832bc">font</a> () const</td></tr>
-<tr class="memitem:a7947e0b44323c2d971eec6ef8e71a21b" id="r_a7947e0b44323c2d971eec6ef8e71a21b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a7947e0b44323c2d971eec6ef8e71a21b">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Pt::Gfx::Font</a> &amp;font)</td></tr>
-<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#af9848b494ebdcaa5a497aa3504a4507b">setFontSize</a> (std::size_t size)</td></tr>
-<tr class="memitem:a9fd5f1ca5577fc629b0bb50d8ebaa4d3" id="r_a9fd5f1ca5577fc629b0bb50d8ebaa4d3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a9fd5f1ca5577fc629b0bb50d8ebaa4d3">setFontWeight</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Pt::Gfx::Font::Weight</a> weight)</td></tr>
-<tr class="memitem:a74b7aad946c8fb16af8d0953d955bf00" id="r_a74b7aad946c8fb16af8d0953d955bf00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#a74b7aad946c8fb16af8d0953d955bf00">setFontSlant</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Pt::Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memdesc:a55f13909ac968caa45ecb803774832bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the item font.  <br /></td></tr>
+<tr class="memitem:a7947e0b44323c2d971eec6ef8e71a21b" id="r_a7947e0b44323c2d971eec6ef8e71a21b"><td class="memItemLeft"><a id="a7947e0b44323c2d971eec6ef8e71a21b" name="a7947e0b44323c2d971eec6ef8e71a21b"></a>
+void&#160;</td><td class="memItemRight"><b>setFont</b> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Pt::Gfx::Font</a> &amp;font)</td></tr>
+<tr class="memdesc:a7947e0b44323c2d971eec6ef8e71a21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local font. <br /></td></tr>
+<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft"><a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
+void&#160;</td><td class="memItemRight"><b>setFontSize</b> (std::size_t size)</td></tr>
+<tr class="memdesc:af9848b494ebdcaa5a497aa3504a4507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local font size. <br /></td></tr>
+<tr class="memitem:a9fd5f1ca5577fc629b0bb50d8ebaa4d3" id="r_a9fd5f1ca5577fc629b0bb50d8ebaa4d3"><td class="memItemLeft"><a id="a9fd5f1ca5577fc629b0bb50d8ebaa4d3" name="a9fd5f1ca5577fc629b0bb50d8ebaa4d3"></a>
+void&#160;</td><td class="memItemRight"><b>setFontWeight</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Pt::Gfx::Font::Weight</a> weight)</td></tr>
+<tr class="memdesc:a9fd5f1ca5577fc629b0bb50d8ebaa4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local font weight. <br /></td></tr>
+<tr class="memitem:a74b7aad946c8fb16af8d0953d955bf00" id="r_a74b7aad946c8fb16af8d0953d955bf00"><td class="memItemLeft"><a id="a74b7aad946c8fb16af8d0953d955bf00" name="a74b7aad946c8fb16af8d0953d955bf00"></a>
+void&#160;</td><td class="memItemRight"><b>setFontSlant</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Pt::Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memdesc:a74b7aad946c8fb16af8d0953d955bf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a local font slant. <br /></td></tr>
 <tr class="memitem:a39639f36997748377dfbbf5931b59cd3" id="r_a39639f36997748377dfbbf5931b59cd3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1View.html">View</a> &amp;parent)</td></tr>
 <tr class="memdesc:a39639f36997748377dfbbf5931b59cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches this control to <em class="arg">parent</em>.  <br /></td></tr>
 <tr class="memitem:ab1e5200da2da8f45a17fa7e77969e966" id="r_ab1e5200da2da8f45a17fa7e77969e966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ab1e5200da2da8f45a17fa7e77969e966">unparent</a> ()</td></tr>
@@ -599,25 +659,8 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief Represents a menu item that opens a nested menu.</p>
-<p>Use a MenuSubItem when choosing an entry should reveal another Menu. setMenu() associates a nested menu without taking ownership. Keep that menu alive while the item uses it. The containing Menu or MenuBar sets the parent menu while the item is attached. </p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="aa0fd6a0729a4284de5ca222fdc0485ce" name="aa0fd6a0729a4284de5ca222fdc0485ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0fd6a0729a4284de5ca222fdc0485ce">&#9670;&#160;</a></span>Base</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae8cda83001199a70edf5ceed871c682d">MenuItemBase</a> <a class="el" href="#aa0fd6a0729a4284de5ca222fdc0485ce">Base</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Defines the inherited menu item type. </p>
-
-</div>
-</div>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+<div class="textblock"><p>Use a MenuSubItem when choosing an entry should reveal another Menu. setMenu() associates a nested menu without taking ownership. Keep that menu alive while the item uses it. The containing Menu or MenuBar sets the parent menu while the item is attached. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd" name="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&#160;</a></span>FocusPolicy</h2>
 
@@ -648,51 +691,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ace99b25a0c2f00f75f6f134bdffa422c" name="ace99b25a0c2f00f75f6f134bdffa422c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace99b25a0c2f00f75f6f134bdffa422c">&#9670;&#160;</a></span>MenuSubItem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">MenuSubItem </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Creates an item without a nested menu. </p>
-
-</div>
-</div>
-<a id="a765eb6c1acce3f584a90dccdd7cddd3c" name="a765eb6c1acce3f584a90dccdd7cddd3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a765eb6c1acce3f584a90dccdd7cddd3c">&#9670;&#160;</a></span>~MenuSubItem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="#ace99b25a0c2f00f75f6f134bdffa422c">MenuSubItem</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destroys the item. </p>
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8cad69cc8160accef37a84a8aa555cbb" name="a8cad69cc8160accef37a84a8aa555cbb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8cad69cc8160accef37a84a8aa555cbb">&#9670;&#160;</a></span>setMenu()</h2>
@@ -708,44 +706,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Associates <em class="arg">menu</em> with this item.</p>
 <p>Pass 0 to remove the current association. The item does not own <em class="arg">menu</em>, which must remain alive while it is associated. </p>
-
-</div>
-</div>
-<a id="afba58bf05c9a6680d0811d2d7e6f9164" name="afba58bf05c9a6680d0811d2d7e6f9164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afba58bf05c9a6680d0811d2d7e6f9164">&#9670;&#160;</a></span>menu() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const Menu * menu </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the nested menu, or 0 when none is assigned. </p>
-
-</div>
-</div>
-<a id="a523ec3b0f934d878ffd11c87f772efd0" name="a523ec3b0f934d878ffd11c87f772efd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a523ec3b0f934d878ffd11c87f772efd0">&#9670;&#160;</a></span>menu() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Menu * menu </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the nested menu, or 0 when none is assigned. </p>
 
 </div>
 </div>
@@ -763,80 +724,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Sets the containing menu coordinator.</p>
 <p>Menu and MenuBar call this while attaching or removing the item. The item does not own <em class="arg">p</em>. </p>
-
-</div>
-</div>
-<a id="a02d5fa6b14e221f3012a794b905be166" name="a02d5fa6b14e221f3012a794b905be166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02d5fa6b14e221f3012a794b905be166">&#9670;&#160;</a></span>cancel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cancel </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Cancels the nested menu interaction. </p>
-
-</div>
-</div>
-<a id="ac8d78534d723d2c92c9dd9f81d97bc97" name="ac8d78534d723d2c92c9dd9f81d97bc97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8d78534d723d2c92c9dd9f81d97bc97">&#9670;&#160;</a></span>closeMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void closeMenu </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Closes the nested menu. </p>
-
-</div>
-</div>
-<a id="ae0b1861d934f61491fad3142725daf56" name="ae0b1861d934f61491fad3142725daf56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0b1861d934f61491fad3142725daf56">&#9670;&#160;</a></span>openMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void openMenu </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Opens the nested menu. </p>
-
-</div>
-</div>
-<a id="ab0388aa6dc327a4e186353037fc96d0e" name="ab0388aa6dc327a4e186353037fc96d0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0388aa6dc327a4e186353037fc96d0e">&#9670;&#160;</a></span>isMenuOpen()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isMenuOpen </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns true if the nested menu is open. </p>
 
 </div>
 </div>
@@ -902,136 +790,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
-<a id="a5596a0827b0ed73421c4c7c3768c1c70" name="a5596a0827b0ed73421c4c7c3768c1c70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5596a0827b0ed73421c4c7c3768c1c70">&#9670;&#160;</a></span>text()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp; text </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns the item text. </p>
-
-</div>
-</div>
-<a id="a3a3d0511ca0d199ca61dbca0b738573b" name="a3a3d0511ca0d199ca61dbca0b738573b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a3d0511ca0d199ca61dbca0b738573b">&#9670;&#160;</a></span>setText()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setText </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets the item text. </p>
-
-</div>
-</div>
-<a id="ae50b43f1f166000cf8b1ca18ec724243" name="ae50b43f1f166000cf8b1ca18ec724243"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae50b43f1f166000cf8b1ca18ec724243">&#9670;&#160;</a></span>icon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const Pt::Gfx::Image &amp; icon </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns the item icon. </p>
-
-</div>
-</div>
-<a id="a711a5c365d0f75460cf7da9e59ed09ad" name="a711a5c365d0f75460cf7da9e59ed09ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a711a5c365d0f75460cf7da9e59ed09ad">&#9670;&#160;</a></span>setIcon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setIcon </td>
-          <td>(</td>
-          <td class="paramtype">const Pt::Gfx::Image &amp;</td>          <td class="paramname"><span class="paramname"><em>img</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets the item icon. </p>
-
-</div>
-</div>
-<a id="a574321a3846c345d894d4a7a14408694" name="a574321a3846c345d894d4a7a14408694"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a574321a3846c345d894d4a7a14408694">&#9670;&#160;</a></span>iconPadding()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double iconPadding </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns the space reserved before the item icon. </p>
-
-</div>
-</div>
 <a id="a7016a1e3d7a5721dc1bb46005ca2e44b" name="a7016a1e3d7a5721dc1bb46005ca2e44b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7016a1e3d7a5721dc1bb46005ca2e44b">&#9670;&#160;</a></span>setIconPadding()</h2>
 
@@ -1054,112 +812,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Sets the space reserved before the item icon.</p>
 <p>The reserved space is at least the width of the current icon. </p>
-
-</div>
-</div>
-<a id="a8b998b3e01ac6285aec7fdfb5fdda621" name="a8b998b3e01ac6285aec7fdfb5fdda621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b998b3e01ac6285aec7fdfb5fdda621">&#9670;&#160;</a></span>setSeperator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setSeperator </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets whether a separator is drawn below this item. </p>
-
-</div>
-</div>
-<a id="a47864a1f4c7bb598927673cc9d564fde" name="a47864a1f4c7bb598927673cc9d564fde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47864a1f4c7bb598927673cc9d564fde">&#9670;&#160;</a></span>hasSeperator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool hasSeperator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns true if a separator is drawn below this item. </p>
-
-</div>
-</div>
-<a id="a696a8bc6da14d83af6c554a0b69531f9" name="a696a8bc6da14d83af6c554a0b69531f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a696a8bc6da14d83af6c554a0b69531f9">&#9670;&#160;</a></span>isHighlighted()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isHighlighted </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns true while the pointer is over this item. </p>
-
-</div>
-</div>
-<a id="a1c0b0e30b5469ff494c7988ac859e6d0" name="a1c0b0e30b5469ff494c7988ac859e6d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c0b0e30b5469ff494c7988ac859e6d0">&#9670;&#160;</a></span>triggered()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html#ae8cda83001199a70edf5ceed871c682d">MenuItemBase</a> &amp; &gt; &amp; triggered </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Returns the signal emitted when this item is activated. </p>
 
 </div>
 </div>
@@ -1185,34 +838,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Returns the background brush.</p>
 <p>Returns the local override when one was set; otherwise returns the application style background brush. </p>
-
-</div>
-</div>
-<a id="a727def2c7e320bb619f789a24a284377" name="a727def2c7e320bb619f789a24a284377"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a727def2c7e320bb619f789a24a284377">&#9670;&#160;</a></span>setBackground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setBackground </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local background brush. </p>
 
 </div>
 </div>
@@ -1238,34 +864,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Returns the contour pen.</p>
 <p>Returns the local override when one was set; otherwise returns the application style contour pen. </p>
-
-</div>
-</div>
-<a id="a672da84f9e4f9995e3467060d0e64e9a" name="a672da84f9e4f9995e3467060d0e64e9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a672da84f9e4f9995e3467060d0e64e9a">&#9670;&#160;</a></span>setContour()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setContour </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Pt::Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local contour pen. </p>
 
 </div>
 </div>
@@ -1291,34 +890,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Returns the text color.</p>
 <p>Returns the local override when one was set; otherwise returns the application style text color. </p>
-
-</div>
-</div>
-<a id="aa6641a6a978a56b3c69e1a5e9ec4cba4" name="aa6641a6a978a56b3c69e1a5e9ec4cba4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6641a6a978a56b3c69e1a5e9ec4cba4">&#9670;&#160;</a></span>setTextColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setTextColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local text color. </p>
 
 </div>
 </div>
@@ -1344,112 +916,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Returns the item font.</p>
 <p>Returns the local full or partial override when one was set; otherwise returns the application style font. </p>
-
-</div>
-</div>
-<a id="a7947e0b44323c2d971eec6ef8e71a21b" name="a7947e0b44323c2d971eec6ef8e71a21b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7947e0b44323c2d971eec6ef8e71a21b">&#9670;&#160;</a></span>setFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFont </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Pt::Gfx::Font</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local font. </p>
-
-</div>
-</div>
-<a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9848b494ebdcaa5a497aa3504a4507b">&#9670;&#160;</a></span>setFontSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontSize </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local font size. </p>
-
-</div>
-</div>
-<a id="a9fd5f1ca5577fc629b0bb50d8ebaa4d3" name="a9fd5f1ca5577fc629b0bb50d8ebaa4d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fd5f1ca5577fc629b0bb50d8ebaa4d3">&#9670;&#160;</a></span>setFontWeight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontWeight </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Pt::Gfx::Font::Weight</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local font weight. </p>
-
-</div>
-</div>
-<a id="a74b7aad946c8fb16af8d0953d955bf00" name="a74b7aad946c8fb16af8d0953d955bf00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74b7aad946c8fb16af8d0953d955bf00">&#9670;&#160;</a></span>setFontSlant()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontSlant </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Pt::Gfx::Font::Slant</a></td>          <td class="paramname"><span class="paramname"><em>slant</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Sets a local font slant. </p>
 
 </div>
 </div>

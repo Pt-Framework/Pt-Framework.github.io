@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="PushButton_8h_source.html">Pt/Forms/PushButton.h</a>&gt;</code></p>
 
+<p>Command button with optional toggle, icon, and caption.  
+ <a href="#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Button.html">Button</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -96,32 +99,82 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4e8d3e1487162d555610657e733fda49" id="r_a4e8d3e1487162d555610657e733fda49"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4e8d3e1487162d555610657e733fda49">PushButton</a> ()</td></tr>
-<tr class="memitem:aa62bfa6d5afb9b87389a9c1489e1b281" id="r_aa62bfa6d5afb9b87389a9c1489e1b281"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aa62bfa6d5afb9b87389a9c1489e1b281">~PushButton</a> ()</td></tr>
-<tr class="memitem:a56b841b42db654e1d60230b2b22683cf" id="r_a56b841b42db654e1d60230b2b22683cf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a56b841b42db654e1d60230b2b22683cf">isPressed</a> () const</td></tr>
-<tr class="memitem:a7ff0e1938b244b6429dadb518bd88ef1" id="r_a7ff0e1938b244b6429dadb518bd88ef1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7ff0e1938b244b6429dadb518bd88ef1">setPressed</a> (bool pressed)</td></tr>
-<tr class="memitem:aaef243e7332b464877cb8d69bbb2cf4e" id="r_aaef243e7332b464877cb8d69bbb2cf4e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaef243e7332b464877cb8d69bbb2cf4e">isToggle</a> () const</td></tr>
-<tr class="memitem:a46bda686b9edd2dd7058b09171be3f8a" id="r_a46bda686b9edd2dd7058b09171be3f8a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a46bda686b9edd2dd7058b09171be3f8a">setToggle</a> (bool toggle)</td></tr>
+<tr class="memitem:a4e8d3e1487162d555610657e733fda49" id="r_a4e8d3e1487162d555610657e733fda49"><td class="memItemLeft"><a id="a4e8d3e1487162d555610657e733fda49" name="a4e8d3e1487162d555610657e733fda49"></a>
+&#160;</td><td class="memItemRight"><b>PushButton</b> ()</td></tr>
+<tr class="memdesc:a4e8d3e1487162d555610657e733fda49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a command button. <br /></td></tr>
+<tr class="memitem:aa62bfa6d5afb9b87389a9c1489e1b281" id="r_aa62bfa6d5afb9b87389a9c1489e1b281"><td class="memItemLeft"><a id="aa62bfa6d5afb9b87389a9c1489e1b281" name="aa62bfa6d5afb9b87389a9c1489e1b281"></a>
+virtual&#160;</td><td class="memItemRight"><b>~PushButton</b> ()</td></tr>
+<tr class="memdesc:aa62bfa6d5afb9b87389a9c1489e1b281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the button. <br /></td></tr>
+<tr class="memitem:a56b841b42db654e1d60230b2b22683cf" id="r_a56b841b42db654e1d60230b2b22683cf"><td class="memItemLeft"><a id="a56b841b42db654e1d60230b2b22683cf" name="a56b841b42db654e1d60230b2b22683cf"></a>
+bool&#160;</td><td class="memItemRight"><b>isPressed</b> () const</td></tr>
+<tr class="memdesc:a56b841b42db654e1d60230b2b22683cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the button is visually pressed. <br /></td></tr>
+<tr class="memitem:a7ff0e1938b244b6429dadb518bd88ef1" id="r_a7ff0e1938b244b6429dadb518bd88ef1"><td class="memItemLeft"><a id="a7ff0e1938b244b6429dadb518bd88ef1" name="a7ff0e1938b244b6429dadb518bd88ef1"></a>
+void&#160;</td><td class="memItemRight"><b>setPressed</b> (bool pressed)</td></tr>
+<tr class="memdesc:a7ff0e1938b244b6429dadb518bd88ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the button is visually pressed. <br /></td></tr>
+<tr class="memitem:aaef243e7332b464877cb8d69bbb2cf4e" id="r_aaef243e7332b464877cb8d69bbb2cf4e"><td class="memItemLeft"><a id="aaef243e7332b464877cb8d69bbb2cf4e" name="aaef243e7332b464877cb8d69bbb2cf4e"></a>
+bool&#160;</td><td class="memItemRight"><b>isToggle</b> () const</td></tr>
+<tr class="memdesc:aaef243e7332b464877cb8d69bbb2cf4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the button stays pressed after a click. <br /></td></tr>
+<tr class="memitem:a46bda686b9edd2dd7058b09171be3f8a" id="r_a46bda686b9edd2dd7058b09171be3f8a"><td class="memItemLeft"><a id="a46bda686b9edd2dd7058b09171be3f8a" name="a46bda686b9edd2dd7058b09171be3f8a"></a>
+void&#160;</td><td class="memItemRight"><b>setToggle</b> (bool toggle)</td></tr>
+<tr class="memdesc:a46bda686b9edd2dd7058b09171be3f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the button stays pressed after a click. <br /></td></tr>
 <tr class="memitem:a3d5ab28c5be995b1ee175b4573e51910" id="r_a3d5ab28c5be995b1ee175b4573e51910"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3d5ab28c5be995b1ee175b4573e51910">setIcon</a> (const <a class="el" href="classPt_1_1Forms_1_1Icon.html">Icon</a> &amp;icon, const Gfx::SizeF &amp;iconSize)</td></tr>
-<tr class="memitem:a91f6c10284742dc653c313db0d481ab7" id="r_a91f6c10284742dc653c313db0d481ab7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a91f6c10284742dc653c313db0d481ab7">isFlat</a> () const</td></tr>
-<tr class="memitem:ae2e6c0f438234a6fdaf8f8303b876e81" id="r_ae2e6c0f438234a6fdaf8f8303b876e81"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae2e6c0f438234a6fdaf8f8303b876e81">setFlat</a> (bool f)</td></tr>
-<tr class="memitem:a12f5aac2f6c154111b88096c6508283a" id="r_a12f5aac2f6c154111b88096c6508283a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12f5aac2f6c154111b88096c6508283a">setLayout</a> (<a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> d)</td></tr>
-<tr class="memitem:a5b8bf8872895964001181eede4bb23af" id="r_a5b8bf8872895964001181eede4bb23af"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5b8bf8872895964001181eede4bb23af">foreground</a> () const</td></tr>
-<tr class="memitem:a51e5e13c91886ce59275c2f791202ab2" id="r_a51e5e13c91886ce59275c2f791202ab2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51e5e13c91886ce59275c2f791202ab2">setForeground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
-<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac7965a531c832104928b133e1e156342">contour</a> () const</td></tr>
-<tr class="memitem:a8ee47c90b0a1e2917e1a096bdfefc393" id="r_a8ee47c90b0a1e2917e1a096bdfefc393"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ee47c90b0a1e2917e1a096bdfefc393">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;p)</td></tr>
-<tr class="memitem:aa40b7f1d1f2fadc323968a097fe74e24" id="r_aa40b7f1d1f2fadc323968a097fe74e24"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa40b7f1d1f2fadc323968a097fe74e24">accentColor</a> () const</td></tr>
-<tr class="memitem:af194e5bfd813c293867cf0769a3eed7d" id="r_af194e5bfd813c293867cf0769a3eed7d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af194e5bfd813c293867cf0769a3eed7d">setAccentColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
-<tr class="memitem:a1fbec5a629cf8ae169513f3d711b02a6" id="r_a1fbec5a629cf8ae169513f3d711b02a6"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1fbec5a629cf8ae169513f3d711b02a6">highlightColor</a> () const</td></tr>
-<tr class="memitem:a4ed8fa198d40db7c9c418857d65c3e99" id="r_a4ed8fa198d40db7c9c418857d65c3e99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ed8fa198d40db7c9c418857d65c3e99">setHighlightColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;c)</td></tr>
-<tr class="memitem:a21cb9b4d5da5c498154b8eeb5ec77059" id="r_a21cb9b4d5da5c498154b8eeb5ec77059"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a21cb9b4d5da5c498154b8eeb5ec77059">textColor</a> () const</td></tr>
-<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc" id="r_ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac24598c93a713c95d97205c65dfccbfc">setTextColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
-<tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08" id="r_a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5e39b7242b7786c27bbe48d0675e2d08">font</a> () const</td></tr>
-<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb" id="r_ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac77626da8a7306cd079b1dd18558c9eb">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
-<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9848b494ebdcaa5a497aa3504a4507b">setFontSize</a> (std::size_t size)</td></tr>
-<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9" id="r_ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae25e5c2d8699fd7c56e7c4547bad68a9">setFontWeight</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
-<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb" id="r_afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb7efbf3edf499b8e918c921e94b08cb">setFontSlant</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memdesc:a3d5ab28c5be995b1ee175b4573e51910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icon shown beside the caption.  <br /></td></tr>
+<tr class="memitem:a91f6c10284742dc653c313db0d481ab7" id="r_a91f6c10284742dc653c313db0d481ab7"><td class="memItemLeft"><a id="a91f6c10284742dc653c313db0d481ab7" name="a91f6c10284742dc653c313db0d481ab7"></a>
+bool&#160;</td><td class="memItemRight"><b>isFlat</b> () const</td></tr>
+<tr class="memdesc:a91f6c10284742dc653c313db0d481ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the button uses a flat face. <br /></td></tr>
+<tr class="memitem:ae2e6c0f438234a6fdaf8f8303b876e81" id="r_ae2e6c0f438234a6fdaf8f8303b876e81"><td class="memItemLeft"><a id="ae2e6c0f438234a6fdaf8f8303b876e81" name="ae2e6c0f438234a6fdaf8f8303b876e81"></a>
+void&#160;</td><td class="memItemRight"><b>setFlat</b> (bool f)</td></tr>
+<tr class="memdesc:ae2e6c0f438234a6fdaf8f8303b876e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the button uses a flat face. <br /></td></tr>
+<tr class="memitem:a12f5aac2f6c154111b88096c6508283a" id="r_a12f5aac2f6c154111b88096c6508283a"><td class="memItemLeft"><a id="a12f5aac2f6c154111b88096c6508283a" name="a12f5aac2f6c154111b88096c6508283a"></a>
+void&#160;</td><td class="memItemRight"><b>setLayout</b> (<a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> d)</td></tr>
+<tr class="memdesc:a12f5aac2f6c154111b88096c6508283a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the direction of icon and caption to <em class="arg">d</em>. <br /></td></tr>
+<tr class="memitem:a5b8bf8872895964001181eede4bb23af" id="r_a5b8bf8872895964001181eede4bb23af"><td class="memItemLeft"><a id="a5b8bf8872895964001181eede4bb23af" name="a5b8bf8872895964001181eede4bb23af"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><b>foreground</b> () const</td></tr>
+<tr class="memdesc:a5b8bf8872895964001181eede4bb23af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective foreground brush. <br /></td></tr>
+<tr class="memitem:a51e5e13c91886ce59275c2f791202ab2" id="r_a51e5e13c91886ce59275c2f791202ab2"><td class="memItemLeft"><a id="a51e5e13c91886ce59275c2f791202ab2" name="a51e5e13c91886ce59275c2f791202ab2"></a>
+void&#160;</td><td class="memItemRight"><b>setForeground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memdesc:a51e5e13c91886ce59275c2f791202ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local foreground brush to <em class="arg">b</em>. <br /></td></tr>
+<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft"><a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><b>contour</b> () const</td></tr>
+<tr class="memdesc:ac7965a531c832104928b133e1e156342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective contour pen. <br /></td></tr>
+<tr class="memitem:a8ee47c90b0a1e2917e1a096bdfefc393" id="r_a8ee47c90b0a1e2917e1a096bdfefc393"><td class="memItemLeft"><a id="a8ee47c90b0a1e2917e1a096bdfefc393" name="a8ee47c90b0a1e2917e1a096bdfefc393"></a>
+void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;p)</td></tr>
+<tr class="memdesc:a8ee47c90b0a1e2917e1a096bdfefc393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local contour pen to <em class="arg">p</em>. <br /></td></tr>
+<tr class="memitem:aa40b7f1d1f2fadc323968a097fe74e24" id="r_aa40b7f1d1f2fadc323968a097fe74e24"><td class="memItemLeft"><a id="aa40b7f1d1f2fadc323968a097fe74e24" name="aa40b7f1d1f2fadc323968a097fe74e24"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><b>accentColor</b> () const</td></tr>
+<tr class="memdesc:aa40b7f1d1f2fadc323968a097fe74e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective accent color. <br /></td></tr>
+<tr class="memitem:af194e5bfd813c293867cf0769a3eed7d" id="r_af194e5bfd813c293867cf0769a3eed7d"><td class="memItemLeft"><a id="af194e5bfd813c293867cf0769a3eed7d" name="af194e5bfd813c293867cf0769a3eed7d"></a>
+void&#160;</td><td class="memItemRight"><b>setAccentColor</b> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memdesc:af194e5bfd813c293867cf0769a3eed7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local accent color to <em class="arg">color</em>. <br /></td></tr>
+<tr class="memitem:a1fbec5a629cf8ae169513f3d711b02a6" id="r_a1fbec5a629cf8ae169513f3d711b02a6"><td class="memItemLeft"><a id="a1fbec5a629cf8ae169513f3d711b02a6" name="a1fbec5a629cf8ae169513f3d711b02a6"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><b>highlightColor</b> () const</td></tr>
+<tr class="memdesc:a1fbec5a629cf8ae169513f3d711b02a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective highlight color. <br /></td></tr>
+<tr class="memitem:a4ed8fa198d40db7c9c418857d65c3e99" id="r_a4ed8fa198d40db7c9c418857d65c3e99"><td class="memItemLeft"><a id="a4ed8fa198d40db7c9c418857d65c3e99" name="a4ed8fa198d40db7c9c418857d65c3e99"></a>
+void&#160;</td><td class="memItemRight"><b>setHighlightColor</b> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;c)</td></tr>
+<tr class="memdesc:a4ed8fa198d40db7c9c418857d65c3e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local highlight color to <em class="arg">c</em>. <br /></td></tr>
+<tr class="memitem:a21cb9b4d5da5c498154b8eeb5ec77059" id="r_a21cb9b4d5da5c498154b8eeb5ec77059"><td class="memItemLeft"><a id="a21cb9b4d5da5c498154b8eeb5ec77059" name="a21cb9b4d5da5c498154b8eeb5ec77059"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><b>textColor</b> () const</td></tr>
+<tr class="memdesc:a21cb9b4d5da5c498154b8eeb5ec77059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective text color. <br /></td></tr>
+<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc" id="r_ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft"><a id="ac24598c93a713c95d97205c65dfccbfc" name="ac24598c93a713c95d97205c65dfccbfc"></a>
+void&#160;</td><td class="memItemRight"><b>setTextColor</b> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memdesc:ac24598c93a713c95d97205c65dfccbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local text color to <em class="arg">color</em>. <br /></td></tr>
+<tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08" id="r_a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft"><a id="a5e39b7242b7786c27bbe48d0675e2d08" name="a5e39b7242b7786c27bbe48d0675e2d08"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight"><b>font</b> () const</td></tr>
+<tr class="memdesc:a5e39b7242b7786c27bbe48d0675e2d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective font. <br /></td></tr>
+<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb" id="r_ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft"><a id="ac77626da8a7306cd079b1dd18558c9eb" name="ac77626da8a7306cd079b1dd18558c9eb"></a>
+void&#160;</td><td class="memItemRight"><b>setFont</b> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
+<tr class="memdesc:ac77626da8a7306cd079b1dd18558c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font to <em class="arg">font</em>. <br /></td></tr>
+<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft"><a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
+void&#160;</td><td class="memItemRight"><b>setFontSize</b> (std::size_t size)</td></tr>
+<tr class="memdesc:af9848b494ebdcaa5a497aa3504a4507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font size to <em class="arg">size</em>. <br /></td></tr>
+<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9" id="r_ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft"><a id="ae25e5c2d8699fd7c56e7c4547bad68a9" name="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
+void&#160;</td><td class="memItemRight"><b>setFontWeight</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
+<tr class="memdesc:ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font weight to <em class="arg">weight</em>. <br /></td></tr>
+<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb" id="r_afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft"><a id="afb7efbf3edf499b8e918c921e94b08cb" name="afb7efbf3edf499b8e918c921e94b08cb"></a>
+void&#160;</td><td class="memItemRight"><b>setFontSlant</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memdesc:afb7efbf3edf499b8e918c921e94b08cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font slant to <em class="arg">slant</em>. <br /></td></tr>
 <tr class="memitem:a72b4158d9be768afc4a41b7fda9c460e" id="r_a72b4158d9be768afc4a41b7fda9c460e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a72b4158d9be768afc4a41b7fda9c460e">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a> *renderer)</td></tr>
+<tr class="memdesc:a72b4158d9be768afc4a41b7fda9c460e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns <em class="arg">renderer</em> as the family renderer.  <br /></td></tr>
 <tr class="memitem:a5596a0827b0ed73421c4c7c3768c1c70" id="r_a5596a0827b0ed73421c4c7c3768c1c70"><td class="memItemLeft"><a id="a5596a0827b0ed73421c4c7c3768c1c70" name="a5596a0827b0ed73421c4c7c3768c1c70"></a>
 const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;&#160;</td><td class="memItemRight"><b>text</b> () const</td></tr>
 <tr class="memdesc:a5596a0827b0ed73421c4c7c3768c1c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the caption. <br /></td></tr>
@@ -381,19 +434,39 @@ void&#160;</td><td class="memItemRight"><b>keyEvent</b> (const <a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6c967e7b144eb6f86ce33e9fab4884d1" id="r_a6c967e7b144eb6f86ce33e9fab4884d1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6c967e7b144eb6f86ce33e9fab4884d1">onPressed</a> ()</td></tr>
-<tr class="memitem:af9efe949c903461f25dc74e8d74cbee6" id="r_af9efe949c903461f25dc74e8d74cbee6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af9efe949c903461f25dc74e8d74cbee6">onReleased</a> ()</td></tr>
-<tr class="memitem:a4faa596f82ad2f873fa9ca67f0c8a612" id="r_a4faa596f82ad2f873fa9ca67f0c8a612"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4faa596f82ad2f873fa9ca67f0c8a612">onCanceled</a> ()</td></tr>
-<tr class="memitem:a254ac917bc0951e878ecd7f710fbe2c2" id="r_a254ac917bc0951e878ecd7f710fbe2c2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a254ac917bc0951e878ecd7f710fbe2c2">onRescaleEvent</a> (const RescaleEvent &amp;ev)</td></tr>
+<tr class="memitem:a6c967e7b144eb6f86ce33e9fab4884d1" id="r_a6c967e7b144eb6f86ce33e9fab4884d1"><td class="memItemLeft"><a id="a6c967e7b144eb6f86ce33e9fab4884d1" name="a6c967e7b144eb6f86ce33e9fab4884d1"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onPressed</b> ()</td></tr>
+<tr class="memdesc:a6c967e7b144eb6f86ce33e9fab4884d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presses the button, or toggles it when isToggle() is true. <br /></td></tr>
+<tr class="memitem:af9efe949c903461f25dc74e8d74cbee6" id="r_af9efe949c903461f25dc74e8d74cbee6"><td class="memItemLeft"><a id="af9efe949c903461f25dc74e8d74cbee6" name="af9efe949c903461f25dc74e8d74cbee6"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onReleased</b> ()</td></tr>
+<tr class="memdesc:af9efe949c903461f25dc74e8d74cbee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the click and emits clicked(). <br /></td></tr>
+<tr class="memitem:a4faa596f82ad2f873fa9ca67f0c8a612" id="r_a4faa596f82ad2f873fa9ca67f0c8a612"><td class="memItemLeft"><a id="a4faa596f82ad2f873fa9ca67f0c8a612" name="a4faa596f82ad2f873fa9ca67f0c8a612"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onCanceled</b> ()</td></tr>
+<tr class="memdesc:a4faa596f82ad2f873fa9ca67f0c8a612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the pressed state after an abandoned click. <br /></td></tr>
+<tr class="memitem:a254ac917bc0951e878ecd7f710fbe2c2" id="r_a254ac917bc0951e878ecd7f710fbe2c2"><td class="memItemLeft"><a id="a254ac917bc0951e878ecd7f710fbe2c2" name="a254ac917bc0951e878ecd7f710fbe2c2"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onRescaleEvent</b> (const RescaleEvent &amp;ev)</td></tr>
+<tr class="memdesc:a254ac917bc0951e878ecd7f710fbe2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates a prepared icon after a scale change. <br /></td></tr>
 <tr class="memitem:ae95892a055053b2f35ed11e85287a8fd" id="r_ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
-<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft">virtual Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
-<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const Gfx::RectF &amp;rect)</td></tr>
-<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a169d5d7261571fb77c21873078a5e1d9">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
+<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler and prepares the icon.  <br /></td></tr>
+<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft"><a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
+virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasure</b> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
+<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures icon, caption, and frame. <br /></td></tr>
+<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft"><a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onLayout</b> (const Gfx::RectF &amp;rect)</td></tr>
+<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places icon, caption, and mnemonic in <em class="arg">rect</em>. <br /></td></tr>
+<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft"><a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onPaint</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
+<tr class="memdesc:a169d5d7261571fb77c21873078a5e1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints background, frame, icon, caption, and mnemonic. <br /></td></tr>
 <tr class="memitem:ab1bc223248d41dc79d4beb5f52d6d3ca" id="r_ab1bc223248d41dc79d4beb5f52d6d3ca"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab1bc223248d41dc79d4beb5f52d6d3ca">onPaintBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)</td></tr>
+<tr class="memdesc:ab1bc223248d41dc79d4beb5f52d6d3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the button background layer.  <br /></td></tr>
 <tr class="memitem:aff916d3e8432dadf9a6b67c2da4ef9be" id="r_aff916d3e8432dadf9a6b67c2da4ef9be"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aff916d3e8432dadf9a6b67c2da4ef9be">onPaintFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)</td></tr>
+<tr class="memdesc:aff916d3e8432dadf9a6b67c2da4ef9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the button frame layer.  <br /></td></tr>
 <tr class="memitem:a5d3035f20cf59b5bdb2c7a418149a895" id="r_a5d3035f20cf59b5bdb2c7a418149a895"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5d3035f20cf59b5bdb2c7a418149a895">onPaintIcon</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;picture, const Gfx::PointF &amp;pos, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)</td></tr>
+<tr class="memdesc:a5d3035f20cf59b5bdb2c7a418149a895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the button icon layer.  <br /></td></tr>
 <tr class="memitem:af23212d2930c271a6394d919add6347b" id="r_af23212d2930c271a6394d919add6347b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af23212d2930c271a6394d919add6347b">onPaintText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;pos, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)</td></tr>
+<tr class="memdesc:af23212d2930c271a6394d919add6347b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the button text layer.  <br /></td></tr>
 <tr class="memitem:a6aab6b36b485fde9ee0278684108d2a6" id="r_a6aab6b36b485fde9ee0278684108d2a6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6aab6b36b485fde9ee0278684108d2a6">onPaintMnemonic</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;mnemonic, const <a class="el" href="classPt_1_1Forms_1_1ButtonState.html">ButtonState</a> &amp;state)</td></tr>
+<tr class="memdesc:a6aab6b36b485fde9ee0278684108d2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the button mnemonic layer.  <br /></td></tr>
 <tr class="memitem:ac0c392c62b968a7418fb0f8bb2e0a222" id="r_ac0c392c62b968a7418fb0f8bb2e0a222"><td class="memItemLeft"><a id="ac0c392c62b968a7418fb0f8bb2e0a222" name="ac0c392c62b968a7418fb0f8bb2e0a222"></a>
 virtual void&#160;</td><td class="memItemRight"><b>onMnemonic</b> (<a class="el" href="structPt_1_1Char.html">Pt::Char</a> m)</td></tr>
 <tr class="memdesc:ac0c392c62b968a7418fb0f8bb2e0a222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a completed click for the mnemonic character <em class="arg">m</em>. <br /></td></tr>
@@ -611,8 +684,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief Command button with optional toggle, icon, and caption.</p>
-<p>A PushButton is a Button that presents a command. A completed click emits clicked() and, unless it is a toggle, returns to the unpressed look. setToggle() keeps the pressed state after release so the button can show an on/off command such as Bold.</p>
+<div class="textblock"><p>A PushButton is a Button that presents a command. A completed click emits clicked() and, unless it is a toggle, returns to the unpressed look. setToggle() keeps the pressed state after release so the button can show an on/off command such as Bold.</p>
 <p>setIcon() places a picture next to the caption. setLayout() chooses the Direction of icon and text. setFlat() drops the framed face.</p>
 <p>The button owns a ButtonStyler. On invalidate it calls Styler::bind(). Appearance getters and setters read and write widget-local options. setRenderer() assigns a ButtonRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. ButtonState is the snapshot passed to paint layers.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a> send;</div>
@@ -625,7 +697,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <div class="line">}</div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Button_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1Button.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::Button::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div><div class="ttdoc">Sets the caption to t and records its mnemonic.</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Button_html_a6ee15fedd22900f3baeb4bcb56ea79c1"><div class="ttname"><a href="classPt_1_1Forms_1_1Button.html#a6ee15fedd22900f3baeb4bcb56ea79c1">Pt::Forms::Button::clicked</a></div><div class="ttdeci">Signal &amp; clicked()</div><div class="ttdoc">Returns the signal emitted after a completed click.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1PushButton_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a></div><div class="ttdef"><b>Definition</b> PushButton.h:77</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1PushButton_html"><div class="ttname"><a href="classPt_1_1Forms_1_1PushButton.html">Pt::Forms::PushButton</a></div><div class="ttdoc">Command button with optional toggle, icon, and caption.</div><div class="ttdef"><b>Definition</b> PushButton.h:77</div></div>
 <div class="ttc" id="aclassPt_1_1Slot_html_a6fe36105ca29dc11b2f8ffb98cfffcf5"><div class="ttname"><a href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, ClassT, As... &gt; slot(ClassT &amp;object, R(BaseT::*method)(As...) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div><div class="ttdef"><b>Definition</b> ConstMethod.h:172</div></div>
 </div><!-- fragment --> </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd" name="ab55053d0a57be0d70df423df9c2b12cd"></a>
@@ -658,124 +730,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4e8d3e1487162d555610657e733fda49" name="a4e8d3e1487162d555610657e733fda49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8d3e1487162d555610657e733fda49">&#9670;&#160;</a></span>PushButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PushButton </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Creates a command button. </p>
-
-</div>
-</div>
-<a id="aa62bfa6d5afb9b87389a9c1489e1b281" name="aa62bfa6d5afb9b87389a9c1489e1b281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa62bfa6d5afb9b87389a9c1489e1b281">&#9670;&#160;</a></span>~PushButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="#a4e8d3e1487162d555610657e733fda49">PushButton</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destroys the button. </p>
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a56b841b42db654e1d60230b2b22683cf" name="a56b841b42db654e1d60230b2b22683cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56b841b42db654e1d60230b2b22683cf">&#9670;&#160;</a></span>isPressed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isPressed </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns true if the button is visually pressed. </p>
-
-</div>
-</div>
-<a id="a7ff0e1938b244b6429dadb518bd88ef1" name="a7ff0e1938b244b6429dadb518bd88ef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ff0e1938b244b6429dadb518bd88ef1">&#9670;&#160;</a></span>setPressed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setPressed </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>pressed</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets whether the button is visually pressed. </p>
-
-</div>
-</div>
-<a id="aaef243e7332b464877cb8d69bbb2cf4e" name="aaef243e7332b464877cb8d69bbb2cf4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaef243e7332b464877cb8d69bbb2cf4e">&#9670;&#160;</a></span>isToggle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isToggle </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns true if the button stays pressed after a click. </p>
-
-</div>
-</div>
-<a id="a46bda686b9edd2dd7058b09171be3f8a" name="a46bda686b9edd2dd7058b09171be3f8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46bda686b9edd2dd7058b09171be3f8a">&#9670;&#160;</a></span>setToggle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setToggle </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>toggle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets whether the button stays pressed after a click. </p>
-
-</div>
-</div>
 <a id="a3d5ab28c5be995b1ee175b4573e51910" name="a3d5ab28c5be995b1ee175b4573e51910"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d5ab28c5be995b1ee175b4573e51910">&#9670;&#160;</a></span>setIcon()</h2>
 
@@ -794,332 +749,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Sets the icon shown beside the caption.</p>
 <p><em class="arg">iconSize</em> is the logical size requested from <em class="arg">icon</em>. </p>
-
-</div>
-</div>
-<a id="a91f6c10284742dc653c313db0d481ab7" name="a91f6c10284742dc653c313db0d481ab7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91f6c10284742dc653c313db0d481ab7">&#9670;&#160;</a></span>isFlat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isFlat </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns true if the button uses a flat face. </p>
-
-</div>
-</div>
-<a id="ae2e6c0f438234a6fdaf8f8303b876e81" name="ae2e6c0f438234a6fdaf8f8303b876e81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2e6c0f438234a6fdaf8f8303b876e81">&#9670;&#160;</a></span>setFlat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFlat </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets whether the button uses a flat face. </p>
-
-</div>
-</div>
-<a id="a12f5aac2f6c154111b88096c6508283a" name="a12f5aac2f6c154111b88096c6508283a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f5aac2f6c154111b88096c6508283a">&#9670;&#160;</a></span>setLayout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setLayout </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the direction of icon and caption to <em class="arg">d</em>. </p>
-
-</div>
-</div>
-<a id="a5b8bf8872895964001181eede4bb23af" name="a5b8bf8872895964001181eede4bb23af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b8bf8872895964001181eede4bb23af">&#9670;&#160;</a></span>foreground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp; foreground </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective foreground brush. </p>
-
-</div>
-</div>
-<a id="a51e5e13c91886ce59275c2f791202ab2" name="a51e5e13c91886ce59275c2f791202ab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51e5e13c91886ce59275c2f791202ab2">&#9670;&#160;</a></span>setForeground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setForeground </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local foreground brush to <em class="arg">b</em>. </p>
-
-</div>
-</div>
-<a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7965a531c832104928b133e1e156342">&#9670;&#160;</a></span>contour()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp; contour </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective contour pen. </p>
-
-</div>
-</div>
-<a id="a8ee47c90b0a1e2917e1a096bdfefc393" name="a8ee47c90b0a1e2917e1a096bdfefc393"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ee47c90b0a1e2917e1a096bdfefc393">&#9670;&#160;</a></span>setContour()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setContour </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local contour pen to <em class="arg">p</em>. </p>
-
-</div>
-</div>
-<a id="aa40b7f1d1f2fadc323968a097fe74e24" name="aa40b7f1d1f2fadc323968a097fe74e24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa40b7f1d1f2fadc323968a097fe74e24">&#9670;&#160;</a></span>accentColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp; accentColor </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective accent color. </p>
-
-</div>
-</div>
-<a id="af194e5bfd813c293867cf0769a3eed7d" name="af194e5bfd813c293867cf0769a3eed7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af194e5bfd813c293867cf0769a3eed7d">&#9670;&#160;</a></span>setAccentColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setAccentColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local accent color to <em class="arg">color</em>. </p>
-
-</div>
-</div>
-<a id="a1fbec5a629cf8ae169513f3d711b02a6" name="a1fbec5a629cf8ae169513f3d711b02a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fbec5a629cf8ae169513f3d711b02a6">&#9670;&#160;</a></span>highlightColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp; highlightColor </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective highlight color. </p>
-
-</div>
-</div>
-<a id="a4ed8fa198d40db7c9c418857d65c3e99" name="a4ed8fa198d40db7c9c418857d65c3e99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ed8fa198d40db7c9c418857d65c3e99">&#9670;&#160;</a></span>setHighlightColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setHighlightColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local highlight color to <em class="arg">c</em>. </p>
-
-</div>
-</div>
-<a id="a21cb9b4d5da5c498154b8eeb5ec77059" name="a21cb9b4d5da5c498154b8eeb5ec77059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21cb9b4d5da5c498154b8eeb5ec77059">&#9670;&#160;</a></span>textColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp; textColor </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective text color. </p>
-
-</div>
-</div>
-<a id="ac24598c93a713c95d97205c65dfccbfc" name="ac24598c93a713c95d97205c65dfccbfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac24598c93a713c95d97205c65dfccbfc">&#9670;&#160;</a></span>setTextColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setTextColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local text color to <em class="arg">color</em>. </p>
-
-</div>
-</div>
-<a id="a5e39b7242b7786c27bbe48d0675e2d08" name="a5e39b7242b7786c27bbe48d0675e2d08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e39b7242b7786c27bbe48d0675e2d08">&#9670;&#160;</a></span>font()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> font </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective font. </p>
-
-</div>
-</div>
-<a id="ac77626da8a7306cd079b1dd18558c9eb" name="ac77626da8a7306cd079b1dd18558c9eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac77626da8a7306cd079b1dd18558c9eb">&#9670;&#160;</a></span>setFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFont </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font to <em class="arg">font</em>. </p>
-
-</div>
-</div>
-<a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9848b494ebdcaa5a497aa3504a4507b">&#9670;&#160;</a></span>setFontSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontSize </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font size to <em class="arg">size</em>. </p>
-
-</div>
-</div>
-<a id="ae25e5c2d8699fd7c56e7c4547bad68a9" name="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25e5c2d8699fd7c56e7c4547bad68a9">&#9670;&#160;</a></span>setFontWeight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontWeight </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font weight to <em class="arg">weight</em>. </p>
-
-</div>
-</div>
-<a id="afb7efbf3edf499b8e918c921e94b08cb" name="afb7efbf3edf499b8e918c921e94b08cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb7efbf3edf499b8e918c921e94b08cb">&#9670;&#160;</a></span>setFontSlant()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontSlant </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a></td>          <td class="paramname"><span class="paramname"><em>slant</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font slant to <em class="arg">slant</em>. </p>
 
 </div>
 </div>
@@ -1137,120 +767,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Assigns <em class="arg">renderer</em> as the family renderer.</p>
 <p>Passing 0 uses the renderer from the current style. The change takes effect before this function returns. </p>
-
-</div>
-</div>
-<a id="a6c967e7b144eb6f86ce33e9fab4884d1" name="a6c967e7b144eb6f86ce33e9fab4884d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c967e7b144eb6f86ce33e9fab4884d1">&#9670;&#160;</a></span>onPressed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onPressed </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Presses the button, or toggles it when isToggle() is true. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Button.html#a6c967e7b144eb6f86ce33e9fab4884d1">Button</a>.</p>
-
-</div>
-</div>
-<a id="af9efe949c903461f25dc74e8d74cbee6" name="af9efe949c903461f25dc74e8d74cbee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9efe949c903461f25dc74e8d74cbee6">&#9670;&#160;</a></span>onReleased()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onReleased </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Completes the click and emits clicked(). </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Button.html#af9efe949c903461f25dc74e8d74cbee6">Button</a>.</p>
-
-</div>
-</div>
-<a id="a4faa596f82ad2f873fa9ca67f0c8a612" name="a4faa596f82ad2f873fa9ca67f0c8a612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4faa596f82ad2f873fa9ca67f0c8a612">&#9670;&#160;</a></span>onCanceled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onCanceled </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Restores the pressed state after an abandoned click. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Button.html#a4faa596f82ad2f873fa9ca67f0c8a612">Button</a>.</p>
-
-</div>
-</div>
-<a id="a254ac917bc0951e878ecd7f710fbe2c2" name="a254ac917bc0951e878ecd7f710fbe2c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a254ac917bc0951e878ecd7f710fbe2c2">&#9670;&#160;</a></span>onRescaleEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onRescaleEvent </td>
-          <td>(</td>
-          <td class="paramtype">const RescaleEvent &amp;</td>          <td class="paramname"><span class="paramname"><em>ev</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Invalidates a prepared icon after a scale change. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a254ac917bc0951e878ecd7f710fbe2c2">Control</a>.</p>
 
 </div>
 </div>
@@ -1276,98 +793,9 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Binds the styler and prepares the icon.</p>
 <p>Calls the base implementation, then Styler::bind(). When bind returns true, refreshes widget-owned caches such as icon pixmaps. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
-
-</div>
-</div>
-<a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912210d8dfc33e555b12402ee47ac406">&#9670;&#160;</a></span>onMeasure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual Gfx::SizeF onMeasure </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>policy</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Measures icon, caption, and frame. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>.</p>
-
-</div>
-</div>
-<a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d03b9b05b163ae71a33c9ffa418f84">&#9670;&#160;</a></span>onLayout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onLayout </td>
-          <td>(</td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Places icon, caption, and mnemonic in <em class="arg">rect</em>. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>.</p>
-
-</div>
-</div>
-<a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a169d5d7261571fb77c21873078a5e1d9">&#9670;&#160;</a></span>onPaint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onPaint </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>updateRect</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints background, frame, icon, caption, and mnemonic. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">Control</a>.</p>
 
 </div>
 </div>
@@ -1402,7 +830,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Paints the button background layer.</p>
 <p>The default implementation delegates to the current ButtonRenderer. </p>
 
 </div>
@@ -1438,7 +865,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Paints the button frame layer.</p>
 <p>The default implementation does nothing for flat buttons. </p>
 
 </div>
@@ -1484,7 +910,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Paints the button icon layer.</p>
 <p>The default implementation does nothing if no prepared icon pixmap exists. </p>
 
 </div>
@@ -1530,7 +955,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Paints the button text layer.</p>
 <p>The default implementation does nothing if the button text is empty. </p>
 
 </div>
@@ -1571,7 +995,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@brief Paints the button mnemonic layer.</p>
 <p>The default implementation does nothing if the button text is empty. </p>
 
 </div>

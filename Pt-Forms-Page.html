@@ -368,7 +368,6 @@ Button</h2>
 <div class="line">}</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-PushButton"></a>
 Push Buttons</h2>
-<p>@brief Command button with optional toggle, icon, and caption.</p>
 <p>A PushButton is a Button that presents a command. A completed click emits clicked() and, unless it is a toggle, returns to the unpressed look. setToggle() keeps the pressed state after release so the button can show an on/off command such as Bold.</p>
 <p>setIcon() places a picture next to the caption. setLayout() chooses the Direction of icon and text. setFlat() drops the framed face.</p>
 <p>The button owns a ButtonStyler. On invalidate it calls Styler::bind(). Appearance getters and setters read and write widget-local options. setRenderer() assigns a ButtonRenderer until it is cleared. Measure, layout, and paint call typed methods on the styler. ButtonState is the snapshot passed to paint layers.</p>
@@ -416,7 +415,6 @@ Labels</h2>
 <div class="line">empty.setTextColor(Pt::Gfx::Color(120, 120, 120));</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-Panel"></a>
 Panels</h2>
-<p>@brief Surface that groups one child behind an optional fill and frame.</p>
 <p>A Panel presents one content control with an optional background, frame, and icon. setContent() attaches the child without taking ownership. Keep the child alive until it is detached. content() returns the attached control, or 0.</p>
 <p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off. Whether the fill or frame is on is a widget setting, not a style option. setIcon() paints a picture aligned with the given Alignment.</p>
 <p>The panel owns a PanelStyler and shares that appearance family with Label. On invalidate it binds the styler. Measure, layout, and paint call typed methods on it. The content control is laid out in the inner rectangle after the frame.</p>
@@ -429,7 +427,6 @@ Panels</h2>
 <div class="line">window.setContent(&amp;banner);</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-ProgressBar"></a>
 Progress Bars</h2>
-<p>@brief Control that shows a value within a range.</p>
 <p>A ProgressBar maps an integer value between minimum() and maximum() to a ratio from 0 to 1. setRange() sets the bounds. setValue() clamps the value and emits valueChanged(). progress() returns the ratio used to fill the track. reset() returns to the minimum.</p>
 <p>The bar owns a ProgressBarStyler. On invalidate it binds that styler. Appearance getters and setters overlay the application style. setRenderer() assigns a ProgressBarRenderer. progressBarState() is the snapshot passed to paint layers.</p>
 <div class="fragment"><div class="line">Pt::Forms::Label caption;</div>
@@ -527,7 +524,6 @@ Collections</h1>
 <p>Appearance follows the application style. On invalidate the control binds a family renderer through a styler. Widget-local brushes, pens, colors, fonts, and setRenderer() overlay that style without replacing it.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-ListBox"></a>
 List Boxes</h2>
-<p>@brief Scrollable list of items.</p>
 <p>A ListBox presents caller-owned ListBoxItem objects. Use addItem() to add an item. Keep each item alive until removeItem() detaches it. A completed click on a selectable item toggles ListBoxItem::isSelected(). selected() emits that item. selectedItems() returns the items that are currently selected. Calling setScrollBars() shows scroll bars when the list does not fit.</p>
 <p>The list owns a ListBoxStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. Use setRenderer() to assign a ListBoxRenderer until it is cleared. Measure, layout, and paint operations call typed methods on the styler.</p>
 <p>Items are hosted in a ScrollView.</p>
@@ -591,18 +587,15 @@ Menus</h1>
 <p>Menu containers and items use the application style for their default appearance. Menu, MenuBar, and MenuItemBase provide local brush, pen, color, and font overrides when an application needs a specific appearance.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-Menu"></a>
 Menu</h2>
-<p>@brief Represents a popup menu containing commands and nested menus.</p>
 <p>Use a Menu for commands chosen from a vertical popup list, including a context menu or the menu opened by a MenuBarItem. Add MenuItem objects for commands and MenuSubItem objects for nested menus. The menu does not own its items; remove an item before destroying it.</p>
 <p>A menu derives its default background and contour from the application style during invalidation. setBackground() and setContour() supply local overrides for this menu. A nested menu is opened and positioned by its associated submenu item.</p>
 <div class="fragment"><div class="line">Pt::Forms::Menu fileMenu;</div>
 <div class="line">Pt::Forms::MenuItem openItem;</div>
 <div class="line">openItem.setText(&quot;Open&quot;);</div>
 <div class="line">fileMenu.addItem(openItem);</div>
-</div><!-- fragment --><p>      @brief Defines the coordination interface shared by menu containers.</p>
-<p>Menu and MenuBar use this interface to register submenu items, track their parent item, and coordinate opening, closing, and cancellation. Applications use a concrete menu container instead of deriving from this type.   </p>
+</div><!-- fragment --><p>      Menu and MenuBar use this interface to register submenu items, track their parent item, and coordinate opening, closing, and cancellation. Applications use a concrete menu container instead of deriving from this type.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-MenuBar"></a>
 Menu Bars</h2>
-<p>@brief Represents a horizontal bar of top-level menus.</p>
 <p>Use a MenuBar to present a stable row of top-level command categories. Add MenuBarItem objects and associate each item with a Menu. The bar opens the selected menu below its item and closes the previously active menu. It does not own its items; remove an item before destroying it.</p>
 <p>A menu bar derives its default background and contour from the application style during invalidation. setBackground() and setContour() supply local overrides for this menu bar.</p>
 <div class="fragment"><div class="line">Pt::Forms::MenuBarItem fileItem;</div>
@@ -619,22 +612,16 @@ Menu Bars</h2>
 <div class="line">menuBar.addItem(fileItem);</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-MenuItem"></a>
 Menu Items</h2>
-<p>@brief Represents the common content and activation behavior of a menu item.</p>
 <p>A menu item displays text, an optional icon, an optional separator, and a shortcut when one is registered. A pointer or touch release over the item, or a matching shortcut, emits triggered(). A highlighted item is the item currently under the pointer.</p>
-<p>The item derives its default drawing attributes from the application style. Its background, contour, text color, and font setters provide local overrides. MenuItem, MenuSubItem, MenuMenuItem, and MenuBarItem use this common behavior.      @brief Represents a command that can be chosen from a menu.</p>
-<p>Use a MenuItem for a command that does not open a nested menu. Add it to a Menu and connect triggered() to perform the command. Its text, icon, separator, and local appearance overrides are inherited from MenuItemBase.      @brief Represents an alternate menu item that manages a nested menu.</p>
-<p>MenuMenuItem provides the same nested-menu association and keyboard delegation as MenuSubItem while using the base item presentation. setMenu() associates a nested menu without taking ownership.   </p>
+<p>The item derives its default drawing attributes from the application style. Its background, contour, text color, and font setters provide local overrides. MenuItem, MenuSubItem, MenuMenuItem, and MenuBarItem use this common behavior.      Use a MenuItem for a command that does not open a nested menu. Add it to a Menu and connect triggered() to perform the command. Its text, icon, separator, and local appearance overrides are inherited from MenuItemBase.      MenuMenuItem provides the same nested-menu association and keyboard delegation as MenuSubItem while using the base item presentation. setMenu() associates a nested menu without taking ownership.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-MenuSubItem"></a>
 Menu Subitems</h2>
-<p>@brief Represents a menu item that opens a nested menu.</p>
 <p>Use a MenuSubItem when choosing an entry should reveal another Menu. setMenu() associates a nested menu without taking ownership. Keep that menu alive while the item uses it. The containing Menu or MenuBar sets the parent menu while the item is attached.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-MenuBarItem"></a>
 Menu Bar Items</h2>
-<p>@brief Represents a top-level entry in a menu bar.</p>
 <p>Use a MenuBarItem to give a MenuBar a labeled top-level category. It inherits the nested-menu association and opening behavior of MenuSubItem. Add it to a MenuBar after assigning its menu.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-Popup"></a>
 Popups</h2>
-<p>@brief Represents a borderless transient window.</p>
 <p>A Popup is a Window shown for a short interaction such as a menu. setAnchor() relates it to the widget that opened it for popup input handling. The anchor does not position or size the popup. Move, size, raise, and show it explicitly.   </p>
 <h1 class="doxsection"><a class="anchor" id="Pt-Forms-Page-Icons"></a>
 Icons and Text</h1>
@@ -721,7 +708,6 @@ Stylers</h2>
 <p>Styler does not provide a public renderer accessor. Measure, layout, and paint use typed methods on the derived styler.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Forms-Page-Renderer"></a>
 Renderers</h2>
-<p>@brief Provides cloneable drawing for one control family.</p>
 <p>A Renderer is a Style::Facet that can clone itself. Shared instances remain in Style. Use reset() to apply application options. Use create() to allocate a new instance with a reference count of 0. FacetPtr and Style::set() take their own references.</p>
 <p>Named measure, layout, and render methods belong on derived renderer types. Use Facet::onReset() to read style options and store drawing state for those methods.</p>
 <p>A renderer may store a Painter. That painter keeps its brush, pen, font, clip, and composition after begin(). onReset() assigns the default attributes. A render method that changes them assigns the defaults again before it returns.</p>

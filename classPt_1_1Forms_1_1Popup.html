@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Popup_8h_source.html">Pt/Forms/Popup.h</a>&gt;</code></p>
 
+<p>Represents a borderless transient window.  
+ <a href="#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Window.html">Window</a>.</p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1Menu.html">Menu</a>.</p>
@@ -104,10 +107,17 @@ typedef <a class="el" href="classPt_1_1Forms_1_1WindowState.html">WindowState</a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acafbc3d564c1b116062e9219e8cff5cc" id="r_acafbc3d564c1b116062e9219e8cff5cc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acafbc3d564c1b116062e9219e8cff5cc">Popup</a> ()</td></tr>
-<tr class="memitem:a4ca5228b99045a3989678cc750221c4b" id="r_a4ca5228b99045a3989678cc750221c4b"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a4ca5228b99045a3989678cc750221c4b">~Popup</a> ()</td></tr>
-<tr class="memitem:a0c6711de4db0bf63f30e09be0100716e" id="r_a0c6711de4db0bf63f30e09be0100716e"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0c6711de4db0bf63f30e09be0100716e">anchor</a> ()</td></tr>
+<tr class="memitem:acafbc3d564c1b116062e9219e8cff5cc" id="r_acafbc3d564c1b116062e9219e8cff5cc"><td class="memItemLeft"><a id="acafbc3d564c1b116062e9219e8cff5cc" name="acafbc3d564c1b116062e9219e8cff5cc"></a>
+&#160;</td><td class="memItemRight"><b>Popup</b> ()</td></tr>
+<tr class="memdesc:acafbc3d564c1b116062e9219e8cff5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a detached borderless popup. <br /></td></tr>
+<tr class="memitem:a4ca5228b99045a3989678cc750221c4b" id="r_a4ca5228b99045a3989678cc750221c4b"><td class="memItemLeft"><a id="a4ca5228b99045a3989678cc750221c4b" name="a4ca5228b99045a3989678cc750221c4b"></a>
+virtual&#160;</td><td class="memItemRight"><b>~Popup</b> ()</td></tr>
+<tr class="memdesc:a4ca5228b99045a3989678cc750221c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the popup. <br /></td></tr>
+<tr class="memitem:a0c6711de4db0bf63f30e09be0100716e" id="r_a0c6711de4db0bf63f30e09be0100716e"><td class="memItemLeft"><a id="a0c6711de4db0bf63f30e09be0100716e" name="a0c6711de4db0bf63f30e09be0100716e"></a>
+<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight"><b>anchor</b> ()</td></tr>
+<tr class="memdesc:a0c6711de4db0bf63f30e09be0100716e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the anchor widget, or 0 when none is set. <br /></td></tr>
 <tr class="memitem:a9dfcb6c61ddd1dcc9f897988ac644ec3" id="r_a9dfcb6c61ddd1dcc9f897988ac644ec3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9dfcb6c61ddd1dcc9f897988ac644ec3">setAnchor</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *anchor=0)</td></tr>
+<tr class="memdesc:a9dfcb6c61ddd1dcc9f897988ac644ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relates this popup to <em class="arg">anchor</em> for popup input handling.  <br /></td></tr>
 <tr class="memitem:acdd57690883f752257f313ab775ad36d" id="r_acdd57690883f752257f313ab775ad36d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Window.html#acdd57690883f752257f313ab775ad36d">setParent</a> (WindowManager &amp;parent)</td></tr>
 <tr class="memdesc:acdd57690883f752257f313ab775ad36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches the window to <em class="arg">parent</em>.  <br /></td></tr>
 <tr class="memitem:ab1e5200da2da8f45a17fa7e77969e966" id="r_ab1e5200da2da8f45a17fa7e77969e966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Window.html#ab1e5200da2da8f45a17fa7e77969e966">unparent</a> ()</td></tr>
@@ -606,8 +616,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief Represents a borderless transient window.</p>
-<p>A Popup is a Window shown for a short interaction such as a menu. setAnchor() relates it to the widget that opened it for popup input handling. The anchor does not position or size the popup. Move, size, raise, and show it explicitly. </p>
+<div class="textblock"><p>A Popup is a Window shown for a short interaction such as a menu. setAnchor() relates it to the widget that opened it for popup input handling. The anchor does not position or size the popup. Move, size, raise, and show it explicitly. </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd" name="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&#160;</a></span>FocusPolicy</h2>
@@ -639,70 +648,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acafbc3d564c1b116062e9219e8cff5cc" name="acafbc3d564c1b116062e9219e8cff5cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acafbc3d564c1b116062e9219e8cff5cc">&#9670;&#160;</a></span>Popup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Popup </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Creates a detached borderless popup. </p>
-
-</div>
-</div>
-<a id="a4ca5228b99045a3989678cc750221c4b" name="a4ca5228b99045a3989678cc750221c4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ca5228b99045a3989678cc750221c4b">&#9670;&#160;</a></span>~Popup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="#acafbc3d564c1b116062e9219e8cff5cc">Popup</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destroys the popup. </p>
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a0c6711de4db0bf63f30e09be0100716e" name="a0c6711de4db0bf63f30e09be0100716e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c6711de4db0bf63f30e09be0100716e">&#9670;&#160;</a></span>anchor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> * anchor </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the anchor widget, or 0 when none is set. </p>
-
-</div>
-</div>
 <a id="a9dfcb6c61ddd1dcc9f897988ac644ec3" name="a9dfcb6c61ddd1dcc9f897988ac644ec3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dfcb6c61ddd1dcc9f897988ac644ec3">&#9670;&#160;</a></span>setAnchor()</h2>
 
@@ -717,7 +663,6 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Relates this popup to <em class="arg">anchor</em> for popup input handling.</p>
 <p>Pass 0 to clear the anchor. The popup does not own <em class="arg">anchor</em>. Pointer and touch input that hits the anchor or one of its descendants is routed to the anchor instead of the popup. The anchor does not position or size the popup. </p>
 
 </div>

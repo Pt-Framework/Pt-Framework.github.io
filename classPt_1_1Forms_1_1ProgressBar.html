@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="ProgressBar_8h_source.html">Pt/Forms/ProgressBar.h</a>&gt;</code></p>
 
+<p><a class="el" href="classPt_1_1Forms_1_1Control.html" title="Reusable view used as application content.">Control</a> that shows a value within a range.  
+ <a href="#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -96,31 +99,80 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a721b0ae95bd08a851655c1c53a08d826" id="r_a721b0ae95bd08a851655c1c53a08d826"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a721b0ae95bd08a851655c1c53a08d826">ProgressBar</a> ()</td></tr>
-<tr class="memitem:ae41bca66381f3e37f075b02665e831dd" id="r_ae41bca66381f3e37f075b02665e831dd"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ae41bca66381f3e37f075b02665e831dd">~ProgressBar</a> ()</td></tr>
-<tr class="memitem:a8ccf6f4c761607c37927ddffda6dfc83" id="r_a8ccf6f4c761607c37927ddffda6dfc83"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8ccf6f4c761607c37927ddffda6dfc83">maximum</a> () const</td></tr>
-<tr class="memitem:ac627b1070ecf0a191d483717a623820b" id="r_ac627b1070ecf0a191d483717a623820b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac627b1070ecf0a191d483717a623820b">minimum</a> () const</td></tr>
-<tr class="memitem:ab9eedccb53862a3577d79147b51946df" id="r_ab9eedccb53862a3577d79147b51946df"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab9eedccb53862a3577d79147b51946df">setRange</a> (int minpos, int maxpos)</td></tr>
-<tr class="memitem:a8702bf15d64240deb9b75903f38d9103" id="r_a8702bf15d64240deb9b75903f38d9103"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8702bf15d64240deb9b75903f38d9103">value</a> () const</td></tr>
-<tr class="memitem:a6ce3b26c111a73fc0757dee808943f19" id="r_a6ce3b26c111a73fc0757dee808943f19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ce3b26c111a73fc0757dee808943f19">setValue</a> (int n)</td></tr>
-<tr class="memitem:afb5e1a934b01b01c1584cf4be5287bd8" id="r_afb5e1a934b01b01c1584cf4be5287bd8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afb5e1a934b01b01c1584cf4be5287bd8">progress</a> () const</td></tr>
-<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55" id="r_ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
-<tr class="memitem:a580e72120e8580e6759e009404e49df0" id="r_a580e72120e8580e6759e009404e49df0"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a580e72120e8580e6759e009404e49df0">valueChanged</a> ()</td></tr>
-<tr class="memitem:a58f50f22df8ae76f2dee990b878cbf64" id="r_a58f50f22df8ae76f2dee990b878cbf64"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a58f50f22df8ae76f2dee990b878cbf64">background</a> () const</td></tr>
-<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393" id="r_a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
-<tr class="memitem:a5b8bf8872895964001181eede4bb23af" id="r_a5b8bf8872895964001181eede4bb23af"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5b8bf8872895964001181eede4bb23af">foreground</a> () const</td></tr>
-<tr class="memitem:a51e5e13c91886ce59275c2f791202ab2" id="r_a51e5e13c91886ce59275c2f791202ab2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51e5e13c91886ce59275c2f791202ab2">setForeground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
-<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac7965a531c832104928b133e1e156342">contour</a> () const</td></tr>
-<tr class="memitem:a8ee47c90b0a1e2917e1a096bdfefc393" id="r_a8ee47c90b0a1e2917e1a096bdfefc393"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ee47c90b0a1e2917e1a096bdfefc393">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;p)</td></tr>
-<tr class="memitem:a21cb9b4d5da5c498154b8eeb5ec77059" id="r_a21cb9b4d5da5c498154b8eeb5ec77059"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a21cb9b4d5da5c498154b8eeb5ec77059">textColor</a> () const</td></tr>
-<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc" id="r_ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac24598c93a713c95d97205c65dfccbfc">setTextColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
-<tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08" id="r_a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5e39b7242b7786c27bbe48d0675e2d08">font</a> () const</td></tr>
-<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb" id="r_ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac77626da8a7306cd079b1dd18558c9eb">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
-<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9848b494ebdcaa5a497aa3504a4507b">setFontSize</a> (std::size_t size)</td></tr>
-<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9" id="r_ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae25e5c2d8699fd7c56e7c4547bad68a9">setFontWeight</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
-<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb" id="r_afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb7efbf3edf499b8e918c921e94b08cb">setFontSlant</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memitem:a721b0ae95bd08a851655c1c53a08d826" id="r_a721b0ae95bd08a851655c1c53a08d826"><td class="memItemLeft"><a id="a721b0ae95bd08a851655c1c53a08d826" name="a721b0ae95bd08a851655c1c53a08d826"></a>
+&#160;</td><td class="memItemRight"><b>ProgressBar</b> ()</td></tr>
+<tr class="memdesc:a721b0ae95bd08a851655c1c53a08d826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a progress bar with range 0 to 100 and value 50. <br /></td></tr>
+<tr class="memitem:ae41bca66381f3e37f075b02665e831dd" id="r_ae41bca66381f3e37f075b02665e831dd"><td class="memItemLeft"><a id="ae41bca66381f3e37f075b02665e831dd" name="ae41bca66381f3e37f075b02665e831dd"></a>
+virtual&#160;</td><td class="memItemRight"><b>~ProgressBar</b> ()</td></tr>
+<tr class="memdesc:ae41bca66381f3e37f075b02665e831dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the progress bar. <br /></td></tr>
+<tr class="memitem:a8ccf6f4c761607c37927ddffda6dfc83" id="r_a8ccf6f4c761607c37927ddffda6dfc83"><td class="memItemLeft"><a id="a8ccf6f4c761607c37927ddffda6dfc83" name="a8ccf6f4c761607c37927ddffda6dfc83"></a>
+int&#160;</td><td class="memItemRight"><b>maximum</b> () const</td></tr>
+<tr class="memdesc:a8ccf6f4c761607c37927ddffda6dfc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the upper bound of the range. <br /></td></tr>
+<tr class="memitem:ac627b1070ecf0a191d483717a623820b" id="r_ac627b1070ecf0a191d483717a623820b"><td class="memItemLeft"><a id="ac627b1070ecf0a191d483717a623820b" name="ac627b1070ecf0a191d483717a623820b"></a>
+int&#160;</td><td class="memItemRight"><b>minimum</b> () const</td></tr>
+<tr class="memdesc:ac627b1070ecf0a191d483717a623820b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lower bound of the range. <br /></td></tr>
+<tr class="memitem:ab9eedccb53862a3577d79147b51946df" id="r_ab9eedccb53862a3577d79147b51946df"><td class="memItemLeft"><a id="ab9eedccb53862a3577d79147b51946df" name="ab9eedccb53862a3577d79147b51946df"></a>
+void&#160;</td><td class="memItemRight"><b>setRange</b> (int minpos, int maxpos)</td></tr>
+<tr class="memdesc:ab9eedccb53862a3577d79147b51946df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the range to <em class="arg">minpos</em> through <em class="arg">maxpos</em>. <br /></td></tr>
+<tr class="memitem:a8702bf15d64240deb9b75903f38d9103" id="r_a8702bf15d64240deb9b75903f38d9103"><td class="memItemLeft"><a id="a8702bf15d64240deb9b75903f38d9103" name="a8702bf15d64240deb9b75903f38d9103"></a>
+int&#160;</td><td class="memItemRight"><b>value</b> () const</td></tr>
+<tr class="memdesc:a8702bf15d64240deb9b75903f38d9103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value. <br /></td></tr>
+<tr class="memitem:a6ce3b26c111a73fc0757dee808943f19" id="r_a6ce3b26c111a73fc0757dee808943f19"><td class="memItemLeft"><a id="a6ce3b26c111a73fc0757dee808943f19" name="a6ce3b26c111a73fc0757dee808943f19"></a>
+void&#160;</td><td class="memItemRight"><b>setValue</b> (int n)</td></tr>
+<tr class="memdesc:a6ce3b26c111a73fc0757dee808943f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to <em class="arg">n</em>, clamped to the range, and emits valueChanged(). <br /></td></tr>
+<tr class="memitem:afb5e1a934b01b01c1584cf4be5287bd8" id="r_afb5e1a934b01b01c1584cf4be5287bd8"><td class="memItemLeft"><a id="afb5e1a934b01b01c1584cf4be5287bd8" name="afb5e1a934b01b01c1584cf4be5287bd8"></a>
+float&#160;</td><td class="memItemRight"><b>progress</b> () const</td></tr>
+<tr class="memdesc:afb5e1a934b01b01c1584cf4be5287bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the filled ratio from 0 to 1. <br /></td></tr>
+<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55" id="r_ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft"><a id="ad20897c5c8bd47f5d4005989bead0e55" name="ad20897c5c8bd47f5d4005989bead0e55"></a>
+void&#160;</td><td class="memItemRight"><b>reset</b> ()</td></tr>
+<tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to the minimum. <br /></td></tr>
+<tr class="memitem:a580e72120e8580e6759e009404e49df0" id="r_a580e72120e8580e6759e009404e49df0"><td class="memItemLeft"><a id="a580e72120e8580e6759e009404e49df0" name="a580e72120e8580e6759e009404e49df0"></a>
+<a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight"><b>valueChanged</b> ()</td></tr>
+<tr class="memdesc:a580e72120e8580e6759e009404e49df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted after setValue() changes the value. <br /></td></tr>
+<tr class="memitem:a58f50f22df8ae76f2dee990b878cbf64" id="r_a58f50f22df8ae76f2dee990b878cbf64"><td class="memItemLeft"><a id="a58f50f22df8ae76f2dee990b878cbf64" name="a58f50f22df8ae76f2dee990b878cbf64"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><b>background</b> () const</td></tr>
+<tr class="memdesc:a58f50f22df8ae76f2dee990b878cbf64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective background brush. <br /></td></tr>
+<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393" id="r_a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft"><a id="a759a5fbd6e124e55f9a2596dc5f83393" name="a759a5fbd6e124e55f9a2596dc5f83393"></a>
+void&#160;</td><td class="memItemRight"><b>setBackground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memdesc:a759a5fbd6e124e55f9a2596dc5f83393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local background brush to <em class="arg">b</em>. <br /></td></tr>
+<tr class="memitem:a5b8bf8872895964001181eede4bb23af" id="r_a5b8bf8872895964001181eede4bb23af"><td class="memItemLeft"><a id="a5b8bf8872895964001181eede4bb23af" name="a5b8bf8872895964001181eede4bb23af"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><b>foreground</b> () const</td></tr>
+<tr class="memdesc:a5b8bf8872895964001181eede4bb23af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective foreground brush. <br /></td></tr>
+<tr class="memitem:a51e5e13c91886ce59275c2f791202ab2" id="r_a51e5e13c91886ce59275c2f791202ab2"><td class="memItemLeft"><a id="a51e5e13c91886ce59275c2f791202ab2" name="a51e5e13c91886ce59275c2f791202ab2"></a>
+void&#160;</td><td class="memItemRight"><b>setForeground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memdesc:a51e5e13c91886ce59275c2f791202ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local foreground brush to <em class="arg">b</em>. <br /></td></tr>
+<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft"><a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><b>contour</b> () const</td></tr>
+<tr class="memdesc:ac7965a531c832104928b133e1e156342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective contour pen. <br /></td></tr>
+<tr class="memitem:a8ee47c90b0a1e2917e1a096bdfefc393" id="r_a8ee47c90b0a1e2917e1a096bdfefc393"><td class="memItemLeft"><a id="a8ee47c90b0a1e2917e1a096bdfefc393" name="a8ee47c90b0a1e2917e1a096bdfefc393"></a>
+void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;p)</td></tr>
+<tr class="memdesc:a8ee47c90b0a1e2917e1a096bdfefc393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local contour pen to <em class="arg">p</em>. <br /></td></tr>
+<tr class="memitem:a21cb9b4d5da5c498154b8eeb5ec77059" id="r_a21cb9b4d5da5c498154b8eeb5ec77059"><td class="memItemLeft"><a id="a21cb9b4d5da5c498154b8eeb5ec77059" name="a21cb9b4d5da5c498154b8eeb5ec77059"></a>
+const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><b>textColor</b> () const</td></tr>
+<tr class="memdesc:a21cb9b4d5da5c498154b8eeb5ec77059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective text color. <br /></td></tr>
+<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc" id="r_ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft"><a id="ac24598c93a713c95d97205c65dfccbfc" name="ac24598c93a713c95d97205c65dfccbfc"></a>
+void&#160;</td><td class="memItemRight"><b>setTextColor</b> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memdesc:ac24598c93a713c95d97205c65dfccbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local text color to <em class="arg">color</em>. <br /></td></tr>
+<tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08" id="r_a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft"><a id="a5e39b7242b7786c27bbe48d0675e2d08" name="a5e39b7242b7786c27bbe48d0675e2d08"></a>
+<a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight"><b>font</b> () const</td></tr>
+<tr class="memdesc:a5e39b7242b7786c27bbe48d0675e2d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective font. <br /></td></tr>
+<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb" id="r_ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft"><a id="ac77626da8a7306cd079b1dd18558c9eb" name="ac77626da8a7306cd079b1dd18558c9eb"></a>
+void&#160;</td><td class="memItemRight"><b>setFont</b> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
+<tr class="memdesc:ac77626da8a7306cd079b1dd18558c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font to <em class="arg">font</em>. <br /></td></tr>
+<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft"><a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
+void&#160;</td><td class="memItemRight"><b>setFontSize</b> (std::size_t size)</td></tr>
+<tr class="memdesc:af9848b494ebdcaa5a497aa3504a4507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font size to <em class="arg">size</em>. <br /></td></tr>
+<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9" id="r_ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft"><a id="ae25e5c2d8699fd7c56e7c4547bad68a9" name="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
+void&#160;</td><td class="memItemRight"><b>setFontWeight</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
+<tr class="memdesc:ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font weight to <em class="arg">weight</em>. <br /></td></tr>
+<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb" id="r_afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft"><a id="afb7efbf3edf499b8e918c921e94b08cb" name="afb7efbf3edf499b8e918c921e94b08cb"></a>
+void&#160;</td><td class="memItemRight"><b>setFontSlant</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memdesc:afb7efbf3edf499b8e918c921e94b08cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font slant to <em class="arg">slant</em>. <br /></td></tr>
 <tr class="memitem:a0bdf210a4b6dee078cedd2fc148c4ae9" id="r_a0bdf210a4b6dee078cedd2fc148c4ae9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0bdf210a4b6dee078cedd2fc148c4ae9">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a> *renderer)</td></tr>
-<tr class="memitem:a43949d9e5d0197085bdeed41a0da4b3e" id="r_a43949d9e5d0197085bdeed41a0da4b3e"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a43949d9e5d0197085bdeed41a0da4b3e">progressBarState</a> () const</td></tr>
+<tr class="memdesc:a0bdf210a4b6dee078cedd2fc148c4ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns <em class="arg">renderer</em> as the family renderer.  <br /></td></tr>
+<tr class="memitem:a43949d9e5d0197085bdeed41a0da4b3e" id="r_a43949d9e5d0197085bdeed41a0da4b3e"><td class="memItemLeft"><a id="a43949d9e5d0197085bdeed41a0da4b3e" name="a43949d9e5d0197085bdeed41a0da4b3e"></a>
+<a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a>&#160;</td><td class="memItemRight"><b>progressBarState</b> () const</td></tr>
+<tr class="memdesc:a43949d9e5d0197085bdeed41a0da4b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the snapshot passed to paint layers. <br /></td></tr>
 <tr class="memitem:a39639f36997748377dfbbf5931b59cd3" id="r_a39639f36997748377dfbbf5931b59cd3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1View.html">View</a> &amp;parent)</td></tr>
 <tr class="memdesc:a39639f36997748377dfbbf5931b59cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches this control to <em class="arg">parent</em>.  <br /></td></tr>
 <tr class="memitem:ab1e5200da2da8f45a17fa7e77969e966" id="r_ab1e5200da2da8f45a17fa7e77969e966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ab1e5200da2da8f45a17fa7e77969e966">unparent</a> ()</td></tr>
@@ -365,11 +417,21 @@ void&#160;</td><td class="memItemRight"><b>keyEvent</b> (const <a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd" id="r_ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
-<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft">virtual Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
-<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const Gfx::RectF &amp;rect)</td></tr>
-<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a169d5d7261571fb77c21873078a5e1d9">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
-<tr class="memitem:a18eaf5ead7f19703cce2c8ed670b9bef" id="r_a18eaf5ead7f19703cce2c8ed670b9bef"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a18eaf5ead7f19703cce2c8ed670b9bef">onPaintChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd" id="r_ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft"><a id="ae95892a055053b2f35ed11e85287a8fd" name="ae95892a055053b2f35ed11e85287a8fd"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onInvalidate</b> ()</td></tr>
+<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler and requests relayout. <br /></td></tr>
+<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft"><a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
+virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasure</b> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
+<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the track and frame. <br /></td></tr>
+<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft"><a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onLayout</b> (const Gfx::RectF &amp;rect)</td></tr>
+<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the track and filled portion in <em class="arg">rect</em>. <br /></td></tr>
+<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft"><a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onPaint</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
+<tr class="memdesc:a169d5d7261571fb77c21873078a5e1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the chrome for the current progress. <br /></td></tr>
+<tr class="memitem:a18eaf5ead7f19703cce2c8ed670b9bef" id="r_a18eaf5ead7f19703cce2c8ed670b9bef"><td class="memItemLeft"><a id="a18eaf5ead7f19703cce2c8ed670b9bef" name="a18eaf5ead7f19703cce2c8ed670b9bef"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onPaintChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state)</td></tr>
+<tr class="memdesc:a18eaf5ead7f19703cce2c8ed670b9bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints track, filled portion, and text for <em class="arg">state</em>. <br /></td></tr>
 <tr class="memitem:a9f730a8927941df92c4bb28ddbfa6270" id="r_a9f730a8927941df92c4bb28ddbfa6270"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">onInvalidateEvent</a> (const InvalidateEvent &amp;ev)</td></tr>
 <tr class="memdesc:a9f730a8927941df92c4bb28ddbfa6270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the final coalesced invalidation event.  <br /></td></tr>
 <tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8" id="r_ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
@@ -587,8 +649,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief <a class="el" href="classPt_1_1Forms_1_1Control.html" title="Reusable view used as application content.">Control</a> that shows a value within a range.</p>
-<p>A ProgressBar maps an integer value between minimum() and maximum() to a ratio from 0 to 1. setRange() sets the bounds. setValue() clamps the value and emits valueChanged(). progress() returns the ratio used to fill the track. reset() returns to the minimum.</p>
+<div class="textblock"><p>A ProgressBar maps an integer value between minimum() and maximum() to a ratio from 0 to 1. setRange() sets the bounds. setValue() clamps the value and emits valueChanged(). progress() returns the ratio used to fill the track. reset() returns to the minimum.</p>
 <p>The bar owns a ProgressBarStyler. On invalidate it binds that styler. Appearance getters and setters overlay the application style. setRenderer() assigns a ProgressBarRenderer. progressBarState() is the snapshot passed to paint layers.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> caption;</div>
 <div class="line">caption.<a class="code hl_function" href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">setText</a>(<span class="stringliteral">&quot;Copying photos...&quot;</span>);</div>
@@ -603,10 +664,10 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <div class="line">}</div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition</b> Label.h:80</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html">Pt::Forms::ProgressBar</a></div><div class="ttdef"><b>Definition</b> ProgressBar.h:70</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a6ce3b26c111a73fc0757dee808943f19"><div class="ttname"><a href="#a6ce3b26c111a73fc0757dee808943f19">Pt::Forms::ProgressBar::setValue</a></div><div class="ttdeci">void setValue(int n)</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a8702bf15d64240deb9b75903f38d9103"><div class="ttname"><a href="#a8702bf15d64240deb9b75903f38d9103">Pt::Forms::ProgressBar::value</a></div><div class="ttdeci">int value() const</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_ab9eedccb53862a3577d79147b51946df"><div class="ttname"><a href="#ab9eedccb53862a3577d79147b51946df">Pt::Forms::ProgressBar::setRange</a></div><div class="ttdeci">void setRange(int minpos, int maxpos)</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ProgressBar.html">Pt::Forms::ProgressBar</a></div><div class="ttdoc">Control that shows a value within a range.</div><div class="ttdef"><b>Definition</b> ProgressBar.h:70</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a6ce3b26c111a73fc0757dee808943f19"><div class="ttname"><a href="#a6ce3b26c111a73fc0757dee808943f19">Pt::Forms::ProgressBar::setValue</a></div><div class="ttdeci">void setValue(int n)</div><div class="ttdoc">Sets the value to n, clamped to the range, and emits valueChanged().</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_a8702bf15d64240deb9b75903f38d9103"><div class="ttname"><a href="#a8702bf15d64240deb9b75903f38d9103">Pt::Forms::ProgressBar::value</a></div><div class="ttdeci">int value() const</div><div class="ttdoc">Returns the current value.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ProgressBar_html_ab9eedccb53862a3577d79147b51946df"><div class="ttname"><a href="#ab9eedccb53862a3577d79147b51946df">Pt::Forms::ProgressBar::setRange</a></div><div class="ttdeci">void setRange(int minpos, int maxpos)</div><div class="ttdoc">Sets the range to minpos through maxpos.</div></div>
 </div><!-- fragment --> </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd" name="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&#160;</a></span>FocusPolicy</h2>
@@ -638,434 +699,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a721b0ae95bd08a851655c1c53a08d826" name="a721b0ae95bd08a851655c1c53a08d826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a721b0ae95bd08a851655c1c53a08d826">&#9670;&#160;</a></span>ProgressBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ProgressBar </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Creates a progress bar with range 0 to 100 and value 50. </p>
-
-</div>
-</div>
-<a id="ae41bca66381f3e37f075b02665e831dd" name="ae41bca66381f3e37f075b02665e831dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41bca66381f3e37f075b02665e831dd">&#9670;&#160;</a></span>~ProgressBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="#a721b0ae95bd08a851655c1c53a08d826">ProgressBar</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destroys the progress bar. </p>
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a8ccf6f4c761607c37927ddffda6dfc83" name="a8ccf6f4c761607c37927ddffda6dfc83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ccf6f4c761607c37927ddffda6dfc83">&#9670;&#160;</a></span>maximum()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int maximum </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the upper bound of the range. </p>
-
-</div>
-</div>
-<a id="ac627b1070ecf0a191d483717a623820b" name="ac627b1070ecf0a191d483717a623820b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac627b1070ecf0a191d483717a623820b">&#9670;&#160;</a></span>minimum()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int minimum </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the lower bound of the range. </p>
-
-</div>
-</div>
-<a id="ab9eedccb53862a3577d79147b51946df" name="ab9eedccb53862a3577d79147b51946df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9eedccb53862a3577d79147b51946df">&#9670;&#160;</a></span>setRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setRange </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minpos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxpos</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the range to <em class="arg">minpos</em> through <em class="arg">maxpos</em>. </p>
-
-</div>
-</div>
-<a id="a8702bf15d64240deb9b75903f38d9103" name="a8702bf15d64240deb9b75903f38d9103"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8702bf15d64240deb9b75903f38d9103">&#9670;&#160;</a></span>value()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int value </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the current value. </p>
-
-</div>
-</div>
-<a id="a6ce3b26c111a73fc0757dee808943f19" name="a6ce3b26c111a73fc0757dee808943f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ce3b26c111a73fc0757dee808943f19">&#9670;&#160;</a></span>setValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setValue </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the value to <em class="arg">n</em>, clamped to the range, and emits valueChanged(). </p>
-
-</div>
-</div>
-<a id="afb5e1a934b01b01c1584cf4be5287bd8" name="afb5e1a934b01b01c1584cf4be5287bd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb5e1a934b01b01c1584cf4be5287bd8">&#9670;&#160;</a></span>progress()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float progress </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the filled ratio from 0 to 1. </p>
-
-</div>
-</div>
-<a id="ad20897c5c8bd47f5d4005989bead0e55" name="ad20897c5c8bd47f5d4005989bead0e55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad20897c5c8bd47f5d4005989bead0e55">&#9670;&#160;</a></span>reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void reset </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the value to the minimum. </p>
-
-</div>
-</div>
-<a id="a580e72120e8580e6759e009404e49df0" name="a580e72120e8580e6759e009404e49df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a580e72120e8580e6759e009404e49df0">&#9670;&#160;</a></span>valueChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; int &gt; &amp; valueChanged </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the signal emitted after setValue() changes the value. </p>
-
-</div>
-</div>
-<a id="a58f50f22df8ae76f2dee990b878cbf64" name="a58f50f22df8ae76f2dee990b878cbf64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58f50f22df8ae76f2dee990b878cbf64">&#9670;&#160;</a></span>background()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp; background </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective background brush. </p>
-
-</div>
-</div>
-<a id="a759a5fbd6e124e55f9a2596dc5f83393" name="a759a5fbd6e124e55f9a2596dc5f83393"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a759a5fbd6e124e55f9a2596dc5f83393">&#9670;&#160;</a></span>setBackground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setBackground </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local background brush to <em class="arg">b</em>. </p>
-
-</div>
-</div>
-<a id="a5b8bf8872895964001181eede4bb23af" name="a5b8bf8872895964001181eede4bb23af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b8bf8872895964001181eede4bb23af">&#9670;&#160;</a></span>foreground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp; foreground </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective foreground brush. </p>
-
-</div>
-</div>
-<a id="a51e5e13c91886ce59275c2f791202ab2" name="a51e5e13c91886ce59275c2f791202ab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51e5e13c91886ce59275c2f791202ab2">&#9670;&#160;</a></span>setForeground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setForeground </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local foreground brush to <em class="arg">b</em>. </p>
-
-</div>
-</div>
-<a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7965a531c832104928b133e1e156342">&#9670;&#160;</a></span>contour()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp; contour </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective contour pen. </p>
-
-</div>
-</div>
-<a id="a8ee47c90b0a1e2917e1a096bdfefc393" name="a8ee47c90b0a1e2917e1a096bdfefc393"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ee47c90b0a1e2917e1a096bdfefc393">&#9670;&#160;</a></span>setContour()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setContour </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local contour pen to <em class="arg">p</em>. </p>
-
-</div>
-</div>
-<a id="a21cb9b4d5da5c498154b8eeb5ec77059" name="a21cb9b4d5da5c498154b8eeb5ec77059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21cb9b4d5da5c498154b8eeb5ec77059">&#9670;&#160;</a></span>textColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp; textColor </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective text color. </p>
-
-</div>
-</div>
-<a id="ac24598c93a713c95d97205c65dfccbfc" name="ac24598c93a713c95d97205c65dfccbfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac24598c93a713c95d97205c65dfccbfc">&#9670;&#160;</a></span>setTextColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setTextColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local text color to <em class="arg">color</em>. </p>
-
-</div>
-</div>
-<a id="a5e39b7242b7786c27bbe48d0675e2d08" name="a5e39b7242b7786c27bbe48d0675e2d08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e39b7242b7786c27bbe48d0675e2d08">&#9670;&#160;</a></span>font()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> font </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the effective font. </p>
-
-</div>
-</div>
-<a id="ac77626da8a7306cd079b1dd18558c9eb" name="ac77626da8a7306cd079b1dd18558c9eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac77626da8a7306cd079b1dd18558c9eb">&#9670;&#160;</a></span>setFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFont </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font to <em class="arg">font</em>. </p>
-
-</div>
-</div>
-<a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9848b494ebdcaa5a497aa3504a4507b">&#9670;&#160;</a></span>setFontSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontSize </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font size to <em class="arg">size</em>. </p>
-
-</div>
-</div>
-<a id="ae25e5c2d8699fd7c56e7c4547bad68a9" name="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25e5c2d8699fd7c56e7c4547bad68a9">&#9670;&#160;</a></span>setFontWeight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontWeight </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font weight to <em class="arg">weight</em>. </p>
-
-</div>
-</div>
-<a id="afb7efbf3edf499b8e918c921e94b08cb" name="afb7efbf3edf499b8e918c921e94b08cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb7efbf3edf499b8e918c921e94b08cb">&#9670;&#160;</a></span>setFontSlant()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFontSlant </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a></td>          <td class="paramname"><span class="paramname"><em>slant</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Sets the widget-local font slant to <em class="arg">slant</em>. </p>
-
-</div>
-</div>
 <a id="a0bdf210a4b6dee078cedd2fc148c4ae9" name="a0bdf210a4b6dee078cedd2fc148c4ae9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bdf210a4b6dee078cedd2fc148c4ae9">&#9670;&#160;</a></span>setRenderer()</h2>
 
@@ -1080,202 +714,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Assigns <em class="arg">renderer</em> as the family renderer.</p>
 <p>A null renderer falls back to the current style on the next bind. </p>
-
-</div>
-</div>
-<a id="a43949d9e5d0197085bdeed41a0da4b3e" name="a43949d9e5d0197085bdeed41a0da4b3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43949d9e5d0197085bdeed41a0da4b3e">&#9670;&#160;</a></span>progressBarState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> progressBarState </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the snapshot passed to paint layers. </p>
-
-</div>
-</div>
-<a id="ae95892a055053b2f35ed11e85287a8fd" name="ae95892a055053b2f35ed11e85287a8fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95892a055053b2f35ed11e85287a8fd">&#9670;&#160;</a></span>onInvalidate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onInvalidate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Binds the styler and requests relayout. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
-
-</div>
-</div>
-<a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912210d8dfc33e555b12402ee47ac406">&#9670;&#160;</a></span>onMeasure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual Gfx::SizeF onMeasure </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>policy</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Measures the track and frame. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>.</p>
-
-</div>
-</div>
-<a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d03b9b05b163ae71a33c9ffa418f84">&#9670;&#160;</a></span>onLayout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onLayout </td>
-          <td>(</td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Places the track and filled portion in <em class="arg">rect</em>. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>.</p>
-
-</div>
-</div>
-<a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a169d5d7261571fb77c21873078a5e1d9">&#9670;&#160;</a></span>onPaint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onPaint </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>updateRect</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints the chrome for the current progress. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">Control</a>.</p>
-
-</div>
-</div>
-<a id="a18eaf5ead7f19703cce2c8ed670b9bef" name="a18eaf5ead7f19703cce2c8ed670b9bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18eaf5ead7f19703cce2c8ed670b9bef">&#9670;&#160;</a></span>onPaintChrome()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onPaintChrome </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Paints track, filled portion, and text for <em class="arg">state</em>. </p>
 
 </div>
 </div>

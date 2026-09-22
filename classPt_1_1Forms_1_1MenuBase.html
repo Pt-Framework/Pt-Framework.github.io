@@ -78,179 +78,49 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="MenuBase_8h_source.html">Pt/Forms/MenuBase.h</a>&gt;</code></p>
 
+<p>Defines the coordination interface shared by menu containers.  
+ <a href="#details">More...</a></p>
+
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1Menu.html">Menu</a><code> [protected]</code>, and <a class="el" href="classPt_1_1Forms_1_1MenuBar.html">MenuBar</a><code> [protected]</code>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affbe4d06ef886ce9f7e638bcdd4ddc3b" id="r_affbe4d06ef886ce9f7e638bcdd4ddc3b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#affbe4d06ef886ce9f7e638bcdd4ddc3b">MenuBase</a> ()</td></tr>
-<tr class="memitem:a52da0d23db0a4e2920dcc888c0320852" id="r_a52da0d23db0a4e2920dcc888c0320852"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a52da0d23db0a4e2920dcc888c0320852">~MenuBase</a> ()</td></tr>
-<tr class="memitem:a02d5fa6b14e221f3012a794b905be166" id="r_a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02d5fa6b14e221f3012a794b905be166">cancel</a> ()</td></tr>
-<tr class="memitem:af0978a6e64977c7fb22a15f07b3a075a" id="r_af0978a6e64977c7fb22a15f07b3a075a"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af0978a6e64977c7fb22a15f07b3a075a">findMenu</a> (const Pt::Gfx::PointF &amp;screenPos)</td></tr>
-<tr class="memitem:aac3540fb2920ec9d86f915ab6c78fce1" id="r_aac3540fb2920ec9d86f915ab6c78fce1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac3540fb2920ec9d86f915ab6c78fce1">closeMenu</a> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
-<tr class="memitem:abf5cef11bd36450f4a6eb096da87929d" id="r_abf5cef11bd36450f4a6eb096da87929d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abf5cef11bd36450f4a6eb096da87929d">openMenu</a> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
-<tr class="memitem:a72d0df4dd217f039eba55de9c519a31a" id="r_a72d0df4dd217f039eba55de9c519a31a"><td class="memItemLeft">const <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a72d0df4dd217f039eba55de9c519a31a">parentItem</a> () const</td></tr>
-<tr class="memitem:a40741e073266915259e0fb513e676ba7" id="r_a40741e073266915259e0fb513e676ba7"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a40741e073266915259e0fb513e676ba7">parentItem</a> ()</td></tr>
+<tr class="memitem:affbe4d06ef886ce9f7e638bcdd4ddc3b" id="r_affbe4d06ef886ce9f7e638bcdd4ddc3b"><td class="memItemLeft"><a id="affbe4d06ef886ce9f7e638bcdd4ddc3b" name="affbe4d06ef886ce9f7e638bcdd4ddc3b"></a>
+&#160;</td><td class="memItemRight"><b>MenuBase</b> ()</td></tr>
+<tr class="memdesc:affbe4d06ef886ce9f7e638bcdd4ddc3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an unassociated menu coordination interface. <br /></td></tr>
+<tr class="memitem:a52da0d23db0a4e2920dcc888c0320852" id="r_a52da0d23db0a4e2920dcc888c0320852"><td class="memItemLeft"><a id="a52da0d23db0a4e2920dcc888c0320852" name="a52da0d23db0a4e2920dcc888c0320852"></a>
+virtual&#160;</td><td class="memItemRight"><b>~MenuBase</b> ()</td></tr>
+<tr class="memdesc:a52da0d23db0a4e2920dcc888c0320852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the menu coordination interface. <br /></td></tr>
+<tr class="memitem:a02d5fa6b14e221f3012a794b905be166" id="r_a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft"><a id="a02d5fa6b14e221f3012a794b905be166" name="a02d5fa6b14e221f3012a794b905be166"></a>
+void&#160;</td><td class="memItemRight"><b>cancel</b> ()</td></tr>
+<tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the active menu interaction. <br /></td></tr>
+<tr class="memitem:af0978a6e64977c7fb22a15f07b3a075a" id="r_af0978a6e64977c7fb22a15f07b3a075a"><td class="memItemLeft"><a id="af0978a6e64977c7fb22a15f07b3a075a" name="af0978a6e64977c7fb22a15f07b3a075a"></a>
+<a class="el" href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a> *&#160;</td><td class="memItemRight"><b>findMenu</b> (const Pt::Gfx::PointF &amp;screenPos)</td></tr>
+<tr class="memdesc:af0978a6e64977c7fb22a15f07b3a075a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the menu widget at <em class="arg">screenPos</em>, or 0 when none is found. <br /></td></tr>
+<tr class="memitem:aac3540fb2920ec9d86f915ab6c78fce1" id="r_aac3540fb2920ec9d86f915ab6c78fce1"><td class="memItemLeft"><a id="aac3540fb2920ec9d86f915ab6c78fce1" name="aac3540fb2920ec9d86f915ab6c78fce1"></a>
+void&#160;</td><td class="memItemRight"><b>closeMenu</b> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
+<tr class="memdesc:aac3540fb2920ec9d86f915ab6c78fce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the submenu associated with <em class="arg">item</em>. <br /></td></tr>
+<tr class="memitem:abf5cef11bd36450f4a6eb096da87929d" id="r_abf5cef11bd36450f4a6eb096da87929d"><td class="memItemLeft"><a id="abf5cef11bd36450f4a6eb096da87929d" name="abf5cef11bd36450f4a6eb096da87929d"></a>
+void&#160;</td><td class="memItemRight"><b>openMenu</b> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
+<tr class="memdesc:abf5cef11bd36450f4a6eb096da87929d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the submenu associated with <em class="arg">item</em>. <br /></td></tr>
+<tr class="memitem:a72d0df4dd217f039eba55de9c519a31a" id="r_a72d0df4dd217f039eba55de9c519a31a"><td class="memItemLeft"><a id="a72d0df4dd217f039eba55de9c519a31a" name="a72d0df4dd217f039eba55de9c519a31a"></a>
+const <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> *&#160;</td><td class="memItemRight"><b>parentItem</b> () const</td></tr>
+<tr class="memdesc:a72d0df4dd217f039eba55de9c519a31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the item associated with this nested menu, or 0 for a root menu. <br /></td></tr>
+<tr class="memitem:a40741e073266915259e0fb513e676ba7" id="r_a40741e073266915259e0fb513e676ba7"><td class="memItemLeft"><a id="a40741e073266915259e0fb513e676ba7" name="a40741e073266915259e0fb513e676ba7"></a>
+<a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> *&#160;</td><td class="memItemRight"><b>parentItem</b> ()</td></tr>
+<tr class="memdesc:a40741e073266915259e0fb513e676ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the item associated with this nested menu, or 0 for a root menu. <br /></td></tr>
 <tr class="memitem:a30cfbdbbfadcfb722ccde19415350a69" id="r_a30cfbdbbfadcfb722ccde19415350a69"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a30cfbdbbfadcfb722ccde19415350a69">setParentItem</a> (<a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> *item)</td></tr>
-<tr class="memitem:ab05cb39913b4bed131e6f970ba68d3c1" id="r_ab05cb39913b4bed131e6f970ba68d3c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab05cb39913b4bed131e6f970ba68d3c1">addMenu</a> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
-<tr class="memitem:ac9997dae709fbba9453488163186874d" id="r_ac9997dae709fbba9453488163186874d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9997dae709fbba9453488163186874d">removeMenu</a> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
+<tr class="memdesc:a30cfbdbbfadcfb722ccde19415350a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associates this nested menu with <em class="arg">item</em>.  <br /></td></tr>
+<tr class="memitem:ab05cb39913b4bed131e6f970ba68d3c1" id="r_ab05cb39913b4bed131e6f970ba68d3c1"><td class="memItemLeft"><a id="ab05cb39913b4bed131e6f970ba68d3c1" name="ab05cb39913b4bed131e6f970ba68d3c1"></a>
+void&#160;</td><td class="memItemRight"><b>addMenu</b> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
+<tr class="memdesc:ab05cb39913b4bed131e6f970ba68d3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers <em class="arg">item</em> as a submenu entry. <br /></td></tr>
+<tr class="memitem:ac9997dae709fbba9453488163186874d" id="r_ac9997dae709fbba9453488163186874d"><td class="memItemLeft"><a id="ac9997dae709fbba9453488163186874d" name="ac9997dae709fbba9453488163186874d"></a>
+void&#160;</td><td class="memItemRight"><b>removeMenu</b> (<a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;item)</td></tr>
+<tr class="memdesc:ac9997dae709fbba9453488163186874d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters <em class="arg">item</em> as a submenu entry. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief Defines the coordination interface shared by menu containers.</p>
-<p>Menu and MenuBar use this interface to register submenu items, track their parent item, and coordinate opening, closing, and cancellation. Applications use a concrete menu container instead of deriving from this type. </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="affbe4d06ef886ce9f7e638bcdd4ddc3b" name="affbe4d06ef886ce9f7e638bcdd4ddc3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affbe4d06ef886ce9f7e638bcdd4ddc3b">&#9670;&#160;</a></span>MenuBase()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">MenuBase </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Creates an unassociated menu coordination interface. </p>
-
-</div>
-</div>
-<a id="a52da0d23db0a4e2920dcc888c0320852" name="a52da0d23db0a4e2920dcc888c0320852"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52da0d23db0a4e2920dcc888c0320852">&#9670;&#160;</a></span>~MenuBase()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="#affbe4d06ef886ce9f7e638bcdd4ddc3b">MenuBase</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destroys the menu coordination interface. </p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a02d5fa6b14e221f3012a794b905be166" name="a02d5fa6b14e221f3012a794b905be166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02d5fa6b14e221f3012a794b905be166">&#9670;&#160;</a></span>cancel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cancel </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Cancels the active menu interaction. </p>
-
-</div>
-</div>
-<a id="af0978a6e64977c7fb22a15f07b3a075a" name="af0978a6e64977c7fb22a15f07b3a075a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0978a6e64977c7fb22a15f07b3a075a">&#9670;&#160;</a></span>findMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Pt::Forms::Widget</a> * findMenu </td>
-          <td>(</td>
-          <td class="paramtype">const Pt::Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>screenPos</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the menu widget at <em class="arg">screenPos</em>, or 0 when none is found. </p>
-
-</div>
-</div>
-<a id="aac3540fb2920ec9d86f915ab6c78fce1" name="aac3540fb2920ec9d86f915ab6c78fce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac3540fb2920ec9d86f915ab6c78fce1">&#9670;&#160;</a></span>closeMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void closeMenu </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Closes the submenu associated with <em class="arg">item</em>. </p>
-
-</div>
-</div>
-<a id="abf5cef11bd36450f4a6eb096da87929d" name="abf5cef11bd36450f4a6eb096da87929d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf5cef11bd36450f4a6eb096da87929d">&#9670;&#160;</a></span>openMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void openMenu </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Opens the submenu associated with <em class="arg">item</em>. </p>
-
-</div>
-</div>
-<a id="a72d0df4dd217f039eba55de9c519a31a" name="a72d0df4dd217f039eba55de9c519a31a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72d0df4dd217f039eba55de9c519a31a">&#9670;&#160;</a></span>parentItem() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> * parentItem </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the item associated with this nested menu, or 0 for a root menu. </p>
-
-</div>
-</div>
-<a id="a40741e073266915259e0fb513e676ba7" name="a40741e073266915259e0fb513e676ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40741e073266915259e0fb513e676ba7">&#9670;&#160;</a></span>parentItem() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Forms_1_1MenuItemBase.html">MenuItemBase</a> * parentItem </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Returns the item associated with this nested menu, or 0 for a root menu. </p>
-
-</div>
-</div>
+<div class="textblock"><p>Menu and MenuBar use this interface to register submenu items, track their parent item, and coordinate opening, closing, and cancellation. Applications use a concrete menu container instead of deriving from this type. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a30cfbdbbfadcfb722ccde19415350a69" name="a30cfbdbbfadcfb722ccde19415350a69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30cfbdbbfadcfb722ccde19415350a69">&#9670;&#160;</a></span>setParentItem()</h2>
 
@@ -265,44 +135,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Associates this nested menu with <em class="arg">item</em>.</p>
 <p>The menu does not own <em class="arg">item</em>. </p>
-
-</div>
-</div>
-<a id="ab05cb39913b4bed131e6f970ba68d3c1" name="ab05cb39913b4bed131e6f970ba68d3c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab05cb39913b4bed131e6f970ba68d3c1">&#9670;&#160;</a></span>addMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addMenu </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Registers <em class="arg">item</em> as a submenu entry. </p>
-
-</div>
-</div>
-<a id="ac9997dae709fbba9453488163186874d" name="ac9997dae709fbba9453488163186874d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9997dae709fbba9453488163186874d">&#9670;&#160;</a></span>removeMenu()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void removeMenu </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MenuSubItem.html">MenuSubItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Unregisters <em class="arg">item</em> as a submenu entry. </p>
 
 </div>
 </div>

@@ -79,15 +79,23 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Forms_2PaintSurface_8h_source.html">Pt/Forms/PaintSurface.h</a>&gt;</code></p>
 
+<p><a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> render target for painting.  
+ <a href="#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">PaintSurface</a>.</p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5a34c712af0eb8661fa9cd21001dd3db" id="r_a5a34c712af0eb8661fa9cd21001dd3db"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a34c712af0eb8661fa9cd21001dd3db">PaintSurface</a> ()</td></tr>
-<tr class="memitem:afb2141e21845ea9feb60b0ee7496b208" id="r_afb2141e21845ea9feb60b0ee7496b208"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb2141e21845ea9feb60b0ee7496b208">~PaintSurface</a> ()</td></tr>
+<tr class="memitem:a5a34c712af0eb8661fa9cd21001dd3db" id="r_a5a34c712af0eb8661fa9cd21001dd3db"><td class="memItemLeft"><a id="a5a34c712af0eb8661fa9cd21001dd3db" name="a5a34c712af0eb8661fa9cd21001dd3db"></a>
+&#160;</td><td class="memItemRight"><b>PaintSurface</b> ()</td></tr>
+<tr class="memdesc:a5a34c712af0eb8661fa9cd21001dd3db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an unbound paint surface. <br /></td></tr>
+<tr class="memitem:afb2141e21845ea9feb60b0ee7496b208" id="r_afb2141e21845ea9feb60b0ee7496b208"><td class="memItemLeft"><a id="afb2141e21845ea9feb60b0ee7496b208" name="afb2141e21845ea9feb60b0ee7496b208"></a>
+&#160;</td><td class="memItemRight"><b>~PaintSurface</b> ()</td></tr>
+<tr class="memdesc:afb2141e21845ea9feb60b0ee7496b208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="memitem:a03caab657bf78d69efdc4216e58b560e" id="r_a03caab657bf78d69efdc4216e58b560e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03caab657bf78d69efdc4216e58b560e">drawPixmap</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;canvas, const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap, const Gfx::RectF *rect=0)</td></tr>
+<tr class="memdesc:a03caab657bf78d69efdc4216e58b560e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>.  <br /></td></tr>
 <tr class="memitem:a9c008fa8c4abae0fdf2c8d6c55dc2c2b" id="r_a9c008fa8c4abae0fdf2c8d6c55dc2c2b"><td class="memItemLeft"><a id="a9c008fa8c4abae0fdf2c8d6c55dc2c2b" name="a9c008fa8c4abae0fdf2c8d6c55dc2c2b"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">Gfx::ImageFormat</a> &amp;&#160;</td><td class="memItemRight"><b>format</b> () const</td></tr>
 <tr class="memdesc:a9c008fa8c4abae0fdf2c8d6c55dc2c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the image format. <br /></td></tr>
@@ -109,7 +117,9 @@ void&#160;</td><td class="memItemRight"><b>finish</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9d93951e19f50a7fc6013f86513b8663" id="r_a9d93951e19f50a7fc6013f86513b8663"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9d93951e19f50a7fc6013f86513b8663">onDrawPixmap</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;canvas, const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap, const Gfx::RectF *rect=0)=0</td></tr>
+<tr class="memitem:a9d93951e19f50a7fc6013f86513b8663" id="r_a9d93951e19f50a7fc6013f86513b8663"><td class="memItemLeft"><a id="a9d93951e19f50a7fc6013f86513b8663" name="a9d93951e19f50a7fc6013f86513b8663"></a>
+virtual void&#160;</td><td class="memItemRight"><b>onDrawPixmap</b> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;canvas, const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap, const Gfx::RectF *rect=0)=0</td></tr>
+<tr class="memdesc:a9d93951e19f50a7fc6013f86513b8663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>. <br /></td></tr>
 <tr class="memitem:a893f1101c650c08c98612515c2b1a89c" id="r_a893f1101c650c08c98612515c2b1a89c"><td class="memItemLeft"><a id="a893f1101c650c08c98612515c2b1a89c" name="a893f1101c650c08c98612515c2b1a89c"></a>
 void&#160;</td><td class="memItemRight"><b>invalidate</b> ()</td></tr>
 <tr class="memdesc:a893f1101c650c08c98612515c2b1a89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates the currently active paint canvas. <br /></td></tr>
@@ -139,56 +149,8 @@ virtual void&#160;</td><td class="memItemRight"><b>onFinish</b> ()=0</td></tr>
 <tr class="memdesc:acef200f77a155c73fff25a83b105c1ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finishes painting to the surface. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@brief <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> render target for painting.</p>
-<p>PaintSurface extends Gfx::PaintSurface with pixmap drawing. A view borrows a surface and adapts size, scaling, and offset. It does not own the assigned surface. </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5a34c712af0eb8661fa9cd21001dd3db" name="a5a34c712af0eb8661fa9cd21001dd3db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a34c712af0eb8661fa9cd21001dd3db">&#9670;&#160;</a></span>PaintSurface()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PaintSurface </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>@brief Constructs an unbound paint surface. </p>
-
-</div>
-</div>
-<a id="afb2141e21845ea9feb60b0ee7496b208" name="afb2141e21845ea9feb60b0ee7496b208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb2141e21845ea9feb60b0ee7496b208">&#9670;&#160;</a></span>~PaintSurface()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">~<a class="el" href="#a5a34c712af0eb8661fa9cd21001dd3db">PaintSurface</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Destructor. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html#a67497ada9e6faee163ad3ef082711a03">PaintSurface</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>PaintSurface extends Gfx::PaintSurface with pixmap drawing. A view borrows a surface and adapts size, scaling, and offset. It does not own the assigned surface. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a03caab657bf78d69efdc4216e58b560e" name="a03caab657bf78d69efdc4216e58b560e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03caab657bf78d69efdc4216e58b560e">&#9670;&#160;</a></span>drawPixmap()</h2>
 
@@ -217,50 +179,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onFinish</b> ()=0</td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>@brief Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>.</p>
 <p>When <em class="arg">rect</em> is not null, only that region of the pixmap is drawn. </p>
-
-</div>
-</div>
-<a id="a9d93951e19f50a7fc6013f86513b8663" name="a9d93951e19f50a7fc6013f86513b8663"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d93951e19f50a7fc6013f86513b8663">&#9670;&#160;</a></span>onDrawPixmap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onDrawPixmap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pixmap</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Gfx::RectF *</td>          <td class="paramname"><span class="paramname"><em>rect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>@brief Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>. </p>
-
-<p>Implemented in <a class="el" href="classPt_1_1Forms_1_1Pixmap.html#a4b7297fec3155de7be45ad152a046456">Pixmap</a>.</p>
 
 </div>
 </div>
