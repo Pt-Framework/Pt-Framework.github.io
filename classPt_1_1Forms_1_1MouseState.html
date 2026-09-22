@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -77,28 +77,109 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="MouseEvent_8h_source.html">Pt/Forms/MouseEvent.h</a>&gt;</code></p>
-
-<p>Pressed or released state of the mouse buttons.  
-</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7d50b4fac95676fdf6cb574d180bd06" id="r_aa7d50b4fac95676fdf6cb574d180bd06"><td class="memItemLeft"><a id="aa7d50b4fac95676fdf6cb574d180bd06" name="aa7d50b4fac95676fdf6cb574d180bd06"></a>
-&#160;</td><td class="memItemRight"><b>MouseState</b> ()</td></tr>
-<tr class="memdesc:aa7d50b4fac95676fdf6cb574d180bd06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a state in which no button is pressed. <br /></td></tr>
-<tr class="memitem:a9b113ade7c99ab3d539bb4201bc99448" id="r_a9b113ade7c99ab3d539bb4201bc99448"><td class="memItemLeft"><a id="a9b113ade7c99ab3d539bb4201bc99448" name="a9b113ade7c99ab3d539bb4201bc99448"></a>
-bool&#160;</td><td class="memItemRight"><b>isPressed</b> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button) const</td></tr>
-<tr class="memdesc:a9b113ade7c99ab3d539bb4201bc99448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the button is in pressed state. <br /></td></tr>
-<tr class="memitem:abd1a0b0ae6a3cc548220fbb1b0fc34bd" id="r_abd1a0b0ae6a3cc548220fbb1b0fc34bd"><td class="memItemLeft"><a id="abd1a0b0ae6a3cc548220fbb1b0fc34bd" name="abd1a0b0ae6a3cc548220fbb1b0fc34bd"></a>
-void&#160;</td><td class="memItemRight"><b>setPressed</b> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button)</td></tr>
-<tr class="memdesc:abd1a0b0ae6a3cc548220fbb1b0fc34bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records <em class="arg">button</em> as pressed. <br /></td></tr>
-<tr class="memitem:a7ac9f9a4becf09d1873ad2834ccee536" id="r_a7ac9f9a4becf09d1873ad2834ccee536"><td class="memItemLeft"><a id="a7ac9f9a4becf09d1873ad2834ccee536" name="a7ac9f9a4becf09d1873ad2834ccee536"></a>
-bool&#160;</td><td class="memItemRight"><b>isReleased</b> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button) const</td></tr>
-<tr class="memdesc:a7ac9f9a4becf09d1873ad2834ccee536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the button is in released state. <br /></td></tr>
-<tr class="memitem:a1758127e0688856762710f5f0eccdb0e" id="r_a1758127e0688856762710f5f0eccdb0e"><td class="memItemLeft"><a id="a1758127e0688856762710f5f0eccdb0e" name="a1758127e0688856762710f5f0eccdb0e"></a>
-void&#160;</td><td class="memItemRight"><b>setReleased</b> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button)</td></tr>
-<tr class="memdesc:a1758127e0688856762710f5f0eccdb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records <em class="arg">button</em> as released. <br /></td></tr>
+<tr class="memitem:aa7d50b4fac95676fdf6cb574d180bd06" id="r_aa7d50b4fac95676fdf6cb574d180bd06"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa7d50b4fac95676fdf6cb574d180bd06">MouseState</a> ()</td></tr>
+<tr class="memitem:a9b113ade7c99ab3d539bb4201bc99448" id="r_a9b113ade7c99ab3d539bb4201bc99448"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9b113ade7c99ab3d539bb4201bc99448">isPressed</a> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button) const</td></tr>
+<tr class="memitem:abd1a0b0ae6a3cc548220fbb1b0fc34bd" id="r_abd1a0b0ae6a3cc548220fbb1b0fc34bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abd1a0b0ae6a3cc548220fbb1b0fc34bd">setPressed</a> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button)</td></tr>
+<tr class="memitem:a7ac9f9a4becf09d1873ad2834ccee536" id="r_a7ac9f9a4becf09d1873ad2834ccee536"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7ac9f9a4becf09d1873ad2834ccee536">isReleased</a> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button) const</td></tr>
+<tr class="memitem:a1758127e0688856762710f5f0eccdb0e" id="r_a1758127e0688856762710f5f0eccdb0e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1758127e0688856762710f5f0eccdb0e">setReleased</a> (<a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a> button)</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>@brief Pressed or released state of the mouse buttons. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa7d50b4fac95676fdf6cb574d180bd06" name="aa7d50b4fac95676fdf6cb574d180bd06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d50b4fac95676fdf6cb574d180bd06">&#9670;&#160;</a></span>MouseState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MouseState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Creates a state in which no button is pressed. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a9b113ade7c99ab3d539bb4201bc99448" name="a9b113ade7c99ab3d539bb4201bc99448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b113ade7c99ab3d539bb4201bc99448">&#9670;&#160;</a></span>isPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>button</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns true if the button is in pressed state. </p>
+
+</div>
+</div>
+<a id="abd1a0b0ae6a3cc548220fbb1b0fc34bd" name="abd1a0b0ae6a3cc548220fbb1b0fc34bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1a0b0ae6a3cc548220fbb1b0fc34bd">&#9670;&#160;</a></span>setPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>button</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Records <em class="arg">button</em> as pressed. </p>
+
+</div>
+</div>
+<a id="a7ac9f9a4becf09d1873ad2834ccee536" name="a7ac9f9a4becf09d1873ad2834ccee536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac9f9a4becf09d1873ad2834ccee536">&#9670;&#160;</a></span>isReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isReleased </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>button</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns true if the button is in released state. </p>
+
+</div>
+</div>
+<a id="a1758127e0688856762710f5f0eccdb0e" name="a1758127e0688856762710f5f0eccdb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1758127e0688856762710f5f0eccdb0e">&#9670;&#160;</a></span>setReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setReleased </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1MouseButton.html">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>button</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Records <em class="arg">button</em> as released. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->

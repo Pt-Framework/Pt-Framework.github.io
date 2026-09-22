@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -80,9 +80,6 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Panel_8h_source.html">Pt/Forms/Panel.h</a>&gt;</code></p>
 
-<p>Surface that groups one child behind an optional fill and frame.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -99,39 +96,18 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a00faada7bfea7e00a785325a29fef78f" id="r_a00faada7bfea7e00a785325a29fef78f"><td class="memItemLeft"><a id="a00faada7bfea7e00a785325a29fef78f" name="a00faada7bfea7e00a785325a29fef78f"></a>
-&#160;</td><td class="memItemRight"><b>Panel</b> ()</td></tr>
-<tr class="memdesc:a00faada7bfea7e00a785325a29fef78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty panel. <br /></td></tr>
-<tr class="memitem:a07b242bb9f55d4e02583dc760266a248" id="r_a07b242bb9f55d4e02583dc760266a248"><td class="memItemLeft"><a id="a07b242bb9f55d4e02583dc760266a248" name="a07b242bb9f55d4e02583dc760266a248"></a>
-virtual&#160;</td><td class="memItemRight"><b>~Panel</b> ()</td></tr>
-<tr class="memdesc:a07b242bb9f55d4e02583dc760266a248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the panel. The content control is not destroyed. <br /></td></tr>
+<tr class="memitem:a00faada7bfea7e00a785325a29fef78f" id="r_a00faada7bfea7e00a785325a29fef78f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a00faada7bfea7e00a785325a29fef78f">Panel</a> ()</td></tr>
+<tr class="memitem:a07b242bb9f55d4e02583dc760266a248" id="r_a07b242bb9f55d4e02583dc760266a248"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a07b242bb9f55d4e02583dc760266a248">~Panel</a> ()</td></tr>
 <tr class="memitem:a080e4810523c88fb7a45ce312735d893" id="r_a080e4810523c88fb7a45ce312735d893"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a080e4810523c88fb7a45ce312735d893">setIcon</a> (const <a class="el" href="classPt_1_1Forms_1_1Icon.html">Icon</a> &amp;icon, const Gfx::SizeF &amp;iconSize, <a class="el" href="classPt_1_1Forms_1_1Alignment.html">Alignment</a> align=<a class="el" href="classPt_1_1Forms_1_1Alignment.html#a46c8a310cf4c094f8c80e1cb8dc1f911aaa79b7c40b072fdcab65bfa11d732389">Alignment::Center</a>)</td></tr>
-<tr class="memdesc:a080e4810523c88fb7a45ce312735d893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icon painted in the panel.  <br /></td></tr>
-<tr class="memitem:a4c42450380849dc77ea96a57b23f7d20" id="r_a4c42450380849dc77ea96a57b23f7d20"><td class="memItemLeft"><a id="a4c42450380849dc77ea96a57b23f7d20" name="a4c42450380849dc77ea96a57b23f7d20"></a>
-<a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> *&#160;</td><td class="memItemRight"><b>content</b> () const</td></tr>
-<tr class="memdesc:a4c42450380849dc77ea96a57b23f7d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attached content control, or 0. <br /></td></tr>
+<tr class="memitem:a4c42450380849dc77ea96a57b23f7d20" id="r_a4c42450380849dc77ea96a57b23f7d20"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4c42450380849dc77ea96a57b23f7d20">content</a> () const</td></tr>
 <tr class="memitem:a6fef2c6247d27e9bc2144749dddbe437" id="r_a6fef2c6247d27e9bc2144749dddbe437"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6fef2c6247d27e9bc2144749dddbe437">setContent</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> *control)</td></tr>
-<tr class="memdesc:a6fef2c6247d27e9bc2144749dddbe437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches <em class="arg">control</em> as the content.  <br /></td></tr>
-<tr class="memitem:a39e9105e1838e91396f98c8ff39f46ec" id="r_a39e9105e1838e91396f98c8ff39f46ec"><td class="memItemLeft"><a id="a39e9105e1838e91396f98c8ff39f46ec" name="a39e9105e1838e91396f98c8ff39f46ec"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> *&#160;</td><td class="memItemRight"><b>background</b> () const</td></tr>
-<tr class="memdesc:a39e9105e1838e91396f98c8ff39f46ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the background brush, or 0 if the fill is off. <br /></td></tr>
-<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393" id="r_a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft"><a id="a759a5fbd6e124e55f9a2596dc5f83393" name="a759a5fbd6e124e55f9a2596dc5f83393"></a>
-void&#160;</td><td class="memItemRight"><b>setBackground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
-<tr class="memdesc:a759a5fbd6e124e55f9a2596dc5f83393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local background brush to <em class="arg">b</em> and enables the fill. <br /></td></tr>
-<tr class="memitem:a2ab397b7ad12b123bfbe98e640a9117a" id="r_a2ab397b7ad12b123bfbe98e640a9117a"><td class="memItemLeft"><a id="a2ab397b7ad12b123bfbe98e640a9117a" name="a2ab397b7ad12b123bfbe98e640a9117a"></a>
-void&#160;</td><td class="memItemRight"><b>setBackground</b> (bool b)</td></tr>
-<tr class="memdesc:a2ab397b7ad12b123bfbe98e640a9117a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the panel paints a background fill. <br /></td></tr>
-<tr class="memitem:a8eb3fdd55690126ac37ede6139af720c" id="r_a8eb3fdd55690126ac37ede6139af720c"><td class="memItemLeft"><a id="a8eb3fdd55690126ac37ede6139af720c" name="a8eb3fdd55690126ac37ede6139af720c"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> *&#160;</td><td class="memItemRight"><b>contour</b> () const</td></tr>
-<tr class="memdesc:a8eb3fdd55690126ac37ede6139af720c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contour pen, or 0 if the frame is off. <br /></td></tr>
-<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft"><a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
-void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
-<tr class="memdesc:ac9143b7c87f8dfa181347d080a3f126e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local contour pen to <em class="arg">pen</em> and enables the frame. <br /></td></tr>
-<tr class="memitem:a983ce8ebd909e9ea3f6243a508df4e8c" id="r_a983ce8ebd909e9ea3f6243a508df4e8c"><td class="memItemLeft"><a id="a983ce8ebd909e9ea3f6243a508df4e8c" name="a983ce8ebd909e9ea3f6243a508df4e8c"></a>
-void&#160;</td><td class="memItemRight"><b>setFrame</b> (bool b)</td></tr>
-<tr class="memdesc:a983ce8ebd909e9ea3f6243a508df4e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the panel paints a frame. <br /></td></tr>
+<tr class="memitem:a39e9105e1838e91396f98c8ff39f46ec" id="r_a39e9105e1838e91396f98c8ff39f46ec"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a39e9105e1838e91396f98c8ff39f46ec">background</a> () const</td></tr>
+<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393" id="r_a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memitem:a2ab397b7ad12b123bfbe98e640a9117a" id="r_a2ab397b7ad12b123bfbe98e640a9117a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ab397b7ad12b123bfbe98e640a9117a">setBackground</a> (bool b)</td></tr>
+<tr class="memitem:a8eb3fdd55690126ac37ede6139af720c" id="r_a8eb3fdd55690126ac37ede6139af720c"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8eb3fdd55690126ac37ede6139af720c">contour</a> () const</td></tr>
+<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9143b7c87f8dfa181347d080a3f126e">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
+<tr class="memitem:a983ce8ebd909e9ea3f6243a508df4e8c" id="r_a983ce8ebd909e9ea3f6243a508df4e8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a983ce8ebd909e9ea3f6243a508df4e8c">setFrame</a> (bool b)</td></tr>
 <tr class="memitem:ae2848ff405025f52436cf9081c24af2d" id="r_ae2848ff405025f52436cf9081c24af2d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae2848ff405025f52436cf9081c24af2d">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html">PanelRenderer</a> *renderer)</td></tr>
-<tr class="memdesc:ae2848ff405025f52436cf9081c24af2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns <em class="arg">renderer</em> as the family renderer.  <br /></td></tr>
 <tr class="memitem:a39639f36997748377dfbbf5931b59cd3" id="r_a39639f36997748377dfbbf5931b59cd3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1View.html">View</a> &amp;parent)</td></tr>
 <tr class="memdesc:a39639f36997748377dfbbf5931b59cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches this control to <em class="arg">parent</em>.  <br /></td></tr>
 <tr class="memitem:ab1e5200da2da8f45a17fa7e77969e966" id="r_ab1e5200da2da8f45a17fa7e77969e966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ab1e5200da2da8f45a17fa7e77969e966">unparent</a> ()</td></tr>
@@ -376,29 +352,15 @@ void&#160;</td><td class="memItemRight"><b>keyEvent</b> (const <a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8a741e85b6d1289105032bcf39d42ac9" id="r_a8a741e85b6d1289105032bcf39d42ac9"><td class="memItemLeft"><a id="a8a741e85b6d1289105032bcf39d42ac9" name="a8a741e85b6d1289105032bcf39d42ac9"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onRemoveControl</b> (<a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> &amp;control)</td></tr>
-<tr class="memdesc:a8a741e85b6d1289105032bcf39d42ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the content pointer when <em class="arg">control</em> is detached. <br /></td></tr>
+<tr class="memitem:a8a741e85b6d1289105032bcf39d42ac9" id="r_a8a741e85b6d1289105032bcf39d42ac9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8a741e85b6d1289105032bcf39d42ac9">onRemoveControl</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> &amp;control)</td></tr>
 <tr class="memitem:ae95892a055053b2f35ed11e85287a8fd" id="r_ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
-<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler and prepares the icon.  <br /></td></tr>
-<tr class="memitem:a254ac917bc0951e878ecd7f710fbe2c2" id="r_a254ac917bc0951e878ecd7f710fbe2c2"><td class="memItemLeft"><a id="a254ac917bc0951e878ecd7f710fbe2c2" name="a254ac917bc0951e878ecd7f710fbe2c2"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onRescaleEvent</b> (const RescaleEvent &amp;ev)</td></tr>
-<tr class="memdesc:a254ac917bc0951e878ecd7f710fbe2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates a prepared icon after a scale change. <br /></td></tr>
-<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft"><a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
-virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasure</b> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
-<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the content or icon and the frame. <br /></td></tr>
-<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft"><a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onLayout</b> (const Gfx::RectF &amp;rect)</td></tr>
-<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the content control in the inner rectangle. <br /></td></tr>
-<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft"><a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onPaint</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
-<tr class="memdesc:a169d5d7261571fb77c21873078a5e1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints background, content, and frame. <br /></td></tr>
+<tr class="memitem:a254ac917bc0951e878ecd7f710fbe2c2" id="r_a254ac917bc0951e878ecd7f710fbe2c2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a254ac917bc0951e878ecd7f710fbe2c2">onRescaleEvent</a> (const RescaleEvent &amp;ev)</td></tr>
+<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft">virtual Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
+<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const Gfx::RectF &amp;rect)</td></tr>
+<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a169d5d7261571fb77c21873078a5e1d9">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
 <tr class="memitem:a362eb1a90b96c4d30bbb9eae48826607" id="r_a362eb1a90b96c4d30bbb9eae48826607"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a362eb1a90b96c4d30bbb9eae48826607">onPaintBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1PanelState.html">PanelState</a> &amp;state)</td></tr>
-<tr class="memdesc:a362eb1a90b96c4d30bbb9eae48826607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the panel background layer.  <br /></td></tr>
 <tr class="memitem:a4d35f0696b85736da5f3802c86e0c5b2" id="r_a4d35f0696b85736da5f3802c86e0c5b2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4d35f0696b85736da5f3802c86e0c5b2">onPaintContent</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;contentRect, const <a class="el" href="classPt_1_1Forms_1_1PanelState.html">PanelState</a> &amp;state)</td></tr>
-<tr class="memdesc:a4d35f0696b85736da5f3802c86e0c5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the panel content layer.  <br /></td></tr>
 <tr class="memitem:a5410192208ac0e6e65710014066853ab" id="r_a5410192208ac0e6e65710014066853ab"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5410192208ac0e6e65710014066853ab">onPaintFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1PanelState.html">PanelState</a> &amp;state)</td></tr>
-<tr class="memdesc:a5410192208ac0e6e65710014066853ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the panel frame layer.  <br /></td></tr>
 <tr class="memitem:a9f730a8927941df92c4bb28ddbfa6270" id="r_a9f730a8927941df92c4bb28ddbfa6270"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">onInvalidateEvent</a> (const InvalidateEvent &amp;ev)</td></tr>
 <tr class="memdesc:a9f730a8927941df92c4bb28ddbfa6270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the final coalesced invalidation event.  <br /></td></tr>
 <tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8" id="r_ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
@@ -610,7 +572,8 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Panel presents one content control with an optional background, frame, and icon. setContent() attaches the child without taking ownership. Keep the child alive until it is detached. content() returns the attached control, or 0.</p>
+<div class="textblock"><p>@brief Surface that groups one child behind an optional fill and frame.</p>
+<p>A Panel presents one content control with an optional background, frame, and icon. setContent() attaches the child without taking ownership. Keep the child alive until it is detached. content() returns the attached control, or 0.</p>
 <p>setBackground() and setContour() enable a fill or frame. setBackground(false) and setFrame(false) turn them off. Whether the fill or frame is on is a widget setting, not a style option. setIcon() paints a picture aligned with the given Alignment.</p>
 <p>The panel owns a PanelStyler and shares that appearance family with Label. On invalidate it binds the styler. Measure, layout, and paint call typed methods on it. The content control is laid out in the inner rectangle after the frame.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a> status;</div>
@@ -622,9 +585,9 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <div class="line">window.setContent(&amp;banner);</div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Label_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html">Pt::Forms::Label</a></div><div class="ttdoc">Control that displays text or an icon.</div><div class="ttdef"><b>Definition</b> Label.h:80</div></div>
 <div class="ttc" id="aclassPt_1_1Forms_1_1Label_html_a22e712d6c6d105f802f5ade9ba41d85a"><div class="ttname"><a href="classPt_1_1Forms_1_1Label.html#a22e712d6c6d105f802f5ade9ba41d85a">Pt::Forms::Label::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;text)</div><div class="ttdoc">Sets the caption to text and clears any icon.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html">Pt::Forms::Panel</a></div><div class="ttdoc">Surface that groups one child behind an optional fill and frame.</div><div class="ttdef"><b>Definition</b> Panel.h:80</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Panel::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div><div class="ttdoc">Attaches control as the content.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a759a5fbd6e124e55f9a2596dc5f83393"><div class="ttname"><a href="#a759a5fbd6e124e55f9a2596dc5f83393">Pt::Forms::Panel::setBackground</a></div><div class="ttdeci">void setBackground(const Gfx::Brush &amp;b)</div><div class="ttdoc">Sets the widget-local background brush to b and enables the fill.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html"><div class="ttname"><a href="classPt_1_1Forms_1_1Panel.html">Pt::Forms::Panel</a></div><div class="ttdef"><b>Definition</b> Panel.h:80</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a6fef2c6247d27e9bc2144749dddbe437"><div class="ttname"><a href="#a6fef2c6247d27e9bc2144749dddbe437">Pt::Forms::Panel::setContent</a></div><div class="ttdeci">void setContent(Control *control)</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1Panel_html_a759a5fbd6e124e55f9a2596dc5f83393"><div class="ttname"><a href="#a759a5fbd6e124e55f9a2596dc5f83393">Pt::Forms::Panel::setBackground</a></div><div class="ttdeci">void setBackground(const Gfx::Brush &amp;b)</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Brush_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a></div><div class="ttdoc">Fill color, gradient or texture.</div><div class="ttdef"><b>Definition</b> Brush.h:151</div></div>
 <div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">8-bit ARGB color.</div><div class="ttdef"><b>Definition</b> Color.h:65</div></div>
 </div><!-- fragment --> </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
@@ -658,6 +621,51 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a00faada7bfea7e00a785325a29fef78f" name="a00faada7bfea7e00a785325a29fef78f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00faada7bfea7e00a785325a29fef78f">&#9670;&#160;</a></span>Panel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Panel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Creates an empty panel. </p>
+
+</div>
+</div>
+<a id="a07b242bb9f55d4e02583dc760266a248" name="a07b242bb9f55d4e02583dc760266a248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b242bb9f55d4e02583dc760266a248">&#9670;&#160;</a></span>~Panel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#a00faada7bfea7e00a785325a29fef78f">Panel</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Destroys the panel. The content control is not destroyed. </p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a080e4810523c88fb7a45ce312735d893" name="a080e4810523c88fb7a45ce312735d893"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a080e4810523c88fb7a45ce312735d893">&#9670;&#160;</a></span>setIcon()</h2>
@@ -682,7 +690,26 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
+<p>@brief Sets the icon painted in the panel.</p>
 <p><em class="arg">iconSize</em> is the logical size requested from <em class="arg">icon</em>. <em class="arg">align</em> places the icon in the inner rectangle. </p>
+
+</div>
+</div>
+<a id="a4c42450380849dc77ea96a57b23f7d20" name="a4c42450380849dc77ea96a57b23f7d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c42450380849dc77ea96a57b23f7d20">&#9670;&#160;</a></span>content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> * content </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the attached content control, or 0. </p>
 
 </div>
 </div>
@@ -700,7 +727,116 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
+<p>@brief Attaches <em class="arg">control</em> as the content.</p>
 <p>The panel does not take ownership. Passing 0 detaches the current content without destroying it. </p>
+
+</div>
+</div>
+<a id="a39e9105e1838e91396f98c8ff39f46ec" name="a39e9105e1838e91396f98c8ff39f46ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e9105e1838e91396f98c8ff39f46ec">&#9670;&#160;</a></span>background()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> * background </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the background brush, or 0 if the fill is off. </p>
+
+</div>
+</div>
+<a id="a759a5fbd6e124e55f9a2596dc5f83393" name="a759a5fbd6e124e55f9a2596dc5f83393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759a5fbd6e124e55f9a2596dc5f83393">&#9670;&#160;</a></span>setBackground() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackground </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local background brush to <em class="arg">b</em> and enables the fill. </p>
+
+</div>
+</div>
+<a id="a2ab397b7ad12b123bfbe98e640a9117a" name="a2ab397b7ad12b123bfbe98e640a9117a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab397b7ad12b123bfbe98e640a9117a">&#9670;&#160;</a></span>setBackground() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackground </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the panel paints a background fill. </p>
+
+</div>
+</div>
+<a id="a8eb3fdd55690126ac37ede6139af720c" name="a8eb3fdd55690126ac37ede6139af720c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb3fdd55690126ac37ede6139af720c">&#9670;&#160;</a></span>contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> * contour </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the contour pen, or 0 if the frame is off. </p>
+
+</div>
+</div>
+<a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9143b7c87f8dfa181347d080a3f126e">&#9670;&#160;</a></span>setContour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContour </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local contour pen to <em class="arg">pen</em> and enables the frame. </p>
+
+</div>
+</div>
+<a id="a983ce8ebd909e9ea3f6243a508df4e8c" name="a983ce8ebd909e9ea3f6243a508df4e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a983ce8ebd909e9ea3f6243a508df4e8c">&#9670;&#160;</a></span>setFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFrame </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the panel paints a frame. </p>
 
 </div>
 </div>
@@ -718,7 +854,36 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
+<p>@brief Assigns <em class="arg">renderer</em> as the family renderer.</p>
 <p>Passing 0 uses the renderer from the current style. The change takes effect before this function returns. </p>
+
+</div>
+</div>
+<a id="a8a741e85b6d1289105032bcf39d42ac9" name="a8a741e85b6d1289105032bcf39d42ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a741e85b6d1289105032bcf39d42ac9">&#9670;&#160;</a></span>onRemoveControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onRemoveControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Control.html#a6fe7e9bf67213437c5d4295a65edab4f">Control</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>control</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Clears the content pointer when <em class="arg">control</em> is detached. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a8a741e85b6d1289105032bcf39d42ac9">Control</a>.</p>
 
 </div>
 </div>
@@ -744,9 +909,126 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
+<p>@brief Binds the styler and prepares the icon.</p>
 <p>Calls the base implementation, then Styler::bind(). When bind returns true, refreshes widget-owned caches such as icon pixmaps. </p>
 
 <p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
+
+</div>
+</div>
+<a id="a254ac917bc0951e878ecd7f710fbe2c2" name="a254ac917bc0951e878ecd7f710fbe2c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a254ac917bc0951e878ecd7f710fbe2c2">&#9670;&#160;</a></span>onRescaleEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onRescaleEvent </td>
+          <td>(</td>
+          <td class="paramtype">const RescaleEvent &amp;</td>          <td class="paramname"><span class="paramname"><em>ev</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Invalidates a prepared icon after a scale change. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a254ac917bc0951e878ecd7f710fbe2c2">Control</a>.</p>
+
+</div>
+</div>
+<a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912210d8dfc33e555b12402ee47ac406">&#9670;&#160;</a></span>onMeasure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Gfx::SizeF onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>policy</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Measures the content or icon and the frame. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>.</p>
+
+</div>
+</div>
+<a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d03b9b05b163ae71a33c9ffa418f84">&#9670;&#160;</a></span>onLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onLayout </td>
+          <td>(</td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Places the content control in the inner rectangle. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>.</p>
+
+</div>
+</div>
+<a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a169d5d7261571fb77c21873078a5e1d9">&#9670;&#160;</a></span>onPaint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onPaint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>updateRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Paints background, content, and frame. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">Control</a>.</p>
 
 </div>
 </div>
@@ -781,6 +1063,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
+<p>@brief Paints the panel background layer.</p>
 <p>The default implementation does nothing if the panel has no background. </p>
 
 </div>
@@ -816,6 +1099,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
+<p>@brief Paints the panel content layer.</p>
 <p>The default implementation paints the optional panel icon. </p>
 
 </div>
@@ -851,6 +1135,7 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
   </tr>
 </table>
 </div><div class="memdoc">
+<p>@brief Paints the panel frame layer.</p>
 <p>The default implementation does nothing if the panel has no frame. </p>
 
 </div>

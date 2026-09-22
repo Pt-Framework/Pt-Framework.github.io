@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -80,9 +80,6 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="ListBox_8h_source.html">Pt/Forms/ListBox.h</a>&gt;</code></p>
 
-<p><a class="el" href="classPt_1_1Forms_1_1Layout.html" title="Control that arranges child controls.">Layout</a> that tracks selected list items.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1FlowLayout.html">FlowLayout</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -99,15 +96,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a087d01fcb4bbe1c2f2ae3aa8430e5564" id="r_a087d01fcb4bbe1c2f2ae3aa8430e5564"><td class="memItemLeft"><a id="a087d01fcb4bbe1c2f2ae3aa8430e5564" name="a087d01fcb4bbe1c2f2ae3aa8430e5564"></a>
-&#160;</td><td class="memItemRight"><b>ListBoxLayout</b> ()</td></tr>
-<tr class="memdesc:a087d01fcb4bbe1c2f2ae3aa8430e5564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty list layout. <br /></td></tr>
-<tr class="memitem:a6f1955f5d1aca99402238e8c6db4173a" id="r_a6f1955f5d1aca99402238e8c6db4173a"><td class="memItemLeft"><a id="a6f1955f5d1aca99402238e8c6db4173a" name="a6f1955f5d1aca99402238e8c6db4173a"></a>
-const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> * &gt; &amp;&#160;</td><td class="memItemRight"><b>selectedItems</b> () const</td></tr>
-<tr class="memdesc:a6f1955f5d1aca99402238e8c6db4173a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently selected items. <br /></td></tr>
-<tr class="memitem:a6e712d3d6ae2d64c2bbcb1dc22d752e0" id="r_a6e712d3d6ae2d64c2bbcb1dc22d752e0"><td class="memItemLeft"><a id="a6e712d3d6ae2d64c2bbcb1dc22d752e0" name="a6e712d3d6ae2d64c2bbcb1dc22d752e0"></a>
-<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>selected</b> ()</td></tr>
-<tr class="memdesc:a6e712d3d6ae2d64c2bbcb1dc22d752e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when an item's selected state is set. <br /></td></tr>
+<tr class="memitem:a087d01fcb4bbe1c2f2ae3aa8430e5564" id="r_a087d01fcb4bbe1c2f2ae3aa8430e5564"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a087d01fcb4bbe1c2f2ae3aa8430e5564">ListBoxLayout</a> ()</td></tr>
+<tr class="memitem:a6f1955f5d1aca99402238e8c6db4173a" id="r_a6f1955f5d1aca99402238e8c6db4173a"><td class="memItemLeft">const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6f1955f5d1aca99402238e8c6db4173a">selectedItems</a> () const</td></tr>
+<tr class="memitem:a6e712d3d6ae2d64c2bbcb1dc22d752e0" id="r_a6e712d3d6ae2d64c2bbcb1dc22d752e0"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6e712d3d6ae2d64c2bbcb1dc22d752e0">selected</a> ()</td></tr>
 <tr class="memitem:af6f40ab38667ba5e049026a3902e9dd8" id="r_af6f40ab38667ba5e049026a3902e9dd8"><td class="memItemLeft"><a id="af6f40ab38667ba5e049026a3902e9dd8" name="af6f40ab38667ba5e049026a3902e9dd8"></a>
 void&#160;</td><td class="memItemRight"><b>setDirection</b> (<a class="el" href="classPt_1_1Forms_1_1Direction.html">Direction</a> d)</td></tr>
 <tr class="memdesc:af6f40ab38667ba5e049026a3902e9dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the flow direction to <em class="arg">d</em> and requests relayout. <br /></td></tr>
@@ -366,12 +357,8 @@ void&#160;</td><td class="memItemRight"><b>keyEvent</b> (const <a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6d50ab6edaf55db8437502ec1b4550d4" id="r_a6d50ab6edaf55db8437502ec1b4550d4"><td class="memItemLeft"><a id="a6d50ab6edaf55db8437502ec1b4550d4" name="a6d50ab6edaf55db8437502ec1b4550d4"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onAddControl</b> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
-<tr class="memdesc:a6d50ab6edaf55db8437502ec1b4550d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards the added control to the base layout. <br /></td></tr>
-<tr class="memitem:a8a741e85b6d1289105032bcf39d42ac9" id="r_a8a741e85b6d1289105032bcf39d42ac9"><td class="memItemLeft"><a id="a8a741e85b6d1289105032bcf39d42ac9" name="a8a741e85b6d1289105032bcf39d42ac9"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onRemoveControl</b> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
-<tr class="memdesc:a8a741e85b6d1289105032bcf39d42ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <em class="arg">control</em> from the selected items. <br /></td></tr>
+<tr class="memitem:a6d50ab6edaf55db8437502ec1b4550d4" id="r_a6d50ab6edaf55db8437502ec1b4550d4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6d50ab6edaf55db8437502ec1b4550d4">onAddControl</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
+<tr class="memitem:a8a741e85b6d1289105032bcf39d42ac9" id="r_a8a741e85b6d1289105032bcf39d42ac9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8a741e85b6d1289105032bcf39d42ac9">onRemoveControl</a> (<a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;control)</td></tr>
 <tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft"><a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
 virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasure</b> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
 <tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures children along the flow axis. <br /></td></tr>
@@ -593,7 +580,8 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A ListBoxLayout is a FlowLayout used by a ListBox. It is an integrated subpart. Applications do not construct or place it. </p>
+<div class="textblock"><p>@brief <a class="el" href="classPt_1_1Forms_1_1Layout.html" title="Control that arranges child controls.">Layout</a> that tracks selected list items.</p>
+<p>A ListBoxLayout is a FlowLayout used by a ListBox. It is an integrated subpart. Applications do not construct or place it. </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd" name="ab55053d0a57be0d70df423df9c2b12cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55053d0a57be0d70df423df9c2b12cd">&#9670;&#160;</a></span>FocusPolicy</h2>
@@ -625,7 +613,118 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a087d01fcb4bbe1c2f2ae3aa8430e5564" name="a087d01fcb4bbe1c2f2ae3aa8430e5564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087d01fcb4bbe1c2f2ae3aa8430e5564">&#9670;&#160;</a></span>ListBoxLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListBoxLayout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Creates an empty list layout. </p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a6f1955f5d1aca99402238e8c6db4173a" name="a6f1955f5d1aca99402238e8c6db4173a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1955f5d1aca99402238e8c6db4173a">&#9670;&#160;</a></span>selectedItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> * &gt; &amp; selectedItems </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the currently selected items. </p>
+
+</div>
+</div>
+<a id="a6e712d3d6ae2d64c2bbcb1dc22d752e0" name="a6e712d3d6ae2d64c2bbcb1dc22d752e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e712d3d6ae2d64c2bbcb1dc22d752e0">&#9670;&#160;</a></span>selected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp; &gt; &amp; selected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the signal emitted when an item's selected state is set. </p>
+
+</div>
+</div>
+<a id="a6d50ab6edaf55db8437502ec1b4550d4" name="a6d50ab6edaf55db8437502ec1b4550d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d50ab6edaf55db8437502ec1b4550d4">&#9670;&#160;</a></span>onAddControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onAddControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>control</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Forwards the added control to the base layout. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a6d50ab6edaf55db8437502ec1b4550d4">Control</a>.</p>
+
+</div>
+</div>
+<a id="a8a741e85b6d1289105032bcf39d42ac9" name="a8a741e85b6d1289105032bcf39d42ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a741e85b6d1289105032bcf39d42ac9">&#9670;&#160;</a></span>onRemoveControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onRemoveControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>control</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Removes <em class="arg">control</em> from the selected items. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a8a741e85b6d1289105032bcf39d42ac9">Control</a>.</p>
+
+</div>
+</div>
 <a id="a6a9728e9e1e980411fdf96fff45b94c3" name="a6a9728e9e1e980411fdf96fff45b94c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a9728e9e1e980411fdf96fff45b94c3">&#9670;&#160;</a></span>addItem()</h2>
 

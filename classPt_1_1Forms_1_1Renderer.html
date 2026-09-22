@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -79,21 +79,14 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Renderer_8h_source.html">Pt/Forms/Renderer.h</a>&gt;</code></p>
 
-<p>Provides cloneable drawing for one control family.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html">Style::Facet</a>.</p>
 
 <p>Inherited by <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html">ButtonRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html">CheckBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html">ComboBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html">LineEditRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html">ListItemRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html">PanelRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html">ScrollBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html">SliderRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html">SpinBoxRenderer</a>, and <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html">TabViewRenderer</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a87f42a7e5ca5cc3cb1921703309ef3d7" id="r_a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="memItemLeft"><a id="a87f42a7e5ca5cc3cb1921703309ef3d7" name="a87f42a7e5ca5cc3cb1921703309ef3d7"></a>
-&#160;</td><td class="memItemRight"><b>Renderer</b> (const std::type_info &amp;ti, std::size_t refs=0)</td></tr>
-<tr class="memdesc:a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
-<tr class="memitem:aa8db16055f3982bc8b052408c4857ef6" id="r_aa8db16055f3982bc8b052408c4857ef6"><td class="memItemLeft"><a id="aa8db16055f3982bc8b052408c4857ef6" name="aa8db16055f3982bc8b052408c4857ef6"></a>
-<a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> *&#160;</td><td class="memItemRight"><b>create</b> () const</td></tr>
-<tr class="memdesc:aa8db16055f3982bc8b052408c4857ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance with a reference count of 0. <br /></td></tr>
+<tr class="memitem:a87f42a7e5ca5cc3cb1921703309ef3d7" id="r_a87f42a7e5ca5cc3cb1921703309ef3d7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> (const std::type_info &amp;ti, std::size_t refs=0)</td></tr>
+<tr class="memitem:aa8db16055f3982bc8b052408c4857ef6" id="r_aa8db16055f3982bc8b052408c4857ef6"><td class="memItemLeft"><a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa8db16055f3982bc8b052408c4857ef6">create</a> () const</td></tr>
 <tr class="memitem:a97ffddc703a75438dcd96f778f867a09" id="r_a97ffddc703a75438dcd96f778f867a09"><td class="memItemLeft"><a id="a97ffddc703a75438dcd96f778f867a09" name="a97ffddc703a75438dcd96f778f867a09"></a>
 const std::type_info &amp;&#160;</td><td class="memItemRight"><b>typeId</b> () const</td></tr>
 <tr class="memdesc:a97ffddc703a75438dcd96f778f867a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamic type used as the registry key. <br /></td></tr>
@@ -109,18 +102,94 @@ void&#160;</td><td class="memItemRight"><b>reset</b> (const <a class="el" href="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a30bad97ed37261e4d76f68b7e6eb601f" id="r_a30bad97ed37261e4d76f68b7e6eb601f"><td class="memItemLeft"><a id="a30bad97ed37261e4d76f68b7e6eb601f" name="a30bad97ed37261e4d76f68b7e6eb601f"></a>
-virtual <a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> *&#160;</td><td class="memItemRight"><b>onCreate</b> () const =0</td></tr>
-<tr class="memdesc:a30bad97ed37261e4d76f68b7e6eb601f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new renderer of the same concrete type. <br /></td></tr>
+<tr class="memitem:a30bad97ed37261e4d76f68b7e6eb601f" id="r_a30bad97ed37261e4d76f68b7e6eb601f"><td class="memItemLeft">virtual <a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a30bad97ed37261e4d76f68b7e6eb601f">onCreate</a> () const =0</td></tr>
 <tr class="memitem:a09acb44ed364ddd0c97f583c828003f1" id="r_a09acb44ed364ddd0c97f583c828003f1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Style_1_1Facet.html#a09acb44ed364ddd0c97f583c828003f1">onReset</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;)</td></tr>
 <tr class="memdesc:a09acb44ed364ddd0c97f583c828003f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets this facet with <em class="arg">options</em>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Renderer is a Style::Facet that can clone itself. Shared instances remain in Style. Use reset() to apply application options. Use create() to allocate a new instance with a reference count of 0. FacetPtr and Style::set() take their own references.</p>
+<div class="textblock"><p>@brief Provides cloneable drawing for one control family.</p>
+<p>A Renderer is a Style::Facet that can clone itself. Shared instances remain in Style. Use reset() to apply application options. Use create() to allocate a new instance with a reference count of 0. FacetPtr and Style::set() take their own references.</p>
 <p>Named measure, layout, and render methods belong on derived renderer types. Use Facet::onReset() to read style options and store drawing state for those methods.</p>
 <p>A renderer may store a Painter. That painter keeps its brush, pen, font, clip, and composition after begin(). onReset() assigns the default attributes. A render method that changes them assigns the defaults again before it returns.</p>
 <p>Derive a renderer for a control family and register it on a Style. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a87f42a7e5ca5cc3cb1921703309ef3d7" name="a87f42a7e5ca5cc3cb1921703309ef3d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f42a7e5ca5cc3cb1921703309ef3d7">&#9670;&#160;</a></span>Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer </td>
+          <td>(</td>
+          <td class="paramtype">const std::type_info &amp;</td>          <td class="paramname"><span class="paramname"><em>ti</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>refs</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Constructor. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aa8db16055f3982bc8b052408c4857ef6" name="aa8db16055f3982bc8b052408c4857ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8db16055f3982bc8b052408c4857ef6">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> * create </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Creates a new instance with a reference count of 0. </p>
+
+</div>
+</div>
+<a id="a30bad97ed37261e4d76f68b7e6eb601f" name="a30bad97ed37261e4d76f68b7e6eb601f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30bad97ed37261e4d76f68b7e6eb601f">&#9670;&#160;</a></span>onCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="#a87f42a7e5ca5cc3cb1921703309ef3d7">Renderer</a> * onCreate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Creates a new renderer of the same concrete type. </p>
+
+<p>Implemented in <a class="el" href="classPt_1_1Forms_1_1ButtonRenderer.html#ad2b04e352223b7c43194242060c4993d">ButtonRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1CheckBoxRenderer.html#ae5bb8c9f9a4ccbaefb927340f1d0fc1f">CheckBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ComboBoxRenderer.html#af2eb830858ee28ec817e710a2acaf2e9">ComboBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1LineEditRenderer.html#aabb0635a5d66968fd58b4aa179779cf4">LineEditRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html#aeb1e4ee62181503812d004df4a768688">ListBoxRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ListItemRenderer.html#a9dff9de1c1e7f402a5eb51bfa1c7d0df">ListItemRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1PanelRenderer.html#a8da8d73378292d613c59f1f2a856307f">PanelRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html#ac0808b52bd27cc1f083c28f855db8888">ProgressBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1ScrollBarRenderer.html#ab396f7c0a40861888ab65747f94a7344">ScrollBarRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SliderRenderer.html#a5cd59d241289dad67b35c4c9e3877b6d">SliderRenderer</a>, <a class="el" href="classPt_1_1Forms_1_1SpinBoxRenderer.html#a86e6a020a8e7bb4cc99c7fff9452e3b6">SpinBoxRenderer</a>, and <a class="el" href="classPt_1_1Forms_1_1TabViewRenderer.html#a4fdccb01b2547f735e54fe88c28e1322">TabViewRenderer</a>.</p>
+
+</div>
+</div>
 <a id="a09acb44ed364ddd0c97f583c828003f1" name="a09acb44ed364ddd0c97f583c828003f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09acb44ed364ddd0c97f583c828003f1">&#9670;&#160;</a></span>onReset()</h2>
 

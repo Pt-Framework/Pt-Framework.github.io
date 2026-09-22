@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -80,9 +80,6 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="ListBox_8h_source.html">Pt/Forms/ListBox.h</a>&gt;</code></p>
 
-<p>Scrollable list of items.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Control.html">Control</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -99,59 +96,24 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adb89ba125cac4662a97866798195d291" id="r_adb89ba125cac4662a97866798195d291"><td class="memItemLeft"><a id="adb89ba125cac4662a97866798195d291" name="adb89ba125cac4662a97866798195d291"></a>
-&#160;</td><td class="memItemRight"><b>ListBox</b> ()</td></tr>
-<tr class="memdesc:adb89ba125cac4662a97866798195d291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty list box. <br /></td></tr>
-<tr class="memitem:ab73e1248f1d69441a4a0a865b6c7ba4d" id="r_ab73e1248f1d69441a4a0a865b6c7ba4d"><td class="memItemLeft"><a id="ab73e1248f1d69441a4a0a865b6c7ba4d" name="ab73e1248f1d69441a4a0a865b6c7ba4d"></a>
-virtual&#160;</td><td class="memItemRight"><b>~ListBox</b> ()</td></tr>
-<tr class="memdesc:ab73e1248f1d69441a4a0a865b6c7ba4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the list box. Attached items are not destroyed. <br /></td></tr>
-<tr class="memitem:a7c947ce71551301c2fe67494b871b696" id="r_a7c947ce71551301c2fe67494b871b696"><td class="memItemLeft"><a id="a7c947ce71551301c2fe67494b871b696" name="a7c947ce71551301c2fe67494b871b696"></a>
-void&#160;</td><td class="memItemRight"><b>setScrollBars</b> (bool hasScrollBars)</td></tr>
-<tr class="memdesc:a7c947ce71551301c2fe67494b871b696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the list shows scroll bars. <br /></td></tr>
-<tr class="memitem:a1263d7c3457f6ef79ef539eb2bfe32bc" id="r_a1263d7c3457f6ef79ef539eb2bfe32bc"><td class="memItemLeft"><a id="a1263d7c3457f6ef79ef539eb2bfe32bc" name="a1263d7c3457f6ef79ef539eb2bfe32bc"></a>
-void&#160;</td><td class="memItemRight"><b>addItem</b> (<a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp;item)</td></tr>
-<tr class="memdesc:a1263d7c3457f6ef79ef539eb2bfe32bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds caller-owned <em class="arg">item</em> to the list. <br /></td></tr>
-<tr class="memitem:ae9a345bce570b876c5b97b15e15b6e31" id="r_ae9a345bce570b876c5b97b15e15b6e31"><td class="memItemLeft"><a id="ae9a345bce570b876c5b97b15e15b6e31" name="ae9a345bce570b876c5b97b15e15b6e31"></a>
-void&#160;</td><td class="memItemRight"><b>removeItem</b> (<a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp;item)</td></tr>
-<tr class="memdesc:ae9a345bce570b876c5b97b15e15b6e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <em class="arg">item</em> from the list. <br /></td></tr>
-<tr class="memitem:a6f1955f5d1aca99402238e8c6db4173a" id="r_a6f1955f5d1aca99402238e8c6db4173a"><td class="memItemLeft"><a id="a6f1955f5d1aca99402238e8c6db4173a" name="a6f1955f5d1aca99402238e8c6db4173a"></a>
-const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> * &gt; &amp;&#160;</td><td class="memItemRight"><b>selectedItems</b> () const</td></tr>
-<tr class="memdesc:a6f1955f5d1aca99402238e8c6db4173a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently selected items. <br /></td></tr>
-<tr class="memitem:a6e712d3d6ae2d64c2bbcb1dc22d752e0" id="r_a6e712d3d6ae2d64c2bbcb1dc22d752e0"><td class="memItemLeft"><a id="a6e712d3d6ae2d64c2bbcb1dc22d752e0" name="a6e712d3d6ae2d64c2bbcb1dc22d752e0"></a>
-<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>selected</b> ()</td></tr>
-<tr class="memdesc:a6e712d3d6ae2d64c2bbcb1dc22d752e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when an item's selected state is set. <br /></td></tr>
-<tr class="memitem:ad8e05e35dad3cbbff08296899ad9f508" id="r_ad8e05e35dad3cbbff08296899ad9f508"><td class="memItemLeft"><a id="ad8e05e35dad3cbbff08296899ad9f508" name="ad8e05e35dad3cbbff08296899ad9f508"></a>
-void&#160;</td><td class="memItemRight"><b>scrollX</b> (int xpos)</td></tr>
-<tr class="memdesc:ad8e05e35dad3cbbff08296899ad9f508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scrolls the list horizontally to <em class="arg">xpos</em>. <br /></td></tr>
-<tr class="memitem:ad4f8a5a4d06afae731834142af2c191d" id="r_ad4f8a5a4d06afae731834142af2c191d"><td class="memItemLeft"><a id="ad4f8a5a4d06afae731834142af2c191d" name="ad4f8a5a4d06afae731834142af2c191d"></a>
-void&#160;</td><td class="memItemRight"><b>scrollY</b> (int ypos)</td></tr>
-<tr class="memdesc:ad4f8a5a4d06afae731834142af2c191d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scrolls the list vertically to <em class="arg">ypos</em>. <br /></td></tr>
-<tr class="memitem:a144d9a3f7ac92ff82cd4ca6798853a0e" id="r_a144d9a3f7ac92ff82cd4ca6798853a0e"><td class="memItemLeft"><a id="a144d9a3f7ac92ff82cd4ca6798853a0e" name="a144d9a3f7ac92ff82cd4ca6798853a0e"></a>
-int&#160;</td><td class="memItemRight"><b>maximumX</b> () const</td></tr>
-<tr class="memdesc:a144d9a3f7ac92ff82cd4ca6798853a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum horizontal scroll offset. <br /></td></tr>
-<tr class="memitem:ae2d12fb953277164600615b6d42969a2" id="r_ae2d12fb953277164600615b6d42969a2"><td class="memItemLeft"><a id="ae2d12fb953277164600615b6d42969a2" name="ae2d12fb953277164600615b6d42969a2"></a>
-int&#160;</td><td class="memItemRight"><b>maximumY</b> () const</td></tr>
-<tr class="memdesc:ae2d12fb953277164600615b6d42969a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum vertical scroll offset. <br /></td></tr>
-<tr class="memitem:a39e9105e1838e91396f98c8ff39f46ec" id="r_a39e9105e1838e91396f98c8ff39f46ec"><td class="memItemLeft"><a id="a39e9105e1838e91396f98c8ff39f46ec" name="a39e9105e1838e91396f98c8ff39f46ec"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> *&#160;</td><td class="memItemRight"><b>background</b> () const</td></tr>
-<tr class="memdesc:a39e9105e1838e91396f98c8ff39f46ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective background brush, or 0 when disabled. <br /></td></tr>
-<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393" id="r_a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft"><a id="a759a5fbd6e124e55f9a2596dc5f83393" name="a759a5fbd6e124e55f9a2596dc5f83393"></a>
-void&#160;</td><td class="memItemRight"><b>setBackground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
-<tr class="memdesc:a759a5fbd6e124e55f9a2596dc5f83393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local background brush to <em class="arg">b</em>. <br /></td></tr>
-<tr class="memitem:a2ab397b7ad12b123bfbe98e640a9117a" id="r_a2ab397b7ad12b123bfbe98e640a9117a"><td class="memItemLeft"><a id="a2ab397b7ad12b123bfbe98e640a9117a" name="a2ab397b7ad12b123bfbe98e640a9117a"></a>
-void&#160;</td><td class="memItemRight"><b>setBackground</b> (bool b)</td></tr>
-<tr class="memdesc:a2ab397b7ad12b123bfbe98e640a9117a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the list paints a background. <br /></td></tr>
-<tr class="memitem:a8eb3fdd55690126ac37ede6139af720c" id="r_a8eb3fdd55690126ac37ede6139af720c"><td class="memItemLeft"><a id="a8eb3fdd55690126ac37ede6139af720c" name="a8eb3fdd55690126ac37ede6139af720c"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> *&#160;</td><td class="memItemRight"><b>contour</b> () const</td></tr>
-<tr class="memdesc:a8eb3fdd55690126ac37ede6139af720c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective contour pen, or 0 when the frame is off. <br /></td></tr>
-<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft"><a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
-void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
-<tr class="memdesc:ac9143b7c87f8dfa181347d080a3f126e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local contour pen to <em class="arg">pen</em>. <br /></td></tr>
-<tr class="memitem:a983ce8ebd909e9ea3f6243a508df4e8c" id="r_a983ce8ebd909e9ea3f6243a508df4e8c"><td class="memItemLeft"><a id="a983ce8ebd909e9ea3f6243a508df4e8c" name="a983ce8ebd909e9ea3f6243a508df4e8c"></a>
-void&#160;</td><td class="memItemRight"><b>setFrame</b> (bool b)</td></tr>
-<tr class="memdesc:a983ce8ebd909e9ea3f6243a508df4e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the list paints a frame. <br /></td></tr>
+<tr class="memitem:adb89ba125cac4662a97866798195d291" id="r_adb89ba125cac4662a97866798195d291"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adb89ba125cac4662a97866798195d291">ListBox</a> ()</td></tr>
+<tr class="memitem:ab73e1248f1d69441a4a0a865b6c7ba4d" id="r_ab73e1248f1d69441a4a0a865b6c7ba4d"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ab73e1248f1d69441a4a0a865b6c7ba4d">~ListBox</a> ()</td></tr>
+<tr class="memitem:a7c947ce71551301c2fe67494b871b696" id="r_a7c947ce71551301c2fe67494b871b696"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c947ce71551301c2fe67494b871b696">setScrollBars</a> (bool hasScrollBars)</td></tr>
+<tr class="memitem:a1263d7c3457f6ef79ef539eb2bfe32bc" id="r_a1263d7c3457f6ef79ef539eb2bfe32bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1263d7c3457f6ef79ef539eb2bfe32bc">addItem</a> (<a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp;item)</td></tr>
+<tr class="memitem:ae9a345bce570b876c5b97b15e15b6e31" id="r_ae9a345bce570b876c5b97b15e15b6e31"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae9a345bce570b876c5b97b15e15b6e31">removeItem</a> (<a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp;item)</td></tr>
+<tr class="memitem:a6f1955f5d1aca99402238e8c6db4173a" id="r_a6f1955f5d1aca99402238e8c6db4173a"><td class="memItemLeft">const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6f1955f5d1aca99402238e8c6db4173a">selectedItems</a> () const</td></tr>
+<tr class="memitem:a6e712d3d6ae2d64c2bbcb1dc22d752e0" id="r_a6e712d3d6ae2d64c2bbcb1dc22d752e0"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6e712d3d6ae2d64c2bbcb1dc22d752e0">selected</a> ()</td></tr>
+<tr class="memitem:ad8e05e35dad3cbbff08296899ad9f508" id="r_ad8e05e35dad3cbbff08296899ad9f508"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad8e05e35dad3cbbff08296899ad9f508">scrollX</a> (int xpos)</td></tr>
+<tr class="memitem:ad4f8a5a4d06afae731834142af2c191d" id="r_ad4f8a5a4d06afae731834142af2c191d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad4f8a5a4d06afae731834142af2c191d">scrollY</a> (int ypos)</td></tr>
+<tr class="memitem:a144d9a3f7ac92ff82cd4ca6798853a0e" id="r_a144d9a3f7ac92ff82cd4ca6798853a0e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a144d9a3f7ac92ff82cd4ca6798853a0e">maximumX</a> () const</td></tr>
+<tr class="memitem:ae2d12fb953277164600615b6d42969a2" id="r_ae2d12fb953277164600615b6d42969a2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae2d12fb953277164600615b6d42969a2">maximumY</a> () const</td></tr>
+<tr class="memitem:a39e9105e1838e91396f98c8ff39f46ec" id="r_a39e9105e1838e91396f98c8ff39f46ec"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a39e9105e1838e91396f98c8ff39f46ec">background</a> () const</td></tr>
+<tr class="memitem:a759a5fbd6e124e55f9a2596dc5f83393" id="r_a759a5fbd6e124e55f9a2596dc5f83393"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a759a5fbd6e124e55f9a2596dc5f83393">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;b)</td></tr>
+<tr class="memitem:a2ab397b7ad12b123bfbe98e640a9117a" id="r_a2ab397b7ad12b123bfbe98e640a9117a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ab397b7ad12b123bfbe98e640a9117a">setBackground</a> (bool b)</td></tr>
+<tr class="memitem:a8eb3fdd55690126ac37ede6139af720c" id="r_a8eb3fdd55690126ac37ede6139af720c"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8eb3fdd55690126ac37ede6139af720c">contour</a> () const</td></tr>
+<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9143b7c87f8dfa181347d080a3f126e">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
+<tr class="memitem:a983ce8ebd909e9ea3f6243a508df4e8c" id="r_a983ce8ebd909e9ea3f6243a508df4e8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a983ce8ebd909e9ea3f6243a508df4e8c">setFrame</a> (bool b)</td></tr>
 <tr class="memitem:a678c9feac0e2c6f988871da7a2219620" id="r_a678c9feac0e2c6f988871da7a2219620"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a678c9feac0e2c6f988871da7a2219620">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a> *renderer)</td></tr>
-<tr class="memdesc:a678c9feac0e2c6f988871da7a2219620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns <em class="arg">renderer</em> as the family renderer.  <br /></td></tr>
 <tr class="memitem:a39639f36997748377dfbbf5931b59cd3" id="r_a39639f36997748377dfbbf5931b59cd3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a39639f36997748377dfbbf5931b59cd3">setParent</a> (<a class="el" href="classPt_1_1Forms_1_1View.html">View</a> &amp;parent)</td></tr>
 <tr class="memdesc:a39639f36997748377dfbbf5931b59cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches this control to <em class="arg">parent</em>.  <br /></td></tr>
 <tr class="memitem:ab1e5200da2da8f45a17fa7e77969e966" id="r_ab1e5200da2da8f45a17fa7e77969e966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ab1e5200da2da8f45a17fa7e77969e966">unparent</a> ()</td></tr>
@@ -396,18 +358,10 @@ void&#160;</td><td class="memItemRight"><b>keyEvent</b> (const <a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd" id="r_ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft"><a id="ae95892a055053b2f35ed11e85287a8fd" name="ae95892a055053b2f35ed11e85287a8fd"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onInvalidate</b> ()</td></tr>
-<tr class="memdesc:ae95892a055053b2f35ed11e85287a8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the styler. <br /></td></tr>
-<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft"><a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
-virtual Gfx::SizeF&#160;</td><td class="memItemRight"><b>onMeasure</b> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
-<tr class="memdesc:a912210d8dfc33e555b12402ee47ac406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the items and frame. <br /></td></tr>
-<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft"><a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onLayout</b> (const Gfx::RectF &amp;rect)</td></tr>
-<tr class="memdesc:a68d03b9b05b163ae71a33c9ffa418f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the scroll view in <em class="arg">rect</em>. <br /></td></tr>
-<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft"><a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onPaint</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
-<tr class="memdesc:a169d5d7261571fb77c21873078a5e1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints the background and frame. <br /></td></tr>
+<tr class="memitem:ae95892a055053b2f35ed11e85287a8fd" id="r_ae95892a055053b2f35ed11e85287a8fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae95892a055053b2f35ed11e85287a8fd">onInvalidate</a> ()</td></tr>
+<tr class="memitem:a912210d8dfc33e555b12402ee47ac406" id="r_a912210d8dfc33e555b12402ee47ac406"><td class="memItemLeft">virtual Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a912210d8dfc33e555b12402ee47ac406">onMeasure</a> (const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;policy)</td></tr>
+<tr class="memitem:a68d03b9b05b163ae71a33c9ffa418f84" id="r_a68d03b9b05b163ae71a33c9ffa418f84"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a68d03b9b05b163ae71a33c9ffa418f84">onLayout</a> (const Gfx::RectF &amp;rect)</td></tr>
+<tr class="memitem:a169d5d7261571fb77c21873078a5e1d9" id="r_a169d5d7261571fb77c21873078a5e1d9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a169d5d7261571fb77c21873078a5e1d9">onPaint</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;updateRect)</td></tr>
 <tr class="memitem:a9f730a8927941df92c4bb28ddbfa6270" id="r_a9f730a8927941df92c4bb28ddbfa6270"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#a9f730a8927941df92c4bb28ddbfa6270">onInvalidateEvent</a> (const InvalidateEvent &amp;ev)</td></tr>
 <tr class="memdesc:a9f730a8927941df92c4bb28ddbfa6270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the final coalesced invalidation event.  <br /></td></tr>
 <tr class="memitem:ad62f36a3254f4389b12c85ca448dd3f8" id="r_ad62f36a3254f4389b12c85ca448dd3f8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Control.html#ad62f36a3254f4389b12c85ca448dd3f8">onProcessPaintEvent</a> (const <a class="el" href="classPt_1_1Forms_1_1PaintEvent.html">PaintEvent</a> &amp;ev)</td></tr>
@@ -625,7 +579,8 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <tr class="memdesc:ad8e64c6bd034a0aac1c93de4b9a28023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a mouse move. The default returns false. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A ListBox presents caller-owned ListBoxItem objects. Use addItem() to add an item. Keep each item alive until removeItem() detaches it. A completed click on a selectable item toggles ListBoxItem::isSelected(). selected() emits that item. selectedItems() returns the items that are currently selected. Calling setScrollBars() shows scroll bars when the list does not fit.</p>
+<div class="textblock"><p>@brief Scrollable list of items.</p>
+<p>A ListBox presents caller-owned ListBoxItem objects. Use addItem() to add an item. Keep each item alive until removeItem() detaches it. A completed click on a selectable item toggles ListBoxItem::isSelected(). selected() emits that item. selectedItems() returns the items that are currently selected. Calling setScrollBars() shows scroll bars when the list does not fit.</p>
 <p>The list owns a ListBoxStyler. On invalidate it calls Styler::bind(). Appearance getters and setters overlay the application style. Use setRenderer() to assign a ListBoxRenderer until it is cleared. Measure, layout, and paint operations call typed methods on the styler.</p>
 <p>Items are hosted in a ScrollView.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a> berlin;</div>
@@ -639,12 +594,12 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 <div class="line">{</div>
 <div class="line">    address.setCity(item.<a class="code hl_function" href="classPt_1_1Forms_1_1ListBoxItem.html#a5596a0827b0ed73421c4c7c3768c1c70">text</a>());</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a></div><div class="ttdoc">Item in a list box.</div><div class="ttdef"><b>Definition</b> ListBox.h:71</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::ListBoxItem::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div><div class="ttdoc">Sets the caption to t.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html_a5596a0827b0ed73421c4c7c3768c1c70"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html#a5596a0827b0ed73421c4c7c3768c1c70">Pt::Forms::ListBoxItem::text</a></div><div class="ttdeci">const Pt::String &amp; text() const</div><div class="ttdoc">Returns the caption.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBox.html">Pt::Forms::ListBox</a></div><div class="ttdoc">Scrollable list of items.</div><div class="ttdef"><b>Definition</b> ListBox.h:428</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html_a1263d7c3457f6ef79ef539eb2bfe32bc"><div class="ttname"><a href="#a1263d7c3457f6ef79ef539eb2bfe32bc">Pt::Forms::ListBox::addItem</a></div><div class="ttdeci">void addItem(ListBoxItem &amp;item)</div><div class="ttdoc">Adds caller-owned item to the list.</div></div>
-<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html_a6e712d3d6ae2d64c2bbcb1dc22d752e0"><div class="ttname"><a href="#a6e712d3d6ae2d64c2bbcb1dc22d752e0">Pt::Forms::ListBox::selected</a></div><div class="ttdeci">Pt::Signal&lt; ListBoxItem &amp; &gt; &amp; selected()</div><div class="ttdoc">Returns the signal emitted when an item&#39;s selected state is set.</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html">Pt::Forms::ListBoxItem</a></div><div class="ttdef"><b>Definition</b> ListBox.h:71</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html_a3a3d0511ca0d199ca61dbca0b738573b"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html#a3a3d0511ca0d199ca61dbca0b738573b">Pt::Forms::ListBoxItem::setText</a></div><div class="ttdeci">void setText(const Pt::String &amp;t)</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ListBoxItem_html_a5596a0827b0ed73421c4c7c3768c1c70"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBoxItem.html#a5596a0827b0ed73421c4c7c3768c1c70">Pt::Forms::ListBoxItem::text</a></div><div class="ttdeci">const Pt::String &amp; text() const</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html"><div class="ttname"><a href="classPt_1_1Forms_1_1ListBox.html">Pt::Forms::ListBox</a></div><div class="ttdef"><b>Definition</b> ListBox.h:428</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html_a1263d7c3457f6ef79ef539eb2bfe32bc"><div class="ttname"><a href="#a1263d7c3457f6ef79ef539eb2bfe32bc">Pt::Forms::ListBox::addItem</a></div><div class="ttdeci">void addItem(ListBoxItem &amp;item)</div></div>
+<div class="ttc" id="aclassPt_1_1Forms_1_1ListBox_html_a6e712d3d6ae2d64c2bbcb1dc22d752e0"><div class="ttname"><a href="#a6e712d3d6ae2d64c2bbcb1dc22d752e0">Pt::Forms::ListBox::selected</a></div><div class="ttdeci">Pt::Signal&lt; ListBoxItem &amp; &gt; &amp; selected()</div></div>
 <div class="ttc" id="aclassPt_1_1Slot_html_a6fe36105ca29dc11b2f8ffb98cfffcf5"><div class="ttname"><a href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, ClassT, As... &gt; slot(ClassT &amp;object, R(BaseT::*method)(As...) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div><div class="ttdef"><b>Definition</b> ConstMethod.h:172</div></div>
 </div><!-- fragment --> </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab55053d0a57be0d70df423df9c2b12cd" name="ab55053d0a57be0d70df423df9c2b12cd"></a>
@@ -677,7 +632,322 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
 
 </div>
 </div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adb89ba125cac4662a97866798195d291" name="adb89ba125cac4662a97866798195d291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb89ba125cac4662a97866798195d291">&#9670;&#160;</a></span>ListBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListBox </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Creates an empty list box. </p>
+
+</div>
+</div>
+<a id="ab73e1248f1d69441a4a0a865b6c7ba4d" name="ab73e1248f1d69441a4a0a865b6c7ba4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73e1248f1d69441a4a0a865b6c7ba4d">&#9670;&#160;</a></span>~ListBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#adb89ba125cac4662a97866798195d291">ListBox</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Destroys the list box. Attached items are not destroyed. </p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7c947ce71551301c2fe67494b871b696" name="a7c947ce71551301c2fe67494b871b696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c947ce71551301c2fe67494b871b696">&#9670;&#160;</a></span>setScrollBars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setScrollBars </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>hasScrollBars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the list shows scroll bars. </p>
+
+</div>
+</div>
+<a id="a1263d7c3457f6ef79ef539eb2bfe32bc" name="a1263d7c3457f6ef79ef539eb2bfe32bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1263d7c3457f6ef79ef539eb2bfe32bc">&#9670;&#160;</a></span>addItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Adds caller-owned <em class="arg">item</em> to the list. </p>
+
+</div>
+</div>
+<a id="ae9a345bce570b876c5b97b15e15b6e31" name="ae9a345bce570b876c5b97b15e15b6e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a345bce570b876c5b97b15e15b6e31">&#9670;&#160;</a></span>removeItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Removes <em class="arg">item</em> from the list. </p>
+
+</div>
+</div>
+<a id="a6f1955f5d1aca99402238e8c6db4173a" name="a6f1955f5d1aca99402238e8c6db4173a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1955f5d1aca99402238e8c6db4173a">&#9670;&#160;</a></span>selectedItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> * &gt; &amp; selectedItems </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the currently selected items. </p>
+
+</div>
+</div>
+<a id="a6e712d3d6ae2d64c2bbcb1dc22d752e0" name="a6e712d3d6ae2d64c2bbcb1dc22d752e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e712d3d6ae2d64c2bbcb1dc22d752e0">&#9670;&#160;</a></span>selected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="classPt_1_1Forms_1_1ListBoxItem.html">ListBoxItem</a> &amp; &gt; &amp; selected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the signal emitted when an item's selected state is set. </p>
+
+</div>
+</div>
+<a id="ad8e05e35dad3cbbff08296899ad9f508" name="ad8e05e35dad3cbbff08296899ad9f508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e05e35dad3cbbff08296899ad9f508">&#9670;&#160;</a></span>scrollX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scrollX </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>xpos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Scrolls the list horizontally to <em class="arg">xpos</em>. </p>
+
+</div>
+</div>
+<a id="ad4f8a5a4d06afae731834142af2c191d" name="ad4f8a5a4d06afae731834142af2c191d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f8a5a4d06afae731834142af2c191d">&#9670;&#160;</a></span>scrollY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scrollY </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ypos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Scrolls the list vertically to <em class="arg">ypos</em>. </p>
+
+</div>
+</div>
+<a id="a144d9a3f7ac92ff82cd4ca6798853a0e" name="a144d9a3f7ac92ff82cd4ca6798853a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144d9a3f7ac92ff82cd4ca6798853a0e">&#9670;&#160;</a></span>maximumX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int maximumX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the maximum horizontal scroll offset. </p>
+
+</div>
+</div>
+<a id="ae2d12fb953277164600615b6d42969a2" name="ae2d12fb953277164600615b6d42969a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d12fb953277164600615b6d42969a2">&#9670;&#160;</a></span>maximumY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int maximumY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the maximum vertical scroll offset. </p>
+
+</div>
+</div>
+<a id="a39e9105e1838e91396f98c8ff39f46ec" name="a39e9105e1838e91396f98c8ff39f46ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e9105e1838e91396f98c8ff39f46ec">&#9670;&#160;</a></span>background()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> * background </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective background brush, or 0 when disabled. </p>
+
+</div>
+</div>
+<a id="a759a5fbd6e124e55f9a2596dc5f83393" name="a759a5fbd6e124e55f9a2596dc5f83393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759a5fbd6e124e55f9a2596dc5f83393">&#9670;&#160;</a></span>setBackground() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackground </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local background brush to <em class="arg">b</em>. </p>
+
+</div>
+</div>
+<a id="a2ab397b7ad12b123bfbe98e640a9117a" name="a2ab397b7ad12b123bfbe98e640a9117a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab397b7ad12b123bfbe98e640a9117a">&#9670;&#160;</a></span>setBackground() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackground </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the list paints a background. </p>
+
+</div>
+</div>
+<a id="a8eb3fdd55690126ac37ede6139af720c" name="a8eb3fdd55690126ac37ede6139af720c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb3fdd55690126ac37ede6139af720c">&#9670;&#160;</a></span>contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> * contour </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective contour pen, or 0 when the frame is off. </p>
+
+</div>
+</div>
+<a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9143b7c87f8dfa181347d080a3f126e">&#9670;&#160;</a></span>setContour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContour </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local contour pen to <em class="arg">pen</em>. </p>
+
+</div>
+</div>
+<a id="a983ce8ebd909e9ea3f6243a508df4e8c" name="a983ce8ebd909e9ea3f6243a508df4e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a983ce8ebd909e9ea3f6243a508df4e8c">&#9670;&#160;</a></span>setFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFrame </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the list paints a frame. </p>
+
+</div>
+</div>
 <a id="a678c9feac0e2c6f988871da7a2219620" name="a678c9feac0e2c6f988871da7a2219620"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a678c9feac0e2c6f988871da7a2219620">&#9670;&#160;</a></span>setRenderer()</h2>
 
@@ -692,7 +962,124 @@ virtual bool&#160;</td><td class="memItemRight"><b>onMouseMove</b> (const <a cla
         </tr>
       </table>
 </div><div class="memdoc">
+<p>@brief Assigns <em class="arg">renderer</em> as the family renderer.</p>
 <p>A null renderer falls back to the current style on the next bind. </p>
+
+</div>
+</div>
+<a id="ae95892a055053b2f35ed11e85287a8fd" name="ae95892a055053b2f35ed11e85287a8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95892a055053b2f35ed11e85287a8fd">&#9670;&#160;</a></span>onInvalidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onInvalidate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Binds the styler. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#ae95892a055053b2f35ed11e85287a8fd">Control</a>.</p>
+
+</div>
+</div>
+<a id="a912210d8dfc33e555b12402ee47ac406" name="a912210d8dfc33e555b12402ee47ac406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912210d8dfc33e555b12402ee47ac406">&#9670;&#160;</a></span>onMeasure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Gfx::SizeF onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1SizePolicy.html">SizePolicy</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>policy</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Measures the items and frame. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a912210d8dfc33e555b12402ee47ac406">Control</a>.</p>
+
+</div>
+</div>
+<a id="a68d03b9b05b163ae71a33c9ffa418f84" name="a68d03b9b05b163ae71a33c9ffa418f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d03b9b05b163ae71a33c9ffa418f84">&#9670;&#160;</a></span>onLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onLayout </td>
+          <td>(</td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Places the scroll view in <em class="arg">rect</em>. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a68d03b9b05b163ae71a33c9ffa418f84">Control</a>.</p>
+
+</div>
+</div>
+<a id="a169d5d7261571fb77c21873078a5e1d9" name="a169d5d7261571fb77c21873078a5e1d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a169d5d7261571fb77c21873078a5e1d9">&#9670;&#160;</a></span>onPaint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onPaint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>updateRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Paints the background and frame. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Forms_1_1Control.html#a4bd52e91b6335df9f9f1172cac2c45cd">Control</a>.</p>
 
 </div>
 </div>

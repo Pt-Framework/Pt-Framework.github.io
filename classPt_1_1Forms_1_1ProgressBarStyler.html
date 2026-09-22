@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -79,93 +79,37 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="ProgressBarStyler_8h_source.html">Pt/Forms/ProgressBarStyler.h</a>&gt;</code></p>
 
-<p>Binds a progress bar to the current style renderer.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Styler.html">Styler</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9247e77a806ad57ae829b43c5582346d" id="r_a9247e77a806ad57ae829b43c5582346d"><td class="memItemLeft"><a id="a9247e77a806ad57ae829b43c5582346d" name="a9247e77a806ad57ae829b43c5582346d"></a>
-&#160;</td><td class="memItemRight"><b>ProgressBarStyler</b> ()</td></tr>
-<tr class="memdesc:a9247e77a806ad57ae829b43c5582346d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an unbound progress bar styler. <br /></td></tr>
-<tr class="memitem:a58f50f22df8ae76f2dee990b878cbf64" id="r_a58f50f22df8ae76f2dee990b878cbf64"><td class="memItemLeft"><a id="a58f50f22df8ae76f2dee990b878cbf64" name="a58f50f22df8ae76f2dee990b878cbf64"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><b>background</b> () const</td></tr>
-<tr class="memdesc:a58f50f22df8ae76f2dee990b878cbf64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective background brush. <br /></td></tr>
-<tr class="memitem:a95564aff9a3df88ce2c902c09a37f0b1" id="r_a95564aff9a3df88ce2c902c09a37f0b1"><td class="memItemLeft"><a id="a95564aff9a3df88ce2c902c09a37f0b1" name="a95564aff9a3df88ce2c902c09a37f0b1"></a>
-void&#160;</td><td class="memItemRight"><b>setBackground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;brush)</td></tr>
-<tr class="memdesc:a95564aff9a3df88ce2c902c09a37f0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local background brush to <em class="arg">brush</em>. <br /></td></tr>
-<tr class="memitem:a5b8bf8872895964001181eede4bb23af" id="r_a5b8bf8872895964001181eede4bb23af"><td class="memItemLeft"><a id="a5b8bf8872895964001181eede4bb23af" name="a5b8bf8872895964001181eede4bb23af"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><b>foreground</b> () const</td></tr>
-<tr class="memdesc:a5b8bf8872895964001181eede4bb23af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective foreground brush. <br /></td></tr>
-<tr class="memitem:a57d1d8e1cb5c2f071d2d745c6cd00e7f" id="r_a57d1d8e1cb5c2f071d2d745c6cd00e7f"><td class="memItemLeft"><a id="a57d1d8e1cb5c2f071d2d745c6cd00e7f" name="a57d1d8e1cb5c2f071d2d745c6cd00e7f"></a>
-void&#160;</td><td class="memItemRight"><b>setForeground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;brush)</td></tr>
-<tr class="memdesc:a57d1d8e1cb5c2f071d2d745c6cd00e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local foreground brush to <em class="arg">brush</em>. <br /></td></tr>
-<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft"><a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><b>contour</b> () const</td></tr>
-<tr class="memdesc:ac7965a531c832104928b133e1e156342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective contour pen. <br /></td></tr>
-<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft"><a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
-void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
-<tr class="memdesc:ac9143b7c87f8dfa181347d080a3f126e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local contour pen to <em class="arg">pen</em>. <br /></td></tr>
-<tr class="memitem:a21cb9b4d5da5c498154b8eeb5ec77059" id="r_a21cb9b4d5da5c498154b8eeb5ec77059"><td class="memItemLeft"><a id="a21cb9b4d5da5c498154b8eeb5ec77059" name="a21cb9b4d5da5c498154b8eeb5ec77059"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><b>textColor</b> () const</td></tr>
-<tr class="memdesc:a21cb9b4d5da5c498154b8eeb5ec77059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective text color. <br /></td></tr>
-<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc" id="r_ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft"><a id="ac24598c93a713c95d97205c65dfccbfc" name="ac24598c93a713c95d97205c65dfccbfc"></a>
-void&#160;</td><td class="memItemRight"><b>setTextColor</b> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
-<tr class="memdesc:ac24598c93a713c95d97205c65dfccbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local text color to <em class="arg">color</em>. <br /></td></tr>
-<tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08" id="r_a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft"><a id="a5e39b7242b7786c27bbe48d0675e2d08" name="a5e39b7242b7786c27bbe48d0675e2d08"></a>
-<a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight"><b>font</b> () const</td></tr>
-<tr class="memdesc:a5e39b7242b7786c27bbe48d0675e2d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective font. <br /></td></tr>
-<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb" id="r_ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft"><a id="ac77626da8a7306cd079b1dd18558c9eb" name="ac77626da8a7306cd079b1dd18558c9eb"></a>
-void&#160;</td><td class="memItemRight"><b>setFont</b> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
-<tr class="memdesc:ac77626da8a7306cd079b1dd18558c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font to <em class="arg">font</em>. <br /></td></tr>
-<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft"><a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
-void&#160;</td><td class="memItemRight"><b>setFontSize</b> (std::size_t size)</td></tr>
-<tr class="memdesc:af9848b494ebdcaa5a497aa3504a4507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font size to <em class="arg">size</em>. <br /></td></tr>
-<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9" id="r_ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft"><a id="ae25e5c2d8699fd7c56e7c4547bad68a9" name="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
-void&#160;</td><td class="memItemRight"><b>setFontWeight</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
-<tr class="memdesc:ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font weight to <em class="arg">weight</em>. <br /></td></tr>
-<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb" id="r_afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft"><a id="afb7efbf3edf499b8e918c921e94b08cb" name="afb7efbf3edf499b8e918c921e94b08cb"></a>
-void&#160;</td><td class="memItemRight"><b>setFontSlant</b> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
-<tr class="memdesc:afb7efbf3edf499b8e918c921e94b08cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local font slant to <em class="arg">slant</em>. <br /></td></tr>
-<tr class="memitem:aa549995abdc6a886d0b51cdd8c3eae52" id="r_aa549995abdc6a886d0b51cdd8c3eae52"><td class="memItemLeft"><a id="aa549995abdc6a886d0b51cdd8c3eae52" name="aa549995abdc6a886d0b51cdd8c3eae52"></a>
-Gfx::SizeF&#160;</td><td class="memItemRight"><b>measureFrame</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize) const</td></tr>
-<tr class="memdesc:aa549995abdc6a886d0b51cdd8c3eae52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em class="arg">contentSize</em>. <br /></td></tr>
-<tr class="memitem:a21fc2c1dcf80c7442c26b293f28cace9" id="r_a21fc2c1dcf80c7442c26b293f28cace9"><td class="memItemLeft"><a id="a21fc2c1dcf80c7442c26b293f28cace9" name="a21fc2c1dcf80c7442c26b293f28cace9"></a>
-Gfx::SizeF&#160;</td><td class="memItemRight"><b>measureBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface) const</td></tr>
-<tr class="memdesc:a21fc2c1dcf80c7442c26b293f28cace9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the bar's natural size. <br /></td></tr>
-<tr class="memitem:ae393c8c7d70d3cbadb5c32ae49b84e3e" id="r_ae393c8c7d70d3cbadb5c32ae49b84e3e"><td class="memItemLeft"><a id="ae393c8c7d70d3cbadb5c32ae49b84e3e" name="ae393c8c7d70d3cbadb5c32ae49b84e3e"></a>
-void&#160;</td><td class="memItemRight"><b>layoutChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect) const</td></tr>
-<tr class="memdesc:ae393c8c7d70d3cbadb5c32ae49b84e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lays out the bar and text rectangles. <br /></td></tr>
-<tr class="memitem:a6de64bea592838927731767ae4ada12d" id="r_a6de64bea592838927731767ae4ada12d"><td class="memItemLeft"><a id="a6de64bea592838927731767ae4ada12d" name="a6de64bea592838927731767ae4ada12d"></a>
-void&#160;</td><td class="memItemRight"><b>layoutBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect) const</td></tr>
-<tr class="memdesc:a6de64bea592838927731767ae4ada12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lays out the track and chunk rectangles. <br /></td></tr>
-<tr class="memitem:a8af1441f55d55e2cdf58192839489849" id="r_a8af1441f55d55e2cdf58192839489849"><td class="memItemLeft"><a id="a8af1441f55d55e2cdf58192839489849" name="a8af1441f55d55e2cdf58192839489849"></a>
-const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> *&#160;</td><td class="memItemRight"><b>textPainter</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface) const</td></tr>
-<tr class="memdesc:a8af1441f55d55e2cdf58192839489849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text painter for <em class="arg">surface</em>, or 0 when unavailable. <br /></td></tr>
-<tr class="memitem:a613c8072794fff86a4f387415677b595" id="r_a613c8072794fff86a4f387415677b595"><td class="memItemLeft"><a id="a613c8072794fff86a4f387415677b595" name="a613c8072794fff86a4f387415677b595"></a>
-void&#160;</td><td class="memItemRight"><b>renderChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
-<tr class="memdesc:a613c8072794fff86a4f387415677b595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the chrome within <em class="arg">rect</em>. <br /></td></tr>
-<tr class="memitem:a9758a7a786cd4bf04731445c7e9f2abe" id="r_a9758a7a786cd4bf04731445c7e9f2abe"><td class="memItemLeft"><a id="a9758a7a786cd4bf04731445c7e9f2abe" name="a9758a7a786cd4bf04731445c7e9f2abe"></a>
-void&#160;</td><td class="memItemRight"><b>renderBar</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
-<tr class="memdesc:a9758a7a786cd4bf04731445c7e9f2abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the bar. <br /></td></tr>
-<tr class="memitem:a4ab7cfb9c83d00a08939b9db8f81799a" id="r_a4ab7cfb9c83d00a08939b9db8f81799a"><td class="memItemLeft"><a id="a4ab7cfb9c83d00a08939b9db8f81799a" name="a4ab7cfb9c83d00a08939b9db8f81799a"></a>
-void&#160;</td><td class="memItemRight"><b>renderTrack</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
-<tr class="memdesc:a4ab7cfb9c83d00a08939b9db8f81799a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the track. <br /></td></tr>
-<tr class="memitem:a81541006e36f5e802b0c869b59aef883" id="r_a81541006e36f5e802b0c869b59aef883"><td class="memItemLeft"><a id="a81541006e36f5e802b0c869b59aef883" name="a81541006e36f5e802b0c869b59aef883"></a>
-void&#160;</td><td class="memItemRight"><b>renderChunk</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
-<tr class="memdesc:a81541006e36f5e802b0c869b59aef883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the chunk. <br /></td></tr>
-<tr class="memitem:ab209c8cf5d14c4dbe9f60c7a0011e580" id="r_ab209c8cf5d14c4dbe9f60c7a0011e580"><td class="memItemLeft"><a id="ab209c8cf5d14c4dbe9f60c7a0011e580" name="ab209c8cf5d14c4dbe9f60c7a0011e580"></a>
-void&#160;</td><td class="memItemRight"><b>renderText</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
-<tr class="memdesc:ab209c8cf5d14c4dbe9f60c7a0011e580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the text. <br /></td></tr>
-<tr class="memitem:a5259d3b79a8492d0b24b0ed86f7af406" id="r_a5259d3b79a8492d0b24b0ed86f7af406"><td class="memItemLeft"><a id="a5259d3b79a8492d0b24b0ed86f7af406" name="a5259d3b79a8492d0b24b0ed86f7af406"></a>
-void&#160;</td><td class="memItemRight"><b>setRenderer</b> (<a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a> *renderer=0)</td></tr>
-<tr class="memdesc:a5259d3b79a8492d0b24b0ed86f7af406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a specific progress bar renderer. <br /></td></tr>
+<tr class="memitem:a9247e77a806ad57ae829b43c5582346d" id="r_a9247e77a806ad57ae829b43c5582346d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9247e77a806ad57ae829b43c5582346d">ProgressBarStyler</a> ()</td></tr>
+<tr class="memitem:a58f50f22df8ae76f2dee990b878cbf64" id="r_a58f50f22df8ae76f2dee990b878cbf64"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a58f50f22df8ae76f2dee990b878cbf64">background</a> () const</td></tr>
+<tr class="memitem:a95564aff9a3df88ce2c902c09a37f0b1" id="r_a95564aff9a3df88ce2c902c09a37f0b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95564aff9a3df88ce2c902c09a37f0b1">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;brush)</td></tr>
+<tr class="memitem:a5b8bf8872895964001181eede4bb23af" id="r_a5b8bf8872895964001181eede4bb23af"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5b8bf8872895964001181eede4bb23af">foreground</a> () const</td></tr>
+<tr class="memitem:a57d1d8e1cb5c2f071d2d745c6cd00e7f" id="r_a57d1d8e1cb5c2f071d2d745c6cd00e7f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a57d1d8e1cb5c2f071d2d745c6cd00e7f">setForeground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;brush)</td></tr>
+<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac7965a531c832104928b133e1e156342">contour</a> () const</td></tr>
+<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9143b7c87f8dfa181347d080a3f126e">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
+<tr class="memitem:a21cb9b4d5da5c498154b8eeb5ec77059" id="r_a21cb9b4d5da5c498154b8eeb5ec77059"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a21cb9b4d5da5c498154b8eeb5ec77059">textColor</a> () const</td></tr>
+<tr class="memitem:ac24598c93a713c95d97205c65dfccbfc" id="r_ac24598c93a713c95d97205c65dfccbfc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac24598c93a713c95d97205c65dfccbfc">setTextColor</a> (const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;color)</td></tr>
+<tr class="memitem:a5e39b7242b7786c27bbe48d0675e2d08" id="r_a5e39b7242b7786c27bbe48d0675e2d08"><td class="memItemLeft"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5e39b7242b7786c27bbe48d0675e2d08">font</a> () const</td></tr>
+<tr class="memitem:ac77626da8a7306cd079b1dd18558c9eb" id="r_ac77626da8a7306cd079b1dd18558c9eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac77626da8a7306cd079b1dd18558c9eb">setFont</a> (const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;font)</td></tr>
+<tr class="memitem:af9848b494ebdcaa5a497aa3504a4507b" id="r_af9848b494ebdcaa5a497aa3504a4507b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9848b494ebdcaa5a497aa3504a4507b">setFontSize</a> (std::size_t size)</td></tr>
+<tr class="memitem:ae25e5c2d8699fd7c56e7c4547bad68a9" id="r_ae25e5c2d8699fd7c56e7c4547bad68a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae25e5c2d8699fd7c56e7c4547bad68a9">setFontWeight</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a> weight)</td></tr>
+<tr class="memitem:afb7efbf3edf499b8e918c921e94b08cb" id="r_afb7efbf3edf499b8e918c921e94b08cb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb7efbf3edf499b8e918c921e94b08cb">setFontSlant</a> (<a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a> slant)</td></tr>
+<tr class="memitem:aa549995abdc6a886d0b51cdd8c3eae52" id="r_aa549995abdc6a886d0b51cdd8c3eae52"><td class="memItemLeft">Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#aa549995abdc6a886d0b51cdd8c3eae52">measureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize) const</td></tr>
+<tr class="memitem:a21fc2c1dcf80c7442c26b293f28cace9" id="r_a21fc2c1dcf80c7442c26b293f28cace9"><td class="memItemLeft">Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#a21fc2c1dcf80c7442c26b293f28cace9">measureBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface) const</td></tr>
+<tr class="memitem:ae393c8c7d70d3cbadb5c32ae49b84e3e" id="r_ae393c8c7d70d3cbadb5c32ae49b84e3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae393c8c7d70d3cbadb5c32ae49b84e3e">layoutChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;rect, const Gfx::SizeF &amp;barSize, const Gfx::SizeF &amp;textSize, Gfx::RectF &amp;barRect, Gfx::RectF &amp;textRect) const</td></tr>
+<tr class="memitem:a6de64bea592838927731767ae4ada12d" id="r_a6de64bea592838927731767ae4ada12d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6de64bea592838927731767ae4ada12d">layoutBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;barRect, float progressRatio, Gfx::RectF &amp;trackRect, Gfx::RectF &amp;chunkRect) const</td></tr>
+<tr class="memitem:a8af1441f55d55e2cdf58192839489849" id="r_a8af1441f55d55e2cdf58192839489849"><td class="memItemLeft">const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8af1441f55d55e2cdf58192839489849">textPainter</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface) const</td></tr>
+<tr class="memitem:a613c8072794fff86a4f387415677b595" id="r_a613c8072794fff86a4f387415677b595"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a613c8072794fff86a4f387415677b595">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const Gfx::RectF &amp;textRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
+<tr class="memitem:a9758a7a786cd4bf04731445c7e9f2abe" id="r_a9758a7a786cd4bf04731445c7e9f2abe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9758a7a786cd4bf04731445c7e9f2abe">renderBar</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
+<tr class="memitem:a4ab7cfb9c83d00a08939b9db8f81799a" id="r_a4ab7cfb9c83d00a08939b9db8f81799a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ab7cfb9c83d00a08939b9db8f81799a">renderTrack</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;trackRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
+<tr class="memitem:a81541006e36f5e802b0c869b59aef883" id="r_a81541006e36f5e802b0c869b59aef883"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a81541006e36f5e802b0c869b59aef883">renderChunk</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
+<tr class="memitem:ab209c8cf5d14c4dbe9f60c7a0011e580" id="r_ab209c8cf5d14c4dbe9f60c7a0011e580"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab209c8cf5d14c4dbe9f60c7a0011e580">renderText</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;textRect, const Gfx::RectF &amp;chunkRect, const <a class="el" href="classPt_1_1String.html">String</a> &amp;text, const Gfx::PointF &amp;textPos, const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;state) const</td></tr>
+<tr class="memitem:a5259d3b79a8492d0b24b0ed86f7af406" id="r_a5259d3b79a8492d0b24b0ed86f7af406"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5259d3b79a8492d0b24b0ed86f7af406">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a> *renderer=0)</td></tr>
 <tr class="memitem:a13398a7348d2dd4f0e298d6fe1c1cbf5" id="r_a13398a7348d2dd4f0e298d6fe1c1cbf5"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a13398a7348d2dd4f0e298d6fe1c1cbf5">options</a> ()</td></tr>
-<tr class="memdesc:a13398a7348d2dd4f0e298d6fe1c1cbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bound effective progress bar options.  <br /></td></tr>
-<tr class="memitem:abd9a43321567ecf1034a0e9f752ba0a6" id="r_abd9a43321567ecf1034a0e9f752ba0a6"><td class="memItemLeft"><a id="abd9a43321567ecf1034a0e9f752ba0a6" name="abd9a43321567ecf1034a0e9f752ba0a6"></a>
-const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><b>options</b> () const</td></tr>
-<tr class="memdesc:abd9a43321567ecf1034a0e9f752ba0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bound effective progress bar options. <br /></td></tr>
+<tr class="memitem:abd9a43321567ecf1034a0e9f752ba0a6" id="r_abd9a43321567ecf1034a0e9f752ba0a6"><td class="memItemLeft">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abd9a43321567ecf1034a0e9f752ba0a6">options</a> () const</td></tr>
 <tr class="memitem:a36be2eaef48ddc0bd3fff591fa5dfbed" id="r_a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a36be2eaef48ddc0bd3fff591fa5dfbed">bind</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style, const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;styleOptions)</td></tr>
 <tr class="memdesc:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this styler to <em class="arg">style</em> and <em class="arg">styleOptions</em>.  <br /></td></tr>
 <tr class="memitem:a05476a754529dc56ab358f6383346cae" id="r_a05476a754529dc56ab358f6383346cae"><td class="memItemLeft"><a id="a05476a754529dc56ab358f6383346cae" name="a05476a754529dc56ab358f6383346cae"></a>
@@ -174,24 +118,607 @@ bool&#160;</td><td class="memItemRight"><b>isBound</b> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aed0878b836569480b98fe99b7ac28828" id="r_aed0878b836569480b98fe99b7ac28828"><td class="memItemLeft"><a id="aed0878b836569480b98fe99b7ac28828" name="aed0878b836569480b98fe99b7ac28828"></a>
-virtual <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><b>onBindOptions</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;styleOptions)</td></tr>
-<tr class="memdesc:aed0878b836569480b98fe99b7ac28828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the overlay to <em class="arg">styleOptions</em> and returns it. <br /></td></tr>
-<tr class="memitem:a354591c870184e2405b67d0adc1272a7" id="r_a354591c870184e2405b67d0adc1272a7"><td class="memItemLeft"><a id="a354591c870184e2405b67d0adc1272a7" name="a354591c870184e2405b67d0adc1272a7"></a>
-virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><b>onStyleRenderer</b> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
-<tr class="memdesc:a354591c870184e2405b67d0adc1272a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared progress-bar renderer from <em class="arg">style</em>, or 0. <br /></td></tr>
-<tr class="memitem:a93ff7e4659a821c34081b1a9014bfbde" id="r_a93ff7e4659a821c34081b1a9014bfbde"><td class="memItemLeft"><a id="a93ff7e4659a821c34081b1a9014bfbde" name="a93ff7e4659a821c34081b1a9014bfbde"></a>
-virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><b>onCreateRenderer</b> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
-<tr class="memdesc:a93ff7e4659a821c34081b1a9014bfbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an independent clone of the style renderer, or 0. <br /></td></tr>
+<tr class="memitem:aed0878b836569480b98fe99b7ac28828" id="r_aed0878b836569480b98fe99b7ac28828"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aed0878b836569480b98fe99b7ac28828">onBindOptions</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;styleOptions)</td></tr>
+<tr class="memitem:a354591c870184e2405b67d0adc1272a7" id="r_a354591c870184e2405b67d0adc1272a7"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a354591c870184e2405b67d0adc1272a7">onStyleRenderer</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
+<tr class="memitem:a93ff7e4659a821c34081b1a9014bfbde" id="r_a93ff7e4659a821c34081b1a9014bfbde"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a93ff7e4659a821c34081b1a9014bfbde">onCreateRenderer</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
 <tr class="memitem:a7aff0eab1f97e9e7a0600a28b5aa9124" id="r_a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a7aff0eab1f97e9e7a0600a28b5aa9124">init</a> (<a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *renderer)</td></tr>
 <tr class="memdesc:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the bound renderer with <em class="arg">renderer</em>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A ProgressBar owns a ProgressBarStyler. Applications do not construct one. Call Styler::bind() from onInvalidate(). When the overlay has no local options, bind uses the shared renderer from the style. Local options use a private clone. setRenderer() keeps an assigned renderer until it is cleared. A null renderer falls back on the next bind.</p>
+<div class="textblock"><p>@brief Binds a progress bar to the current style renderer.</p>
+<p>A ProgressBar owns a ProgressBarStyler. Applications do not construct one. Call Styler::bind() from onInvalidate(). When the overlay has no local options, bind uses the shared renderer from the style. Local options use a private clone. setRenderer() keeps an assigned renderer until it is cleared. A null renderer falls back on the next bind.</p>
 <p>Appearance getters return effective tokens after bind. Setters write widget-local options. Measure, layout, and paint call the typed methods on this styler, not a public renderer accessor. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9247e77a806ad57ae829b43c5582346d" name="a9247e77a806ad57ae829b43c5582346d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9247e77a806ad57ae829b43c5582346d">&#9670;&#160;</a></span>ProgressBarStyler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProgressBarStyler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Constructs an unbound progress bar styler. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a58f50f22df8ae76f2dee990b878cbf64" name="a58f50f22df8ae76f2dee990b878cbf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58f50f22df8ae76f2dee990b878cbf64">&#9670;&#160;</a></span>background()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp; background </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective background brush. </p>
+
+</div>
+</div>
+<a id="a95564aff9a3df88ce2c902c09a37f0b1" name="a95564aff9a3df88ce2c902c09a37f0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95564aff9a3df88ce2c902c09a37f0b1">&#9670;&#160;</a></span>setBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackground </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>brush</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local background brush to <em class="arg">brush</em>. </p>
+
+</div>
+</div>
+<a id="a5b8bf8872895964001181eede4bb23af" name="a5b8bf8872895964001181eede4bb23af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8bf8872895964001181eede4bb23af">&#9670;&#160;</a></span>foreground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp; foreground </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective foreground brush. </p>
+
+</div>
+</div>
+<a id="a57d1d8e1cb5c2f071d2d745c6cd00e7f" name="a57d1d8e1cb5c2f071d2d745c6cd00e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d1d8e1cb5c2f071d2d745c6cd00e7f">&#9670;&#160;</a></span>setForeground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setForeground </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>brush</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local foreground brush to <em class="arg">brush</em>. </p>
+
+</div>
+</div>
+<a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7965a531c832104928b133e1e156342">&#9670;&#160;</a></span>contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp; contour </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective contour pen. </p>
+
+</div>
+</div>
+<a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9143b7c87f8dfa181347d080a3f126e">&#9670;&#160;</a></span>setContour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContour </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local contour pen to <em class="arg">pen</em>. </p>
+
+</div>
+</div>
+<a id="a21cb9b4d5da5c498154b8eeb5ec77059" name="a21cb9b4d5da5c498154b8eeb5ec77059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cb9b4d5da5c498154b8eeb5ec77059">&#9670;&#160;</a></span>textColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp; textColor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective text color. </p>
+
+</div>
+</div>
+<a id="ac24598c93a713c95d97205c65dfccbfc" name="ac24598c93a713c95d97205c65dfccbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24598c93a713c95d97205c65dfccbfc">&#9670;&#160;</a></span>setTextColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTextColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Color.html">Gfx::Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local text color to <em class="arg">color</em>. </p>
+
+</div>
+</div>
+<a id="a5e39b7242b7786c27bbe48d0675e2d08" name="a5e39b7242b7786c27bbe48d0675e2d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e39b7242b7786c27bbe48d0675e2d08">&#9670;&#160;</a></span>font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> font </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective font. </p>
+
+</div>
+</div>
+<a id="ac77626da8a7306cd079b1dd18558c9eb" name="ac77626da8a7306cd079b1dd18558c9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77626da8a7306cd079b1dd18558c9eb">&#9670;&#160;</a></span>setFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFont </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Font.html">Gfx::Font</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local font to <em class="arg">font</em>. </p>
+
+</div>
+</div>
+<a id="af9848b494ebdcaa5a497aa3504a4507b" name="af9848b494ebdcaa5a497aa3504a4507b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9848b494ebdcaa5a497aa3504a4507b">&#9670;&#160;</a></span>setFontSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFontSize </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local font size to <em class="arg">size</em>. </p>
+
+</div>
+</div>
+<a id="ae25e5c2d8699fd7c56e7c4547bad68a9" name="ae25e5c2d8699fd7c56e7c4547bad68a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25e5c2d8699fd7c56e7c4547bad68a9">&#9670;&#160;</a></span>setFontWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFontWeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#add354b854a8899ddb39fc9d57bbe22e3">Gfx::Font::Weight</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local font weight to <em class="arg">weight</em>. </p>
+
+</div>
+</div>
+<a id="afb7efbf3edf499b8e918c921e94b08cb" name="afb7efbf3edf499b8e918c921e94b08cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7efbf3edf499b8e918c921e94b08cb">&#9670;&#160;</a></span>setFontSlant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFontSlant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Font.html#ab98ae24797c90e4aeecf0c84fe158d44">Gfx::Font::Slant</a></td>          <td class="paramname"><span class="paramname"><em>slant</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local font slant to <em class="arg">slant</em>. </p>
+
+</div>
+</div>
+<a id="aa549995abdc6a886d0b51cdd8c3eae52" name="aa549995abdc6a886d0b51cdd8c3eae52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa549995abdc6a886d0b51cdd8c3eae52">&#9670;&#160;</a></span>measureFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gfx::SizeF measureFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>contentSize</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Measures the frame enclosing <em class="arg">contentSize</em>. </p>
+
+</div>
+</div>
+<a id="a21fc2c1dcf80c7442c26b293f28cace9" name="a21fc2c1dcf80c7442c26b293f28cace9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21fc2c1dcf80c7442c26b293f28cace9">&#9670;&#160;</a></span>measureBar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gfx::SizeF measureBar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Measures the bar's natural size. </p>
+
+</div>
+</div>
+<a id="ae393c8c7d70d3cbadb5c32ae49b84e3e" name="ae393c8c7d70d3cbadb5c32ae49b84e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae393c8c7d70d3cbadb5c32ae49b84e3e">&#9670;&#160;</a></span>layoutChrome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void layoutChrome </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>barSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>textSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>barRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Lays out the bar and text rectangles. </p>
+
+</div>
+</div>
+<a id="a6de64bea592838927731767ae4ada12d" name="a6de64bea592838927731767ae4ada12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de64bea592838927731767ae4ada12d">&#9670;&#160;</a></span>layoutBar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void layoutBar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>barRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>progressRatio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Lays out the track and chunk rectangles. </p>
+
+</div>
+</div>
+<a id="a8af1441f55d55e2cdf58192839489849" name="a8af1441f55d55e2cdf58192839489849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af1441f55d55e2cdf58192839489849">&#9670;&#160;</a></span>textPainter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Forms_1_1Painter.html">Painter</a> * textPainter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the text painter for <em class="arg">surface</em>, or 0 when unavailable. </p>
+
+</div>
+</div>
+<a id="a613c8072794fff86a4f387415677b595" name="a613c8072794fff86a4f387415677b595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613c8072794fff86a4f387415677b595">&#9670;&#160;</a></span>renderChrome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderChrome </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the chrome within <em class="arg">rect</em>. </p>
+
+</div>
+</div>
+<a id="a9758a7a786cd4bf04731445c7e9f2abe" name="a9758a7a786cd4bf04731445c7e9f2abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9758a7a786cd4bf04731445c7e9f2abe">&#9670;&#160;</a></span>renderBar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderBar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the bar. </p>
+
+</div>
+</div>
+<a id="a4ab7cfb9c83d00a08939b9db8f81799a" name="a4ab7cfb9c83d00a08939b9db8f81799a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab7cfb9c83d00a08939b9db8f81799a">&#9670;&#160;</a></span>renderTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderTrack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>trackRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the track. </p>
+
+</div>
+</div>
+<a id="a81541006e36f5e802b0c869b59aef883" name="a81541006e36f5e802b0c869b59aef883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81541006e36f5e802b0c869b59aef883">&#9670;&#160;</a></span>renderChunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderChunk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the chunk. </p>
+
+</div>
+</div>
+<a id="ab209c8cf5d14c4dbe9f60c7a0011e580" name="ab209c8cf5d14c4dbe9f60c7a0011e580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab209c8cf5d14c4dbe9f60c7a0011e580">&#9670;&#160;</a></span>renderText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>textRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>chunkRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>textPos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ProgressBarState.html">ProgressBarState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the text. </p>
+
+</div>
+</div>
+<a id="a5259d3b79a8492d0b24b0ed86f7af406" name="a5259d3b79a8492d0b24b0ed86f7af406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5259d3b79a8492d0b24b0ed86f7af406">&#9670;&#160;</a></span>setRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1ProgressBarRenderer.html">ProgressBarRenderer</a> *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Assigns a specific progress bar renderer. </p>
+
+</div>
+</div>
 <a id="a13398a7348d2dd4f0e298d6fe1c1cbf5" name="a13398a7348d2dd4f0e298d6fe1c1cbf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13398a7348d2dd4f0e298d6fe1c1cbf5">&#9670;&#160;</a></span>options()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13398a7348d2dd4f0e298d6fe1c1cbf5">&#9670;&#160;</a></span>options() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +731,110 @@ virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#1
         </tr>
       </table>
 </div><div class="memdoc">
+<p>@brief Returns the bound effective progress bar options.</p>
 <p>Use StyleOptions::findLocal() to query an explicit widget-local token. </p>
+
+</div>
+</div>
+<a id="abd9a43321567ecf1034a0e9f752ba0a6" name="abd9a43321567ecf1034a0e9f752ba0a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9a43321567ecf1034a0e9f752ba0a6">&#9670;&#160;</a></span>options() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp; options </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the bound effective progress bar options. </p>
+
+</div>
+</div>
+<a id="aed0878b836569480b98fe99b7ac28828" name="aed0878b836569480b98fe99b7ac28828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0878b836569480b98fe99b7ac28828">&#9670;&#160;</a></span>onBindOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp; onBindOptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>styleOptions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Binds the overlay to <em class="arg">styleOptions</em> and returns it. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1Styler.html#aa83605757fccdda53f479610bf5311e2">Styler</a>.</p>
+
+</div>
+</div>
+<a id="a354591c870184e2405b67d0adc1272a7" name="a354591c870184e2405b67d0adc1272a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354591c870184e2405b67d0adc1272a7">&#9670;&#160;</a></span>onStyleRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> * onStyleRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>style</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Returns the shared progress-bar renderer from <em class="arg">style</em>, or 0. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1Styler.html#a993a7b57a9617bc428c9a73a62db5c7f">Styler</a>.</p>
+
+</div>
+</div>
+<a id="a93ff7e4659a821c34081b1a9014bfbde" name="a93ff7e4659a821c34081b1a9014bfbde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ff7e4659a821c34081b1a9014bfbde">&#9670;&#160;</a></span>onCreateRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> * onCreateRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>style</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Creates an independent clone of the style renderer, or 0. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1Styler.html#adab6f2acf687cac86a025faf82acec03">Styler</a>.</p>
 
 </div>
 </div>

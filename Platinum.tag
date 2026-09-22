@@ -115540,11 +115540,6 @@
     <filename>downloads.html</filename>
   </compound>
   <compound kind="page">
-    <name>faq</name>
-    <title>Frequently Asked Questions</title>
-    <filename>faq.html</filename>
-  </compound>
-  <compound kind="page">
     <name>images</name>
     <title>Images</title>
     <filename>images.html</filename>
@@ -115910,11 +115905,6 @@
     <docanchor file="Pt-Unit-Page.html" title="Automatic Test Registration">Pt-Unit-Page-RegisterTest</docanchor>
     <docanchor file="Pt-Unit-Page.html" title="Running Test Applications">Pt-Unit-Page-Application</docanchor>
     <docanchor file="Pt-Unit-Page.html" title="Reporting Test Results">Pt-Unit-Page-Reporter</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>reading</name>
-    <title>Recommended Reading</title>
-    <filename>reading.html</filename>
   </compound>
   <compound kind="page">
     <name>tutorial</name>

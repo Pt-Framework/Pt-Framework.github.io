@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -115,7 +115,6 @@ void&#160;</td><td class="memItemRight"><b>setScaleFactor</b> (double v)</td></t
 <tr class="memitem:a546c5517e71b4429023c899491fb844b" id="r_a546c5517e71b4429023c899491fb844b"><td class="memItemLeft">const <a class="el" href="classPt_1_1Forms_1_1IPixmapImpl.html">IPixmapImpl</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a546c5517e71b4429023c899491fb844b">impl</a> () const</td></tr>
 <tr class="memdesc:a546c5517e71b4429023c899491fb844b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the platform pixmap implementation.  <br /></td></tr>
 <tr class="memitem:a03caab657bf78d69efdc4216e58b560e" id="r_a03caab657bf78d69efdc4216e58b560e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html#a03caab657bf78d69efdc4216e58b560e">drawPixmap</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;canvas, const Gfx::PointF &amp;to, const <a class="el" href="#a9152c8d51ae74a6671d84a01615b29c6">Pixmap</a> &amp;pixmap, const Gfx::RectF *rect=0)</td></tr>
-<tr class="memdesc:a03caab657bf78d69efdc4216e58b560e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>.  <br /></td></tr>
 <tr class="memitem:a9c008fa8c4abae0fdf2c8d6c55dc2c2b" id="r_a9c008fa8c4abae0fdf2c8d6c55dc2c2b"><td class="memItemLeft"><a id="a9c008fa8c4abae0fdf2c8d6c55dc2c2b" name="a9c008fa8c4abae0fdf2c8d6c55dc2c2b"></a>
 const <a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">Gfx::ImageFormat</a> &amp;&#160;</td><td class="memItemRight"><b>format</b> () const</td></tr>
 <tr class="memdesc:a9c008fa8c4abae0fdf2c8d6c55dc2c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the image format. <br /></td></tr>
@@ -137,9 +136,7 @@ void&#160;</td><td class="memItemRight"><b>finish</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4b7297fec3155de7be45ad152a046456" id="r_a4b7297fec3155de7be45ad152a046456"><td class="memItemLeft"><a id="a4b7297fec3155de7be45ad152a046456" name="a4b7297fec3155de7be45ad152a046456"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onDrawPixmap</b> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;canvas, const Gfx::PointF &amp;to, const <a class="el" href="#a9152c8d51ae74a6671d84a01615b29c6">Pixmap</a> &amp;pixmap, const Gfx::RectF *rect=0) override</td></tr>
-<tr class="memdesc:a4b7297fec3155de7be45ad152a046456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>. <br /></td></tr>
+<tr class="memitem:a4b7297fec3155de7be45ad152a046456" id="r_a4b7297fec3155de7be45ad152a046456"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4b7297fec3155de7be45ad152a046456">onDrawPixmap</a> (<a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;canvas, const Gfx::PointF &amp;to, const <a class="el" href="#a9152c8d51ae74a6671d84a01615b29c6">Pixmap</a> &amp;pixmap, const Gfx::RectF *rect=0) override</td></tr>
 <tr class="memitem:a7b0c36eb804b25896a0ef4a3ceb54ae8" id="r_a7b0c36eb804b25896a0ef4a3ceb54ae8"><td class="memItemLeft"><a id="a7b0c36eb804b25896a0ef4a3ceb54ae8" name="a7b0c36eb804b25896a0ef4a3ceb54ae8"></a>
 virtual const <a class="el" href="classPt_1_1Gfx_1_1ImageFormat.html">Gfx::ImageFormat</a> &amp;&#160;</td><td class="memItemRight"><b>onGetFormat</b> () const override</td></tr>
 <tr class="memdesc:a7b0c36eb804b25896a0ef4a3ceb54ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the image format. <br /></td></tr>
@@ -171,6 +168,48 @@ void&#160;</td><td class="memItemRight"><b>invalidate</b> ()</td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Pixmap is a PaintSurface used as a back buffer or as cached image content. Reset it from an image or a size in physical pixels. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a4b7297fec3155de7be45ad152a046456" name="a4b7297fec3155de7be45ad152a046456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7297fec3155de7be45ad152a046456">&#9670;&#160;</a></span>onDrawPixmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDrawPixmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1Canvas.html">Gfx::Canvas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a9152c8d51ae74a6671d84a01615b29c6">Pixmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pixmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF *</td>          <td class="paramname"><span class="paramname"><em>rect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1PaintSurface.html#a9d93951e19f50a7fc6013f86513b8663">PaintSurface</a>.</p>
+
+</div>
+</div>
 <a id="a5eac633c2fa2acc4cbb1aa38931e37a7" name="a5eac633c2fa2acc4cbb1aa38931e37a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5eac633c2fa2acc4cbb1aa38931e37a7">&#9670;&#160;</a></span>impl() <span class="overload">[1/2]</span></h2>
 
@@ -243,6 +282,7 @@ void&#160;</td><td class="memItemRight"><b>invalidate</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>@brief Draws <em class="arg">pixmap</em> onto <em class="arg">canvas</em> at <em class="arg">to</em>.</p>
 <p>When <em class="arg">rect</em> is not null, only that region of the pixmap is drawn. </p>
 
 </div>

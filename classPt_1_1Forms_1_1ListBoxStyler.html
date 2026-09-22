@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -79,42 +79,20 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="ListBoxStyler_8h_source.html">Pt/Forms/ListBoxStyler.h</a>&gt;</code></p>
 
-<p>Binds a list box to the current style renderer.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Forms_1_1Styler.html">Styler</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a42967f2937690155e6153472a0c8c616" id="r_a42967f2937690155e6153472a0c8c616"><td class="memItemLeft"><a id="a42967f2937690155e6153472a0c8c616" name="a42967f2937690155e6153472a0c8c616"></a>
-&#160;</td><td class="memItemRight"><b>ListBoxStyler</b> ()</td></tr>
-<tr class="memdesc:a42967f2937690155e6153472a0c8c616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an unbound list box styler. <br /></td></tr>
-<tr class="memitem:a58f50f22df8ae76f2dee990b878cbf64" id="r_a58f50f22df8ae76f2dee990b878cbf64"><td class="memItemLeft"><a id="a58f50f22df8ae76f2dee990b878cbf64" name="a58f50f22df8ae76f2dee990b878cbf64"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><b>background</b> () const</td></tr>
-<tr class="memdesc:a58f50f22df8ae76f2dee990b878cbf64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective list box background brush. <br /></td></tr>
-<tr class="memitem:a95564aff9a3df88ce2c902c09a37f0b1" id="r_a95564aff9a3df88ce2c902c09a37f0b1"><td class="memItemLeft"><a id="a95564aff9a3df88ce2c902c09a37f0b1" name="a95564aff9a3df88ce2c902c09a37f0b1"></a>
-void&#160;</td><td class="memItemRight"><b>setBackground</b> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;brush)</td></tr>
-<tr class="memdesc:a95564aff9a3df88ce2c902c09a37f0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local list box background brush to <em class="arg">brush</em>. <br /></td></tr>
-<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft"><a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
-const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><b>contour</b> () const</td></tr>
-<tr class="memdesc:ac7965a531c832104928b133e1e156342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective list box contour pen. <br /></td></tr>
-<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft"><a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
-void&#160;</td><td class="memItemRight"><b>setContour</b> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
-<tr class="memdesc:ac9143b7c87f8dfa181347d080a3f126e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget-local list box contour pen to <em class="arg">pen</em>. <br /></td></tr>
-<tr class="memitem:aa549995abdc6a886d0b51cdd8c3eae52" id="r_aa549995abdc6a886d0b51cdd8c3eae52"><td class="memItemLeft"><a id="aa549995abdc6a886d0b51cdd8c3eae52" name="aa549995abdc6a886d0b51cdd8c3eae52"></a>
-Gfx::SizeF&#160;</td><td class="memItemRight"><b>measureFrame</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize) const</td></tr>
-<tr class="memdesc:aa549995abdc6a886d0b51cdd8c3eae52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the frame enclosing <em class="arg">contentSize</em>. <br /></td></tr>
-<tr class="memitem:a9dc290c06a8b203ee6ea5f4a8e171466" id="r_a9dc290c06a8b203ee6ea5f4a8e171466"><td class="memItemLeft"><a id="a9dc290c06a8b203ee6ea5f4a8e171466" name="a9dc290c06a8b203ee6ea5f4a8e171466"></a>
-Gfx::RectF&#160;</td><td class="memItemRight"><b>layoutFrame</b> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;frameRect) const</td></tr>
-<tr class="memdesc:a9dc290c06a8b203ee6ea5f4a8e171466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the frame content rectangle within <em class="arg">frameRect</em>. <br /></td></tr>
-<tr class="memitem:a0ac3901898bd07465d1b2ceb4743a33e" id="r_a0ac3901898bd07465d1b2ceb4743a33e"><td class="memItemLeft"><a id="a0ac3901898bd07465d1b2ceb4743a33e" name="a0ac3901898bd07465d1b2ceb4743a33e"></a>
-void&#160;</td><td class="memItemRight"><b>renderBackground</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state) const</td></tr>
-<tr class="memdesc:a0ac3901898bd07465d1b2ceb4743a33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the list box background within <em class="arg">rect</em> for <em class="arg">state</em>. <br /></td></tr>
-<tr class="memitem:a26ada2e7f0f843e1cc817082a056c9fe" id="r_a26ada2e7f0f843e1cc817082a056c9fe"><td class="memItemLeft"><a id="a26ada2e7f0f843e1cc817082a056c9fe" name="a26ada2e7f0f843e1cc817082a056c9fe"></a>
-void&#160;</td><td class="memItemRight"><b>renderChrome</b> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state) const</td></tr>
-<tr class="memdesc:a26ada2e7f0f843e1cc817082a056c9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the list box chrome within <em class="arg">rect</em> for <em class="arg">state</em>. <br /></td></tr>
+<tr class="memitem:a42967f2937690155e6153472a0c8c616" id="r_a42967f2937690155e6153472a0c8c616"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a42967f2937690155e6153472a0c8c616">ListBoxStyler</a> ()</td></tr>
+<tr class="memitem:a58f50f22df8ae76f2dee990b878cbf64" id="r_a58f50f22df8ae76f2dee990b878cbf64"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a58f50f22df8ae76f2dee990b878cbf64">background</a> () const</td></tr>
+<tr class="memitem:a95564aff9a3df88ce2c902c09a37f0b1" id="r_a95564aff9a3df88ce2c902c09a37f0b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95564aff9a3df88ce2c902c09a37f0b1">setBackground</a> (const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;brush)</td></tr>
+<tr class="memitem:ac7965a531c832104928b133e1e156342" id="r_ac7965a531c832104928b133e1e156342"><td class="memItemLeft">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac7965a531c832104928b133e1e156342">contour</a> () const</td></tr>
+<tr class="memitem:ac9143b7c87f8dfa181347d080a3f126e" id="r_ac9143b7c87f8dfa181347d080a3f126e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9143b7c87f8dfa181347d080a3f126e">setContour</a> (const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;pen)</td></tr>
+<tr class="memitem:aa549995abdc6a886d0b51cdd8c3eae52" id="r_aa549995abdc6a886d0b51cdd8c3eae52"><td class="memItemLeft">Gfx::SizeF&#160;</td><td class="memItemRight"><a class="el" href="#aa549995abdc6a886d0b51cdd8c3eae52">measureFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::SizeF &amp;contentSize) const</td></tr>
+<tr class="memitem:a9dc290c06a8b203ee6ea5f4a8e171466" id="r_a9dc290c06a8b203ee6ea5f4a8e171466"><td class="memItemLeft">Gfx::RectF&#160;</td><td class="memItemRight"><a class="el" href="#a9dc290c06a8b203ee6ea5f4a8e171466">layoutFrame</a> (<a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;surface, const Gfx::RectF &amp;frameRect) const</td></tr>
+<tr class="memitem:a0ac3901898bd07465d1b2ceb4743a33e" id="r_a0ac3901898bd07465d1b2ceb4743a33e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ac3901898bd07465d1b2ceb4743a33e">renderBackground</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state) const</td></tr>
+<tr class="memitem:a26ada2e7f0f843e1cc817082a056c9fe" id="r_a26ada2e7f0f843e1cc817082a056c9fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26ada2e7f0f843e1cc817082a056c9fe">renderChrome</a> (<a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;context, const Gfx::RectF &amp;rect, const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;state) const</td></tr>
 <tr class="memitem:aeb019a1deae3a381299e7eddb9c22b1e" id="r_aeb019a1deae3a381299e7eddb9c22b1e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb019a1deae3a381299e7eddb9c22b1e">setRenderer</a> (<a class="el" href="classPt_1_1Forms_1_1ListBoxRenderer.html">ListBoxRenderer</a> *renderer=0)</td></tr>
-<tr class="memdesc:aeb019a1deae3a381299e7eddb9c22b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a specific list box renderer.  <br /></td></tr>
 <tr class="memitem:a36be2eaef48ddc0bd3fff591fa5dfbed" id="r_a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a36be2eaef48ddc0bd3fff591fa5dfbed">bind</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style, const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;styleOptions)</td></tr>
 <tr class="memdesc:a36be2eaef48ddc0bd3fff591fa5dfbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this styler to <em class="arg">style</em> and <em class="arg">styleOptions</em>.  <br /></td></tr>
 <tr class="memitem:a05476a754529dc56ab358f6383346cae" id="r_a05476a754529dc56ab358f6383346cae"><td class="memItemLeft"><a id="a05476a754529dc56ab358f6383346cae" name="a05476a754529dc56ab358f6383346cae"></a>
@@ -123,22 +101,206 @@ bool&#160;</td><td class="memItemRight"><b>isBound</b> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a48647e1f01a6be41a811ebcf11f1feae" id="r_a48647e1f01a6be41a811ebcf11f1feae"><td class="memItemLeft"><a id="a48647e1f01a6be41a811ebcf11f1feae" name="a48647e1f01a6be41a811ebcf11f1feae"></a>
-virtual <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><b>onBindOptions</b> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;global)</td></tr>
-<tr class="memdesc:a48647e1f01a6be41a811ebcf11f1feae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the overlay to <em class="arg">global</em> and returns it. <br /></td></tr>
-<tr class="memitem:a354591c870184e2405b67d0adc1272a7" id="r_a354591c870184e2405b67d0adc1272a7"><td class="memItemLeft"><a id="a354591c870184e2405b67d0adc1272a7" name="a354591c870184e2405b67d0adc1272a7"></a>
-virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><b>onStyleRenderer</b> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
-<tr class="memdesc:a354591c870184e2405b67d0adc1272a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared list-box renderer from <em class="arg">style</em>, or 0. <br /></td></tr>
-<tr class="memitem:a93ff7e4659a821c34081b1a9014bfbde" id="r_a93ff7e4659a821c34081b1a9014bfbde"><td class="memItemLeft"><a id="a93ff7e4659a821c34081b1a9014bfbde" name="a93ff7e4659a821c34081b1a9014bfbde"></a>
-virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><b>onCreateRenderer</b> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
-<tr class="memdesc:a93ff7e4659a821c34081b1a9014bfbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an independent clone of the style renderer, or 0. <br /></td></tr>
+<tr class="memitem:a48647e1f01a6be41a811ebcf11f1feae" id="r_a48647e1f01a6be41a811ebcf11f1feae"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a48647e1f01a6be41a811ebcf11f1feae">onBindOptions</a> (const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;global)</td></tr>
+<tr class="memitem:a354591c870184e2405b67d0adc1272a7" id="r_a354591c870184e2405b67d0adc1272a7"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a354591c870184e2405b67d0adc1272a7">onStyleRenderer</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
+<tr class="memitem:a93ff7e4659a821c34081b1a9014bfbde" id="r_a93ff7e4659a821c34081b1a9014bfbde"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a93ff7e4659a821c34081b1a9014bfbde">onCreateRenderer</a> (const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;style)</td></tr>
 <tr class="memitem:a7aff0eab1f97e9e7a0600a28b5aa9124" id="r_a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Forms_1_1Styler.html#a7aff0eab1f97e9e7a0600a28b5aa9124">init</a> (<a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *renderer)</td></tr>
 <tr class="memdesc:a7aff0eab1f97e9e7a0600a28b5aa9124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the bound renderer with <em class="arg">renderer</em>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A ListBox owns a ListBoxStyler. Applications do not construct one. Call Styler::bind() from onInvalidate(). When the overlay has no local options, bind uses the shared renderer from the style. Local options use a private clone. setRenderer() keeps an assigned renderer until it is cleared. A null renderer falls back on the next bind.</p>
+<div class="textblock"><p>@brief Binds a list box to the current style renderer.</p>
+<p>A ListBox owns a ListBoxStyler. Applications do not construct one. Call Styler::bind() from onInvalidate(). When the overlay has no local options, bind uses the shared renderer from the style. Local options use a private clone. setRenderer() keeps an assigned renderer until it is cleared. A null renderer falls back on the next bind.</p>
 <p>Appearance getters return effective tokens after bind. Setters write widget-local options. Measure, layout, and paint call the typed methods on this styler, not a public renderer accessor. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a42967f2937690155e6153472a0c8c616" name="a42967f2937690155e6153472a0c8c616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42967f2937690155e6153472a0c8c616">&#9670;&#160;</a></span>ListBoxStyler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListBoxStyler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Constructs an unbound list box styler. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a58f50f22df8ae76f2dee990b878cbf64" name="a58f50f22df8ae76f2dee990b878cbf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58f50f22df8ae76f2dee990b878cbf64">&#9670;&#160;</a></span>background()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp; background </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective list box background brush. </p>
+
+</div>
+</div>
+<a id="a95564aff9a3df88ce2c902c09a37f0b1" name="a95564aff9a3df88ce2c902c09a37f0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95564aff9a3df88ce2c902c09a37f0b1">&#9670;&#160;</a></span>setBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackground </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Brush.html">Gfx::Brush</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>brush</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local list box background brush to <em class="arg">brush</em>. </p>
+
+</div>
+</div>
+<a id="ac7965a531c832104928b133e1e156342" name="ac7965a531c832104928b133e1e156342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7965a531c832104928b133e1e156342">&#9670;&#160;</a></span>contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp; contour </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the effective list box contour pen. </p>
+
+</div>
+</div>
+<a id="ac9143b7c87f8dfa181347d080a3f126e" name="ac9143b7c87f8dfa181347d080a3f126e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9143b7c87f8dfa181347d080a3f126e">&#9670;&#160;</a></span>setContour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContour </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Gfx_1_1Pen.html">Gfx::Pen</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the widget-local list box contour pen to <em class="arg">pen</em>. </p>
+
+</div>
+</div>
+<a id="aa549995abdc6a886d0b51cdd8c3eae52" name="aa549995abdc6a886d0b51cdd8c3eae52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa549995abdc6a886d0b51cdd8c3eae52">&#9670;&#160;</a></span>measureFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gfx::SizeF measureFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::SizeF &amp;</td>          <td class="paramname"><span class="paramname"><em>contentSize</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Measures the frame enclosing <em class="arg">contentSize</em>. </p>
+
+</div>
+</div>
+<a id="a9dc290c06a8b203ee6ea5f4a8e171466" name="a9dc290c06a8b203ee6ea5f4a8e171466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc290c06a8b203ee6ea5f4a8e171466">&#9670;&#160;</a></span>layoutFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gfx::RectF layoutFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintSurface.html">PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>frameRect</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the frame content rectangle within <em class="arg">frameRect</em>. </p>
+
+</div>
+</div>
+<a id="a0ac3901898bd07465d1b2ceb4743a33e" name="a0ac3901898bd07465d1b2ceb4743a33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac3901898bd07465d1b2ceb4743a33e">&#9670;&#160;</a></span>renderBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderBackground </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the list box background within <em class="arg">rect</em> for <em class="arg">state</em>. </p>
+
+</div>
+</div>
+<a id="a26ada2e7f0f843e1cc817082a056c9fe" name="a26ada2e7f0f843e1cc817082a056c9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ada2e7f0f843e1cc817082a056c9fe">&#9670;&#160;</a></span>renderChrome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderChrome </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1PaintContext.html">PaintContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1ListBoxState.html">ListBoxState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Renders the list box chrome within <em class="arg">rect</em> for <em class="arg">state</em>. </p>
+
+</div>
+</div>
 <a id="aeb019a1deae3a381299e7eddb9c22b1e" name="aeb019a1deae3a381299e7eddb9c22b1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb019a1deae3a381299e7eddb9c22b1e">&#9670;&#160;</a></span>setRenderer()</h2>
 
@@ -153,7 +315,92 @@ virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> *&#1
         </tr>
       </table>
 </div><div class="memdoc">
+<p>@brief Assigns a specific list box renderer.</p>
 <p>A null renderer falls back to the current style on the next bind. </p>
+
+</div>
+</div>
+<a id="a48647e1f01a6be41a811ebcf11f1feae" name="a48647e1f01a6be41a811ebcf11f1feae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48647e1f01a6be41a811ebcf11f1feae">&#9670;&#160;</a></span>onBindOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp; onBindOptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1StyleOptions.html">StyleOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>global</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Binds the overlay to <em class="arg">global</em> and returns it. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1Styler.html#aa83605757fccdda53f479610bf5311e2">Styler</a>.</p>
+
+</div>
+</div>
+<a id="a354591c870184e2405b67d0adc1272a7" name="a354591c870184e2405b67d0adc1272a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354591c870184e2405b67d0adc1272a7">&#9670;&#160;</a></span>onStyleRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> * onStyleRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>style</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Returns the shared list-box renderer from <em class="arg">style</em>, or 0. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1Styler.html#a993a7b57a9617bc428c9a73a62db5c7f">Styler</a>.</p>
+
+</div>
+</div>
+<a id="a93ff7e4659a821c34081b1a9014bfbde" name="a93ff7e4659a821c34081b1a9014bfbde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ff7e4659a821c34081b1a9014bfbde">&#9670;&#160;</a></span>onCreateRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPt_1_1Forms_1_1Renderer.html">Renderer</a> * onCreateRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Style.html">Style</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>style</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Creates an independent clone of the style renderer, or 0. </p>
+
+<p>Implements <a class="el" href="classPt_1_1Forms_1_1Styler.html#adab6f2acf687cac86a025faf82acec03">Styler</a>.</p>
 
 </div>
 </div>

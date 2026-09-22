@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -79,31 +79,16 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="PaintEvent_8h_source.html">Pt/Forms/PaintEvent.h</a>&gt;</code></p>
 
-<p>Reports a dirty rectangle that a widget must paint.  
-</p>
-
 <p>Inherits <a class="el" href="classPt_1_1BasicEvent.html">BasicEvent&lt; PaintEvent &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adfee9dfb4eb2993c056fd4034cb52914" id="r_adfee9dfb4eb2993c056fd4034cb52914"><td class="memItemLeft"><a id="adfee9dfb4eb2993c056fd4034cb52914" name="adfee9dfb4eb2993c056fd4034cb52914"></a>
-&#160;</td><td class="memItemRight"><b>PaintEvent</b> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;widget, const Gfx::RectF &amp;rect)</td></tr>
-<tr class="memdesc:adfee9dfb4eb2993c056fd4034cb52914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an event for <em class="arg">widget</em> and dirty rectangle <em class="arg">rect</em>. <br /></td></tr>
-<tr class="memitem:acbc0c3cb123cf541e31575b9cdae7a2d" id="r_acbc0c3cb123cf541e31575b9cdae7a2d"><td class="memItemLeft"><a id="acbc0c3cb123cf541e31575b9cdae7a2d" name="acbc0c3cb123cf541e31575b9cdae7a2d"></a>
-virtual&#160;</td><td class="memItemRight"><b>~PaintEvent</b> ()</td></tr>
-<tr class="memdesc:acbc0c3cb123cf541e31575b9cdae7a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="memitem:ac8213ddcc5496cd3188cb7fd9470e9bd" id="r_ac8213ddcc5496cd3188cb7fd9470e9bd"><td class="memItemLeft"><a id="ac8213ddcc5496cd3188cb7fd9470e9bd" name="ac8213ddcc5496cd3188cb7fd9470e9bd"></a>
-<a class="el" href="group__Pt-IntTypes.html#gaa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a>&#160;</td><td class="memItemRight"><b>widgetId</b> () const</td></tr>
-<tr class="memdesc:ac8213ddcc5496cd3188cb7fd9470e9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target widget ID. <br /></td></tr>
-<tr class="memitem:ac42ecdd75e459fb4fe359d28c529c803" id="r_ac42ecdd75e459fb4fe359d28c529c803"><td class="memItemLeft"><a id="ac42ecdd75e459fb4fe359d28c529c803" name="ac42ecdd75e459fb4fe359d28c529c803"></a>
-<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight"><b>widget</b> () const</td></tr>
-<tr class="memdesc:ac42ecdd75e459fb4fe359d28c529c803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target widget. <br /></td></tr>
-<tr class="memitem:a939791cece0c937b785b6d201fb59142" id="r_a939791cece0c937b785b6d201fb59142"><td class="memItemLeft"><a id="a939791cece0c937b785b6d201fb59142" name="a939791cece0c937b785b6d201fb59142"></a>
-const Gfx::RectF &amp;&#160;</td><td class="memItemRight"><b>rect</b> () const</td></tr>
-<tr class="memdesc:a939791cece0c937b785b6d201fb59142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dirty rectangle in local coordinates. <br /></td></tr>
-<tr class="memitem:a11dab265d39272be03212ed52412bb3e" id="r_a11dab265d39272be03212ed52412bb3e"><td class="memItemLeft"><a id="a11dab265d39272be03212ed52412bb3e" name="a11dab265d39272be03212ed52412bb3e"></a>
-void&#160;</td><td class="memItemRight"><b>setRect</b> (const Gfx::RectF &amp;r)</td></tr>
-<tr class="memdesc:a11dab265d39272be03212ed52412bb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dirty rectangle to <em class="arg">r</em>. <br /></td></tr>
+<tr class="memitem:adfee9dfb4eb2993c056fd4034cb52914" id="r_adfee9dfb4eb2993c056fd4034cb52914"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adfee9dfb4eb2993c056fd4034cb52914">PaintEvent</a> (<a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;widget, const Gfx::RectF &amp;rect)</td></tr>
+<tr class="memitem:acbc0c3cb123cf541e31575b9cdae7a2d" id="r_acbc0c3cb123cf541e31575b9cdae7a2d"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#acbc0c3cb123cf541e31575b9cdae7a2d">~PaintEvent</a> ()</td></tr>
+<tr class="memitem:ac8213ddcc5496cd3188cb7fd9470e9bd" id="r_ac8213ddcc5496cd3188cb7fd9470e9bd"><td class="memItemLeft"><a class="el" href="group__Pt-IntTypes.html#gaa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac8213ddcc5496cd3188cb7fd9470e9bd">widgetId</a> () const</td></tr>
+<tr class="memitem:ac42ecdd75e459fb4fe359d28c529c803" id="r_ac42ecdd75e459fb4fe359d28c529c803"><td class="memItemLeft"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac42ecdd75e459fb4fe359d28c529c803">widget</a> () const</td></tr>
+<tr class="memitem:a939791cece0c937b785b6d201fb59142" id="r_a939791cece0c937b785b6d201fb59142"><td class="memItemLeft">const Gfx::RectF &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a939791cece0c937b785b6d201fb59142">rect</a> () const</td></tr>
+<tr class="memitem:a11dab265d39272be03212ed52412bb3e" id="r_a11dab265d39272be03212ed52412bb3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a11dab265d39272be03212ed52412bb3e">setRect</a> (const Gfx::RectF &amp;r)</td></tr>
 <tr class="memitem:af7591c64a59014f4220b3766d97fa9fc" id="r_af7591c64a59014f4220b3766d97fa9fc"><td class="memItemLeft"><a id="af7591c64a59014f4220b3766d97fa9fc" name="af7591c64a59014f4220b3766d97fa9fc"></a>
 <a class="el" href="classPt_1_1Event.html#a85b9e8172cffad1f169d55688e49a72f">Event</a> &amp;&#160;</td><td class="memItemRight"><b>clone</b> (<a class="el" href="classPt_1_1Allocator.html">Allocator</a> &amp;allocator) const</td></tr>
 <tr class="memdesc:af7591c64a59014f4220b3766d97fa9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this event using an allocator. <br /></td></tr>
@@ -123,6 +108,130 @@ static <a class="el" href="classPt_1_1Event.html#a85b9e8172cffad1f169d55688e49a7
 static void&#160;</td><td class="memItemRight"><b>destruct</b> (EventT &amp;ev, <a class="el" href="classPt_1_1Allocator.html">Allocator</a> &amp;allocator)</td></tr>
 <tr class="memdesc:a80e25740f4e681300159e8e3fd61d564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructs an event using an allocator. <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>@brief Reports a dirty rectangle that a widget must paint. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adfee9dfb4eb2993c056fd4034cb52914" name="adfee9dfb4eb2993c056fd4034cb52914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfee9dfb4eb2993c056fd4034cb52914">&#9670;&#160;</a></span>PaintEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PaintEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>widget</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Constructs an event for <em class="arg">widget</em> and dirty rectangle <em class="arg">rect</em>. </p>
+
+</div>
+</div>
+<a id="acbc0c3cb123cf541e31575b9cdae7a2d" name="acbc0c3cb123cf541e31575b9cdae7a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbc0c3cb123cf541e31575b9cdae7a2d">&#9670;&#160;</a></span>~PaintEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#adfee9dfb4eb2993c056fd4034cb52914">PaintEvent</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Destructor. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac8213ddcc5496cd3188cb7fd9470e9bd" name="ac8213ddcc5496cd3188cb7fd9470e9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8213ddcc5496cd3188cb7fd9470e9bd">&#9670;&#160;</a></span>widgetId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Pt-IntTypes.html#gaa232ecf786a74ce5363c36c10798d2b1">Pt::uint64_t</a> widgetId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the target widget ID. </p>
+
+</div>
+</div>
+<a id="ac42ecdd75e459fb4fe359d28c529c803" name="ac42ecdd75e459fb4fe359d28c529c803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42ecdd75e459fb4fe359d28c529c803">&#9670;&#160;</a></span>widget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Forms_1_1Widget.html">Widget</a> * widget </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the target widget. </p>
+
+</div>
+</div>
+<a id="a939791cece0c937b785b6d201fb59142" name="a939791cece0c937b785b6d201fb59142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939791cece0c937b785b6d201fb59142">&#9670;&#160;</a></span>rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Gfx::RectF &amp; rect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns the dirty rectangle in local coordinates. </p>
+
+</div>
+</div>
+<a id="a11dab265d39272be03212ed52412bb3e" name="a11dab265d39272be03212ed52412bb3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11dab265d39272be03212ed52412bb3e">&#9670;&#160;</a></span>setRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRect </td>
+          <td>(</td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets the dirty rectangle to <em class="arg">r</em>. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->

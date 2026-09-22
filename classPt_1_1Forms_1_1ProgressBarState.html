@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -77,31 +77,111 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ProgressBarStyler_8h_source.html">Pt/Forms/ProgressBarStyler.h</a>&gt;</code></p>
-
-<p>Transient visual state of a progress bar.  
- <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a48d02abfa78bcecf768ffb3b7d8aaa29" id="r_a48d02abfa78bcecf768ffb3b7d8aaa29"><td class="memItemLeft"><a id="a48d02abfa78bcecf768ffb3b7d8aaa29" name="a48d02abfa78bcecf768ffb3b7d8aaa29"></a>
-&#160;</td><td class="memItemRight"><b>ProgressBarState</b> ()</td></tr>
-<tr class="memdesc:a48d02abfa78bcecf768ffb3b7d8aaa29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty progress bar state. <br /></td></tr>
-<tr class="memitem:aacb819fb241851fd9fc045271baa4034" id="r_aacb819fb241851fd9fc045271baa4034"><td class="memItemLeft"><a id="aacb819fb241851fd9fc045271baa4034" name="aacb819fb241851fd9fc045271baa4034"></a>
-bool&#160;</td><td class="memItemRight"><b>isEnabled</b> () const</td></tr>
-<tr class="memdesc:aacb819fb241851fd9fc045271baa4034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the widget is currently enabled. <br /></td></tr>
-<tr class="memitem:ab831367dd84bbd579e02e55bacb21343" id="r_ab831367dd84bbd579e02e55bacb21343"><td class="memItemLeft"><a id="ab831367dd84bbd579e02e55bacb21343" name="ab831367dd84bbd579e02e55bacb21343"></a>
-void&#160;</td><td class="memItemRight"><b>setEnabled</b> (bool value)</td></tr>
-<tr class="memdesc:ab831367dd84bbd579e02e55bacb21343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the widget is enabled. <br /></td></tr>
-<tr class="memitem:a441f2c8ed1686b5044c74a05124a41fc" id="r_a441f2c8ed1686b5044c74a05124a41fc"><td class="memItemLeft"><a id="a441f2c8ed1686b5044c74a05124a41fc" name="a441f2c8ed1686b5044c74a05124a41fc"></a>
-bool&#160;</td><td class="memItemRight"><b>isFocused</b> () const</td></tr>
-<tr class="memdesc:a441f2c8ed1686b5044c74a05124a41fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the widget currently has focus. <br /></td></tr>
-<tr class="memitem:a4fa7294ba394068da660f313b5479ba4" id="r_a4fa7294ba394068da660f313b5479ba4"><td class="memItemLeft"><a id="a4fa7294ba394068da660f313b5479ba4" name="a4fa7294ba394068da660f313b5479ba4"></a>
-void&#160;</td><td class="memItemRight"><b>setFocused</b> (bool value)</td></tr>
-<tr class="memdesc:a4fa7294ba394068da660f313b5479ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the widget has focus. <br /></td></tr>
+<tr class="memitem:a48d02abfa78bcecf768ffb3b7d8aaa29" id="r_a48d02abfa78bcecf768ffb3b7d8aaa29"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a48d02abfa78bcecf768ffb3b7d8aaa29">ProgressBarState</a> ()</td></tr>
+<tr class="memitem:aacb819fb241851fd9fc045271baa4034" id="r_aacb819fb241851fd9fc045271baa4034"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aacb819fb241851fd9fc045271baa4034">isEnabled</a> () const</td></tr>
+<tr class="memitem:ab831367dd84bbd579e02e55bacb21343" id="r_ab831367dd84bbd579e02e55bacb21343"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab831367dd84bbd579e02e55bacb21343">setEnabled</a> (bool value)</td></tr>
+<tr class="memitem:a441f2c8ed1686b5044c74a05124a41fc" id="r_a441f2c8ed1686b5044c74a05124a41fc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a441f2c8ed1686b5044c74a05124a41fc">isFocused</a> () const</td></tr>
+<tr class="memitem:a4fa7294ba394068da660f313b5479ba4" id="r_a4fa7294ba394068da660f313b5479ba4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4fa7294ba394068da660f313b5479ba4">setFocused</a> (bool value)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>ProgressBarState is the snapshot a ProgressBar passes to measure, layout, and paint. It is not the application model. Enabled and focused describe the look of one paint pass. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>@brief Transient visual state of a progress bar.</p>
+<p>ProgressBarState is the snapshot a ProgressBar passes to measure, layout, and paint. It is not the application model. Enabled and focused describe the look of one paint pass. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a48d02abfa78bcecf768ffb3b7d8aaa29" name="a48d02abfa78bcecf768ffb3b7d8aaa29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d02abfa78bcecf768ffb3b7d8aaa29">&#9670;&#160;</a></span>ProgressBarState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProgressBarState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Constructs an empty progress bar state. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aacb819fb241851fd9fc045271baa4034" name="aacb819fb241851fd9fc045271baa4034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb819fb241851fd9fc045271baa4034">&#9670;&#160;</a></span>isEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns true if the widget is currently enabled. </p>
+
+</div>
+</div>
+<a id="ab831367dd84bbd579e02e55bacb21343" name="ab831367dd84bbd579e02e55bacb21343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab831367dd84bbd579e02e55bacb21343">&#9670;&#160;</a></span>setEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the widget is enabled. </p>
+
+</div>
+</div>
+<a id="a441f2c8ed1686b5044c74a05124a41fc" name="a441f2c8ed1686b5044c74a05124a41fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441f2c8ed1686b5044c74a05124a41fc">&#9670;&#160;</a></span>isFocused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFocused </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Returns true if the widget currently has focus. </p>
+
+</div>
+</div>
+<a id="a4fa7294ba394068da660f313b5479ba4" name="a4fa7294ba394068da660f313b5479ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa7294ba394068da660f313b5479ba4">&#9670;&#160;</a></span>setFocused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFocused </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Sets whether the widget has focus. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->
 <div class="pt-footer">

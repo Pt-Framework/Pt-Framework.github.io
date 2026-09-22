@@ -25,7 +25,7 @@
     <a href="downloads.html">Download</a>
     <a href="docs.html#getting-started">Getting Started</a>
     <a href="license.html">License</a>
-    <div class="pt-toc-heading">References</div>
+    <div class="pt-toc-heading">Reference</div>
     <a href="docs.html#jam">Jam Build Tool</a>
     <a href="classes.html">Class Index</a>
     <a href="namespaces.html">Namespaces</a>
@@ -79,37 +79,18 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Forms_2Painter_8h_source.html">Pt/Forms/Painter.h</a>&gt;</code></p>
 
-<p>Draws on a <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> paint surface or paint context.  
- <a href="#details">More...</a></p>
-
 <p>Inherits <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html">PainterBase</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a29c1d9ceedbe6abc5de3cf293b469c6b" id="r_a29c1d9ceedbe6abc5de3cf293b469c6b"><td class="memItemLeft"><a id="a29c1d9ceedbe6abc5de3cf293b469c6b" name="a29c1d9ceedbe6abc5de3cf293b469c6b"></a>
-&#160;</td><td class="memItemRight"><b>Painter</b> ()</td></tr>
-<tr class="memdesc:a29c1d9ceedbe6abc5de3cf293b469c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an inactive painter. <br /></td></tr>
-<tr class="memitem:a4cf6d839e01517a2ad62fed4de47f7ef" id="r_a4cf6d839e01517a2ad62fed4de47f7ef"><td class="memItemLeft"><a id="a4cf6d839e01517a2ad62fed4de47f7ef" name="a4cf6d839e01517a2ad62fed4de47f7ef"></a>
-&#160;</td><td class="memItemRight"><b>Painter</b> (PaintSurface &amp;surface)</td></tr>
-<tr class="memdesc:a4cf6d839e01517a2ad62fed4de47f7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs and begins painting on <em class="arg">surface</em>. <br /></td></tr>
-<tr class="memitem:ab74920fab2c4bd8ad02d576219333aa8" id="r_ab74920fab2c4bd8ad02d576219333aa8"><td class="memItemLeft"><a id="ab74920fab2c4bd8ad02d576219333aa8" name="ab74920fab2c4bd8ad02d576219333aa8"></a>
-&#160;</td><td class="memItemRight"><b>Painter</b> (PaintContext &amp;context)</td></tr>
-<tr class="memdesc:ab74920fab2c4bd8ad02d576219333aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs and begins painting on <em class="arg">context</em>. <br /></td></tr>
-<tr class="memitem:a8669f9de04919cac91598d8fa990fbcc" id="r_a8669f9de04919cac91598d8fa990fbcc"><td class="memItemLeft"><a id="a8669f9de04919cac91598d8fa990fbcc" name="a8669f9de04919cac91598d8fa990fbcc"></a>
-virtual&#160;</td><td class="memItemRight"><b>~Painter</b> ()</td></tr>
-<tr class="memdesc:a8669f9de04919cac91598d8fa990fbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="memitem:a6cb5c2952b6e9f6e6dfc3b2e688d407c" id="r_a6cb5c2952b6e9f6e6dfc3b2e688d407c"><td class="memItemLeft"><a id="a6cb5c2952b6e9f6e6dfc3b2e688d407c" name="a6cb5c2952b6e9f6e6dfc3b2e688d407c"></a>
-void&#160;</td><td class="memItemRight"><b>begin</b> (PaintSurface &amp;surface)</td></tr>
-<tr class="memdesc:a6cb5c2952b6e9f6e6dfc3b2e688d407c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins painting on <em class="arg">surface</em>. <br /></td></tr>
-<tr class="memitem:ad372917fc022b2b34735d785cab0d1d1" id="r_ad372917fc022b2b34735d785cab0d1d1"><td class="memItemLeft"><a id="ad372917fc022b2b34735d785cab0d1d1" name="ad372917fc022b2b34735d785cab0d1d1"></a>
-void&#160;</td><td class="memItemRight"><b>begin</b> (PaintContext &amp;context)</td></tr>
-<tr class="memdesc:ad372917fc022b2b34735d785cab0d1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins painting on <em class="arg">context</em>. <br /></td></tr>
-<tr class="memitem:aafc5380dd608a59686fa712a876dffd8" id="r_aafc5380dd608a59686fa712a876dffd8"><td class="memItemLeft"><a id="aafc5380dd608a59686fa712a876dffd8" name="aafc5380dd608a59686fa712a876dffd8"></a>
-void&#160;</td><td class="memItemRight"><b>drawPixmap</b> (const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap)</td></tr>
-<tr class="memdesc:aafc5380dd608a59686fa712a876dffd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws <em class="arg">pixmap</em> at <em class="arg">to</em>. <br /></td></tr>
-<tr class="memitem:ac8586817d4b8b327eb4f7547febdb992" id="r_ac8586817d4b8b327eb4f7547febdb992"><td class="memItemLeft"><a id="ac8586817d4b8b327eb4f7547febdb992" name="ac8586817d4b8b327eb4f7547febdb992"></a>
-void&#160;</td><td class="memItemRight"><b>drawPixmap</b> (const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap, const Gfx::RectF &amp;rect)</td></tr>
-<tr class="memdesc:ac8586817d4b8b327eb4f7547febdb992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the <em class="arg">rect</em> region of <em class="arg">pixmap</em> at <em class="arg">to</em>. <br /></td></tr>
+<tr class="memitem:a29c1d9ceedbe6abc5de3cf293b469c6b" id="r_a29c1d9ceedbe6abc5de3cf293b469c6b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29c1d9ceedbe6abc5de3cf293b469c6b">Painter</a> ()</td></tr>
+<tr class="memitem:a4cf6d839e01517a2ad62fed4de47f7ef" id="r_a4cf6d839e01517a2ad62fed4de47f7ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4cf6d839e01517a2ad62fed4de47f7ef">Painter</a> (PaintSurface &amp;surface)</td></tr>
+<tr class="memitem:ab74920fab2c4bd8ad02d576219333aa8" id="r_ab74920fab2c4bd8ad02d576219333aa8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab74920fab2c4bd8ad02d576219333aa8">Painter</a> (PaintContext &amp;context)</td></tr>
+<tr class="memitem:a8669f9de04919cac91598d8fa990fbcc" id="r_a8669f9de04919cac91598d8fa990fbcc"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a8669f9de04919cac91598d8fa990fbcc">~Painter</a> ()</td></tr>
+<tr class="memitem:a6cb5c2952b6e9f6e6dfc3b2e688d407c" id="r_a6cb5c2952b6e9f6e6dfc3b2e688d407c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6cb5c2952b6e9f6e6dfc3b2e688d407c">begin</a> (PaintSurface &amp;surface)</td></tr>
+<tr class="memitem:ad372917fc022b2b34735d785cab0d1d1" id="r_ad372917fc022b2b34735d785cab0d1d1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad372917fc022b2b34735d785cab0d1d1">begin</a> (PaintContext &amp;context)</td></tr>
+<tr class="memitem:aafc5380dd608a59686fa712a876dffd8" id="r_aafc5380dd608a59686fa712a876dffd8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aafc5380dd608a59686fa712a876dffd8">drawPixmap</a> (const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap)</td></tr>
+<tr class="memitem:ac8586817d4b8b327eb4f7547febdb992" id="r_ac8586817d4b8b327eb4f7547febdb992"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8586817d4b8b327eb4f7547febdb992">drawPixmap</a> (const Gfx::PointF &amp;to, const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;pixmap, const Gfx::RectF &amp;rect)</td></tr>
 <tr class="memitem:a6dfe1abe0d1eb3ddc1ca081de98b5342" id="r_a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memItemLeft"><a id="a6dfe1abe0d1eb3ddc1ca081de98b5342" name="a6dfe1abe0d1eb3ddc1ca081de98b5342"></a>
 void&#160;</td><td class="memItemRight"><b>finish</b> ()</td></tr>
 <tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the current painting operation. <br /></td></tr>
@@ -242,9 +223,7 @@ void&#160;</td><td class="memItemRight"><b>drawBitmap</b> (const PointF &amp;to,
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:acf9ba4fd44ff99a730de5eea9c31818a" id="r_acf9ba4fd44ff99a730de5eea9c31818a"><td class="memItemLeft"><a id="acf9ba4fd44ff99a730de5eea9c31818a" name="acf9ba4fd44ff99a730de5eea9c31818a"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onDetachSurface</b> (<a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">Gfx::PaintSurface</a> &amp;surface)</td></tr>
-<tr class="memdesc:acf9ba4fd44ff99a730de5eea9c31818a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> surface binding when the <a class="el" href="namespacePt_1_1Gfx.html" title="Graphics and imaging services.">Gfx</a> surface detaches. <br /></td></tr>
+<tr class="memitem:acf9ba4fd44ff99a730de5eea9c31818a" id="r_acf9ba4fd44ff99a730de5eea9c31818a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acf9ba4fd44ff99a730de5eea9c31818a">onDetachSurface</a> (<a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">Gfx::PaintSurface</a> &amp;surface)</td></tr>
 <tr class="memitem:a0fc1526c75512deedc572a1c6b0ec7ef" id="r_a0fc1526c75512deedc572a1c6b0ec7ef"><td class="memItemLeft"><a id="a0fc1526c75512deedc572a1c6b0ec7ef" name="a0fc1526c75512deedc572a1c6b0ec7ef"></a>
 void&#160;</td><td class="memItemRight"><b>beginPaint</b> (PaintSurface &amp;surface)</td></tr>
 <tr class="memdesc:a0fc1526c75512deedc572a1c6b0ec7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins painting to a paint surface. <br /></td></tr>
@@ -262,8 +241,220 @@ virtual void&#160;</td><td class="memItemRight"><b>onDetachContext</b> (PaintCon
 <tr class="memdesc:a3138f8ca97cb8090c915b6c35b6c6a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the context is detached. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Painter extends Gfx::PainterBase with pixmap drawing. Construct it or call begin() on a PaintSurface or PaintContext. It does not own the target. Cached paint state remains across begin() until it is changed. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>@brief Draws on a <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> paint surface or paint context.</p>
+<p>Painter extends Gfx::PainterBase with pixmap drawing. Construct it or call begin() on a PaintSurface or PaintContext. It does not own the target. Cached paint state remains across begin() until it is changed. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a29c1d9ceedbe6abc5de3cf293b469c6b" name="a29c1d9ceedbe6abc5de3cf293b469c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c1d9ceedbe6abc5de3cf293b469c6b">&#9670;&#160;</a></span>Painter() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Painter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Creates an inactive painter. </p>
+
+</div>
+</div>
+<a id="a4cf6d839e01517a2ad62fed4de47f7ef" name="a4cf6d839e01517a2ad62fed4de47f7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf6d839e01517a2ad62fed4de47f7ef">&#9670;&#160;</a></span>Painter() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Painter </td>
+          <td>(</td>
+          <td class="paramtype">PaintSurface &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Constructs and begins painting on <em class="arg">surface</em>. </p>
+
+</div>
+</div>
+<a id="ab74920fab2c4bd8ad02d576219333aa8" name="ab74920fab2c4bd8ad02d576219333aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74920fab2c4bd8ad02d576219333aa8">&#9670;&#160;</a></span>Painter() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Painter </td>
+          <td>(</td>
+          <td class="paramtype">PaintContext &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Constructs and begins painting on <em class="arg">context</em>. </p>
+
+</div>
+</div>
+<a id="a8669f9de04919cac91598d8fa990fbcc" name="a8669f9de04919cac91598d8fa990fbcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8669f9de04919cac91598d8fa990fbcc">&#9670;&#160;</a></span>~Painter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#a29c1d9ceedbe6abc5de3cf293b469c6b">Painter</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Destructor. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a6cb5c2952b6e9f6e6dfc3b2e688d407c" name="a6cb5c2952b6e9f6e6dfc3b2e688d407c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb5c2952b6e9f6e6dfc3b2e688d407c">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void begin </td>
+          <td>(</td>
+          <td class="paramtype">PaintSurface &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Begins painting on <em class="arg">surface</em>. </p>
+
+</div>
+</div>
+<a id="ad372917fc022b2b34735d785cab0d1d1" name="ad372917fc022b2b34735d785cab0d1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad372917fc022b2b34735d785cab0d1d1">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void begin </td>
+          <td>(</td>
+          <td class="paramtype">PaintContext &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Begins painting on <em class="arg">context</em>. </p>
+
+</div>
+</div>
+<a id="aafc5380dd608a59686fa712a876dffd8" name="aafc5380dd608a59686fa712a876dffd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc5380dd608a59686fa712a876dffd8">&#9670;&#160;</a></span>drawPixmap() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawPixmap </td>
+          <td>(</td>
+          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pixmap</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Draws <em class="arg">pixmap</em> at <em class="arg">to</em>. </p>
+
+</div>
+</div>
+<a id="ac8586817d4b8b327eb4f7547febdb992" name="ac8586817d4b8b327eb4f7547febdb992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8586817d4b8b327eb4f7547febdb992">&#9670;&#160;</a></span>drawPixmap() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawPixmap </td>
+          <td>(</td>
+          <td class="paramtype">const Gfx::PointF &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Forms_1_1Pixmap.html">Pixmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pixmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gfx::RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>@brief Draws the <em class="arg">rect</em> region of <em class="arg">pixmap</em> at <em class="arg">to</em>. </p>
+
+</div>
+</div>
+<a id="acf9ba4fd44ff99a730de5eea9c31818a" name="acf9ba4fd44ff99a730de5eea9c31818a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf9ba4fd44ff99a730de5eea9c31818a">&#9670;&#160;</a></span>onDetachSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDetachSurface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Gfx_1_1PaintSurface.html">Gfx::PaintSurface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@brief Clears the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> surface binding when the <a class="el" href="namespacePt_1_1Gfx.html" title="Graphics and imaging services.">Gfx</a> surface detaches. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Gfx_1_1PainterBase.html#aa9e8bcd14842f44267c7e82d0eb05e98">PainterBase</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->
 <div class="pt-footer">
