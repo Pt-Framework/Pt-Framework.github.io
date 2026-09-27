@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classPt_1_1System_1_1TarEntry-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TarEntry Class Reference<div class="ingroups"><a class="el" href="group__Pt-System.html">System Module</a> &raquo; <a class="el" href="group__Pt-System-Tar.html">Tar Archive I/O</a></div></div></div>
 </div><!--header-->
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="TarEntry_8h_source.html">Pt/System/TarEntry.h</a>&gt;</code></p>
 
-<p>Represents a single entry returned by <a class="el" href="classPt_1_1System_1_1TarReader.html" title="Incremental reader for tar archives (Pax/UStar format).">TarReader</a>.  
+<p>One entry in a tar archive.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -96,13 +97,13 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7ad3101e29b991f7e75f0b44314c3779d8">Hardlink</a> = 4
 <br />
  }</td></tr>
-<tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry type in the tar archive.  <a href="#a1d1cfd8ffb84e947f82999c682b666a7">More...</a><br /></td></tr>
+<tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kind of archive member.  <a href="#a1d1cfd8ffb84e947f82999c682b666a7">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac133de8a5c20b7d428972c1fb3b71f05" id="r_ac133de8a5c20b7d428972c1fb3b71f05"><td class="memItemLeft"><a id="ac133de8a5c20b7d428972c1fb3b71f05" name="ac133de8a5c20b7d428972c1fb3b71f05"></a>
 &#160;</td><td class="memItemRight"><b>TarEntry</b> ()=default</td></tr>
-<tr class="memdesc:ac133de8a5c20b7d428972c1fb3b71f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="memdesc:ac133de8a5c20b7d428972c1fb3b71f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an entry with no metadata and an empty content window. <br /></td></tr>
 <tr class="memitem:ad3a66ac7bae203279d07b31eb37022d4" id="r_ad3a66ac7bae203279d07b31eb37022d4"><td class="memItemLeft"><a id="ad3a66ac7bae203279d07b31eb37022d4" name="ad3a66ac7bae203279d07b31eb37022d4"></a>
 &#160;</td><td class="memItemRight"><b>TarEntry</b> (TarEntry &amp;&amp;)=default</td></tr>
 <tr class="memdesc:ad3a66ac7bae203279d07b31eb37022d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. <br /></td></tr>
@@ -114,64 +115,73 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af001e5ba06a3131be78f58977401e2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
-<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets all fields to their default values. <br /></td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets every field to the default-constructed state. <br /></td></tr>
 <tr class="memitem:ad432828bdefcb0fd7791f5f9cd7e95a2" id="r_ad432828bdefcb0fd7791f5f9cd7e95a2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad432828bdefcb0fd7791f5f9cd7e95a2">isEnd</a> () const</td></tr>
-<tr class="memdesc:ad432828bdefcb0fd7791f5f9cd7e95a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when the entire content has been delivered.  <br /></td></tr>
+<tr class="memdesc:ad432828bdefcb0fd7791f5f9cd7e95a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when every content byte has been delivered.  <br /></td></tr>
 <tr class="memitem:a457ac785c04a7eb9e9b6b30d2c31e0d0" id="r_a457ac785c04a7eb9e9b6b30d2c31e0d0"><td class="memItemLeft"><a id="a457ac785c04a7eb9e9b6b30d2c31e0d0" name="a457ac785c04a7eb9e9b6b30d2c31e0d0"></a>
 const <a class="el" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> &amp;&#160;</td><td class="memItemRight"><b>path</b> () const</td></tr>
-<tr class="memdesc:a457ac785c04a7eb9e9b6b30d2c31e0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Archive path of this entry (UTF-8 encoded). <br /></td></tr>
+<tr class="memdesc:a457ac785c04a7eb9e9b6b30d2c31e0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the archive path. <br /></td></tr>
 <tr class="memitem:ade1601ccf1fa3bcf050867f0852ca4e5" id="r_ade1601ccf1fa3bcf050867f0852ca4e5"><td class="memItemLeft"><a id="ade1601ccf1fa3bcf050867f0852ca4e5" name="ade1601ccf1fa3bcf050867f0852ca4e5"></a>
 std::size_t&#160;</td><td class="memItemRight"><b>size</b> () const</td></tr>
-<tr class="memdesc:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total content size in bytes as stored in the archive header. <br /></td></tr>
-<tr class="memitem:abef9e7c69e7c3d0b2011132b3805af60" id="r_abef9e7c69e7c3d0b2011132b3805af60"><td class="memItemLeft"><a id="abef9e7c69e7c3d0b2011132b3805af60" name="abef9e7c69e7c3d0b2011132b3805af60"></a>
-std::size_t&#160;</td><td class="memItemRight"><b>remaining</b> () const</td></tr>
-<tr class="memdesc:abef9e7c69e7c3d0b2011132b3805af60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Content bytes not yet delivered by <a class="el" href="classPt_1_1System_1_1TarReader.html#a65478ee8ab969dc5a641cb551124f12c" title="Advance to the next entry or deliver the next content chunk.">TarReader::advance()</a>. <br /></td></tr>
-<tr class="memitem:adc02cacdbc5e1739d05d529840344467" id="r_adc02cacdbc5e1739d05d529840344467"><td class="memItemLeft"><a id="adc02cacdbc5e1739d05d529840344467" name="adc02cacdbc5e1739d05d529840344467"></a>
-std::size_t&#160;</td><td class="memItemRight"><b>avail</b> () const</td></tr>
-<tr class="memdesc:adc02cacdbc5e1739d05d529840344467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes readable at the current <a class="el" href="#aa3affb1becdd976aba1036a161a3134d" title="Pointer to the current content chunk of avail() bytes.">data()</a> pointer. <br /></td></tr>
+<tr class="memdesc:ade1601ccf1fa3bcf050867f0852ca4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content length declared in the archive header. <br /></td></tr>
+<tr class="memitem:adc02cacdbc5e1739d05d529840344467" id="r_adc02cacdbc5e1739d05d529840344467"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#adc02cacdbc5e1739d05d529840344467">avail</a> () const</td></tr>
+<tr class="memdesc:adc02cacdbc5e1739d05d529840344467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of bytes readable at <a class="el" href="#aa3affb1becdd976aba1036a161a3134d" title="Returns the current content chunk of avail() bytes.">data()</a>.  <br /></td></tr>
 <tr class="memitem:aa3affb1becdd976aba1036a161a3134d" id="r_aa3affb1becdd976aba1036a161a3134d"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#aa3affb1becdd976aba1036a161a3134d">data</a> () const</td></tr>
-<tr class="memdesc:aa3affb1becdd976aba1036a161a3134d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the current content chunk of <a class="el" href="#adc02cacdbc5e1739d05d529840344467" title="Number of bytes readable at the current data() pointer.">avail()</a> bytes.  <br /></td></tr>
+<tr class="memdesc:aa3affb1becdd976aba1036a161a3134d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current content chunk of <a class="el" href="#adc02cacdbc5e1739d05d529840344467" title="Returns the number of bytes readable at data().">avail()</a> bytes.  <br /></td></tr>
 <tr class="memitem:adf4a6727c689e0038cf2cdd158d5ed2c" id="r_adf4a6727c689e0038cf2cdd158d5ed2c"><td class="memItemLeft"><a id="adf4a6727c689e0038cf2cdd158d5ed2c" name="adf4a6727c689e0038cf2cdd158d5ed2c"></a>
 <a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight"><b>type</b> () const</td></tr>
-<tr class="memdesc:adf4a6727c689e0038cf2cdd158d5ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7" title="Entry type in the tar archive.">Type</a> of this archive entry (file, directory, link, or hard link). <br /></td></tr>
-<tr class="memitem:a6cb6b5345107e8f8f5f6c6b74d081125" id="r_a6cb6b5345107e8f8f5f6c6b74d081125"><td class="memItemLeft"><a id="a6cb6b5345107e8f8f5f6c6b74d081125" name="a6cb6b5345107e8f8f5f6c6b74d081125"></a>
-const <a class="el" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> &amp;&#160;</td><td class="memItemRight"><b>linkTarget</b> () const</td></tr>
-<tr class="memdesc:a6cb6b5345107e8f8f5f6c6b74d081125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target path for symbolic and hard links (UTF-8 encoded). <br /></td></tr>
-<tr class="memitem:a9a7424960c1e3846bc5307e807b749ce" id="r_a9a7424960c1e3846bc5307e807b749ce"><td class="memItemLeft"><a id="a9a7424960c1e3846bc5307e807b749ce" name="a9a7424960c1e3846bc5307e807b749ce"></a>
-<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Pt::System::FileInfo::Perms</a>&#160;</td><td class="memItemRight"><b>permissions</b> () const</td></tr>
-<tr class="memdesc:a9a7424960c1e3846bc5307e807b749ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX permission bits for this entry. <br /></td></tr>
-<tr class="memitem:ac090ddf363b1635fe19cf08611982256" id="r_ac090ddf363b1635fe19cf08611982256"><td class="memItemLeft"><a id="ac090ddf363b1635fe19cf08611982256" name="ac090ddf363b1635fe19cf08611982256"></a>
-const <a class="el" href="classPt_1_1DateTime.html">Pt::DateTime</a> &amp;&#160;</td><td class="memItemRight"><b>mtime</b> () const</td></tr>
-<tr class="memdesc:ac090ddf363b1635fe19cf08611982256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last modification time of this entry. <br /></td></tr>
+<tr class="memdesc:adf4a6727c689e0038cf2cdd158d5ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the member kind. <br /></td></tr>
+<tr class="memitem:a6cb6b5345107e8f8f5f6c6b74d081125" id="r_a6cb6b5345107e8f8f5f6c6b74d081125"><td class="memItemLeft">const <a class="el" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6cb6b5345107e8f8f5f6c6b74d081125">linkTarget</a> () const</td></tr>
+<tr class="memdesc:a6cb6b5345107e8f8f5f6c6b74d081125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target of a symbolic link or a hard link.  <br /></td></tr>
+<tr class="memitem:a9a7424960c1e3846bc5307e807b749ce" id="r_a9a7424960c1e3846bc5307e807b749ce"><td class="memItemLeft"><a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Pt::System::FileInfo::Perms</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9a7424960c1e3846bc5307e807b749ce">permissions</a> () const</td></tr>
+<tr class="memdesc:a9a7424960c1e3846bc5307e807b749ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the POSIX permission bits.  <br /></td></tr>
+<tr class="memitem:ac090ddf363b1635fe19cf08611982256" id="r_ac090ddf363b1635fe19cf08611982256"><td class="memItemLeft">const <a class="el" href="classPt_1_1DateTime.html">Pt::DateTime</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac090ddf363b1635fe19cf08611982256">mtime</a> () const</td></tr>
+<tr class="memdesc:ac090ddf363b1635fe19cf08611982256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modification time in UTC.  <br /></td></tr>
+<tr class="memitem:a61759b7cfb132e943d7f6ceec989a933" id="r_a61759b7cfb132e943d7f6ceec989a933"><td class="memItemLeft"><a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a61759b7cfb132e943d7f6ceec989a933">ownerId</a> () const</td></tr>
+<tr class="memdesc:a61759b7cfb132e943d7f6ceec989a933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the numeric owner id.  <br /></td></tr>
+<tr class="memitem:a263059a53880efda8e27a04995b45af8" id="r_a263059a53880efda8e27a04995b45af8"><td class="memItemLeft">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a263059a53880efda8e27a04995b45af8">ownerName</a> () const</td></tr>
+<tr class="memdesc:a263059a53880efda8e27a04995b45af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the owner name.  <br /></td></tr>
+<tr class="memitem:ab4d9f0db1bdc8a809a6d58652e2de766" id="r_ab4d9f0db1bdc8a809a6d58652e2de766"><td class="memItemLeft"><a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab4d9f0db1bdc8a809a6d58652e2de766">groupId</a> () const</td></tr>
+<tr class="memdesc:ab4d9f0db1bdc8a809a6d58652e2de766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the numeric group id.  <br /></td></tr>
+<tr class="memitem:a5d39d98b79b0694f3a9bbfa0df105715" id="r_a5d39d98b79b0694f3a9bbfa0df105715"><td class="memItemLeft">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5d39d98b79b0694f3a9bbfa0df105715">groupName</a> () const</td></tr>
+<tr class="memdesc:a5d39d98b79b0694f3a9bbfa0df105715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the group name.  <br /></td></tr>
 <tr class="memitem:a04a3c89bc17887fcef8052b283adbf75" id="r_a04a3c89bc17887fcef8052b283adbf75"><td class="memItemLeft"><a id="a04a3c89bc17887fcef8052b283adbf75" name="a04a3c89bc17887fcef8052b283adbf75"></a>
 void&#160;</td><td class="memItemRight"><b>setPath</b> (const <a class="el" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> &amp;path)</td></tr>
 <tr class="memdesc:a04a3c89bc17887fcef8052b283adbf75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the archive path. <br /></td></tr>
-<tr class="memitem:a4a82d384a6c7e0002e30e96784eed190" id="r_a4a82d384a6c7e0002e30e96784eed190"><td class="memItemLeft"><a id="a4a82d384a6c7e0002e30e96784eed190" name="a4a82d384a6c7e0002e30e96784eed190"></a>
-void&#160;</td><td class="memItemRight"><b>setSize</b> (std::size_t size)</td></tr>
-<tr class="memdesc:a4a82d384a6c7e0002e30e96784eed190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the total content size in bytes. <br /></td></tr>
-<tr class="memitem:a823889862f6bbb946097aeabd0ac032a" id="r_a823889862f6bbb946097aeabd0ac032a"><td class="memItemLeft"><a id="a823889862f6bbb946097aeabd0ac032a" name="a823889862f6bbb946097aeabd0ac032a"></a>
-void&#160;</td><td class="memItemRight"><b>setRemaining</b> (std::size_t remaining)</td></tr>
-<tr class="memdesc:a823889862f6bbb946097aeabd0ac032a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of content bytes not yet delivered. <br /></td></tr>
-<tr class="memitem:a38e16fb86379498ba7acc0e4d8e25a83" id="r_a38e16fb86379498ba7acc0e4d8e25a83"><td class="memItemLeft"><a id="a38e16fb86379498ba7acc0e4d8e25a83" name="a38e16fb86379498ba7acc0e4d8e25a83"></a>
-void&#160;</td><td class="memItemRight"><b>setData</b> (const char *data, std::size_t avail)</td></tr>
-<tr class="memdesc:a38e16fb86379498ba7acc0e4d8e25a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current data chunk pointer and the number of available bytes. <br /></td></tr>
+<tr class="memitem:a4a82d384a6c7e0002e30e96784eed190" id="r_a4a82d384a6c7e0002e30e96784eed190"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4a82d384a6c7e0002e30e96784eed190">setSize</a> (std::size_t size)</td></tr>
+<tr class="memdesc:a4a82d384a6c7e0002e30e96784eed190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the content length declared in the header.  <br /></td></tr>
 <tr class="memitem:a608e58a2f9fb7e497f91662a6e9ae4cc" id="r_a608e58a2f9fb7e497f91662a6e9ae4cc"><td class="memItemLeft"><a id="a608e58a2f9fb7e497f91662a6e9ae4cc" name="a608e58a2f9fb7e497f91662a6e9ae4cc"></a>
 void&#160;</td><td class="memItemRight"><b>setType</b> (<a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
-<tr class="memdesc:a608e58a2f9fb7e497f91662a6e9ae4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the entry type. <br /></td></tr>
+<tr class="memdesc:a608e58a2f9fb7e497f91662a6e9ae4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the member kind. <br /></td></tr>
 <tr class="memitem:a8a88be3882170478ee30f16490cd33ec" id="r_a8a88be3882170478ee30f16490cd33ec"><td class="memItemLeft"><a id="a8a88be3882170478ee30f16490cd33ec" name="a8a88be3882170478ee30f16490cd33ec"></a>
 void&#160;</td><td class="memItemRight"><b>setLinkTarget</b> (const <a class="el" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> &amp;target)</td></tr>
-<tr class="memdesc:a8a88be3882170478ee30f16490cd33ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the link target path. <br /></td></tr>
-<tr class="memitem:aa112dc15628a91a53f745b4a0852b59e" id="r_aa112dc15628a91a53f745b4a0852b59e"><td class="memItemLeft"><a id="aa112dc15628a91a53f745b4a0852b59e" name="aa112dc15628a91a53f745b4a0852b59e"></a>
-void&#160;</td><td class="memItemRight"><b>setPermissions</b> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Pt::System::FileInfo::Perms</a> p)</td></tr>
-<tr class="memdesc:aa112dc15628a91a53f745b4a0852b59e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the POSIX permission bits. <br /></td></tr>
+<tr class="memdesc:a8a88be3882170478ee30f16490cd33ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the target of a symbolic link or a hard link. <br /></td></tr>
+<tr class="memitem:a2b35a01a9a128b3a01fac808d088a07e" id="r_a2b35a01a9a128b3a01fac808d088a07e"><td class="memItemLeft"><a id="a2b35a01a9a128b3a01fac808d088a07e" name="a2b35a01a9a128b3a01fac808d088a07e"></a>
+void&#160;</td><td class="memItemRight"><b>setPermissions</b> (<a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Pt::System::FileInfo::Perms</a> permissions)</td></tr>
+<tr class="memdesc:a2b35a01a9a128b3a01fac808d088a07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the POSIX permission bits. <br /></td></tr>
 <tr class="memitem:ab87d288506535c7876d2432080c6a55a" id="r_ab87d288506535c7876d2432080c6a55a"><td class="memItemLeft"><a id="ab87d288506535c7876d2432080c6a55a" name="ab87d288506535c7876d2432080c6a55a"></a>
 void&#160;</td><td class="memItemRight"><b>setMtime</b> (const <a class="el" href="classPt_1_1DateTime.html">Pt::DateTime</a> &amp;mtime)</td></tr>
-<tr class="memdesc:ab87d288506535c7876d2432080c6a55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the modification time. <br /></td></tr>
+<tr class="memdesc:ab87d288506535c7876d2432080c6a55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the modification time in UTC. <br /></td></tr>
+<tr class="memitem:a6d64548184f87bb7937bf266adbfa8f0" id="r_a6d64548184f87bb7937bf266adbfa8f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6d64548184f87bb7937bf266adbfa8f0">setOwnerId</a> (<a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> id)</td></tr>
+<tr class="memdesc:a6d64548184f87bb7937bf266adbfa8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the numeric owner id.  <br /></td></tr>
+<tr class="memitem:a2daacb286b33277bd5c1f3d14b7bc7c8" id="r_a2daacb286b33277bd5c1f3d14b7bc7c8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2daacb286b33277bd5c1f3d14b7bc7c8">setOwnerName</a> (const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;name)</td></tr>
+<tr class="memdesc:a2daacb286b33277bd5c1f3d14b7bc7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the owner name.  <br /></td></tr>
+<tr class="memitem:a81e7ba771ad947198d3c983ba621087e" id="r_a81e7ba771ad947198d3c983ba621087e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a81e7ba771ad947198d3c983ba621087e">setGroupId</a> (<a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> id)</td></tr>
+<tr class="memdesc:a81e7ba771ad947198d3c983ba621087e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the numeric group id.  <br /></td></tr>
+<tr class="memitem:a9a4fc448d99539a7178523808212d00f" id="r_a9a4fc448d99539a7178523808212d00f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a4fc448d99539a7178523808212d00f">setGroupName</a> (const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;name)</td></tr>
+<tr class="memdesc:a9a4fc448d99539a7178523808212d00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the group name.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:af1dc8e4350712a151b17b0706c51e00b" id="r_af1dc8e4350712a151b17b0706c51e00b"><td class="memItemLeft">static const <a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#af1dc8e4350712a151b17b0706c51e00b">NoId</a> = static_cast&lt;<a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>&gt;(-1)</td></tr>
+<tr class="memdesc:af1dc8e4350712a151b17b0706c51e00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id value meaning that no numeric id is set.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A TarEntry holds the metadata and provides access to the content of one entry in a tar archive. Instances are produced by TarReader::advance() and remain valid until the next advance() call.</p>
-<p>Use type() to distinguish files, directories, symbolic links, and hard links. Use path() for the archive path, mtime() for the modification time, and permissions() for the POSIX permission bits.</p>
-<p>File content is delivered in one or more chunks. After each advance() call, up to avail() bytes are readable at data(). <a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> those bytes before calling advance() again — the buffer is reused on the next call. Repeat until isEnd() returns true, which means all size() bytes have been delivered. </p>
+<div class="textblock"><p>A TarEntry is the metadata of one member of a tar archive, together with a window onto that member's content. TarReader publishes an entry after it has parsed the header. TarWriter consumes an entry the caller has filled in. The same type travels in both directions, so a value read from one archive can be handed to a writer and reproduced, including owner, group, permissions, and modification time.</p>
+<p>The metadata is the part the caller owns. path() is the name inside the archive. type() distinguishes a regular file, a directory, a symbolic link, and a hard link. A link also has linkTarget(). size() is the content length stored in the header. permissions() holds the POSIX permission bits, including the set-user-ID, set-group-ID, and sticky bits. mtime() is the modification time in UTC. A default-constructed Pt::DateTime means the Unix epoch, and that is what the writer stores when the caller never sets a time.</p>
+<p>Owner and group are each an optional numeric id plus an optional name. NoId means the archive did not carry an id, or the caller has not set one. Numeric id 0 is a real value: it is the root user or the root group, and it is written and read as such. An empty Pt::String means the archive did not carry a name. A name that happens to be <code>root</code> is a real name and round-trips. The writer omits an unset id and an empty name. It does not invent <code>root</code> or id 0. Names are Unicode. The archive stores them as UTF-8, in the UStar header when they fit and in a Pax extended header otherwise.</p>
+<p>The content window is the part TarReader fills in. After TarReader::advance() returns an entry, up to avail() bytes are readable at data(). Those bytes must be consumed before the next call to advance(), because the reader reuses its buffer and the pointer then refers to a different chunk, or to nothing. isEnd() becomes true once every byte of size() has been delivered. A directory, a symbolic link, and a hard link have no content, so isEnd() is already true when the entry is first published. TarWriter does not read the content window. The bytes of a file are the buffer passed to TarWriter::addFile(), or the chunks passed to TarWriter::writeFile(). size() on the entry is the length the writer declares in the header, and for a streamed file it is the total that writeFile() must deliver before endFile().</p>
+<p>An entry returned by the reader stays valid until the next advance() call, which replaces its metadata and its content window. A caller who wants to keep an entry copies the fields out. The content pointer cannot be kept: it addresses the reader's buffer. </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a1d1cfd8ffb84e947f82999c682b666a7" name="a1d1cfd8ffb84e947f82999c682b666a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d1cfd8ffb84e947f82999c682b666a7">&#9670;&#160;</a></span>Type</h2>
@@ -185,7 +195,7 @@ void&#160;</td><td class="memItemRight"><b>setMtime</b> (const <a class="el" hre
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474" name="a1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474"></a>Invalid&#160;</td><td class="fielddoc"><p>Not yet set. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474" name="a1d1cfd8ffb84e947f82999c682b666a7ae962ea8b0b3a376575ad0e616eeac474"></a>Invalid&#160;</td><td class="fielddoc"><p>Not set. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f" name="a1d1cfd8ffb84e947f82999c682b666a7a1ab5ebbd194ab0b95e5697aca9ba274f"></a>File&#160;</td><td class="fielddoc"><p>Regular file. </p>
 </td></tr>
@@ -214,7 +224,25 @@ void&#160;</td><td class="memItemRight"><b>setMtime</b> (const <a class="el" hre
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Once this returns true, the next TarReader::advance() call moves to the following archive entry. </p>
+<p>For a directory or a link this is true as soon as the reader publishes the entry. For a file it becomes true on the advance() call that delivers the last byte. The following advance() call moves to the next archive member. </p>
+
+</div>
+</div>
+<a id="adc02cacdbc5e1739d05d529840344467" name="adc02cacdbc5e1739d05d529840344467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc02cacdbc5e1739d05d529840344467">&#9670;&#160;</a></span>avail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t avail </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valid until the next TarReader::advance() call. </p>
 
 </div>
 </div>
@@ -232,7 +260,247 @@ void&#160;</td><td class="memItemRight"><b>setMtime</b> (const <a class="el" hre
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classPt_1_1System_1_1Process.html" title="Starts another program as a child process.">Process</a> these bytes before calling TarReader::advance() again — the pointer becomes invalid on the next advance() call. </p>
+<p>The pointer addresses the reader's buffer and becomes invalid on the next TarReader::advance() call. A chunk of length zero returns a null pointer. </p>
+
+</div>
+</div>
+<a id="a6cb6b5345107e8f8f5f6c6b74d081125" name="a6cb6b5345107e8f8f5f6c6b74d081125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb6b5345107e8f8f5f6c6b74d081125">&#9670;&#160;</a></span>linkTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1System_1_1Path.html">Pt::System::Path</a> &amp; linkTarget </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Empty for a file or a directory. </p>
+
+</div>
+</div>
+<a id="a9a7424960c1e3846bc5307e807b749ce" name="a9a7424960c1e3846bc5307e807b749ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7424960c1e3846bc5307e807b749ce">&#9670;&#160;</a></span>permissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1System_1_1FileInfo.html#adcfee5fc7879bcad411a3c93b6480b17">Pt::System::FileInfo::Perms</a> permissions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Includes the set-user-ID, set-group-ID, and sticky bits when the archive stored them. </p>
+
+</div>
+</div>
+<a id="ac090ddf363b1635fe19cf08611982256" name="ac090ddf363b1635fe19cf08611982256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac090ddf363b1635fe19cf08611982256">&#9670;&#160;</a></span>mtime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1DateTime.html">Pt::DateTime</a> &amp; mtime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A default-constructed Pt::DateTime is the Unix epoch. That is the value of an entry whose archive header carried time 0, and the value the writer stores when the caller never sets a time. </p>
+
+</div>
+</div>
+<a id="a61759b7cfb132e943d7f6ceec989a933" name="a61759b7cfb132e943d7f6ceec989a933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61759b7cfb132e943d7f6ceec989a933">&#9670;&#160;</a></span>ownerId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> ownerId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>NoId means the archive carried no uid, or the caller has not set one. Numeric id 0 is the root user. </p>
+
+</div>
+</div>
+<a id="a263059a53880efda8e27a04995b45af8" name="a263059a53880efda8e27a04995b45af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263059a53880efda8e27a04995b45af8">&#9670;&#160;</a></span>ownerName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp; ownerName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Empty when the archive carried no owner name, or the caller has not set one. </p>
+
+</div>
+</div>
+<a id="ab4d9f0db1bdc8a809a6d58652e2de766" name="ab4d9f0db1bdc8a809a6d58652e2de766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d9f0db1bdc8a809a6d58652e2de766">&#9670;&#160;</a></span>groupId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> groupId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>NoId means the archive carried no gid, or the caller has not set one. Numeric id 0 is the root group. </p>
+
+</div>
+</div>
+<a id="a5d39d98b79b0694f3a9bbfa0df105715" name="a5d39d98b79b0694f3a9bbfa0df105715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d39d98b79b0694f3a9bbfa0df105715">&#9670;&#160;</a></span>groupName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp; groupName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Empty when the archive carried no group name, or the caller has not set one. </p>
+
+</div>
+</div>
+<a id="a4a82d384a6c7e0002e30e96784eed190" name="a4a82d384a6c7e0002e30e96784eed190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a82d384a6c7e0002e30e96784eed190">&#9670;&#160;</a></span>setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSize </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For TarWriter::beginFile() this is the total number of bytes that TarWriter::writeFile() must deliver. </p>
+
+</div>
+</div>
+<a id="a6d64548184f87bb7937bf266adbfa8f0" name="a6d64548184f87bb7937bf266adbfa8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d64548184f87bb7937bf266adbfa8f0">&#9670;&#160;</a></span>setOwnerId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOwnerId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pass NoId to clear a previously set id. </p>
+
+</div>
+</div>
+<a id="a2daacb286b33277bd5c1f3d14b7bc7c8" name="a2daacb286b33277bd5c1f3d14b7bc7c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2daacb286b33277bd5c1f3d14b7bc7c8">&#9670;&#160;</a></span>setOwnerName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOwnerName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An empty name clears a previously set name and is omitted from the archive. </p>
+
+</div>
+</div>
+<a id="a81e7ba771ad947198d3c983ba621087e" name="a81e7ba771ad947198d3c983ba621087e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e7ba771ad947198d3c983ba621087e">&#9670;&#160;</a></span>setGroupId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGroupId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pass NoId to clear a previously set id. </p>
+
+</div>
+</div>
+<a id="a9a4fc448d99539a7178523808212d00f" name="a9a4fc448d99539a7178523808212d00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4fc448d99539a7178523808212d00f">&#9670;&#160;</a></span>setGroupName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGroupName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1String.html">Pt::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An empty name clears a previously set name and is omitted from the archive. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="af1dc8e4350712a151b17b0706c51e00b" name="af1dc8e4350712a151b17b0706c51e00b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dc8e4350712a151b17b0706c51e00b">&#9670;&#160;</a></span>NoId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a> NoId = static_cast&lt;<a class="el" href="group__Pt-IntTypes.html#ga435d1572bf3f880d55459d9805097f62">Pt::uint32_t</a>&gt;(-1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Distinct from numeric id 0, which is the root user or the root group. </p>
 
 </div>
 </div>

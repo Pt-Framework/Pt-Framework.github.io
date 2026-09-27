@@ -86,9 +86,11 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af93ede362e02a0a3ffaa9c950f43f3f3" id="r_af93ede362e02a0a3ffaa9c950f43f3f3"><td class="memItemLeft"><a id="af93ede362e02a0a3ffaa9c950f43f3f3" name="af93ede362e02a0a3ffaa9c950f43f3f3"></a>
-&#160;</td><td class="memItemRight"><b>Application</b> (int argc=0, char **argv=0)</td></tr>
-<tr class="memdesc:af93ede362e02a0a3ffaa9c950f43f3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime and its primary screen. <br /></td></tr>
+<tr class="memitem:aec7d6461aa7be31d98eff24b9d69ae3d" id="r_aec7d6461aa7be31d98eff24b9d69ae3d"><td class="memItemLeft"><a id="aec7d6461aa7be31d98eff24b9d69ae3d" name="aec7d6461aa7be31d98eff24b9d69ae3d"></a>
+&#160;</td><td class="memItemRight"><b>Application</b> ()</td></tr>
+<tr class="memdesc:aec7d6461aa7be31d98eff24b9d69ae3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime and its primary screen. <br /></td></tr>
+<tr class="memitem:a3e999e617e351bd5e4ea63c3eb2b9a58" id="r_a3e999e617e351bd5e4ea63c3eb2b9a58"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3e999e617e351bd5e4ea63c3eb2b9a58">Application</a> (int &amp;argc, char **argv=0)</td></tr>
+<tr class="memdesc:a3e999e617e351bd5e4ea63c3eb2b9a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime from <em class="arg">argc</em> and <em class="arg">argv</em>.  <br /></td></tr>
 <tr class="memitem:add76bdcd4a9a0b7b27c3dacadf5a66fe" id="r_add76bdcd4a9a0b7b27c3dacadf5a66fe"><td class="memItemLeft"><a id="add76bdcd4a9a0b7b27c3dacadf5a66fe" name="add76bdcd4a9a0b7b27c3dacadf5a66fe"></a>
 virtual&#160;</td><td class="memItemRight"><b>~Application</b> ()</td></tr>
 <tr class="memdesc:add76bdcd4a9a0b7b27c3dacadf5a66fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> runtime and the services it owns. <br /></td></tr>
@@ -223,7 +225,7 @@ template&lt;typename T&gt; </td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa372632437b1c1a25d1607f0ae4b1ae3" id="r_aa372632437b1c1a25d1607f0ae4b1ae3"><td class="memItemLeft"><a id="aa372632437b1c1a25d1607f0ae4b1ae3" name="aa372632437b1c1a25d1607f0ae4b1ae3"></a>
-static <a class="el" href="#af93ede362e02a0a3ffaa9c950f43f3f3">Application</a> &amp;&#160;</td><td class="memItemRight"><b>instance</b> ()</td></tr>
+static <a class="el" href="#aec7d6461aa7be31d98eff24b9d69ae3d">Application</a> &amp;&#160;</td><td class="memItemRight"><b>instance</b> ()</td></tr>
 <tr class="memdesc:aa372632437b1c1a25d1607f0ae4b1ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> application instance. <br /></td></tr>
 <tr class="memitem:a3c029a7b3367bfa67e971551c8961e85" id="r_a3c029a7b3367bfa67e971551c8961e85"><td class="memItemLeft"><a id="a3c029a7b3367bfa67e971551c8961e85" name="a3c029a7b3367bfa67e971551c8961e85"></a>
 static void&#160;</td><td class="memItemRight"><b>chdir</b> (const Path &amp;path)</td></tr>
@@ -250,7 +252,38 @@ static unsigned long&#160;</td><td class="memItemRight"><b>usedMemory</b> ()</td
 <p>The application owns its platform implementation, graphics backend, and primary Screen. It does not own the windows or controls that use those services. Widgets remove themselves from their visual parent when they are destroyed. Each widget receives an ID while the application exists; findWidget() resolves that ID only while the widget remains alive.</p>
 <p>Platform events enter the inherited event loop and are routed through the <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> event dispatcher to their target widget or the primary screen. The same dispatcher handles layout, invalidation, repainting, scaling, and window changes. It permits the visual hierarchy to coalesce deferred work. Applications normally request changes through widget APIs. Use processEvent() only when deliberately supplying <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> events.</p>
 <p>The application provides shared styles, style options, input methods, fonts, and scaling. Use setStyle() and setStyleOptions() to change the global theme. Those methods reset shared renderer facets and invalidate registered widgets. Widgets rebuild in onInvalidate(). setScaleFactor() sends a rescale event through the primary screen. Configure shared services before showing the user interface when possible. impl() and graphicsBackend() support <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> backend implementations; ordinary applications use the higher-level <a class="el" href="namespacePt_1_1Forms.html" title="Graphical user interfaces.">Forms</a> APIs. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3e999e617e351bd5e4ea63c3eb2b9a58" name="a3e999e617e351bd5e4ea63c3eb2b9a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e999e617e351bd5e4ea63c3eb2b9a58">&#9670;&#160;</a></span>Application()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Application </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><em class="arg">argc</em> must remain valid for the lifetime of this application. getArg() may change <em class="arg">argc</em> and the array pointed to by <em class="arg">argv</em>. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="afb37a834c16b04fe75344fec89ee6a61" name="afb37a834c16b04fe75344fec89ee6a61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb37a834c16b04fe75344fec89ee6a61">&#9670;&#160;</a></span>impl()</h2>
 

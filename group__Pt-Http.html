@@ -92,7 +92,7 @@ Topics</h2></td></tr>
 <p>HTTP I/O takes part in the System event-loop model. Asynchronous work attaches a client or a server with setActive() so an EventLoop can monitor the connection, but the loop does not own the HTTP object: the code that creates it keeps it alive while an operation is still waiting on the loop. The same objects also have blocking send and receive operations, though asynchronous operation is the usual path.</p>
 <p>Endpoints and TCP belong to Pt::Net. This module names a host and a port with Endpoint and listens or connects through that address. HTTPS is the same client and server API after setSecure() has been given a Pt::Ssl::Context; certificate and handshake details live in the SSL module.</p>
 <p>A protocol error that is specific to HTTP is an HttpError, which is an I/O error. A local address that is already occupied still throws AddressInUse from the listen that uses it.</p>
-<p>An HTTP connection can be upgraded. WebSocket is the framed IODevice that follows a WebSocket handshake, which the client opens and the server accepts through a WebSocketService and an IOStream taken from the upgraded connection.</p>
+<p>An HTTP connection can be upgraded. The server keeps the connection and reports a Stream through Service::upgradeRequested(). A client obtains the same stream from a finished 101 reply with Client::upgrade(). WebSocket formats frames into that stream.</p>
 <p>The rest of this chapter is the message model, then the client, then the server, then the WebSocket upgrade. </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->

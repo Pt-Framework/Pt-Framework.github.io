@@ -78,6 +78,12 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 Classes</h2></td></tr>
 <tr class="memitem:Transaction" id="r_Transaction"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Db_1_1Transaction.html">Transaction</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacePt_1_1Unit.html" title="Protocol and data driven unit testing framework.">Unit</a> of work on a database connection.  <a href="classPt_1_1Db_1_1Transaction.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AsyncBegin" id="r_AsyncBegin"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Db_1_1AsyncBegin.html">AsyncBegin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable for asynchronous begin-transaction.  <a href="classPt_1_1Db_1_1AsyncBegin.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AsyncCommit" id="r_AsyncCommit"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Db_1_1AsyncCommit.html">AsyncCommit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable for asynchronous commit.  <a href="classPt_1_1Db_1_1AsyncCommit.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AsyncRollback" id="r_AsyncRollback"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Db_1_1AsyncRollback.html">AsyncRollback</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaitable for asynchronous rollback.  <a href="classPt_1_1Db_1_1AsyncRollback.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SqliteTransaction" id="r_SqliteTransaction"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Db_1_1SqliteTransaction.html">SqliteTransaction</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLite transaction with optional immediate locking.  <a href="classPt_1_1Db_1_1SqliteTransaction.html#details">More...</a><br /></td></tr>
 </table>
@@ -85,12 +91,13 @@ Classes</h2></td></tr>
 <div class="textblock"><p>Transaction is a unit of work on one Connection. The constructor begins a deferred transaction unless the start flag is false. begin() starts one; if a transaction is already active it is rolled back first. commit() ends it and keeps the changes. rollback() ends it and discards them. If the object is destroyed while still active, the destructor rolls back and swallows any error from that rollback.</p>
 <p>The object is not copyable. It does not own the connection.</p>
 <p>Asynchronous begin, commit and rollback follow the connection model and need setActive() on that connection. beginStart() / endStart() / startFinished() begin the transaction. beginCommit() / endCommit() / commitFinished() commit it. beginRollback() / endRollback() / rollbackFinished() roll it back. endStart() is the call that marks the transaction active on the async path.</p>
+<p>C++20 awaitables wrap those pairs: beginAsync(), commitAsync() and rollbackAsync() are used with co_await and complete through the same signals. Only one awaitable may be pending on the connection. Destroying the Transaction while one is in flight detaches it; a later resume throws std::logic_error.</p>
 <p>Override onGetBeginSql(), onGetCommitSql() and onGetRollbackSql() to supply backend-specific SQL. A null return lets the backend use its default. SqliteTransaction() uses that hook to run <span class="tt">BEGIN IMMEDIATE TRANSACTION</span> when immediate locking is requested.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a> txn(conn);</div>
 <div class="line">conn.execute(<span class="stringliteral">&quot;UPDATE accounts SET balance = balance - 10 WHERE id = 1&quot;</span>);</div>
 <div class="line">conn.execute(<span class="stringliteral">&quot;UPDATE accounts SET balance = balance + 10 WHERE id = 2&quot;</span>);</div>
 <div class="line">txn.commit();</div>
-<div class="ttc" id="aclassPt_1_1Db_1_1Transaction_html"><div class="ttname"><a href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a></div><div class="ttdoc">Unit of work on a database connection.</div><div class="ttdef"><b>Definition</b> Transaction.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1Db_1_1Transaction_html"><div class="ttname"><a href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a></div><div class="ttdoc">Unit of work on a database connection.</div><div class="ttdef"><b>Definition</b> Transaction.h:74</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->

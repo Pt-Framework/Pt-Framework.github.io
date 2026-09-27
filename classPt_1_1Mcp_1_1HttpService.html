@@ -98,8 +98,8 @@ Responder *&#160;</td><td class="memItemRight"><b>getResponder</b> (const Reques
 <tr class="memitem:a16bab97a286c623c9a1aaeabccad8838" id="r_a16bab97a286c623c9a1aaeabccad8838"><td class="memItemLeft"><a id="a16bab97a286c623c9a1aaeabccad8838" name="a16bab97a286c623c9a1aaeabccad8838"></a>
 void&#160;</td><td class="memItemRight"><b>releaseResponder</b> (Responder *)</td></tr>
 <tr class="memdesc:a16bab97a286c623c9a1aaeabccad8838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a responder created by a server. <br /></td></tr>
-<tr class="memitem:a86dd26ec81d34c02257d87bf93959c7d" id="r_a86dd26ec81d34c02257d87bf93959c7d"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; IOStream *, const std::string &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1Service.html#a86dd26ec81d34c02257d87bf93959c7d">upgradeRequested</a> ()</td></tr>
-<tr class="memdesc:a86dd26ec81d34c02257d87bf93959c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a request upgrades to this service.  <br /></td></tr>
+<tr class="memitem:a27303747852767497a8de268c339d315" id="r_a27303747852767497a8de268c339d315"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; Stream &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1Service.html#a27303747852767497a8de268c339d315">upgradeRequested</a> ()</td></tr>
+<tr class="memdesc:a27303747852767497a8de268c339d315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a connection is upgraded.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -114,8 +114,8 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
 <div class="textblock"><p>HttpService is the HTTP transport the HTTP group described. It is an Pt::Http::Service: the server asks it for a responder, and that responder handles one POST as initialize, tools/list, or tools/call. Attach it to an Pt::Http::Server with Pt::Http::MapUrl or another servlet. It does not listen and it does not implement MCP on GET.</p>
 <p>The constructor stores the Pt::Remoting::ServiceDefinition and the ToolDeclaration. Neither is owned. Both must outlive this service, and this service must outlive any responder it has not yet released. Asynchronous tool procedures run on the server's EventLoop. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a86dd26ec81d34c02257d87bf93959c7d" name="a86dd26ec81d34c02257d87bf93959c7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86dd26ec81d34c02257d87bf93959c7d">&#9670;&#160;</a></span>upgradeRequested()</h2>
+<a id="a27303747852767497a8de268c339d315" name="a27303747852767497a8de268c339d315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27303747852767497a8de268c339d315">&#9670;&#160;</a></span>upgradeRequested()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +124,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; IOStream *, const std::string &amp; &gt; &amp; upgradeRequested </td>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; Stream &amp; &gt; &amp; upgradeRequested </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -136,7 +136,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The signal provides the accepted stream and the value of the request's Upgrade header. </p>
+<p>Emitted on the server thread after a 101 reply. The slot calls Stream::retain() to keep <em class="arg">stream</em>. The server closes a stream that was not retained. </p>
 
 </div>
 </div>

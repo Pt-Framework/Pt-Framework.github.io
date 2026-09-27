@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <p>HTTP I/O takes part in the System event-loop model. Asynchronous work attaches a client or a server with setActive() so an EventLoop can monitor the connection, but the loop does not own the HTTP object: the code that creates it keeps it alive while an operation is still waiting on the loop. The same objects also have blocking send and receive operations, though asynchronous operation is the usual path.</p>
 <p>Endpoints and TCP belong to Pt::Net. This module names a host and a port with Endpoint and listens or connects through that address. HTTPS is the same client and server API after setSecure() has been given a Pt::Ssl::Context; certificate and handshake details live in the SSL module.</p>
 <p>A protocol error that is specific to HTTP is an HttpError, which is an I/O error. A local address that is already occupied still throws AddressInUse from the listen that uses it.</p>
-<p>An HTTP connection can be upgraded. WebSocket is the framed IODevice that follows a WebSocket handshake, which the client opens and the server accepts through a WebSocketService and an IOStream taken from the upgraded connection.</p>
+<p>An HTTP connection can be upgraded. The server keeps the connection and reports a Stream through Service::upgradeRequested(). A client obtains the same stream from a finished 101 reply with Client::upgrade(). WebSocket formats frames into that stream.</p>
 <p>The rest of this chapter is the message model, then the client, then the server, then the WebSocket upgrade.   </p>
 <p>This chapter covers:</p>
 <ul>
@@ -126,6 +126,7 @@ HTTP Clients</h1>
 <p>Asynchronous receive is beginReceive() and endReceive(), and replyReceived() is emitted when a step has completed. endReceive() returns MessageProgress; if the reply is not finished, call beginReceive() again. Asynchronous send is beginSend() and endSend(), with requestSent() as the matching signal. A single beginReceive() is enough when the request is already complete and the caller only waits for the reply. Send first when the request has a body, when the body is chunked, or when several requests are pipelined.</p>
 <p>A keep-alive header on the request asks for a persistent connection, which the server may still close. Pipelining needs that persistent connection, because several requests are sent before the matching replies are received. close() ends the connection. Leave it open only while the next request will reuse it; a later send on a closed or timed-out connection opens a new one.</p>
 <p>send() and receive() are the blocking forms of the same exchange, and they complete the request or the reply on the calling thread.</p>
+<p>A finished reply with status 101 switches the connection to a Stream. upgrade() returns that stream. The client no longer sends requests on it. Retain the stream to keep it.</p>
 <p>When a reply is 401, Authenticator complements the request from realm credentials so the client can send it again. Basic authentication is built in, and other Authentication methods can be added.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Http-Page-Client"></a>
 Client</h2>
@@ -192,7 +193,8 @@ Client</h2>
 <p>A chunked request body is sent with beginSend(false) until the last chunk, so the completion flag is false while more body data will be written. endSend() reports whether the current chunk has left the socket, not whether the whole request is complete. When a chunk has finished and more data remains, write it to request().body() and call beginSend(false) again. When no more chunks remain, beginReceive() finishes the request correctly. To pipeline another chunked request after this one, call beginSend(true) so the request body is terminated.</p>
 <dl class="section user"><dt>Persistent connections and HTTPS</dt><dd></dd></dl>
 <p>A keep-alive header on the request asks for a persistent connection, which pipelining needs and which the server may still close. close() ends the connection. Leave it open only while the next request will reuse it; otherwise the server keep-alive timeout may close it before the client is used again. A later send on a closed or timed-out connection opens a new one.</p>
-<p>setSecure() assigns a Pt::Ssl::Context so further connections are HTTPS. setPeerName() sets the name expected in the peer certificate. Send and receive are otherwise unchanged. Certificate and handshake details live in the SSL module.   </p>
+<p>setSecure() assigns a Pt::Ssl::Context so further connections are HTTPS. setPeerName() sets the name expected in the peer certificate. Send and receive are otherwise unchanged. Certificate and handshake details live in the SSL module.</p>
+<p>A finished reply with status 101 switches the connection to a Stream. Call upgrade() after endReceive() reports the reply finished. The client no longer sends requests on that connection. Retain the stream to keep it.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Http-Page-Authenticator"></a>
 Authenticator</h2>
 <p>Authenticator prepares a request after a 401 reply so the client can send it again. It is not the server-side authorizer. Store credentials per realm with setCredential(), then call authenticate() with the rejected request and the 401 reply. The method writes the authentication headers onto the request and returns true when that is possible. It returns false when no credentials are available for the realm, or when the challenge cannot be met.</p>
@@ -208,6 +210,7 @@ HTTP Servers</h1>
 <p>Server is the listening HTTP service. It binds a local Endpoint and accepts connections, but it does not implement a resource. Incoming requests are mapped by servlets. Each Servlet combines a mapping rule, a Service, and an optional Authorizer. addServlet() registers the servlet, and the first servlet that maps the request handles it.</p>
 <p>A service is a factory: onGetResponder() creates a Responder for the request, and onReleaseResponder() destroys it after the reply has been sent or the exchange has failed. BasicService is that factory for a responder type, with an allocator. Use a custom Service when the responder type depends on the request, or when responders are pooled.</p>
 <p>A responder handles one exchange, and the server calls it in order. onBeginRequest() runs when the request header is available, onReadRequest() runs for each chunk of the request body, onBeginReply() runs when the request is complete and the reply should start, and onWriteReply() runs when a previous beginSend(false) needs another chunk of the reply body. The responder finishes the reply with Reply::beginSend() and the completion flag set to true. It may send that finished reply from an earlier callback, in which case remaining callbacks are skipped and the rest of the request is ignored.</p>
+<p>A finished reply with status 101 upgrades the connection. The server keeps the connection and emits Service::upgradeRequested() on the server thread with a Stream. The slot calls Stream::retain() to keep that stream. A slot that does not retain declines the upgrade, and the server closes the connection. Stream::protocol() is the value of the request's Upgrade header. Stream::buffer() is the byte buffer of that channel.</p>
 <p>All server I/O is asynchronous, so the server needs an EventLoop, passed to a constructor or to setActive(). listen() binds the local endpoint, and a second listen replaces the previous binding. setSecure() restricts the server to HTTPS. setMaxThreads() bounds worker threads, and timeouts together with setMaxRequestSize() bound idle connections and request size.</p>
 <p>MapUrl maps one exact URL, and MapAny maps every request. A custom servlet implements onRequest() and returns true when its service should run. Several servlets may share one service, so the same resource can appear under more than one name.</p>
 <p>Authorizer is the server-side access check. It is attached to a servlet, not to the server as a whole, and the same authorizer may be shared. BasicAuthorizer implements HTTP Basic authentication and asks a derived class whether the credentials are granted. Authorization may complete immediately or through an asynchronous Authorization object.</p>
@@ -240,7 +243,7 @@ Servlet</h2>
 Service</h2>
 <p>Service is the responder factory in the server model. The server does not construct responders itself: when a servlet maps a request, the service's getResponder() calls onGetResponder(), and when the reply has been sent or the exchange has failed, releaseResponder() calls onReleaseResponder(). The service must remain alive while any responder it created is still in use.</p>
 <p>BasicService is that factory for a single responder type, using an allocator that defaults to new and delete. Use a custom Service when the responder type depends on the request headers, or when responders are pooled.</p>
-<p>upgradeRequested() is emitted when a request asks to upgrade the connection. The signal provides the accepted IOStream and the value of the Upgrade header. That stream is the upgraded connection, not the HTTP message body.</p>
+<p>A responder upgrades the connection by finishing the reply with status 101. The server keeps the TCP connection and emits upgradeRequested() on the server thread with a Stream. The responder has already been released. The slot calls Stream::retain() to keep the stream. A service with no connected slot, or a slot that does not retain, declines the upgrade and the server closes the connection. Stream::protocol() is the value of the request's Upgrade header. The stream buffer is Stream::buffer(). beginInput() and beginOutput() transfer that buffer.</p>
 <p>The example is the usual factory: a BasicService for a responder type. The equivalent hand-written service implements onGetResponder() and onReleaseResponder() in the same way.</p>
 <div class="fragment"><div class="line">typedef Pt::Http::BasicService&lt;HelloResponder&gt; HelloService;</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Http-Page-Responder"></a>
@@ -311,30 +314,33 @@ Authorizer</h2>
 <div class="line">server.addServlet(mapHello);</div>
 </div><!-- fragment -->   <h1 class="doxsection"><a class="anchor" id="Pt-Http-Page-WebSocket"></a>
 WebSocket</h1>
-<p>WebSocket is an HTTP upgrade. The HTTP exchange performs a handshake, and after the handshake the same TCP connection carries framed messages instead of request and reply messages. WebSocket is the IODevice for that framed stream: read() and write() transfer payload bytes, while the frame type is separate. setSendFrame() selects the opcode for the next send, and receiveFrame() reports the opcode of the frame that was last received.</p>
-<p>On the client, beginConnect() sends the handshake to a ws:// URL. connected() is emitted when the attempt finishes, and endConnect() completes it and throws if the handshake failed. The socket must be attached to an event loop before the connect starts.</p>
-<p>On the server, WebSocketService is an HTTP Service, mapped with a servlet like any other service. Its responder answers a WebSocket Upgrade request with 101 Switching Protocols, or with 404 when the request is not a WebSocket upgrade. After a successful upgrade the connection is an IOStream, and WebSocket::accept() takes that stream and becomes the framed device.</p>
-<p>IOStream is the upgraded connection, not the HTTP message body. Service::upgradeRequested() reports that stream and the Upgrade header value to a service that handles upgrades itself.</p>
-<p>Ping and pong are control frames. sendPingFrame() writes a ping, and after a ping is received sendPongFrame() writes the matching pong. Text and binary frames are the data payload. Unknown is the unset frame type.</p>
-<p>The example is a client handshake. The slot completes the connect and then writes through the inherited device operation.</p>
+<p>WebSocket is an HTTP upgrade. The HTTP exchange performs a handshake, and after the handshake the same connection carries framed messages instead of request and reply messages. WebSocket formats those frames into the stream buffer. It is not an I/O device. The caller writes payload into buffer() and sends that buffer as one frame. A receive parses one frame and leaves the payload in the same buffer. frame() is the opcode.</p>
+<p>On the client, construct WebSocket with the Client that performs the handshake. The socket stores a reference and does not own the client, so the client must outlive the socket. Host, port, event loop, timeout and TLS are settings of that client. beginConnect() sends the handshake for a request path, or for a ws:// URL whose host and port are the client's endpoint. The handshake is an HTTP request and reply. A finished 101 becomes the Stream this socket formats. connected() is emitted when the attempt finishes, and endConnect() completes it and throws if the handshake failed.</p>
+<p>On the server, WebSocketService is an HTTP Service, mapped with a servlet like any other service. Its responder answers a WebSocket Upgrade request with 101 Switching Protocols, or with 404 when the request is not a WebSocket upgrade. After a successful upgrade the server keeps the connection and emits Service::upgradeRequested() with a Stream. WebSocket::accept() retains that stream and formats it. The socket does not own the connection.</p>
+<p>Stream is the upgraded channel, not the HTTP message body. A 101 reply is the generic HTTP upgrade. WebSocketService is the WebSocket case: Service::upgradeRequested() runs on the server thread, and WebSocket::accept() keeps the stream.</p>
+<p>Ping and pong are control frames. sendPing() writes a ping, and after a ping is received sendPong() writes the matching pong. Text and binary frames are the data payload. Unknown is the unset frame type.</p>
+<p>The example is a client handshake. The slot completes the connect and then writes the payload buffer as a text frame.</p>
 <div class="fragment"><div class="line">void onConnected(Pt::Http::WebSocket&amp; socket)</div>
 <div class="line">{</div>
 <div class="line">    socket.endConnect();</div>
-<div class="line">    socket.setSendFrame(Pt::Http::WebSocket::Text);</div>
-<div class="line">    socket.beginWrite(&quot;hello&quot;, 5);</div>
+<div class="line">    socket.buffer().sputn(&quot;hello&quot;, 5);</div>
+<div class="line">    socket.beginSend(Pt::Http::WebSocket::Text);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">Pt::System::MainLoop loop;</div>
-<div class="line">Pt::Http::WebSocket socket;</div>
-<div class="line">socket.setActive(loop);</div>
+<div class="line">Pt::Net::Endpoint ep(&quot;localhost&quot;, 80);</div>
+<div class="line">Pt::Http::Client client(loop, ep);</div>
+<div class="line">Pt::Http::WebSocket socket(client);</div>
 <div class="line">socket.connected() += Pt::slot(onConnected);</div>
-<div class="line">socket.beginConnect(&quot;ws://localhost/ws&quot;);</div>
+<div class="line">socket.beginConnect(&quot;/ws&quot;);</div>
 <div class="line">loop.run();</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Http-Page-WebSocketClass"></a>
 WebSocket</h2>
-<p>WebSocket is the IODevice that follows a WebSocket handshake. After the handshake the same TCP connection carries framed messages instead of HTTP request and reply messages. read() and write() transfer payload bytes. The frame type is separate: setSendFrame() selects the opcode for the next send, and receiveFrame() reports the opcode of the frame that was last received.</p>
-<p>On the client, attach the socket to an event loop, connect connected(), and call beginConnect() with a ws:// URL. endConnect() completes the handshake and throws if it failed. On the server, accept() takes the IOStream of an upgraded connection, which a WebSocketService handshake produces.</p>
-<p>Ping and pong are control frames. sendPingFrame() writes a ping, and after a ping is received sendPongFrame() writes the matching pong. Text and binary are the data payload. Unknown is the unset frame type.    </p>
+<p>WebSocket formats WebSocket frames into the stream buffer of an upgraded HTTP connection. It is not an I/O device. The caller writes payload into buffer() and sends that buffer as one frame. A receive parses one frame from the stream and leaves the payload in the same buffer.</p>
+<p>On the client, construct the socket with the Client that will perform the handshake. The socket stores a reference and does not own that client, so the client must outlive the socket, including a handshake that is still waiting on the loop. Host, port, event loop, timeout and TLS are settings of that client. Connect connected() and call beginConnect() with the request path, or with a ws:// URL whose host and port are the client's endpoint. The handshake is an HTTP request and reply on that client. endConnect() completes it and throws if it failed. The 101 reply becomes the Stream this socket formats. After the handshake the socket no longer uses the client. On the server, construct the socket with the Stream from Service::upgradeRequested(). accept() retains that stream on a socket that already exists. The server keeps the connection. The socket formats that stream and does not own it.</p>
+<p>beginSend() writes one frame. The opcode is the argument. The payload is what was written to buffer() since the previous send. outputReady() reports that the frame has left the stream buffer, and endSend() completes the send.</p>
+<p>beginReceive() reads one frame. inputReady() reports that the frame is complete. endReceive() completes the read. frame() is the opcode, and buffer() then holds the payload. A short read stays inside the socket until the frame is complete, so the ready signal means one whole frame.</p>
+<p>Ping and pong are control frames. sendPing() and sendPong() write those frames through the same stream buffer. Text and binary are the data payload. Unknown is the unset frame type.    </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.18.0-->

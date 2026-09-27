@@ -96,6 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb3f50432f72191528dae8a075198b92" id="r_adb3f50432f72191528dae8a075198b92"><td class="memItemLeft"><a id="adb3f50432f72191528dae8a075198b92" name="adb3f50432f72191528dae8a075198b92"></a>
 const <a class="el" href="classPt_1_1Db_1_1Connection.html">Connection</a> &amp;&#160;</td><td class="memItemRight"><b>getConnection</b> () const</td></tr>
 <tr class="memdesc:adb3f50432f72191528dae8a075198b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection this transaction uses. <br /></td></tr>
+<tr class="memitem:ab3cbed938f3836629645513e94a9abd3" id="r_ab3cbed938f3836629645513e94a9abd3"><td class="memItemLeft"><a id="ab3cbed938f3836629645513e94a9abd3" name="ab3cbed938f3836629645513e94a9abd3"></a>
+<a class="el" href="classPt_1_1Db_1_1Connection.html">Connection</a> &amp;&#160;</td><td class="memItemRight"><b>getConnection</b> ()</td></tr>
+<tr class="memdesc:ab3cbed938f3836629645513e94a9abd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection this transaction uses. <br /></td></tr>
 <tr class="memitem:ab0bdf5cca484fb2ba637c39384b27fb2" id="r_ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a> ()</td></tr>
 <tr class="memdesc:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a deferred transaction.  <br /></td></tr>
 <tr class="memitem:ad55316f5135cdae6aa6c5a763f6c3473" id="r_ad55316f5135cdae6aa6c5a763f6c3473"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad55316f5135cdae6aa6c5a763f6c3473">commit</a> ()</td></tr>
@@ -129,6 +132,15 @@ void&#160;</td><td class="memItemRight"><b>endRollback</b> ()</td></tr>
 <tr class="memitem:a377430136f2fe5843177aa4851cb1d19" id="r_a377430136f2fe5843177aa4851cb1d19"><td class="memItemLeft"><a id="a377430136f2fe5843177aa4851cb1d19" name="a377430136f2fe5843177aa4851cb1d19"></a>
 <a class="el" href="classPt_1_1Signal.html">Pt::Signal</a> &amp;&#160;</td><td class="memItemRight"><b>rollbackFinished</b> ()</td></tr>
 <tr class="memdesc:a377430136f2fe5843177aa4851cb1d19"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Signal.html" title="Multicast Signal to call multiple slots.">Signal</a> emitted when an asynchronous rollback completes. <br /></td></tr>
+<tr class="memitem:a6489c8fec9ab3d4871d48ad07bcc3258" id="r_a6489c8fec9ab3d4871d48ad07bcc3258"><td class="memItemLeft"><a id="a6489c8fec9ab3d4871d48ad07bcc3258" name="a6489c8fec9ab3d4871d48ad07bcc3258"></a>
+AsyncBegin&#160;</td><td class="memItemRight"><b>beginAsync</b> ()</td></tr>
+<tr class="memdesc:a6489c8fec9ab3d4871d48ad07bcc3258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an awaitable that begins the transaction. <br /></td></tr>
+<tr class="memitem:a0682d4416cb0c9c627c5cb5c5b6baeb7" id="r_a0682d4416cb0c9c627c5cb5c5b6baeb7"><td class="memItemLeft"><a id="a0682d4416cb0c9c627c5cb5c5b6baeb7" name="a0682d4416cb0c9c627c5cb5c5b6baeb7"></a>
+AsyncCommit&#160;</td><td class="memItemRight"><b>commitAsync</b> ()</td></tr>
+<tr class="memdesc:a0682d4416cb0c9c627c5cb5c5b6baeb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an awaitable that commits the transaction. <br /></td></tr>
+<tr class="memitem:a37e4de5f6e39352cdce9573673d393ef" id="r_a37e4de5f6e39352cdce9573673d393ef"><td class="memItemLeft"><a id="a37e4de5f6e39352cdce9573673d393ef" name="a37e4de5f6e39352cdce9573673d393ef"></a>
+AsyncRollback&#160;</td><td class="memItemRight"><b>rollbackAsync</b> ()</td></tr>
+<tr class="memdesc:a37e4de5f6e39352cdce9573673d393ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an awaitable that rolls back the transaction. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -146,11 +158,16 @@ virtual const char *&#160;</td><td class="memItemRight"><b>onGetRollbackSql</b> 
 <div class="textblock"><p>Transaction is the unit of work the group described. The constructor begins a deferred transaction unless <em class="arg">starttransaction</em> is false. The object is not copyable and does not own the connection.</p>
 <p>begin() starts a transaction; if one is already active it is rolled back first. commit() keeps the changes. rollback() discards them. If the object is destroyed while still active, the destructor rolls back and swallows any error from that rollback.</p>
 <p>Asynchronous begin, commit and rollback need setActive() on the connection. beginStart() / endStart() / startFinished() begin the transaction; endStart() is the call that marks it active. beginCommit() / endCommit() / commitFinished() commit. beginRollback() / endRollback() / rollbackFinished() roll back.</p>
+<p>When C++20 is available, beginAsync(), commitAsync() and rollbackAsync() wrap those pairs for co_await. Only one awaitable may be pending on the connection. Destroying the transaction while one is in flight detaches it; a later resume throws std::logic_error.</p>
 <p>Override onGetBeginSql(), onGetCommitSql() and onGetRollbackSql() to supply backend-specific SQL. A null return lets the backend use its default.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a> txn(conn);</div>
 <div class="line">conn.execute(<span class="stringliteral">&quot;UPDATE t SET n = n + 1&quot;</span>);</div>
 <div class="line">txn.commit();</div>
-<div class="ttc" id="aclassPt_1_1Db_1_1Transaction_html"><div class="ttname"><a href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a></div><div class="ttdoc">Unit of work on a database connection.</div><div class="ttdef"><b>Definition</b> Transaction.h:50</div></div>
+<div class="ttc" id="aclassPt_1_1Db_1_1Transaction_html"><div class="ttname"><a href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a></div><div class="ttdoc">Unit of work on a database connection.</div><div class="ttdef"><b>Definition</b> Transaction.h:74</div></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Db_1_1Transaction.html">Pt::Db::Transaction</a> txn(conn, <span class="keyword">false</span>);</div>
+<div class="line"><span class="keyword">co_await</span> txn.beginAsync();</div>
+<div class="line"><span class="keyword">co_await</span> conn.executeAsync(<span class="stringliteral">&quot;INSERT INTO t VALUES (1)&quot;</span>);</div>
+<div class="line"><span class="keyword">co_await</span> txn.commitAsync();</div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a311bdc9daf98280279ae6a4b1be0a384" name="a311bdc9daf98280279ae6a4b1be0a384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a311bdc9daf98280279ae6a4b1be0a384">&#9670;&#160;</a></span>Transaction()</h2>

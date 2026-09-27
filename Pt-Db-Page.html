@@ -187,6 +187,7 @@ Transactions</h1>
 <p>Transaction is a unit of work on one Connection. The constructor begins a deferred transaction unless the start flag is false. begin() starts one; if a transaction is already active it is rolled back first. commit() ends it and keeps the changes. rollback() ends it and discards them. If the object is destroyed while still active, the destructor rolls back and swallows any error from that rollback.</p>
 <p>The object is not copyable. It does not own the connection.</p>
 <p>Asynchronous begin, commit and rollback follow the connection model and need setActive() on that connection. beginStart() / endStart() / startFinished() begin the transaction. beginCommit() / endCommit() / commitFinished() commit it. beginRollback() / endRollback() / rollbackFinished() roll it back. endStart() is the call that marks the transaction active on the async path.</p>
+<p>C++20 awaitables wrap those pairs: beginAsync(), commitAsync() and rollbackAsync() are used with co_await and complete through the same signals. Only one awaitable may be pending on the connection. Destroying the Transaction while one is in flight detaches it; a later resume throws std::logic_error.</p>
 <p>Override onGetBeginSql(), onGetCommitSql() and onGetRollbackSql() to supply backend-specific SQL. A null return lets the backend use its default. SqliteTransaction() uses that hook to run <span class="tt">BEGIN IMMEDIATE TRANSACTION</span> when immediate locking is requested.</p>
 <div class="fragment"><div class="line">Pt::Db::Transaction txn(conn);</div>
 <div class="line">conn.execute(&quot;UPDATE accounts SET balance = balance - 10 WHERE id = 1&quot;);</div>
@@ -197,10 +198,15 @@ Transaction</h2>
 <p>Transaction is the unit of work the group described. The constructor begins a deferred transaction unless <em class="arg">starttransaction</em> is false. The object is not copyable and does not own the connection.</p>
 <p>begin() starts a transaction; if one is already active it is rolled back first. commit() keeps the changes. rollback() discards them. If the object is destroyed while still active, the destructor rolls back and swallows any error from that rollback.</p>
 <p>Asynchronous begin, commit and rollback need setActive() on the connection. beginStart() / endStart() / startFinished() begin the transaction; endStart() is the call that marks it active. beginCommit() / endCommit() / commitFinished() commit. beginRollback() / endRollback() / rollbackFinished() roll back.</p>
+<p>When C++20 is available, beginAsync(), commitAsync() and rollbackAsync() wrap those pairs for co_await. Only one awaitable may be pending on the connection. Destroying the transaction while one is in flight detaches it; a later resume throws std::logic_error.</p>
 <p>Override onGetBeginSql(), onGetCommitSql() and onGetRollbackSql() to supply backend-specific SQL. A null return lets the backend use its default.</p>
 <div class="fragment"><div class="line">Pt::Db::Transaction txn(conn);</div>
 <div class="line">conn.execute(&quot;UPDATE t SET n = n + 1&quot;);</div>
 <div class="line">txn.commit();</div>
+</div><!-- fragment --><div class="fragment"><div class="line">Pt::Db::Transaction txn(conn, false);</div>
+<div class="line">co_await txn.beginAsync();</div>
+<div class="line">co_await conn.executeAsync(&quot;INSERT INTO t VALUES (1)&quot;);</div>
+<div class="line">co_await txn.commitAsync();</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Db-Page-SqliteTransaction"></a>
 SqliteTransaction</h2>
 <p>SqliteTransaction is a Transaction that can start with <span class="tt">BEGIN IMMEDIATE TRANSACTION</span> instead of the backend default. Pass <em class="arg">immediate</em> true for that locking. <em class="arg">start</em> still controls whether the constructor begins the transaction.    </p>

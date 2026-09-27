@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPt_1_1Http_1_1WebSocket-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WebSocket Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-WebSocket.html">WebSocket</a></div></div></div>
 </div><!--header-->
@@ -80,15 +79,15 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="WebSocket_8h_source.html">Pt/Http/WebSocket.h</a>&gt;</code></p>
 
-<p>Framed <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> I/O device.  
+<p>Framed messages on an HTTP stream.  
  <a href="#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classPt_1_1System_1_1IODevice.html">IODevice</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
+<p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a1a3c9a246bb17ddd6d40809f3521a5c5" id="r_a1a3c9a246bb17ddd6d40809f3521a5c5"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5">Frame</a> { <br />
-&#160;&#160;<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5a40edee570bab8999297a62cfd40139ad">Unknow</a>
+&#160;&#160;<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5a4e81c184ac3ad48a389cd4454c4a05bb">Unknown</a>
 , <br />
 &#160;&#160;<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b">Text</a>
 , <br />
@@ -99,128 +98,68 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5a9a7bb6fa7ee9f12581b077ebb985da33">Pong</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a1a3c9a246bb17ddd6d40809f3521a5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> frame opcode.  <a href="#a1a3c9a246bb17ddd6d40809f3521a5c5">More...</a><br /></td></tr>
+<tr class="memdesc:a1a3c9a246bb17ddd6d40809f3521a5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> frame opcode.  <a href="#a1a3c9a246bb17ddd6d40809f3521a5c5">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3cb16933bc8224409ae525bbf821a79" id="r_aa3cb16933bc8224409ae525bbf821a79"><td class="memItemLeft"><a id="aa3cb16933bc8224409ae525bbf821a79" name="aa3cb16933bc8224409ae525bbf821a79"></a>
-&#160;</td><td class="memItemRight"><b>WebSocket</b> ()</td></tr>
-<tr class="memdesc:aa3cb16933bc8224409ae525bbf821a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a closed <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a>. <br /></td></tr>
-<tr class="memitem:a1c3496451e192441b4aa48f90e6d138b" id="r_a1c3496451e192441b4aa48f90e6d138b"><td class="memItemLeft"><a id="a1c3496451e192441b4aa48f90e6d138b" name="a1c3496451e192441b4aa48f90e6d138b"></a>
-&#160;</td><td class="memItemRight"><b>WebSocket</b> (<a class="el" href="classPt_1_1Http_1_1IOStream.html">Pt::Http::IOStream</a> *stream)</td></tr>
-<tr class="memdesc:a1c3496451e192441b4aa48f90e6d138b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> that accepts <em class="arg">stream</em>. <br /></td></tr>
-<tr class="memitem:ad679d104906d3c4969770e5364341d01" id="r_ad679d104906d3c4969770e5364341d01"><td class="memItemLeft"><a id="ad679d104906d3c4969770e5364341d01" name="ad679d104906d3c4969770e5364341d01"></a>
-virtual&#160;</td><td class="memItemRight"><b>~WebSocket</b> ()</td></tr>
-<tr class="memdesc:ad679d104906d3c4969770e5364341d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="memitem:a965d5c94b7aa03283bed6d76cd2343aa" id="r_a965d5c94b7aa03283bed6d76cd2343aa"><td class="memItemLeft"><a id="a965d5c94b7aa03283bed6d76cd2343aa" name="a965d5c94b7aa03283bed6d76cd2343aa"></a>
-void&#160;</td><td class="memItemRight"><b>accept</b> (<a class="el" href="classPt_1_1Http_1_1IOStream.html">Pt::Http::IOStream</a> *stream)</td></tr>
-<tr class="memdesc:a965d5c94b7aa03283bed6d76cd2343aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts an upgraded connection <em class="arg">stream</em>. <br /></td></tr>
-<tr class="memitem:a98898a52a5589b791620617c21b8d8e9" id="r_a98898a52a5589b791620617c21b8d8e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a98898a52a5589b791620617c21b8d8e9">beginConnect</a> (const std::string &amp;url, const std::string &amp;origin=std::string(), bool keepAlive=true)</td></tr>
-<tr class="memdesc:a98898a52a5589b791620617c21b8d8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a client handshake to <em class="arg">url</em>.  <br /></td></tr>
+<tr class="memitem:adf9d3d04491f29039b813537178e5734" id="r_adf9d3d04491f29039b813537178e5734"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> (<a class="el" href="classPt_1_1Http_1_1Client.html">Client</a> &amp;client)</td></tr>
+<tr class="memdesc:adf9d3d04491f29039b813537178e5734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> that handshakes through <em class="arg">client</em>.  <br /></td></tr>
+<tr class="memitem:ace108e1f2f26f1b01c80eb6c8ffacf8a" id="r_ace108e1f2f26f1b01c80eb6c8ffacf8a"><td class="memItemLeft"><a id="ace108e1f2f26f1b01c80eb6c8ffacf8a" name="ace108e1f2f26f1b01c80eb6c8ffacf8a"></a>
+&#160;</td><td class="memItemRight"><b>WebSocket</b> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:ace108e1f2f26f1b01c80eb6c8ffacf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> that accepts <em class="arg">stream</em>. <br /></td></tr>
+<tr class="memitem:ab4580ff1c09aa4b2401d626d33e4584f" id="r_ab4580ff1c09aa4b2401d626d33e4584f"><td class="memItemLeft"><a id="ab4580ff1c09aa4b2401d626d33e4584f" name="ab4580ff1c09aa4b2401d626d33e4584f"></a>
+&#160;</td><td class="memItemRight"><b>~WebSocket</b> ()</td></tr>
+<tr class="memdesc:ab4580ff1c09aa4b2401d626d33e4584f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:a0b878ba19ec013a1077e5486047bc7ad" id="r_a0b878ba19ec013a1077e5486047bc7ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0b878ba19ec013a1077e5486047bc7ad">accept</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a0b878ba19ec013a1077e5486047bc7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts an upgraded <em class="arg">stream</em>.  <br /></td></tr>
+<tr class="memitem:ae26548d592b451c870cf7b71fad30777" id="r_ae26548d592b451c870cf7b71fad30777"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae26548d592b451c870cf7b71fad30777">beginConnect</a> (const std::string &amp;url, const std::string &amp;origin=std::string())</td></tr>
+<tr class="memdesc:ae26548d592b451c870cf7b71fad30777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a client handshake for <em class="arg">url</em>.  <br /></td></tr>
 <tr class="memitem:a5f127e10469b629cc0cb35a7c75707c3" id="r_a5f127e10469b629cc0cb35a7c75707c3"><td class="memItemLeft"><a id="a5f127e10469b629cc0cb35a7c75707c3" name="a5f127e10469b629cc0cb35a7c75707c3"></a>
-<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#aa3cb16933bc8224409ae525bbf821a79">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>connected</b> ()</td></tr>
+<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>connected</b> ()</td></tr>
 <tr class="memdesc:a5f127e10469b629cc0cb35a7c75707c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when the handshake finishes. <br /></td></tr>
 <tr class="memitem:a18ddd0ea533304dc70208ee7a00a8e0a" id="r_a18ddd0ea533304dc70208ee7a00a8e0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a> ()</td></tr>
 <tr class="memdesc:a18ddd0ea533304dc70208ee7a00a8e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the client handshake.  <br /></td></tr>
-<tr class="memitem:a17af87ac91eb8f408bfcad6eafe0f0a2" id="r_a17af87ac91eb8f408bfcad6eafe0f0a2"><td class="memItemLeft"><a id="a17af87ac91eb8f408bfcad6eafe0f0a2" name="a17af87ac91eb8f408bfcad6eafe0f0a2"></a>
-void&#160;</td><td class="memItemRight"><b>setSendFrame</b> (<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5">Frame</a> m)</td></tr>
-<tr class="memdesc:a17af87ac91eb8f408bfcad6eafe0f0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the opcode for the next send. <br /></td></tr>
-<tr class="memitem:a72971f83d468c10f2f521c8d06b3c04c" id="r_a72971f83d468c10f2f521c8d06b3c04c"><td class="memItemLeft"><a id="a72971f83d468c10f2f521c8d06b3c04c" name="a72971f83d468c10f2f521c8d06b3c04c"></a>
-<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5">Frame</a>&#160;</td><td class="memItemRight"><b>receiveFrame</b> () const</td></tr>
-<tr class="memdesc:a72971f83d468c10f2f521c8d06b3c04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the opcode of the last received frame. <br /></td></tr>
-<tr class="memitem:aa53f5005679337f324eb79fb5cef2d32" id="r_aa53f5005679337f324eb79fb5cef2d32"><td class="memItemLeft"><a id="aa53f5005679337f324eb79fb5cef2d32" name="aa53f5005679337f324eb79fb5cef2d32"></a>
-void&#160;</td><td class="memItemRight"><b>sendPongFrame</b> ()</td></tr>
-<tr class="memdesc:aa53f5005679337f324eb79fb5cef2d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a pong frame. <br /></td></tr>
-<tr class="memitem:a5d358321c4241240213f05c417eeeed4" id="r_a5d358321c4241240213f05c417eeeed4"><td class="memItemLeft"><a id="a5d358321c4241240213f05c417eeeed4" name="a5d358321c4241240213f05c417eeeed4"></a>
-void&#160;</td><td class="memItemRight"><b>sendPingFrame</b> ()</td></tr>
-<tr class="memdesc:a5d358321c4241240213f05c417eeeed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a ping frame. <br /></td></tr>
+<tr class="memitem:ae593fef2cad3ac2fe57006d3c623704f" id="r_ae593fef2cad3ac2fe57006d3c623704f"><td class="memItemLeft">std::streambuf &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae593fef2cad3ac2fe57006d3c623704f">buffer</a> ()</td></tr>
+<tr class="memdesc:ae593fef2cad3ac2fe57006d3c623704f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the payload buffer.  <br /></td></tr>
+<tr class="memitem:ad87c6c42e7b5eeed50a5edb23d747989" id="r_ad87c6c42e7b5eeed50a5edb23d747989"><td class="memItemLeft"><a id="ad87c6c42e7b5eeed50a5edb23d747989" name="ad87c6c42e7b5eeed50a5edb23d747989"></a>
+<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5">Frame</a>&#160;</td><td class="memItemRight"><b>frame</b> () const</td></tr>
+<tr class="memdesc:ad87c6c42e7b5eeed50a5edb23d747989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the opcode of the frame last received. <br /></td></tr>
+<tr class="memitem:ad14958a8ac513a1d65d62684ad8467cc" id="r_ad14958a8ac513a1d65d62684ad8467cc"><td class="memItemLeft"><a id="ad14958a8ac513a1d65d62684ad8467cc" name="ad14958a8ac513a1d65d62684ad8467cc"></a>
+void&#160;</td><td class="memItemRight"><b>beginSend</b> (<a class="el" href="#a1a3c9a246bb17ddd6d40809f3521a5c5">Frame</a> frame)</td></tr>
+<tr class="memdesc:ad14958a8ac513a1d65d62684ad8467cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins sending the payload in buffer() as <em class="arg">frame</em>. <br /></td></tr>
+<tr class="memitem:ad387813708fc24784f34d1ef408ff77d" id="r_ad387813708fc24784f34d1ef408ff77d"><td class="memItemLeft"><a id="ad387813708fc24784f34d1ef408ff77d" name="ad387813708fc24784f34d1ef408ff77d"></a>
+void&#160;</td><td class="memItemRight"><b>endSend</b> ()</td></tr>
+<tr class="memdesc:ad387813708fc24784f34d1ef408ff77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the send started by beginSend(). <br /></td></tr>
+<tr class="memitem:a91151db77a69a3a7a4c3ae3cabd304b7" id="r_a91151db77a69a3a7a4c3ae3cabd304b7"><td class="memItemLeft"><a id="a91151db77a69a3a7a4c3ae3cabd304b7" name="a91151db77a69a3a7a4c3ae3cabd304b7"></a>
+void&#160;</td><td class="memItemRight"><b>beginReceive</b> ()</td></tr>
+<tr class="memdesc:a91151db77a69a3a7a4c3ae3cabd304b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins receiving one frame. <br /></td></tr>
+<tr class="memitem:a27121688f249d6e700aa6551ae0c96a8" id="r_a27121688f249d6e700aa6551ae0c96a8"><td class="memItemLeft"><a id="a27121688f249d6e700aa6551ae0c96a8" name="a27121688f249d6e700aa6551ae0c96a8"></a>
+void&#160;</td><td class="memItemRight"><b>endReceive</b> ()</td></tr>
+<tr class="memdesc:a27121688f249d6e700aa6551ae0c96a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the receive started by beginReceive(). <br /></td></tr>
+<tr class="memitem:ae1340d1280818fa14b61e2bf6e637366" id="r_ae1340d1280818fa14b61e2bf6e637366"><td class="memItemLeft"><a id="ae1340d1280818fa14b61e2bf6e637366" name="ae1340d1280818fa14b61e2bf6e637366"></a>
+void&#160;</td><td class="memItemRight"><b>sendPing</b> ()</td></tr>
+<tr class="memdesc:ae1340d1280818fa14b61e2bf6e637366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a ping frame. <br /></td></tr>
+<tr class="memitem:a4ea766ba2ff054e76f799b75789d4a67" id="r_a4ea766ba2ff054e76f799b75789d4a67"><td class="memItemLeft"><a id="a4ea766ba2ff054e76f799b75789d4a67" name="a4ea766ba2ff054e76f799b75789d4a67"></a>
+void&#160;</td><td class="memItemRight"><b>sendPong</b> ()</td></tr>
+<tr class="memdesc:a4ea766ba2ff054e76f799b75789d4a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a pong frame. <br /></td></tr>
+<tr class="memitem:aa7d5e7467d444d57c86ea90e1a80c010" id="r_aa7d5e7467d444d57c86ea90e1a80c010"><td class="memItemLeft"><a id="aa7d5e7467d444d57c86ea90e1a80c010" name="aa7d5e7467d444d57c86ea90e1a80c010"></a>
+<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>inputReady</b> ()</td></tr>
+<tr class="memdesc:aa7d5e7467d444d57c86ea90e1a80c010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a frame was received. <br /></td></tr>
+<tr class="memitem:a33f94d9b65546ead3264779babf7c804" id="r_a33f94d9b65546ead3264779babf7c804"><td class="memItemLeft"><a id="a33f94d9b65546ead3264779babf7c804" name="a33f94d9b65546ead3264779babf7c804"></a>
+<a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>outputReady</b> ()</td></tr>
+<tr class="memdesc:a33f94d9b65546ead3264779babf7c804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a frame was sent. <br /></td></tr>
+<tr class="memitem:a4e6264069bc112d5f7a636525f88a396" id="r_a4e6264069bc112d5f7a636525f88a396"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e6264069bc112d5f7a636525f88a396">setTimeout</a> (std::size_t timeout)</td></tr>
+<tr class="memdesc:a4e6264069bc112d5f7a636525f88a396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stream timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft"><a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
 void&#160;</td><td class="memItemRight"><b>close</b> ()</td></tr>
-<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the device. <br /></td></tr>
-<tr class="memitem:a4e6264069bc112d5f7a636525f88a396" id="r_a4e6264069bc112d5f7a636525f88a396"><td class="memItemLeft"><a id="a4e6264069bc112d5f7a636525f88a396" name="a4e6264069bc112d5f7a636525f88a396"></a>
-void&#160;</td><td class="memItemRight"><b>setTimeout</b> (std::size_t timeout)</td></tr>
-<tr class="memdesc:a4e6264069bc112d5f7a636525f88a396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the timeout for blocking I/O in milliseconds. <br /></td></tr>
-<tr class="memitem:ac693ab150b948f96c8dd8f485274fb20" id="r_ac693ab150b948f96c8dd8f485274fb20"><td class="memItemLeft"><a id="ac693ab150b948f96c8dd8f485274fb20" name="ac693ab150b948f96c8dd8f485274fb20"></a>
-void&#160;</td><td class="memItemRight"><b>beginRead</b> (char *buffer, std::size_t n)</td></tr>
-<tr class="memdesc:ac693ab150b948f96c8dd8f485274fb20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins to read data. <br /></td></tr>
-<tr class="memitem:a178c8460c175bc35851ae0d4903c6e75" id="r_a178c8460c175bc35851ae0d4903c6e75"><td class="memItemLeft"><a id="a178c8460c175bc35851ae0d4903c6e75" name="a178c8460c175bc35851ae0d4903c6e75"></a>
-std::size_t&#160;</td><td class="memItemRight"><b>endRead</b> ()</td></tr>
-<tr class="memdesc:a178c8460c175bc35851ae0d4903c6e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends reading data. <br /></td></tr>
-<tr class="memitem:a8f0892c6bf02c81910a94fcdddee294e" id="r_a8f0892c6bf02c81910a94fcdddee294e"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#a8f0892c6bf02c81910a94fcdddee294e">read</a> (char *buffer, std::size_t n)</td></tr>
-<tr class="memdesc:a8f0892c6bf02c81910a94fcdddee294e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from I/O device.  <br /></td></tr>
-<tr class="memitem:a0f6819a4971e612ac6d0cb54c4d41306" id="r_a0f6819a4971e612ac6d0cb54c4d41306"><td class="memItemLeft"><a id="a0f6819a4971e612ac6d0cb54c4d41306" name="a0f6819a4971e612ac6d0cb54c4d41306"></a>
-void&#160;</td><td class="memItemRight"><b>beginWrite</b> (const char *buffer, std::size_t n)</td></tr>
-<tr class="memdesc:a0f6819a4971e612ac6d0cb54c4d41306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins to write data. <br /></td></tr>
-<tr class="memitem:a5ec7d50df5d6301755f0f1580c75935b" id="r_a5ec7d50df5d6301755f0f1580c75935b"><td class="memItemLeft"><a id="a5ec7d50df5d6301755f0f1580c75935b" name="a5ec7d50df5d6301755f0f1580c75935b"></a>
-std::size_t&#160;</td><td class="memItemRight"><b>endWrite</b> ()</td></tr>
-<tr class="memdesc:a5ec7d50df5d6301755f0f1580c75935b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends writing data. <br /></td></tr>
-<tr class="memitem:a7a6d2a237f8e5423ae44adffda0a52ed" id="r_a7a6d2a237f8e5423ae44adffda0a52ed"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#a7a6d2a237f8e5423ae44adffda0a52ed">write</a> (const char *buffer, std::size_t n)</td></tr>
-<tr class="memdesc:a7a6d2a237f8e5423ae44adffda0a52ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to I/O device.  <br /></td></tr>
-<tr class="memitem:ab55427f1222dc5fffd8f2b49bc1fd6fd" id="r_ab55427f1222dc5fffd8f2b49bc1fd6fd"><td class="memItemLeft"><a id="ab55427f1222dc5fffd8f2b49bc1fd6fd" name="ab55427f1222dc5fffd8f2b49bc1fd6fd"></a>
-bool&#160;</td><td class="memItemRight"><b>seekable</b> () const</td></tr>
-<tr class="memdesc:ab55427f1222dc5fffd8f2b49bc1fd6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if device is seekable. <br /></td></tr>
-<tr class="memitem:a7e569ddbce42e3d779ae412450a61603" id="r_a7e569ddbce42e3d779ae412450a61603"><td class="memItemLeft">pos_type&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#a7e569ddbce42e3d779ae412450a61603">seek</a> (off_type offset, seekdir sd)</td></tr>
-<tr class="memdesc:a7e569ddbce42e3d779ae412450a61603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the read position to the given offset.  <br /></td></tr>
-<tr class="memitem:a8c4ee9c81e1c1d588edc57043f44b677" id="r_a8c4ee9c81e1c1d588edc57043f44b677"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#a8c4ee9c81e1c1d588edc57043f44b677">peek</a> (char *buffer, std::size_t n)</td></tr>
-<tr class="memdesc:a8c4ee9c81e1c1d588edc57043f44b677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peek data from I/O device without consuming them.  <br /></td></tr>
-<tr class="memitem:ad55f80ed3cd8b6c4f247763b747016af" id="r_ad55f80ed3cd8b6c4f247763b747016af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#ad55f80ed3cd8b6c4f247763b747016af">sync</a> ()</td></tr>
-<tr class="memdesc:ad55f80ed3cd8b6c4f247763b747016af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize device.  <br /></td></tr>
-<tr class="memitem:aaf874b410407f8e3ecf47cb27630f514" id="r_aaf874b410407f8e3ecf47cb27630f514"><td class="memItemLeft">pos_type&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#aaf874b410407f8e3ecf47cb27630f514">position</a> ()</td></tr>
-<tr class="memdesc:aaf874b410407f8e3ecf47cb27630f514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current I/O position.  <br /></td></tr>
-<tr class="memitem:a192addeb70d883e2f1a7b1bb3c07a7c7" id="r_a192addeb70d883e2f1a7b1bb3c07a7c7"><td class="memItemLeft"><a id="a192addeb70d883e2f1a7b1bb3c07a7c7" name="a192addeb70d883e2f1a7b1bb3c07a7c7"></a>
-bool&#160;</td><td class="memItemRight"><b>isEof</b> () const</td></tr>
-<tr class="memdesc:a192addeb70d883e2f1a7b1bb3c07a7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if the device has reached EOF. <br /></td></tr>
-<tr class="memitem:af89caf1c3beef36fd1c653d4dda93a98" id="r_af89caf1c3beef36fd1c653d4dda93a98"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1System_1_1IODevice.html#a891923d7e1329539b94a301fcaa9e3fe">IODevice</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#af89caf1c3beef36fd1c653d4dda93a98">inputReady</a> ()</td></tr>
-<tr class="memdesc:af89caf1c3beef36fd1c653d4dda93a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies about available data.  <br /></td></tr>
-<tr class="memitem:ae8caa52099dfde6c620e35d795a13abe" id="r_ae8caa52099dfde6c620e35d795a13abe"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1System_1_1IODevice.html#a891923d7e1329539b94a301fcaa9e3fe">IODevice</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1System_1_1IODevice.html#ae8caa52099dfde6c620e35d795a13abe">outputReady</a> ()</td></tr>
-<tr class="memdesc:ae8caa52099dfde6c620e35d795a13abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies when data can be written.  <br /></td></tr>
-<tr class="memitem:ad1585484cec92cacd15885c798456205" id="r_ad1585484cec92cacd15885c798456205"><td class="memItemLeft"><a id="ad1585484cec92cacd15885c798456205" name="ad1585484cec92cacd15885c798456205"></a>
-bool&#160;</td><td class="memItemRight"><b>isReading</b> () const</td></tr>
-<tr class="memdesc:ad1585484cec92cacd15885c798456205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the device is reading. <br /></td></tr>
-<tr class="memitem:a181a6a67a97d760db63a2c3294ed22e3" id="r_a181a6a67a97d760db63a2c3294ed22e3"><td class="memItemLeft"><a id="a181a6a67a97d760db63a2c3294ed22e3" name="a181a6a67a97d760db63a2c3294ed22e3"></a>
-bool&#160;</td><td class="memItemRight"><b>isWriting</b> () const</td></tr>
-<tr class="memdesc:a181a6a67a97d760db63a2c3294ed22e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the device is writing. <br /></td></tr>
-<tr class="memitem:ae3bbf5e839c2571e323e7908b1095c00" id="r_ae3bbf5e839c2571e323e7908b1095c00"><td class="memItemLeft"><a id="ae3bbf5e839c2571e323e7908b1095c00" name="ae3bbf5e839c2571e323e7908b1095c00"></a>
-EventLoop *&#160;</td><td class="memItemRight"><b>loop</b> () const</td></tr>
-<tr class="memdesc:ae3bbf5e839c2571e323e7908b1095c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the used event loop. <br /></td></tr>
-<tr class="memitem:a931676e60334ab733b848fa90dcb6dda" id="r_a931676e60334ab733b848fa90dcb6dda"><td class="memItemLeft"><a id="a931676e60334ab733b848fa90dcb6dda" name="a931676e60334ab733b848fa90dcb6dda"></a>
-void&#160;</td><td class="memItemRight"><b>setActive</b> (EventLoop &amp;parent)</td></tr>
-<tr class="memdesc:a931676e60334ab733b848fa90dcb6dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent loop, so that operations can be run. <br /></td></tr>
-<tr class="memitem:ac295bade8aee589f6718dfa79edc2a34" id="r_ac295bade8aee589f6718dfa79edc2a34"><td class="memItemLeft"><a id="ac295bade8aee589f6718dfa79edc2a34" name="ac295bade8aee589f6718dfa79edc2a34"></a>
-void&#160;</td><td class="memItemRight"><b>detach</b> ()</td></tr>
-<tr class="memdesc:ac295bade8aee589f6718dfa79edc2a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove from event loop and cancels outstanding operations. <br /></td></tr>
-<tr class="memitem:a02d5fa6b14e221f3012a794b905be166" id="r_a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft"><a id="a02d5fa6b14e221f3012a794b905be166" name="a02d5fa6b14e221f3012a794b905be166"></a>
-void&#160;</td><td class="memItemRight"><b>cancel</b> ()</td></tr>
-<tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels all operations. <br /></td></tr>
-<tr class="memitem:a149ad6701e3e2414cb566bb414029841" id="r_a149ad6701e3e2414cb566bb414029841"><td class="memItemLeft"><a id="a149ad6701e3e2414cb566bb414029841" name="a149ad6701e3e2414cb566bb414029841"></a>
-bool&#160;</td><td class="memItemRight"><b>run</b> ()</td></tr>
-<tr class="memdesc:a149ad6701e3e2414cb566bb414029841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run operation if it is ready. <br /></td></tr>
-<tr class="memitem:aef3722ff02da0f4df9b05fb0bbca874e" id="r_aef3722ff02da0f4df9b05fb0bbca874e"><td class="memItemLeft"><a id="aef3722ff02da0f4df9b05fb0bbca874e" name="aef3722ff02da0f4df9b05fb0bbca874e"></a>
-EventLoop *&#160;</td><td class="memItemRight"><b>parent</b> () const</td></tr>
-<tr class="memdesc:aef3722ff02da0f4df9b05fb0bbca874e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the used event loop. <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a493685a908b7d52b3d8a0ccc98c53b0c" id="r_a493685a908b7d52b3d8a0ccc98c53b0c"><td class="memItemLeft"><a id="a493685a908b7d52b3d8a0ccc98c53b0c" name="a493685a908b7d52b3d8a0ccc98c53b0c"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onCancel</b> ()</td></tr>
-<tr class="memdesc:a493685a908b7d52b3d8a0ccc98c53b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks until operation has cancelled. <br /></td></tr>
-<tr class="memitem:a7fe59135336edd8f09a32b668217688b" id="r_a7fe59135336edd8f09a32b668217688b"><td class="memItemLeft"><a id="a7fe59135336edd8f09a32b668217688b" name="a7fe59135336edd8f09a32b668217688b"></a>
-virtual bool&#160;</td><td class="memItemRight"><b>onRun</b> ()</td></tr>
-<tr class="memdesc:a7fe59135336edd8f09a32b668217688b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if ready and run. <br /></td></tr>
-<tr class="memitem:a44b2236e94d7ae4506ff3dbc39a14fb5" id="r_a44b2236e94d7ae4506ff3dbc39a14fb5"><td class="memItemLeft"><a id="a44b2236e94d7ae4506ff3dbc39a14fb5" name="a44b2236e94d7ae4506ff3dbc39a14fb5"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onAttach</b> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a> &amp;loop)</td></tr>
-<tr class="memdesc:a44b2236e94d7ae4506ff3dbc39a14fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attached to loop. <br /></td></tr>
-<tr class="memitem:a180c56ebacc2b28ccd2944512ae6b5ee" id="r_a180c56ebacc2b28ccd2944512ae6b5ee"><td class="memItemLeft"><a id="a180c56ebacc2b28ccd2944512ae6b5ee" name="a180c56ebacc2b28ccd2944512ae6b5ee"></a>
-virtual void&#160;</td><td class="memItemRight"><b>onDetach</b> (<a class="el" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a> &amp;loop)</td></tr>
-<tr class="memdesc:a180c56ebacc2b28ccd2944512ae6b5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detached from loop. <br /></td></tr>
-<tr class="memitem:abcca23e6afadfade8c5d63ee62b49bfd" id="r_abcca23e6afadfade8c5d63ee62b49bfd"><td class="memItemLeft"><a id="abcca23e6afadfade8c5d63ee62b49bfd" name="abcca23e6afadfade8c5d63ee62b49bfd"></a>
-void&#160;</td><td class="memItemRight"><b>post</b> ()</td></tr>
-<tr class="memdesc:abcca23e6afadfade8c5d63ee62b49bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts this selectable to its event loop from any thread. <br /></td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a>. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>WebSocket is the IODevice that follows a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> handshake. After the handshake the same TCP connection carries framed messages instead of HTTP request and reply messages. read() and write() transfer payload bytes. The frame type is separate: setSendFrame() selects the opcode for the next send, and receiveFrame() reports the opcode of the frame that was last received.</p>
-<p>On the client, attach the socket to an event loop, connect connected(), and call beginConnect() with a ws:// URL. endConnect() completes the handshake and throws if it failed. On the server, accept() takes the IOStream of an upgraded connection, which a WebSocketService handshake produces.</p>
-<p>Ping and pong are control frames. sendPingFrame() writes a ping, and after a ping is received sendPongFrame() writes the matching pong. Text and binary are the data payload. Unknown is the unset frame type. </p>
+<div class="textblock"><p>WebSocket formats <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> frames into the stream buffer of an upgraded HTTP connection. It is not an I/O device. The caller writes payload into buffer() and sends that buffer as one frame. A receive parses one frame from the stream and leaves the payload in the same buffer.</p>
+<p>On the client, construct the socket with the Client that will perform the handshake. The socket stores a reference and does not own that client, so the client must outlive the socket, including a handshake that is still waiting on the loop. Host, port, event loop, timeout and TLS are settings of that client. Connect connected() and call beginConnect() with the request path, or with a ws:// URL whose host and port are the client's endpoint. The handshake is an HTTP request and reply on that client. endConnect() completes it and throws if it failed. The 101 reply becomes the Stream this socket formats. After the handshake the socket no longer uses the client. On the server, construct the socket with the Stream from Service::upgradeRequested(). accept() retains that stream on a socket that already exists. The server keeps the connection. The socket formats that stream and does not own it.</p>
+<p>beginSend() writes one frame. The opcode is the argument. The payload is what was written to buffer() since the previous send. outputReady() reports that the frame has left the stream buffer, and endSend() completes the send.</p>
+<p>beginReceive() reads one frame. inputReady() reports that the frame is complete. endReceive() completes the read. frame() is the opcode, and buffer() then holds the payload. A short read stays inside the socket until the frame is complete, so the ready signal means one whole frame.</p>
+<p>Ping and pong are control frames. sendPing() and sendPong() write those frames through the same stream buffer. Text and binary are the data payload. Unknown is the unset frame type. </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a1a3c9a246bb17ddd6d40809f3521a5c5" name="a1a3c9a246bb17ddd6d40809f3521a5c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a3c9a246bb17ddd6d40809f3521a5c5">&#9670;&#160;</a></span>Frame</h2>
@@ -234,7 +173,7 @@ void&#160;</td><td class="memItemRight"><b>post</b> ()</td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1a3c9a246bb17ddd6d40809f3521a5c5a40edee570bab8999297a62cfd40139ad" name="a1a3c9a246bb17ddd6d40809f3521a5c5a40edee570bab8999297a62cfd40139ad"></a>Unknow&#160;</td><td class="fielddoc"><p>Unset frame type. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1a3c9a246bb17ddd6d40809f3521a5c5a4e81c184ac3ad48a389cd4454c4a05bb" name="a1a3c9a246bb17ddd6d40809f3521a5c5a4e81c184ac3ad48a389cd4454c4a05bb"></a>Unknown&#160;</td><td class="fielddoc"><p>Unset frame type. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b" name="a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b"></a>Text&#160;</td><td class="fielddoc"><p>Text data frame. </p>
 </td></tr>
@@ -248,9 +187,54 @@ void&#160;</td><td class="memItemRight"><b>post</b> ()</td></tr>
 
 </div>
 </div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adf9d3d04491f29039b813537178e5734" name="adf9d3d04491f29039b813537178e5734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9d3d04491f29039b813537178e5734">&#9670;&#160;</a></span>WebSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebSocket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Client.html">Client</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>client</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stores a reference to <em class="arg">client</em>. The client must outlive this socket. </p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a98898a52a5589b791620617c21b8d8e9" name="a98898a52a5589b791620617c21b8d8e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98898a52a5589b791620617c21b8d8e9">&#9670;&#160;</a></span>beginConnect()</h2>
+<a id="a0b878ba19ec013a1077e5486047bc7ad" name="a0b878ba19ec013a1077e5486047bc7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b878ba19ec013a1077e5486047bc7ad">&#9670;&#160;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void accept </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retains <em class="arg">stream</em>. The server keeps the connection. </p>
+
+</div>
+</div>
+<a id="ae26548d592b451c870cf7b71fad30777" name="ae26548d592b451c870cf7b71fad30777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26548d592b451c870cf7b71fad30777">&#9670;&#160;</a></span>beginConnect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,16 +247,17 @@ void&#160;</td><td class="memItemRight"><b>post</b> ()</td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string()</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>keepAlive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><em class="arg">origin</em> is the Origin header. <em class="arg">keepAlive</em> requests a persistent HTTP connection for the handshake. </p>
+<p><em class="arg">url</em> is a request path, or a ws:// URL whose host and port are the client's endpoint. <em class="arg">origin</em> is the Origin header. Host, port and TLS come from the client.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if this socket was constructed from a stream. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -299,269 +284,39 @@ void&#160;</td><td class="memItemRight"><b>post</b> ()</td></tr>
 
 </div>
 </div>
-<a id="a8f0892c6bf02c81910a94fcdddee294e" name="a8f0892c6bf02c81910a94fcdddee294e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f0892c6bf02c81910a94fcdddee294e">&#9670;&#160;</a></span>read()</h2>
+<a id="ae593fef2cad3ac2fe57006d3c623704f" name="ae593fef2cad3ac2fe57006d3c623704f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae593fef2cad3ac2fe57006d3c623704f">&#9670;&#160;</a></span>buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t read </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Reads up to n bytes and stores them in buffer. Returns the number of bytes read, which may be less than requested and even 0 if the device operates in asynchronous (non-blocking) mode. In case of EOF the IODevice is set to eof.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buffer</td><td>buffer where to place the data to be read. </td></tr>
-    <tr><td class="paramname">n</td><td>number of bytes to read </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>number of bytes read, which may be less than requested. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a7a6d2a237f8e5423ae44adffda0a52ed" name="a7a6d2a237f8e5423ae44adffda0a52ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a6d2a237f8e5423ae44adffda0a52ed">&#9670;&#160;</a></span>write()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t write </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Writes <em class="arg">n</em> bytes from <em class="arg">buffer</em> to this I/O device. Returns the number of bytes written, which may be less than requested. In case of EOF the IODevice is set to eof.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a7e569ddbce42e3d779ae412450a61603" name="a7e569ddbce42e3d779ae412450a61603"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e569ddbce42e3d779ae412450a61603">&#9670;&#160;</a></span>seek()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">pos_type seek </td>
-          <td>(</td>
-          <td class="paramtype">off_type</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">seekdir</td>          <td class="paramname"><span class="paramname"><em>sd</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a8c4ee9c81e1c1d588edc57043f44b677" name="a8c4ee9c81e1c1d588edc57043f44b677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4ee9c81e1c1d588edc57043f44b677">&#9670;&#160;</a></span>peek()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t peek </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ad55f80ed3cd8b6c4f247763b747016af" name="ad55f80ed3cd8b6c4f247763b747016af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad55f80ed3cd8b6c4f247763b747016af">&#9670;&#160;</a></span>sync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sync </td>
+          <td class="memname">std::streambuf &amp; buffer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Commits written data to physical device.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Write payload here before beginSend(). After endReceive() this buffer holds the received payload. </p>
 
 </div>
 </div>
-<a id="aaf874b410407f8e3ecf47cb27630f514" name="aaf874b410407f8e3ecf47cb27630f514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf874b410407f8e3ecf47cb27630f514">&#9670;&#160;</a></span>position()</h2>
+<a id="a4e6264069bc112d5f7a636525f88a396" name="a4e6264069bc112d5f7a636525f88a396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6264069bc112d5f7a636525f88a396">&#9670;&#160;</a></span>setTimeout()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">pos_type position </td>
+          <td class="memname">void setTimeout </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>The current I/O position is returned or an <a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a> is thrown if the device is not seekable. Seekability can be tested with <a class="el" href="classPt_1_1System_1_1IODevice.html#ab55427f1222dc5fffd8f2b49bc1fd6fd" title="Returns true if device is seekable.">seekable()</a>.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPt_1_1IOError.html" title="I/O error.">IOError</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af89caf1c3beef36fd1c653d4dda93a98" name="af89caf1c3beef36fd1c653d4dda93a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af89caf1c3beef36fd1c653d4dda93a98">&#9670;&#160;</a></span>inputReady()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1System_1_1IODevice.html#a891923d7e1329539b94a301fcaa9e3fe">IODevice</a> &amp; &gt; &amp; inputReady </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This signal is send when the IODevice is monitored in an EventLoop and data becomes available. </p>
-
-</div>
-</div>
-<a id="ae8caa52099dfde6c620e35d795a13abe" name="ae8caa52099dfde6c620e35d795a13abe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8caa52099dfde6c620e35d795a13abe">&#9670;&#160;</a></span>outputReady()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1System_1_1IODevice.html#a891923d7e1329539b94a301fcaa9e3fe">IODevice</a> &amp; &gt; &amp; outputReady </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This signal is send when the IODevice is monitored in an EventLoop and the device is ready to write data. </p>
+<p>The handshake timeout is Client::setTimeout(). </p>
 
 </div>
 </div>

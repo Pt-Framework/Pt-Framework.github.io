@@ -102,8 +102,6 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Credentials for authorization and authentication.  <a href="classPt_1_1Http_1_1Credential.html#details">More...</a><br /></td></tr>
 <tr class="memitem:HttpError" id="r_HttpError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1HttpError.html">HttpError</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP run-time error.  <a href="classPt_1_1Http_1_1HttpError.html#details">More...</a><br /></td></tr>
-<tr class="memitem:IOStream" id="r_IOStream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1IOStream.html">IOStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream of an upgraded HTTP connection.  <a href="classPt_1_1Http_1_1IOStream.html#details">More...</a><br /></td></tr>
 <tr class="memitem:MapAny" id="r_MapAny"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1MapAny.html">MapAny</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps any request to a service.  <a href="classPt_1_1Http_1_1MapAny.html#details">More...</a><br /></td></tr>
 <tr class="memitem:MapUrl" id="r_MapUrl"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1MapUrl.html">MapUrl</a></td></tr>
@@ -126,15 +124,17 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory for request responders.  <a href="classPt_1_1Http_1_1Service.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Servlet" id="r_Servlet"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1Servlet.html">Servlet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps requests to a service.  <a href="classPt_1_1Http_1_1Servlet.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Stream" id="r_Stream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One HTTP stream on a server-owned connection.  <a href="classPt_1_1Http_1_1Stream.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WebSocket" id="r_WebSocket"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocket.html">WebSocket</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Framed <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> I/O device.  <a href="classPt_1_1Http_1_1WebSocket.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Framed messages on an HTTP stream.  <a href="classPt_1_1Http_1_1WebSocket.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WebSocketResponder" id="r_WebSocketResponder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketResponder.html">WebSocketResponder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Http_1_1Responder.html" title="Handles one HTTP request and writes the reply.">Responder</a> for the <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> handshake.  <a href="classPt_1_1Http_1_1WebSocketResponder.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPt_1_1Http_1_1Responder.html" title="Handles one HTTP request and writes the reply.">Responder</a> for the <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> handshake.  <a href="classPt_1_1Http_1_1WebSocketResponder.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WebSocketService" id="r_WebSocketService"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html">WebSocketService</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP service for the <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> handshake.  <a href="classPt_1_1Http_1_1WebSocketService.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP service for the <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> handshake.  <a href="classPt_1_1Http_1_1WebSocketService.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classPt_1_1Http_1_1Request.html" title="HTTP request message.">Request</a> and reply messages, an HTTP client, and an HTTP server that maps URLs to services. HTTPS uses Pt::Ssl. <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed WebSocket I/O device.">WebSocket</a> is an HTTP upgrade of the same connection. </p>
+<div class="textblock"><p><a class="el" href="classPt_1_1Http_1_1Request.html" title="HTTP request message.">Request</a> and reply messages, an HTTP client, and an HTTP server that maps URLs to services. HTTPS uses Pt::Ssl. <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> is an HTTP upgrade of the same connection. </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->

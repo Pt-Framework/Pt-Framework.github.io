@@ -663,33 +663,72 @@ Plugin Managers</h2>
 <p>Iteration walks the loaded plugins without creating instances. create() also accepts an iterator from that walk.   </p>
 <h1 class="doxsection"><a class="anchor" id="Pt-System-Page-Tar"></a>
 Tar Archive I/O</h1>
-<p>A tar archive is a sequence of entries. TarReader parses that sequence from a std::istream. TarWriter writes it to a std::ostream. TarEntry is the current entry.</p>
-<p>TarReader::advance() delivers one header or the next content chunk. A null return means the stream has no more bytes yet. The returned TarEntry stays valid until the next advance(). Process the bytes at data() before calling advance() again. isEnd() on the entry means the content is complete. isEnd() on the reader means the archive is complete. A non-zero import size may block and is for file streams. A zero import size uses only buffered bytes and is for an event loop.</p>
-<p>TarWriter writes complete entries with addFile(), addDirectory(), addSymlink(), and addHardlink(). Large files use beginFile(), writeFile(), and endFile(). finish() writes the end-of-archive marker. Paths are UTF-8. Pax extended headers are written when a path is long or not ASCII.   </p>
-<h2 class="doxsection"><a class="anchor" id="Pt-System-Page-TarEntry"></a>
+<p>A tar archive is a sequence of members laid out in fixed 512-byte blocks. Each member is a header followed, for a regular file, by the file's bytes padded out to the next block. Two blocks of zeros mark the end. This group reads and writes that sequence in the POSIX Pax/UStar form: a UStar header for the fields that fit, and a Pax extended header in front of the member for the fields that do not.</p>
+<p>Three types cover the task. TarEntry is one member: its path, its kind, its size, its link target, its permissions, its modification time, and its owner and group. TarReader pulls entries out of a std::istream, one header or one content chunk per call, and can stop when the stream has nothing further buffered. TarWriter appends entries to a std::ostream. The entry is the value that crosses both boundaries, so metadata read from an archive can be handed to a writer and stored again.</p>
+<p>The on-disk form is an implementation choice the caller does not make. A path or a link target of at most 99 bytes, an ASCII owner or group name of at most 31 bytes, a numeric id up to 07777777, a size of at most eleven octal digits, and a modification time in whole seconds all live in the UStar header. Anything beyond that — a longer path, a name that is not ASCII, a larger id, a larger size — is written as a Pax record and applied by the reader before the entry is published. Pax wins where both forms carry the same field. A global Pax header, which would change the defaults for every following member, is skipped. There is no writer-wide default identity either: each entry carries its own owner and group, and an entry that leaves them unset stores neither an id nor a name.</p>
+<p>Names are Unicode in the API and UTF-8 in the archive. Numeric owner and group ids use TarEntry::NoId for "not present", which is distinct from id 0. Id 0 is the root user or the root group and is a real value. Permissions use the POSIX mode bits from FileInfo::Perms, including set-user-ID, set-group-ID, and the sticky bit. The modification time is a Pt::DateTime in UTC. A default-constructed time is the Unix epoch, and that is what gets stored when the caller does not set one.</p>
+<p>The archive describes ownership. It does not apply it. Nothing in this group creates a directory, writes a file, or changes the owner of a file-system object. A caller who wants that uses the path, permissions, and timestamps from the entry with the file-system API, and decides separately what to do with an owner id that the local system may not have.</p>
+<div class="fragment"><div class="line">std::ofstream out(&quot;tree.tar&quot;, std::ios::binary);</div>
+<div class="line">TarWriter writer(out);</div>
+<div class="line"> </div>
+<div class="line">TarEntry dir;</div>
+<div class="line">dir.setPath(Path(&quot;docs&quot;));</div>
+<div class="line">dir.setPermissions(FileInfo::OwnerAll);</div>
+<div class="line">dir.setOwnerId(1000);</div>
+<div class="line">dir.setOwnerName(String(&quot;marc&quot;));</div>
+<div class="line">writer.addDirectory(dir);</div>
+<div class="line"> </div>
+<div class="line">TarEntry page;</div>
+<div class="line">page.setPath(Path(&quot;docs/index.txt&quot;));</div>
+<div class="line">page.setSize(body.size());</div>
+<div class="line">page.setPermissions(FileInfo::OwnerRead);</div>
+<div class="line">page.setMtime(DateTime(2024, 6, 1, 12, 0, 0));</div>
+<div class="line">page.setOwnerId(dir.ownerId());</div>
+<div class="line">page.setOwnerName(dir.ownerName());</div>
+<div class="line">writer.addFile(page, body.data(), body.size());</div>
+<div class="line"> </div>
+<div class="line">writer.finish();</div>
+<div class="line">out.close();</div>
+<div class="line"> </div>
+<div class="line">std::ifstream in(&quot;tree.tar&quot;, std::ios::binary);</div>
+<div class="line">TarReader reader(in);</div>
+<div class="line">while( ! reader.isEnd() )</div>
+<div class="line">{</div>
+<div class="line">    const TarEntry* entry = reader.advance(4096);</div>
+<div class="line">    if( ! entry )</div>
+<div class="line">        break;</div>
+<div class="line"> </div>
+<div class="line">    // entry-&gt;ownerId() and entry-&gt;path() describe the member.</div>
+<div class="line">    // The content window is entry-&gt;data() / entry-&gt;avail().</div>
+<div class="line">}</div>
+</div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-System-Page-TarEntry"></a>
 Archive Entry</h2>
-<p>A TarEntry holds the metadata and provides access to the content of one entry in a tar archive. Instances are produced by TarReader::advance() and remain valid until the next advance() call.</p>
-<p>Use type() to distinguish files, directories, symbolic links, and hard links. Use path() for the archive path, mtime() for the modification time, and permissions() for the POSIX permission bits.</p>
-<p>File content is delivered in one or more chunks. After each advance() call, up to avail() bytes are readable at data(). Process those bytes before calling advance() again — the buffer is reused on the next call. Repeat until isEnd() returns true, which means all size() bytes have been delivered.   </p>
+<p>A TarEntry is the metadata of one member of a tar archive, together with a window onto that member's content. TarReader publishes an entry after it has parsed the header. TarWriter consumes an entry the caller has filled in. The same type travels in both directions, so a value read from one archive can be handed to a writer and reproduced, including owner, group, permissions, and modification time.</p>
+<p>The metadata is the part the caller owns. path() is the name inside the archive. type() distinguishes a regular file, a directory, a symbolic link, and a hard link. A link also has linkTarget(). size() is the content length stored in the header. permissions() holds the POSIX permission bits, including the set-user-ID, set-group-ID, and sticky bits. mtime() is the modification time in UTC. A default-constructed Pt::DateTime means the Unix epoch, and that is what the writer stores when the caller never sets a time.</p>
+<p>Owner and group are each an optional numeric id plus an optional name. NoId means the archive did not carry an id, or the caller has not set one. Numeric id 0 is a real value: it is the root user or the root group, and it is written and read as such. An empty Pt::String means the archive did not carry a name. A name that happens to be <code>root</code> is a real name and round-trips. The writer omits an unset id and an empty name. It does not invent <code>root</code> or id 0. Names are Unicode. The archive stores them as UTF-8, in the UStar header when they fit and in a Pax extended header otherwise.</p>
+<p>The content window is the part TarReader fills in. After TarReader::advance() returns an entry, up to avail() bytes are readable at data(). Those bytes must be consumed before the next call to advance(), because the reader reuses its buffer and the pointer then refers to a different chunk, or to nothing. isEnd() becomes true once every byte of size() has been delivered. A directory, a symbolic link, and a hard link have no content, so isEnd() is already true when the entry is first published. TarWriter does not read the content window. The bytes of a file are the buffer passed to TarWriter::addFile(), or the chunks passed to TarWriter::writeFile(). size() on the entry is the length the writer declares in the header, and for a streamed file it is the total that writeFile() must deliver before endFile().</p>
+<p>An entry returned by the reader stays valid until the next advance() call, which replaces its metadata and its content window. A caller who wants to keep an entry copies the fields out. The content pointer cannot be kept: it addresses the reader's buffer.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-System-Page-TarReader"></a>
 Reading Archives</h2>
-<p>TarReader parses a tar archive from a std::istream one entry at a time. It is designed for non-blocking use: advance() delivers only the bytes already in the stream buffer and returns nullptr when the stream is starved.</p>
-<p>Call advance() in a loop. A non-null return value holds a TarEntry with the current entry's metadata and the first content chunk. Read TarEntry::data() for TarEntry::avail() bytes, then call advance() again to fetch the next chunk. Repeat until TarEntry::isEnd() is true, then call advance() once more to move to the next archive entry. The loop ends when isEnd() on the reader itself returns true.</p>
-<p>Pass a non-zero <em class="arg">importSize</em> to advance() to read more bytes from the stream per call — this may block and is suitable for file-based use.</p>
-<p>Pax extended headers handle long paths (&gt; 99 characters), UTF-8 paths, and extended modification times automatically.</p>
+<p>A TarReader walks a Pax/UStar archive held by a std::istream. Each call to advance() does a bounded amount of work and then returns, so the same reader serves a file that is already complete and a socket that delivers the archive in pieces. The caller asks for the next step, processes what came back, and asks again.</p>
+<p>advance() returns a TarEntry once a member header has been parsed, and returns the same entry again for each following content chunk. The pointer is null when the stream has no more bytes yet. That is a pause, not the end of the archive. The caller waits for more input and calls advance() again with the same reader. isEnd() becomes true only after the two zero blocks that mark the end of the archive have been read. A null return together with isEnd() means there is nothing further to read.</p>
+<p>The entry stays valid until the next advance() call. Its metadata is complete on the first return for that member: path, type, size, link target, permissions, modification time, owner id and name, and group id and name. A Pax extended header that preceded the member is already applied, so the caller never sees the Pax header as an entry of its own. A global Pax header is skipped. A member type the reader does not recognise is skipped as well, including its content, and the next recognised member is what comes back.</p>
+<p>Content arrives through the entry's window. TarEntry::data() points at TarEntry::avail() bytes inside the reader's buffer. Copy those bytes out before the next advance(), which reuses the buffer. For a file, repeat until TarEntry::isEnd() is true, then call advance() once more to move to the following member. A directory and a link have no content, so isEnd() is already true on the first return.</p>
+<p>The <em class="arg">importSize</em> argument bounds how much advance() may pull from the stream. Zero means: use only the bytes the stream buffer already holds, and do not block. That is the right call from an event loop, after the loop has been told that the stream is readable. A positive value allows advance() to read up to that many additional bytes, which may block, and suits a file stream whose data is known to be available.</p>
+<p>A header whose checksum does not match throws Pt::IOError. The archive is then unusable from the point of the bad header, because the reader can no longer trust the block boundaries.</p>
 <div class="fragment"><div class="line">TarReader reader(stream);</div>
 <div class="line"> </div>
 <div class="line">while( ! reader.isEnd() )</div>
 <div class="line">{</div>
 <div class="line">    const TarEntry* entry = reader.advance();</div>
 <div class="line">    if( ! entry )</div>
-<div class="line">        break; // not enough data, call advance() again when more arrives</div>
+<div class="line">        break; // stream starved; call advance() again when more arrives</div>
 <div class="line"> </div>
 <div class="line">    if(entry-&gt;type() == TarEntry::File)</div>
 <div class="line">    {</div>
 <div class="line">        do</div>
 <div class="line">        {</div>
-<div class="line">            outFile.write(entry-&gt;data(), entry-&gt;avail());</div>
+<div class="line">            out.write(entry-&gt;data(), entry-&gt;avail());</div>
 <div class="line">            if(entry-&gt;isEnd())</div>
 <div class="line">                break;</div>
 <div class="line">            entry = reader.advance();</div>
@@ -699,22 +738,28 @@ Reading Archives</h2>
 <div class="line">}</div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-System-Page-TarWriter"></a>
 Writing Archives</h2>
-<p>TarWriter writes entries sequentially into a tar archive. All operations are synchronous and write directly to the attached std::ostream.</p>
-<p>Use addFile(), addDirectory(), addSymlink(), or addHardlink() to write complete entries in a single call. For large files, use the streaming API: beginFile() writes the header, writeFile() delivers the content in one or more chunks, and endFile() closes the entry.</p>
-<p>Always call finish() before closing the stream to write the mandatory end-of-archive marker. Paths are interpreted as UTF-8; Pax extended headers are written automatically for long or non-ASCII paths.</p>
-<div class="fragment"><div class="line">std::ofstream ofs(&quot;archive.tar&quot;, std::ios::binary);</div>
-<div class="line">TarWriter writer(ofs);</div>
+<p>A TarWriter appends archive members to a std::ostream, in order, and blocks on each write. The caller builds a TarEntry for the metadata and passes that entry to the writer. The writer does not invent an owner, a group, or a modification time. Whatever the entry carries is what the archive stores, and whatever the entry leaves unset stays unset.</p>
+<p>A complete member is one call. addFile() writes a regular file whose bytes are already in memory. addDirectory() writes a directory. addSymlink() and addHardlink() write a link, and they take the link target, the permissions, the modification time, and the owner and group from the entry, the same fields a file carries. The type flag in the archive comes from the method, so the caller does not have to set TarEntry::type(). The path, the size, and the link target do have to be set, because those are the member's identity.</p>
+<p>A file too large to hold in one buffer is written in three steps. beginFile() writes the header and declares TarEntry::size() as the total number of content bytes. writeFile() delivers those bytes in as many chunks as needed. endFile() writes the padding that rounds the member up to a 512-byte block, and it fails if the chunks so far do not add up to the declared size. Starting another member, or calling finish(), while a streamed file is still open fails the same way: the open member has to be closed first.</p>
+<p>finish() writes the two zero blocks that mark the end of the archive. A reader treats an archive without that marker as truncated, so finish() belongs before the stream is closed.</p>
+<p>Names, ids, sizes, and times that fit in a UStar header are stored there. A path or a link target longer than 99 bytes, a name that is not ASCII, an owner or group name longer than 31 bytes, a numeric id above 07777777, or a size above eleven octal digits is stored in a Pax extended header that precedes the member. The caller does not choose the form. Reading the result back yields the same TarEntry fields either way.</p>
+<p>The writer throws Pt::IOError when the stream is missing or a write fails, when writeFile() is asked for more bytes than the header declared, when endFile() is called before those bytes have all been written, and when a new member is started while a streamed file is still open.</p>
+<div class="fragment"><div class="line">std::ofstream out(&quot;archive.tar&quot;, std::ios::binary);</div>
+<div class="line">TarWriter writer(out);</div>
 <div class="line"> </div>
-<div class="line">// complete entries</div>
-<div class="line">writer.addDirectory(Pt::System::Path(&quot;src/&quot;), dirPerms);</div>
-<div class="line">writer.addFile(Pt::System::Path(&quot;src/main.cpp&quot;),</div>
-<div class="line">               src.data(), src.size(), filePerms);</div>
+<div class="line">TarEntry dir;</div>
+<div class="line">dir.setPath(Path(&quot;src&quot;));</div>
+<div class="line">dir.setPermissions(FileInfo::OwnerAll);</div>
+<div class="line">writer.addDirectory(dir);</div>
 <div class="line"> </div>
-<div class="line">// streaming a large file</div>
-<div class="line">writer.beginFile(Pt::System::Path(&quot;data.bin&quot;), totalSize, filePerms);</div>
-<div class="line">writer.writeFile(chunk1, size1);</div>
-<div class="line">writer.writeFile(chunk2, size2);</div>
-<div class="line">writer.endFile();</div>
+<div class="line">TarEntry file;</div>
+<div class="line">file.setPath(Path(&quot;src/main.cpp&quot;));</div>
+<div class="line">file.setSize(source.size());</div>
+<div class="line">file.setPermissions(FileInfo::OwnerRead);</div>
+<div class="line">file.setMtime(DateTime(2024, 6, 1, 12, 0, 0));</div>
+<div class="line">file.setOwnerId(1000);</div>
+<div class="line">file.setOwnerName(String(&quot;marc&quot;));</div>
+<div class="line">writer.addFile(file, source.data(), source.size());</div>
 <div class="line"> </div>
 <div class="line">writer.finish();</div>
 </div><!-- fragment -->   <h1 class="doxsection"><a class="anchor" id="Pt-System-Page-Clock"></a>
