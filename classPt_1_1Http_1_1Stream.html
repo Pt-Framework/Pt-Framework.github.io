@@ -78,35 +78,24 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Stream_8h_source.html">Pt/Http/Stream.h</a>&gt;</code></p>
 
-<p>One HTTP stream on a server-owned connection.  
+<p>One HTTP stream on a connection.  
  <a href="#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
+<p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>, and <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7411b49ed5fda5181dd182d64984906e" id="r_a7411b49ed5fda5181dd182d64984906e"><td class="memItemLeft"><a id="a7411b49ed5fda5181dd182d64984906e" name="a7411b49ed5fda5181dd182d64984906e"></a>
-&#160;</td><td class="memItemRight"><b>Stream</b> ()</td></tr>
-<tr class="memdesc:a7411b49ed5fda5181dd182d64984906e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty stream. <br /></td></tr>
-<tr class="memitem:aa000a36546f98a2705dda027ed6e48f2" id="r_aa000a36546f98a2705dda027ed6e48f2"><td class="memItemLeft"><a id="aa000a36546f98a2705dda027ed6e48f2" name="aa000a36546f98a2705dda027ed6e48f2"></a>
-&#160;</td><td class="memItemRight"><b>Stream</b> (const Stream &amp;other)</td></tr>
-<tr class="memdesc:aa000a36546f98a2705dda027ed6e48f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies <em class="arg">other</em> without retaining the connection. <br /></td></tr>
 <tr class="memitem:a22beda3d71a767ab4601c6e3eee69491" id="r_a22beda3d71a767ab4601c6e3eee69491"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a22beda3d71a767ab4601c6e3eee69491">~Stream</a> ()</td></tr>
 <tr class="memdesc:a22beda3d71a767ab4601c6e3eee69491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="memitem:aa168e3e0e24b72d0e51d8f32a8671dba" id="r_aa168e3e0e24b72d0e51d8f32a8671dba"><td class="memItemLeft"><a class="el" href="#a7411b49ed5fda5181dd182d64984906e">Stream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa168e3e0e24b72d0e51d8f32a8671dba">operator=</a> (const <a class="el" href="#a7411b49ed5fda5181dd182d64984906e">Stream</a> &amp;other)</td></tr>
-<tr class="memdesc:aa168e3e0e24b72d0e51d8f32a8671dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shares the connection of <em class="arg">other</em>.  <br /></td></tr>
 <tr class="memitem:a5bc2a781be2586924afce4e4a4ea6697" id="r_a5bc2a781be2586924afce4e4a4ea6697"><td class="memItemLeft"><a id="a5bc2a781be2586924afce4e4a4ea6697" name="a5bc2a781be2586924afce4e4a4ea6697"></a>
 bool&#160;</td><td class="memItemRight"><b>isValid</b> () const</td></tr>
-<tr class="memdesc:a5bc2a781be2586924afce4e4a4ea6697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when this handle has a connection. <br /></td></tr>
+<tr class="memdesc:a5bc2a781be2586924afce4e4a4ea6697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when the connection still owns this stream. <br /></td></tr>
+<tr class="memitem:a2514eef41bb9f8f16f8d806a9db0a68a" id="r_a2514eef41bb9f8f16f8d806a9db0a68a"><td class="memItemLeft"><a id="a2514eef41bb9f8f16f8d806a9db0a68a" name="a2514eef41bb9f8f16f8d806a9db0a68a"></a>
+StreamSession *&#160;</td><td class="memItemRight"><b>session</b> () const</td></tr>
+<tr class="memdesc:a2514eef41bb9f8f16f8d806a9db0a68a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bound stream session, or null. <br /></td></tr>
 <tr class="memitem:a429c44128a371ec5f6bcf86ed044cec6" id="r_a429c44128a371ec5f6bcf86ed044cec6"><td class="memItemLeft"><a id="a429c44128a371ec5f6bcf86ed044cec6" name="a429c44128a371ec5f6bcf86ed044cec6"></a>
 const std::string &amp;&#160;</td><td class="memItemRight"><b>protocol</b> () const</td></tr>
 <tr class="memdesc:a429c44128a371ec5f6bcf86ed044cec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Upgrade header value. <br /></td></tr>
-<tr class="memitem:a24888ae1fe9df2d329c9b485807cb62b" id="r_a24888ae1fe9df2d329c9b485807cb62b"><td class="memItemLeft"><a id="a24888ae1fe9df2d329c9b485807cb62b" name="a24888ae1fe9df2d329c9b485807cb62b"></a>
-void&#160;</td><td class="memItemRight"><b>retain</b> ()</td></tr>
-<tr class="memdesc:a24888ae1fe9df2d329c9b485807cb62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps the connection after the upgrade signal returns. <br /></td></tr>
-<tr class="memitem:ab99efc0713b2e008ecb4a70065f69cee" id="r_ab99efc0713b2e008ecb4a70065f69cee"><td class="memItemLeft"><a id="ab99efc0713b2e008ecb4a70065f69cee" name="ab99efc0713b2e008ecb4a70065f69cee"></a>
-bool&#160;</td><td class="memItemRight"><b>isRetained</b> () const</td></tr>
-<tr class="memdesc:ab99efc0713b2e008ecb4a70065f69cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when retain() was called. <br /></td></tr>
 <tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
 <tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends this stream.  <br /></td></tr>
 <tr class="memitem:a9bd645bcc829cad72796f3ddf946dc7b" id="r_a9bd645bcc829cad72796f3ddf946dc7b"><td class="memItemLeft"><a id="a9bd645bcc829cad72796f3ddf946dc7b" name="a9bd645bcc829cad72796f3ddf946dc7b"></a>
@@ -125,7 +114,7 @@ std::size_t&#160;</td><td class="memItemRight"><b>endOutput</b> ()</td></tr>
 <tr class="memdesc:ad252691c0d734a181e3b00adaebbf75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the write started by beginOutput(). <br /></td></tr>
 <tr class="memitem:a02d5fa6b14e221f3012a794b905be166" id="r_a02d5fa6b14e221f3012a794b905be166"><td class="memItemLeft"><a id="a02d5fa6b14e221f3012a794b905be166" name="a02d5fa6b14e221f3012a794b905be166"></a>
 void&#160;</td><td class="memItemRight"><b>cancel</b> ()</td></tr>
-<tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels a pending transfer. <br /></td></tr>
+<tr class="memdesc:a02d5fa6b14e221f3012a794b905be166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels a pending transfer of this stream. <br /></td></tr>
 <tr class="memitem:a341703ba53da84476ebc633e1f95f163" id="r_a341703ba53da84476ebc633e1f95f163"><td class="memItemLeft"><a id="a341703ba53da84476ebc633e1f95f163" name="a341703ba53da84476ebc633e1f95f163"></a>
 void&#160;</td><td class="memItemRight"><b>setTimeout</b> (std::size_t ms)</td></tr>
 <tr class="memdesc:a341703ba53da84476ebc633e1f95f163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stream timeout in milliseconds. <br /></td></tr>
@@ -135,27 +124,22 @@ void&#160;</td><td class="memItemRight"><b>setTimeout</b> (std::size_t ms)</td><
 <tr class="memitem:ae4964a73bf92ccbd50846993774ce4bf" id="r_ae4964a73bf92ccbd50846993774ce4bf"><td class="memItemLeft"><a id="ae4964a73bf92ccbd50846993774ce4bf" name="ae4964a73bf92ccbd50846993774ce4bf"></a>
 <a class="el" href="classPt_1_1Signal.html">Signal</a> &amp;&#160;</td><td class="memItemRight"><b>outputReady</b> ()</td></tr>
 <tr class="memdesc:ae4964a73bf92ccbd50846993774ce4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when output is ready. <br /></td></tr>
-<tr class="memitem:a7beaecdfa42865c173e0430aeb6aca14" id="r_a7beaecdfa42865c173e0430aeb6aca14"><td class="memItemLeft"><a id="a7beaecdfa42865c173e0430aeb6aca14" name="a7beaecdfa42865c173e0430aeb6aca14"></a>
-<a class="el" href="classPt_1_1Signal.html">Signal</a> &amp;&#160;</td><td class="memItemRight"><b>closed</b> ()</td></tr>
-<tr class="memdesc:a7beaecdfa42865c173e0430aeb6aca14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when the stream is closed. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stream is one bidirectional channel of a connection the server still owns. A finished reply with status 101 does not hand the TCP connection to the service. The server keeps that connection and emits Service::upgradeRequested() with a Stream on the server thread. HTTP/1 has one stream, and it fills the connection. A later multiplexed protocol can issue more than one stream for the same connection. <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> is one protocol that formats frames into the stream buffer.</p>
-<p>The signal argument is the server's stream. A slot that needs the handle after the signal returns copies it. Copying shares the connection and does not retain it, and destroying a copy does not close the stream. Lifetime follows retain() and close().</p>
-<p>retain() tells the server to keep the connection. The server deletes a connection whose stream was not retained, which is how an upgrade is declined. close() ends this stream. While it is the only stream of the connection, that also closes and deletes the connection. A later protocol that multiplexes streams closes the connection when its last stream ends.</p>
-<p>buffer() is the stream buffer of the connection. A protocol formats into that buffer and extracts from it. The stream does not take a caller buffer, and it does not expose the socket. beginInput() and beginOutput() start a transfer of that buffer. inputReady() and outputReady() report that a transfer finished, and endInput() and endOutput() complete it. One read and one write may run at a time. Copies share that transfer. The copy that started it receives the ready signal.</p>
-<p>protocol() is the value of the request's Upgrade header. setTimeout() replaces the HTTP read and write timeout for this stream. The server has already stopped that timeout when it opened the stream.</p>
-<p>The example retains the stream and starts a read. Without retain() the server closes the connection when the signal returns.</p>
+<div class="textblock"><p>Stream is one bidirectional channel of a connection the server or the client still owns. A finished reply with status 101 does not hand the TCP connection to the service. The owner keeps that connection and keeps this stream. HTTP/1 has one stream, and it fills the connection. A later multiplexed protocol can issue more than one stream for the same connection.</p>
+<p>The connection creates the stream after the 101 reply has been written, and it deletes the stream. This type is not copyable and has no public constructor. The server reports it through Service::upgradeRequested(). The client reports it through Client::upgrade(). Both return the stream the owner already holds.</p>
+<p>A StreamSession is the external peer. The stream stores one session pointer, and the session stores one stream pointer. Binding that peer accepts the upgrade. A second bind throws std::logic_error. On the server, a stream that still has no session after upgradeRequested() returns is declined, and the server closes it. WebSocket is one session type that formats frames into buffer().</p>
+<p>close() ends this stream. It clears the session pointer first and then tells the session that the stream ended, so a close that runs from the session destructor does not re-enter this stream. While this stream is the only stream of the connection, closing it also closes the connection. The server deletes that connection on its event loop, after the close that requested it has returned. Destroying the stream tells the session the same way. The session object stays, and its stream pointer is null.</p>
+<p>buffer() is the stream buffer of the connection. A session formats into that buffer and extracts from it. The stream does not take a caller buffer, and it does not expose the socket. beginInput() and beginOutput() start a transfer of that buffer. inputReady() and outputReady() report that a transfer finished, and endInput() and endOutput() complete it. One read and one write may run at a time. cancel() stops the transfer of this stream.</p>
+<p>protocol() is the value of the request's Upgrade header. setTimeout() replaces the HTTP read and write timeout for this stream. The owner has already stopped that timeout when it opened the stream.</p>
+<p>The example accepts the upgrade by constructing a WebSocket on the stream. A slot that does not bind a session declines it.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> onUpgrade(<a class="code hl_class" href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a>&amp; stream)</div>
 <div class="line">{</div>
-<div class="line">    stream.<a class="code hl_function" href="#a24888ae1fe9df2d329c9b485807cb62b">retain</a>();</div>
-<div class="line">    stream.<a class="code hl_function" href="#a7b91e764281b41816560dab9319e1a83">inputReady</a>() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onInput);</div>
-<div class="line">    stream.<a class="code hl_function" href="#ad75f03162e6a250d2165a3985c551a27">beginInput</a>();</div>
+<div class="line">    _socket.accept(stream);</div>
+<div class="line">    _socket.inputReady() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onInput);</div>
+<div class="line">    _socket.beginReceive();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a server-owned connection.</div><div class="ttdef"><b>Definition</b> Stream.h:91</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html_a24888ae1fe9df2d329c9b485807cb62b"><div class="ttname"><a href="#a24888ae1fe9df2d329c9b485807cb62b">Pt::Http::Stream::retain</a></div><div class="ttdeci">void retain()</div><div class="ttdoc">Keeps the connection after the upgrade signal returns.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html_a7b91e764281b41816560dab9319e1a83"><div class="ttname"><a href="#a7b91e764281b41816560dab9319e1a83">Pt::Http::Stream::inputReady</a></div><div class="ttdeci">Signal &amp; inputReady()</div><div class="ttdoc">Returns the signal emitted when input is ready.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html_ad75f03162e6a250d2165a3985c551a27"><div class="ttname"><a href="#ad75f03162e6a250d2165a3985c551a27">Pt::Http::Stream::beginInput</a></div><div class="ttdeci">void beginInput()</div><div class="ttdoc">Begins a read into the stream buffer.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a connection.</div><div class="ttdef"><b>Definition</b> Stream.h:84</div></div>
 <div class="ttc" id="aclassPt_1_1Slot_html_a6fe36105ca29dc11b2f8ffb98cfffcf5"><div class="ttname"><a href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, ClassT, As... &gt; slot(ClassT &amp;object, R(BaseT::*method)(As...) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div><div class="ttdef"><b>Definition</b> ConstMethod.h:172</div></div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a22beda3d71a767ab4601c6e3eee69491" name="a22beda3d71a767ab4601c6e3eee69491"></a>
@@ -165,36 +149,18 @@ void&#160;</td><td class="memItemRight"><b>setTimeout</b> (std::size_t ms)</td><
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">~<a class="el" href="#a7411b49ed5fda5181dd182d64984906e">Stream</a> </td>
+          <td class="memname">~Stream </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Does not close the stream. </p>
+<p>Unbinds the session and notifies it. Does not close the connection. The connection deletes this stream. </p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aa168e3e0e24b72d0e51d8f32a8671dba" name="aa168e3e0e24b72d0e51d8f32a8671dba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa168e3e0e24b72d0e51d8f32a8671dba">&#9670;&#160;</a></span>operator=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a7411b49ed5fda5181dd182d64984906e">Stream</a> &amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a7411b49ed5fda5181dd182d64984906e">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Does not retain the connection and does not close the previous stream. </p>
-
-</div>
-</div>
 <a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ae591df94fc66ccb85cbb6565368bca">&#9670;&#160;</a></span>close()</h2>
 

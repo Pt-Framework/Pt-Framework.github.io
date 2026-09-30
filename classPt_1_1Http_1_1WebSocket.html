@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classPt_1_1Http_1_1WebSocket-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WebSocket Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-WebSocket.html">WebSocket</a></div></div></div>
 </div><!--header-->
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <p>Framed messages on an HTTP stream.  
  <a href="#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
+<p>Inherits <a class="el" href="classPt_1_1Http_1_1StreamSession.html">StreamSession</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -105,12 +106,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf9d3d04491f29039b813537178e5734" id="r_adf9d3d04491f29039b813537178e5734"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> (<a class="el" href="classPt_1_1Http_1_1Client.html">Client</a> &amp;client)</td></tr>
 <tr class="memdesc:adf9d3d04491f29039b813537178e5734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> that handshakes through <em class="arg">client</em>.  <br /></td></tr>
 <tr class="memitem:ace108e1f2f26f1b01c80eb6c8ffacf8a" id="r_ace108e1f2f26f1b01c80eb6c8ffacf8a"><td class="memItemLeft"><a id="ace108e1f2f26f1b01c80eb6c8ffacf8a" name="ace108e1f2f26f1b01c80eb6c8ffacf8a"></a>
-&#160;</td><td class="memItemRight"><b>WebSocket</b> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)</td></tr>
+&#160;</td><td class="memItemRight"><b>WebSocket</b> (Stream &amp;stream)</td></tr>
 <tr class="memdesc:ace108e1f2f26f1b01c80eb6c8ffacf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> that accepts <em class="arg">stream</em>. <br /></td></tr>
 <tr class="memitem:ab4580ff1c09aa4b2401d626d33e4584f" id="r_ab4580ff1c09aa4b2401d626d33e4584f"><td class="memItemLeft"><a id="ab4580ff1c09aa4b2401d626d33e4584f" name="ab4580ff1c09aa4b2401d626d33e4584f"></a>
 &#160;</td><td class="memItemRight"><b>~WebSocket</b> ()</td></tr>
 <tr class="memdesc:ab4580ff1c09aa4b2401d626d33e4584f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="memitem:a0b878ba19ec013a1077e5486047bc7ad" id="r_a0b878ba19ec013a1077e5486047bc7ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0b878ba19ec013a1077e5486047bc7ad">accept</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memitem:a0b878ba19ec013a1077e5486047bc7ad" id="r_a0b878ba19ec013a1077e5486047bc7ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0b878ba19ec013a1077e5486047bc7ad">accept</a> (Stream &amp;stream)</td></tr>
 <tr class="memdesc:a0b878ba19ec013a1077e5486047bc7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts an upgraded <em class="arg">stream</em>.  <br /></td></tr>
 <tr class="memitem:ae26548d592b451c870cf7b71fad30777" id="r_ae26548d592b451c870cf7b71fad30777"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae26548d592b451c870cf7b71fad30777">beginConnect</a> (const std::string &amp;url, const std::string &amp;origin=std::string())</td></tr>
 <tr class="memdesc:ae26548d592b451c870cf7b71fad30777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a client handshake for <em class="arg">url</em>.  <br /></td></tr>
@@ -150,13 +151,23 @@ void&#160;</td><td class="memItemRight"><b>sendPong</b> ()</td></tr>
 <tr class="memdesc:a33f94d9b65546ead3264779babf7c804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a frame was sent. <br /></td></tr>
 <tr class="memitem:a4e6264069bc112d5f7a636525f88a396" id="r_a4e6264069bc112d5f7a636525f88a396"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e6264069bc112d5f7a636525f88a396">setTimeout</a> (std::size_t timeout)</td></tr>
 <tr class="memdesc:a4e6264069bc112d5f7a636525f88a396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stream timeout in milliseconds.  <br /></td></tr>
-<tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft"><a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
-void&#160;</td><td class="memItemRight"><b>close</b> ()</td></tr>
-<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a>. <br /></td></tr>
+<tr class="memitem:a002ed331862370f434b7befe331b5a0b" id="r_a002ed331862370f434b7befe331b5a0b"><td class="memItemLeft"><a id="a002ed331862370f434b7befe331b5a0b" name="a002ed331862370f434b7befe331b5a0b"></a>
+bool&#160;</td><td class="memItemRight"><b>isOpen</b> () const</td></tr>
+<tr class="memdesc:a002ed331862370f434b7befe331b5a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when a stream is bound. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aae8e8b036b9e44bde5bf8a198e5464dd" id="r_aae8e8b036b9e44bde5bf8a198e5464dd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1StreamSession.html#aae8e8b036b9e44bde5bf8a198e5464dd">open</a> (Stream &amp;stream)</td></tr>
+<tr class="memdesc:aae8e8b036b9e44bde5bf8a198e5464dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds <em class="arg">stream</em>.  <br /></td></tr>
+<tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1StreamSession.html#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unbinds and closes the stream.  <br /></td></tr>
+<tr class="memitem:a138a100bf8e1447c19358265e35b8366" id="r_a138a100bf8e1447c19358265e35b8366"><td class="memItemLeft"><a id="a138a100bf8e1447c19358265e35b8366" name="a138a100bf8e1447c19358265e35b8366"></a>
+Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
+<tr class="memdesc:a138a100bf8e1447c19358265e35b8366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bound stream, or null. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>WebSocket formats <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Framed messages on an HTTP stream.">WebSocket</a> frames into the stream buffer of an upgraded HTTP connection. It is not an I/O device. The caller writes payload into buffer() and sends that buffer as one frame. A receive parses one frame from the stream and leaves the payload in the same buffer.</p>
-<p>On the client, construct the socket with the Client that will perform the handshake. The socket stores a reference and does not own that client, so the client must outlive the socket, including a handshake that is still waiting on the loop. Host, port, event loop, timeout and TLS are settings of that client. Connect connected() and call beginConnect() with the request path, or with a ws:// URL whose host and port are the client's endpoint. The handshake is an HTTP request and reply on that client. endConnect() completes it and throws if it failed. The 101 reply becomes the Stream this socket formats. After the handshake the socket no longer uses the client. On the server, construct the socket with the Stream from Service::upgradeRequested(). accept() retains that stream on a socket that already exists. The server keeps the connection. The socket formats that stream and does not own it.</p>
+<p>On the client, construct the socket with the Client that will perform the handshake. The socket stores a reference and does not own that client, so the client must outlive the socket, including a handshake that is still waiting on the loop. Host, port, event loop, timeout and TLS are settings of that client. Connect connected() and call beginConnect() with the request path, or with a ws:// URL whose host and port are the client's endpoint. The handshake is an HTTP request and reply on that client. endConnect() completes it and throws if it failed. The 101 reply becomes the Stream this socket formats. After the handshake the socket no longer uses the client. On the server, construct the socket with the Stream from Service::upgradeRequested(). accept() binds that stream on a socket that already exists. Binding accepts the upgrade. The server keeps the connection. The socket formats that stream and does not own it.</p>
 <p>beginSend() writes one frame. The opcode is the argument. The payload is what was written to buffer() since the previous send. outputReady() reports that the frame has left the stream buffer, and endSend() completes the send.</p>
 <p>beginReceive() reads one frame. inputReady() reports that the frame is complete. endReceive() completes the read. frame() is the opcode, and buffer() then holds the payload. A short read stays inside the socket until the frame is complete, so the ready signal means one whole frame.</p>
 <p>Ping and pong are control frames. sendPing() and sendPong() write those frames through the same stream buffer. Text and binary are the data payload. Unknown is the unset frame type. </p>
@@ -224,12 +235,12 @@ void&#160;</td><td class="memItemRight"><b>close</b> ()</td></tr>
         <tr>
           <td class="memname">void accept </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td class="paramtype">Stream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retains <em class="arg">stream</em>. The server keeps the connection. </p>
+<p>Binds <em class="arg">stream</em>. The server keeps the connection. </p>
 
 </div>
 </div>
@@ -317,6 +328,63 @@ void&#160;</td><td class="memItemRight"><b>close</b> ()</td></tr>
       </table>
 </div><div class="memdoc">
 <p>The handshake timeout is Client::setTimeout(). </p>
+
+</div>
+</div>
+<a id="aae8e8b036b9e44bde5bf8a198e5464dd" name="aae8e8b036b9e44bde5bf8a198e5464dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8e8b036b9e44bde5bf8a198e5464dd">&#9670;&#160;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open </td>
+          <td>(</td>
+          <td class="paramtype">Stream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if this session is already open, or if <em class="arg">stream</em> already has a session. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae591df94fc66ccb85cbb6565368bca">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Does nothing when no stream is bound. The stream clears its session pointer before it ends, so a close that runs from this destructor does not re-enter the stream. </p>
 
 </div>
 </div>

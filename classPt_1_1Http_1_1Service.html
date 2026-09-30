@@ -115,7 +115,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Service is the responder factory in the server model. The server does not construct responders itself: when a servlet maps a request, the service's getResponder() calls onGetResponder(), and when the reply has been sent or the exchange has failed, releaseResponder() calls onReleaseResponder(). The service must remain alive while any responder it created is still in use.</p>
 <p>BasicService is that factory for a single responder type, using an allocator that defaults to new and delete. Use a custom Service when the responder type depends on the request headers, or when responders are pooled.</p>
-<p>A responder upgrades the connection by finishing the reply with status 101. The server keeps the TCP connection and emits upgradeRequested() on the server thread with a Stream. The responder has already been released. The slot calls Stream::retain() to keep the stream. A service with no connected slot, or a slot that does not retain, declines the upgrade and the server closes the connection. Stream::protocol() is the value of the request's Upgrade header. The stream buffer is Stream::buffer(). beginInput() and beginOutput() transfer that buffer.</p>
+<p>A responder upgrades the connection by finishing the reply with status 101. The server keeps the TCP connection and emits upgradeRequested() on the server thread with the Stream it owns. The responder has already been released. Binding a Protocol to that stream accepts the upgrade. A service with no connected slot, or a slot that does not bind a protocol, declines the upgrade and the server closes the stream. Stream::protocol() is the value of the request's Upgrade header. The stream buffer is Stream::buffer(). beginInput() and beginOutput() transfer that buffer.</p>
 <p>The example is the usual factory: a BasicService for a responder type. The equivalent hand-written service implements onGetResponder() and onReleaseResponder() in the same way.</p>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService&lt;HelloResponder&gt;</a> HelloService;</div>
 <div class="ttc" id="aclassPt_1_1Http_1_1BasicService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService</a></div><div class="ttdoc">Basic HTTP service implementation.</div><div class="ttdef"><b>Definition</b> Service.h:135</div></div>
@@ -134,7 +134,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Emitted on the server thread after a 101 reply. The slot calls Stream::retain() to keep <em class="arg">stream</em>. The server closes a stream that was not retained. </p>
+<p>Emitted on the server thread after a 101 reply. The slot binds a Protocol to <em class="arg">stream</em> to accept it. The server closes a stream that has no protocol when the signal returns. </p>
 
 </div>
 </div>

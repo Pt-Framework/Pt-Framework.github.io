@@ -13231,10 +13231,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Stream</type>
+      <type>Stream &amp;</type>
       <name>upgrade</name>
       <anchorfile>classPt_1_1Http_1_1Client.html</anchorfile>
-      <anchor>a6719f72971c6b741044aa249fa10ea32</anchor>
+      <anchor>aec917fe2d6cb94a77cf946abdfe68068</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -93058,33 +93058,13 @@
     <name>Pt::Http::Stream</name>
     <filename>classPt_1_1Http_1_1Stream.html</filename>
     <base>Connectable</base>
-    <member kind="function">
-      <type></type>
-      <name>Stream</name>
-      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
-      <anchor>a7411b49ed5fda5181dd182d64984906e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Stream</name>
-      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
-      <anchor>aa000a36546f98a2705dda027ed6e48f2</anchor>
-      <arglist>(const Stream &amp;other)</arglist>
-    </member>
+    <base protection="private">NonCopyable</base>
     <member kind="function">
       <type></type>
       <name>~Stream</name>
       <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
       <anchor>a22beda3d71a767ab4601c6e3eee69491</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Stream &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
-      <anchor>aa168e3e0e24b72d0e51d8f32a8671dba</anchor>
-      <arglist>(const Stream &amp;other)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -93094,24 +93074,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>StreamSession *</type>
+      <name>session</name>
+      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
+      <anchor>a2514eef41bb9f8f16f8d806a9db0a68a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>const std::string &amp;</type>
       <name>protocol</name>
       <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
       <anchor>a429c44128a371ec5f6bcf86ed044cec6</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>retain</name>
-      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
-      <anchor>a24888ae1fe9df2d329c9b485807cb62b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isRetained</name>
-      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
-      <anchor>ab99efc0713b2e008ecb4a70065f69cee</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -93182,13 +93155,6 @@
       <name>outputReady</name>
       <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
       <anchor>ae4964a73bf92ccbd50846993774ce4bf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Signal &amp;</type>
-      <name>closed</name>
-      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
-      <anchor>a7beaecdfa42865c173e0430aeb6aca14</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -93314,6 +93280,67 @@
       <anchorfile>classPt_1_1Ssl_1_1StreamBuffer.html</anchorfile>
       <anchor>a5d4baca65e539138ca8fd821779d1484</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::StreamSession</name>
+    <filename>classPt_1_1Http_1_1StreamSession.html</filename>
+    <base protection="private">NonCopyable</base>
+    <member kind="function">
+      <type>bool</type>
+      <name>isOpen</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a002ed331862370f434b7befe331b5a0b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>StreamSession</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a4329a8b0561e671ae5906a0bec0ddfc3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>StreamSession</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>adc0888ddea29d25af8e428b94db192dd</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>~StreamSession</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>afe5486c7fdc29461726ed0d3f8ea72ed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>open</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>aae8e8b036b9e44bde5bf8a198e5464dd</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Stream *</type>
+      <name>stream</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a138a100bf8e1447c19358265e35b8366</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onCloseStream</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a4c38badc3875316fd4e029dc3f0de5ed</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -104526,6 +104553,7 @@
   <compound kind="class">
     <name>Pt::Http::WebSocket</name>
     <filename>classPt_1_1Http_1_1WebSocket.html</filename>
+    <base>StreamSession</base>
     <base>Connectable</base>
     <member kind="enumeration">
       <type></type>
@@ -104721,11 +104749,32 @@
       <arglist>(std::size_t timeout)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>isOpen</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a002ed331862370f434b7befe331b5a0b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>open</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>aae8e8b036b9e44bde5bf8a198e5464dd</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>void</type>
       <name>close</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
       <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Stream *</type>
+      <name>stream</name>
+      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
+      <anchor>a138a100bf8e1447c19358265e35b8366</anchor>
+      <arglist>() const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -113794,6 +113843,7 @@
     <class kind="class">Pt::Http::Service</class>
     <class kind="class">Pt::Http::Servlet</class>
     <class kind="class">Pt::Http::Stream</class>
+    <class kind="class">Pt::Http::StreamSession</class>
     <class kind="class">Pt::Http::WebSocket</class>
     <class kind="class">Pt::Http::WebSocketResponder</class>
     <class kind="class">Pt::Http::WebSocketService</class>
@@ -115071,11 +115121,13 @@
     <class kind="class">Pt::Http::MapUrl</class>
     <class kind="class">Pt::Http::MapAny</class>
     <class kind="class">Pt::Http::Stream</class>
+    <class kind="class">Pt::Http::StreamSession</class>
   </compound>
   <compound kind="group">
     <name>Pt-Http-WebSocket</name>
     <title>WebSocket</title>
     <filename>group__Pt-Http-WebSocket.html</filename>
+    <class kind="class">Pt::Http::StreamSession</class>
     <class kind="class">Pt::Http::WebSocket</class>
     <class kind="class">Pt::Http::WebSocketResponder</class>
     <class kind="class">Pt::Http::WebSocketService</class>

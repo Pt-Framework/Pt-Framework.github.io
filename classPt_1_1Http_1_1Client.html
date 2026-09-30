@@ -162,8 +162,8 @@ void&#160;</td><td class="memItemRight"><b>send</b> (bool finished=true)</td></t
 <tr class="memitem:ab0104a418396ff6b9c8a46e8970012e2" id="r_ab0104a418396ff6b9c8a46e8970012e2"><td class="memItemLeft"><a id="ab0104a418396ff6b9c8a46e8970012e2" name="ab0104a418396ff6b9c8a46e8970012e2"></a>
 std::istream &amp;&#160;</td><td class="memItemRight"><b>receive</b> ()</td></tr>
 <tr class="memdesc:ab0104a418396ff6b9c8a46e8970012e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks until reply is received. <br /></td></tr>
-<tr class="memitem:a6719f72971c6b741044aa249fa10ea32" id="r_a6719f72971c6b741044aa249fa10ea32"><td class="memItemLeft"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6719f72971c6b741044aa249fa10ea32">upgrade</a> ()</td></tr>
-<tr class="memdesc:a6719f72971c6b741044aa249fa10ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream of a finished 101 reply.  <br /></td></tr>
+<tr class="memitem:aec917fe2d6cb94a77cf946abdfe68068" id="r_aec917fe2d6cb94a77cf946abdfe68068"><td class="memItemLeft"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aec917fe2d6cb94a77cf946abdfe68068">upgrade</a> ()</td></tr>
+<tr class="memdesc:aec917fe2d6cb94a77cf946abdfe68068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream of a finished 101 reply.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Client is the HTTP user agent in the client model. It holds one Request and one Reply. Fill the request, send it, and read the reply. The client opens a TCP connection to its host when a send needs one, so there is no separate connect method. The host is an Endpoint passed to a constructor or to setHost().</p>
@@ -252,7 +252,7 @@ std::istream &amp;&#160;</td><td class="memItemRight"><b>receive</b> ()</td></tr
 <dl class="section user"><dt>Persistent connections and HTTPS</dt><dd></dd></dl>
 <p>A keep-alive header on the request asks for a persistent connection, which pipelining needs and which the server may still close. close() ends the connection. Leave it open only while the next request will reuse it; otherwise the server keep-alive timeout may close it before the client is used again. A later send on a closed or timed-out connection opens a new one.</p>
 <p>setSecure() assigns a Pt::Ssl::Context so further connections are HTTPS. setPeerName() sets the name expected in the peer certificate. Send and receive are otherwise unchanged. Certificate and handshake details live in the SSL module.</p>
-<p>A finished reply with status 101 switches the connection to a Stream. Call upgrade() after endReceive() reports the reply finished. The client no longer sends requests on that connection. Retain the stream to keep it. </p>
+<p>A finished reply with status 101 switches the connection to a Stream. Call upgrade() after endReceive() reports the reply finished. The client owns that stream and no longer sends requests on the connection. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a51f5e3c115973b763ec7ced957bc7c7c" name="a51f5e3c115973b763ec7ced957bc7c7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51f5e3c115973b763ec7ced957bc7c7c">&#9670;&#160;</a></span>beginSend()</h2>
@@ -272,21 +272,21 @@ std::istream &amp;&#160;</td><td class="memItemRight"><b>receive</b> ()</td></tr
 
 </div>
 </div>
-<a id="a6719f72971c6b741044aa249fa10ea32" name="a6719f72971c6b741044aa249fa10ea32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6719f72971c6b741044aa249fa10ea32">&#9670;&#160;</a></span>upgrade()</h2>
+<a id="aec917fe2d6cb94a77cf946abdfe68068" name="aec917fe2d6cb94a77cf946abdfe68068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec917fe2d6cb94a77cf946abdfe68068">&#9670;&#160;</a></span>upgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> upgrade </td>
+          <td class="memname"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp; upgrade </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Call after endReceive() reports the reply finished and the status is 101. Retain the stream to keep the connection. The client no longer sends requests on it. </p>
+<p>Call after endReceive() reports the reply finished and the status is 101. The client owns the stream. A second call returns the same stream. The client no longer sends requests on that connection. </p>
 
 </div>
 </div>

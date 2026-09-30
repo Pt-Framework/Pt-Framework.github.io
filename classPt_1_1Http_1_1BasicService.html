@@ -133,7 +133,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Emitted on the server thread after a 101 reply. The slot calls Stream::retain() to keep <em class="arg">stream</em>. The server closes a stream that was not retained. </p>
+<p>Emitted on the server thread after a 101 reply. The slot binds a Protocol to <em class="arg">stream</em> to accept it. The server closes a stream that has no protocol when the signal returns. </p>
 
 </div>
 </div>
