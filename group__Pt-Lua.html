@@ -129,9 +129,8 @@ Topics</h2></td></tr>
 <div class="line">pointType.define(tm);</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="classPt_1_1Lua_1_1Context.html">Pt::Lua::Context</a> ctx(tm);</div>
-<div class="line"><a class="code hl_class" href="classPt_1_1Lua_1_1Script.html">Pt::Lua::Script</a> script(ctx,</div>
-<div class="line">    <span class="stringliteral">&quot;local p = Point(3, 4)\n&quot;</span></div>
-<div class="line">    <span class="stringliteral">&quot;result = p:sum()\n&quot;</span>);</div>
+<div class="line"><a class="code hl_class" href="classPt_1_1Lua_1_1Script.html">Pt::Lua::Script</a> script(ctx, <span class="stringliteral">&quot;local p = Point(3, 4)\n&quot;</span></div>
+<div class="line">                            <span class="stringliteral">&quot;result = p:sum()\n&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_enumeration" href="classPt_1_1Lua_1_1Script.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Pt::Lua::Script::Status</a> status = script.advance();</div>
 <div class="line"><span class="keywordflow">while</span>(status == <a class="code hl_enumvalue" href="classPt_1_1Lua_1_1Script.html#a67a0db04d321a74b7e7fcfd3f1a3f70bac93f999c37f2e21f6704627c53b77f81">Pt::Lua::Script::Yield</a> ||</div>

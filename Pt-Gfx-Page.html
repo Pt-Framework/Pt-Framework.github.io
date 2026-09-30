@@ -165,11 +165,15 @@ Drawing Graphics and Text</h1>
 Painter</h2>
 <p>Painter is the type a caller constructs to draw. It begins a session on a PaintSurface or on an existing PaintContext, through a constructor or begin(). Drawing commands live on PainterBase. This type does not own the surface or the context. One painter is bound to at most one target at a time. finish() ends the session.</p>
 <p>The example begins painting on a bitmap and fills it.</p>
-<div class="fragment"><div class="line">Pt::Gfx::Bitmap bitmap(Pt::Gfx::SizeF(64, 64));</div>
-<div class="line">Pt::Gfx::Painter painter(bitmap);</div>
-<div class="line">painter.setBrush(Pt::Gfx::Brush(Pt::Gfx::Color(255, 255, 255)));</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Gfx_1_1Bitmap.html">Pt::Gfx::Bitmap</a> bitmap(Pt::Gfx::SizeF(64, 64));</div>
+<div class="line"><a class="code hl_class" href="classPt_1_1Gfx_1_1Painter.html">Pt::Gfx::Painter</a> painter(bitmap);</div>
+<div class="line">painter.setBrush(<a class="code hl_class" href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a>(<a class="code hl_class" href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a>(255, 255, 255)));</div>
 <div class="line">painter.fillRect(Pt::Gfx::RectF(Pt::Gfx::SizeF(64, 64)));</div>
 <div class="line">painter.finish();</div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Bitmap_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Bitmap.html">Pt::Gfx::Bitmap</a></div><div class="ttdoc">Off-screen image that can be painted.</div><div class="ttdef"><b>Definition</b> Bitmap.h:71</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Brush_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Brush.html">Pt::Gfx::Brush</a></div><div class="ttdoc">Fill color, gradient or texture.</div><div class="ttdef"><b>Definition</b> Brush.h:151</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Color_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Color.html">Pt::Gfx::Color</a></div><div class="ttdoc">8-bit ARGB color.</div><div class="ttdef"><b>Definition</b> Color.h:65</div></div>
+<div class="ttc" id="aclassPt_1_1Gfx_1_1Painter_html"><div class="ttname"><a href="classPt_1_1Gfx_1_1Painter.html">Pt::Gfx::Painter</a></div><div class="ttdoc">Painter for a surface or a paint context.</div><div class="ttdef"><b>Definition</b> Painter.h:62</div></div>
 </div><!-- fragment -->   <h2 class="doxsection"><a class="anchor" id="Pt-Gfx-Page-PainterBase"></a>
 PainterBase</h2>
 <p>PainterBase is the command API Painter inherits. It holds the current Pen, Brush, Font, CompositionMode, user Transform, and clip, and it forwards draw and fill operations to the Canvas of the bound surface or context.</p>
