@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 - jam.sh
 - jam.bat
 </pre><p>The file Jambase in the project root references the files in the jam support directory and both are also referred to as the Jambase. The jam support directory includes the implementation details of the jam-based build system and the jam sources used for bootstrapping the build tool.</p>
-<p>Two scripts come with the jam distribution that simplify boostrapping the build process. One script named jam.sh runs on posix compatible build hosts, the other one named jam.bat runs on windows based build hosts. These scripts bootstrap and run the jam executable, so that jam executables do not have to be included for all possible build hosts, but rather built on demand. A precompiled version for windows hosts is distributed with the scripts named jam.exe. </p>
+<p>Two scripts come with the jam distribution that simplify boostrapping the build process. One script named jam.sh runs on posix compatible build hosts, the other one named jam.bat runs on windows based build hosts. These scripts bootstrap and run the jam executable, so that jam executables do not have to be included for all possible build hosts, but rather built on demand. A precompiled version for windows hosts is distributed with the scripts named jam.exe. Linux x64 hosts use the static binary jam/jam-linux-x64; other hosts still build jam on first use. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.18.0-->

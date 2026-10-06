@@ -5180,13 +5180,6 @@
       <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
       <arglist>(Responder *)</arglist>
     </member>
-    <member kind="function">
-      <type>Signal&lt; Stream &amp; &gt; &amp;</type>
-      <name>upgradeRequested</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a27303747852767497a8de268c339d315</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Responder *</type>
       <name>onGetResponder</name>
@@ -5200,6 +5193,13 @@
       <anchorfile>classPt_1_1Http_1_1BasicService.html</anchorfile>
       <anchor>a8ad8493dee8e40a32ee3596fb9972c10</anchor>
       <arglist>(Responder *r)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>af6c9c06c20d093bb1a28418a6685c14b</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6136,6 +6136,118 @@
     <templarg>typename FormatT</templarg>
     <templarg>typename TraitsT</templarg>
     <base>ViewBase</base>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::BasicWebSocketService</name>
+    <filename>classPt_1_1Http_1_1BasicWebSocketService.html</filename>
+    <templarg>typename S</templarg>
+    <templarg>typename Alloc</templarg>
+    <base>WebSocketService</base>
+    <member kind="function">
+      <type></type>
+      <name>BasicWebSocketService</name>
+      <anchorfile>classPt_1_1Http_1_1BasicWebSocketService.html</anchorfile>
+      <anchor>ad1d7fd45ba23130f0aaecb2bef1341bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~BasicWebSocketService</name>
+      <anchorfile>classPt_1_1Http_1_1BasicWebSocketService.html</anchorfile>
+      <anchor>ad2d944f83c6d982a641be08169c8cb81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>maxSockets</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>ae7c7acaf45230ae562568cdb3cf6991c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMaxSockets</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a482542923f006197b1b8abfcf2584e70</anchor>
+      <arglist>(std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>idleTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a004707a702cc29951ec422c865ce039e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setIdleTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a9e2b9df2e7d967690920963bb14ef5c1</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>maxMessageSize</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>abc2a85958399281206bcefe8a88a3bc1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMaxMessageSize</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a701e35ac0f47838d22ed0fc4c4e033ea</anchor>
+      <arglist>(std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>Responder *</type>
+      <name>getResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a587b9f533237f1ff364b3df54cb4694f</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>releaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
+      <arglist>(Responder *)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual WebSocketSession *</type>
+      <name>onGetSession</name>
+      <anchorfile>classPt_1_1Http_1_1BasicWebSocketService.html</anchorfile>
+      <anchor>a1048fc128182baa660f4d7a0e195c6fa</anchor>
+      <arglist>(WebSocketServlet &amp;servlet, System::EventLoop &amp;loop, Stream &amp;stream)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReleaseSession</name>
+      <anchorfile>classPt_1_1Http_1_1BasicWebSocketService.html</anchorfile>
+      <anchor>a91995c7bf23931b13fb06f7bc13bbba6</anchor>
+      <arglist>(WebSocketSession *session)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Responder *</type>
+      <name>onGetResponder</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a45946920d4f50f3a429ec00a5edddd76</anchor>
+      <arglist>(const Request &amp;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onReleaseResponder</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a162ab2a3150e1ae39ce92f4059402f95</anchor>
+      <arglist>(Responder *responder)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>ab3bcd74e731265c8eec4efbbb401e8f9</anchor>
+      <arglist>(Stream &amp;stream) final</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Pt::Xml::BinaryInputSource</name>
@@ -33240,13 +33352,6 @@
       <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
       <arglist>(Responder *)</arglist>
     </member>
-    <member kind="function">
-      <type>Signal&lt; Stream &amp; &gt; &amp;</type>
-      <name>upgradeRequested</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a27303747852767497a8de268c339d315</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Http::Responder *</type>
       <name>onGetResponder</name>
@@ -33260,6 +33365,13 @@
       <anchorfile>classPt_1_1JsonRpc_1_1HttpService.html</anchorfile>
       <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
       <arglist>(Http::Responder *resp)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>af6c9c06c20d093bb1a28418a6685c14b</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33294,13 +33406,6 @@
       <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
       <arglist>(Responder *)</arglist>
     </member>
-    <member kind="function">
-      <type>Signal&lt; Stream &amp; &gt; &amp;</type>
-      <name>upgradeRequested</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a27303747852767497a8de268c339d315</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Http::Responder *</type>
       <name>onGetResponder</name>
@@ -33314,6 +33419,13 @@
       <anchorfile>classPt_1_1Mcp_1_1HttpService.html</anchorfile>
       <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
       <arglist>(Http::Responder *resp)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>af6c9c06c20d093bb1a28418a6685c14b</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33348,13 +33460,6 @@
       <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
       <arglist>(Responder *)</arglist>
     </member>
-    <member kind="function">
-      <type>Signal&lt; Stream &amp; &gt; &amp;</type>
-      <name>upgradeRequested</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a27303747852767497a8de268c339d315</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Http::Responder *</type>
       <name>onGetResponder</name>
@@ -33368,6 +33473,13 @@
       <anchorfile>classPt_1_1XmlRpc_1_1HttpService.html</anchorfile>
       <anchor>a3d31c6a9e162977d0cc92f2a5e1ec66a</anchor>
       <arglist>(Http::Responder *resp)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>af6c9c06c20d093bb1a28418a6685c14b</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -83915,13 +84027,6 @@
       <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
       <arglist>(Responder *)</arglist>
     </member>
-    <member kind="function">
-      <type>Signal&lt; Stream &amp; &gt; &amp;</type>
-      <name>upgradeRequested</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a27303747852767497a8de268c339d315</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual Responder *</type>
       <name>onGetResponder</name>
@@ -83935,6 +84040,13 @@
       <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
       <anchor>a8e8d88c0fbe1d98fe87a2104bcc0690c</anchor>
       <arglist>(Responder *)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
+      <anchor>af6c9c06c20d093bb1a28418a6685c14b</anchor>
+      <arglist>(Stream &amp;stream)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -93142,6 +93254,13 @@
       <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
       <anchor>a341703ba53da84476ebc633e1f95f163</anchor>
       <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>System::EventLoop *</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1Http_1_1Stream.html</anchorfile>
+      <anchor>a94ed638fd522d2c066da74e1d2e61927</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Signal &amp;</type>
@@ -104553,75 +104672,7 @@
   <compound kind="class">
     <name>Pt::Http::WebSocket</name>
     <filename>classPt_1_1Http_1_1WebSocket.html</filename>
-    <base>StreamSession</base>
     <base>Connectable</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>Frame</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Unknown</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a4e81c184ac3ad48a389cd4454c4a05bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Text</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Binary</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5ae27b0860dfa490c46dd387b06d21a04b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Ping</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9ed7b6fafb4c429650c92d8c04a4dfaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Pong</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9a7bb6fa7ee9f12581b077ebb985da33</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Unknown</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a4e81c184ac3ad48a389cd4454c4a05bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Text</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a35d0dd9a40755601b657244976bfc14b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Binary</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5ae27b0860dfa490c46dd387b06d21a04b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Ping</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9ed7b6fafb4c429650c92d8c04a4dfaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Pong</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a1a3c9a246bb17ddd6d40809f3521a5c5a9a7bb6fa7ee9f12581b077ebb985da33</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>WebSocket</name>
@@ -104631,24 +104682,10 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>WebSocket</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>ace108e1f2f26f1b01c80eb6c8ffacf8a</anchor>
-      <arglist>(Stream &amp;stream)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>~WebSocket</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
       <anchor>ab4580ff1c09aa4b2401d626d33e4584f</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>accept</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a0b878ba19ec013a1077e5486047bc7ad</anchor>
-      <arglist>(Stream &amp;stream)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -104672,31 +104709,31 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>std::streambuf &amp;</type>
-      <name>buffer</name>
+      <type>WebSocketMessage &amp;</type>
+      <name>incoming</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>ae593fef2cad3ac2fe57006d3c623704f</anchor>
+      <anchor>abdb55a070341c321499f3d31cf0232d6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Frame</type>
-      <name>frame</name>
+      <type>WebSocketMessage &amp;</type>
+      <name>outgoing</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>ad87c6c42e7b5eeed50a5edb23d747989</anchor>
-      <arglist>() const</arglist>
+      <anchor>a9c75f2b0e02a68d89f12bcdebe7a7474</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>beginSend</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>ad14958a8ac513a1d65d62684ad8467cc</anchor>
-      <arglist>(Frame frame)</arglist>
+      <anchor>a02db88957d7c1859589a7ed5ef79b3d5</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>MessageProgress</type>
       <name>endSend</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>ad387813708fc24784f34d1ef408ff77d</anchor>
+      <anchor>abd47018d0d4fbae7e1a15807bb728662</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -104707,25 +104744,39 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>MessageProgress</type>
       <name>endReceive</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a27121688f249d6e700aa6551ae0c96a8</anchor>
+      <anchor>aa4e20e6fcca8f2a5079e2027f5b364cd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>sendPing</name>
+      <name>ping</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>ae1340d1280818fa14b61e2bf6e637366</anchor>
-      <arglist>()</arglist>
+      <anchor>a122ddbfe6d37289f9a66013fc731ba3b</anchor>
+      <arglist>(const char *payload=0, std::size_t n=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>sendPong</name>
+      <name>close</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a4ea766ba2ff054e76f799b75789d4a67</anchor>
-      <arglist>()</arglist>
+      <anchor>a5043c42dc88f8788fb4b6a51c9bc972b</anchor>
+      <arglist>(unsigned code=1000, const std::string &amp;reason=std::string())</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned</type>
+      <name>closeCode</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a0d1009a2dc9fdb903e8ab01c95393784</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>closeReason</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a3c61b036c223386231c6e9acdea5664e</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Pt::Signal&lt; WebSocket &amp; &gt; &amp;</type>
@@ -104742,6 +104793,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>Pt::Signal&lt; WebSocket &amp; &gt; &amp;</type>
+      <name>closed</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>afb6d8384785b0d7c48620bb119eea7aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>setTimeout</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
@@ -104749,32 +104807,115 @@
       <arglist>(std::size_t timeout)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>isOpen</name>
-      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
-      <anchor>a002ed331862370f434b7befe331b5a0b</anchor>
+      <type>void</type>
+      <name>setMaxMessageSize</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a5f5b5450c6eed3b6a2171bc9cb14c286</anchor>
+      <arglist>(std::size_t maxSize)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setIdleTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a9e2b9df2e7d967690920963bb14ef5c1</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::WebSocketMessage</name>
+    <filename>classPt_1_1Http_1_1WebSocketMessage.html</filename>
+    <base protection="private">NonCopyable</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>Type</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Unknown</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a4e81c184ac3ad48a389cd4454c4a05bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Text</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Binary</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ae27b0860dfa490c46dd387b06d21a04b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Unknown</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a4e81c184ac3ad48a389cd4454c4a05bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Text</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Binary</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a1d1cfd8ffb84e947f82999c682b666a7ae27b0860dfa490c46dd387b06d21a04b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>Type</type>
+      <name>type</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>adf4a6727c689e0038cf2cdd158d5ed2c</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function" protection="protected">
+    <member kind="function">
       <type>void</type>
-      <name>open</name>
-      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
-      <anchor>aae8e8b036b9e44bde5bf8a198e5464dd</anchor>
-      <arglist>(Stream &amp;stream)</arglist>
+      <name>setType</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a608e58a2f9fb7e497f91662a6e9ae4cc</anchor>
+      <arglist>(Type type)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>close</name>
-      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
-      <anchor>a5ae591df94fc66ccb85cbb6565368bca</anchor>
+    <member kind="function">
+      <type>std::iostream &amp;</type>
+      <name>body</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a7284f6bfc0de35e1fa016b5bed381356</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>Stream *</type>
-      <name>stream</name>
-      <anchorfile>classPt_1_1Http_1_1StreamSession.html</anchorfile>
-      <anchor>a138a100bf8e1447c19358265e35b8366</anchor>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>available</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>ad5c9429b0801a1d185530cea161d4c3e</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>pending</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a85b400d2ac8a5eaaa32db1154cdbaab2</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>discard</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a482de369e242eac519fd5e208a37320c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>ac8bb3912a3ce86b15842e79d0b421204</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -104877,6 +105018,7 @@
     <name>Pt::Http::WebSocketService</name>
     <filename>classPt_1_1Http_1_1WebSocketService.html</filename>
     <base>Service</base>
+    <base>Connectable</base>
     <member kind="function">
       <type></type>
       <name>WebSocketService</name>
@@ -104892,6 +105034,48 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>std::size_t</type>
+      <name>maxSockets</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>ae7c7acaf45230ae562568cdb3cf6991c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMaxSockets</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a482542923f006197b1b8abfcf2584e70</anchor>
+      <arglist>(std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>idleTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a004707a702cc29951ec422c865ce039e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setIdleTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a9e2b9df2e7d967690920963bb14ef5c1</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>maxMessageSize</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>abc2a85958399281206bcefe8a88a3bc1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMaxMessageSize</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a701e35ac0f47838d22ed0fc4c4e033ea</anchor>
+      <arglist>(std::size_t n)</arglist>
+    </member>
+    <member kind="function">
       <type>Responder *</type>
       <name>getResponder</name>
       <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
@@ -104905,13 +105089,6 @@
       <anchor>a16bab97a286c623c9a1aaeabccad8838</anchor>
       <arglist>(Responder *)</arglist>
     </member>
-    <member kind="function">
-      <type>Signal&lt; Stream &amp; &gt; &amp;</type>
-      <name>upgradeRequested</name>
-      <anchorfile>classPt_1_1Http_1_1Service.html</anchorfile>
-      <anchor>a27303747852767497a8de268c339d315</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Responder *</type>
       <name>onGetResponder</name>
@@ -104923,8 +105100,208 @@
       <type>virtual void</type>
       <name>onReleaseResponder</name>
       <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
-      <anchor>a8ad8493dee8e40a32ee3596fb9972c10</anchor>
-      <arglist>(Responder *r)</arglist>
+      <anchor>a162ab2a3150e1ae39ce92f4059402f95</anchor>
+      <arglist>(Responder *responder)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual WebSocketSession *</type>
+      <name>onGetSession</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>aeb521b96a081afa78d5db0714c9e517f</anchor>
+      <arglist>(WebSocketServlet &amp;servlet, System::EventLoop &amp;loop, Stream &amp;stream)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onReleaseSession</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a668418855ec719f6781ca978d5ea4a1c</anchor>
+      <arglist>(WebSocketSession *session)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onUpgrade</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>ab3bcd74e731265c8eec4efbbb401e8f9</anchor>
+      <arglist>(Stream &amp;stream) final</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::WebSocketServlet</name>
+    <filename>classPt_1_1Http_1_1WebSocketServlet.html</filename>
+    <base>Connectable</base>
+    <base protection="private">NonCopyable</base>
+    <member kind="function">
+      <type></type>
+      <name>WebSocketServlet</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketServlet.html</anchorfile>
+      <anchor>ad94a3bb1ff1e8ae3fd3b08df563c9fb9</anchor>
+      <arglist>(WebSocketService &amp;service)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WebSocketServlet</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketServlet.html</anchorfile>
+      <anchor>ad01f9c02d8fcbe46b7767be75b3b11b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WebSocketService &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketServlet.html</anchorfile>
+      <anchor>a5c51b70a02c05b5702b11fc1bddb4689</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const WebSocketService &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketServlet.html</anchorfile>
+      <anchor>a5902b666abc2ab0ef6dbc0847010aa21</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>size</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketServlet.html</anchorfile>
+      <anchor>ade1601ccf1fa3bcf050867f0852ca4e5</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pt::Http::WebSocketSession</name>
+    <filename>classPt_1_1Http_1_1WebSocketSession.html</filename>
+    <base>Connectable</base>
+    <member kind="function">
+      <type></type>
+      <name>WebSocketSession</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a71d32c834f0b9bfaa5a9970338df5014</anchor>
+      <arglist>(WebSocketServlet &amp;servlet, System::EventLoop &amp;loop, Stream &amp;stream)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WebSocketSession</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a31213431c0369fb2a6a89ec7fca1a05b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WebSocketService &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a5c51b70a02c05b5702b11fc1bddb4689</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const WebSocketService &amp;</type>
+      <name>service</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a5902b666abc2ab0ef6dbc0847010aa21</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>System::EventLoop &amp;</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a3052c4f0df3ff47d07fafbc426c36a1b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const System::EventLoop &amp;</type>
+      <name>loop</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>aa14940c236582fa7cf589a65a07c4d95</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>WebSocketMessage &amp;</type>
+      <name>incoming</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>abdb55a070341c321499f3d31cf0232d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WebSocketMessage &amp;</type>
+      <name>outgoing</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a9c75f2b0e02a68d89f12bcdebe7a7474</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginSend</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a02db88957d7c1859589a7ed5ef79b3d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>MessageProgress</type>
+      <name>endSend</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>abd47018d0d4fbae7e1a15807bb728662</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>beginReceive</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a91151db77a69a3a7a4c3ae3cabd304b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>MessageProgress</type>
+      <name>endReceive</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>aa4e20e6fcca8f2a5079e2027f5b364cd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ping</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a122ddbfe6d37289f9a66013fc731ba3b</anchor>
+      <arglist>(const char *payload=0, std::size_t n=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a5043c42dc88f8788fb4b6a51c9bc972b</anchor>
+      <arglist>(unsigned code=1000, const std::string &amp;reason=std::string())</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned</type>
+      <name>closeCode</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a0d1009a2dc9fdb903e8ab01c95393784</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>closeReason</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a3c61b036c223386231c6e9acdea5664e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onInput</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a0826fcd8f001bdff6173078d431b886e</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onOutput</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a1b121630961807cd5df5df33a6860016</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>onClose</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>ac92aac8031b33474af687b6ce0b0263e</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -113828,6 +114205,7 @@
     <class kind="class">Pt::Http::BasicAuthorizer</class>
     <class kind="class">Pt::Http::BasicService</class>
     <class kind="class">Pt::Http::BasicUserListAuthorizer</class>
+    <class kind="class">Pt::Http::BasicWebSocketService</class>
     <class kind="class">Pt::Http::Client</class>
     <class kind="class">Pt::Http::Credential</class>
     <class kind="class">Pt::Http::HttpError</class>
@@ -113845,8 +114223,11 @@
     <class kind="class">Pt::Http::Stream</class>
     <class kind="class">Pt::Http::StreamSession</class>
     <class kind="class">Pt::Http::WebSocket</class>
+    <class kind="class">Pt::Http::WebSocketMessage</class>
     <class kind="class">Pt::Http::WebSocketResponder</class>
     <class kind="class">Pt::Http::WebSocketService</class>
+    <class kind="class">Pt::Http::WebSocketServlet</class>
+    <class kind="class">Pt::Http::WebSocketSession</class>
   </compound>
   <compound kind="namespace">
     <name>Pt::Json</name>
@@ -115127,10 +115508,26 @@
     <name>Pt-Http-WebSocket</name>
     <title>WebSocket</title>
     <filename>group__Pt-Http-WebSocket.html</filename>
+    <subgroup>Pt-Http-WebSocket-Client</subgroup>
+    <subgroup>Pt-Http-WebSocket-Server</subgroup>
     <class kind="class">Pt::Http::StreamSession</class>
+    <class kind="class">Pt::Http::WebSocketMessage</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Http-WebSocket-Client</name>
+    <title>Client Sockets</title>
+    <filename>group__Pt-Http-WebSocket-Client.html</filename>
     <class kind="class">Pt::Http::WebSocket</class>
+  </compound>
+  <compound kind="group">
+    <name>Pt-Http-WebSocket-Server</name>
+    <title>Server Sessions</title>
+    <filename>group__Pt-Http-WebSocket-Server.html</filename>
     <class kind="class">Pt::Http::WebSocketResponder</class>
     <class kind="class">Pt::Http::WebSocketService</class>
+    <class kind="class">Pt::Http::BasicWebSocketService</class>
+    <class kind="class">Pt::Http::WebSocketServlet</class>
+    <class kind="class">Pt::Http::WebSocketSession</class>
   </compound>
   <compound kind="group">
     <name>Pt-Lua</name>
@@ -115970,7 +116367,13 @@
     <docanchor file="Pt-Http-Page.html" title="Responder">Pt-Http-Page-Responder</docanchor>
     <docanchor file="Pt-Http-Page.html" title="Authorizer">Pt-Http-Page-Authorizer</docanchor>
     <docanchor file="Pt-Http-Page.html" title="WebSocket">Pt-Http-Page-WebSocket</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="WebSocketMessage">Pt-Http-Page-WebSocketMessage</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Client Sockets">Pt-Http-Page-WebSocket-Client</docanchor>
     <docanchor file="Pt-Http-Page.html" title="WebSocket">Pt-Http-Page-WebSocketClass</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="Server Sessions">Pt-Http-Page-WebSocket-Server</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="WebSocketSession">Pt-Http-Page-WebSocketSession</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="WebSocketService">Pt-Http-Page-WebSocketService</docanchor>
+    <docanchor file="Pt-Http-Page.html" title="WebSocketServlet">Pt-Http-Page-WebSocketServlet</docanchor>
   </compound>
   <compound kind="page">
     <name>Pt-Lua-Page</name>

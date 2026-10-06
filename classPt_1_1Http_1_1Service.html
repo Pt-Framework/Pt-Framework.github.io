@@ -100,8 +100,6 @@ virtual&#160;</td><td class="memItemRight"><b>~Service</b> ()</td></tr>
 <tr class="memitem:a16bab97a286c623c9a1aaeabccad8838" id="r_a16bab97a286c623c9a1aaeabccad8838"><td class="memItemLeft"><a id="a16bab97a286c623c9a1aaeabccad8838" name="a16bab97a286c623c9a1aaeabccad8838"></a>
 void&#160;</td><td class="memItemRight"><b>releaseResponder</b> (<a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *)</td></tr>
 <tr class="memdesc:a16bab97a286c623c9a1aaeabccad8838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a responder created by a server. <br /></td></tr>
-<tr class="memitem:a27303747852767497a8de268c339d315" id="r_a27303747852767497a8de268c339d315"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a27303747852767497a8de268c339d315">upgradeRequested</a> ()</td></tr>
-<tr class="memdesc:a27303747852767497a8de268c339d315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a connection is upgraded.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -111,30 +109,42 @@ virtual <a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *&#
 <tr class="memitem:a8e8d88c0fbe1d98fe87a2104bcc0690c" id="r_a8e8d88c0fbe1d98fe87a2104bcc0690c"><td class="memItemLeft"><a id="a8e8d88c0fbe1d98fe87a2104bcc0690c" name="a8e8d88c0fbe1d98fe87a2104bcc0690c"></a>
 virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *)=0</td></tr>
 <tr class="memdesc:a8e8d88c0fbe1d98fe87a2104bcc0690c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a responder created by a server. <br /></td></tr>
+<tr class="memitem:af6c9c06c20d093bb1a28418a6685c14b" id="r_af6c9c06c20d093bb1a28418a6685c14b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af6c9c06c20d093bb1a28418a6685c14b">onUpgrade</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:af6c9c06c20d093bb1a28418a6685c14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a 101 reply has upgraded a connection.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Service is the responder factory in the server model. The server does not construct responders itself: when a servlet maps a request, the service's getResponder() calls onGetResponder(), and when the reply has been sent or the exchange has failed, releaseResponder() calls onReleaseResponder(). The service must remain alive while any responder it created is still in use.</p>
 <p>BasicService is that factory for a single responder type, using an allocator that defaults to new and delete. Use a custom Service when the responder type depends on the request headers, or when responders are pooled.</p>
-<p>A responder upgrades the connection by finishing the reply with status 101. The server keeps the TCP connection and emits upgradeRequested() on the server thread with the Stream it owns. The responder has already been released. Binding a Protocol to that stream accepts the upgrade. A service with no connected slot, or a slot that does not bind a protocol, declines the upgrade and the server closes the stream. Stream::protocol() is the value of the request's Upgrade header. The stream buffer is Stream::buffer(). beginInput() and beginOutput() transfer that buffer.</p>
+<p>A responder upgrades the connection by finishing the reply with status 101. The server keeps the TCP connection and calls onUpgrade() on the server thread with the Stream it owns. The responder has already been released. Binding a StreamSession to that stream accepts the upgrade. The empty base implementation leaves the stream unbound, and the server closes it. Stream::protocol() is the value of the request's Upgrade header. The stream buffer is Stream::buffer(). beginInput() and beginOutput() transfer that buffer.</p>
 <p>The example is the usual factory: a BasicService for a responder type. The equivalent hand-written service implements onGetResponder() and onReleaseResponder() in the same way.</p>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService&lt;HelloResponder&gt;</a> HelloService;</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1BasicService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService</a></div><div class="ttdoc">Basic HTTP service implementation.</div><div class="ttdef"><b>Definition</b> Service.h:135</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1BasicService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicService.html">Pt::Http::BasicService</a></div><div class="ttdoc">Basic HTTP service implementation.</div><div class="ttdef"><b>Definition</b> Service.h:133</div></div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a27303747852767497a8de268c339d315" name="a27303747852767497a8de268c339d315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27303747852767497a8de268c339d315">&#9670;&#160;</a></span>upgradeRequested()</h2>
+<a id="af6c9c06c20d093bb1a28418a6685c14b" name="af6c9c06c20d093bb1a28418a6685c14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c9c06c20d093bb1a28418a6685c14b">&#9670;&#160;</a></span>onUpgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Signal</a>&lt; <a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp; &gt; &amp; upgradeRequested </td>
+          <td class="memname">virtual void onUpgrade </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Emitted on the server thread after a 101 reply. The slot binds a Protocol to <em class="arg">stream</em> to accept it. The server closes a stream that has no protocol when the signal returns. </p>
+<p>Runs on the server thread with the Stream the server owns. The responder has already been released. Bind a StreamSession to <em class="arg">stream</em> to accept it. The empty implementation leaves the stream unbound, and the server closes it. </p>
+
+<p>Reimplemented in <a class="el" href="classPt_1_1Http_1_1WebSocketService.html#ab3bcd74e731265c8eec4efbbb401e8f9">WebSocketService</a>.</p>
 
 </div>
 </div>
