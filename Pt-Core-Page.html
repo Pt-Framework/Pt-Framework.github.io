@@ -261,7 +261,7 @@ Zlib Streams</h1>
 ZBuffer</h2>
 <p>ZBuffer is the buffer in the <a class="el" href="group__Pt-ZStreams.html" title="Zlib Streams">Zlib Streams</a> model. It is a BasicStreamBuffer of <code>char</code> attached to a target <code>std::ios</code>. Reading inflates compressed bytes from the target. Writing deflates uncompressed bytes into the target.</p>
 <p>Format selects zlib or gzip wrapping at construction and must match the target data. attach() sets the target. detach() drops it without finishing a frame. reset() discards buffered data and begins a new zlib stream, optionally with a new target. discard() resets the state and keeps the target. finish() flushes remaining compressed bytes and ends the stream.</p>
-<p>zcount() is the total number of uncompressed bytes produced by inflate. The buffer does not own the target; keep the target alive until detach() or destruction.   </p>
+<p>zcount() is the total number of uncompressed bytes produced by inflate. Read and write transformations retain independent state, so either direction can start while the other has buffered data. discard() and reset() explicitly discard both directions. The buffer does not own the target; keep the target alive until detach() or destruction.   </p>
 <h2 class="doxsection"><a class="anchor" id="Pt-Core-Page-ZIStream"></a>
 ZIStream</h2>
 <p>ZIStream owns a ZBuffer and reads uncompressed bytes from a compressed <code>std::istream</code>. Construct it with a format, or with a target stream and a format. attach(), detach(), reset() and finish() forward to the buffer. zBuffer() returns the owned buffer. The target is not owned.   </p>

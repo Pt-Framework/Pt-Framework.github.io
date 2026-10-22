@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="Server_8h_source.html">Pt/Http/Server.h</a>&gt;</code></p>
 
-<p>Listening HTTP server.  
+<p>HTTP server that listens for incoming connections.  
  <a href="#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>, and <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -147,10 +147,10 @@ void&#160;</td><td class="memItemRight"><b>removeServlet</b> (<a class="el" href
 <tr class="memdesc:a4ab253da5bce838fc638062a6fd44812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a servlet. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Server is the listening HTTP service in the server model. It binds a local Endpoint and accepts connections, but it does not implement a resource. Incoming requests are mapped by servlets that have been added with addServlet(). The first servlet that maps the request handles it. removeServlet() unregisters a servlet.</p>
-<p>All server I/O is asynchronous, so the server needs an EventLoop, passed to a constructor or to setActive(). The loop does not own the server. listen() binds the local endpoint, optionally with TcpServerOptions, and a second listen replaces the previous binding. cancel() stops accepting and pending work.</p>
-<p>setSecure() assigns a Pt::Ssl::Context so the server accepts only HTTPS connections. Further use of servlets and responders is unchanged. Certificate and handshake details live in the SSL module.</p>
-<p>setMaxThreads() bounds worker threads. setTimeout() and setKeepAliveTimeout() bound idle I/O and persistent connections, and setMaxRequestSize() rejects a request whose size exceeds that limit. </p>
+<div class="textblock"><p>Server binds a local Endpoint and routes each incoming request to the first registered servlet that maps it. The server itself does not provide a resource. Use addServlet() to register a servlet and removeServlet() to unregister it.</p>
+<p><a class="el" href="classPt_1_1Http_1_1Server.html" title="HTTP server that listens for incoming connections.">Server</a> I/O is asynchronous and requires an EventLoop. Supply the loop when constructing the server or later through setActive(); the server does not take ownership of it. listen() binds an endpoint and replaces an existing binding. cancel() stops accepting connections and cancels pending work.</p>
+<p>setSecure() configures the server with a Pt::Ssl::Context for HTTPS connections. The servlet and responder model remains the same.</p>
+<p>The server can limit worker threads, request size, idle I/O, and the lifetime of persistent connections. </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->

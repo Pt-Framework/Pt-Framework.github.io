@@ -79,52 +79,50 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="WebSocketSession_8h_source.html">Pt/Http/WebSocketSession.h</a>&gt;</code></p>
 
-<p><a class="el" href="classPt_1_1Http_1_1Server.html" title="Listening HTTP server.">Server</a> facade of one accepted <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> stream.  
+<p><a class="el" href="classPt_1_1Http_1_1Server.html" title="HTTP server that listens for incoming connections.">Server</a> facade of one accepted <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> stream.  
  <a href="#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71d32c834f0b9bfaa5a9970338df5014" id="r_a71d32c834f0b9bfaa5a9970338df5014"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a71d32c834f0b9bfaa5a9970338df5014">WebSocketSession</a> (WebSocketServlet &amp;servlet, <a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop, <a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)</td></tr>
-<tr class="memdesc:a71d32c834f0b9bfaa5a9970338df5014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds <em class="arg">stream</em> on <em class="arg">loop</em>.  <br /></td></tr>
+<tr class="memitem:a011325c349cf7f3a68af4c40bc72774c" id="r_a011325c349cf7f3a68af4c40bc72774c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a011325c349cf7f3a68af4c40bc72774c">WebSocketSession</a> (WebSocketService &amp;service, <a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream, const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;reply)</td></tr>
+<tr class="memdesc:a011325c349cf7f3a68af4c40bc72774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds <em class="arg">stream</em> for <em class="arg">service</em>.  <br /></td></tr>
 <tr class="memitem:a31213431c0369fb2a6a89ec7fca1a05b" id="r_a31213431c0369fb2a6a89ec7fca1a05b"><td class="memItemLeft"><a id="a31213431c0369fb2a6a89ec7fca1a05b" name="a31213431c0369fb2a6a89ec7fca1a05b"></a>
 &#160;</td><td class="memItemRight"><b>~WebSocketSession</b> ()</td></tr>
 <tr class="memdesc:a31213431c0369fb2a6a89ec7fca1a05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream. <br /></td></tr>
 <tr class="memitem:a5c51b70a02c05b5702b11fc1bddb4689" id="r_a5c51b70a02c05b5702b11fc1bddb4689"><td class="memItemLeft"><a id="a5c51b70a02c05b5702b11fc1bddb4689" name="a5c51b70a02c05b5702b11fc1bddb4689"></a>
-<a class="el" href="classPt_1_1Http_1_1WebSocketService.html">WebSocketService</a> &amp;&#160;</td><td class="memItemRight"><b>service</b> ()</td></tr>
+WebSocketService &amp;&#160;</td><td class="memItemRight"><b>service</b> ()</td></tr>
 <tr class="memdesc:a5c51b70a02c05b5702b11fc1bddb4689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the service that created this session. <br /></td></tr>
 <tr class="memitem:a5902b666abc2ab0ef6dbc0847010aa21" id="r_a5902b666abc2ab0ef6dbc0847010aa21"><td class="memItemLeft"><a id="a5902b666abc2ab0ef6dbc0847010aa21" name="a5902b666abc2ab0ef6dbc0847010aa21"></a>
-const <a class="el" href="classPt_1_1Http_1_1WebSocketService.html">WebSocketService</a> &amp;&#160;</td><td class="memItemRight"><b>service</b> () const</td></tr>
+const WebSocketService &amp;&#160;</td><td class="memItemRight"><b>service</b> () const</td></tr>
 <tr class="memdesc:a5902b666abc2ab0ef6dbc0847010aa21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the service that created this session. <br /></td></tr>
-<tr class="memitem:a3052c4f0df3ff47d07fafbc426c36a1b" id="r_a3052c4f0df3ff47d07fafbc426c36a1b"><td class="memItemLeft"><a id="a3052c4f0df3ff47d07fafbc426c36a1b" name="a3052c4f0df3ff47d07fafbc426c36a1b"></a>
-<a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;&#160;</td><td class="memItemRight"><b>loop</b> ()</td></tr>
-<tr class="memdesc:a3052c4f0df3ff47d07fafbc426c36a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the loop that serializes this stream. <br /></td></tr>
-<tr class="memitem:aa14940c236582fa7cf589a65a07c4d95" id="r_aa14940c236582fa7cf589a65a07c4d95"><td class="memItemLeft"><a id="aa14940c236582fa7cf589a65a07c4d95" name="aa14940c236582fa7cf589a65a07c4d95"></a>
-const <a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;&#160;</td><td class="memItemRight"><b>loop</b> () const</td></tr>
-<tr class="memdesc:aa14940c236582fa7cf589a65a07c4d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the loop that serializes this stream. <br /></td></tr>
+<tr class="memitem:a429c44128a371ec5f6bcf86ed044cec6" id="r_a429c44128a371ec5f6bcf86ed044cec6"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a429c44128a371ec5f6bcf86ed044cec6">protocol</a> () const</td></tr>
+<tr class="memdesc:a429c44128a371ec5f6bcf86ed044cec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the protocol name selected on the 101.  <br /></td></tr>
 <tr class="memitem:abdb55a070341c321499f3d31cf0232d6" id="r_abdb55a070341c321499f3d31cf0232d6"><td class="memItemLeft"><a id="abdb55a070341c321499f3d31cf0232d6" name="abdb55a070341c321499f3d31cf0232d6"></a>
 <a class="el" href="classPt_1_1Http_1_1WebSocketMessage.html">WebSocketMessage</a> &amp;&#160;</td><td class="memItemRight"><b>incoming</b> ()</td></tr>
 <tr class="memdesc:abdb55a070341c321499f3d31cf0232d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the incoming message. <br /></td></tr>
 <tr class="memitem:a9c75f2b0e02a68d89f12bcdebe7a7474" id="r_a9c75f2b0e02a68d89f12bcdebe7a7474"><td class="memItemLeft"><a id="a9c75f2b0e02a68d89f12bcdebe7a7474" name="a9c75f2b0e02a68d89f12bcdebe7a7474"></a>
 <a class="el" href="classPt_1_1Http_1_1WebSocketMessage.html">WebSocketMessage</a> &amp;&#160;</td><td class="memItemRight"><b>outgoing</b> ()</td></tr>
 <tr class="memdesc:a9c75f2b0e02a68d89f12bcdebe7a7474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outgoing message. <br /></td></tr>
-<tr class="memitem:a02db88957d7c1859589a7ed5ef79b3d5" id="r_a02db88957d7c1859589a7ed5ef79b3d5"><td class="memItemLeft"><a id="a02db88957d7c1859589a7ed5ef79b3d5" name="a02db88957d7c1859589a7ed5ef79b3d5"></a>
-void&#160;</td><td class="memItemRight"><b>beginSend</b> ()</td></tr>
-<tr class="memdesc:a02db88957d7c1859589a7ed5ef79b3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins sending outgoing(). <br /></td></tr>
+<tr class="memitem:a51f5e3c115973b763ec7ced957bc7c7c" id="r_a51f5e3c115973b763ec7ced957bc7c7c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51f5e3c115973b763ec7ced957bc7c7c">beginSend</a> (bool finished=true)</td></tr>
+<tr class="memdesc:a51f5e3c115973b763ec7ced957bc7c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins sending outgoing().  <br /></td></tr>
 <tr class="memitem:abd47018d0d4fbae7e1a15807bb728662" id="r_abd47018d0d4fbae7e1a15807bb728662"><td class="memItemLeft"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html">MessageProgress</a>&#160;</td><td class="memItemRight"><a class="el" href="#abd47018d0d4fbae7e1a15807bb728662">endSend</a> ()</td></tr>
 <tr class="memdesc:abd47018d0d4fbae7e1a15807bb728662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the send started by beginSend().  <br /></td></tr>
-<tr class="memitem:a91151db77a69a3a7a4c3ae3cabd304b7" id="r_a91151db77a69a3a7a4c3ae3cabd304b7"><td class="memItemLeft"><a id="a91151db77a69a3a7a4c3ae3cabd304b7" name="a91151db77a69a3a7a4c3ae3cabd304b7"></a>
-void&#160;</td><td class="memItemRight"><b>beginReceive</b> ()</td></tr>
-<tr class="memdesc:a91151db77a69a3a7a4c3ae3cabd304b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins receiving into incoming(). <br /></td></tr>
+<tr class="memitem:a91151db77a69a3a7a4c3ae3cabd304b7" id="r_a91151db77a69a3a7a4c3ae3cabd304b7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a> ()</td></tr>
+<tr class="memdesc:a91151db77a69a3a7a4c3ae3cabd304b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins receiving into incoming().  <br /></td></tr>
 <tr class="memitem:aa4e20e6fcca8f2a5079e2027f5b364cd" id="r_aa4e20e6fcca8f2a5079e2027f5b364cd"><td class="memItemLeft"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html">MessageProgress</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa4e20e6fcca8f2a5079e2027f5b364cd">endReceive</a> ()</td></tr>
 <tr class="memdesc:aa4e20e6fcca8f2a5079e2027f5b364cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the receive started by beginReceive().  <br /></td></tr>
-<tr class="memitem:a122ddbfe6d37289f9a66013fc731ba3b" id="r_a122ddbfe6d37289f9a66013fc731ba3b"><td class="memItemLeft"><a id="a122ddbfe6d37289f9a66013fc731ba3b" name="a122ddbfe6d37289f9a66013fc731ba3b"></a>
-void&#160;</td><td class="memItemRight"><b>ping</b> (const char *payload=0, std::size_t n=0)</td></tr>
-<tr class="memdesc:a122ddbfe6d37289f9a66013fc731ba3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a ping with an optional payload of at most 125 bytes. <br /></td></tr>
-<tr class="memitem:a5043c42dc88f8788fb4b6a51c9bc972b" id="r_a5043c42dc88f8788fb4b6a51c9bc972b"><td class="memItemLeft"><a id="a5043c42dc88f8788fb4b6a51c9bc972b" name="a5043c42dc88f8788fb4b6a51c9bc972b"></a>
-void&#160;</td><td class="memItemRight"><b>close</b> (unsigned code=1000, const std::string &amp;reason=std::string())</td></tr>
-<tr class="memdesc:a5043c42dc88f8788fb4b6a51c9bc972b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a close frame and ends the stream after the close handshake. <br /></td></tr>
+<tr class="memitem:a6d66e8ae606149af2db0565c4b7db40f" id="r_a6d66e8ae606149af2db0565c4b7db40f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6d66e8ae606149af2db0565c4b7db40f">beginPing</a> (const char *payload=0, std::size_t n=0)</td></tr>
+<tr class="memdesc:a6d66e8ae606149af2db0565c4b7db40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins writing a ping with an optional payload of at most 125 bytes.  <br /></td></tr>
+<tr class="memitem:a1d5f8e3c5e693aadf7c42016761ce987" id="r_a1d5f8e3c5e693aadf7c42016761ce987"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1d5f8e3c5e693aadf7c42016761ce987">endPing</a> ()</td></tr>
+<tr class="memdesc:a1d5f8e3c5e693aadf7c42016761ce987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the ping started by beginPing().  <br /></td></tr>
+<tr class="memitem:afe2bdfcbb534bfd081819bff65806345" id="r_afe2bdfcbb534bfd081819bff65806345"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe2bdfcbb534bfd081819bff65806345">beginShutdown</a> (unsigned code=1000, const std::string &amp;reason=std::string())</td></tr>
+<tr class="memdesc:afe2bdfcbb534bfd081819bff65806345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a close handshake.  <br /></td></tr>
+<tr class="memitem:aafa25c54a2e03205877efafa43f6307e" id="r_aafa25c54a2e03205877efafa43f6307e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aafa25c54a2e03205877efafa43f6307e">endShutdown</a> ()</td></tr>
+<tr class="memdesc:aafa25c54a2e03205877efafa43f6307e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the shutdown started by beginShutdown().  <br /></td></tr>
+<tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the stream and writes no frame.  <br /></td></tr>
 <tr class="memitem:a0d1009a2dc9fdb903e8ab01c95393784" id="r_a0d1009a2dc9fdb903e8ab01c95393784"><td class="memItemLeft"><a id="a0d1009a2dc9fdb903e8ab01c95393784" name="a0d1009a2dc9fdb903e8ab01c95393784"></a>
 unsigned&#160;</td><td class="memItemRight"><b>closeCode</b> () const</td></tr>
 <tr class="memdesc:a0d1009a2dc9fdb903e8ab01c95393784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the close status code of the handshake that ended the stream. <br /></td></tr>
@@ -140,19 +138,23 @@ virtual void&#160;</td><td class="memItemRight"><b>onInput</b> ()=0</td></tr>
 <tr class="memitem:a1b121630961807cd5df5df33a6860016" id="r_a1b121630961807cd5df5df33a6860016"><td class="memItemLeft"><a id="a1b121630961807cd5df5df33a6860016" name="a1b121630961807cd5df5df33a6860016"></a>
 virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
 <tr class="memdesc:a1b121630961807cd5df5df33a6860016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when data bytes were sent. <br /></td></tr>
-<tr class="memitem:ac92aac8031b33474af687b6ce0b0263e" id="r_ac92aac8031b33474af687b6ce0b0263e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac92aac8031b33474af687b6ce0b0263e">onClose</a> ()=0</td></tr>
-<tr class="memdesc:ac92aac8031b33474af687b6ce0b0263e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the stream has ended.  <br /></td></tr>
+<tr class="memitem:a7c4f4644d616a708bffdff0e5fb3860c" id="r_a7c4f4644d616a708bffdff0e5fb3860c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7c4f4644d616a708bffdff0e5fb3860c">onPingReady</a> ()</td></tr>
+<tr class="memdesc:a7c4f4644d616a708bffdff0e5fb3860c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports that the ping operation completed.  <br /></td></tr>
+<tr class="memitem:a08cb1d3f74658518acf512dc91d5d1da" id="r_a08cb1d3f74658518acf512dc91d5d1da"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a08cb1d3f74658518acf512dc91d5d1da">onShutdownReady</a> ()</td></tr>
+<tr class="memdesc:a08cb1d3f74658518acf512dc91d5d1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports that the shutdown operation completed.  <br /></td></tr>
+<tr class="memitem:a13b107d6beab9251f7b04ce69d8274bb" id="r_a13b107d6beab9251f7b04ce69d8274bb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a13b107d6beab9251f7b04ce69d8274bb">onPong</a> (const std::string &amp;payload)</td></tr>
+<tr class="memdesc:a13b107d6beab9251f7b04ce69d8274bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports a received pong.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>WebSocketSession is the application object of one upgraded stream. Derive from it to keep the state that must survive from one message to the next: a subscription, a cursor, a user, or a reference into the application domain. The HTTP server already owns the connection and the stream. This session formats messages on that stream. It is not a stream-session bind the application performs, and it is not a request responder. The handshake responder has already been released when the session begins. A server does not mask the frames it writes.</p>
+<div class="textblock"><p>WebSocketSession is the application object of one upgraded stream. Derive from it to keep the state that must survive from one message to the next: a subscription, a cursor, a user, or a reference into the application domain. The HTTP server already owns the connection and the stream. This session formats messages on that stream. It is not a channel bind the application performs, and it is not a request responder. The handshake responder has already been released when the session begins. A server does not mask the frames it writes.</p>
 <p>The example starts a receive in the constructor and reads each payload from the input callback. Domain state belongs in the derived session.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>EchoSession : <span class="keyword">public</span> <a class="code hl_class" href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        EchoSession(<a class="code hl_class" href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a>&amp; servlet,</div>
-<div class="line">                    <a class="code hl_class" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; <a class="code hl_function" href="#a3052c4f0df3ff47d07fafbc426c36a1b">loop</a>,</div>
-<div class="line">                    <a class="code hl_class" href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a>&amp; stream)</div>
-<div class="line">        : <a class="code hl_namespace" href="namespacePt.html">Pt</a>::<a class="code hl_namespace" href="namespacePt_1_1Http.html">Http</a>::<a class="code hl_function" href="#a71d32c834f0b9bfaa5a9970338df5014">WebSocketSession</a>(servlet, <a class="code hl_function" href="#a3052c4f0df3ff47d07fafbc426c36a1b">loop</a>, stream)</div>
+<div class="line">        EchoSession(<a class="code hl_class" href="classPt_1_1Http_1_1WebSocketService.html">Pt::Http::WebSocketService</a>&amp; <a class="code hl_function" href="#a5c51b70a02c05b5702b11fc1bddb4689">service</a>,</div>
+<div class="line">                    <a class="code hl_class" href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a>&amp; stream,</div>
+<div class="line">                    <span class="keyword">const</span> <a class="code hl_class" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply)</div>
+<div class="line">        : <a class="code hl_namespace" href="namespacePt.html">Pt</a>::<a class="code hl_namespace" href="namespacePt_1_1Http.html">Http</a>::<a class="code hl_function" href="#a011325c349cf7f3a68af4c40bc72774c">WebSocketSession</a>(<a class="code hl_function" href="#a5c51b70a02c05b5702b11fc1bddb4689">service</a>, stream, reply)</div>
 <div class="line">        {</div>
 <div class="line">            <a class="code hl_function" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
 <div class="line">        }</div>
@@ -160,57 +162,63 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
 <div class="line">    <span class="keyword">protected</span>:</div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="#a0826fcd8f001bdff6173078d431b886e">onInput</a>()</div>
 <div class="line">        {</div>
-<div class="line">            <a class="code hl_class" href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a> progress = <a class="code hl_function" href="#aa4e20e6fcca8f2a5079e2027f5b364cd">endReceive</a>();</div>
-<div class="line">            <span class="keywordflow">if</span>( ! progress.<a class="code hl_function" href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">finished</a>() )</div>
+<div class="line">            <span class="keywordflow">try</span></div>
 <div class="line">            {</div>
-<div class="line">                <a class="code hl_function" href="#abdb55a070341c321499f3d31cf0232d6">incoming</a>().<a class="code hl_function" href="classPt_1_1Http_1_1WebSocketMessage.html#a482de369e242eac519fd5e208a37320c">discard</a>();</div>
-<div class="line">                <a class="code hl_function" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
+<div class="line">                <a class="code hl_class" href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a> progress = <a class="code hl_function" href="#aa4e20e6fcca8f2a5079e2027f5b364cd">endReceive</a>();</div>
+<div class="line">                <span class="keywordflow">if</span>( ! progress.<a class="code hl_function" href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">finished</a>() )</div>
+<div class="line">                {</div>
+<div class="line">                    <a class="code hl_function" href="#abdb55a070341c321499f3d31cf0232d6">incoming</a>().<a class="code hl_function" href="classPt_1_1Http_1_1WebSocketMessage.html#a482de369e242eac519fd5e208a37320c">discard</a>();</div>
+<div class="line">                    <a class="code hl_function" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
 <div class="line"> </div>
-<div class="line">            <a class="code hl_function" href="#abdb55a070341c321499f3d31cf0232d6">incoming</a>().<a class="code hl_function" href="classPt_1_1Http_1_1WebSocketMessage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line">            <a class="code hl_function" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
+<div class="line">                <a class="code hl_function" href="#abdb55a070341c321499f3d31cf0232d6">incoming</a>().<a class="code hl_function" href="classPt_1_1Http_1_1WebSocketMessage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line">                <a class="code hl_function" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::exception&amp;)</div>
+<div class="line">            {</div>
+<div class="line">                <a class="code hl_function" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="#a1b121630961807cd5df5df33a6860016">onOutput</a>()</div>
 <div class="line">        {</div>
 <div class="line">            <a class="code hl_function" href="#abd47018d0d4fbae7e1a15807bb728662">endSend</a>();</div>
 <div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="#ac92aac8031b33474af687b6ce0b0263e">onClose</a>()</div>
-<div class="line">        {}</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a></div><div class="ttdoc">Progress of an asynchronous HTTP send or receive.</div><div class="ttdef"><b>Definition</b> Message.h:337</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_aebaed0be88cbcf45f1985b819c9dabb7"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">Pt::Http::MessageProgress::finished</a></div><div class="ttdeci">bool finished() const</div><div class="ttdoc">Returns true if message is complete.</div><div class="ttdef"><b>Definition</b> Message.h:373</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a connection.</div><div class="ttdef"><b>Definition</b> Stream.h:90</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Reply_html"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a></div><div class="ttdoc">HTTP reply message.</div><div class="ttdef"><b>Definition</b> Reply.h:64</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a connection.</div><div class="ttdef"><b>Definition</b> Stream.h:92</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a482de369e242eac519fd5e208a37320c"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a482de369e242eac519fd5e208a37320c">Pt::Http::WebSocketMessage::discard</a></div><div class="ttdeci">void discard()</div><div class="ttdoc">Drops the buffered body and leaves the type.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#ac8bb3912a3ce86b15842e79d0b421204">Pt::Http::WebSocketMessage::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Drops the buffered body and sets the type to Unknown.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketServlet_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a></div><div class="ttdoc">Release scope of the sessions one WebSocket service creates.</div><div class="ttdef"><b>Definition</b> WebSocketServlet.h:66</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div><div class="ttdoc">Server facade of one accepted WebSocket stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:126</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketService_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketService.html">Pt::Http::WebSocketService</a></div><div class="ttdoc">Mapped service and factory for WebSocket sessions.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:130</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div><div class="ttdoc">Server facade of one accepted WebSocket stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:155</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a011325c349cf7f3a68af4c40bc72774c"><div class="ttname"><a href="#a011325c349cf7f3a68af4c40bc72774c">Pt::Http::WebSocketSession::WebSocketSession</a></div><div class="ttdeci">WebSocketSession(WebSocketService &amp;service, Stream &amp;stream, const Reply &amp;reply)</div><div class="ttdoc">Binds stream for service.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a0826fcd8f001bdff6173078d431b886e"><div class="ttname"><a href="#a0826fcd8f001bdff6173078d431b886e">Pt::Http::WebSocketSession::onInput</a></div><div class="ttdeci">virtual void onInput()=0</div><div class="ttdoc">Called when data bytes were received.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a1b121630961807cd5df5df33a6860016"><div class="ttname"><a href="#a1b121630961807cd5df5df33a6860016">Pt::Http::WebSocketSession::onOutput</a></div><div class="ttdeci">virtual void onOutput()=0</div><div class="ttdoc">Called when data bytes were sent.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a3052c4f0df3ff47d07fafbc426c36a1b"><div class="ttname"><a href="#a3052c4f0df3ff47d07fafbc426c36a1b">Pt::Http::WebSocketSession::loop</a></div><div class="ttdeci">System::EventLoop &amp; loop()</div><div class="ttdoc">Returns the loop that serializes this stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:158</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a71d32c834f0b9bfaa5a9970338df5014"><div class="ttname"><a href="#a71d32c834f0b9bfaa5a9970338df5014">Pt::Http::WebSocketSession::WebSocketSession</a></div><div class="ttdeci">WebSocketSession(WebSocketServlet &amp;servlet, System::EventLoop &amp;loop, Stream &amp;stream)</div><div class="ttdoc">Binds stream on loop.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="#a5ae591df94fc66ccb85cbb6565368bca">Pt::Http::WebSocketSession::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Releases the stream and writes no frame.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a5c51b70a02c05b5702b11fc1bddb4689"><div class="ttname"><a href="#a5c51b70a02c05b5702b11fc1bddb4689">Pt::Http::WebSocketSession::service</a></div><div class="ttdeci">WebSocketService &amp; service()</div><div class="ttdoc">Returns the service that created this session.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:183</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a91151db77a69a3a7a4c3ae3cabd304b7"><div class="ttname"><a href="#a91151db77a69a3a7a4c3ae3cabd304b7">Pt::Http::WebSocketSession::beginReceive</a></div><div class="ttdeci">void beginReceive()</div><div class="ttdoc">Begins receiving into incoming().</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_aa4e20e6fcca8f2a5079e2027f5b364cd"><div class="ttname"><a href="#aa4e20e6fcca8f2a5079e2027f5b364cd">Pt::Http::WebSocketSession::endReceive</a></div><div class="ttdeci">MessageProgress endReceive()</div><div class="ttdoc">Completes the receive started by beginReceive().</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_abd47018d0d4fbae7e1a15807bb728662"><div class="ttname"><a href="#abd47018d0d4fbae7e1a15807bb728662">Pt::Http::WebSocketSession::endSend</a></div><div class="ttdeci">MessageProgress endSend()</div><div class="ttdoc">Completes the send started by beginSend().</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_abdb55a070341c321499f3d31cf0232d6"><div class="ttname"><a href="#abdb55a070341c321499f3d31cf0232d6">Pt::Http::WebSocketSession::incoming</a></div><div class="ttdeci">WebSocketMessage &amp; incoming()</div><div class="ttdoc">Returns the incoming message.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_ac92aac8031b33474af687b6ce0b0263e"><div class="ttname"><a href="#ac92aac8031b33474af687b6ce0b0263e">Pt::Http::WebSocketSession::onClose</a></div><div class="ttdeci">virtual void onClose()=0</div><div class="ttdoc">Called when the stream has ended.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a></div><div class="ttdoc">Event loop of a thread or process.</div><div class="ttdef"><b>Definition</b> EventLoop.h:83</div></div>
 <div class="ttc" id="anamespacePt_1_1Http_html"><div class="ttname"><a href="namespacePt_1_1Http.html">Pt::Http</a></div><div class="ttdoc">HTTP clients and servers.</div></div>
 <div class="ttc" id="anamespacePt_html"><div class="ttname"><a href="namespacePt.html">Pt</a></div><div class="ttdoc">Core module.</div><div class="ttdef"><b>Definition</b> Allocator.h:33</div></div>
-</div><!-- fragment --><p>The servlet constructs the session with itself, with the loop that serializes this stream, and with the stream of this upgrade. The loop must be the loop of the stream. The base constructor binds the stream, copies the service limits onto the connection, and stores the loop. The derived constructor runs after that. Its members are initialized, the stream is open, and loop() is the loop of this stream. Start the first beginReceive() or beginSend() there. There is no separate accept callback. By the time the derived constructor body runs, the base has already bound the stream.</p>
-<p>incoming() and outgoing() are the two payloads. beginSend() writes outgoing(). beginReceive() reads into incoming(). onInput() runs when data bytes were received. Call endReceive(), read incoming() when progress reports body bytes, and start the next receive if the message is not finished. A ping or a pong does not run onInput(). onOutput() runs when data bytes were sent. Call endSend() and continue the send when progress is not finished. onClose() runs while this object is still alive, after the stream has ended. Do not call endReceive() or endSend() from onClose(). The servlet that holds this session releases it after onClose() returns.</p>
-<p>service() reaches state shared by every connection of this endpoint. loop() is where a timer or posted work must run. Closing the session closes the stream. The session does not own the stream or the connection. The destructor closes the stream. A derived constructor that throws still runs this destructor, so a failed construction does not leave an accepted stream without an owner.</p>
-<p>Ping and close stay control operations on this type.</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="#a122ddbfe6d37289f9a66013fc731ba3b">ping</a>();</div>
-<div class="line"><a class="code hl_function" href="#a5043c42dc88f8788fb4b6a51c9bc972b">close</a>(1000, <span class="stringliteral">&quot;done&quot;</span>);</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a122ddbfe6d37289f9a66013fc731ba3b"><div class="ttname"><a href="#a122ddbfe6d37289f9a66013fc731ba3b">Pt::Http::WebSocketSession::ping</a></div><div class="ttdeci">void ping(const char *payload=0, std::size_t n=0)</div><div class="ttdoc">Enqueues a ping with an optional payload of at most 125 bytes.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a5043c42dc88f8788fb4b6a51c9bc972b"><div class="ttname"><a href="#a5043c42dc88f8788fb4b6a51c9bc972b">Pt::Http::WebSocketSession::close</a></div><div class="ttdeci">void close(unsigned code=1000, const std::string &amp;reason=std::string())</div><div class="ttdoc">Enqueues a close frame and ends the stream after the close handshake.</div></div>
-</div><!-- fragment --><p>ping() enqueues a ping. close() enqueues a close frame. closeCode() and closeReason() report the handshake that ended the stream. </p>
+</div><!-- fragment --><p>The service factory constructs the session with the service, with the stream of this upgrade, and with the opening reply. The reply is valid for the constructor call. The base constructor reads the selected subprotocol from that reply, binds the stream, and copies the service idle timeout and data-message limit onto the connection. It does not store the reply. The derived constructor runs after that. Its members are initialized and the stream is open. Start the first beginReceive() or beginSend() there. There is no separate accept callback. By the time the derived constructor body runs, the base has already bound the stream.</p>
+<p>incoming() and outgoing() are the two payloads. beginSend() writes outgoing(). Call beginSend(false) while more body will be written. beginReceive() reads into incoming(). onInput() runs when data bytes were received. Call endReceive(), read incoming() when progress reports body bytes, and start the next receive if the message is not finished. A ping does not run onInput(). A pong runs onPong() and does not change incoming(). onOutput() runs when data bytes were sent. Call endSend() and continue the send when progress is not finished. The application learns that the stream has ended from the outstanding operation: endReceive() throws, or onShutdownReady() runs. Call close() from that callback to release the session. The servlet also releases remaining sessions when it is destroyed.</p>
+<p>beginReceive() starts frame processing. Until then, incoming frames stay in the stream. Control frames are processed while a receive is outstanding. A local beginShutdown() also keeps input running until the peer replies with its close frame. The two are independent: a receive started before or during a shutdown still delivers what the peer sent before that reply.</p>
+<p>protocol() is the single name the responder wrote as Sec-WebSocket-Protocol on the 101, or empty when none was selected. The base copies it from the opening reply before the derived constructor body runs. It is not the list the client offered. A reply that echoes more than one token, or a value that is not one protocol token, fails construction. The server then closes the stream. service() reaches state shared by every connection of this endpoint. The idle timeout and the data-message limit are copied from the WebSocketService before the derived constructor runs. Closing the session closes the stream. The session does not own the stream or the connection. The destructor closes the stream. A derived constructor that throws still runs this destructor, so a failed construction does not leave an accepted stream without an owner.</p>
+<p>Ping, shutdown and close stay control operations on this type.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="#a6d66e8ae606149af2db0565c4b7db40f">beginPing</a>();</div>
+<div class="line"><a class="code hl_function" href="#afe2bdfcbb534bfd081819bff65806345">beginShutdown</a>(1000, <span class="stringliteral">&quot;done&quot;</span>);</div>
+<div class="line"><a class="code hl_function" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_a6d66e8ae606149af2db0565c4b7db40f"><div class="ttname"><a href="#a6d66e8ae606149af2db0565c4b7db40f">Pt::Http::WebSocketSession::beginPing</a></div><div class="ttdeci">void beginPing(const char *payload=0, std::size_t n=0)</div><div class="ttdoc">Begins writing a ping with an optional payload of at most 125 bytes.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html_afe2bdfcbb534bfd081819bff65806345"><div class="ttname"><a href="#afe2bdfcbb534bfd081819bff65806345">Pt::Http::WebSocketSession::beginShutdown</a></div><div class="ttdeci">void beginShutdown(unsigned code=1000, const std::string &amp;reason=std::string())</div><div class="ttdoc">Begins a close handshake.</div></div>
+</div><!-- fragment --><p>beginPing() enqueues a ping. onPingReady() reports that its frame was written; call endPing() from that callback to observe a write error. A received ping is answered by the engine. After a close frame is queued nothing further is written, so beginPing() throws and a received ping is no longer answered. beginShutdown() enqueues a close frame and keeps reading until the peer replies. A peer that never starts a receive never replies, so the idle timeout copied from the WebSocketService is the only bound on that wait. onShutdownReady() reports the completed handshake; call endShutdown() from that callback to observe an error. close() releases the stream and writes no frame. The destructor calls it. beginSend() and beginReceive() then throw. No close frame leaves the code at 1006. closeCode() and closeReason() report the handshake that ended the stream. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a71d32c834f0b9bfaa5a9970338df5014" name="a71d32c834f0b9bfaa5a9970338df5014"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71d32c834f0b9bfaa5a9970338df5014">&#9670;&#160;</a></span>WebSocketSession()</h2>
+<a id="a011325c349cf7f3a68af4c40bc72774c" name="a011325c349cf7f3a68af4c40bc72774c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011325c349cf7f3a68af4c40bc72774c">&#9670;&#160;</a></span>WebSocketSession()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,24 +226,25 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
         <tr>
           <td class="memname">WebSocketSession </td>
           <td>(</td>
-          <td class="paramtype">WebSocketServlet &amp;</td>          <td class="paramname"><span class="paramname"><em>servlet</em></span>, </td>
+          <td class="paramtype">WebSocketService &amp;</td>          <td class="paramname"><span class="paramname"><em>service</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reply</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><em class="arg">servlet</em> holds this session. <em class="arg">loop</em> must be the loop of <em class="arg">stream</em>.</p>
+<p>The active WebSocketServlet owns this session. <em class="arg">reply</em> is the opening handshake reply and is valid for this call. The selected subprotocol is copied from it. The reply is not stored.</p>
+<p>The idle timeout and the data-message limit are copied from <em class="arg">service</em>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">%std::logic_error</td><td>if <em class="arg">loop</em> is not the loop of <em class="arg">stream</em>. </td></tr>
+    <tr><td class="paramname">%std::runtime_error</td><td>if Sec-WebSocket-Protocol is not one protocol token. </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,6 +252,48 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a429c44128a371ec5f6bcf86ed044cec6" name="a429c44128a371ec5f6bcf86ed044cec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429c44128a371ec5f6bcf86ed044cec6">&#9670;&#160;</a></span>protocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; protocol </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Empty when the opening reply selected no name. </p>
+
+</div>
+</div>
+<a id="a51f5e3c115973b763ec7ced957bc7c7c" name="a51f5e3c115973b763ec7ced957bc7c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f5e3c115973b763ec7ced957bc7c7c">&#9670;&#160;</a></span>beginSend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beginSend </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>finished</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The completion flag is true when this is the last part of the message. Call beginSend(false) while more body will be written.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">finished</td><td>True if this is the last part of the message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abd47018d0d4fbae7e1a15807bb728662" name="abd47018d0d4fbae7e1a15807bb728662"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd47018d0d4fbae7e1a15807bb728662">&#9670;&#160;</a></span>endSend()</h2>
 
@@ -257,7 +308,38 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Progress of this send step. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Progress of this send step.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the send has not completed or the stream has ended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a91151db77a69a3a7a4c3ae3cabd304b7" name="a91151db77a69a3a7a4c3ae3cabd304b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91151db77a69a3a7a4c3ae3cabd304b7">&#9670;&#160;</a></span>beginReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beginReceive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Starts processing incoming frames. Frames received before this call stay in the stream.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if a receive is outstanding, or the stream has ended. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if a protocol violation ended the frame stream, or a previous read failed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -275,12 +357,141 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Progress of this receive step. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Progress of this receive step.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the receive has not completed. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if the stream ended or a previous read failed. closeCode() and closeReason() report a close handshake. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ac92aac8031b33474af687b6ce0b0263e" name="ac92aac8031b33474af687b6ce0b0263e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac92aac8031b33474af687b6ce0b0263e">&#9670;&#160;</a></span>onClose()</h2>
+<a id="a6d66e8ae606149af2db0565c4b7db40f" name="a6d66e8ae606149af2db0565c4b7db40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d66e8ae606149af2db0565c4b7db40f">&#9670;&#160;</a></span>beginPing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beginPing </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>payload</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">n</em> is greater than 125, or if <em class="arg">payload</em> is null and <em class="arg">n</em> is nonzero. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if a ping is outstanding, a close is queued, or the stream has ended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d5f8e3c5e693aadf7c42016761ce987" name="a1d5f8e3c5e693aadf7c42016761ce987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d5f8e3c5e693aadf7c42016761ce987">&#9670;&#160;</a></span>endPing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void endPing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the ping is not ready. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if writing the ping failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe2bdfcbb534bfd081819bff65806345" name="afe2bdfcbb534bfd081819bff65806345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2bdfcbb534bfd081819bff65806345">&#9670;&#160;</a></span>beginShutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beginShutdown </td>
+          <td>(</td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>code</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1000</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>reason</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">code</em> is 1005, 1006 or 1015, if <em class="arg">reason</em> is longer than 123 bytes, or if <em class="arg">reason</em> is not valid UTF-8. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if a shutdown is outstanding, or a close is already queued. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aafa25c54a2e03205877efafa43f6307e" name="aafa25c54a2e03205877efafa43f6307e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa25c54a2e03205877efafa43f6307e">&#9670;&#160;</a></span>endShutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void endShutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the shutdown is not ready. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if the close handshake failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae591df94fc66ccb85cbb6565368bca">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Does not block and emits nothing. The servlet releases this session. beginSend() and beginReceive() then throw. No close frame leaves closeCode() at 1006. </p>
+
+</div>
+</div>
+<a id="a7c4f4644d616a708bffdff0e5fb3860c" name="a7c4f4644d616a708bffdff0e5fb3860c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4f4644d616a708bffdff0e5fb3860c">&#9670;&#160;</a></span>onPingReady()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +500,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onClose </td>
+          <td class="memname">virtual void onPingReady </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -297,11 +508,63 @@ virtual void&#160;</td><td class="memItemRight"><b>onOutput</b> ()=0</td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This object is still alive. The servlet releases it after this call returns. Do not call endReceive() or endSend(). </p>
+<p>Call endPing() to observe a write error. </p>
+
+</div>
+</div>
+<a id="a08cb1d3f74658518acf512dc91d5d1da" name="a08cb1d3f74658518acf512dc91d5d1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08cb1d3f74658518acf512dc91d5d1da">&#9670;&#160;</a></span>onShutdownReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onShutdownReady </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The stream is detached. Call endShutdown() to observe a close-handshake error. </p>
+
+</div>
+</div>
+<a id="a13b107d6beab9251f7b04ce69d8274bb" name="a13b107d6beab9251f7b04ce69d8274bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b107d6beab9251f7b04ce69d8274bb">&#9670;&#160;</a></span>onPong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onPong </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>payload</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The payload contains arbitrary bytes and is valid for the duration of this call. A pong does not change incoming() or run onInput(). </p>
 
 </div>
 </div>

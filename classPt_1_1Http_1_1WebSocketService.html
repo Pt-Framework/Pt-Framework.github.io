@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p><code>#include &lt;<a class="el" href="WebSocketService_8h_source.html">Pt/Http/WebSocketService.h</a>&gt;</code></p>
 
-<p>Factory and endpoint policy for <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> sessions.  
+<p>Mapped service and factory for <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> sessions.  
  <a href="#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1Http_1_1Service.html">Service</a>, and <a class="el" href="classPt_1_1Connectable.html">Connectable</a>.</p>
@@ -93,20 +93,34 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7361bc88a2a3f6dcddff5ddb5e4849fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="memitem:adcc09da5f4cec09431ddead0330e80e5" id="r_adcc09da5f4cec09431ddead0330e80e5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adcc09da5f4cec09431ddead0330e80e5">~WebSocketService</a> ()</td></tr>
 <tr class="memdesc:adcc09da5f4cec09431ddead0330e80e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:aa465483d1ca513ba78668fbfe65c18c3" id="r_aa465483d1ca513ba78668fbfe65c18c3"><td class="memItemLeft"><a id="aa465483d1ca513ba78668fbfe65c18c3" name="aa465483d1ca513ba78668fbfe65c18c3"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight"><b>protocols</b> () const</td></tr>
+<tr class="memdesc:aa465483d1ca513ba78668fbfe65c18c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns accepted Sec-WebSocket-Protocol names in preference order. <br /></td></tr>
+<tr class="memitem:acb6c9bf9d2ee4de85f8cf7e507f3d4e8" id="r_acb6c9bf9d2ee4de85f8cf7e507f3d4e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb6c9bf9d2ee4de85f8cf7e507f3d4e8">addProtocol</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:acb6c9bf9d2ee4de85f8cf7e507f3d4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one accepted Sec-WebSocket-Protocol name.  <br /></td></tr>
+<tr class="memitem:afe675637bcdbeb2139c7088be95b0e2e" id="r_afe675637bcdbeb2139c7088be95b0e2e"><td class="memItemLeft"><a id="afe675637bcdbeb2139c7088be95b0e2e" name="afe675637bcdbeb2139c7088be95b0e2e"></a>
+void&#160;</td><td class="memItemRight"><b>clearProtocols</b> ()</td></tr>
+<tr class="memdesc:afe675637bcdbeb2139c7088be95b0e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drops every accepted protocol name. <br /></td></tr>
 <tr class="memitem:ae7c7acaf45230ae562568cdb3cf6991c" id="r_ae7c7acaf45230ae562568cdb3cf6991c"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ae7c7acaf45230ae562568cdb3cf6991c">maxSockets</a> () const</td></tr>
 <tr class="memdesc:ae7c7acaf45230ae562568cdb3cf6991c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum number of live sessions.  <br /></td></tr>
 <tr class="memitem:a482542923f006197b1b8abfcf2584e70" id="r_a482542923f006197b1b8abfcf2584e70"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a482542923f006197b1b8abfcf2584e70">setMaxSockets</a> (std::size_t n)</td></tr>
 <tr class="memdesc:a482542923f006197b1b8abfcf2584e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum number of live sessions.  <br /></td></tr>
-<tr class="memitem:a004707a702cc29951ec422c865ce039e" id="r_a004707a702cc29951ec422c865ce039e"><td class="memItemLeft"><a id="a004707a702cc29951ec422c865ce039e" name="a004707a702cc29951ec422c865ce039e"></a>
-std::size_t&#160;</td><td class="memItemRight"><b>idleTimeout</b> () const</td></tr>
-<tr class="memdesc:a004707a702cc29951ec422c865ce039e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the idle timeout in milliseconds. <br /></td></tr>
+<tr class="memitem:a004707a702cc29951ec422c865ce039e" id="r_a004707a702cc29951ec422c865ce039e"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a004707a702cc29951ec422c865ce039e">idleTimeout</a> () const</td></tr>
+<tr class="memdesc:a004707a702cc29951ec422c865ce039e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the idle timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:a9e2b9df2e7d967690920963bb14ef5c1" id="r_a9e2b9df2e7d967690920963bb14ef5c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9e2b9df2e7d967690920963bb14ef5c1">setIdleTimeout</a> (std::size_t ms)</td></tr>
 <tr class="memdesc:a9e2b9df2e7d967690920963bb14ef5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the idle timeout in milliseconds.  <br /></td></tr>
-<tr class="memitem:abc2a85958399281206bcefe8a88a3bc1" id="r_abc2a85958399281206bcefe8a88a3bc1"><td class="memItemLeft"><a id="abc2a85958399281206bcefe8a88a3bc1" name="abc2a85958399281206bcefe8a88a3bc1"></a>
-std::size_t&#160;</td><td class="memItemRight"><b>maxMessageSize</b> () const</td></tr>
-<tr class="memdesc:abc2a85958399281206bcefe8a88a3bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum data message size in bytes. <br /></td></tr>
+<tr class="memitem:abc2a85958399281206bcefe8a88a3bc1" id="r_abc2a85958399281206bcefe8a88a3bc1"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abc2a85958399281206bcefe8a88a3bc1">maxMessageSize</a> () const</td></tr>
+<tr class="memdesc:abc2a85958399281206bcefe8a88a3bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum data message size in bytes.  <br /></td></tr>
 <tr class="memitem:a701e35ac0f47838d22ed0fc4c4e033ea" id="r_a701e35ac0f47838d22ed0fc4c4e033ea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a701e35ac0f47838d22ed0fc4c4e033ea">setMaxMessageSize</a> (std::size_t n)</td></tr>
 <tr class="memdesc:a701e35ac0f47838d22ed0fc4c4e033ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum data message size in bytes.  <br /></td></tr>
+<tr class="memitem:a2b2c2f4d3e7f75010c05de4065efc366" id="r_a2b2c2f4d3e7f75010c05de4065efc366"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2b2c2f4d3e7f75010c05de4065efc366">hasServlet</a> () const</td></tr>
+<tr class="memdesc:a2b2c2f4d3e7f75010c05de4065efc366"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a servlet is attached.  <br /></td></tr>
+<tr class="memitem:a55faac7ac75cd86da2de93bb05b3e9de" id="r_a55faac7ac75cd86da2de93bb05b3e9de"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a55faac7ac75cd86da2de93bb05b3e9de">socketCount</a> () const</td></tr>
+<tr class="memdesc:a55faac7ac75cd86da2de93bb05b3e9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of counted sessions.  <br /></td></tr>
+<tr class="memitem:afa8c882b88b0a79a9d40da053f190879" id="r_afa8c882b88b0a79a9d40da053f190879"><td class="memItemLeft">WebSocketSession *&#160;</td><td class="memItemRight"><a class="el" href="#afa8c882b88b0a79a9d40da053f190879">getSession</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream, const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request, const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;reply)</td></tr>
+<tr class="memdesc:afa8c882b88b0a79a9d40da053f190879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a session and counts a non-null result.  <br /></td></tr>
+<tr class="memitem:a241b984ee5c3ca47e85a17f92823bcff" id="r_a241b984ee5c3ca47e85a17f92823bcff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a241b984ee5c3ca47e85a17f92823bcff">releaseSession</a> (WebSocketSession *session)</td></tr>
+<tr class="memdesc:a241b984ee5c3ca47e85a17f92823bcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a session created by getSession().  <br /></td></tr>
 <tr class="memitem:a587b9f533237f1ff364b3df54cb4694f" id="r_a587b9f533237f1ff364b3df54cb4694f"><td class="memItemLeft"><a id="a587b9f533237f1ff364b3df54cb4694f" name="a587b9f533237f1ff364b3df54cb4694f"></a>
 <a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *&#160;</td><td class="memItemRight"><b>getResponder</b> (const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;)</td></tr>
 <tr class="memdesc:a587b9f533237f1ff364b3df54cb4694f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a responder to handle request received by a server. <br /></td></tr>
@@ -122,16 +136,16 @@ virtual <a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *&#
 <tr class="memitem:a162ab2a3150e1ae39ce92f4059402f95" id="r_a162ab2a3150e1ae39ce92f4059402f95"><td class="memItemLeft"><a id="a162ab2a3150e1ae39ce92f4059402f95" name="a162ab2a3150e1ae39ce92f4059402f95"></a>
 virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a class="el" href="classPt_1_1Http_1_1Responder.html">Responder</a> *responder)</td></tr>
 <tr class="memdesc:a162ab2a3150e1ae39ce92f4059402f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the handshake responder. <br /></td></tr>
-<tr class="memitem:aeb521b96a081afa78d5db0714c9e517f" id="r_aeb521b96a081afa78d5db0714c9e517f"><td class="memItemLeft">virtual <a class="el" href="classPt_1_1Http_1_1WebSocketSession.html">WebSocketSession</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aeb521b96a081afa78d5db0714c9e517f">onGetSession</a> (WebSocketServlet &amp;servlet, <a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;loop, <a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream)=0</td></tr>
-<tr class="memdesc:aeb521b96a081afa78d5db0714c9e517f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the session for <em class="arg">stream</em>.  <br /></td></tr>
-<tr class="memitem:a668418855ec719f6781ca978d5ea4a1c" id="r_a668418855ec719f6781ca978d5ea4a1c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a668418855ec719f6781ca978d5ea4a1c">onReleaseSession</a> (<a class="el" href="classPt_1_1Http_1_1WebSocketSession.html">WebSocketSession</a> *session)=0</td></tr>
+<tr class="memitem:a32a1de6e6b21cbf057ba2358e4f48361" id="r_a32a1de6e6b21cbf057ba2358e4f48361"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a32a1de6e6b21cbf057ba2358e4f48361">onUpgrade</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream, const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request, const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;reply) final</td></tr>
+<tr class="memdesc:a32a1de6e6b21cbf057ba2358e4f48361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts or declines the upgraded stream.  <br /></td></tr>
+<tr class="memitem:af8aebeb45f4870e0e8e9aff579b49ecc" id="r_af8aebeb45f4870e0e8e9aff579b49ecc"><td class="memItemLeft">virtual WebSocketSession *&#160;</td><td class="memItemRight"><a class="el" href="#af8aebeb45f4870e0e8e9aff579b49ecc">onGetSession</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream, const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;request, const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;reply)=0</td></tr>
+<tr class="memdesc:af8aebeb45f4870e0e8e9aff579b49ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the session for <em class="arg">stream</em>.  <br /></td></tr>
+<tr class="memitem:a668418855ec719f6781ca978d5ea4a1c" id="r_a668418855ec719f6781ca978d5ea4a1c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a668418855ec719f6781ca978d5ea4a1c">onReleaseSession</a> (WebSocketSession *session)=0</td></tr>
 <tr class="memdesc:a668418855ec719f6781ca978d5ea4a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a session created by onGetSession().  <br /></td></tr>
-<tr class="memitem:ab3bcd74e731265c8eec4efbbb401e8f9" id="r_ab3bcd74e731265c8eec4efbbb401e8f9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab3bcd74e731265c8eec4efbbb401e8f9">onUpgrade</a> (<a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;stream) final</td></tr>
-<tr class="memdesc:ab3bcd74e731265c8eec4efbbb401e8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts or declines the upgraded stream.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>WebSocketService is the server-side factory. Map it with an HTTP servlet like any other service, so the handshake request reaches it. This type does not keep the sessions it creates. A separate release scope does, and that scope is destroyed before this service so the factory is still fully constructed when the last session is released. The service destructor does not release sessions. By then the derived destructor has already run, and the virtual release call and the allocator are gone.</p>
-<p>The example is the usual server setup. The mapping servlet and the release scope are different objects.</p>
+<div class="textblock"><p>WebSocketService is the server-side factory. Map it with an HTTP servlet like any other service, so the handshake request reaches it. This service owns the endpoint policy and the allocator. A separate WebSocketServlet owns the live sessions. Destroy that servlet before this service. Its destruction releases every remaining session while the derived service is still fully constructed. This destructor does not release sessions. By then the derived destructor has already run, and the virtual release call and the allocator are gone. This service keeps a non-owning pointer to its one active servlet.</p>
+<p>The example is the usual server setup. The mapping servlet and the session owner are different objects. The three setters are endpoint policy of this service. They apply before a servlet is constructed.</p>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="classPt_1_1Http_1_1BasicWebSocketService.html">Pt::Http::BasicWebSocketService&lt;EchoSession&gt;</a> EchoService;</div>
 <div class="line"> </div>
 <div class="line">EchoService service;</div>
@@ -141,29 +155,34 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
 <div class="line"><a class="code hl_class" href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a> sockets(service);</div>
 <div class="line"><a class="code hl_class" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> mapUrl(<span class="stringliteral">&quot;/ws&quot;</span>, service);</div>
 <div class="line">server.addServlet(mapUrl);</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1BasicWebSocketService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicWebSocketService.html">Pt::Http::BasicWebSocketService</a></div><div class="ttdoc">WebSocket service for one session type.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:214</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1BasicWebSocketService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicWebSocketService.html">Pt::Http::BasicWebSocketService</a></div><div class="ttdoc">WebSocket service for one session type.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:326</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MapUrl_html"><div class="ttname"><a href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a></div><div class="ttdoc">Maps requests to a service by URL.</div><div class="ttdef"><b>Definition</b> Servlet.h:147</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketService_html_a482542923f006197b1b8abfcf2584e70"><div class="ttname"><a href="#a482542923f006197b1b8abfcf2584e70">Pt::Http::WebSocketService::setMaxSockets</a></div><div class="ttdeci">void setMaxSockets(std::size_t n)</div><div class="ttdoc">Sets the maximum number of live sessions.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketServlet_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a></div><div class="ttdoc">Release scope of the sessions one WebSocket service creates.</div><div class="ttdef"><b>Definition</b> WebSocketServlet.h:66</div></div>
-</div><!-- fragment --><p>The handshake responder answers a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade with 101, with 503 when the accepted-session limit is already reached, or with 404 when the request is not a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade. The responder is released before the server opens the stream. It is not the session. setMaxSockets(), setIdleTimeout() and setMaxMessageSize() are endpoint policy. The handshake reads the session limit. The session base copies the idle timeout and the data-message limit onto the connection before the derived constructor runs. One service has one registered WebSocketServlet. A second registration replaces it. The previous servlet keeps the sessions it already holds and releases them itself.</p>
-<p>After a finished 101 the HTTP server keeps the connection and delivers the upgraded stream to this service. This class implements that delivery and does not pass it on. It forwards the stream to the registered servlet. The servlet asks the factory for a session and passes the loop of the stream together with the stream. The session binds the stream in its constructor, which accepts the upgrade. A null session, or no registered servlet, leaves the stream unbound, and the HTTP server closes it.</p>
-<p>BasicWebSocketService is this factory for one session type. Derive this class when the session type depends on the upgrade, or when the session constructor needs more than the servlet, the loop and the stream.</p>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketService_html_a482542923f006197b1b8abfcf2584e70"><div class="ttname"><a href="#a482542923f006197b1b8abfcf2584e70">Pt::Http::WebSocketService::setMaxSockets</a></div><div class="ttdeci">void setMaxSockets(std::size_t n)</div><div class="ttdoc">Sets the maximum number of live sessions.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:180</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketServlet_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a></div><div class="ttdoc">Owner of the sessions one WebSocket service creates.</div><div class="ttdef"><b>Definition</b> WebSocketServlet.h:70</div></div>
+</div><!-- fragment --><p>The handshake responder answers a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade with 101, with 503 when no servlet is attached or the accepted-session limit is already reached, or with 404 when the request is not a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade. The responder is released before the server opens the stream. It is not the session. addProtocol() names one Sec-WebSocket-Protocol value this endpoint accepts. Several calls name several values, in preference order. An empty list accepts the upgrade and selects no name. A non-empty list selects the first offered name that is also accepted, and a request that offers none of them is answered with 400. setMaxSockets(), setIdleTimeout() and setMaxMessageSize() are endpoint policy of this service. They apply before a servlet is constructed. The handshake reads the session limit here. The session base copies the idle timeout and the data-message limit onto the connection before the derived constructor runs. A missing servlet is still 503 when maxSockets() is zero. One service has one active WebSocketServlet. Constructing a second servlet throws std::logic_error.</p>
+<p>After a finished 101 the HTTP server keeps the connection and delivers the upgraded stream to this service. This class implements that delivery and asks the servlet to create a session through getSession() with the stream, the opening request, and the opening reply. getSession() calls onGetSession() and counts a non-null session. The session binds the stream in its constructor, which accepts the upgrade. A null session leaves the stream unbound, and the HTTP server closes it. A null return is not counted. No attached servlet is a 503 from the handshake. The null check here covers only the window after a finished 101 and before the stream is delivered.</p>
+<p>BasicWebSocketService is this factory for one session type. Derive this class when the session type depends on the upgrade, or when the session constructor needs more than the service, the stream, and the opening reply.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a>* ChatService::onGetSession(</div>
-<div class="line">    <a class="code hl_class" href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a>&amp; servlet,</div>
-<div class="line">    <a class="code hl_class" href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a>&amp; loop,</div>
-<div class="line">    <a class="code hl_class" href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a>&amp; stream)</div>
+<div class="line">    <a class="code hl_class" href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a>&amp; stream,</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a>&amp; request,</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a>&amp; reply)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> ChatSession(servlet, loop, stream, _rooms);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* user = request.<a class="code hl_function" href="classPt_1_1Http_1_1Message.html#a80184e6957e8e9e0f13d6bdaf8196dd3">header</a>().<a class="code hl_function" href="classPt_1_1Http_1_1MessageHeader.html#a0931f43c5c8e638311426b25b3d21b43">get</a>(<span class="stringliteral">&quot;X-User&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> ChatSession(*<span class="keyword">this</span>, stream, reply, _rooms,</div>
+<div class="line">                           user ? user : <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> ChatService::onReleaseSession(<a class="code hl_class" href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a>* session)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">delete</span> session;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a connection.</div><div class="ttdef"><b>Definition</b> Stream.h:90</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div><div class="ttdoc">Server facade of one accepted WebSocket stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:126</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html">Pt::System::EventLoop</a></div><div class="ttdoc">Event loop of a thread or process.</div><div class="ttdef"><b>Definition</b> EventLoop.h:83</div></div>
-</div><!-- fragment --><p>onGetSession() creates the session and onReleaseSession() destroys it. The two methods must use the same allocator. A pool, or any other detach, lives in the derived service. Return null from onGetSession() to decline the upgrade. </p>
+<div class="ttc" id="aclassPt_1_1Http_1_1MessageHeader_html_a0931f43c5c8e638311426b25b3d21b43"><div class="ttname"><a href="classPt_1_1Http_1_1MessageHeader.html#a0931f43c5c8e638311426b25b3d21b43">Pt::Http::MessageHeader::get</a></div><div class="ttdeci">const char * get(const char *key) const</div><div class="ttdoc">Returns a field value.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Message_html_a80184e6957e8e9e0f13d6bdaf8196dd3"><div class="ttname"><a href="classPt_1_1Http_1_1Message.html#a80184e6957e8e9e0f13d6bdaf8196dd3">Pt::Http::Message::header</a></div><div class="ttdeci">MessageHeader &amp; header()</div><div class="ttdoc">Returns the header of the message.</div><div class="ttdef"><b>Definition</b> Message.h:472</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Reply_html"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a></div><div class="ttdoc">HTTP reply message.</div><div class="ttdef"><b>Definition</b> Reply.h:64</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Request_html"><div class="ttname"><a href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a></div><div class="ttdoc">HTTP request message.</div><div class="ttdef"><b>Definition</b> Request.h:65</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a connection.</div><div class="ttdef"><b>Definition</b> Stream.h:92</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div><div class="ttdoc">Server facade of one accepted WebSocket stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:155</div></div>
+</div><!-- fragment --><p>getSession() is the factory call. It calls onGetSession() and counts a non-null session. releaseSession() calls onReleaseSession() and drops that count. onGetSession() creates the session and onReleaseSession() destroys it. The request argument is the opening request. The reply argument is the opening reply. Both are valid for that call. Copy any header the session must keep. The session does not store the request or the reply. The two methods must use the same allocator. A pool, or any other detach, lives in the derived service. Return null from onGetSession() to decline the upgrade. The servlet owns the live sessions only. This service owns the endpoint policy, the allocator, and the count of sessions getSession() returned and releaseSession() has not yet released. This service does not keep a session list. socketCount() is that count. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adcc09da5f4cec09431ddead0330e80e5" name="adcc09da5f4cec09431ddead0330e80e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcc09da5f4cec09431ddead0330e80e5">&#9670;&#160;</a></span>~WebSocketService()</h2>
@@ -179,11 +198,35 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Does not release sessions. The WebSocketServlet of this service does that, and it is destroyed first. </p>
+<p>Does not release sessions. The active WebSocketServlet releases them before this destructor runs. </p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="acb6c9bf9d2ee4de85f8cf7e507f3d4e8" name="acb6c9bf9d2ee4de85f8cf7e507f3d4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6c9bf9d2ee4de85f8cf7e507f3d4e8">&#9670;&#160;</a></span>addProtocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addProtocol </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Names are matched in the order they were added. An empty list accepts the upgrade and selects no name.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">name</em> is empty or is not a single protocol token. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae7c7acaf45230ae562568cdb3cf6991c" name="ae7c7acaf45230ae562568cdb3cf6991c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7c7acaf45230ae562568cdb3cf6991c">&#9670;&#160;</a></span>maxSockets()</h2>
 
@@ -198,7 +241,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Zero means no limit. </p>
+<p>Zero means no limit. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
 
 </div>
 </div>
@@ -216,7 +259,25 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A handshake above this limit is answered with 503. Zero means no limit. </p>
+<p>A handshake above this limit is answered with 503. Zero means no limit. A missing servlet is still 503 when this limit is zero. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a004707a702cc29951ec422c865ce039e" name="a004707a702cc29951ec422c865ce039e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004707a702cc29951ec422c865ce039e">&#9670;&#160;</a></span>idleTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t idleTimeout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zero means the idle timeout is disabled. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
 
 </div>
 </div>
@@ -234,7 +295,25 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>An accepted socket is closed after <em class="arg">ms</em> without a finished transfer. A finished send or receive restarts the timeout. Zero disables it. </p>
+<p>An accepted socket is closed after <em class="arg">ms</em> without a finished transfer. Transferred data bytes restart the timeout. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="abc2a85958399281206bcefe8a88a3bc1" name="abc2a85958399281206bcefe8a88a3bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc2a85958399281206bcefe8a88a3bc1">&#9670;&#160;</a></span>maxMessageSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t maxMessageSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zero means the limit is disabled. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
 
 </div>
 </div>
@@ -252,12 +331,93 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A larger data message closes the socket. Zero disables the limit. The count is the declared payload from the first data opcode to FIN. </p>
+<p>A larger data message closes the socket. Zero disables the limit. The count is the declared payload from the first data opcode to FIN. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
 
 </div>
 </div>
-<a id="aeb521b96a081afa78d5db0714c9e517f" name="aeb521b96a081afa78d5db0714c9e517f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb521b96a081afa78d5db0714c9e517f">&#9670;&#160;</a></span>onGetSession()</h2>
+<a id="a2b2c2f4d3e7f75010c05de4065efc366" name="a2b2c2f4d3e7f75010c05de4065efc366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2c2f4d3e7f75010c05de4065efc366">&#9670;&#160;</a></span>hasServlet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasServlet </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A missing servlet is a separate state from a zero maxSockets(). </p>
+
+</div>
+</div>
+<a id="a55faac7ac75cd86da2de93bb05b3e9de" name="a55faac7ac75cd86da2de93bb05b3e9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55faac7ac75cd86da2de93bb05b3e9de">&#9670;&#160;</a></span>socketCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t socketCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A session is counted when getSession() returns it, and dropped when releaseSession() releases it. A null return is not counted. Zero is not a reached limit. A missing servlet is a separate state, read with hasServlet(). </p>
+
+</div>
+</div>
+<a id="afa8c882b88b0a79a9d40da053f190879" name="afa8c882b88b0a79a9d40da053f190879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8c882b88b0a79a9d40da053f190879">&#9670;&#160;</a></span>getSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebSocketSession * getSession </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reply</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calls onGetSession(). <em class="arg">request</em> is the opening request and <em class="arg">reply</em> is the opening reply. Both are valid until this call returns. A null return declines the upgrade and is not counted. </p>
+
+</div>
+</div>
+<a id="a241b984ee5c3ca47e85a17f92823bcff" name="a241b984ee5c3ca47e85a17f92823bcff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241b984ee5c3ca47e85a17f92823bcff">&#9670;&#160;</a></span>releaseSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void releaseSession </td>
+          <td>(</td>
+          <td class="paramtype">WebSocketSession *</td>          <td class="paramname"><span class="paramname"><em>session</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calls onReleaseSession() and drops the count. A null <em class="arg">session</em> is ignored. Called while this service is still fully constructed. </p>
+
+</div>
+</div>
+<a id="a32a1de6e6b21cbf057ba2358e4f48361" name="a32a1de6e6b21cbf057ba2358e4f48361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a1de6e6b21cbf057ba2358e4f48361">&#9670;&#160;</a></span>onUpgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,19 +426,56 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classPt_1_1Http_1_1WebSocketSession.html">WebSocketSession</a> * onGetSession </td>
+          <td class="memname">virtual void onUpgrade </td>
           <td>(</td>
-          <td class="paramtype">WebSocketServlet &amp;</td>          <td class="paramname"><span class="paramname"><em>servlet</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPt_1_1System_1_1EventLoop.html">System::EventLoop</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reply</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel final">final</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implemented by this class. A derived service uses onGetSession() instead. </p>
+
+<p>Reimplemented from <a class="el" href="classPt_1_1Http_1_1Service.html#ae3c8927d6a8259fc4ac4020bbfe56d93">Service</a>.</p>
+
+</div>
+</div>
+<a id="af8aebeb45f4870e0e8e9aff579b49ecc" name="af8aebeb45f4870e0e8e9aff579b49ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8aebeb45f4870e0e8e9aff579b49ecc">&#9670;&#160;</a></span>onGetSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual WebSocketSession * onGetSession </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Request.html">Request</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPt_1_1Http_1_1Reply.html">Reply</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reply</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -287,9 +484,9 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p><em class="arg">servlet</em> holds the returned session. <em class="arg">loop</em> serializes <em class="arg">stream</em>. Return null to decline the upgrade. </p>
+<p>Called by getSession(). The active WebSocketServlet owns a non-null result. <em class="arg">request</em> is the opening request and <em class="arg">reply</em> is the opening reply. Both are valid for this call. Copy any header the session must keep. Return null to decline the upgrade. A null return is not counted. </p>
 
-<p>Implemented in <a class="el" href="classPt_1_1Http_1_1BasicWebSocketService.html#a1048fc128182baa660f4d7a0e195c6fa">BasicWebSocketService&lt; S, Alloc &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPt_1_1Http_1_1BasicWebSocketService.html#a4988ad3f42920b0b1c66cfbe6ad64f5d">BasicWebSocketService&lt; S, Alloc &gt;</a>.</p>
 
 </div>
 </div>
@@ -305,7 +502,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         <tr>
           <td class="memname">virtual void onReleaseSession </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1WebSocketSession.html">WebSocketSession</a> *</td>          <td class="paramname"><span class="paramname"><em>session</em></span></td><td>)</td>
+          <td class="paramtype">WebSocketSession *</td>          <td class="paramname"><span class="paramname"><em>session</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -315,37 +512,9 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Called by the WebSocketServlet that holds the session, while this service is still fully constructed. </p>
+<p>Called by releaseSession() while this service is still fully constructed. The servlet has already removed the session from its list. </p>
 
 <p>Implemented in <a class="el" href="classPt_1_1Http_1_1BasicWebSocketService.html#a91995c7bf23931b13fb06f7bc13bbba6">BasicWebSocketService&lt; S, Alloc &gt;</a>.</p>
-
-</div>
-</div>
-<a id="ab3bcd74e731265c8eec4efbbb401e8f9" name="ab3bcd74e731265c8eec4efbbb401e8f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3bcd74e731265c8eec4efbbb401e8f9">&#9670;&#160;</a></span>onUpgrade()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onUpgrade </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classPt_1_1Http_1_1Stream.html">Stream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel final">final</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Implemented by this class. A derived service uses onGetSession() instead. </p>
-
-<p>Reimplemented from <a class="el" href="classPt_1_1Http_1_1Service.html#af6c9c06c20d093bb1a28418a6685c14b">Service</a>.</p>
 
 </div>
 </div>

@@ -89,9 +89,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adf9d3d04491f29039b813537178e5734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> that handshakes through <em class="arg">client</em>.  <br /></td></tr>
 <tr class="memitem:ab4580ff1c09aa4b2401d626d33e4584f" id="r_ab4580ff1c09aa4b2401d626d33e4584f"><td class="memItemLeft"><a id="ab4580ff1c09aa4b2401d626d33e4584f" name="ab4580ff1c09aa4b2401d626d33e4584f"></a>
 &#160;</td><td class="memItemRight"><b>~WebSocket</b> ()</td></tr>
-<tr class="memdesc:ab4580ff1c09aa4b2401d626d33e4584f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memdesc:ab4580ff1c09aa4b2401d626d33e4584f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls close(). <br /></td></tr>
 <tr class="memitem:ae26548d592b451c870cf7b71fad30777" id="r_ae26548d592b451c870cf7b71fad30777"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae26548d592b451c870cf7b71fad30777">beginConnect</a> (const std::string &amp;url, const std::string &amp;origin=std::string())</td></tr>
 <tr class="memdesc:ae26548d592b451c870cf7b71fad30777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a client handshake for <em class="arg">url</em>.  <br /></td></tr>
+<tr class="memitem:acb6c9bf9d2ee4de85f8cf7e507f3d4e8" id="r_acb6c9bf9d2ee4de85f8cf7e507f3d4e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb6c9bf9d2ee4de85f8cf7e507f3d4e8">addProtocol</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:acb6c9bf9d2ee4de85f8cf7e507f3d4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offers one Sec-WebSocket-Protocol name.  <br /></td></tr>
+<tr class="memitem:a429c44128a371ec5f6bcf86ed044cec6" id="r_a429c44128a371ec5f6bcf86ed044cec6"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a429c44128a371ec5f6bcf86ed044cec6">protocol</a> () const</td></tr>
+<tr class="memdesc:a429c44128a371ec5f6bcf86ed044cec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the protocol name echoed by the server.  <br /></td></tr>
 <tr class="memitem:a5f127e10469b629cc0cb35a7c75707c3" id="r_a5f127e10469b629cc0cb35a7c75707c3"><td class="memItemLeft"><a id="a5f127e10469b629cc0cb35a7c75707c3" name="a5f127e10469b629cc0cb35a7c75707c3"></a>
 <a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>connected</b> ()</td></tr>
 <tr class="memdesc:a5f127e10469b629cc0cb35a7c75707c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when the handshake finishes. <br /></td></tr>
@@ -103,18 +107,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c75f2b0e02a68d89f12bcdebe7a7474" id="r_a9c75f2b0e02a68d89f12bcdebe7a7474"><td class="memItemLeft"><a id="a9c75f2b0e02a68d89f12bcdebe7a7474" name="a9c75f2b0e02a68d89f12bcdebe7a7474"></a>
 <a class="el" href="classPt_1_1Http_1_1WebSocketMessage.html">WebSocketMessage</a> &amp;&#160;</td><td class="memItemRight"><b>outgoing</b> ()</td></tr>
 <tr class="memdesc:a9c75f2b0e02a68d89f12bcdebe7a7474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outgoing message. <br /></td></tr>
-<tr class="memitem:a02db88957d7c1859589a7ed5ef79b3d5" id="r_a02db88957d7c1859589a7ed5ef79b3d5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02db88957d7c1859589a7ed5ef79b3d5">beginSend</a> ()</td></tr>
-<tr class="memdesc:a02db88957d7c1859589a7ed5ef79b3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins sending outgoing().  <br /></td></tr>
+<tr class="memitem:a51f5e3c115973b763ec7ced957bc7c7c" id="r_a51f5e3c115973b763ec7ced957bc7c7c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51f5e3c115973b763ec7ced957bc7c7c">beginSend</a> (bool finished=true)</td></tr>
+<tr class="memdesc:a51f5e3c115973b763ec7ced957bc7c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins sending outgoing().  <br /></td></tr>
 <tr class="memitem:abd47018d0d4fbae7e1a15807bb728662" id="r_abd47018d0d4fbae7e1a15807bb728662"><td class="memItemLeft"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html">MessageProgress</a>&#160;</td><td class="memItemRight"><a class="el" href="#abd47018d0d4fbae7e1a15807bb728662">endSend</a> ()</td></tr>
 <tr class="memdesc:abd47018d0d4fbae7e1a15807bb728662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the send started by beginSend().  <br /></td></tr>
 <tr class="memitem:a91151db77a69a3a7a4c3ae3cabd304b7" id="r_a91151db77a69a3a7a4c3ae3cabd304b7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a> ()</td></tr>
 <tr class="memdesc:a91151db77a69a3a7a4c3ae3cabd304b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins receiving into incoming().  <br /></td></tr>
 <tr class="memitem:aa4e20e6fcca8f2a5079e2027f5b364cd" id="r_aa4e20e6fcca8f2a5079e2027f5b364cd"><td class="memItemLeft"><a class="el" href="classPt_1_1Http_1_1MessageProgress.html">MessageProgress</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa4e20e6fcca8f2a5079e2027f5b364cd">endReceive</a> ()</td></tr>
 <tr class="memdesc:aa4e20e6fcca8f2a5079e2027f5b364cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the receive started by beginReceive().  <br /></td></tr>
-<tr class="memitem:a122ddbfe6d37289f9a66013fc731ba3b" id="r_a122ddbfe6d37289f9a66013fc731ba3b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a122ddbfe6d37289f9a66013fc731ba3b">ping</a> (const char *payload=0, std::size_t n=0)</td></tr>
-<tr class="memdesc:a122ddbfe6d37289f9a66013fc731ba3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a ping with an optional payload of at most 125 bytes.  <br /></td></tr>
-<tr class="memitem:a5043c42dc88f8788fb4b6a51c9bc972b" id="r_a5043c42dc88f8788fb4b6a51c9bc972b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5043c42dc88f8788fb4b6a51c9bc972b">close</a> (unsigned code=1000, const std::string &amp;reason=std::string())</td></tr>
-<tr class="memdesc:a5043c42dc88f8788fb4b6a51c9bc972b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a close frame and ends the stream after the close handshake.  <br /></td></tr>
+<tr class="memitem:a6d66e8ae606149af2db0565c4b7db40f" id="r_a6d66e8ae606149af2db0565c4b7db40f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6d66e8ae606149af2db0565c4b7db40f">beginPing</a> (const char *payload=0, std::size_t n=0)</td></tr>
+<tr class="memdesc:a6d66e8ae606149af2db0565c4b7db40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins writing a ping with an optional payload of at most 125 bytes.  <br /></td></tr>
+<tr class="memitem:a1d5f8e3c5e693aadf7c42016761ce987" id="r_a1d5f8e3c5e693aadf7c42016761ce987"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1d5f8e3c5e693aadf7c42016761ce987">endPing</a> ()</td></tr>
+<tr class="memdesc:a1d5f8e3c5e693aadf7c42016761ce987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the ping started by beginPing().  <br /></td></tr>
+<tr class="memitem:afe2bdfcbb534bfd081819bff65806345" id="r_afe2bdfcbb534bfd081819bff65806345"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe2bdfcbb534bfd081819bff65806345">beginShutdown</a> (unsigned code=1000, const std::string &amp;reason=std::string())</td></tr>
+<tr class="memdesc:afe2bdfcbb534bfd081819bff65806345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a close handshake.  <br /></td></tr>
+<tr class="memitem:aafa25c54a2e03205877efafa43f6307e" id="r_aafa25c54a2e03205877efafa43f6307e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aafa25c54a2e03205877efafa43f6307e">endShutdown</a> ()</td></tr>
+<tr class="memdesc:aafa25c54a2e03205877efafa43f6307e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes the shutdown started by beginShutdown().  <br /></td></tr>
+<tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the stream and writes no frame.  <br /></td></tr>
 <tr class="memitem:a0d1009a2dc9fdb903e8ab01c95393784" id="r_a0d1009a2dc9fdb903e8ab01c95393784"><td class="memItemLeft"><a id="a0d1009a2dc9fdb903e8ab01c95393784" name="a0d1009a2dc9fdb903e8ab01c95393784"></a>
 unsigned&#160;</td><td class="memItemRight"><b>closeCode</b> () const</td></tr>
 <tr class="memdesc:a0d1009a2dc9fdb903e8ab01c95393784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the close status code of the handshake that ended the stream. <br /></td></tr>
@@ -127,14 +137,18 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 <tr class="memitem:a33f94d9b65546ead3264779babf7c804" id="r_a33f94d9b65546ead3264779babf7c804"><td class="memItemLeft"><a id="a33f94d9b65546ead3264779babf7c804" name="a33f94d9b65546ead3264779babf7c804"></a>
 <a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><b>outputReady</b> ()</td></tr>
 <tr class="memdesc:a33f94d9b65546ead3264779babf7c804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when data bytes were sent. <br /></td></tr>
-<tr class="memitem:afb6d8384785b0d7c48620bb119eea7aa" id="r_afb6d8384785b0d7c48620bb119eea7aa"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afb6d8384785b0d7c48620bb119eea7aa">closed</a> ()</td></tr>
-<tr class="memdesc:afb6d8384785b0d7c48620bb119eea7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when the stream ends.  <br /></td></tr>
+<tr class="memitem:aa076e029c3f0cc66a60a1869c989756f" id="r_aa076e029c3f0cc66a60a1869c989756f"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa076e029c3f0cc66a60a1869c989756f">pingReady</a> ()</td></tr>
+<tr class="memdesc:aa076e029c3f0cc66a60a1869c989756f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a ping operation completes.  <br /></td></tr>
+<tr class="memitem:aa12b1aca889edc6956270fbb63b9b2dc" id="r_aa12b1aca889edc6956270fbb63b9b2dc"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa12b1aca889edc6956270fbb63b9b2dc">shutdownReady</a> ()</td></tr>
+<tr class="memdesc:aa12b1aca889edc6956270fbb63b9b2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted when a shutdown operation completes.  <br /></td></tr>
+<tr class="memitem:ae3d4fe650b91ddae9921c739e33338de" id="r_ae3d4fe650b91ddae9921c739e33338de"><td class="memItemLeft"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp;, const std::string &amp; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae3d4fe650b91ddae9921c739e33338de">pong</a> ()</td></tr>
+<tr class="memdesc:ae3d4fe650b91ddae9921c739e33338de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signal emitted for a received pong.  <br /></td></tr>
 <tr class="memitem:a4e6264069bc112d5f7a636525f88a396" id="r_a4e6264069bc112d5f7a636525f88a396"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e6264069bc112d5f7a636525f88a396">setTimeout</a> (std::size_t timeout)</td></tr>
 <tr class="memdesc:a4e6264069bc112d5f7a636525f88a396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stream timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:a5f5b5450c6eed3b6a2171bc9cb14c286" id="r_a5f5b5450c6eed3b6a2171bc9cb14c286"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5f5b5450c6eed3b6a2171bc9cb14c286">setMaxMessageSize</a> (std::size_t maxSize)</td></tr>
 <tr class="memdesc:a5f5b5450c6eed3b6a2171bc9cb14c286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream when a data message exceeds <em class="arg">maxSize</em>.  <br /></td></tr>
 <tr class="memitem:a9e2b9df2e7d967690920963bb14ef5c1" id="r_a9e2b9df2e7d967690920963bb14ef5c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9e2b9df2e7d967690920963bb14ef5c1">setIdleTimeout</a> (std::size_t ms)</td></tr>
-<tr class="memdesc:a9e2b9df2e7d967690920963bb14ef5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream after <em class="arg">ms</em> without a finished transfer.  <br /></td></tr>
+<tr class="memdesc:a9e2b9df2e7d967690920963bb14ef5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream after <em class="arg">ms</em> without a transfer.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>WebSocket is the client side of a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade. It performs the HTTP handshake through an HTTP user agent and then sends and receives payloads on the stream that handshake produces. Host, port, event loop, timeout and TLS are settings of that agent. The socket stores a reference and does not own it, so the agent must outlive the socket, including a handshake that is still waiting on the loop. After a finished 101 the socket formats the stream the client already owns. The client still owns the connection. Closing the socket closes the stream. The socket does not own the stream. A client masks every frame it writes.</p>
@@ -143,7 +157,7 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 <div class="line">{</div>
 <div class="line">    <a class="code hl_class" href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a> progress = socket.<a class="code hl_function" href="#abd47018d0d4fbae7e1a15807bb728662">endSend</a>();</div>
 <div class="line">    <span class="keywordflow">if</span>( ! progress.<a class="code hl_function" href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">finished</a>() )</div>
-<div class="line">        socket.<a class="code hl_function" href="#a02db88957d7c1859589a7ed5ef79b3d5">beginSend</a>();</div>
+<div class="line">        socket.<a class="code hl_function" href="#a51f5e3c115973b763ec7ced957bc7c7c">beginSend</a>();</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> onInputReady(<a class="code hl_class" href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a>&amp; socket)</div>
@@ -165,12 +179,8 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 <div class="line">    socket.<a class="code hl_function" href="#a18ddd0ea533304dc70208ee7a00a8e0a">endConnect</a>();</div>
 <div class="line">    socket.<a class="code hl_function" href="#a9c75f2b0e02a68d89f12bcdebe7a7474">outgoing</a>().<a class="code hl_function" href="classPt_1_1Http_1_1WebSocketMessage.html#a608e58a2f9fb7e497f91662a6e9ae4cc">setType</a>(<a class="code hl_enumvalue" href="classPt_1_1Http_1_1WebSocketMessage.html#a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocketMessage::Text</a>);</div>
 <div class="line">    socket.<a class="code hl_function" href="#a9c75f2b0e02a68d89f12bcdebe7a7474">outgoing</a>().<a class="code hl_function" href="classPt_1_1Http_1_1WebSocketMessage.html#a7284f6bfc0de35e1fa016b5bed381356">body</a>() &lt;&lt; <span class="stringliteral">&quot;hello&quot;</span>;</div>
-<div class="line">    socket.<a class="code hl_function" href="#a02db88957d7c1859589a7ed5ef79b3d5">beginSend</a>();</div>
+<div class="line">    socket.<a class="code hl_function" href="#a51f5e3c115973b763ec7ced957bc7c7c">beginSend</a>();</div>
 <div class="line">    socket.<a class="code hl_function" href="#a91151db77a69a3a7a4c3ae3cabd304b7">beginReceive</a>();</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onClosed(Pt::Http::WebSocket&amp; socket)</div>
-<div class="line">{</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">Pt::System::MainLoop loop;</div>
@@ -180,39 +190,39 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 <div class="line">socket.<a class="code hl_function" href="#a5f127e10469b629cc0cb35a7c75707c3">connected</a>() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onConnected);</div>
 <div class="line">socket.<a class="code hl_function" href="#a33f94d9b65546ead3264779babf7c804">outputReady</a>() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onOutputReady);</div>
 <div class="line">socket.<a class="code hl_function" href="#aa7d5e7467d444d57c86ea90e1a80c010">inputReady</a>() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onInputReady);</div>
-<div class="line">socket.<a class="code hl_function" href="#afb6d8384785b0d7c48620bb119eea7aa">closed</a>() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onClosed);</div>
 <div class="line">socket.<a class="code hl_function" href="#ae26548d592b451c870cf7b71fad30777">beginConnect</a>(<span class="stringliteral">&quot;/ws&quot;</span>);</div>
 <div class="line">loop.<a class="code hl_function" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a></div><div class="ttdoc">Progress of an asynchronous HTTP send or receive.</div><div class="ttdef"><b>Definition</b> Message.h:337</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_aebaed0be88cbcf45f1985b819c9dabb7"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">Pt::Http::MessageProgress::finished</a></div><div class="ttdeci">bool finished() const</div><div class="ttdoc">Returns true if message is complete.</div><div class="ttdef"><b>Definition</b> Message.h:373</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocketMessage::Text</a></div><div class="ttdeci">@ Text</div><div class="ttdoc">UTF-8 text.</div><div class="ttdef"><b>Definition</b> WebSocketMessage.h:80</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocketMessage::Text</a></div><div class="ttdeci">@ Text</div><div class="ttdoc">UTF-8 text.</div><div class="ttdef"><b>Definition</b> WebSocketMessage.h:81</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a482de369e242eac519fd5e208a37320c"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a482de369e242eac519fd5e208a37320c">Pt::Http::WebSocketMessage::discard</a></div><div class="ttdeci">void discard()</div><div class="ttdoc">Drops the buffered body and leaves the type.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a608e58a2f9fb7e497f91662a6e9ae4cc"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a608e58a2f9fb7e497f91662a6e9ae4cc">Pt::Http::WebSocketMessage::setType</a></div><div class="ttdeci">void setType(Type type)</div><div class="ttdoc">Sets the data type of an outgoing message.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a7284f6bfc0de35e1fa016b5bed381356"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a7284f6bfc0de35e1fa016b5bed381356">Pt::Http::WebSocketMessage::body</a></div><div class="ttdeci">std::iostream &amp; body()</div><div class="ttdoc">Returns the payload stream.</div><div class="ttdef"><b>Definition</b> WebSocketMessage.h:97</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a7284f6bfc0de35e1fa016b5bed381356"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#a7284f6bfc0de35e1fa016b5bed381356">Pt::Http::WebSocketMessage::body</a></div><div class="ttdeci">std::iostream &amp; body()</div><div class="ttdoc">Returns the payload stream.</div><div class="ttdef"><b>Definition</b> WebSocketMessage.h:98</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketMessage.html#ac8bb3912a3ce86b15842e79d0b421204">Pt::Http::WebSocketMessage::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Drops the buffered body and sets the type to Unknown.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a></div><div class="ttdoc">Client handshake and messages on an upgraded stream.</div><div class="ttdef"><b>Definition</b> WebSocket.h:133</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a02db88957d7c1859589a7ed5ef79b3d5"><div class="ttname"><a href="#a02db88957d7c1859589a7ed5ef79b3d5">Pt::Http::WebSocket::beginSend</a></div><div class="ttdeci">void beginSend()</div><div class="ttdoc">Begins sending outgoing().</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a></div><div class="ttdoc">Client handshake and messages on an upgraded stream.</div><div class="ttdef"><b>Definition</b> WebSocket.h:157</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a18ddd0ea533304dc70208ee7a00a8e0a"><div class="ttname"><a href="#a18ddd0ea533304dc70208ee7a00a8e0a">Pt::Http::WebSocket::endConnect</a></div><div class="ttdeci">void endConnect()</div><div class="ttdoc">Completes the client handshake.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a33f94d9b65546ead3264779babf7c804"><div class="ttname"><a href="#a33f94d9b65546ead3264779babf7c804">Pt::Http::WebSocket::outputReady</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; outputReady()</div><div class="ttdoc">Returns the signal emitted when data bytes were sent.</div><div class="ttdef"><b>Definition</b> WebSocket.h:236</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a5f127e10469b629cc0cb35a7c75707c3"><div class="ttname"><a href="#a5f127e10469b629cc0cb35a7c75707c3">Pt::Http::WebSocket::connected</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal emitted when the handshake finishes.</div><div class="ttdef"><b>Definition</b> WebSocket.h:157</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a33f94d9b65546ead3264779babf7c804"><div class="ttname"><a href="#a33f94d9b65546ead3264779babf7c804">Pt::Http::WebSocket::outputReady</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; outputReady()</div><div class="ttdoc">Returns the signal emitted when data bytes were sent.</div><div class="ttdef"><b>Definition</b> WebSocket.h:327</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a51f5e3c115973b763ec7ced957bc7c7c"><div class="ttname"><a href="#a51f5e3c115973b763ec7ced957bc7c7c">Pt::Http::WebSocket::beginSend</a></div><div class="ttdeci">void beginSend(bool finished=true)</div><div class="ttdoc">Begins sending outgoing().</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a5f127e10469b629cc0cb35a7c75707c3"><div class="ttname"><a href="#a5f127e10469b629cc0cb35a7c75707c3">Pt::Http::WebSocket::connected</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; connected()</div><div class="ttdoc">Returns the signal emitted when the handshake finishes.</div><div class="ttdef"><b>Definition</b> WebSocket.h:199</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a91151db77a69a3a7a4c3ae3cabd304b7"><div class="ttname"><a href="#a91151db77a69a3a7a4c3ae3cabd304b7">Pt::Http::WebSocket::beginReceive</a></div><div class="ttdeci">void beginReceive()</div><div class="ttdoc">Begins receiving into incoming().</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a9c75f2b0e02a68d89f12bcdebe7a7474"><div class="ttname"><a href="#a9c75f2b0e02a68d89f12bcdebe7a7474">Pt::Http::WebSocket::outgoing</a></div><div class="ttdeci">WebSocketMessage &amp; outgoing()</div><div class="ttdoc">Returns the outgoing message.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_aa4e20e6fcca8f2a5079e2027f5b364cd"><div class="ttname"><a href="#aa4e20e6fcca8f2a5079e2027f5b364cd">Pt::Http::WebSocket::endReceive</a></div><div class="ttdeci">MessageProgress endReceive()</div><div class="ttdoc">Completes the receive started by beginReceive().</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_aa7d5e7467d444d57c86ea90e1a80c010"><div class="ttname"><a href="#aa7d5e7467d444d57c86ea90e1a80c010">Pt::Http::WebSocket::inputReady</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; inputReady()</div><div class="ttdoc">Returns the signal emitted when data bytes were received.</div><div class="ttdef"><b>Definition</b> WebSocket.h:231</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_aa7d5e7467d444d57c86ea90e1a80c010"><div class="ttname"><a href="#aa7d5e7467d444d57c86ea90e1a80c010">Pt::Http::WebSocket::inputReady</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; inputReady()</div><div class="ttdoc">Returns the signal emitted when data bytes were received.</div><div class="ttdef"><b>Definition</b> WebSocket.h:322</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_abd47018d0d4fbae7e1a15807bb728662"><div class="ttname"><a href="#abd47018d0d4fbae7e1a15807bb728662">Pt::Http::WebSocket::endSend</a></div><div class="ttdeci">MessageProgress endSend()</div><div class="ttdoc">Completes the send started by beginSend().</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_abdb55a070341c321499f3d31cf0232d6"><div class="ttname"><a href="#abdb55a070341c321499f3d31cf0232d6">Pt::Http::WebSocket::incoming</a></div><div class="ttdeci">WebSocketMessage &amp; incoming()</div><div class="ttdoc">Returns the incoming message.</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_ae26548d592b451c870cf7b71fad30777"><div class="ttname"><a href="#ae26548d592b451c870cf7b71fad30777">Pt::Http::WebSocket::beginConnect</a></div><div class="ttdeci">void beginConnect(const std::string &amp;url, const std::string &amp;origin=std::string())</div><div class="ttdoc">Begins a client handshake for url.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_afb6d8384785b0d7c48620bb119eea7aa"><div class="ttname"><a href="#afb6d8384785b0d7c48620bb119eea7aa">Pt::Http::WebSocket::closed</a></div><div class="ttdeci">Pt::Signal&lt; WebSocket &amp; &gt; &amp; closed()</div><div class="ttdoc">Returns the signal emitted when the stream ends.</div><div class="ttdef"><b>Definition</b> WebSocket.h:247</div></div>
 <div class="ttc" id="aclassPt_1_1Slot_html_a6fe36105ca29dc11b2f8ffb98cfffcf5"><div class="ttname"><a href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, ClassT, As... &gt; slot(ClassT &amp;object, R(BaseT::*method)(As...) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div><div class="ttdef"><b>Definition</b> ConstMethod.h:172</div></div>
 <div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
-</div><!-- fragment --><p>Construct the socket with the Client that performs the handshake. Connect connected() and call beginConnect() with a request path, or with a ws:// URL whose host and port are already the client's endpoint. The path and query of that URL become the request URL; the client does not take the host from the URL. The optional second argument is the Origin header. endConnect() completes the handshake and throws if it failed. After that success the socket no longer uses the client for messages.</p>
-<p>The socket owns two WebSocketMessage objects, incoming() and outgoing(), the way a client owns a request and a reply. Set the type, write the body, and call beginSend(). outputReady() reports that data bytes were sent. endSend() returns MessageProgress. If the send is not finished, beginSend() continues the same message. beginReceive() fills incoming(). inputReady() reports that data bytes were received. endReceive() returns progress. After finished(), clear() drops the body so the same object can carry the next message.</p>
-<p>Ping, pong and close are socket operations, not messages.</p>
-<div class="fragment"><div class="line">socket.<a class="code hl_function" href="#a122ddbfe6d37289f9a66013fc731ba3b">ping</a>();</div>
-<div class="line">socket.<a class="code hl_function" href="#a5043c42dc88f8788fb4b6a51c9bc972b">close</a>(1000, <span class="stringliteral">&quot;done&quot;</span>);</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a122ddbfe6d37289f9a66013fc731ba3b"><div class="ttname"><a href="#a122ddbfe6d37289f9a66013fc731ba3b">Pt::Http::WebSocket::ping</a></div><div class="ttdeci">void ping(const char *payload=0, std::size_t n=0)</div><div class="ttdoc">Enqueues a ping with an optional payload of at most 125 bytes.</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a5043c42dc88f8788fb4b6a51c9bc972b"><div class="ttname"><a href="#a5043c42dc88f8788fb4b6a51c9bc972b">Pt::Http::WebSocket::close</a></div><div class="ttdeci">void close(unsigned code=1000, const std::string &amp;reason=std::string())</div><div class="ttdoc">Enqueues a close frame and ends the stream after the close handshake.</div></div>
-</div><!-- fragment --><p>ping() enqueues a ping. A received ping is answered by the engine. A received pong is consumed. Neither is delivered through incoming(). close() enqueues a close frame with a status code and a reason. A received close is answered by the engine. closeCode() and closeReason() report the handshake that ended the stream. closed() is emitted while this socket is still alive. The stream has already cleared its session pointer. Peer close, an I/O error, a close frame and destruction of the stream all emit it. It ends an outstanding send or receive. The owner deletes this socket.</p>
+</div><!-- fragment --><p>Construct the socket with the Client that performs the handshake. Connect connected() and call beginConnect() with a request path, or with a ws:// URL whose host and port are already the client's endpoint. The path and query of that URL become the request URL; the client does not take the host from the URL. The optional second argument is the Origin header. endConnect() completes the handshake and throws if it failed. addProtocol() offers one Sec-WebSocket-Protocol name before beginConnect(). Several calls offer several names, in order. After a finished handshake protocol() is the single name the server echoed, or empty when the server selected none. An echo that was not offered fails the handshake. After that success the socket no longer uses the client for messages.</p>
+<p>The socket owns two WebSocketMessage objects, incoming() and outgoing(), the way a client owns a request and a reply. Set the type, write the body, and call beginSend(). Call beginSend(false) while more body will be written, then beginSend(true) for the last part. outputReady() reports that data bytes were sent. endSend() returns MessageProgress. If the send step is not finished, beginSend() continues it with the same completion flag. beginReceive() fills incoming(). inputReady() reports that data bytes were received. endReceive() returns progress. After finished(), clear() drops the body so the same object can carry the next message. beginReceive() starts frame processing. Until then, incoming frames stay in the stream. Control frames are processed while a receive is outstanding. A local beginShutdown() also keeps input running until the peer replies with its close frame. The two are independent: a receive started before or during a shutdown still delivers what the peer sent before that reply.</p>
+<p>Ping, pong, shutdown and close are socket operations, not messages.</p>
+<div class="fragment"><div class="line">socket.<a class="code hl_function" href="#a6d66e8ae606149af2db0565c4b7db40f">beginPing</a>();</div>
+<div class="line">socket.<a class="code hl_function" href="#afe2bdfcbb534bfd081819bff65806345">beginShutdown</a>(1000, <span class="stringliteral">&quot;done&quot;</span>);</div>
+<div class="line">socket.<a class="code hl_function" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="#a5ae591df94fc66ccb85cbb6565368bca">Pt::Http::WebSocket::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Releases the stream and writes no frame.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_a6d66e8ae606149af2db0565c4b7db40f"><div class="ttname"><a href="#a6d66e8ae606149af2db0565c4b7db40f">Pt::Http::WebSocket::beginPing</a></div><div class="ttdeci">void beginPing(const char *payload=0, std::size_t n=0)</div><div class="ttdoc">Begins writing a ping with an optional payload of at most 125 bytes.</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html_afe2bdfcbb534bfd081819bff65806345"><div class="ttname"><a href="#afe2bdfcbb534bfd081819bff65806345">Pt::Http::WebSocket::beginShutdown</a></div><div class="ttdeci">void beginShutdown(unsigned code=1000, const std::string &amp;reason=std::string())</div><div class="ttdoc">Begins a close handshake.</div></div>
+</div><!-- fragment --><p>beginPing() enqueues a ping. pingReady() reports that its frame was written; call endPing() from that signal to observe a write error. A received ping is answered by the engine. After a close frame is queued nothing further is written, so beginPing() throws and a received ping is no longer answered. A received pong is reported by pong(). Neither is delivered through incoming(). beginShutdown() enqueues a close frame with a status code and a reason, then keeps reading until the peer replies. shutdownReady() reports the completed handshake; call endShutdown() from that signal to observe an error. A peer that never starts a receive never replies, so setIdleTimeout() is the only bound on that wait. It is zero on this type until the application sets it. A received close is answered by the engine. The application learns that the stream has ended from the outstanding operation: an outstanding receive completes with an error, and an outstanding shutdown completes through shutdownReady(). Without either, a peer close is not seen. A later beginReceive() or beginShutdown() throws. closeCode() and closeReason() report the handshake that ended the stream. No close frame leaves the code at 1006. close() releases the stream and writes no frame. It does not block. The destructor calls it. beginSend() and beginReceive() then throw. Destruction of the stream detaches the channel. It ends an outstanding send or receive. The owner deletes this socket.</p>
 <p>On the server the application does not construct this type. The server facade is WebSocketSession, which exposes the same message operations without a client handshake. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adf9d3d04491f29039b813537178e5734" name="adf9d3d04491f29039b813537178e5734"></a>
@@ -264,6 +274,48 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 
 </div>
 </div>
+<a id="acb6c9bf9d2ee4de85f8cf7e507f3d4e8" name="acb6c9bf9d2ee4de85f8cf7e507f3d4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6c9bf9d2ee4de85f8cf7e507f3d4e8">&#9670;&#160;</a></span>addProtocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addProtocol </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Several calls offer several names, in order. The offer is sent by the next beginConnect().</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">name</em> is empty or is not a single protocol token. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a429c44128a371ec5f6bcf86ed044cec6" name="a429c44128a371ec5f6bcf86ed044cec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429c44128a371ec5f6bcf86ed044cec6">&#9670;&#160;</a></span>protocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; protocol </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Empty before a finished handshake, and empty when the server selected no name. </p>
+
+</div>
+</div>
 <a id="a18ddd0ea533304dc70208ee7a00a8e0a" name="a18ddd0ea533304dc70208ee7a00a8e0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18ddd0ea533304dc70208ee7a00a8e0a">&#9670;&#160;</a></span>endConnect()</h2>
 
@@ -287,8 +339,8 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 
 </div>
 </div>
-<a id="a02db88957d7c1859589a7ed5ef79b3d5" name="a02db88957d7c1859589a7ed5ef79b3d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02db88957d7c1859589a7ed5ef79b3d5">&#9670;&#160;</a></span>beginSend()</h2>
+<a id="a51f5e3c115973b763ec7ced957bc7c7c" name="a51f5e3c115973b763ec7ced957bc7c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f5e3c115973b763ec7ced957bc7c7c">&#9670;&#160;</a></span>beginSend()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,15 +348,23 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
         <tr>
           <td class="memname">void beginSend </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>finished</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The completion flag is true when this is the last part of the message. Call beginSend(false) while more body will be written. endSend() reports whether this step has left the socket. If it is not finished, call beginSend() again with the same flag. The engine may still split this step into frames.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">finished</td><td>True if this is the last part of the message.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">%std::logic_error</td><td>if a send is outstanding, the handshake is not finished, or a close is queued. </td></tr>
-    <tr><td class="paramname">%std::invalid_argument</td><td>if the type is Unknown, the body is larger than setMaxMessageSize(), or a text body is not valid UTF-8. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if a send is outstanding, the handshake is not finished, or a shutdown is queued. </td></tr>
+    <tr><td class="paramname">%std::invalid_argument</td><td>if the type is Unknown, the body is larger than setMaxMessageSize(), or a finished text body is not valid UTF-8. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if a previous write failed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,7 +385,13 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Progress of this send step. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Progress of this send step.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the send has not completed or the stream has ended. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -343,9 +409,11 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Starts processing incoming frames. Frames received before this call stay in the stream.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">%std::logic_error</td><td>if a receive is outstanding, the handshake is not finished, or the stream has ended. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if a protocol violation ended the frame stream, or a previous read failed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -366,18 +434,25 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Progress of this receive step. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Progress of this receive step.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the receive has not completed. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if the stream ended or a previous read failed. closeCode() and closeReason() report a close handshake. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a122ddbfe6d37289f9a66013fc731ba3b" name="a122ddbfe6d37289f9a66013fc731ba3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a122ddbfe6d37289f9a66013fc731ba3b">&#9670;&#160;</a></span>ping()</h2>
+<a id="a6d66e8ae606149af2db0565c4b7db40f" name="a6d66e8ae606149af2db0565c4b7db40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d66e8ae606149af2db0565c4b7db40f">&#9670;&#160;</a></span>beginPing()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ping </td>
+          <td class="memname">void beginPing </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>payload</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
@@ -390,22 +465,47 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">n</em> is greater than 125. </td></tr>
-    <tr><td class="paramname">%std::logic_error</td><td>if the handshake is not finished. </td></tr>
+    <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">n</em> is greater than 125, or if <em class="arg">payload</em> is null and <em class="arg">n</em> is nonzero. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if a ping is outstanding, a close is queued, or the handshake is not finished. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if a previous write failed. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a5043c42dc88f8788fb4b6a51c9bc972b" name="a5043c42dc88f8788fb4b6a51c9bc972b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5043c42dc88f8788fb4b6a51c9bc972b">&#9670;&#160;</a></span>close()</h2>
+<a id="a1d5f8e3c5e693aadf7c42016761ce987" name="a1d5f8e3c5e693aadf7c42016761ce987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d5f8e3c5e693aadf7c42016761ce987">&#9670;&#160;</a></span>endPing()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void close </td>
+          <td class="memname">void endPing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the ping is not ready. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if writing the ping failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe2bdfcbb534bfd081819bff65806345" name="afe2bdfcbb534bfd081819bff65806345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2bdfcbb534bfd081819bff65806345">&#9670;&#160;</a></span>beginShutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beginShutdown </td>
           <td>(</td>
           <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>code</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1000</span>, </td>
         </tr>
@@ -419,28 +519,107 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">%std::invalid_argument</td><td>if <em class="arg">code</em> is 1005, 1006 or 1015, if <em class="arg">reason</em> is longer than 123 bytes, or if <em class="arg">reason</em> is not valid UTF-8. </td></tr>
-    <tr><td class="paramname">%std::logic_error</td><td>if the handshake is not finished or a close is already queued. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if a shutdown is outstanding, the handshake is not finished, or a close is already queued. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if a previous write failed. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="afb6d8384785b0d7c48620bb119eea7aa" name="afb6d8384785b0d7c48620bb119eea7aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb6d8384785b0d7c48620bb119eea7aa">&#9670;&#160;</a></span>closed()</h2>
+<a id="aafa25c54a2e03205877efafa43f6307e" name="aafa25c54a2e03205877efafa43f6307e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa25c54a2e03205877efafa43f6307e">&#9670;&#160;</a></span>endShutdown()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp; closed </td>
+          <td class="memname">void endShutdown </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Emitted while this socket is still alive. The stream has already cleared its session pointer. Peer close, an I/O error, a close frame and destruction of the stream all emit it. The owner deletes this socket. Ends an outstanding send or receive. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">%std::logic_error</td><td>if the shutdown is not ready. </td></tr>
+    <tr><td class="paramname">%std::exception</td><td>if the close handshake failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae591df94fc66ccb85cbb6565368bca">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Does not block and emits nothing. The destructor calls this. beginSend() and beginReceive() then throw. No close frame leaves closeCode() at 1006. </p>
+
+</div>
+</div>
+<a id="aa076e029c3f0cc66a60a1869c989756f" name="aa076e029c3f0cc66a60a1869c989756f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa076e029c3f0cc66a60a1869c989756f">&#9670;&#160;</a></span>pingReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp; pingReady </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Call endPing() from the signal to observe a write error. </p>
+
+</div>
+</div>
+<a id="aa12b1aca889edc6956270fbb63b9b2dc" name="aa12b1aca889edc6956270fbb63b9b2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12b1aca889edc6956270fbb63b9b2dc">&#9670;&#160;</a></span>shutdownReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp; &gt; &amp; shutdownReady </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The stream is detached. Call endShutdown() from the signal to observe a close-handshake error. </p>
+
+</div>
+</div>
+<a id="ae3d4fe650b91ddae9921c739e33338de" name="ae3d4fe650b91ddae9921c739e33338de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d4fe650b91ddae9921c739e33338de">&#9670;&#160;</a></span>pong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPt_1_1Signal.html">Pt::Signal</a>&lt; <a class="el" href="#adf9d3d04491f29039b813537178e5734">WebSocket</a> &amp;, const std::string &amp; &gt; &amp; pong </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The payload contains arbitrary bytes and is valid for the duration of the signal call. A pong does not change incoming() or emit inputReady(). </p>
 
 </div>
 </div>
@@ -494,7 +673,7 @@ const std::string &amp;&#160;</td><td class="memItemRight"><b>closeReason</b> ()
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Zero disables the idle timeout. A finished send or receive restarts it. A received ping or pong restarts it. </p>
+<p>Zero disables the idle timeout. Transferred data bytes, a received ping, and a received pong restart it. It is also the only bound on a close handshake the peer never answers. </p>
 
 </div>
 </div>

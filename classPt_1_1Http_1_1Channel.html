@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="description" content="Platinum (Pt) C++ Framework"/>
 <meta name="author" content="The Pt Development Team"/>
-<title>Platinum: StreamSession Class Reference</title>
+<title>Platinum: Channel Class Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="namespacePt.html">Pt</a></li><li class="navelem"><a href="namespacePt_1_1Http.html">Http</a></li><li class="navelem"><a href="classPt_1_1Http_1_1StreamSession.html">StreamSession</a></li>  </ul>
+<li class="navelem"><a href="namespacePt.html">Pt</a></li><li class="navelem"><a href="namespacePt_1_1Http.html">Http</a></li><li class="navelem"><a href="classPt_1_1Http_1_1Channel.html">Channel</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -72,14 +72,14 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="classPt_1_1Http_1_1StreamSession-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">StreamSession Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Servers.html">HTTP Servers</a> &#124; <a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-WebSocket.html">WebSocket</a></div></div></div>
+<a href="classPt_1_1Http_1_1Channel-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Channel Class Reference<div class="ingroups"><a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-Servers.html">HTTP Servers</a> &#124; <a class="el" href="group__Pt-Http.html">HTTP Clients and Servers</a> &raquo; <a class="el" href="group__Pt-Http-WebSocket.html">WebSocket</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="StreamSession_8h_source.html">Pt/Http/StreamSession.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Channel_8h_source.html">Pt/Http/Channel.h</a>&gt;</code></p>
 
-<p>Binds one session object to one HTTP stream.  
+<p>Binds one channel to one HTTP stream.  
  <a href="#details">More...</a></p>
 
 <p>Inherits <a class="el" href="classPt_1_1NonCopyable.html">NonCopyable</a>.</p>
@@ -89,36 +89,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a002ed331862370f434b7befe331b5a0b" id="r_a002ed331862370f434b7befe331b5a0b"><td class="memItemLeft"><a id="a002ed331862370f434b7befe331b5a0b" name="a002ed331862370f434b7befe331b5a0b"></a>
 bool&#160;</td><td class="memItemRight"><b>isOpen</b> () const</td></tr>
 <tr class="memdesc:a002ed331862370f434b7befe331b5a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when a stream is bound. <br /></td></tr>
+<tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
+<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the bound stream.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4329a8b0561e671ae5906a0bec0ddfc3" id="r_a4329a8b0561e671ae5906a0bec0ddfc3"><td class="memItemLeft"><a id="a4329a8b0561e671ae5906a0bec0ddfc3" name="a4329a8b0561e671ae5906a0bec0ddfc3"></a>
-&#160;</td><td class="memItemRight"><b>StreamSession</b> ()</td></tr>
-<tr class="memdesc:a4329a8b0561e671ae5906a0bec0ddfc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a session with no stream. <br /></td></tr>
-<tr class="memitem:adc0888ddea29d25af8e428b94db192dd" id="r_adc0888ddea29d25af8e428b94db192dd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adc0888ddea29d25af8e428b94db192dd">StreamSession</a> (Stream &amp;stream)</td></tr>
-<tr class="memdesc:adc0888ddea29d25af8e428b94db192dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a session bound to <em class="arg">stream</em>.  <br /></td></tr>
-<tr class="memitem:afe5486c7fdc29461726ed0d3f8ea72ed" id="r_afe5486c7fdc29461726ed0d3f8ea72ed"><td class="memItemLeft"><a id="afe5486c7fdc29461726ed0d3f8ea72ed" name="afe5486c7fdc29461726ed0d3f8ea72ed"></a>
-&#160;</td><td class="memItemRight"><b>~StreamSession</b> ()</td></tr>
-<tr class="memdesc:afe5486c7fdc29461726ed0d3f8ea72ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unbinds and closes the stream. <br /></td></tr>
+<tr class="memitem:aeede9b013ddef6a6d7391ed14943ce3c" id="r_aeede9b013ddef6a6d7391ed14943ce3c"><td class="memItemLeft"><a id="aeede9b013ddef6a6d7391ed14943ce3c" name="aeede9b013ddef6a6d7391ed14943ce3c"></a>
+&#160;</td><td class="memItemRight"><b>Channel</b> ()</td></tr>
+<tr class="memdesc:aeede9b013ddef6a6d7391ed14943ce3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a channel with no stream. <br /></td></tr>
+<tr class="memitem:a0a12edd04d8574223c36c513f2984a42" id="r_a0a12edd04d8574223c36c513f2984a42"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0a12edd04d8574223c36c513f2984a42">Channel</a> (Stream &amp;stream)</td></tr>
+<tr class="memdesc:a0a12edd04d8574223c36c513f2984a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a channel bound to <em class="arg">stream</em>.  <br /></td></tr>
+<tr class="memitem:aad279ec58dddf879ac20651fceffd4cf" id="r_aad279ec58dddf879ac20651fceffd4cf"><td class="memItemLeft"><a id="aad279ec58dddf879ac20651fceffd4cf" name="aad279ec58dddf879ac20651fceffd4cf"></a>
+&#160;</td><td class="memItemRight"><b>~Channel</b> ()</td></tr>
+<tr class="memdesc:aad279ec58dddf879ac20651fceffd4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the bound stream. <br /></td></tr>
 <tr class="memitem:aae8e8b036b9e44bde5bf8a198e5464dd" id="r_aae8e8b036b9e44bde5bf8a198e5464dd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aae8e8b036b9e44bde5bf8a198e5464dd">open</a> (Stream &amp;stream)</td></tr>
 <tr class="memdesc:aae8e8b036b9e44bde5bf8a198e5464dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds <em class="arg">stream</em>.  <br /></td></tr>
-<tr class="memitem:a5ae591df94fc66ccb85cbb6565368bca" id="r_a5ae591df94fc66ccb85cbb6565368bca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae591df94fc66ccb85cbb6565368bca">close</a> ()</td></tr>
-<tr class="memdesc:a5ae591df94fc66ccb85cbb6565368bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unbinds and closes the stream.  <br /></td></tr>
 <tr class="memitem:a138a100bf8e1447c19358265e35b8366" id="r_a138a100bf8e1447c19358265e35b8366"><td class="memItemLeft"><a id="a138a100bf8e1447c19358265e35b8366" name="a138a100bf8e1447c19358265e35b8366"></a>
 Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
 <tr class="memdesc:a138a100bf8e1447c19358265e35b8366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bound stream, or null. <br /></td></tr>
-<tr class="memitem:a4c38badc3875316fd4e029dc3f0de5ed" id="r_a4c38badc3875316fd4e029dc3f0de5ed"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4c38badc3875316fd4e029dc3f0de5ed">onCloseStream</a> (Stream &amp;stream)</td></tr>
-<tr class="memdesc:a4c38badc3875316fd4e029dc3f0de5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the stream ends.  <br /></td></tr>
+<tr class="memitem:ac7bcbc359b4c4681377d2376fd60298f" id="r_ac7bcbc359b4c4681377d2376fd60298f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac7bcbc359b4c4681377d2376fd60298f">onClose</a> ()</td></tr>
+<tr class="memdesc:ac7bcbc359b4c4681377d2376fd60298f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up before the stream pointer is dropped.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>StreamSession is the external peer of one Stream. The server or the client owns the connection, and the connection owns the stream. A session does not own either. It stores a pointer to the stream, and the stream stores a pointer back. One stream has one session. A second open() throws std::logic_error.</p>
-<p>Binding is how an upgrade is accepted. On the server, Service::onUpgrade() receives the stream the server already owns. A derived session constructs itself with that stream, or calls open() from its own accept method. After onUpgrade() returns, a stream with no session is declined and the server closes it. On the client, Client::upgrade() returns the stream the client already owns, and the derived session opens that stream after the 101 reply.</p>
+<div class="textblock"><p>Channel is the external peer of one Stream. The server or the client owns the connection, and the connection owns the stream. A channel does not own either. It stores a pointer to the stream, and the stream stores a pointer back. One stream has one channel. A second open() throws std::logic_error.</p>
+<p>Binding is how an upgrade is accepted. On the server, Service::onUpgrade() receives the stream the server already owns, with the request and the reply of the finished 101. A derived channel constructs itself with that stream, or calls open() from its own accept method. After onUpgrade() returns, a stream with no channel is declined and the server closes it. On the client, Client::upgrade() returns the stream the client already owns, and the derived channel opens that stream after the 101 reply.</p>
 <p>This base does not transfer bytes. The derived type uses the stream it holds: Stream::buffer(), beginInput(), beginOutput(), and the ready signals of that stream. A framed protocol formats into the stream buffer and connects its own slots to the stream. Application code does not derive this base for <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a>. The client uses WebSocket, and the server uses WebSocketSession.</p>
-<p>open() and close() are protected because the derived type owns the handshake and the shutdown frame. A <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> close writes the close frame and then calls close(). A public close on this base would skip that frame.</p>
-<p>The destructor unbinds and closes the stream. Destroying the stream unbinds this session and calls onClose(). The session object stays, and stream() is null. The two sides call each other through the peer pointer. isOpen() is false after either side ends. </p>
+<p>open() is protected because the derived type owns the handshake. shutdown() on that type writes the shutdown frame. close() is public. It releases the stream and does not write a frame. A close that starts here calls Stream::close(). A close that starts at the stream calls onDetachStream(). That call runs onClose() and drops the stream pointer. It does not close the stream. Neither path emits a protocol signal.</p>
+<p>The destructor calls close(). Destroying the stream calls onDetachStream(). The channel object stays, and stream() is null. isOpen() is false after either side ends. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adc0888ddea29d25af8e428b94db192dd" name="adc0888ddea29d25af8e428b94db192dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc0888ddea29d25af8e428b94db192dd">&#9670;&#160;</a></span>StreamSession()</h2>
+<a id="a0a12edd04d8574223c36c513f2984a42" name="a0a12edd04d8574223c36c513f2984a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a12edd04d8574223c36c513f2984a42">&#9670;&#160;</a></span>Channel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +127,7 @@ Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">StreamSession </td>
+          <td class="memname">Channel </td>
           <td>(</td>
           <td class="paramtype">Stream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
           <td></td>
@@ -141,7 +141,7 @@ Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">%std::logic_error</td><td>if <em class="arg">stream</em> already has a session. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if <em class="arg">stream</em> already has a channel. </td></tr>
   </table>
   </dd>
 </dl>
@@ -149,6 +149,24 @@ Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae591df94fc66ccb85cbb6565368bca">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Does nothing when no stream is bound. Closes the stream. Does not write a protocol frame. </p>
+
+</div>
+</div>
 <a id="aae8e8b036b9e44bde5bf8a198e5464dd" name="aae8e8b036b9e44bde5bf8a198e5464dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae8e8b036b9e44bde5bf8a198e5464dd">&#9670;&#160;</a></span>open()</h2>
 
@@ -173,15 +191,15 @@ Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
 </div><div class="memdoc">
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">%std::logic_error</td><td>if this session is already open, or if <em class="arg">stream</em> already has a session. </td></tr>
+    <tr><td class="paramname">%std::logic_error</td><td>if this channel is already open, or if <em class="arg">stream</em> already has a channel. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a5ae591df94fc66ccb85cbb6565368bca" name="a5ae591df94fc66ccb85cbb6565368bca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ae591df94fc66ccb85cbb6565368bca">&#9670;&#160;</a></span>close()</h2>
+<a id="ac7bcbc359b4c4681377d2376fd60298f" name="ac7bcbc359b4c4681377d2376fd60298f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bcbc359b4c4681377d2376fd60298f">&#9670;&#160;</a></span>onClose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,35 +208,9 @@ Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void close </td>
+          <td class="memname">virtual void onClose </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Does nothing when no stream is bound. The stream clears its session pointer before it ends, so a close that runs from this destructor does not re-enter the stream. </p>
-
-</div>
-</div>
-<a id="a4c38badc3875316fd4e029dc3f0de5ed" name="a4c38badc3875316fd4e029dc3f0de5ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c38badc3875316fd4e029dc3f0de5ed">&#9670;&#160;</a></span>onCloseStream()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onCloseStream </td>
-          <td>(</td>
-          <td class="paramtype">Stream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -228,7 +220,7 @@ Stream *&#160;</td><td class="memItemRight"><b>stream</b> () const</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The stream pointer is already null. </p>
+<p>Called by onDetachStream() while this channel still holds the stream pointer. Not called when no stream is bound. The stream is still attached to its connection. </p>
 
 </div>
 </div>

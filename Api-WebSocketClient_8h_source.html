@@ -78,50 +78,9 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef PT_HTTP_API_WEBSOCKETCLIENT_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PT_HTTP_API_WEBSOCKETCLIENT_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a> loop;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a> ep(<span class="stringliteral">&quot;localhost&quot;</span>, 80);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a> client(loop, ep);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a> socket(client);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    socket.connected() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onConnected);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    socket.closed() += <a class="code hl_function" href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::slot</a>(onClosed);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    socket.setTimeout(10000);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    socket.beginConnect(<span class="stringliteral">&quot;/ws&quot;</span>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    loop.<a class="code hl_function" href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">run</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">@end</span>code</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    Construct %WebSocket with the %Client that performs the</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    handshake. <a class="code hl_enumvalue" href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Connect</a> %connected() and call %beginConnect() with a</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    request path, or with a %ws:<span class="comment">// URL whose host and port are</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    already the client&#39;s endpoint. The path and query of that URL</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    become the request URL; the client does not take the host from</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    the URL. The optional second argument is the Origin header.</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    %beginConnect() fills a GET with Connection, Upgrade,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    Sec-WebSocket-Version 13 and Sec-WebSocket-Key, and sends it</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    through the client. A finished 101 becomes the stream this</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    socket formats. %endConnect() completes the handshake and throws</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    if it failed. After that success the socket no longer uses the</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    client for messages. A client masks every frame it writes.</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    %closed() is emitted while this socket is still alive. The</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    stream has already cleared its session pointer. Peer close, an</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    I/O error, a close frame and destruction of the stream all emit</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    it. It ends an outstanding send or receive. The owner deletes</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    this socket. %setTimeout() bounds I/O after the upgrade. The</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    handshake still uses the timeout of the client.</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>*/</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1Client_html"><div class="ttname"><a href="classPt_1_1Http_1_1Client.html">Pt::Http::Client</a></div><div class="ttdoc">HTTP user agent.</div><div class="ttdef"><b>Definition</b> Client.h:195</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocket_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocket.html">Pt::Http::WebSocket</a></div><div class="ttdoc">Client handshake and messages on an upgraded stream.</div><div class="ttdef"><b>Definition</b> WebSocket.h:133</div></div>
-<div class="ttc" id="aclassPt_1_1Net_1_1Endpoint_html"><div class="ttname"><a href="classPt_1_1Net_1_1Endpoint.html">Pt::Net::Endpoint</a></div><div class="ttdoc">Host and service address.</div><div class="ttdef"><b>Definition</b> Endpoint.h:77</div></div>
-<div class="ttc" id="aclassPt_1_1Slot_html_a6fe36105ca29dc11b2f8ffb98cfffcf5"><div class="ttname"><a href="classPt_1_1Slot.html#a6fe36105ca29dc11b2f8ffb98cfffcf5">Pt::Slot::slot</a></div><div class="ttdeci">ConstMethodSlot&lt; R, ClassT, As... &gt; slot(ClassT &amp;object, R(BaseT::*method)(As...) const)</div><div class="ttdoc">Returns a slot object for the given object/member pair.</div><div class="ttdef"><b>Definition</b> ConstMethod.h:172</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1EventLoop_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="classPt_1_1System_1_1EventLoop.html#a13a43e6d814de94978c515cb084873b1">Pt::System::EventLoop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Starts the loop.</div></div>
-<div class="ttc" id="aclassPt_1_1System_1_1MainLoop_html"><div class="ttname"><a href="classPt_1_1System_1_1MainLoop.html">Pt::System::MainLoop</a></div><div class="ttdoc">Platform event loop.</div><div class="ttdef"><b>Definition</b> MainLoop.h:51</div></div>
-<div class="ttc" id="agroup__Pt-Ssl-Streams_html_gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e"><div class="ttname"><a href="group__Pt-Ssl-Streams.html#gga3a70f8b621474c9885f80fe709e2dca2aee552f3150bddbf101d3541c3218010e">Pt::Ssl::Connect</a></div><div class="ttdeci">@ Connect</div><div class="ttdoc">Client handshake.</div><div class="ttdef"><b>Definition</b> Context.h:57</div></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.18.0-->
 <!-- start footer part -->

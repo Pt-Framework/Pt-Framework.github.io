@@ -301,7 +301,7 @@ I/O</h1>
 I/O Devices</h2>
 <p>IODevice is the endpoint for I/O. It is a Selectable. A file, a pipe end, and a serial port are IODevice types. I/O buffers and I/O streams use this endpoint, so a standard C++ stream can be built at runtime.</p>
 <p>read() and write() transfer bytes and may return fewer than requested. They throw IOError on failure. When the device reaches the end of the stream, isEof() is true. setTimeout() limits how long a blocking transfer waits. close() releases the endpoint.</p>
-<p>beginRead() and beginWrite() start an asynchronous transfer. The device must be attached to an EventLoop with setActive(). When the transfer finishes, inputReady or outputReady is emitted. endRead() and endWrite() complete the operation and return the number of bytes. Only one read and one write may run at a time.</p>
+<p>beginRead() and beginWrite() start an asynchronous transfer. The device must be attached to an EventLoop with setActive(). When the transfer finishes, inputReady or outputReady is emitted. endRead() and endWrite() complete the operation and return the number of bytes. One read and one write may run concurrently and complete independently; starting a second read or a second write before the first of that same direction ends is rejected.</p>
 <p>Some devices can seek. seekable() reports that. seek() and position() throw IOError when the device cannot seek. peek() copies bytes without consuming them. sync() commits written data to the device.</p>
 <div class="fragment"><div class="line">class Reader</div>
 <div class="line">{</div>
