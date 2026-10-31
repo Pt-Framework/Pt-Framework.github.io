@@ -6208,6 +6208,48 @@
     </member>
     <member kind="function">
       <type>std::size_t</type>
+      <name>pingInterval</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>ac70fd0962489577c902f6c256cdd81f6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPingInterval</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a3049838253bbbd7f437a8debe8493350</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>pingTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a060a39f27007e3169d86db6b91f98c41</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPingTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>acbf47d9f0823c210fc5bfb499e3cf53e</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>closeTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>af338a763e61615677976c28fdc720754</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCloseTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a658e25d7400ba5f8abc8f02a6cc1f56a</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
       <name>maxMessageSize</name>
       <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
       <anchor>abc2a85958399281206bcefe8a88a3bc1</anchor>
@@ -103611,6 +103653,45 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pt::Utf8Validator</name>
+    <filename>classPt_1_1Utf8Validator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Utf8Validator</name>
+      <anchorfile>classPt_1_1Utf8Validator.html</anchorfile>
+      <anchor>a1053d1da16102556f7ebea5fc14577dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>advance</name>
+      <anchorfile>classPt_1_1Utf8Validator.html</anchorfile>
+      <anchor>a6bfa992c44b00848a4e7bccaff85207a</anchor>
+      <arglist>(const char *data, std::size_t n)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>finish</name>
+      <anchorfile>classPt_1_1Utf8Validator.html</anchorfile>
+      <anchor>aba19022ee756accd4c6397e2dbbf0c47</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>classPt_1_1Utf8Validator.html</anchorfile>
+      <anchor>ad20897c5c8bd47f5d4005989bead0e55</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isValidUtf8</name>
+      <anchorfile>group__Pt-Text.html</anchorfile>
+      <anchor>ga41e8e0b402c469749abe29d163ede440</anchor>
+      <arglist>(const char *data, std::size_t n)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Pt::Db::Value</name>
     <filename>classPt_1_1Db_1_1Value.html</filename>
     <member kind="function">
@@ -104891,18 +104972,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>Pt::Signal&lt; WebSocket &amp; &gt; &amp;</type>
+      <name>closed</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>afb6d8384785b0d7c48620bb119eea7aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>Pt::Signal&lt; WebSocket &amp;, const std::string &amp; &gt; &amp;</type>
       <name>pong</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
       <anchor>ae3d4fe650b91ddae9921c739e33338de</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTimeout</name>
-      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
-      <anchor>a4e6264069bc112d5f7a636525f88a396</anchor>
-      <arglist>(std::size_t timeout)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -104916,6 +104997,27 @@
       <name>setIdleTimeout</name>
       <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
       <anchor>a9e2b9df2e7d967690920963bb14ef5c1</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPingInterval</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a3049838253bbbd7f437a8debe8493350</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPingTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>acbf47d9f0823c210fc5bfb499e3cf53e</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCloseTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocket.html</anchorfile>
+      <anchor>a658e25d7400ba5f8abc8f02a6cc1f56a</anchor>
       <arglist>(std::size_t ms)</arglist>
     </member>
   </compound>
@@ -104967,6 +105069,20 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>WebSocketMessage</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a45a3afa8a0acf3da61bfe436ba95564d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WebSocketMessage</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>af98dad3492461f896a67744fcafc9c57</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>Type</type>
       <name>type</name>
       <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
@@ -105007,6 +105123,13 @@
       <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
       <anchor>a482de369e242eac519fd5e208a37320c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>discard</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketMessage.html</anchorfile>
+      <anchor>a7207402bb7a0eb63469766bf942a3fae</anchor>
+      <arglist>(std::size_t n)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -105178,6 +105301,48 @@
       <name>setIdleTimeout</name>
       <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
       <anchor>a9e2b9df2e7d967690920963bb14ef5c1</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>pingInterval</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>ac70fd0962489577c902f6c256cdd81f6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPingInterval</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a3049838253bbbd7f437a8debe8493350</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>pingTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a060a39f27007e3169d86db6b91f98c41</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPingTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>acbf47d9f0823c210fc5bfb499e3cf53e</anchor>
+      <arglist>(std::size_t ms)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>closeTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>af338a763e61615677976c28fdc720754</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCloseTimeout</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketService.html</anchorfile>
+      <anchor>a658e25d7400ba5f8abc8f02a6cc1f56a</anchor>
       <arglist>(std::size_t ms)</arglist>
     </member>
     <member kind="function">
@@ -105468,6 +105633,13 @@
       <name>onShutdownReady</name>
       <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
       <anchor>a08cb1d3f74658518acf512dc91d5d1da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onClosed</name>
+      <anchorfile>classPt_1_1Http_1_1WebSocketSession.html</anchorfile>
+      <anchor>a78c5b3e0f35705a0940df077a1382820</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -113386,6 +113558,7 @@
     <class kind="class">Pt::Utf8Codec</class>
     <class kind="class">Pt::Utf8Convert</class>
     <class kind="class">Pt::Utf8Iterator</class>
+    <class kind="class">Pt::Utf8Validator</class>
     <class kind="struct">Pt::Void</class>
     <class kind="class">Pt::ZBuffer</class>
     <class kind="class">Pt::ZIOStream</class>
@@ -115072,11 +115245,19 @@
     <class kind="class">Pt::Utf32LECodec</class>
     <class kind="class">Pt::Utf8Appender</class>
     <class kind="class">Pt::Utf8Convert</class>
+    <class kind="class">Pt::Utf8Validator</class>
     <class kind="class">Pt::Utf8Codec</class>
     <class kind="class">Pt::TextBuffer</class>
     <class kind="class">Pt::TextIStream</class>
     <class kind="class">Pt::TextOStream</class>
     <class kind="class">Pt::TextStream</class>
+    <member kind="function">
+      <type>bool</type>
+      <name>Pt::Utf8Validator::isValidUtf8</name>
+      <anchorfile>group__Pt-Text.html</anchorfile>
+      <anchor>ga41e8e0b402c469749abe29d163ede440</anchor>
+      <arglist>(const char *data, std::size_t n)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>Pt-Signals</name>

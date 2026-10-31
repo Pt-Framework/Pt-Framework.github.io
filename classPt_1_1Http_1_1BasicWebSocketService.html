@@ -108,6 +108,18 @@ void&#160;</td><td class="memItemRight"><b>clearProtocols</b> ()</td></tr>
 <tr class="memdesc:a004707a702cc29951ec422c865ce039e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the idle timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:a9e2b9df2e7d967690920963bb14ef5c1" id="r_a9e2b9df2e7d967690920963bb14ef5c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#a9e2b9df2e7d967690920963bb14ef5c1">setIdleTimeout</a> (std::size_t ms)</td></tr>
 <tr class="memdesc:a9e2b9df2e7d967690920963bb14ef5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the idle timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:ac70fd0962489577c902f6c256cdd81f6" id="r_ac70fd0962489577c902f6c256cdd81f6"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#ac70fd0962489577c902f6c256cdd81f6">pingInterval</a> () const</td></tr>
+<tr class="memdesc:ac70fd0962489577c902f6c256cdd81f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ping interval in milliseconds.  <br /></td></tr>
+<tr class="memitem:a3049838253bbbd7f437a8debe8493350" id="r_a3049838253bbbd7f437a8debe8493350"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#a3049838253bbbd7f437a8debe8493350">setPingInterval</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:a3049838253bbbd7f437a8debe8493350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ping interval in milliseconds.  <br /></td></tr>
+<tr class="memitem:a060a39f27007e3169d86db6b91f98c41" id="r_a060a39f27007e3169d86db6b91f98c41"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#a060a39f27007e3169d86db6b91f98c41">pingTimeout</a> () const</td></tr>
+<tr class="memdesc:a060a39f27007e3169d86db6b91f98c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ping timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:acbf47d9f0823c210fc5bfb499e3cf53e" id="r_acbf47d9f0823c210fc5bfb499e3cf53e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#acbf47d9f0823c210fc5bfb499e3cf53e">setPingTimeout</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:acbf47d9f0823c210fc5bfb499e3cf53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ping timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:af338a763e61615677976c28fdc720754" id="r_af338a763e61615677976c28fdc720754"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#af338a763e61615677976c28fdc720754">closeTimeout</a> () const</td></tr>
+<tr class="memdesc:af338a763e61615677976c28fdc720754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the close timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:a658e25d7400ba5f8abc8f02a6cc1f56a" id="r_a658e25d7400ba5f8abc8f02a6cc1f56a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#a658e25d7400ba5f8abc8f02a6cc1f56a">setCloseTimeout</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:a658e25d7400ba5f8abc8f02a6cc1f56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the close timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:abc2a85958399281206bcefe8a88a3bc1" id="r_abc2a85958399281206bcefe8a88a3bc1"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#abc2a85958399281206bcefe8a88a3bc1">maxMessageSize</a> () const</td></tr>
 <tr class="memdesc:abc2a85958399281206bcefe8a88a3bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum data message size in bytes.  <br /></td></tr>
 <tr class="memitem:a701e35ac0f47838d22ed0fc4c4e033ea" id="r_a701e35ac0f47838d22ed0fc4c4e033ea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Http_1_1WebSocketService.html#a701e35ac0f47838d22ed0fc4c4e033ea">setMaxMessageSize</a> (std::size_t n)</td></tr>
@@ -344,7 +356,163 @@ template&lt;typename S, typename Alloc = Allocator&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>An accepted socket is closed after <em class="arg">ms</em> without a finished transfer. Transferred data bytes restart the timeout. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+<p>An accepted socket is closed after <em class="arg">ms</em> without an incoming frame. Incoming data, a received ping, and a received pong restart it. Sending does not. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="ac70fd0962489577c902f6c256cdd81f6" name="ac70fd0962489577c902f6c256cdd81f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70fd0962489577c902f6c256cdd81f6">&#9670;&#160;</a></span>pingInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t pingInterval </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zero means the engine does not write keepalive pings. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a3049838253bbbd7f437a8debe8493350" name="a3049838253bbbd7f437a8debe8493350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3049838253bbbd7f437a8debe8493350">&#9670;&#160;</a></span>setPingInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPingInterval </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>An accepted socket writes a keepalive ping after <em class="arg">ms</em> without an incoming frame. Incoming data, a received ping, and a received pong restart it. Sending does not. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a060a39f27007e3169d86db6b91f98c41" name="a060a39f27007e3169d86db6b91f98c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060a39f27007e3169d86db6b91f98c41">&#9670;&#160;</a></span>pingTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t pingTimeout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zero means an unanswered ping has no deadline. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="acbf47d9f0823c210fc5bfb499e3cf53e" name="acbf47d9f0823c210fc5bfb499e3cf53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf47d9f0823c210fc5bfb499e3cf53e">&#9670;&#160;</a></span>setPingTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPingTimeout </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>An accepted socket is closed if a ping is unanswered for <em class="arg">ms</em>. The wait starts at beginPing() and at a keepalive ping. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="af338a763e61615677976c28fdc720754" name="af338a763e61615677976c28fdc720754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af338a763e61615677976c28fdc720754">&#9670;&#160;</a></span>closeTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t closeTimeout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zero leaves a close handshake unbounded. The default is ten seconds. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a658e25d7400ba5f8abc8f02a6cc1f56a" name="a658e25d7400ba5f8abc8f02a6cc1f56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658e25d7400ba5f8abc8f02a6cc1f56a">&#9670;&#160;</a></span>setCloseTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCloseTimeout </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>An accepted socket is closed if a close handshake is unanswered for <em class="arg">ms</em>. Zero leaves the wait unbounded. The default is ten seconds. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
 
 </div>
 </div>

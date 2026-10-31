@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Text Processing <div class="ingroups"><a class="el" href="group__Pt-Core.html">Core Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -118,6 +119,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 string output iterator.  <a href="classPt_1_1Utf8Appender.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Utf8Convert" id="r_Utf8Convert"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Utf8Convert.html">Utf8Convert</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 string converter.  <a href="classPt_1_1Utf8Convert.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Utf8Validator" id="r_Utf8Validator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Utf8Validator.html">Utf8Validator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incremental UTF-8 well-formedness checker.  <a href="classPt_1_1Utf8Validator.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Utf8Codec" id="r_Utf8Codec"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Utf8Codec.html">Utf8Codec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert between unicode and UTF-8.  <a href="classPt_1_1Utf8Codec.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TextBuffer" id="r_TextBuffer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1TextBuffer.html">TextBuffer</a></td></tr>
@@ -128,6 +131,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text output stream for unicode character conversion.  <a href="classPt_1_1TextOStream.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TextStream" id="r_TextStream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1TextStream.html">TextStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text stream for unicode character conversion.  <a href="classPt_1_1TextStream.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga41e8e0b402c469749abe29d163ede440" id="r_ga41e8e0b402c469749abe29d163ede440"><td class="memItemLeft"><a id="ga41e8e0b402c469749abe29d163ede440" name="ga41e8e0b402c469749abe29d163ede440"></a>
+bool&#160;</td><td class="memItemRight"><b>isValidUtf8</b> (const char *data, std::size_t n)</td></tr>
+<tr class="memdesc:ga41e8e0b402c469749abe29d163ede440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em class="arg">data</em> is a complete well-formed UTF-8 sequence. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This set of classes and functions extends the string and localization support of the C++ standard library to work with unicode characters and strings. A unicode character type and string class (a specialization of std::basic_string) can be used to hold unicode text. A set of functions allows to transform and classify individual characters. Text can be converted e.g. between different encodings using i/o streams and text codecs. A regular expression class allows to search and match patterns in unicode strings. Localization facets are available for the systems which support standard C++ locales.</p>

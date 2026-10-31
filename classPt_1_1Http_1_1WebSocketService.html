@@ -109,6 +109,18 @@ void&#160;</td><td class="memItemRight"><b>clearProtocols</b> ()</td></tr>
 <tr class="memdesc:a004707a702cc29951ec422c865ce039e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the idle timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:a9e2b9df2e7d967690920963bb14ef5c1" id="r_a9e2b9df2e7d967690920963bb14ef5c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9e2b9df2e7d967690920963bb14ef5c1">setIdleTimeout</a> (std::size_t ms)</td></tr>
 <tr class="memdesc:a9e2b9df2e7d967690920963bb14ef5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the idle timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:ac70fd0962489577c902f6c256cdd81f6" id="r_ac70fd0962489577c902f6c256cdd81f6"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ac70fd0962489577c902f6c256cdd81f6">pingInterval</a> () const</td></tr>
+<tr class="memdesc:ac70fd0962489577c902f6c256cdd81f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ping interval in milliseconds.  <br /></td></tr>
+<tr class="memitem:a3049838253bbbd7f437a8debe8493350" id="r_a3049838253bbbd7f437a8debe8493350"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3049838253bbbd7f437a8debe8493350">setPingInterval</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:a3049838253bbbd7f437a8debe8493350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ping interval in milliseconds.  <br /></td></tr>
+<tr class="memitem:a060a39f27007e3169d86db6b91f98c41" id="r_a060a39f27007e3169d86db6b91f98c41"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a060a39f27007e3169d86db6b91f98c41">pingTimeout</a> () const</td></tr>
+<tr class="memdesc:a060a39f27007e3169d86db6b91f98c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ping timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:acbf47d9f0823c210fc5bfb499e3cf53e" id="r_acbf47d9f0823c210fc5bfb499e3cf53e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbf47d9f0823c210fc5bfb499e3cf53e">setPingTimeout</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:acbf47d9f0823c210fc5bfb499e3cf53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ping timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:af338a763e61615677976c28fdc720754" id="r_af338a763e61615677976c28fdc720754"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#af338a763e61615677976c28fdc720754">closeTimeout</a> () const</td></tr>
+<tr class="memdesc:af338a763e61615677976c28fdc720754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the close timeout in milliseconds.  <br /></td></tr>
+<tr class="memitem:a658e25d7400ba5f8abc8f02a6cc1f56a" id="r_a658e25d7400ba5f8abc8f02a6cc1f56a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a658e25d7400ba5f8abc8f02a6cc1f56a">setCloseTimeout</a> (std::size_t ms)</td></tr>
+<tr class="memdesc:a658e25d7400ba5f8abc8f02a6cc1f56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the close timeout in milliseconds.  <br /></td></tr>
 <tr class="memitem:abc2a85958399281206bcefe8a88a3bc1" id="r_abc2a85958399281206bcefe8a88a3bc1"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abc2a85958399281206bcefe8a88a3bc1">maxMessageSize</a> () const</td></tr>
 <tr class="memdesc:abc2a85958399281206bcefe8a88a3bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum data message size in bytes.  <br /></td></tr>
 <tr class="memitem:a701e35ac0f47838d22ed0fc4c4e033ea" id="r_a701e35ac0f47838d22ed0fc4c4e033ea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a701e35ac0f47838d22ed0fc4c4e033ea">setMaxMessageSize</a> (std::size_t n)</td></tr>
@@ -145,7 +157,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>WebSocketService is the server-side factory. Map it with an HTTP servlet like any other service, so the handshake request reaches it. This service owns the endpoint policy and the allocator. A separate WebSocketServlet owns the live sessions. Destroy that servlet before this service. Its destruction releases every remaining session while the derived service is still fully constructed. This destructor does not release sessions. By then the derived destructor has already run, and the virtual release call and the allocator are gone. This service keeps a non-owning pointer to its one active servlet.</p>
-<p>The example is the usual server setup. The mapping servlet and the session owner are different objects. The three setters are endpoint policy of this service. They apply before a servlet is constructed.</p>
+<p>The example is the usual server setup. The mapping servlet and the session owner are different objects. The setters are endpoint policy of this service. They apply before a servlet is constructed.</p>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="classPt_1_1Http_1_1BasicWebSocketService.html">Pt::Http::BasicWebSocketService&lt;EchoSession&gt;</a> EchoService;</div>
 <div class="line"> </div>
 <div class="line">EchoService service;</div>
@@ -155,11 +167,11 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
 <div class="line"><a class="code hl_class" href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a> sockets(service);</div>
 <div class="line"><a class="code hl_class" href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a> mapUrl(<span class="stringliteral">&quot;/ws&quot;</span>, service);</div>
 <div class="line">server.addServlet(mapUrl);</div>
-<div class="ttc" id="aclassPt_1_1Http_1_1BasicWebSocketService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicWebSocketService.html">Pt::Http::BasicWebSocketService</a></div><div class="ttdoc">WebSocket service for one session type.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:326</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1BasicWebSocketService_html"><div class="ttname"><a href="classPt_1_1Http_1_1BasicWebSocketService.html">Pt::Http::BasicWebSocketService</a></div><div class="ttdoc">WebSocket service for one session type.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:390</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MapUrl_html"><div class="ttname"><a href="classPt_1_1Http_1_1MapUrl.html">Pt::Http::MapUrl</a></div><div class="ttdoc">Maps requests to a service by URL.</div><div class="ttdef"><b>Definition</b> Servlet.h:147</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketService_html_a482542923f006197b1b8abfcf2584e70"><div class="ttname"><a href="#a482542923f006197b1b8abfcf2584e70">Pt::Http::WebSocketService::setMaxSockets</a></div><div class="ttdeci">void setMaxSockets(std::size_t n)</div><div class="ttdoc">Sets the maximum number of live sessions.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:180</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketServlet_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a></div><div class="ttdoc">Owner of the sessions one WebSocket service creates.</div><div class="ttdef"><b>Definition</b> WebSocketServlet.h:70</div></div>
-</div><!-- fragment --><p>The handshake responder answers a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade with 101, with 503 when no servlet is attached or the accepted-session limit is already reached, or with 404 when the request is not a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade. The responder is released before the server opens the stream. It is not the session. addProtocol() names one Sec-WebSocket-Protocol value this endpoint accepts. Several calls name several values, in preference order. An empty list accepts the upgrade and selects no name. A non-empty list selects the first offered name that is also accepted, and a request that offers none of them is answered with 400. setMaxSockets(), setIdleTimeout() and setMaxMessageSize() are endpoint policy of this service. They apply before a servlet is constructed. The handshake reads the session limit here. The session base copies the idle timeout and the data-message limit onto the connection before the derived constructor runs. A missing servlet is still 503 when maxSockets() is zero. One service has one active WebSocketServlet. Constructing a second servlet throws std::logic_error.</p>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketService_html_a482542923f006197b1b8abfcf2584e70"><div class="ttname"><a href="#a482542923f006197b1b8abfcf2584e70">Pt::Http::WebSocketService::setMaxSockets</a></div><div class="ttdeci">void setMaxSockets(std::size_t n)</div><div class="ttdoc">Sets the maximum number of live sessions.</div><div class="ttdef"><b>Definition</b> WebSocketService.h:182</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketServlet_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketServlet.html">Pt::Http::WebSocketServlet</a></div><div class="ttdoc">Owner of the sessions one WebSocket service creates.</div><div class="ttdef"><b>Definition</b> WebSocketServlet.h:72</div></div>
+</div><!-- fragment --><p>The handshake responder answers a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade with 101, with 503 when no servlet is attached or the accepted-session limit is already reached, or with 404 when the request is not a <a class="el" href="classPt_1_1Http_1_1WebSocket.html" title="Client handshake and messages on an upgraded stream.">WebSocket</a> upgrade. The responder is released before the server opens the stream. It is not the session. addProtocol() names one Sec-WebSocket-Protocol value this endpoint accepts. Several calls name several values, in preference order. An empty list accepts the upgrade and selects no name. A non-empty list selects the first offered name that is also accepted, and a request that offers none of them is answered with 400. setMaxSockets(), setIdleTimeout(), setPingInterval(), setPingTimeout(), setCloseTimeout() and setMaxMessageSize() are endpoint policy of this service. They apply before a servlet is constructed. The handshake reads the session limit here. The session base copies the idle, ping-interval, ping and close timeouts and the data-message limit onto the connection before the derived constructor runs. A missing servlet is still 503 when maxSockets() is zero. One service has one active WebSocketServlet. Constructing a second servlet throws std::logic_error.</p>
 <p>After a finished 101 the HTTP server keeps the connection and delivers the upgraded stream to this service. This class implements that delivery and asks the servlet to create a session through getSession() with the stream, the opening request, and the opening reply. getSession() calls onGetSession() and counts a non-null session. The session binds the stream in its constructor, which accepts the upgrade. A null session leaves the stream unbound, and the HTTP server closes it. A null return is not counted. No attached servlet is a 503 from the handshake. The null check here covers only the window after a finished 101 and before the stream is delivered.</p>
 <p>BasicWebSocketService is this factory for one session type. Derive this class when the session type depends on the upgrade, or when the session constructor needs more than the service, the stream, and the opening reply.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a>* ChatService::onGetSession(</div>
@@ -181,7 +193,7 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
 <div class="ttc" id="aclassPt_1_1Http_1_1Reply_html"><div class="ttname"><a href="classPt_1_1Http_1_1Reply.html">Pt::Http::Reply</a></div><div class="ttdoc">HTTP reply message.</div><div class="ttdef"><b>Definition</b> Reply.h:64</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1Request_html"><div class="ttname"><a href="classPt_1_1Http_1_1Request.html">Pt::Http::Request</a></div><div class="ttdoc">HTTP request message.</div><div class="ttdef"><b>Definition</b> Request.h:65</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1Stream_html"><div class="ttname"><a href="classPt_1_1Http_1_1Stream.html">Pt::Http::Stream</a></div><div class="ttdoc">One HTTP stream on a connection.</div><div class="ttdef"><b>Definition</b> Stream.h:92</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div><div class="ttdoc">Server facade of one accepted WebSocket stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:155</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketSession_html"><div class="ttname"><a href="classPt_1_1Http_1_1WebSocketSession.html">Pt::Http::WebSocketSession</a></div><div class="ttdoc">Server facade of one accepted WebSocket stream.</div><div class="ttdef"><b>Definition</b> WebSocketSession.h:157</div></div>
 </div><!-- fragment --><p>getSession() is the factory call. It calls onGetSession() and counts a non-null session. releaseSession() calls onReleaseSession() and drops that count. onGetSession() creates the session and onReleaseSession() destroys it. The request argument is the opening request. The reply argument is the opening reply. Both are valid for that call. Copy any header the session must keep. The session does not store the request or the reply. The two methods must use the same allocator. A pool, or any other detach, lives in the derived service. Return null from onGetSession() to decline the upgrade. The servlet owns the live sessions only. This service owns the endpoint policy, the allocator, and the count of sessions getSession() returned and releaseSession() has not yet released. This service does not keep a session list. socketCount() is that count. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adcc09da5f4cec09431ddead0330e80e5" name="adcc09da5f4cec09431ddead0330e80e5"></a>
@@ -295,7 +307,115 @@ virtual void&#160;</td><td class="memItemRight"><b>onReleaseResponder</b> (<a cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>An accepted socket is closed after <em class="arg">ms</em> without a finished transfer. Transferred data bytes restart the timeout. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+<p>An accepted socket is closed after <em class="arg">ms</em> without an incoming frame. Incoming data, a received ping, and a received pong restart it. Sending does not. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="ac70fd0962489577c902f6c256cdd81f6" name="ac70fd0962489577c902f6c256cdd81f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70fd0962489577c902f6c256cdd81f6">&#9670;&#160;</a></span>pingInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t pingInterval </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zero means the engine does not write keepalive pings. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a3049838253bbbd7f437a8debe8493350" name="a3049838253bbbd7f437a8debe8493350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3049838253bbbd7f437a8debe8493350">&#9670;&#160;</a></span>setPingInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPingInterval </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An accepted socket writes a keepalive ping after <em class="arg">ms</em> without an incoming frame. Incoming data, a received ping, and a received pong restart it. Sending does not. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a060a39f27007e3169d86db6b91f98c41" name="a060a39f27007e3169d86db6b91f98c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060a39f27007e3169d86db6b91f98c41">&#9670;&#160;</a></span>pingTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t pingTimeout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zero means an unanswered ping has no deadline. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="acbf47d9f0823c210fc5bfb499e3cf53e" name="acbf47d9f0823c210fc5bfb499e3cf53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf47d9f0823c210fc5bfb499e3cf53e">&#9670;&#160;</a></span>setPingTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPingTimeout </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An accepted socket is closed if a ping is unanswered for <em class="arg">ms</em>. The wait starts at beginPing() and at a keepalive ping. Zero disables it. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="af338a763e61615677976c28fdc720754" name="af338a763e61615677976c28fdc720754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af338a763e61615677976c28fdc720754">&#9670;&#160;</a></span>closeTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t closeTimeout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zero leaves a close handshake unbounded. The default is ten seconds. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
+
+</div>
+</div>
+<a id="a658e25d7400ba5f8abc8f02a6cc1f56a" name="a658e25d7400ba5f8abc8f02a6cc1f56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658e25d7400ba5f8abc8f02a6cc1f56a">&#9670;&#160;</a></span>setCloseTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCloseTimeout </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An accepted socket is closed if a close handshake is unanswered for <em class="arg">ms</em>. Zero leaves the wait unbounded. The default is ten seconds. This is endpoint policy of this service. It applies before a servlet is constructed. </p>
 
 </div>
 </div>

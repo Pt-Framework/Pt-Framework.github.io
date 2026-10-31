@@ -98,6 +98,12 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a45a3afa8a0acf3da61bfe436ba95564d" id="r_a45a3afa8a0acf3da61bfe436ba95564d"><td class="memItemLeft"><a id="a45a3afa8a0acf3da61bfe436ba95564d" name="a45a3afa8a0acf3da61bfe436ba95564d"></a>
+&#160;</td><td class="memItemRight"><b>WebSocketMessage</b> ()</td></tr>
+<tr class="memdesc:a45a3afa8a0acf3da61bfe436ba95564d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty message. <br /></td></tr>
+<tr class="memitem:af98dad3492461f896a67744fcafc9c57" id="r_af98dad3492461f896a67744fcafc9c57"><td class="memItemLeft"><a id="af98dad3492461f896a67744fcafc9c57" name="af98dad3492461f896a67744fcafc9c57"></a>
+&#160;</td><td class="memItemRight"><b>~WebSocketMessage</b> ()</td></tr>
+<tr class="memdesc:af98dad3492461f896a67744fcafc9c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the message. <br /></td></tr>
 <tr class="memitem:adf4a6727c689e0038cf2cdd158d5ed2c" id="r_adf4a6727c689e0038cf2cdd158d5ed2c"><td class="memItemLeft"><a id="adf4a6727c689e0038cf2cdd158d5ed2c" name="adf4a6727c689e0038cf2cdd158d5ed2c"></a>
 <a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight"><b>type</b> () const</td></tr>
 <tr class="memdesc:adf4a6727c689e0038cf2cdd158d5ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the data type of this message. <br /></td></tr>
@@ -115,6 +121,8 @@ std::size_t&#160;</td><td class="memItemRight"><b>pending</b> () const</td></tr>
 <tr class="memitem:a482de369e242eac519fd5e208a37320c" id="r_a482de369e242eac519fd5e208a37320c"><td class="memItemLeft"><a id="a482de369e242eac519fd5e208a37320c" name="a482de369e242eac519fd5e208a37320c"></a>
 void&#160;</td><td class="memItemRight"><b>discard</b> ()</td></tr>
 <tr class="memdesc:a482de369e242eac519fd5e208a37320c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drops the buffered body and leaves the type. <br /></td></tr>
+<tr class="memitem:a7207402bb7a0eb63469766bf942a3fae" id="r_a7207402bb7a0eb63469766bf942a3fae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7207402bb7a0eb63469766bf942a3fae">discard</a> (std::size_t n)</td></tr>
+<tr class="memdesc:a7207402bb7a0eb63469766bf942a3fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drops up to <em class="arg">n</em> buffered body bytes and leaves the type.  <br /></td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
 <tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drops the buffered body and sets the type to Unknown. <br /></td></tr>
@@ -141,7 +149,7 @@ void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html">Pt::Http::MessageProgress</a></div><div class="ttdoc">Progress of an asynchronous HTTP send or receive.</div><div class="ttdef"><b>Definition</b> Message.h:337</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_a4f77062fc013d7c504165011b7e0cedc"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#a4f77062fc013d7c504165011b7e0cedc">Pt::Http::MessageProgress::body</a></div><div class="ttdeci">bool body() const</div><div class="ttdoc">Returns true if the body was processed.</div><div class="ttdef"><b>Definition</b> Message.h:363</div></div>
 <div class="ttc" id="aclassPt_1_1Http_1_1MessageProgress_html_aebaed0be88cbcf45f1985b819c9dabb7"><div class="ttname"><a href="classPt_1_1Http_1_1MessageProgress.html#aebaed0be88cbcf45f1985b819c9dabb7">Pt::Http::MessageProgress::finished</a></div><div class="ttdeci">bool finished() const</div><div class="ttdoc">Returns true if message is complete.</div><div class="ttdef"><b>Definition</b> Message.h:373</div></div>
-<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b"><div class="ttname"><a href="#a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocketMessage::Text</a></div><div class="ttdeci">@ Text</div><div class="ttdoc">UTF-8 text.</div><div class="ttdef"><b>Definition</b> WebSocketMessage.h:81</div></div>
+<div class="ttc" id="aclassPt_1_1Http_1_1WebSocketMessage_html_a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b"><div class="ttname"><a href="#a1d1cfd8ffb84e947f82999c682b666a7a35d0dd9a40755601b657244976bfc14b">Pt::Http::WebSocketMessage::Text</a></div><div class="ttdeci">@ Text</div><div class="ttdoc">UTF-8 text.</div><div class="ttdef"><b>Definition</b> WebSocketMessage.h:127</div></div>
 </div><!-- fragment --><p>type() is Unknown until a data type is set. setType() is for the outgoing message and accepts Text or Binary. The engine sets the type of the incoming message when it has parsed the first data frame of that message. A text body must be valid UTF-8 over the whole message. body() is the iostream. Write it before the send begins. After a receive step, read the bytes that step delivered. available() is how many payload bytes can be read. pending() is how many payload bytes are waiting to be sent.</p>
 <p>discard() drops the buffered body and leaves the type. That is the call during a message that is not finished, after the application has consumed what body() holds. clear() drops the body and sets the type to Unknown, so the same object can carry the next message. After a receive that reports finished, the application calls clear(). </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
@@ -188,6 +196,24 @@ void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a7207402bb7a0eb63469766bf942a3fae" name="a7207402bb7a0eb63469766bf942a3fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7207402bb7a0eb63469766bf942a3fae">&#9670;&#160;</a></span>discard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void discard </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Discards up to <em class="arg">n</em> readable input bytes and up to <em class="arg">n</em> pending output bytes. </p>
 
 </div>
 </div>

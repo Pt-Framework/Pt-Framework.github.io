@@ -314,6 +314,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 string converter.  <a href="classPt_1_1Utf8Convert.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Utf8Iterator" id="r_Utf8Iterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Utf8Iterator.html">Utf8Iterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 string input iterator.  <a href="classPt_1_1Utf8Iterator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Utf8Validator" id="r_Utf8Validator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1Utf8Validator.html">Utf8Validator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incremental UTF-8 well-formedness checker.  <a href="classPt_1_1Utf8Validator.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Void" id="r_Void"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structPt_1_1Void.html">Void</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marker type for an unused template argument.  <a href="structPt_1_1Void.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ZBuffer" id="r_ZBuffer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPt_1_1ZBuffer.html">ZBuffer</a></td></tr>
@@ -1145,6 +1147,9 @@ bool&#160;</td><td class="memItemRight"><b>operator&lt;=</b> (const <a class="el
 <tr class="memitem:afb1695e93b8783aa5af661cb7f44ee7c" id="r_afb1695e93b8783aa5af661cb7f44ee7c"><td class="memItemLeft"><a id="afb1695e93b8783aa5af661cb7f44ee7c" name="afb1695e93b8783aa5af661cb7f44ee7c"></a>
 bool&#160;</td><td class="memItemRight"><b>operator&gt;=</b> (const <a class="el" href="classPt_1_1TypeInfo.html">TypeInfo</a> &amp;lhs, const <a class="el" href="classPt_1_1TypeInfo.html">TypeInfo</a> &amp;rhs)</td></tr>
 <tr class="memdesc:afb1695e93b8783aa5af661cb7f44ee7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than or equal comparison. <br /></td></tr>
+<tr class="memitem:ga41e8e0b402c469749abe29d163ede440" id="r_ga41e8e0b402c469749abe29d163ede440"><td class="memItemLeft">
+bool&#160;</td><td class="memItemRight"><b>isValidUtf8</b> (const char *data, std::size_t n)</td></tr>
+<tr class="memdesc:ga41e8e0b402c469749abe29d163ede440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em class="arg">data</em> is a complete well-formed UTF-8 sequence. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This module is the basis for all other modules of the framework It has no dependency to any system specific libraries except the standard c++ library. It provides some basic types, support for byte-order handling, atomic integer operations, type-traits, an unicode string and character class, serialization and a signals/delegates based callback mechanism.</p>

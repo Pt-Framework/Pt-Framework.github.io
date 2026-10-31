@@ -70,20 +70,19 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="contents">
 <div class="textblock"><p>A Jam project can take third-party libraries from a prebuilt dependency bundle instead of from the system or from sources in the tree. A bundle is a directory of already compiled headers and libraries for one platform. The published bundles might include zlib, libpng, libjpeg, FreeType or OpenSSL.</p>
 <p>The bundle is placed under the <code>prebuilt</code> directory in the project root. Each platform has its own subdirectory, for example <code>prebuilt/windows-x64-msvc-md</code>. Those files contain no absolute paths, so the directory can be moved or unpacked as a whole.</p>
-<p>Prebuilt libraries are used only when passing <code>--with-prebuilt</code> or <code>--fetch-prebuilt</code>. They do not replace the compiler, and they do not change the global compiler or linker flags. See <a class="el" href="jam-usage.html" title="Basic Jam Usage">Basic Jam Usage</a> for the rest of the configure and build process.</p>
+<p>Prebuilt libraries are used only when passing <code>--with-prebuilt</code>. They do not replace the compiler, and they do not change the global compiler or linker flags. See <a class="el" href="jam-usage.html" title="Basic Jam Usage">Basic Jam Usage</a> for the rest of the configure and build process.</p>
 <h1 class="doxsection"><a class="anchor" id="jam-prebuilt-page-Using"></a>
 Using Prebuilt Dependencies</h1>
-<p>The usual first-time command downloads the matching bundle if needed, then configures the build:</p>
-<div class="fragment"><div class="line">jam.bat configure --fetch-prebuilt</div>
-<div class="line">./jam.sh configure --fetch-prebuilt</div>
-</div><!-- fragment --><p>If the bundle is already on disk, pass <code>--with-prebuilt</code> instead. Jam picks the platform folder from the current OS, CPU and toolset. The command fails if that folder is missing. No network access is performed.</p>
-<div class="fragment"><div class="line">./jam.sh configure --with-prebuilt</div>
-</div><!-- fragment --><p>Either flag may take an explicit platform name. That pins the folder under <code>prebuilt</code>, still without downloading with <code>--with-prebuilt</code>:</p>
+<p>The usual command checks the matching bundle on the server, downloads it when the manifest changed, then configures the build:</p>
+<div class="fragment"><div class="line">jam.bat configure --with-prebuilt</div>
+<div class="line">./jam.sh configure --with-prebuilt</div>
+</div><!-- fragment --><p>Jam picks the platform folder from the current OS, CPU and toolset. An explicit name pins the folder under <code>prebuilt:</code> </p>
 <div class="fragment"><div class="line">./jam.sh configure --with-prebuilt=windows-x64-msvc-md</div>
 <div class="line">./jam.sh configure --with-prebuilt=macos-arm64-clang</div>
-<div class="line">./jam.sh configure --fetch-prebuilt=windows-x64-msvc-md</div>
-</div><!-- fragment --><p><code>--fetch-prebuilt</code> already selects prebuilt libraries; <code>--with-prebuilt</code> is not required next to it. Do not combine <code>--fetch-prebuilt</code> with <code>--with-prebuilt=name</code>. Fetch always writes into the platform folder under <code>prebuilt</code>. A stale folder is refreshed only by <code>--fetch-prebuilt</code>; <code>--with-prebuilt</code> will not contact the network.</p>
-<p>The platform folder name is <code>os-arch-toolset</code>, with an extra suffix on Windows. Jam builds it from <code>TARGET_OS</code>, <code>TARGET_OSPLAT</code> and <code>TOOLSET:</code> </p>
+</div><!-- fragment --><p><code>--with-prebuilt</code> always contacts the network. A dropped connection fails configure even when a cached folder is present. To use the tree on disk without checking the server, add <code>--prebuilt-local</code>. That flag does nothing on its own; it only modifies <code>--with-prebuilt</code>. A local-only name that is not on the server uses the same pair. The command fails if the folder is missing.</p>
+<div class="fragment"><div class="line">./jam.sh configure --with-prebuilt --prebuilt-local</div>
+<div class="line">./jam.sh configure --with-prebuilt=my-vendor --prebuilt-local</div>
+</div><!-- fragment --><p>The platform folder name is <code>os-arch-toolset</code>, with an extra suffix on Windows. Jam builds it from <code>TARGET_OS</code>, <code>TARGET_OSPLAT</code> and <code>TOOLSET:</code> </p>
 <ul>
 <li><code>nt</code> / <code>win32</code> become <code>windows</code>; <code>macosx</code> becomes <code>macos</code> </li>
 <li><code>x86_64</code> / <code>amd64</code> become <code>x64</code>; <code>aarch64</code> becomes <code>arm64</code> </li>
@@ -101,7 +100,7 @@ Using Prebuilt Dependencies</h1>
 <pre class="fragment">https://github.com/Pt-Framework/Pt/releases/download/&lt;PREBUILT_RELEASE&gt;/&lt;name&gt;.zip
 </pre><p>Settings made explicitly always win. If any of the five package variables are set on the command line or in the environment, or if a flag is passed that builds that package from sources in the tree, prebuilt paths are not applied to that package. The following commands keep a hand-chosen zlib or build zlib from sources, while still using the bundle for the other libraries:</p>
 <div class="fragment"><div class="line">./jam.sh configure --with-prebuilt -sZLIB_INCLUDES=/opt/zlib/include</div>
-<div class="line">./jam.sh configure --fetch-prebuilt --with-inline-zlib</div>
+<div class="line">./jam.sh configure --with-prebuilt --with-inline-zlib</div>
 </div><!-- fragment --><p>Flags such as <code>--with-inline-zlib</code>, <code>--with-inline-libpng</code>, <code>--with-inline-libjpeg</code> and <code>--with-inline-freetype</code> skip the corresponding Configure probe and build that package from sources in the tree.</p>
 <p>Configure looks for each library in this order:</p>
 <pre class="fragment">User settings / --with-inline-xxx
@@ -214,8 +213,8 @@ Configure Integration</h1>
 <p>Every package Configure rule has the same arguments:</p>
 <pre class="fragment">*-Configure INCLUDES : C++FLAGS : LINKLIBS : LIBDIR : LINKFLAGS
 </pre><p>If any of those is set, pkg-config is skipped and the first link attempt uses the passed libraries. If all five are empty, pkg-config and name guessing run. On success the five <code>*_</code> variables are set.</p>
-<p><code>Prebuilt-Import</code> sets <code>PREBUILT_ROOT</code> and includes <code>jam/packages.jam</code>. It does not touch <code>C++FLAGS</code>, <code>LINKFLAGS</code>, or <code>ZLIB_*</code>.</p>
-<p>For each package, if the bundle is loaded and sources in the tree were not requested, empty variables are filled from the bundle, then Configure is called once:</p>
+<p><code>Prebuilt-Use</code> sets <code>PREBUILT_ROOT</code> and includes <code>jam/packages.jam</code>. It does not touch <code>C++FLAGS</code>, <code>LINKFLAGS</code>, or <code>ZLIB_*</code>.</p>
+<p>For each package, if that package is in the bundle and sources in the tree were not requested, empty variables are filled from the bundle, then Configure is called once:</p>
 <div class="fragment"><div class="line">Load zlib.jam ;</div>
 <div class="line"> </div>
 <div class="line">if --with-inline-zlib in $(ARGV)</div>
@@ -225,7 +224,7 @@ Configure Integration</h1>
 <div class="line"> </div>
 <div class="line">if ! $(WITH_BUILTIN_ZLIB)</div>
 <div class="line">{</div>
-<div class="line">    if $(PREBUILT_ROOT)</div>
+<div class="line">    if [ Prebuilt-Has zlib ]</div>
 <div class="line">    {</div>
 <div class="line">        ZLIB_INCLUDES  ?= [ Prebuilt-Includes zlib ] ;</div>
 <div class="line">        ZLIB_C++FLAGS  ?= [ Prebuilt-CxxFlags zlib ] ;</div>
@@ -272,9 +271,11 @@ Jam Rules</h1>
 <li><code>Prebuilt-Tuple</code> ( abi ? ) <br  />
  Builds the platform folder name from <code>TARGET_OS</code>, <code>TARGET_OSPLAT</code> and <code>TOOLSET</code>, with an optional extra suffix such as <code>md</code>.</li>
 <li><code>Prebuilt-Fetch</code> ( url : dest ) <br  />
- Downloads <code>url</code> when the remote <code>url.manifest</code> differs from <code>dest/manifest</code>. Replaces <code>dest</code> with the unzipped archive. The caller must run <code>Fetch-Configure</code> first.</li>
-<li><code>Prebuilt-Import</code> ( root ) <br  />
+ Downloads <code>url</code> when the remote <code>url.manifest</code> differs from <code>dest/manifest</code>. Replaces <code>dest</code> with the unzipped archive. Any download failure exits. The caller must run <code>Fetch-Configure</code> first.</li>
+<li><code>Prebuilt-Use</code> ( dest ) <br  />
  Sets <code>PREBUILT_ROOT</code>, includes <code>jam/packages.jam</code>, and exits if <code>PREBUILT_SCHEMA</code> is not <code>1</code>.</li>
+<li><code>Prebuilt-Has</code> ( package ) <br  />
+ Returns <code>package</code> when it is listed in <code>PREBUILT_PACKAGES</code>, empty otherwise.</li>
 <li><code>Prebuilt-Depends</code> ( packages + ) <br  />
  Walks <code>PREBUILT_PACKAGE_DEPENDS</code> without duplicates. Named packages first, dependencies last.</li>
 <li><code>Prebuilt-Includes</code> ( packages + ) <br  />
@@ -312,7 +313,7 @@ Deployment</h1>
 <dl class="section note"><dt>Note</dt><dd>Windows <code>mdd</code> is not redistributable. The debug CRT (<code>MSVCP*D</code>.dll, <code>VCRUNTIME*D</code>.dll) is not in the Visual C++ redistributable. Release products use <code>md</code>. Local debug builds may place <code>mdd</code> DLLs next to the executable.</dd></dl>
 <h1 class="doxsection"><a class="anchor" id="jam-prebuilt-page-Produce"></a>
 Creating Prebuilt Dependencies</h1>
-<p>A bundle can be written by hand: fill the per-package directories, write <code>jam/packages.jam</code>, and point <code>--with-prebuilt</code> at the platform folder under <code>prebuilt</code>. Conan is not required. <code>packages.jam</code> is <code>KEY</code> = value assignments and is readable without running Jam.</p>
+<p>A bundle can be written by hand: fill the per-package directories, write <code>jam/packages.jam</code>, and point <code>--with-prebuilt</code> &ndash;prebuilt-local at the platform folder under <code>prebuilt</code>. Conan is not required. <code>packages.jam</code> is <code>KEY</code> = value assignments and is readable without running Jam.</p>
 <p>A generator, including one driven by Conan in CI, writes the same layout:</p>
 <ul>
 <li>One directory per package: <code>/include</code>, <code>/lib</code>, <code>/bin</code> </li>
